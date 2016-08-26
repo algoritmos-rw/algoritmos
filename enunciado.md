@@ -37,12 +37,14 @@ Por ejemplo, dado el siguiente par de archivos:
     2007
     2013
     2016
+    2016
 
     $ cat ciudades.txt
     Bogotá
     La Boca
     Lanús
     Nuñez
+    Avellaneda
 
 Al invocar el programa, su salida deberá ser la siguiente:
 
@@ -51,6 +53,7 @@ Al invocar el programa, su salida deberá ser la siguiente:
     2007  La Boca
     2013  Lanús
     2016  Nuñez
+    2016  Avellaneda
 
 Con las siguientes consideraciones:
   - Se deberá validar que la cantidad de parámetros en la invocación sea exactamente dos.
