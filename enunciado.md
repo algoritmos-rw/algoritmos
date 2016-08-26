@@ -61,3 +61,7 @@ Similar al de la mediana del año pasado, pero este si le especificás el 20% te
 ### top-k
 
 Este fue descartado el cuatri pasado, quiero los k elementos más prioritarios.
+
+### heap_actualizar_prioridad
+
+Se trata de agregar una primitiva `void heap_actualizar_prioridad(const void* clave, void* valor)` que actualice la prioridad del elemento.
