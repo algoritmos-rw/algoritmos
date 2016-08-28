@@ -9,15 +9,22 @@ Las listas de correo o listas de discusión son grupos formado por usuarios que 
 
 Los mensajes en este foro están organizados de acuerdo a temas (también llamados hilos o threads). Se inicia un nuevo tema enviando un nuevo correo y sus respuestas se agruparan en ese mismo tema, creando así una discusión sobre un asunto.
 
-La lista de correos es el medio de comunicación principal de este curso. Está activa usando el servicio de Grupos de Google, por lo tanto para participar es necesaria una cuenta email vinculada con Google.
-Para más información se puede ver la ayuda de Google sobre el tema.
+La [lista de correos](https://groups.google.com/forum/#!forum/fiuba-7541rw-alu) es el medio de comunicación principal de este curso. Está activa usando el servicio de Grupos de Google, por lo tanto para participar es necesaria una cuenta email vinculada con Google.
+
+Para más información se puede ver la [ayuda de Google](https://support.google.com/groups/?hl=es#topic=9216) sobre el tema.
 
 ### ¿Cómo hago para instalar el entorno de desarrollo en mi PC?
 
 Hay varias opciones, según tu sistema operativo y tus preferencias. Contamos con una página dedicada al entorno de desarrollo donde explicamos cómo instalar Ubuntu dentro de una máquina virtual, y luego cómo instalar el editor y compilador dentro de Ubuntu.
 
 
-## Lenguaje C
+## Lenguaje C y compilación
+
+### ¿Para qué se usa el tipo size_t?
+
+size_t es un tipo entero sin signo devuelto por el operador sizeof y es usado para representar el tamaño de construcciones en bytes. Este tipo está definido de manera tal de garantizar que siempre va a poder almacenar el tamaño del tipo más grande posible, por lo que también garantiza que va a poder almacenar cualquier índice de cualquier arreglo.
+
+Estas características lo convierten en el tipo adecuado para manejar tamaños e índices.
 
 ### ¿Cómo hago para tener una función que usa otra, pero está más adelante en el código?
 
@@ -91,6 +98,12 @@ Esto funciona, pero hay que tener mucho cuidado, ya que la variable i se encuent
 
 En este caso, la dirección de memoria de x es válida aún cuando termine la función actual.  Pero hay que tener cuidado de liberar ese espacio de memoria cuando ya no sea necesario.
 
+### ¿Qué es un archivo Makefile?
+
+Un archivo Makefile es un archivo creado para automatizar el proceso de compilación, ejecución y mantenimiento del código fuente. Al ejecutar el programa `make` se buscan estos archivos para ejecutar sus instrucciones y compilar el código fuente cuando sea necesario.
+
+Para más información se puede consultar este [apunte de la cátedra](https://sites.google.com/site/fiuba7541rw/apuntes/Makefile.pdf?attredirects=0) y el [Makefile de ejemplo](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/Makefile?attredirects=0).
+
 ## Valgrind
 
 ### ¿Cómo hago para que valgrind me indique la línea en la que hay un error?
@@ -126,7 +139,43 @@ En C las cadenas de caracteres son vectores que tienen caracteres como elementos
 
 Para poder comparar el contenido de dos cadenas, es necesario usar la función strcmp(cadena1, cadena2), que devuelve 0 si son iguales, menor que 0 si la primera es menor y mayor que 0 si la primera es mayor.  En este caso no importa que las cadenas ocupen o no la misma porción de memoria.
 
+### ¿Cómo copio dos cadenas?
+
+La sentencia:
+
+	char* cad_1 = cad_2;
+
+No crea una copia de una cadena, sino una copia de la referencia a la cadena. Para hacer una copia de una cadena es necesario hacer:
+
+	strcpy(buf_destino, cad_origen);
+
+Siendo buf_destino una posición de memoria tal que pueda albergar la cadena a copiar, típicamente reservada con malloc y strlen (teniendo en cuenta el espacio necesario para alojar el fin de cadena).
+
+Desde el curso se recomienda la creación de una función auxiliar strdup que encapsule esta lógica.
+
+Pueden leer más sobre sobre cadenas en el [apunte del curso](https://sites.google.com/site/fiuba7541rw/apuntes/Vectores_y_Punteros.pdf?attredirects=0).
+
+### ¿Cómo se le pasan parámetros por línea de comandos a un programa?
+
+Al ejecutar un programa se pueden pasar parámetros por línea de comandos:
+
+	$ ./tp productos.csv registros.csv
+
+El programa los puede recibir como cadenas cuando se declara la función main con la siguiente firma:
+
+	int main(int argc, char* argv[])
+
+En dónde el primer argumento es la cantidad de parámetros, y el segundo es un arreglo con cada uno de ellos. En todos los casos argc siempre es mayor que 1 porque argv[0] contiene el nombre con el que se invocó al programa.
+
+Pueden leer más sobre parámetros de la línea de comandandos en el [apunte del curso](https://sites.google.com/site/fiuba7541rw/apuntes/Parametros.pdf?attredirects=0)
+
 ## Abstracción
+
+### ¿Qué es el tipo void*?
+
+El tipo void* es un tipo que representa un puntero a un tipo no especificado. Es usado cuando el tipo apuntado no es de importancia para la función que la recibe.
+
+Este tipo de punteros puede ser convertido a cualquier otro puntero sin necesidad de un casteo explícito, pero debido a que no se sabe a qué apunta no puede ni desreferenciarse ni ser usado para calcular aritmética de punteros.
 
 ### ¿Qué significa el error dereferencing pointer to incomplete type?
 
@@ -151,6 +200,48 @@ Las funciones que están definidas en un archivo .c pero que no están declarada
 Sólo se puede llamar a funciones que están declaradas en el .h, una función interna del archivo .c no debe ser llamada desde fuera de este archivo.
 
 No se puede probar esas funciones directamente mediante las pruebas, sino que es necesario probarlas indirectamente, mediante llamadas a las funciones que sí están declaradas en el .h.
+
+### ¿Qué es un puntero a función?
+
+Los punteros a funcion son variables que apuntan a funciones para que puedan ser invocadas sin conocer su nombre. En C, la sintaxis para declararlas es diferente al resto de los tipos. Por ejemplo, la sintaxis para declarar un puntero a función que recibe dos cadenas y devuelve un entero es la siguiente:
+
+	int (*func)(char*, char*);
+
+Estas funciones se usan típicamente para delegar la ejecución de un fragmento de código a otra función. Por ejemplo, para aplicarle una operación a todos los elementos de un arreglo de enteros podríamos tener la función:
+
+	/* Aplica la operación pasada por parámetro a todos los elementos del arreglo. */
+	void aplicar(int arreglo[], size_t cant, void (*operacion)(int));
+
+Entonces si tuviéramos una función para multiplicar por dos:
+
+  	void multiplicar_por_dos(int numero)
+    {
+        return numero * 2;
+    }
+
+Podríamos multiplicar por dos a todos los elementos del arreglo usando un puntero a la función:
+
+	int arreglo[3] = { 2, 5, 4 };
+	aplicar(arreglo, 3, &multiplicar_por_dos);
+
+
+### ¿Qué es un wrapper?
+En la materia usamos los punteros a función para garantizar un comportamiento que no dependa del tipo de datos que se maneje. Por ejemplo, si quisiéramos destruir todos los elementos de una estructura podríamos crear una funcion:
+
+	void estructura_destruir(estructura_t* estructura, void (*f_dest)(void*));
+
+Que le aplique la función de destrucción a todos los elementos que están almacenados en ella. Si estos elementos también son genéricos y tienen su propia función de destrucción:
+
+	void elemento_destruir(elemento_t* elem);
+
+No se puede invocar directamente a la primitiva estructura_destruir con elemento_destruir, porque sus firmas son diferentes. Lo que se suele hacer es crear una función wrapper que enmascare el comportamiento:
+
+	void elemento_destruir_wrapper(void* elem)
+	{
+		elemento_destruir((elemento_t*) elem));
+	}
+
+De esta manera, la función elemento_destruir_wrapper es genérica y puede ser usada con la función estructura_destruir.
 
 ## Redimensionamiento automático
 
@@ -186,21 +277,47 @@ La variable i hace de iterador del vector v.
 En listas enlazadas, árboles, tablas de hash y otras estructuras ese int i no es suficiente para recorrer la estructura, por lo que se generaliza esa idea en el concepto de "iterador".
 
 Las operaciones básicas que puede tener un iterador son:
-crear
-ver_dato
-avanzar
-¿esta_al_final?
-destruir
-Y la forma tradicional de usarlo sería (ejemplo para un iterador de lista):
+  - crear
+  - ver_dato
+  - avanzar
+  - ¿esta_al_final?
+  - destruir
 
-lista_dato_t dato;
-lista_iter_t* it = lista_iter_crear(lista);
-while ( ! lista_iter_es_final(it) ) {
-       lista_iter_ver_actual(it, &dato); /* carga el dato */
-       // ... Hacer algo con dato ...
-       lista_iter_avanzar(it); /* avanza al siguiente */
-}
-lista_iter_destruir(it);
+### ¿Cómo se usan los iteradores de una estructura?
+
+En la materia adoptamos la siguiente convención para todos los iteradores:
+  - La creacion de un iterador en una estructura es siempre una operación válida:
+  - Si la estructura tiene elementos, el iterador apunta al primer elemento.
+  - Si la estructura no tiene elementos, el iterador se crea, pero apuntando al final.
+  - Avanzar un iterador cuando no está al final siempre es una operación válida.
+  - Avanzar un iterador que está al final es una operacion inválida, por lo que devuelve false.
+  - Ver actual es siempre una operación válida. Cuando está al final devuelve siempre NULL.
+
+Considerando esta convención, la forma canónica de iterar una estructura es la siguiente:
+
+  	estructura_iter_t* iter = estructura_iter_crear(estructura);
+
+  	while(!estructura_iter_al_final(iter))
+  	{
+      		void* dato = estructura_iter_ver_actual(iter);
+      		/* Usar dato. */
+
+      		estructura_iter_avanzar(iter);
+  	}
+
+  	estructura_iter_destruir(iter);
+
+O usando la sintaxis de ciclos definidos de C:
+
+  	for(estructura_iter_t* iter = estructura_iter_crear(estructura);
+      !estructura_iter_al_final(iter);
+      estructura_iter_avanzar(iter))
+  	{
+      		void* dato = estructura_iter_ver_actual(iter);
+      	/* Usar dato. */
+  	}
+
+	  estructura_iter_destruir(iter);
 
 ### Una vez que se llega al fin, ¿El iterador no sirve más?
 
@@ -251,6 +368,40 @@ En varias estructuras, como listas, colas, pilas o árboles, a la función de de
 
 Esto se debe a que las funciones que eliminan elementos de las estructuras no los tienen que destruir, ya que los guardan en la referencia al dato recibida por puntero, y es el usuario el encargado de liberar el dato de ser necesario.
 
+## Lista enlazada
+
+### ¿Cómo se comporta el agregado y la eliminación en una lista enlazada con iteradores?
+
+La inserción en una lista enlazada sigue dos reglas:
+  - El elemento insertado va a tomar la posicion del elemento al que se apunta.
+  - Luego de una insercion, el iterador va a apuntar al nuevo elemento.
+
+Esto no quiere decir que lista_insertar sobreescriba datos; sino que si el actual del iterador es el segundo elemento de la lista, realizar una inserción colocaría un nuevo dato entre el elemento uno y el dos:
+
+![Inserciones en una lista](lista_iter_1.png)
+
+Dos implicaciones que surgen son:
+  - Si se inserta un elemento con un iterador apuntando al primer elemento de la lista, la operación es idéntica a llamar a lista_insertar_primero.
+  - Si se inserta un elemento con un iterador apuntando al final, la operación es idéntica a llamar a lista_insertar_ultimo.
+
+La eliminación funciona de manera análoga: se elimina el elemento al que está apuntando el iterador y este apunta al elemento siguiente:
+
+![Eliminaciones en una lista](lista_iter_2.png)
+
+Considerando esto resulta:
+  - La eliminación de un elemento con un iterador apuntando al primer elemento de la lista es idéntica a lista_borrar_primero.
+  - La eliminacion de un elemento con un iterador apuntando al último elemento de la lista (esto es: al elemento tal que cuando se avanza el iterador está al final) se comportaría como una primitiva lista_borrar_ultimo. Eliminar este elemento haría que el iterador apunte al final de la lista.
+
+### ¿Cómo se comporta el iterador interno?
+
+El iterador interno es una herramienta para poder procesar los elementos de la lista sin necesidad de manejar la memoria del iterador externo.
+Para hacer esto es necesario escribir la función visitar en donde se especifique qué es lo que se va a hacer con estos nodos:
+
+    bool visitar(void* dato, void* extra);
+
+Esta función va a ser llamada inicialmente con el dato que ocupa la primera posición de la lista. Como esta función va a ser llamada de manera automática por la primitiva lista_iterar, además debe recibir un puntero extra que puede ser usado para mantener una memoria entre las las sucesivas llamadas.
+Adicionalmente, esta función devuelve un valor booleano. Si en algún momento se devuelve false, la iteración se interrumpiría automáticamente.
+
 ## Hash
 
 ### ¿Qué son las claves y los datos dentro del hash?
@@ -272,6 +423,24 @@ Al avanzar el iterador de hash, debe avanzar el iterador de la lista actual, y e
 Debe indicar que llegó al final cuando ya no queden listas por recorrer.
 
 ### ¿Cómo se destruye un hash abierto?
+
 La lista que está asociada a cada uno de los baldes de la tabla de hash debe contener parejas de clave-valor.  De modo que si al momento de destruir la lista se le pasara una función de destrucción del dato, esta función debería destruir estas parejas.  Pero el usuario almacena en el hash una función de destrucción del valor almacenado, a la que no se puede acceder desde la función de destrucción del dato de la lista.
 
 La forma más sencilla de resolver este problema es, entonces, ir llamando a la función lista_borrar_primero hasta que la lista se encuentre vacía y destruir apropiadamente cada uno de los elementos que se van sacando de la lista.
+
+
+## Árboles binarios de búsqueda
+
+### ¿Cómo se destruye un dato en un ABB?
+
+Recomendamos seguir este algoritmo para destruir datos en un árbol binario de búsqueda: después de localizar el nodo a eliminar se consideran tres casos:
+  - Si el nodo es una hoja (es decir: no tiene hijos), se elimina.
+  - Si el nodo tiene un solo hijo, se elimina el nodo y se reemplaza con su hijo.
+  - Si el nodo tiene dos hijos no se elimina el nodo, sino que se reemplaza con el siguiente inorder (es decir, con el menor de sus hijos mayores) o con el anterior inorder (el mayor de sus hijos menores).
+
+Luego se llama a la eliminación recursiva en el subárbol correspondiente de acuerdo a la estrategia de eliminación elegida. Como se eligió o bien el menor de sus hijos mayores o el mayor de sus hijos menores, obligatoriamente al nodo a borrar le va a faltar un hijo, haciendo que se caiga en alguno de los dos primeros casos.
+
+## Heaps
+
+### ¿Por qué no representamos heaps con nodos enlazados?
+Los heaps son árboles completos, por lo que si se representa la estructura con un arreglo se pueden calcular de manera sencilla y elegante las posiciones de los padres e hijos de cada nodo. De esta manera los algoritmos resultan muy fáciles de programar y se evita la creación y el encadenamiento de los nodos en cada operación de alta o baja. Además, se ahorra memoria ya que no es necesario almacenar referencias entre nodos.
