@@ -189,7 +189,7 @@ La entrega incluye, obligatoriamente, un informe en formato PDF y los siguientes
 
 - `paste.c`
 - `more.c`
-- `bc.c`
+- `dc.c`
 - `strutil.c` con las imlementaciones de las funciones `split`, `join` y `free_strv`.
 - `pila.c`, `cola.c` y `lista.c` (las implementaciones del alumno de estos TDA; se debe incluir los archivos .h también)
 - un archivo `deps.mk` con las dependencias del proyecto en formato make
