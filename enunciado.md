@@ -57,39 +57,39 @@ Que se puede leer como: “El personaje1 y el personaje2 participan juntos en N1
 
 El programa debe cargar la red social de dicho archivo, y luego esperar a que se ingresen comandos por entrada estándar. Los comandos se ejecutarán de la siguiente forma:
 
-`> Comando parametro1, parametro2, ..., parametroN`
+	> Comando parametro1, parametro2, ..., parametroN
 
 ### Comandos a Implementar
 1) _Similares_: dado un personaje, encontrar los personajes más similares a este.
-   ```
-    Parámetros:
-        Personaje: el personaje en cuestión, al que se le buscan los similares.
-        Cantidad: la cantidad de personajes semejantes que se desean buscar.
+   
+	Parámetros:
+		Personaje: el personaje en cuestión, al que se le buscan los similares.
+		Cantidad: la cantidad de personajes semejantes que se desean busca.
 		
-    Salida: De mayor a menor similaridad, los personajes ‘Cantidad’ personajes más similares al personaje indicado.
+	Salida: De mayor a menor similaridad, los personajes ‘Cantidad’ personajes más similares al personaje indicado.
 	Ejemplo:
 		> similares IRON MAN, 3
 		Salida de ejemplo: 
 		> CAPTAIN AMERICA, SPIDER-MAN, SCARLET WITCH
-    ```
+   
 
 2) _Recomendar_: Dado un personaje con el cual se quiere realizar un nuevo comic, recomendar otro (u otros) personaje con el cual no haya participado aún en un comic, y sea lo más similar a él posible. 
-    ```
+   
 	Parámetros: 
-        Personaje: el personaje en cuestión, al que se le busca recomendar un nuevo compañero.
+		Personaje: el personaje en cuestión, al que se le busca recomendar un nuevo compañero.
 	Salida: Personaje a recomendar. Los ‘Cantidad’ personajes más similares al personaje, ordenados de mayor a menor similaridad.
 	Ejemplo:
 		> recomendar SPIDER-MAN, 5
 		Salida de ejemplo:
 		> JUBILEE, RICTOR, APOCALYPSE, DOMINO III, SKIDS
-    ```
+   
 
 Para implementar estos dos comandos, podemos utilizar **Random Walks**.
 ¿Cómo esto nos puede ayudar a determinar si un personaje es similar a otro? Si realizamos muchos de estos recorridos aleatorios, partiendo desde el personaje en cuestión, moviéndonos de forma completamente aleatoria, el/los personajes que más veces aparezcan entre todos los recorridos, deben ser los más similares al personaje de origen. Este es un algoritmo bastante usado, por ejemplo en Twitter, para recomendar seguidores (sería similar a nuestro recomendar). 
-    Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo (en ambos casos, y siempre que se utilicen Random Walks).
+	Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo (en ambos casos, y siempre que se utilicen Random Walks).
 
 3) _Camino_: Queremos que un comunicado llegue lo más rápido posible de un personaje A a un Personaje B. Sabemos que los personajes se reúnen usualmente con sus ex-compañeros, por lo que la mejor estrategia, para que el mensaje llegue rápido, es definir como “ruta de comunicación” a aquellos que con los cuales haya participado más veces en distintos comics.
-    ```
+   
 	Parámetros:
 		Personaje1: personaje de partida.
 		Personaje2: personaje de llegada.
@@ -98,15 +98,15 @@ Para implementar estos dos comandos, podemos utilizar **Random Walks**.
 		> camino STAN LEE, CAPTAIN AMERICA
 		Salida:
 		> STAN LEE -> HUMAN TORCH -> CAPTAIN AMERICA
-    ```
+   
 4) Centralidad (o Betweeness): permite obtener los personajes más centrales de la red. Los personajes más centrales suelen ser a su vez los más importantes (o lo que se dice en redes sociales, influyente). 
-    ```
+   
 	Parámetros: 
-        Cantidad: la cantidad de personajes que se desean mostrar.	
-    Salida: Los ‘Cantidad’ Personajes más centrales de la red, mostrado de mayor a menor.
+		Cantidad: la cantidad de personajes que se desean mostrar.	
+	Salida: Los ‘Cantidad’ Personajes más centrales de la red, mostrado de mayor a menor.
 	Ejemplo:
 		> centralidad 10
-    ```
+
 Para implementar este comando recomendamos analizar estas dos formas:
 
 a) _Centralidad exacta_: La definición correcta es que los vértices centrales son aquellos que aparecen más veces entre todos los caminos mínimos existentes en el grafo (sin contar los extremos de cada camino mínimo, por supuesto). Por ende, una forma de calcularlo es obtener todos los caminos mínimos (desde todos los vértices, hacia todos los vértices), luego determinar la cantidad de veces que aparece cada vértice en cada camino mínimo (sin ser extremo del mismo), y mostrar los K mayores.
@@ -117,39 +117,39 @@ Cualquier opción elegida debe ser analizada con sus pros y contras en el inform
 Si se deseara, puede implementarse dicho comando con sus dos alternativas (por supuesto, esto tendría un impacto positivo en la nota ;-) ).
 
 5) _Distancias_: dado un personaje, obtener los personajes que se encuentran a cada una de las distancias posibles, considerando las distancias como la cantidad de saltos (no tenemos en cuenta los eventuales pesos de las aristas del grafo). 
-    ```
-    Parámetro:
-	    Personaje: personaje al cuál se le desean obtener las distancias.
-    Salida:
-	    Distancia 1: cantidad de personajes adyacentes al personaje en cuestión.
-	    Distancia 2: cantidad de personajes a distancia 2 del personaje en cuestión.
-    	...
-    Ejemplo:
-	    > distancias BLACK PANTHER
-	    Salida de ejemplo:
-	    > Distancia 1: 711
-	    > Distancia 2: 5498
-	    > Distancia 3: 183
-    ```
+
+	Parámetro:
+		Personaje: personaje al cuál se le desean obtener las distancias.
+	Salida:
+		Distancia 1: cantidad de personajes adyacentes al personaje en cuestión.
+		Distancia 2: cantidad de personajes a distancia 2 del personaje en cuestión.
+		...
+	Ejemplo:
+		> distancias BLACK PANTHER
+		Salida de ejemplo:
+		> Distancia 1: 711
+		> Distancia 2: 5498
+		> Distancia 3: 183
+	
 6) _Estadísticas_: Muchas veces es de interés obtener ciertas estadísticas sobre las uniones del grafo. Nos interesa que nos muestre el total de vértices, el total de aristas, el promedio del grado de cada vértice, el desvío estándar del grado de cada vértice y la densidad del grafo (la proporción entre la cantidad de aristas, y la cantidad de aristas máximas que puede llegar tener el grafo, con esa cantidad de vértices).
-    ```
-    Parámetros:
-	    Ninguno
-    Salida:
-	    “Cantidad de vértices: ...
-	    Cantidad de aristas: ...
-	    Promedio del grado de cada vértice: ...
-	    Desvío estándar del grado de cada vértice: ...
-	    Densidad del grafo: ...“
-    Ejemplo:
-	    > estadisticas
-    ```
-7) _Comunidades_: Nos permite mostrar las comunidades que se encuentren en la red. Recomendamos utilizar el algoritmo de Label Propagation descrito en la introducción de este trabajo práctico.
-    ```
+	
 	Parámetros:
 		Ninguno
-	    Salida: Por cada comunidad, la cantidad de integrantes, y un listado con los        integrantes. Filtrar las comunidades con muy pocos vértices (menos de 4), o con muchos vértices (más de 1000). 
-    ```
+	Salida:
+		“Cantidad de vértices: ...
+		Cantidad de aristas: ...
+		Promedio del grado de cada vértice: ...
+		Desvío estándar del grado de cada vértice: ...
+		Densidad del grafo: ...“
+	Ejemplo:
+		> estadisticas
+	
+7) _Comunidades_: Nos permite mostrar las comunidades que se encuentren en la red. Recomendamos utilizar el algoritmo de Label Propagation descrito en la introducción de este trabajo práctico.
+
+	Parámetros:
+		Ninguno
+		Salida: Por cada comunidad, la cantidad de integrantes, y un listado con los		integrantes. Filtrar las comunidades con muy pocos vértices (menos de 4), o con muchos vértices (más de 1000). 
+
 La entrega del trabajo práctico debe constar del código (tanto del programa como del TDA Grafo), así como del informe correspondiente, analizando el orden de cada uno de los comandos implementados en función de los algoritmos utilizados en cada caso. 
 Además, en caso de sacar conclusiones sobre la estructura de la red social de marvel, es más que bienvenida, ya que además de estudiar el orden de los algoritmos, nos gusta ver que se puedan sacar conclusiones a partir de ellos!
 
