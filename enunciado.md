@@ -92,8 +92,8 @@ El programa debe cargar la red social de dicho archivo, y luego esperar a que se
 			> JUBILEE, RICTOR, APOCALYPSE, DOMINO III, SKIDS
    
 
-Para implementar estos dos comandos, podemos utilizar **Random Walks**.
-¿Cómo esto nos puede ayudar a determinar si un personaje es similar a otro? Si realizamos muchos de estos recorridos aleatorios, partiendo desde el personaje en cuestión, moviéndonos de forma completamente aleatoria, el/los personajes que más veces aparezcan entre todos los recorridos, deben ser los más similares al personaje de origen. Este es un algoritmo bastante usado, por ejemplo en Twitter, para recomendar seguidores (sería similar a nuestro recomendar). Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo (en ambos casos, y siempre que se utilicen Random Walks).
+	Para implementar estos dos comandos, podemos utilizar **Random Walks**.
+	¿Cómo esto nos puede ayudar a determinar si un personaje es similar a otro? Si realizamos muchos de estos recorridos aleatorios, partiendo desde el personaje en cuestión, moviéndonos de forma completamente aleatoria, el/los personajes que más veces aparezcan entre todos los recorridos, deben ser los más similares al personaje de origen. Este es un algoritmo bastante usado, por ejemplo en Twitter, para recomendar seguidores (sería similar a nuestro recomendar). Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo (en ambos casos, y siempre que se utilicen Random Walks).
 
 3. _Camino_: Queremos que un comunicado llegue lo más rápido posible de un personaje A a un Personaje B. Sabemos que los personajes se reúnen usualmente con sus ex-compañeros, por lo que la mejor estrategia, para que el mensaje llegue rápido, es definir como “ruta de comunicación” a aquellos que con los cuales haya participado más veces en distintos comics.
    
