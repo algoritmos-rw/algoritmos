@@ -60,7 +60,7 @@ El siguiente será el comportamiento esperado:
 
     $ echo "4 2 +" | ./dc
     6
-    $ echo "2 9 4 + \*" | ./dc
+    $ echo "2 9 4 + *" | ./dc
     26
 
 Con las siguientes consideraciones:
