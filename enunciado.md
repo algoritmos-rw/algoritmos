@@ -53,7 +53,7 @@ El programa a realizar debe recibir por parámetro la ruta del archivo con los d
 
 	$ ./tp3 marvel.tsv
 
-El archivo marvel.tsv que nosotros les otorgamos es de la forma:
+El archivo [marvel.tsv](https://drive.google.com/open?id=0B_oxuLrlET2hTENoQlM0Y3B3MFE) que nosotros les otorgamos es de la forma:
 ```
 Personaje1		Personaje2		N1
 Personaje1		Personaje3		N2
