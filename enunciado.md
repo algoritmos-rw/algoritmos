@@ -9,7 +9,32 @@ TP 1: manejo de archivos y cadenas
 
 Este trabajo práctico es *individual* y consiste de cuatro partes separadas, a ser entregadas el viernes 14 de octubre.
 
-# paste
+# Aplicaciones
+
+Para estas aplicaciones se recomienda usar la función [getline()](http://man7.org/linux/man-pages/man3/getline.3.html).
+
+    ssize_t getline(char** buffer, size_t* capacidad, FILE* archivo);
+
+La principal ventaja de esta función es que automáticamente reserva la memoria dinámica necesaria para almacenar la línea. No se necesita invocar manualmente malloc() a mano, ni preocuparse por los tamaños de los buffers.
+
+Sí se necesita, no obstante, liberar memoria al terminar: getline() llama a malloc() pero transfiere la responsabilidad de la memoria al usuario.
+
+La reserva de memoria dinámica se consigue llamando a la función punteros a un buffer igual a NULL y a una capacidad 0:
+
+    char* linea = NULL;
+    size_t capacidad = 0;
+    ssize_t longitud = getline(&linea, &capacidad, archivo);
+    // Se debe liberar la memoria al terminar de usarla.
+    free(linea);  
+
+La función getline() se encuentra definida en la cabecera `stdio.h`. Como es una función de POSIX.1-2008, hay que declarar un identificador para indicar que la queremos usar:
+
+    // Al principio de tail.c y tac.c (antes de otros include):
+    #define _POSIX_C_SOURCE 200809L
+    #include <stdio.h>
+    #include <string.h>
+
+## paste
 
 Se pide implementar una utilidad similar al programa [paste](http://ss64.com/bash/paste.html), que dados dos archivos, concatena su contenido de a líneas e imprime el resultado por salida estándar.
 
@@ -45,14 +70,14 @@ Con las siguientes consideraciones:
   - El programa sólo debe almacenar en memoria una línea del archivo por vez.
 
 
-# more
+## more
 
 En este ejercicio se pide implementar una simplificación de la utilidad de unix [more](http://ss64.com/bash/more.html) para mostrar por pantalla el contenido de un flujo.
 
 El programa procesará lo enviado por entrada estándar, y deberá recibir por parámetro un número entero que indica la cantidad de líneas a ser mostradas por pantalla. Una vez mostradas las primeras N líneas, el programa imprimirá una nueva línea cada vez que el usuario envíe un salto de línea (con la tecla enter) por entrada estándar.
 
 
-# dc
+## dc
 
 Para este ejercicio se pide implementar una simplificación del programa [dc](http://ss64.com/bash/dc.html). Este programa procesará la entrada estándar y la interpretará como un cálculo en [notación polaca inversa](https://en.wikipedia.org/wiki/Reverse_Polish_notation), imprimiendo por salida estándar el resultado.
 
@@ -92,14 +117,15 @@ En C, devolveremos el resultado como un arreglo dinámico de cadenas dinámicas 
 El prototipo y la documentación de `split()`` queda en:
 
     /*
-     * Devuelve en un arreglo dinámico terminado en NULL todos los subsegmentos de
-     * ‘str’ separados por el carácter ‘sep’. Tanto el arreglo devuelto como las
+     * Devuelve en un arreglo dinámico terminado en NULL con todos los subsegmentos
+     * de ‘str’ separados por el carácter ‘sep’. Tanto el arreglo devuelto como las
      * cadenas que contiene son allocadas dinámicamente.
      *
-     * El caller toma ownership del vector devuelto. La función devuelve NULL si
-     * falló alguna llamada a malloc(), o si ‘sep’ es '\0'.
+     * Quien llama a la función toma responsabilidad de la memoria dinámica del
+     * arreglo devuelto. La función devuelve NULL si falló alguna llamada a
+     * malloc(), o si ‘sep’ es '\0'.
      */
-    char **split(const char *str, char sep);
+    char** split(const char* str, char sep);
 
 Considerar los siguientes casos borde:
 
@@ -128,10 +154,10 @@ El prototipo y documentación es:
      * Devuelve una cadena, allocada dinámicamente, resultado de unir todas las
      * cadenas del arreglo terminado en NULL ‘strv’.
      *
-     * El caller toma ownership de la cadena devuelta. La función devuelve NULL
-     * si no se pudo allocar memoria.
+     * Quien llama a la función toma responsabilidad de la memoria dinámica de la
+     * cadena devuelta. La función devuelve NULL si no se pudo allocar memoria.
      */
-    char *join(char **strv, char sep);
+    char* join(char** strv, char sep);
 
 Casos borde:
 
