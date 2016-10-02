@@ -97,7 +97,7 @@ Con las siguientes consideraciones:
 
 # Manejo de cadenas
 
-Se pide implementar las funciones del archivo [strutil.h](strutil.h) que se describen a continuación. Para la implementación de estas funciones no se puede hacer uso de TDAs:
+Se pide implementar las funciones del archivo [strutil.h](../strutil.h) que se describen a continuación. Para la implementación de estas funciones no se puede hacer uso de TDAs:
 
 ## split()
 
