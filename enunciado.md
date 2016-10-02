@@ -25,7 +25,7 @@ La reserva de memoria dinámica se consigue llamando a la función punteros a un
     size_t capacidad = 0;
     ssize_t longitud = getline(&linea, &capacidad, archivo);
     // Se debe liberar la memoria al terminar de usarla.
-    free(linea);  
+    free(linea);
 
 La función getline() se encuentra definida en la cabecera `stdio.h`. Como es una función de POSIX.1-2008, hay que declarar un identificador para indicar que la queremos usar:
 
@@ -97,7 +97,7 @@ Con las siguientes consideraciones:
 
 # Manejo de cadenas
 
-Se pide implementar las funciones del archivo strutil.h que se describen a continuación. Para la implementación de estas funciones no se puede hacer uso de TDAs:
+Se pide implementar las funciones del archivo [strutil.h](strutil.h) que se describen a continuación. Para la implementación de estas funciones no se puede hacer uso de TDAs:
 
 ## split()
 
