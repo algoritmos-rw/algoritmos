@@ -1,0 +1,25 @@
+<abrir lista_candidatos.csv padron.csv
+>OK 
+<ingresar DNI–EA 88003132
+>OK 
+<votar fin
+>ERROR10
+<votar deshacer
+>ERROR10
+<votar fin
+>ERROR10
+<votar 1
+>ERROR10
+<votar deshacer
+>ERROR10
+<votar inicio
+>Cargo: Presidente
+>1: Libertinaje determinante: Toban Lapjt
+>2: Sonido Retumbante: Coronel Barbara
+>3: La tienda de zurdos: Christian Grace
+>4: Carretera Popular: Haskell Martinez
+>5: Frente para la derrota: Alan Informacion
+>6: Union PRE: El Yisus
+>7: Frente por Aires frescos: Ignacio Gundersen
+<votar fin
+>ERROR9

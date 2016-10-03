@@ -1,0 +1,7 @@
+<abrir lista_candidatos.csv padron.csv
+>OK 
+<abrir lista_candidatos.csv
+>ERROR1
+<abrir lista_candidatos.csv padron.csv
+>ERROR2
+

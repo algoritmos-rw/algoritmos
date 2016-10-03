@@ -1,0 +1,15 @@
+<votar inicio
+>ERROR3
+<votar deshacer
+>ERROR3
+<votar fin
+>ERROR3
+<abrir lista_candidatos.csv padron.csv
+>OK 
+<votar inicio
+>ERROR7
+<votar deshacer
+>ERROR8
+<votar fin
+>ERROR9
+

@@ -1,0 +1,41 @@
+<abrir lista_candidatos.csv padron.csv
+>OK 
+<ingresar DNI–EA 88003132
+>OK 
+<ingresar DNI–EB 34965380
+>OK
+<votar inicio
+>Cargo: Presidente
+>1: Libertinaje determinante: Toban Lapjt
+>2: Sonido Retumbante: Coronel Barbara
+>3: La tienda de zurdos: Christian Grace
+>4: Carretera Popular: Haskell Martinez
+>5: Frente para la derrota: Alan Informacion
+>6: Union PRE: El Yisus
+>7: Frente por Aires frescos: Ignacio Gundersen
+<votar 1
+>OK
+>Cargo: Gobernador
+>1: Libertinaje determinante: Damian Ritman
+>2: Sonido Retumbante: Daniela Feca
+>3: La tienda de zurdos: Diego Fonzo
+>4: Carretera Popular: Ana Zarna
+>5: Frente para la derrota: Ignacio Lineas
+>6: Union PRE: Javier Colision
+>7: Frente por Aires frescos: Emisor Bello
+<votar 1
+>OK
+>Cargo: Intendente
+>1: Libertinaje determinante: Alejandro Buchcoll
+>2: Sonido Retumbante: Bruno Muelan
+>3: La tienda de zurdos: Fabricio Liera
+>4: Carretera Popular: Robin Fango
+>5: Frente para la derrota: Federico Besante
+>6: Union PRE: Yenifer Woolite
+>7: Frente por Aires frescos: Daniela Peligro
+<votar 1
+>OK
+<votar fin
+>OK
+<cerrar
+>ERROR11

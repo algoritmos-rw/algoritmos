@@ -1,0 +1,12 @@
+<ingresar DNI–EA 88003132
+>ERROR3 
+<abrir lista_candidatos.csv padron.csv
+>OK 
+<ingresar DNI–EA 88003132
+>OK 
+<ingresar DNI–EB 34965380
+>OK
+<ingresar DNI -12345678
+>ERROR4
+<ingresar 0
+>ERROR4
