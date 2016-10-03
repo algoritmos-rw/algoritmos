@@ -7,14 +7,15 @@ deadline: 2015-11-13
 Introducción
 ============
 
-En Suiza, la clínica \textsc{Zyxcba Inc.} utiliza un mecanismo de
-contribuciones para organizar sus listas de espera. Así, dentro de cada
-especialidad se da prioridad a aquellos pacientes que, además de sus cuotas
-mensuales, más “donativos voluntarios” realizaron a las arcas de la clínica.
+En Suiza, la clínica _Zyxcba Inc._{: style="font-variant: small-caps"} utiliza
+un mecanismo de contribuciones para organizar sus listas de espera. Así, dentro
+de cada especialidad se da prioridad a aquellos pacientes que, además de sus
+cuotas mensuales, más “donativos voluntarios” realizaron a las arcas de la
+clínica.
 
-Para celebrar el 70 aniversario de la clínica, \textsc{Zyxcba Inc.} ha decidido
-remplazar la implementación actual del sistema de gestión en COBOL por una más
-moderna en C.
+Para celebrar el 70 aniversario de la clínica, _Zyxcba Inc._{:
+style="font-variant: small-caps"} utiliza ha decidido remplazar la
+implementación actual del sistema de gestión en COBOL por una más moderna en C.
 
 
 Funcionamiento de la clínica
@@ -80,7 +81,7 @@ Garantías (pre-condiciones):
     carácter nulo `'\0'`.
 
   - los montos de contribuciones son números enteros positivos en base 10, y
-    ningún paciente contribuyó más de $2^{64} - 1$ pesos.
+    ningún paciente contribuyó más de $$2^{64} - 1$$ pesos.
 
 
 Interacción
@@ -92,8 +93,8 @@ por entrada estándar.
 Una instrucción se compone de un comando y sus parámetros. El formato siempre
 es: nombre del comando, carácter dos puntos `':'` y parámetros del comando. Así:
 
-        CMD1:ARG_A
-        CMD2:ARG_B,ARG_C
+	CMD1:ARG_A
+	CMD2:ARG_B,ARG_C
 
 Como se ve, un comando puede tener más de un parámetro, separados por comas.
 
@@ -106,15 +107,15 @@ Mensajes de error:
   - Si una instrucción no sigue el formato `NOMBRE_COMANDO:PARAMETROS`, el
     sistema imprime el siguiente mensaje de error:
 
-        ERROR: formato de comando incorrecto
+	ERROR: formato de comando incorrecto
 
   - Si el formato es correcto pero no existe el comando, el sistema imprime:
 
-        ERROR: no existe el comando 'NOMBRE_CMD:PARAMETROS'
+	ERROR: no existe el comando 'NOMBRE_CMD:PARAMETROS'
 
 [^1]: El programador puede por tanto utilizar la salida de error estándar para
-mensajes de depurado o _debugging_. Estos mensajes, no obstante, no deben
-quedar en el programa final.
+      mensajes de depurado o _debugging_. Estos mensajes, no obstante, no deben
+      quedar en el programa final.
 
 
 Comandos
@@ -131,17 +132,17 @@ correspondiente.
 
 Formato:
 
-        PEDIR_TURNO:NOMBRE_PACIENTE,NOMBRE_ESPECIALIDAD
+	PEDIR_TURNO:NOMBRE_PACIENTE,NOMBRE_ESPECIALIDAD
 
 Salida (dos líneas):
 
-        Paciente NOMBRE_PACIENTE encolado
-        N paciente(s) en espera para NOMBRE_ESPECIALIDAD
+	Paciente NOMBRE_PACIENTE encolado
+	N paciente(s) en espera para NOMBRE_ESPECIALIDAD
 
 Mensajes de error, cuando corresponda:
 
-        ERROR: no existe el paciente 'NOMBRE_PACIENTE'
-        ERROR: no existe la especialidad 'NOMBRE_ESPECIALIDAD'
+	ERROR: no existe el paciente 'NOMBRE_PACIENTE'
+	ERROR: no existe la especialidad 'NOMBRE_ESPECIALIDAD'
 
 Garantías (pre-condiciones):
 
@@ -157,23 +158,23 @@ mayor contribución de entre los que esperan para su especialidad.
 
 Formato:
 
-        ATENDER_SIGUIENTE:NOMBRE_DOCTOR
+	ATENDER_SIGUIENTE:NOMBRE_DOCTOR
 
 Salida si se atendió a un paciente (dos líneas):
 
-        Se atiende a NOMBRE_PACIENTE
-        N paciente(s) en espera para NOMBRE_ESPECIALIDAD
+	Se atiende a NOMBRE_PACIENTE
+	N paciente(s) en espera para NOMBRE_ESPECIALIDAD
 
-donde $N$ es el número de pacientes que quedaron en espera tras atender al
+donde _N_ es el número de pacientes que quedaron en espera tras atender al
 paciente actual (que puede ser 0).
 
 Salida si no había previamente pacientes en la lista de espera (una línea):
 
-        No hay pacientes en espera
+	No hay pacientes en espera
 
 Mensajes de error, cuando corresponda:
 
-        ERROR: no existe el doctor 'NOMBRE_DOCTOR'
+	ERROR: no existe el doctor 'NOMBRE_DOCTOR'
 
 
 ### 3. Informe doctores
@@ -184,40 +185,42 @@ sistema.
 
 Formato:
 
-        INFORME:DOCTORES
+	INFORME:DOCTORES
 
 (Literalmente `“INFORME:DOCTORES”`; en este caso el argumento del comando es
 siempre el mismo para este tipo de informe.)
 
-Salida ($N + 1$ líneas, donde $N$ es el número de doctores en el sistema):
+Salida (_N + 1_ líneas, donde _N_ es el número de doctores en el sistema):
 
-        N doctor(es) en el sistema
-        1: NOMBRE, especialidad ESPECIALIDAD, X paciente(s) atendido(s)
-        2: NOMBRE, especialidad ESPECIALIDAD, Y paciente(s) atendido(s)
-        ...
-        N: NOMBRE, especialidad ESPECIALIDAD, Z paciente(s) atendido(s)
+	N doctor(es) en el sistema
+	1: NOMBRE, especialidad ESPECIALIDAD, X paciente(s) atendido(s)
+	2: NOMBRE, especialidad ESPECIALIDAD, Y paciente(s) atendido(s)
+	...
+	N: NOMBRE, especialidad ESPECIALIDAD, Z paciente(s) atendido(s)
 
 
 Mensajes de error
 -----------------
 
 Para facilitar los mensajes de la aplicación sean _exactamente_ los
-especificados, se proporciona un archivo `mensajes.h` que contiene las
+especificados, se proporciona un archivo _[mensajes.h]_ que contiene las
 definiciones de todos los mensajes, tal que:
 
-        #define PACIENTE_ENCOLADO "Paciente %s encolado\n"
-        #define ENOENT_DOCTOR "ERROR: no existe el doctor '%s'\n"
-        // etc.
+	#define PACIENTE_ENCOLADO "Paciente %s encolado\n"
+	#define ENOENT_DOCTOR "ERROR: no existe el doctor '%s'\n"
+	// etc.
 
 La manera de usarlos, entonces, es:
 
-        #include "mensajes.h"
-        #include <stdio.h>
+	#include "mensajes.h"
+	#include <stdio.h>
 
-        printf(PACIENTE_ENCOLADO, "Ingeniero Garay");
+	printf(PACIENTE_ENCOLADO, "Ingeniero Garay");
 
-Si hay alguna discrepancia entre esta consigna y el archivo `mensajes.h`, este
+Si hay alguna discrepancia entre esta consigna y el archivo _mensajes.h_, este
 último es la versión canónica.
+
+[mensajes.h]: https://github.com/algoritmos-rw/tps41/blob/2015_2/tp2/mensajes.h
 
 
 Otras condiciones de error
@@ -236,11 +239,13 @@ errores **durante la fase de inicialización**:
 Funciones auxiliares de la cátedra
 ----------------------------------
 
-Además del archivo `mensajes.h` ya mencionado, se proporcionan dos archivos
-auxiliares, `csv.h` y `csv.c`, para ayudar con la lectura tanto de los archivos
-CSV, como de los comandos. Su uso es opcional; el alumno puede emplear sus
-propias funciones de lectura, o las proporcionadas por la cátedra en TPs
-anteriores.
+Además del archivo _mensajes.h_ ya mencionado, en el [directorio tp2] del
+repositorio se proporcionan dos archivos auxiliares, _csv.h_ y _csv.c_, para
+ayudar con la lectura tanto de los archivos CSV, como de los comandos. Su uso
+es opcional; el alumno puede emplear sus propias funciones de lectura, o las
+proporcionadas por la cátedra en TPs anteriores.
+
+[directorio tp2]: https://github.com/algoritmos-rw/tps41/blob/2015_2/tp2/
 
 
 Criterios de aprobación
@@ -302,7 +307,7 @@ El trabajo a entregar consiste en:
 Los dos últimos deben enviarse a la dirección `tps.7541rw@gmail.com`, colocando
 como asunto:
 
-        TP1 - Padrón 1 - Apellido 1 - Padrón 2 - Apellido 2
+	TP1 - Padrón 1 - Apellido 1 - Padrón 2 - Apellido 2
 
 Este trabajo práctico se desarrolla en forma grupal. El informe impreso debe
 entregarse en clase. El plazo de entrega vence el **viernes 13 de noviembre de

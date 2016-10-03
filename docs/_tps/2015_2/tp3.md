@@ -22,10 +22,15 @@ Consigna
 Dado un listado de ciudades y un listado de rutas que las conectan, implementar un programa que modele la situación descripta usando un grafo y que permita resolver los siguientes problemas:
 
 - La selección de las rutas que conecten todas las ciudades maximizando la cantidad de gente favorecida y considerando el largo de cada ruta. Otros datos que se pueden tener en cuenta son la población de las ciudades a interconectar y la provincia a la que pertenecen.
-No es necesario que el resultado de la operación resulte en un árbol, sino que puede haber varios caminos que conecten dos ciudades.
-No existe un límite de rutas posibles a usar, pero sí es obligatorio justificar en el informe el criterio utilizado para hacer la selección de caminos.
+
+  No es necesario que el resultado de la operación resulte en un árbol, sino que puede haber varios caminos que conecten dos ciudades.
+
+  No existe un límite de rutas posibles a usar, pero sí es obligatorio justificar en el informe el criterio utilizado para hacer la selección de caminos.
+
 - La selección de caminos entre ciudades para abastecer de energía eléctrica a todas las estaciones usando un árbol de tendido mínimo.
-Este árbol debe ser construido con un subconjunto de las rutas seleccionadas en el ítem anterior.
+
+  Este árbol debe ser construido con un subconjunto de las rutas seleccionadas en el ítem anterior.
+
 - La obtención de rutas eficientes entre dos ciudades y exportación a un mapa usando el formato KML.
 
 
@@ -35,10 +40,10 @@ Entrada
 Se proveen dos archivos con información que deberá ser interpretada para realizar el trabajo práctico.
 
 Archivo de ciudades
---------------------
+-------------------
 
-Se trata de un archivo llamado `ciudades.csv` que cuenta con los registros de las ciudades, con la siguiente información:
-    
+Se trata de un archivo llamado [ciudades.csv] que cuenta con los registros de las ciudades, con la siguiente información:
+
 - `id`: identificador unívoco de la ciudad, de tipo entero.
 - `nombre`: nombre completo de la ciudad.
 - `longitud`: coordenada de longitud de la ubicación geográfica de la ciudad, de tipo decimal.
@@ -46,16 +51,19 @@ Se trata de un archivo llamado `ciudades.csv` que cuenta con los registros de la
 - `provincia`: número que indica la provincia en la que se encuentra la ciudad.
 - `habitantes`: número que indica la cantidad de habitantes de la ciudad.
 
-Archivo de rutas
---------------------
+[ciudades.csv]: https://github.com/algoritmos-rw/tps41/blob/2015_2/tp3/ciudades.csv
 
-Se trata de un archivo llamado `rutas.csv` que cuenta con las posibles rutas a incluir para resolver el problema. Tiene la siguiente información:
+Archivo de rutas
+----------------
+
+Se trata de un archivo llamado [rutas.csv] que cuenta con las posibles rutas a incluir para resolver el problema. Tiene la siguiente información:
 
 - `id`: identificador unívoco de la ruta, de tipo entero.
 - `id_ciudad_1`, `id_ciudad_2`: identificadores de las ciudades que son conectadas por la ruta, de tipo entero.
 - `puntaje`: un número entero que representa la cantidad de gente que es favorecida por la creación de la ruta (mientras más alto, más gente es favorecida).
 - `distancia`: un número decimal que indica el largo de la ruta, es decir, la distancia entre las dos ciudades que conecta.
 
+[rutas.csv]: https://github.com/algoritmos-rw/tps41/blob/2015_2/tp3/rutas.csv
 
 Comportamiento del programa
 ============
@@ -79,15 +87,15 @@ Archivos KML
 
 Los archivos KML son archivos de texto plano utilizados por aplicaciones como Google Earth o Google Maps para mostrar información geográfica. Estos archivos deben cumplir un estándar con el que se pueden representar puntos, líneas y polígonos, entre otras cosas.
 
-La referencia completa de esta sintaxis está disponible en Internet [^1]. Sin embargo, aquí se definen un subconjunto mínimo de instrucciones para generar archivos KML con la información necesaria para visualizar las rutas.
+La referencia completa de esta sintaxis está disponible en Internet ([link][1]). Sin embargo, aquí se definen un subconjunto mínimo de instrucciones para generar archivos KML con la información necesaria para visualizar las rutas.
 
-Para visualizar estos archivos generados se puede usar Google Maps [^2] o alguna aplicación externa que no requiere haber iniciado sesión con una cuenta de Google [^3].
+Para visualizar estos archivos generados se puede usar [Google Maps][2] o alguna aplicación externa que no requiere haber iniciado sesión con una cuenta de Google (por ejemplo, [display-kml.appspot.com][3]).
 
 Se incluye junto a este enunciado un archivo KML de ejemplo.
 
-[^1]: <https://developers.google.com/kml/documentation/?hl=en>
-[^2]: <https://support.google.com/mymaps/answer/3024836?hl=en>
-[^3]: Por ejemplo: <http://display-kml.appspot.com/>
+[1]: https://developers.google.com/kml/documentation/?hl=en
+[2]: https://support.google.com/mymaps/answer/3024836?hl=en
+[3]: http://display-kml.appspot.com/
 
 
 Encabezado XML
@@ -116,7 +124,7 @@ A continuación se puede agregar el nombre del archivo y una descripción.
 Contenido geográfico
 --------------------
 
-El lenguaje incluye muchos componentes para visualizar en mapas, especificando su estilo y muchos atributos. Para el alcance de este trabajo sólo serán necesarios dos que serán explicados en esta sección. 
+El lenguaje incluye muchos componentes para visualizar en mapas, especificando su estilo y muchos atributos. Para el alcance de este trabajo sólo serán necesarios dos que serán explicados en esta sección.
 Se pueden incluir muchos de estos componentes en un mismo archivo sin necesidad de ordenarlos ni especificar su cantidad previamente.
 
 
@@ -167,12 +175,12 @@ Estructuras de datos
 
 Para la realización de este trabajo es necesario utilizar la estructura de
 datos **grafo** vista en clase, además de crear las estructuras adicionales que
-se consideren necesarias. 
+se consideren necesarias.
 
-Puede utilizar todas las estructuras de datos que se crean convenientes, así como 
+Puede utilizar todas las estructuras de datos que se crean convenientes, así como
 aplicar las técnicas de programación vistas en clase para resolver cada problema.
 
-Todas las estructuras deben estar implementadas de la forma más genérica posible y 
+Todas las estructuras deben estar implementadas de la forma más genérica posible y
 correctamente documentadas.
 
 Código del programa

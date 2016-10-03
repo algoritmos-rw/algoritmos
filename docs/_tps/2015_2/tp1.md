@@ -16,6 +16,11 @@ En este contexto, nos han encargado la implantación de un componente del nuevo 
 
 Implementar en C el sistema de gestión de votos que debe cumplir el siguiente protocolo.
 
+Código auxiliar en el repositorio: [tp1][d].
+
+[d]: https://github.com/algoritmos-rw/tps41/blob/2015_2/tp1/
+
+
 # Protocolo
 
 Este programa formará parte de un sistema automatizado. En lugar de presentar un menú con opciones en la pantalla, se esperará que el programa respete un protocolo de comunicación, en el cual se reciben comandos por la entrada estándar (stdin). Cada comando recibido debe ser  procesado y su resultado debe ser escrito en la salida estándar (stdout).
@@ -70,14 +75,15 @@ El votante ingresa este comando al momento de entrar en la fila de personas espe
 ## Parámetros
 
 - DNI: El tipo de documento del votante. Puede ser 
-      - DNI (Documento Nacional de Identidad – Tapa Verde – Original), 
-      - DNID (Documento Nacional de Identidad – Tapa Verde – Duplicado), 
-      - DNIT (Documento Nacional de Identidad – Tapa Verde - Triplicado), 
-      - DNIC (Documento Nacional de Identidad – Tapa Verde – Cuatriplicado), 
-      - DNI–EA (Documento Nacional de Identidad – Tapa Celeste – Original), 
-      - DNI–EB (Documento Nacional de Identidad – Tapa Celeste – Duplicado), 
-      - LE (Libreta de Enrolamiento)
-      - LC (Libreta Cívica).
+
+    - DNI (Documento Nacional de Identidad – Tapa Verde – Original),
+    - DNID (Documento Nacional de Identidad – Tapa Verde – Duplicado),
+    - DNIT (Documento Nacional de Identidad – Tapa Verde - Triplicado),
+    - DNIC (Documento Nacional de Identidad – Tapa Verde – Cuatriplicado),
+    - DNI–EA (Documento Nacional de Identidad – Tapa Celeste – Original),
+    - DNI–EB (Documento Nacional de Identidad – Tapa Celeste – Duplicado),
+    - LE (Libreta de Enrolamiento)
+    - LC (Libreta Cívica).
 
 - número: Un número entero positivo mayor a 0 que representa el número de documento del votante.
 
