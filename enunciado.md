@@ -11,29 +11,6 @@ Este trabajo práctico es *individual* y consiste de cuatro partes separadas, a 
 
 # Aplicaciones
 
-Para estas aplicaciones se recomienda usar la función [getline()](http://man7.org/linux/man-pages/man3/getline.3.html).
-
-    ssize_t getline(char** buffer, size_t* capacidad, FILE* archivo);
-
-La principal ventaja de esta función es que automáticamente reserva la memoria dinámica necesaria para almacenar la línea. No se necesita invocar manualmente malloc() a mano, ni preocuparse por los tamaños de los buffers.
-
-Sí se necesita, no obstante, liberar memoria al terminar: getline() llama a malloc() pero transfiere la responsabilidad de la memoria al usuario.
-
-La reserva de memoria dinámica se consigue llamando a la función punteros a un buffer igual a NULL y a una capacidad 0:
-
-    char* linea = NULL;
-    size_t capacidad = 0;
-    ssize_t longitud = getline(&linea, &capacidad, archivo);
-    // Se debe liberar la memoria al terminar de usarla.
-    free(linea);
-
-La función getline() se encuentra definida en la cabecera `stdio.h`. Como es una función de POSIX.1-2008, hay que declarar un identificador para indicar que la queremos usar:
-
-    // Al principio de tail.c y tac.c (antes de otros include):
-    #define _POSIX_C_SOURCE 200809L
-    #include <stdio.h>
-    #include <string.h>
-
 ## paste
 
 Se pide implementar una utilidad similar al programa [paste](http://ss64.com/bash/paste.html), que dados dos archivos, concatena su contenido de a líneas e imprime el resultado por salida estándar.
@@ -207,6 +184,68 @@ Y este con comportamiento cuadrático:
      * Libera un arreglo dinámico de cadenas, y todas las cadenas que contiene.
      */
     void free_strv(char *strv[]);
+
+# Consideraciones
+
+## Lectura de archivos
+
+Para la lectura de flujos se recomienda usar la función [getline()](http://man7.org/linux/man-pages/man3/getline.3.html).
+
+    ssize_t getline(char** buffer, size_t* capacidad, FILE* archivo);
+
+La principal ventaja de esta función es que automáticamente reserva la memoria dinámica necesaria para almacenar la línea. No se necesita invocar manualmente malloc() a mano, ni preocuparse por los tamaños de los buffers.
+
+Sí se necesita, no obstante, liberar memoria al terminar: getline() llama a malloc() pero transfiere la responsabilidad de la memoria al usuario.
+
+La reserva de memoria dinámica se consigue llamando a la función punteros a un buffer igual a NULL y a una capacidad 0:
+
+    char* linea = NULL;
+    size_t capacidad = 0;
+    ssize_t longitud = getline(&linea, &capacidad, archivo);
+    // Se debe liberar la memoria al terminar de usarla.
+    free(linea);
+
+La función getline() se encuentra definida en la cabecera `stdio.h`. Como es una función de POSIX.1-2008, hay que declarar un identificador para indicar que la queremos usar:
+
+    // Al principio de tail.c y tac.c (antes de otros include):
+    #define _POSIX_C_SOURCE 200809L
+    #include <stdio.h>
+    #include <string.h>
+
+## deps.mk
+
+Se debe incluir un archivo deps.mk para indicar al corrector automático cómo compilar la entrega.
+En particular, se debe indicar qué TDA emplea cada programa.
+
+Por ejemplo, si more usara un hash y dc usase un árbol, el archivo `deps.mk` consistiría de las siguientes dos líneas:
+
+    # deps.mk: cada línea indica de qué OBJETOS se compone el programa.
+    tac: tac.o hash.o
+    tail: tail.o arbol.o
+
+En el caso de haber creado una biblioteca de funcionalidad común, `lib.c`, se debería indicar también `lib.o` como dependencia:
+
+    tac: tac.o lib.o hash.o
+    tail: tail.o lib.o arbol.o
+
+Para la compilación, pueden invocar a gcc a mano como hasta ahora o, de manera opcional, emplear el siguiente Makefile:
+
+    # Flags de gcc. Se usan automáticamente para compilar *.c → *.o
+    CFLAGS := -g -std=c99 -Wall -Wformat=2
+    CFLAGS += -Wshadow -Wpointer-arith -Wunreachable-code
+    CFLAGS += -Wconversion -Wno-sign-conversion -Wbad-function-cast
+
+    # Se pueden comentar durante el desarrollo.
+    CFLAGS += -Werror
+
+    # Si se ejecuta `make` a secas, se compilarán paste, more, bc y strutil.
+    #
+    # También se puede invocar `make paste`, `make more`, `make dc` o `make strutil.o` para
+    # compilar una parte del TP solamente.
+
+    all: pate more dc strutil.o
+
+    include deps.mk
 
 # Criterios de aprobación
 
