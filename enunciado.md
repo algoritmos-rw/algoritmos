@@ -64,9 +64,11 @@ Con las siguientes consideraciones:
 
 ## more
 
-En este ejercicio se pide implementar una simplificación de la utilidad de unix [more](http://ss64.com/bash/more.html) para mostrar por pantalla el contenido de un flujo.
+En este ejercicio se pide implementar una simplificación de la utilidad de Unix [more](http://ss64.com/bash/more.html) para mostrar por pantalla el contenido de un archivo.
 
-El programa procesará lo enviado por entrada estándar, y deberá recibir por parámetro un número entero que indica la cantidad de líneas a ser mostradas por pantalla. Una vez mostradas las primeras N líneas, el programa imprimirá una nueva línea cada vez que el usuario envíe un salto de línea (con la tecla enter) por entrada estándar.
+El programa recibirá dos parámetros: el nombre de un archivo y un número entero _N_ que indica la cantidad inicial de líneas del archivo a ser mostradas por pantalla. Una vez impresas las primeras _N_ líneas, el programa mostrará una nueva línea del archivo cada vez que el usuario envíe un salto de línea (con la tecla enter) por entrada estándar.
+
+Se deberá validar que el archivo exista y que el número _N_ sea entero positivo.
 
 
 ## dc
