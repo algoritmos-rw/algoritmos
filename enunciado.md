@@ -260,7 +260,7 @@ Para la compilación, pueden invocar a gcc a mano como hasta ahora o, de manera 
     # También se puede invocar `make paste`, `make more`, `make dc` o `make strutil.o` para
     # compilar una parte del TP solamente.
 
-    all: pate more dc strutil.o
+    all: paste more dc strutil.o
 
     include deps.mk
 
