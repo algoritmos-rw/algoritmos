@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+    <Document>
+        <name>KML de ejemplo</name>
+        <description>Un ejemplo introductorio para mostrar la sintaxis KML.</description>
+        
+        <Placemark>
+            <name>Facultad de Ingeniería, UBA</name>
+            <description>Sede Paseo Colón</description>
+            <Point>
+                <coordinates>-58.3679593, -34.6176355</coordinates>
+            </Point>
+        </Placemark>
+        
+        <Placemark>
+            <name>Facultad de Ingeniería, UBA</name>
+            <description>Sede Las Heras</description>
+            <Point>
+                <coordinates>-58.39644, -34.58850</coordinates>
+            </Point>
+        </Placemark>
+        
+        <Placemark>
+            <LineString>
+                <coordinates>-58.36795, -34.61763 -58.39644, -34.58850</coordinates>
+            </LineString>
+        </Placemark>
+
+    </Document>
+</kml>
