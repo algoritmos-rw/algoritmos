@@ -56,6 +56,7 @@ Al invocar el programa, su salida deberá ser la siguiente:
     2016  Avellaneda
 
 Con las siguientes consideraciones:
+
   - Se deberá validar que la cantidad de parámetros en la invocación sea exactamente dos.
   - El separador que se usará para cada línea será '\t' (el caracter de tabulación).
   - Si los archivos tienen una cantidad diferente de líneas, se imprimirán sólo aquéllas líneas que tengan registros para los dos archivos y se emitirá una salida de error (-1) para informar al usuario.
@@ -83,6 +84,7 @@ El siguiente será el comportamiento esperado:
     26
 
 Con las siguientes consideraciones:
+
 - Los símbolos en la entrada pueden ser o bien números u operaciones. Todos ellos deben estar separados por espacios.
 - Por simplicidad, sólo se esperan las siguientes operaciones: suma (+), resta (-), multiplicación (\*) y división (/).
 - Si la entrada consta de varias líneas, se considerarán como cálculos independientes; y sus resultados se imprimirán de forma separada en líneas separadas.
