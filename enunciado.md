@@ -7,13 +7,13 @@ permalink: /:path/:basename/
 TP2: utilidades con hashes, ABBs y heaps
 ==================================
 
-# Ejercicios
+Este trabajo práctico es **grupal** y consiste de seis ejercicios, para los cuales se deberán utilizar los TDAs programados durante la cursada. La fecha de entrega es el lunes 7 de noviembre.
 
-## Hashes
+# Ejercicios
 
 ### uniq-count
 
-Se pide programar un programa con una funcionalidad similar a la de la utilidad [uniq](http://ss64.com/bash/uniq.html) al ser invocada con la opción `-c`. Esta variante imprime un listado de todas las palabras de un archivo de texto, junto con su frecuencia.
+Se pide programar una herramienta con una funcionalidad similar a la de la utilidad [uniq](http://ss64.com/bash/uniq.html) al ser invocada con la opción `-c`. Esta variante imprime un listado de todas las palabras de un archivo de texto, junto con su frecuencia.
 
 Por ejemplo, ante la entrada:
 
@@ -33,34 +33,107 @@ La salida deberá ser la siguiente:
     1 Bruno
     2 Alicia
 
-En la versión original, `uniq` requiere que las líneas repetidas sean consecutivas. Nuestra versión no debe tener esta restricción. Debe imprimir cada palabra en orden de acuerdo a la primera aparición y debe funcionar en $O(n)$ siendo $n$ el número de palabras del archivo a filtrar.
+Si bien en su versión original, `uniq` requiere que las líneas repetidas sean consecutivas, nuestra versión no tendrá esta restricción. Deberá imprimir cada palabra en orden de acuerdo a la primera aparición en *O(n)* siendo *n* el número de palabras del archivo a filtrar.
+
+Se deberá validar que el programa reciba un único parámetro en su invocación, el nombre del archivo de texto.
+
 
 ### comm
 
-Estoy pensando en hacer algo similar a [comm](http://ss64.com/bash/comm.html).
+Para este ejercicio se deberá implementar una simplificación de la funcionalidad [comm](http://ss64.com/bash/comm.html), que dado dos archivos ordenados clasifica en columnas las líneas que pertenecen sólo al primero, a ambos, o solo al segundo.
+
+Nuestra variación recibirá dos parámetros (los archivos de texto) que, a diferencia de la versión original, no necesariamente deberán estar ordenados.
+La implementación a realizar podrá recibir un parámetro extra (por lo que se debe validar que el número de parámetros recibidos sea de dos o tres).
+
+Los parámetros extra son:
+
+  - (ninguno): indica que en la salida se deben imprimir las palabras en común a ambos archivos.
+  - `-1` indica que solamente se deben imprimir las palabras que son únicas para el primer archivo.
+  - `-2` indica que solamente se deben imprimir las palabras que son únicas para el segundo archivo.
+
+Se debe imprimir una palabra por línea y cada una de ellas debe aparecer una única vez en la salida (no es necesario que se impriman según el orden de aparición).
+
+Por ejemplo, dado los siguientes dos archivos:
+
+    $ cat nombres1.txt
+    Carolina
+    Daniel
+    Bruno
+    Alicia
+    Alicia
+    Lucía
+
+    $ cat nombres2.txt
+    Germán
+    Alicia
+    Federico
+    Diego
+    Bruno
+    Lucila
+
+Para cada invocación las salidas serán las siguientes:
+
+    $ ./comm nombres1.txt nombres2.txt
+    Bruno
+    Alicia
+
+    $ ./comm nombres1.txt nombres2.txt -1
+    Carolina
+    Daniel
+    Lucía
+
+    $ ./comm nombres1.txt nombres2.txt -2
+    Germán
+    Federico
+    Diego
+    Lucila
+
 
 
 ## Árboles binarios de búsqueda
 
 ### abb_iter_post_order
 
-Un iterador nuevo, post order.
+En este punto se pide agregar un nuevo par de iteradores al árbol que implementen un recorrido post-order. Se agregarán las siguientes primitivas:
+
+Para el iterador interno:
+
+    void abb_post_order(abb_t* arbol, bool (\*visitar)(const char*, void*, void*), void* extra);
+
+Para el iterador externo se creará la estructura abb_iter_post_t:
+
+    abb_iter_post_t* abb_iter_post_crear(const abb_t* arbol);
+    bool abb_iter_post_avanzar(abb_iter_post_t* iter);
+    const char* abb_iter_post_ver_actual(const abb_iter_post_t* iter);
+    bool abb_iter_post_al_final(const abb_iter_post_t* iter);
+    void abb_iter_post_destruir(abb_iter_post_t* iter);
+
 
 ### abb_obtener_lista
 
-Que en $O(n)$ devuelvan una lista de nodos del abb. La única manera que se puede hacer en O(n) con nuestra implementación es con el iterador interno.
+En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con todos los datos del árbol. Para esto se definirá una estructura de la siguiente manera:
 
-También podría hacerse que devuelva un arreglo, para que vean la muy elegante forma de resolverlo usando doble punteros.
+    typedef struct abb_dato
+    {
+        const char* clave;
+        void* valor;
+    } abb_dato_t;
+
+Por lo tanto, la firma de la primitiva será la siguiente:
+
+    abb_dato_t** abb_obtener_lista(const abb_t*);
 
 ## Heaps
 
-### TDA cuantil
-
-Similar al de la mediana del año pasado, pero este si le especificás el 20% te tiene que dar el elemento que está en el 20%. Es como una mediana que se va adaptando de acuerdo a la cantidad de elementos que tenga.
-
 ### top-k
 
-Este fue descartado el cuatri pasado, quiero los k elementos más prioritarios.
+Se pide programar la función `top-k`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los `k` elementos más grandes:
+
+    void** top-k(void** datos, size_t n, cmp_func_t cmp);
+
+  
+
+
 
 ### heap_actualizar_prioridad
 
