@@ -67,7 +67,7 @@ De no estar presente (es decir, solo se pasaron dos argumentos):
 Por tanto, los casos válidos de invocación son:
 
   - dos parámetros
-  - tres parámetros, siendo el tercero bien la cadena `-1` bien la cadena `-2`
+  - tres parámetros, siendo el tercero la cadena `-1` o bien la cadena `-2`
 
 Se debe imprimir una palabra por línea y cada una de ellas debe aparecer una única vez en la salida (no es necesario que se impriman según el orden de aparición). A diferencia de la versión original de *comm*, los archivos no necesariamente estarán ordenados.
 
@@ -140,7 +140,7 @@ En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con to
 
 La firma de la primitiva será la siguiente:
 
-    abb_dato_t* abb_obtener_items(const abb_t*);
+    abb_item_t* abb_obtener_items(const abb_t*);
 
 El puntero devuelto apunta al primer elemento de un arreglo de *N* elementos, donde *N* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo `abb_item[N]`:
 
