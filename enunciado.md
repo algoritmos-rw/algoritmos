@@ -159,7 +159,7 @@ La firma de la primitiva será la siguiente:
 
 El puntero devuelto apunta al primer elemento de un arreglo de *N* elementos, donde *N* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo `abb_item[N]`:
 
-    abb_dato_t *items = abb_obtener_items(arbol);
+    abb_item_t *items = abb_obtener_items(arbol);
     printf("primera clave = %s\n", items[0].clave);
 
 El arreglo devuelto debe ser liberado con free(). Las claves son propiedad del árbol y no deben ser destruidas.
