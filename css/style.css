@@ -11,6 +11,18 @@ body {
     padding:0 10px;
 }
 
+div.highlighter-rouge {
+    margin-left: 30px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
 h1, h2, h3 {
     line-height:1.2;
 }
