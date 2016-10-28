@@ -167,4 +167,10 @@ Indicaciones:
 
 ### heap_actualizar_prioridad
 
-Se trata de agregar una primitiva `void heap_actualizar_prioridad(const void* clave, void* valor)` que actualice la prioridad del elemento.
+Actualmente nuestra implementación de la cola de prioridad soporta agregar elementos, ver el más prioritario y extraerlo. En caso de que el usuario cambie la prioridad de algunos de los elementos, la estructura perdería el invariante.
+
+En este ejercicio se propone agregar una función que dado un heap y un elemento se verifique si su prioridad es la correcta dentro del TDA y lo reacomode. Se trata de agregar una primitiva que actualice la prioridad de un elemento indicado:
+
+    void heap_actualizar_prioridad(heap_t* heap, void* dato);
+
+Esta función debera ser llamada por el usuario cada vez que se actualice un elemento dentro del heap y deberá funcionar en orden lineal.
