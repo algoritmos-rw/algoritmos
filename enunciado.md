@@ -7,7 +7,7 @@ permalink: /:path/:basename/
 TP2: utilidades con hashes, ABBs y heaps
 ========================================
 
-Este trabajo práctico es **grupal** y consiste de seis ejercicios, para los cuales se deberán utilizar los TDAs programados durante la cursada. La fecha de entrega es el lunes 7 de noviembre.
+Este trabajo práctico es **grupal** y consiste de seis ejercicios, para los cuales se deberán utilizar los TDAs programados durante la cursada. La fecha de entrega es el viernes 11 de noviembre.
 
 ## Contenido
   1. [Ejercicios](#ejercicios)
