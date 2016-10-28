@@ -5,11 +5,28 @@ permalink: /:path/:basename/
 ---
 
 TP2: utilidades con hashes, ABBs y heaps
-==================================
+========================================
 
 Este trabajo práctico es **grupal** y consiste de seis ejercicios, para los cuales se deberán utilizar los TDAs programados durante la cursada. La fecha de entrega es el lunes 7 de noviembre.
 
+## Contenido
+  1. [Ejercicios](#aplicaciones)
+      1. [Hashes](#hashes)
+          * [uniq-count](#uniq-count)
+          * [comm](#comm)
+      2. [Arboles binarios de búsqueda](#Árboles-binarios-de-búsqueda)
+          * [abb_iter_post_order](#abb_iter_post_order)
+          * [abb_obtener_items](#abb_obtener_items)
+      3. [Heaps](#heaps)
+          * [top-k](#top-k)
+          * [heap_actualizar_prioridad](#heap_actualizar_prioridad)
+  2. [Consideraciones adicionales](#consideraciones-adicionales)
+  3. [Criterios de aprobación](#criterios-de-aprobacin)
+
+
 # Ejercicios
+
+## Hashes
 
 ### uniq-count
 
@@ -107,8 +124,6 @@ Para cada invocación las salidas serán las siguientes:
     Diego
     Lucila
 
-
-
 ## Árboles binarios de búsqueda
 
 ### abb_iter_post_order
@@ -174,3 +189,29 @@ En este ejercicio se propone agregar una función que dado un heap y un elemento
     void heap_actualizar_prioridad(heap_t* heap, void* dato);
 
 Esta función debera ser llamada por el usuario cada vez que se actualice un elemento dentro del heap y deberá funcionar en orden lineal.
+
+
+# Consideraciones adicionales
+
+Ver los apartados de [lectura de archivos](https://algoritmos-rw.github.io/fiuba-algo2-2c2016-tp1/enunciado/#lectura-de-archivos) y [deps.mk](https://algoritmos-rw.github.io/fiuba-algo2-2c2016-tp1/enunciado/#depsmk) del Trabajo Práctico 1.
+
+
+# Criterios de aprobación
+
+El código entregado debe ser claro y legible y ajustarse a las especificaciones de la consigna. Debe compilar sin advertencias y correr sin errores de memoria. La entrega incluye, obligatoriamente, un informe en formato PDF y los siguientes archivos de código:
+
+    * `uniq-count.c`
+    * `comm.c`
+    * `heap-utils.c` con la implementación de la función `top_k`.
+    * `hash.c`, `abb.c` y `heap.c` (las implementaciones del grupo de estos TDA; incluyendo los archivos .h actualizados).
+    * un archivo `deps.mk` con las dependencias del proyecto en formato make.
+
+La entrega se realiza:
+
+    1. por mail a la casilla de TPs (`tps.7541rw@gmail.com`): todos los archivos mencionados en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP2 - <Padrón 1> - <Apellido 1> - <Padrón 2> - <Apellido 2>`.
+    2. en papel durante la clase (si su ayudante lo requiere), tanto el informe como el código. No es necesario reimprimir el código de los TDA (excepto las primitivas modificadas).
+
+El informe deberá consistir de las siguientes partes:
+
+    * carátula con los datos personales del grupo y el ayudante asignado.
+    * análisis y diseño de la solución, en particular: algoritmos y estructuras de datos utilizados; orden de ejecución de cada programa o función.
