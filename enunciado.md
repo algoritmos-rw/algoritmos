@@ -17,41 +17,60 @@ Se pide programar una herramienta con una funcionalidad similar a la de la utili
 
 Por ejemplo, ante la entrada:
 
-    $ cat nombres.txt
-    Carolina
-    Daniel
-    Bruno
-    Alicia
-    Alicia
-    Carolina
+    $ cat palabras.txt
+    hola adiós saludos beso ciao
+    hola mundo
+    adiós mundo cruel
+    saludos terrícolas un beso
 
 La salida deberá ser la siguiente:
 
-    $ ./uniq nombres.txt
-    2 Carolina
-    2 Daniel
-    1 Bruno
-    2 Alicia
+    $ ./uniq-c nombres.txt
+    2 hola
+    2 adiós
+    2 saludos
+    2 beso
+    1 ciao
+    2 mundo
+    1 cruel
+    1 terrícolas
+    1 un
 
-Si bien en su versión original, `uniq` requiere que las líneas repetidas sean consecutivas, nuestra versión no tendrá esta restricción. Deberá imprimir cada palabra en orden de acuerdo a la primera aparición en *O(n)* siendo *n* el número de palabras del archivo a filtrar.
+Si bien en su versión original, `uniq` requiere que las repeticiones sean consecutivas, nuestra versión no tendrá esta restricción. Se debe imprimir cada palabra en orden de acuerdo a su primera aparición en el archivo. El tiempo de ejecución debe ser *O(n)* siendo *n* el número de palabras del archivo a filtrar.
 
 Se deberá validar que el programa reciba un único parámetro en su invocación, el nombre del archivo de texto.
+
+Indicaciones:
+
+  - se puede asumir que las palabras están separadas por *un* solo espacio
+
+  - no es necesario convertir mayúsculas a minúsculas; “hola” y “Hola” se cuentan por separado
+
+  - no es necesario detectar signos de puntuación u otros caracteres no alfanuméricos; de estar presentes, simplemente formarán parte de la palabra (debiéndose contar “hola.” y “hola” por separado).
+
+  - podría haber en el archivo líneas vacías (sin ningún otro caracter más que `\n`)
 
 
 ### comm
 
 Para este ejercicio se deberá implementar una simplificación de la funcionalidad [comm](http://ss64.com/bash/comm.html), que dado dos archivos ordenados clasifica en columnas las líneas que pertenecen sólo al primero, a ambos, o solo al segundo.
 
-Nuestra variación recibirá dos parámetros (los archivos de texto) que, a diferencia de la versión original, no necesariamente deberán estar ordenados.
-La implementación a realizar podrá recibir un parámetro extra (por lo que se debe validar que el número de parámetros recibidos sea de dos o tres).
+Nuestra variante recibirá siempre dos parámetros (los archivos de texto) más un tercer parámetro opcional que indica qué conjunto de líneas imprimir. De estar presente, este tercer parametro puede tomar los siguientes valores:
 
-Los parámetros extra son:
-
-  - (ninguno): indica que en la salida se deben imprimir las palabras en común a ambos archivos.
   - `-1` indica que solamente se deben imprimir las palabras que son únicas para el primer archivo.
   - `-2` indica que solamente se deben imprimir las palabras que son únicas para el segundo archivo.
 
-Se debe imprimir una palabra por línea y cada una de ellas debe aparecer una única vez en la salida (no es necesario que se impriman según el orden de aparición).
+De no estar presente (es decir, solo se pasaron dos argumentos):
+
+  - se deben imprimir las palabras en común a ambos archivos.
+
+Por tanto, los casos válidos de invocación son:
+
+  - dos parámetros
+  - tres parámetros, siendo el tercero la cadena `-1` o bien la cadena `-2`
+
+Se debe imprimir una palabra por línea y cada una de ellas debe aparecer una única vez en la salida (no es necesario que se impriman según el orden de aparición). A diferencia de la versión original de *comm*, los archivos no necesariamente estarán ordenados.
+
 
 Por ejemplo, dado los siguientes dos archivos:
 
@@ -98,7 +117,7 @@ En este punto se pide agregar un nuevo par de iteradores al árbol que implement
 
 Para el iterador interno:
 
-    void abb_post_order(abb_t* arbol, bool (\*visitar)(const char*, void*, void*), void* extra);
+    void abb_post_order(abb_t* arbol, bool (*visitar)(const char*, void*, void*), void* extra);
 
 Para el iterador externo se creará la estructura abb_iter_post_t:
 
@@ -109,30 +128,41 @@ Para el iterador externo se creará la estructura abb_iter_post_t:
     void abb_iter_post_destruir(abb_iter_post_t* iter);
 
 
-### abb_obtener_lista
+### abb_obtener_items
 
-En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con todos los datos del árbol. Para esto se definirá una estructura de la siguiente manera:
+En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con todos los datos del árbol (claves y valores), ordenados por clave. Para esto se definirá una estructura pública de la siguiente manera:
 
-    typedef struct abb_dato
+    typedef struct abb_item
     {
         const char* clave;
         void* valor;
-    } abb_dato_t;
+    } abb_item_t;
 
-Por lo tanto, la firma de la primitiva será la siguiente:
+La firma de la primitiva será la siguiente:
 
-    abb_dato_t** abb_obtener_lista(const abb_t*);
+    abb_item_t* abb_obtener_items(const abb_t*);
+
+El puntero devuelto apunta al primer elemento de un arreglo de *N* elementos, donde *N* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo `abb_item[N]`:
+
+    abb_dato_t *items = abb_obtener_items(arbol);
+    printf("primera clave = %s\n", items[0].clave);
+
+El arreglo devuelto debe ser liberado con free(). Las claves son propiedad del árbol y no deben ser destruidas.
+
 
 ## Heaps
 
 ### top-k
 
-Se pide programar la función `top-k`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los `k` elementos más grandes:
+Se pide programar la función `top_k()`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los `k` elementos más grandes:
 
-    void** top-k(void** datos, size_t n, cmp_func_t cmp);
+    void** top_k(void** datos, size_t tam_datos, cmp_func_t cmp);
 
-  
+Indicaciones:
 
+  - el arreglo tiene exactamente `k` posiciones. Si `k > n`, las últimas `k - n` posiciones del arreglo son NULL.
+
+  - la complejidad de la función debe ser *O(n log k)*.
 
 
 ### heap_actualizar_prioridad
