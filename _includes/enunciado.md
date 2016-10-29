@@ -1,8 +1,3 @@
----
-title: TP 2
-layout: default
-permalink: /:path/:basename/
----
 
 TP2: utilidades con hashes, ABBs y heaps
 ========================================
