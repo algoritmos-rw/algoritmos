@@ -7,7 +7,7 @@ permalink: /:path/:basename/
 TP2: utilidades con hashes, ABBs y heaps
 ========================================
 
-Este trabajo práctico es **grupal** y consiste de seis ejercicios, para los cuales se deberán utilizar los TDAs programados durante la cursada. La fecha de entrega es el viernes 11 de noviembre.
+Este trabajo práctico es **grupal** y consiste de seis ejercicios, para los cuales se pueden utilizar los TDAs programados durante la cursada. La fecha de entrega es el viernes 11 de noviembre.
 
 ## Contenido
   1. [Ejercicios](#ejercicios)
@@ -53,7 +53,7 @@ La salida deberá ser la siguiente:
     1 terrícolas
     1 un
 
-Si bien en su versión original, `uniq` requiere que las repeticiones sean consecutivas, nuestra versión no tendrá esta restricción. Se debe imprimir cada palabra en orden de acuerdo a su primera aparición en el archivo. El tiempo de ejecución debe ser *O(n)* siendo *n* el número de palabras del archivo a filtrar.
+Si bien en su versión original, `uniq` requiere que las repeticiones sean consecutivas, nuestra versión no tendrá esta restricción. Se debe imprimir cada palabra en orden de acuerdo a su primera aparición en el archivo. El tiempo de ejecución debe ser *O(n)* siendo *n* el número de palabras del archivo a analizar.
 
 Se deberá validar que el programa reciba un único parámetro en su invocación, el nombre del archivo de texto.
 
@@ -79,7 +79,7 @@ Nuestra variante recibirá siempre dos parámetros (los archivos de texto) más 
 
 De no estar presente (es decir, solo se pasaron dos argumentos):
 
-  - se deben imprimir las palabras en común a ambos archivos.
+  - se deben imprimir solamente las palabras en común a ambos archivos.
 
 Por tanto, los casos válidos de invocación son:
 
@@ -145,7 +145,7 @@ Para el iterador externo se creará la estructura abb_iter_post_t:
 
 ### abb_obtener_items
 
-En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con todos los datos del árbol (claves y valores), ordenados por clave. Para esto se definirá una estructura pública de la siguiente manera:
+En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con todos los datos del árbol (claves y valores), ordenados por *clave*. Para esto se deberá definir una estructura pública de la siguiente manera:
 
     typedef struct abb_item
     {
@@ -157,12 +157,12 @@ La firma de la primitiva será la siguiente:
 
     abb_item_t* abb_obtener_items(const abb_t*);
 
-El puntero devuelto apunta al primer elemento de un arreglo de *N* elementos, donde *N* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo `abb_item[N]`:
+El puntero devuelto apunta al primer elemento de un arreglo de *n* elementos, donde *n* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo `abb_item[n]`:
 
-    abb_item_t *items = abb_obtener_items(arbol);
+    abb_item_t* items = abb_obtener_items(arbol);
     printf("primera clave = %s\n", items[0].clave);
 
-El arreglo devuelto debe ser liberado con free(). Las claves son propiedad del árbol y no deben ser destruidas.
+El arreglo devuelto es liberado con free(). Las claves son propiedad del árbol y no deben ser destruidas.
 
 
 ## Heaps
@@ -188,7 +188,7 @@ En este ejercicio se propone agregar una función que dado un heap y un elemento
 
     void heap_actualizar_prioridad(heap_t* heap, void* dato);
 
-Esta función debera ser llamada por el usuario cada vez que se actualice un elemento dentro del heap y deberá funcionar en orden lineal.
+Esta función debería ser llamada por el usuario cada vez que actualice un elemento que está dentro del heap y deberá funcionar en orden lineal.
 
 
 # Consideraciones adicionales
@@ -203,13 +203,15 @@ El código entregado debe ser claro y legible y ajustarse a las especificaciones
   * `uniq-count.c`
   * `comm.c`
   * `heap-utils.c` con la implementación de la función `top_k`.
-  * `hash.c`, `abb.c` y `heap.c` (las implementaciones del grupo de estos TDA; incluyendo los archivos .h actualizados).
+  * `hash.c`, `abb.c` y `heap.c` (las implementaciones del grupo de estos TDA; incorporando las funciones adicionales pedidas en el presente trabajo, incluyendo los archivos .h actualizados).
   * un archivo `deps.mk` con las dependencias del proyecto en formato make.
+
+Para la confección del informe, pueden revisar el [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/InformeEjemplo.tar.gz?attredirects=0) disponible en el sitio de la materia.
 
 La entrega se realiza:
 
   1. por mail a la casilla de TPs (`tps.7541rw@gmail.com`): todos los archivos mencionados en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP2 - <Padrón 1> - <Apellido 1> - <Padrón 2> - <Apellido 2>`.
-  2. en papel durante la clase (si su ayudante lo requiere), tanto el informe como el código. No es necesario reimprimir el código de los TDA (excepto las primitivas modificadas).
+  2. en papel durante la clase (si su ayudante lo requiere), tanto el informe como el código. **No es necesario reimprimir el código de los TDA (excepto las primitivas modificadas)**.
 
 El informe deberá consistir de las siguientes partes:
 
