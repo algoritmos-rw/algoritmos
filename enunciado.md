@@ -145,7 +145,7 @@ Para el iterador externo se creará la estructura abb_iter_post_t:
 
 ### abb_obtener_items
 
-En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con todos los datos del árbol (claves y valores), ordenados por `clave`. Para esto se deberá definir una estructura pública de la siguiente manera:
+En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con todos los datos del árbol (claves y valores), ordenados por *clave*. Para esto se deberá definir una estructura pública de la siguiente manera:
 
     typedef struct abb_item
     {
@@ -157,9 +157,9 @@ La firma de la primitiva será la siguiente:
 
     abb_item_t* abb_obtener_items(const abb_t*);
 
-El puntero devuelto apunta al primer elemento de un arreglo de *N* elementos, donde *N* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo `abb_item[N]`:
+El puntero devuelto apunta al primer elemento de un arreglo de *n* elementos, donde *n* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo `abb_item[n]`:
 
-    abb_item_t *items = abb_obtener_items(arbol);
+    abb_item_t* items = abb_obtener_items(arbol);
     printf("primera clave = %s\n", items[0].clave);
 
 El arreglo devuelto es liberado con free(). Las claves son propiedad del árbol y no deben ser destruidas.
@@ -211,7 +211,7 @@ Para la confección del informe, pueden revisar el [informe de ejemplo](https://
 La entrega se realiza:
 
   1. por mail a la casilla de TPs (`tps.7541rw@gmail.com`): todos los archivos mencionados en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP2 - <Padrón 1> - <Apellido 1> - <Padrón 2> - <Apellido 2>`.
-  2. en papel durante la clase (si su ayudante lo requiere), tanto el informe como el código. `No es necesario reimprimir el código de los TDA (excepto las primitivas modificadas)`.
+  2. en papel durante la clase (si su ayudante lo requiere), tanto el informe como el código. **No es necesario reimprimir el código de los TDA (excepto las primitivas modificadas)**.
 
 El informe deberá consistir de las siguientes partes:
 
