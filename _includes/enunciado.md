@@ -166,7 +166,7 @@ El arreglo devuelto es liberado con free(). Las claves son propiedad del árbol 
 
 Se pide programar la función `top_k()`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los `k` elementos más grandes:
 
-    void** top_k(void** datos, size_t tam_datos, cmp_func_t cmp);
+    void** top_k(size_t k, void** datos, size_t tam_datos, cmp_func_t cmp);
 
 Indicaciones:
 
