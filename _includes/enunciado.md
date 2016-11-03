@@ -164,13 +164,13 @@ El arreglo devuelto es liberado con free(). Las claves son propiedad del árbol 
 
 ### top-k
 
-Se pide programar la función `top_k()`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los `k` elementos más grandes:
+Se pide programar la función `top_k()`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los `k` elementos más chicos, en orden de menor a mayor:
 
     void** top_k(size_t k, void** datos, size_t tam_datos, cmp_func_t cmp);
 
 Indicaciones:
 
-  - el arreglo tiene exactamente `k` posiciones. Si `k > n`, las últimas `k - n` posiciones del arreglo son NULL.
+  - el arreglo devuelto tendrá exactamente tamaño `k`. Si `k > n`, las últimas `k - n` posiciones son NULL.
 
   - la complejidad de la función debe ser *O(n log k)*.
 
