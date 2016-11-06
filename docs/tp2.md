@@ -187,6 +187,8 @@ En este ejercicio se propone agregar una función que dado un heap y un elemento
 
 Esta función debería ser llamada por el usuario cada vez que actualice un elemento que está dentro del heap y deberá funcionar en orden lineal.
 
+Diseñar esta nueva primitiva de manera tal que se comporte en orden _O(log n)_ si tuviésemos un índice con el cual podamos encontrar la ubicación del elemento cuya prioridad debe ser actualizada en orden sublineal.
+
 
 # Consideraciones adicionales
 
