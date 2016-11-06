@@ -4,6 +4,7 @@ title: Trabajo práctico n.º 2
 excerpt: |
   TP2 de Algoritmos II (2016/2): hashes, ABBs y heaps. Fecha de entrega 11/11/16.
 permalink: /:path/:basename/
+math: true
 ---
 
 TP2: utilidades con hashes, ABBs y heaps
@@ -47,7 +48,7 @@ La salida deberá ser la siguiente:
     1 terrícolas
     1 un
 
-Si bien en su versión original, `uniq` requiere que las repeticiones sean consecutivas, nuestra versión no tendrá esta restricción. Se debe imprimir cada palabra en orden de acuerdo a su primera aparición en el archivo. El tiempo de ejecución debe ser *O(n)* siendo *n* el número de palabras del archivo a analizar.
+Si bien en su versión original _uniq_ requiere que las repeticiones sean consecutivas, nuestra versión no tendrá esta restricción. Se debe imprimir cada palabra en orden de acuerdo a su primera aparición en el archivo. El tiempo de ejecución debe ser $$\mathcal{O}(n)$$ siendo $$n$$ el número de palabras del archivo a analizar.
 
 Se deberá validar que el programa reciba un único parámetro en su invocación, el nombre del archivo de texto.
 
@@ -139,7 +140,7 @@ Para el iterador externo se creará la estructura abb_iter_post_t:
 
 ### abb_obtener_items
 
-En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con todos los datos del árbol (claves y valores), ordenados por *clave*. Para esto se deberá definir una estructura pública de la siguiente manera:
+En este ejercicio se pide una primitiva que en $$\mathcal{O}(n)$$ devuelva un arreglo con todos los datos del árbol (claves y valores), ordenados por *clave*. Para esto se deberá definir una estructura pública de la siguiente manera:
 
     typedef struct abb_item
     {
@@ -163,15 +164,15 @@ El arreglo devuelto es liberado con free(). Las claves son propiedad del árbol 
 
 ### top-k
 
-Se pide programar la función `top_k()`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los `k` elementos más chicos, en orden de menor a mayor:
+Se pide programar la función `top_k()`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los $$k$$ elementos más chicos, en orden de menor a mayor:
 
     void** top_k(size_t k, void** datos, size_t tam_datos, cmp_func_t cmp);
 
 Indicaciones:
 
-  - el arreglo devuelto tendrá exactamente tamaño `k`. Si `k > n`, las últimas `k - n` posiciones son NULL.
+  - el arreglo devuelto tendrá exactamente tamaño $$k$$. Si $$k > n$$, las últimas $$k - n$$ posiciones son NULL.
 
-  - la complejidad de la función debe ser *O(n log k)*.
+  - la complejidad de la función debe ser $$\mathcal{O}(n \log k)$$.
 
 
 ### heap_actualizar_prioridad
