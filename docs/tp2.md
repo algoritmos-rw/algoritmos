@@ -4,27 +4,20 @@ title: Trabajo práctico n.º 2
 excerpt: |
   TP2 de Algoritmos II (2016/2): hashes, ABBs y heaps. Fecha de entrega 11/11/16.
 permalink: /:path/:basename/
+math: true
 ---
 
 TP2: utilidades con hashes, ABBs y heaps
 ========================================
+{:.no_toc}
 
 Este trabajo práctico es **grupal** y consiste de seis ejercicios, para los cuales se pueden utilizar los TDAs programados durante la cursada. La fecha de entrega es el viernes 11 de noviembre.
 
 ## Contenido
-  1. [Ejercicios](#ejercicios)
-      1. [Hashes](#hashes)
-          * [uniq-count](#uniq-count)
-          * [comm](#comm)
-      2. [Arboles binarios de búsqueda](#rboles-binarios-de-bsqueda)
-          * [abb_iter_post_order](#abbiterpostorder)
-          * [abb_obtener_items](#abbobteneritems)
-      3. [Heaps](#heaps)
-          * [top-k](#top-k)
-          * [heap_actualizar_prioridad](#heapactualizarprioridad)
-  2. [Consideraciones adicionales](#consideraciones-adicionales)
-  3. [Criterios de aprobación](#criterios-de-aprobacin)
+{:.no_toc}
 
+1. TOC
+{:toc}
 
 # Ejercicios
 
@@ -55,7 +48,7 @@ La salida deberá ser la siguiente:
     1 terrícolas
     1 un
 
-Si bien en su versión original, `uniq` requiere que las repeticiones sean consecutivas, nuestra versión no tendrá esta restricción. Se debe imprimir cada palabra en orden de acuerdo a su primera aparición en el archivo. El tiempo de ejecución debe ser *O(n)* siendo *n* el número de palabras del archivo a analizar.
+Si bien en su versión original _uniq_ requiere que las repeticiones sean consecutivas, nuestra versión no tendrá esta restricción. Se debe imprimir cada palabra en orden de acuerdo a su primera aparición en el archivo. El tiempo de ejecución debe ser $$\mathcal{O}(n)$$ siendo $$n$$ el número de palabras del archivo a analizar.
 
 Se deberá validar que el programa reciba un único parámetro en su invocación, el nombre del archivo de texto.
 
@@ -134,20 +127,22 @@ En este punto se pide agregar un nuevo par de iteradores al árbol que implement
 
 Para el iterador interno:
 
-    void abb_post_order(abb_t* arbol, bool (*visitar)(const char*, void*, void*), void* extra);
+    void abb_post_order(abb_t* arbol,
+                        bool (*visitar)(const char*, void*, void*),
+                        void* extra);
 
 Para el iterador externo se creará la estructura abb_iter_post_t:
 
-    abb_iter_post_t* abb_iter_post_crear(const abb_t* arbol);
-    bool abb_iter_post_avanzar(abb_iter_post_t* iter);
-    const char* abb_iter_post_ver_actual(const abb_iter_post_t* iter);
-    bool abb_iter_post_al_final(const abb_iter_post_t* iter);
-    void abb_iter_post_destruir(abb_iter_post_t* iter);
+    abb_iter_post_t*  abb_iter_post_crear(const abb_t* arbol);
+                bool  abb_iter_post_avanzar(abb_iter_post_t* iter);
+         const char*  abb_iter_post_ver_actual(const abb_iter_post_t* iter);
+                bool  abb_iter_post_al_final(const abb_iter_post_t* iter);
+                void  abb_iter_post_destruir(abb_iter_post_t* iter);
 
 
 ### abb_obtener_items
 
-En este ejercicio se pide una primitiva que en *O(n)* devuelva un arreglo con todos los datos del árbol (claves y valores), ordenados por *clave*. Para esto se deberá definir una estructura pública de la siguiente manera:
+En este ejercicio se pide una primitiva que en $$\mathcal{O}(n)$$ devuelva un arreglo con todos los datos del árbol (claves y valores), ordenados por *clave*. Para esto se deberá definir una estructura pública de la siguiente manera:
 
     typedef struct abb_item
     {
@@ -159,7 +154,7 @@ La firma de la primitiva será la siguiente:
 
     abb_item_t* abb_obtener_items(const abb_t*);
 
-El puntero devuelto apunta al primer elemento de un arreglo de *n* elementos, donde *n* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo `abb_item[n]`:
+El puntero devuelto apunta al primer elemento de un arreglo de *n* elementos, donde *n* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo de structs:
 
     abb_item_t* items = abb_obtener_items(arbol);
     printf("primera clave = %s\n", items[0].clave);
@@ -171,15 +166,15 @@ El arreglo devuelto es liberado con free(). Las claves son propiedad del árbol 
 
 ### top-k
 
-Se pide programar la función `top_k()`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los `k` elementos más chicos, en orden de menor a mayor:
+Se pide programar la función `top_k()` que, dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los $$k$$ elementos más chicos, en orden de menor a mayor:
 
     void** top_k(size_t k, void** datos, size_t tam_datos, cmp_func_t cmp);
 
 Indicaciones:
 
-  - el arreglo devuelto tendrá exactamente tamaño `k`. Si `k > n`, las últimas `k - n` posiciones son NULL.
+  - el arreglo devuelto tendrá exactamente tamaño $$k$$. Si $$k > n$$, las últimas $$k - n$$ posiciones son NULL.
 
-  - la complejidad de la función debe ser *O(n log k)*.
+  - la complejidad de la función debe ser $$\mathcal{O}(n \log k)$$.
 
 
 ### heap_actualizar_prioridad
