@@ -2,6 +2,10 @@
 # YAML front-matter must be present in SCSS files.
 ---
 
+.katex {
+    font-size: 1.1em !important;
+}
+
 body {
     margin: 40px auto;
     max-width: 650px;
