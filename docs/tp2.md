@@ -127,15 +127,17 @@ En este punto se pide agregar un nuevo par de iteradores al árbol que implement
 
 Para el iterador interno:
 
-    void abb_post_order(abb_t* arbol, bool (*visitar)(const char*, void*, void*), void* extra);
+    void abb_post_order(abb_t* arbol,
+                        bool (*visitar)(const char*, void*, void*),
+                        void* extra);
 
 Para el iterador externo se creará la estructura abb_iter_post_t:
 
-    abb_iter_post_t* abb_iter_post_crear(const abb_t* arbol);
-    bool abb_iter_post_avanzar(abb_iter_post_t* iter);
-    const char* abb_iter_post_ver_actual(const abb_iter_post_t* iter);
-    bool abb_iter_post_al_final(const abb_iter_post_t* iter);
-    void abb_iter_post_destruir(abb_iter_post_t* iter);
+    abb_iter_post_t*  abb_iter_post_crear(const abb_t* arbol);
+                bool  abb_iter_post_avanzar(abb_iter_post_t* iter);
+         const char*  abb_iter_post_ver_actual(const abb_iter_post_t* iter);
+                bool  abb_iter_post_al_final(const abb_iter_post_t* iter);
+                void  abb_iter_post_destruir(abb_iter_post_t* iter);
 
 
 ### abb_obtener_items
@@ -152,7 +154,7 @@ La firma de la primitiva será la siguiente:
 
     abb_item_t* abb_obtener_items(const abb_t*);
 
-El puntero devuelto apunta al primer elemento de un arreglo de *n* elementos, donde *n* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo `abb_item[n]`:
+El puntero devuelto apunta al primer elemento de un arreglo de *n* elementos, donde *n* es el número de elementos del árbol. Es, por tanto, equivalente un arreglo de structs:
 
     abb_item_t* items = abb_obtener_items(arbol);
     printf("primera clave = %s\n", items[0].clave);
@@ -164,7 +166,7 @@ El arreglo devuelto es liberado con free(). Las claves son propiedad del árbol 
 
 ### top-k
 
-Se pide programar la función `top_k()`, que dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los $$k$$ elementos más chicos, en orden de menor a mayor:
+Se pide programar la función `top_k()` que, dado un arreglo de elementos y una función de comparación, nos devuelve un nuevo arreglo con los $$k$$ elementos más chicos, en orden de menor a mayor:
 
     void** top_k(size_t k, void** datos, size_t tam_datos, cmp_func_t cmp);
 
