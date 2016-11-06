@@ -8,23 +8,15 @@ permalink: /:path/:basename/
 
 TP2: utilidades con hashes, ABBs y heaps
 ========================================
+{:.no_toc}
 
 Este trabajo práctico es **grupal** y consiste de seis ejercicios, para los cuales se pueden utilizar los TDAs programados durante la cursada. La fecha de entrega es el viernes 11 de noviembre.
 
 ## Contenido
-  1. [Ejercicios](#ejercicios)
-      1. [Hashes](#hashes)
-          * [uniq-count](#uniq-count)
-          * [comm](#comm)
-      2. [Arboles binarios de búsqueda](#rboles-binarios-de-bsqueda)
-          * [abb_iter_post_order](#abbiterpostorder)
-          * [abb_obtener_items](#abbobteneritems)
-      3. [Heaps](#heaps)
-          * [top-k](#top-k)
-          * [heap_actualizar_prioridad](#heapactualizarprioridad)
-  2. [Consideraciones adicionales](#consideraciones-adicionales)
-  3. [Criterios de aprobación](#criterios-de-aprobacin)
+{:.no_toc}
 
+1. TOC
+{:toc}
 
 # Ejercicios
 
