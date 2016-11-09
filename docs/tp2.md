@@ -69,20 +69,19 @@ Para este ejercicio se deberá implementar una simplificación de la funcionalid
 
 Nuestra variante recibirá siempre dos parámetros (los archivos de texto) más un tercer parámetro opcional que indica qué conjunto de líneas imprimir. De estar presente, este tercer parametro puede tomar los siguientes valores:
 
-  - `-1` indica que solamente se deben imprimir las palabras que son únicas para el primer archivo.
-  - `-2` indica que solamente se deben imprimir las palabras que son únicas para el segundo archivo.
+  - `-1` indica que solamente se deben imprimir las líneas que son únicas para el primer archivo.
+  - `-2` indica que solamente se deben imprimir las líneas que son únicas para el segundo archivo.
 
 De no estar presente (es decir, solo se pasaron dos argumentos):
 
-  - se deben imprimir solamente las palabras en común a ambos archivos.
+  - se deben imprimir solamente las líneas en común a ambos archivos.
 
 Por tanto, los casos válidos de invocación son:
 
   - dos parámetros
   - tres parámetros, siendo el tercero la cadena `-1` o bien la cadena `-2`
 
-Se debe imprimir una palabra por línea y cada una de ellas debe aparecer una única vez en la salida (no es necesario que se impriman según el orden de aparición). A diferencia de la versión original de *comm*, los archivos no necesariamente estarán ordenados.
-
+Cada línea seleccionada se debe imprimir una única vez en la salida, y  no es necesario que se impriman según el orden de aparición. A diferencia de la versión original de *comm*, los archivos no necesariamente estarán ordenados.
 
 Por ejemplo, dado los siguientes dos archivos:
 
