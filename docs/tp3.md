@@ -1,5 +1,5 @@
 ---
-title: Trabajo práctico n.º 2
+title: Trabajo práctico n.º 3
 layout: default
 permalink: /:path/:basename/
 excerpt: |
@@ -33,7 +33,7 @@ Por lo tanto, lo que es necesario determinar es el largo del recorrido, que podr
 Un problema común dentro de grafos que representan redes sociales, es querer obtener las comunidades que conforman la red social. Una comunidad dentro de una red social es un conjunto de vértices que se encuentran altamente conectados entre sí, y poco conectados con los vértices de afuera (o menos conectados que la comunidad en la que se encuentran dichos vértices). Este es un problema que está abarcado por el área de Aprendizaje Automático, más precisamente Aprendizaje No Supervisado (Clustering). Por supuesto, dicho tema no está dentro de los contenidos de la materia, por lo que vamos a usar un algoritmo sencillo, y semejante a otros algoritmos que se ven en la materia, y que suele encontrar muy buenos resultados: [Label Propagation](http://arxiv.org/pdf/0709.2938v1.pdf). Dicho algoritmo es utilizado, por ejemplo, en Facebook para realizar inferencias (ciudad de origen, dentro de estas).
 En label propagation lo que hacemos es:
 
-1. Para cada vértice $$Vi$$:
+1. Para cada vértice $$V_i$$:
 
 		$$Label[V_i] = i$$
 
@@ -169,15 +169,16 @@ El programa debe cargar la red social de dicho archivo, y luego esperar a que se
 		Filtrar las comunidades con muy pocos vértices (menos de 4), o con muchos vértices (más de 1000). 
 
 La entrega del trabajo práctico debe constar del código (tanto del programa como del TDA Grafo), así como del informe correspondiente, analizando el orden de cada uno de los comandos implementados en función de los algoritmos utilizados en cada caso. 
-Además, en caso de sacar conclusiones sobre la estructura de la red social de marvel, es más que bienvenida, ya que además de estudiar el orden de los algoritmos, nos gusta ver que se puedan sacar conclusiones a partir de ellos!
+Además, en caso de sacar conclusiones sobre la estructura de la red social de marvel, es más que bienvenida, ya que además de estudiar el orden de los algoritmos, nos gusta ver que se puedan sacar conclusiones a partir de ellos! 
+Nuevamente, pueden revisar el [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/InformeEjemplo.tar.gz?attredirects=0) para la confección del mismo. 
 
-**La fecha de entrega del Trabajo Práctico es el XX de Diciembre de 2016.** 
+**La fecha de entrega del Trabajo Práctico es el 2 de Diciembre de 2016.** 
 
 ## Referencias y Datos de Interés
 
 Una propiedad interesante que cumplen todas las redes sociales es que cumplen la [Ley de Potencias](https://en.wikipedia.org/wiki/Power_law) (en el caso de grafos, sobre el grado de los vértices). Es importante, antes de empezar a implementar algoritmos de redes sociales sobre un determinado grafo, revisar que dicho grafo cumple con la Ley de Potencias, para estar seguros que representa a una red social (por ejemplo, un grafo aleatorio tendría una distribución normal de los grados posibles). En el caso de nuestro set de datos, podemos ver que realmente se cumple dicha ley:
 
-![Power Law Marvel](../assets/degree-distribution.png "Power Law Marvel")
+![Power Law Marvel](./assets/degree-distribution.png "Power Law Marvel")
 
 1. [Trabajo base utilizado](http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw6/hw6.html) y [Fuente original del que obtuvimos los datos](http://bioinfo.uib.es/~joemiro/marvel.html) (con transformación de los datos)
 2. [Página con base de datos de personajes del Universo Marvel](http://marvelousdb.com/)
