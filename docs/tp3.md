@@ -33,19 +33,20 @@ Por lo tanto, lo que es necesario determinar es el largo del recorrido, que podr
 Un problema común dentro de grafos que representan redes sociales, es querer obtener las comunidades que conforman la red social. Una comunidad dentro de una red social es un conjunto de vértices que se encuentran altamente conectados entre sí, y poco conectados con los vértices de afuera (o menos conectados que la comunidad en la que se encuentran dichos vértices). Este es un problema que está abarcado por el área de Aprendizaje Automático, más precisamente Aprendizaje No Supervisado (Clustering). Por supuesto, dicho tema no está dentro de los contenidos de la materia, por lo que vamos a usar un algoritmo sencillo, y semejante a otros algoritmos que se ven en la materia, y que suele encontrar muy buenos resultados: [Label Propagation](http://arxiv.org/pdf/0709.2938v1.pdf). Dicho algoritmo es utilizado, por ejemplo, en Facebook para realizar inferencias (ciudad de origen, dentro de estas).
 En label propagation lo que hacemos es:
 
-1. Para cada vértice $$V_i$$:
+1) Para cada vértice $$V_i$$: 
 
-		$$Label[V_i] = i$$
+$$Label[V_i] = i$$
 
-2. Determinar un orden aleatorio para los vértices.
-3. Por cada vértice, en el orden determinado en el punto anterior, definir:
+2) Determinar un orden aleatorio para los vértices.
 
-		$$Label[V_i] = max\_freq(Label[V_j], ..., Label[V_k])$$
+3) Por cada vértice, en el orden determinado en el punto anterior, definir: 
 
-	Donde $$V_j, ..., V_k$$ son los vértices adyacentes a $$V_i$$. Se tiene en cuenta la última actualización realizada, inclusive si ya fueron procesados en esta iteración (actualización ascincrónica; pueden leer en el paper original los problemas que puede acarrear la actualización sincrónica).
-	$$max\_freq$$ es una función que devuelve la Label que aparece más frecuentemente entre todos los adyacentes a $$V_i$$.  
+$$Label[V_i] = max\_freq(Label[V_j], ..., Label[V_k])$$
 
-4. Si no se llegó a la condición de corte, volver a 2. La condición de corte puede ser una vez que se llegó a una cantidad determinada de comunidades, se cree que se llegó a la convergencia (la mayoría de los vecinos de cada vértice tiene la misma Label que dicho vértice), o simplemente por una cantidad de iteraciones prefijada. 
+Donde $$V_j, ..., V_k$$ son los vértices adyacentes a $$V_i$$. Se tiene en cuenta la última actualización realizada, inclusive si ya fueron procesados en esta iteración (actualización ascincrónica; pueden leer en el paper original los problemas que puede acarrear la actualización sincrónica).
+$$max\_freq$$ es una función que devuelve la Label que aparece más frecuentemente entre todos los adyacentes a $$V_i$$.  
+
+4) Si no se llegó a la condición de corte, volver a 2. La condición de corte puede ser una vez que se llegó a una cantidad determinada de comunidades, se cree que se llegó a la convergencia (la mayoría de los vecinos de cada vértice tiene la misma Label que dicho vértice), o simplemente por una cantidad de iteraciones prefijada. 
 
 Como opción alternativa, brindamos otro algoritmo que utiliza Random Walks para obtener las posibles comunidades: [Entropy Walker](https://drive.google.com/file/d/0B8rBD4QSqWnSLTdWTXdFaUtUNjQ/view). 
 
@@ -178,7 +179,7 @@ Nuevamente, pueden revisar el [informe de ejemplo](https://sites.google.com/site
 
 Una propiedad interesante que cumplen todas las redes sociales es que cumplen la [Ley de Potencias](https://en.wikipedia.org/wiki/Power_law) (en el caso de grafos, sobre el grado de los vértices). Es importante, antes de empezar a implementar algoritmos de redes sociales sobre un determinado grafo, revisar que dicho grafo cumple con la Ley de Potencias, para estar seguros que representa a una red social (por ejemplo, un grafo aleatorio tendría una distribución normal de los grados posibles). En el caso de nuestro set de datos, podemos ver que realmente se cumple dicha ley:
 
-![Power Law Marvel](./assets/degree-distribution.png "Power Law Marvel")
+![Power Law Marvel](../assets/degree-distribution.png "Power Law Marvel")
 
 1. [Trabajo base utilizado](http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw6/hw6.html) y [Fuente original del que obtuvimos los datos](http://bioinfo.uib.es/~joemiro/marvel.html) (con transformación de los datos)
 2. [Página con base de datos de personajes del Universo Marvel](http://marvelousdb.com/)
