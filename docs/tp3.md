@@ -1,7 +1,10 @@
 ---
-title: TP 3
+title: Trabajo práctico n.º 2
 layout: default
 permalink: /:path/:basename/
+excerpt: |
+  TP3 de Algoritmos II (2016/2): grafos. Fecha de entrega 2/12/16.
+math: true
 ---
 
 # TP 3: Grafos en el mundo Marvel
@@ -30,17 +33,17 @@ Por lo tanto, lo que es necesario determinar es el largo del recorrido, que podr
 Un problema común dentro de grafos que representan redes sociales, es querer obtener las comunidades que conforman la red social. Una comunidad dentro de una red social es un conjunto de vértices que se encuentran altamente conectados entre sí, y poco conectados con los vértices de afuera (o menos conectados que la comunidad en la que se encuentran dichos vértices). Este es un problema que está abarcado por el área de Aprendizaje Automático, más precisamente Aprendizaje No Supervisado (Clustering). Por supuesto, dicho tema no está dentro de los contenidos de la materia, por lo que vamos a usar un algoritmo sencillo, y semejante a otros algoritmos que se ven en la materia, y que suele encontrar muy buenos resultados: [Label Propagation](http://arxiv.org/pdf/0709.2938v1.pdf). Dicho algoritmo es utilizado, por ejemplo, en Facebook para realizar inferencias (ciudad de origen, dentro de estas).
 En label propagation lo que hacemos es:
 
-1. Para cada vértice _Vi_:
+1. Para cada vértice $$Vi$$:
 
-		Label[Vi] = i
+		$$Label[V_i] = i$$
 
 2. Determinar un orden aleatorio para los vértices.
 3. Por cada vértice, en el orden determinado en el punto anterior, definir:
 
-		Label[Vi] = max\_freq(Label[Vj], ..., Label[Vk])
+		$$Label[V_i] = max\_freq(Label[V_j], ..., Label[V_k])$$
 
-	Donde _Vj, ..., Vk_ son los vértices adyacentes a _Vi_. Se tiene en cuenta la última actualización realizada, inclusive si ya fueron procesados en esta iteración (actualización ascincrónica; pueden leer en el paper original los problemas que puede acarrear la actualización sincrónica).
-	_Max\_freq_ es una función que devuelve la Label que aparece más frecuentemente entre todos los adyacentes a _Vi_.  
+	Donde $$V_j, ..., V_k$$ son los vértices adyacentes a $$V_i$$. Se tiene en cuenta la última actualización realizada, inclusive si ya fueron procesados en esta iteración (actualización ascincrónica; pueden leer en el paper original los problemas que puede acarrear la actualización sincrónica).
+	$$max\_freq$$ es una función que devuelve la Label que aparece más frecuentemente entre todos los adyacentes a $$V_i$$.  
 
 4. Si no se llegó a la condición de corte, volver a 2. La condición de corte puede ser una vez que se llegó a una cantidad determinada de comunidades, se cree que se llegó a la convergencia (la mayoría de los vecinos de cada vértice tiene la misma Label que dicho vértice), o simplemente por una cantidad de iteraciones prefijada. 
 
