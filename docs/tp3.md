@@ -169,8 +169,18 @@ El programa debe cargar la red social de dicho archivo, y luego esperar a que se
 		Salida: Por cada comunidad, la cantidad de integrantes, y un listado con los integrantes. 
 		Filtrar las comunidades con muy pocos vértices (menos de 4), o con muchos vértices (más de 1000). 
 
-La entrega del trabajo práctico debe constar del código (tanto del programa como del TDA Grafo), así como del informe correspondiente, analizando el orden de cada uno de los comandos implementados en función de los algoritmos utilizados en cada caso. 
-Además, en caso de sacar conclusiones sobre la estructura de la red social de marvel, es más que bienvenida, ya que además de estudiar el orden de los algoritmos, nos gusta ver que se puedan sacar conclusiones a partir de ellos! 
+
+La entrega se realiza:
+
+  1. por mail a la casilla de TPs (`tps.7541rw@gmail.com`): todos los archivos correspondientes (programa y TDA grafo) en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP2 - <Padrón 1> - <Apellido 1> - <Padrón 2> - <Apellido 2>`.
+  2. en papel durante la clase (si su ayudante lo requiere), tanto el informe como el código.
+
+El informe deberá consistir de las siguientes partes:
+
+  * carátula con los datos personales del grupo y el ayudante asignado.
+  * análisis y diseño de la solución, en particular: algoritmos y estructuras de datos utilizados; orden de ejecución de cada programa o función.
+  * Además, en caso de sacar conclusiones sobre la estructura de la red social de marvel, es más que bienvenida, ya que además de estudiar el orden de los algoritmos, nos gusta ver que se puedan sacar conclusiones a partir de ellos! 
+
 Nuevamente, pueden revisar el [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/InformeEjemplo.tar.gz?attredirects=0) para la confección del mismo. 
 
 **La fecha de entrega del Trabajo Práctico es el 2 de Diciembre de 2016.** 
