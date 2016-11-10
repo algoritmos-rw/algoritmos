@@ -62,17 +62,40 @@ La implementación del TDA Grafo, y el posterior programa del trabajo práctico 
 
 El programa a realizar debe recibir por parámetro la ruta del archivo con los datos de la red social: 
 
-	$ ./tp3 marvel.tsv
+	$ ./tp3 marvel.pjk
 
-El archivo [marvel.tsv](https://drive.google.com/open?id=0B_oxuLrlET2hTENoQlM0Y3B3MFE) que nosotros les otorgamos es de la forma:
+El archivo [marvel.pkj] que les proporcionamos está en formato _Pajek_. Este formato tiene la ventaja que es posible leer el grafo sin necesidad de un diccionario.
+
+Como ejemplo del formato (ver la [documentación] para una descripción más extensa):
+
+  - los vértices comienzan tras la línea marcada con `*Vertices V`, y las aristas tras `*Arcs`
+
+  - la línea `*Vertices N` indica la cantidad de vértices $$V$$ para poder pre-reservar la memoria necesaria
+
+  - la línea `*Vertices` va seguida del nombre de cada vértice entre comillas dobles (técnicamente los nombres son opcionales en la especificación del formato; nosotros los incluimos)
+
+  - cada arista incluye vértice origen, vértice destino, y peso.
+
+[documentación]: https://gephi.org/users/supported-graph-formats/pajek-net-format/
+[marvel.pkj]: https://drive.google.com/file/d/0B837rronynczaUJXWHp4WDJ6bHM/view
+
+Ejemplo:
+
 ```
-Personaje1		Personaje2		N1
-Personaje1		Personaje3		N2
+*Vertices 4
+1 "P. Uno"
+2 "S. Personaje"
+3 "P. T. Tercero"
+4 "Personaje Último"
+*Arcs
+1 2 3
+1 3 1
 ...
-PersonajeY		PersonajeJ		Nx
+3 4 17
 ...
 ```
-Que se puede leer como: “El personaje1 y el personaje2 participan juntos en N1 comics juntos”. Por supuesto, la relación es recíproca, por lo que no se agrega la otra línea correspondiente (Personaje2, Personaje1, N1). El archivo es un “tsv”, similar a un “csv”, pero en el que cada campo está separado por tabulaciones en vez de comas. 
+
+En este ejemplo hay solamente 4 personajes, y las aristas se leen tal que: “_P. Uno_ y _S. Personaje_ participan juntos en 3 comics juntos”. Por supuesto, la relación es recíproca, por lo que no se agrega la otra línea correspondiente (`2 1 3`).
 
 El programa debe cargar la red social de dicho archivo, y luego esperar a que se ingresen comandos por entrada estándar. Los comandos se ejecutarán de la siguiente forma:
 
