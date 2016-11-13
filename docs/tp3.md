@@ -20,16 +20,16 @@ math: true
 
 ## Objetivo
 
-El objetivo de este trabajo práctico es usar el TDA grafo para modelar una red social y sus algoritmos para obtener información de ella.
-En este Trabajo Práctico vamos a trabajar con la red social conformada por los personajes de Marvel Comics.
+El objetivo de este Trabajo Práctico es usar el TDA grafo para modelar una red social y sus algoritmos para obtener información de ella.
+En este caso trabajaremos con la red social conformada por los personajes de Marvel Comics.
 
 ## Algoritmos
 
 Antes de pasar a la consigna vamos a explicar dos algoritmos que se van a utilizar.
 
 ### Random Walks
-Un [Random Walk](https://en.wikipedia.org/wiki/Random_walk) es, como su nombre lo indica, un camino aleatorio sobre un grafo. Este comienza desde un vértice (que puede ser uno específico o uno aleatorio) y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino (incluyendo el original) desde el nuevo vértice. Este proceso continúa hasta que el recorrido tenga un largo _n_ prefijado.
-La probabilidad para movernos de un vértice a un vecino puede ser equiprobable (la misma para todos), proporcional al peso que tenga cada arista (si el grafo fuera pesado), u otra alternativa dependiendo de la aplicación.
+Un [Random Walk](https://en.wikipedia.org/wiki/Random_walk) es, como su nombre indica, un camino aleatorio sobre un grafo. Comienza desde un vértice (que puede ser uno específico o uno aleatorio) y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino (incluyendo el original) desde el nuevo vértice. Este proceso continúa hasta que el recorrido tenga un largo _n_ prefijado.
+La probabilidad para movernos de un vértice a un vecino puede ser equiprobable (la misma para todos) o proporcional al peso que tenga cada arista (si el grafo fuera pesado), u otra alternativa dependiendo de la aplicación.
 
 Por lo tanto, para realizar un random walk es necesario determinar:
 
@@ -221,7 +221,7 @@ El informe deberá consistir de las siguientes partes:
 
 Nuevamente, pueden revisar el [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/InformeEjemplo.tar.gz?attredirects=0) para la confección del mismo.
 
-Adicionalmente los alentamos a conclusiones sobre la estructura de la red social de Marvel. Además de estudiar el orden de los algoritmos, nos interesa ver qué conclusiones se puedan sacar conclusiones a partir de ellos.
+Adicionalmente los alentamos a sacar conclusiones sobre la estructura de la red social de Marvel. Además de estudiar el orden de los algoritmos, nos interesa ver qué conclusiones se puedan sacar conclusiones a partir de ellos.
 
 
 **La fecha de entrega del Trabajo Práctico es el 2 de Diciembre de 2016.** 
