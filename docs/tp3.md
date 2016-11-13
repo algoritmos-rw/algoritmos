@@ -7,7 +7,7 @@ excerpt: |
 math: true
 ---
 
-# TP 3: Grafos en el mundo Marvel
+# TP 3: grafos en el mundo Marvel
 {:.no_toc}
 
 ![Wachenchauzer Studios](../assets/wachen_studios_box.jpeg "Wachenchauzer Studios")
@@ -20,19 +20,32 @@ math: true
 
 ## Objetivo
 
-El objetivo de este trabajo práctico es ver la aplicación del TDA Grafo, los algoritmos vistos, y algunos más, en una situación real. 
-En particular, vamos a estar trabajando con grafos que representan redes sociales. Más en detalle, vamos a estar trabajando con la red social conformada por los personajes de Marvel Comics.
+El objetivo de este trabajo práctico es usar el TDA grafo para modelar una red social y sus algoritmos para obtener información de ella.
+En este Trabajo Práctico vamos a trabajar con la red social conformada por los personajes de Marvel Comics.
 
-## Introducción
+## Algoritmos
+
 Antes de pasar a la consigna vamos a explicar dos algoritmos que se van a utilizar.
 
 ### Random Walks
-Un [Random Walk](https://en.wikipedia.org/wiki/Random_walk) (o camino aleatorio) en un grafo no es más que un camino aleatorio sobre dicho grafo. La idea es comenzar desde un vértice específico, o uno aleatorio, y luego desde allí movernos aleatoriamente a un vecino de dicho vértice. Luego, movernos a un vecino desde el nuevo vértice, incluyendo el original. Continuar hasta llegar a un recorrido de largo N (prefijado). La probabilidad para movernos de un vértice a un vecino puede ser equiprobable (la misma para todos), o proporcional al peso que tenga cada arista, si es que existiera (pudiendo ser también alguna otra distribución). 
-Por lo tanto, lo que es necesario determinar es el largo del recorrido, que podría variar según la aplicación, y si vamos a considerar los pesos de las aristas, o no (movernos de un vértice a cualquier vecino es equiprobable). También, es muy probable que se requieran hacer varios de estos recorridos, por lo que otro parámetro a determinar es la cantidad de esos recorridos a realizar (nuevamente, puede depender de la aplicación).
+Un [Random Walk](https://en.wikipedia.org/wiki/Random_walk) es, como su nombre lo indica, un camino aleatorio sobre un grafo. Este comienza desde un vértice (que puede ser uno específico o uno aleatorio) y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino (incluyendo el original) desde el nuevo vértice. Este proceso continúa hasta que el recorrido tenga un largo _n_ prefijado.
+La probabilidad para movernos de un vértice a un vecino puede ser equiprobable (la misma para todos), proporcional al peso que tenga cada arista (si el grafo fuera pesado), u otra alternativa dependiendo de la aplicación.
+
+Por lo tanto, para realizar un random walk es necesario determinar:
+
+* el largo del recorrido
+* la probabilidad para movernos desde un vértice a sus vecinos
+* la cantidad de recorridos a realizar
+
+Todas estas caracterizaciones dependen de la aplicación del algoritmo.
 
 
 ### El problema de las Comunidades y Label Propagation
-Un problema común dentro de grafos que representan redes sociales, es querer obtener las comunidades que conforman la red social. Una comunidad dentro de una red social es un conjunto de vértices que se encuentran altamente conectados entre sí, y poco conectados con los vértices de afuera (o menos conectados que la comunidad en la que se encuentran dichos vértices). Este es un problema que está abarcado por el área de Aprendizaje Automático, más precisamente Aprendizaje No Supervisado (Clustering). Por supuesto, dicho tema no está dentro de los contenidos de la materia, por lo que vamos a usar un algoritmo sencillo, y semejante a otros algoritmos que se ven en la materia, y que suele encontrar muy buenos resultados: [Label Propagation](http://arxiv.org/pdf/0709.2938v1.pdf). Dicho algoritmo es utilizado, por ejemplo, en Facebook para realizar inferencias (ciudad de origen, dentro de estas).
+Un problema común dentro de grafos que representan redes sociales es querer obtener las comunidades que la conforman. Una comunidad dentro de una red social es un conjunto de vértices que se encuentran altamente conectados entre sí, y poco conectados con los vértices de afuera.
+Este es un problema que está abarcado por el área de Aprendizaje No Supervisado (Clustering) dentro del Aprendizaje Automático.
+
+Como estos temas no están incluidos dentro de los contenidos de la materia, usaremos un algoritmo sencillo que suele encontrar muy buenos resultados: [Label Propagation](http://arxiv.org/pdf/0709.2938v1.pdf). Dicho algoritmo es utilizado, por ejemplo, en Facebook para realizar inferencias.
+
 En label propagation lo que hacemos es:
 
 1) Para cada vértice $$V_i$$: 
@@ -45,7 +58,7 @@ $$Label[V_i] = i$$
 
 $$Label[V_i] = max\_freq(Label[V_j], ..., Label[V_k])$$
 
-Donde $$V_j, ..., V_k$$ son los vértices adyacentes a $$V_i$$. Se tiene en cuenta la última actualización realizada, inclusive si ya fueron procesados en esta iteración (actualización ascincrónica; pueden leer en el paper original los problemas que puede acarrear la actualización sincrónica).
+Donde $$V_j, ..., V_k$$ son los vértices adyacentes a $$V_i$$. Se tiene en cuenta la última actualización realizada, inclusive si ya fueron procesados en esta iteración (_actualización ascincrónica_).
 $$max\_freq$$ es una función que devuelve la Label que aparece más frecuentemente entre todos los adyacentes a $$V_i$$.  
 
 4) Si no se llegó a la condición de corte, volver a 2. La condición de corte puede ser una vez que se llegó a una cantidad determinada de comunidades, se cree que se llegó a la convergencia (la mayoría de los vecinos de cada vértice tiene la misma Label que dicho vértice), o simplemente por una cantidad de iteraciones prefijada. 
@@ -56,11 +69,11 @@ Como opción alternativa, brindamos otro algoritmo que utiliza Random Walks para
 
 El trabajo práctico consiste de 2 partes:
 
-1. La implementación del TDA Grafo, de forma genérica. Se brinda una [interfaz](https://sites.google.com/site/fiuba7541rw/tps/grafo.zip?attredirects=0&d=1) que puede servir de guía, tanto en Python como en C. No es necesario que implementen todas las primitivas allí descritas, ni tampoco están restringidos a agregar otras que consideren adecuadas, o incluso darles otros nombres. Debe tomarse únicamente como guía, especialmente si no saben cómo comenzar. 
+1. La implementación del TDA grafo genérico. Se brinda una [interfaz](https://sites.google.com/site/fiuba7541rw/tps/grafo.zip?attredirects=0&d=1) que puede servir de guía, tanto en Python como en C. No es necesario que implementen todas las primitivas allí descritas, ni tampoco están restringidos a agregar otras que consideren adecuadas, o incluso darles otros nombres. Debe tomarse únicamente como guía, especialmente si no saben cómo comenzar.
 
-2. Realizar un programa para realizar operaciones sobre nuestra red social. 
+2. Realizar un programa para realizar operaciones sobre nuestra red social.
 
-La implementación del TDA Grafo, y el posterior programa del trabajo práctico pueden realizarse en lenguaje de programación a elección, con previa aprobación del corrector asignado. 
+La implementación del TDA grafo, y el posterior programa del trabajo práctico pueden realizarse en lenguaje de programación a elección, con previa aprobación del corrector asignado.
 
 El programa a realizar debe recibir por parámetro la ruta del archivo con los datos de la red social: 
 
@@ -99,11 +112,12 @@ Ejemplo:
 
 En este ejemplo hay solamente 4 personajes, y las aristas se leen tal que: “_P. Uno_ y _S. Personaje_ participan juntos en 3 comics juntos”. Por supuesto, la relación es recíproca, por lo que no se agrega la otra línea correspondiente (`2 1 3`).
 
-El programa debe cargar la red social de dicho archivo, y luego esperar a que se ingresen comandos por entrada estándar. Los comandos se ejecutarán de la siguiente forma:
+El programa debe cargar la red social de dicho archivo en memoria, y luego esperar a que se ingresen comandos por entrada estándar. Los comandos se ejecutarán de la siguiente forma:
 
 	> Comando parametro1, parametro2, ..., parametroN
 
 ### Comandos a Implementar
+
 1. _Similares_: dado un personaje, encontrar los personajes más similares a este.
    
 		Parámetros:
@@ -142,7 +156,7 @@ El programa debe cargar la red social de dicho archivo, y luego esperar a que se
 			Salida:
 			> STAN LEE -> HUMAN TORCH -> CAPTAIN AMERICA
    
-4. Centralidad (o Betweeness): permite obtener los personajes más centrales de la red. Los personajes más centrales suelen ser a su vez los más importantes (o lo que se dice en redes sociales, influyente). 
+4. _Centralidad_ (o _Betweeness_): permite obtener los personajes más centrales de la red. Los personajes más centrales suelen ser a su vez los más importantes (o lo que se dice en redes sociales, influyente).
    
 		Parámetros: 
 			Cantidad: la cantidad de personajes que se desean mostrar.	
@@ -197,20 +211,22 @@ El programa debe cargar la red social de dicho archivo, y luego esperar a que se
 
 La entrega se realiza:
 
-  1. por mail a la casilla de TPs (`tps.7541rw@gmail.com`): todos los archivos correspondientes (programa y TDA grafo) en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP2 - <Padrón 1> - <Apellido 1> - <Padrón 2> - <Apellido 2>`.
+  1. por mail a la casilla de TPs (`tps.7541rw@gmail.com`): todos los archivos correspondientes (programa y TDA grafo) en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP3 - <Padrón 1> - <Apellido 1> - <Padrón 2> - <Apellido 2>`.
   2. en papel durante la clase (si su ayudante lo requiere), tanto el informe como el código.
 
 El informe deberá consistir de las siguientes partes:
 
   * carátula con los datos personales del grupo y el ayudante asignado.
   * análisis y diseño de la solución, en particular: algoritmos y estructuras de datos utilizados; orden de ejecución de cada programa o función.
-  * Además, en caso de sacar conclusiones sobre la estructura de la red social de marvel, es más que bienvenida, ya que además de estudiar el orden de los algoritmos, nos gusta ver que se puedan sacar conclusiones a partir de ellos! 
 
-Nuevamente, pueden revisar el [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/InformeEjemplo.tar.gz?attredirects=0) para la confección del mismo. 
+Nuevamente, pueden revisar el [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/InformeEjemplo.tar.gz?attredirects=0) para la confección del mismo.
+
+Adicionalmente los alentamos a conclusiones sobre la estructura de la red social de Marvel. Además de estudiar el orden de los algoritmos, nos interesa ver qué conclusiones se puedan sacar conclusiones a partir de ellos.
+
 
 **La fecha de entrega del Trabajo Práctico es el 2 de Diciembre de 2016.** 
 
-## Referencias y Datos de Interés
+## Referencias y datos de interés
 
 Una propiedad interesante que cumplen todas las redes sociales es que cumplen la [Ley de Potencias](https://en.wikipedia.org/wiki/Power_law) (en el caso de grafos, sobre el grado de los vértices). Es importante, antes de empezar a implementar algoritmos de redes sociales sobre un determinado grafo, revisar que dicho grafo cumple con la Ley de Potencias, para estar seguros que representa a una red social (por ejemplo, un grafo aleatorio tendría una distribución normal de los grados posibles). En el caso de nuestro set de datos, podemos ver que realmente se cumple dicha ley:
 
@@ -221,6 +237,4 @@ Una propiedad interesante que cumplen todas las redes sociales es que cumplen la
 3. [Breve análisis sobre la composición de comunidades en el Universo Marvel](http://marvelentertainment.tumblr.com/post/30536120271/marvel-universe-data)
  (considerar que nuestros resultados pueden diferir, ya que Marvel tiene los datos de primera mano, y los nuestros datan de 2002).
 4. [Video de la conferencia de Nueva York sobre Visualizaciones y análisis de datos, 2014](https://vimeo.com/88234257)
-
-
 
