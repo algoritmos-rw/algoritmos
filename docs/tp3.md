@@ -30,8 +30,7 @@ Antes de pasar a la consigna vamos a explicar dos algoritmos que se van a utiliz
 ### Random Walks
 Un [Random Walk](https://en.wikipedia.org/wiki/Random_walk) es, como su nombre indica, un camino aleatorio sobre un grafo. Comienza desde un vértice (que puede ser uno específico o uno aleatorio) y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino (incluyendo el original) desde el nuevo vértice. Este proceso continúa hasta que el recorrido tenga un largo _n_ prefijado.
 La probabilidad para movernos de un vértice a un vecino puede ser equiprobable (la misma para todos) o proporcional al peso que tenga cada arista (si el grafo fuera pesado), u otra alternativa dependiendo de la aplicación.
-
-Por lo tanto, para realizar un random walk es necesario determinar:
+Finalmente, un aplicación que utiliza este algoritmo puede realizar varios recorridos. Por lo tanto, para realizar un random walk es necesario determinar:
 
 * el largo del recorrido
 * la probabilidad para movernos desde un vértice a sus vecinos
