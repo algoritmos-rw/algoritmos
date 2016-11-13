@@ -10,6 +10,8 @@ math: true
 # TP 3: Grafos en el mundo Marvel
 {:.no_toc}
 
+![Wachenchauzer Studios](../assets/wachen_studios_box.jpeg "Wachenchauzer Studios")
+
 ## Contenidos
 {:.no_toc}
 
