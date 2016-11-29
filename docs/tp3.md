@@ -172,7 +172,7 @@ El programa debe cargar la red social de dicho archivo en memoria, y luego esper
 	Cualquier opción elegida debe ser analizada con sus pros y contras en el informe a entregar (tener en cuenta el orden de cada algoritmo, y cuál es posible que sea más exacto). 
 	Si se deseara, puede implementarse dicho comando con sus dos alternativas (por supuesto, esto tendría un impacto positivo en la nota ;-) ).
 
-5. _Distancias_: dado un personaje, obtener los personajes que se encuentran a cada una de las distancias posibles, considerando las distancias como la cantidad de saltos (no tenemos en cuenta los eventuales pesos de las aristas del grafo). 
+5. _Distancias_: dado un personaje, obtener la cantidad de personajes que se encuentran a cada una de las distancias posibles, considerando las distancias como la cantidad de saltos (no tenemos en cuenta los eventuales pesos de las aristas del grafo). 
 
 		Parámetro:
 			Personaje: personaje al cuál se le desean obtener las distancias.
