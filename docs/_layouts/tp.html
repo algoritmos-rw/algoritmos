@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <!-- TODO: just an example, improve formatting -->
+  <p><b>Fecha de entrega:
+    <span style="color: red;">{{ page.deadline | date: '%d/%m/%Y' }}</span></b></p>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>

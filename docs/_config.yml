@@ -9,3 +9,16 @@ theme: minima
 markdown: kramdown
 kramdown:
   footnote_backlink: "&#x21A9;&#xFE0E;"
+
+collections:
+  tps:
+    output: true
+    permalink: /:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "tps"
+    values:
+      layout: tp
