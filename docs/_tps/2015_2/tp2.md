@@ -1,5 +1,5 @@
 ---
-title: Trabajo práctico n.º 2
+title: TP2
 cursada: 2015/2
 deadline: 2015-11-13
 ---
