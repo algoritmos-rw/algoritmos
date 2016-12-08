@@ -10,7 +10,7 @@ math: true
 # TP 3: grafos en el mundo Marvel
 {:.no_toc}
 
-![Wachenchauzer Studios](../assets/wachen_studios_box.jpeg "Wachenchauzer Studios")
+![Wachenchauzer Studios]({{ site.baseurl }}{% link assets/wachen_studios_box.jpeg %} "Wachenchauzer Studios")
 
 ## Contenidos
 {:.no_toc}
@@ -229,7 +229,7 @@ Adicionalmente los alentamos a sacar conclusiones sobre la estructura de la red 
 
 Una propiedad interesante que cumplen todas las redes sociales es que cumplen la [Ley de Potencias](https://en.wikipedia.org/wiki/Power_law) (en el caso de grafos, sobre el grado de los vértices). Es importante, antes de empezar a implementar algoritmos de redes sociales sobre un determinado grafo, revisar que dicho grafo cumple con la Ley de Potencias, para estar seguros que representa a una red social (por ejemplo, un grafo aleatorio tendría una distribución normal de los grados posibles). En el caso de nuestro set de datos, podemos ver que realmente se cumple dicha ley:
 
-![Power Law Marvel](../assets/degree-distribution.png "Power Law Marvel")
+![Power Law Marvel]({{ site.baseurl }}{% link assets/degree-distribution.png %} "Power Law Marvel")
 
 1. [Trabajo base utilizado](http://courses.cs.washington.edu/courses/cse331/16wi/hws/hw6/hw6.html) y [Fuente original del que obtuvimos los datos](http://bioinfo.uib.es/~joemiro/marvel.html) (con transformación de los datos)
 2. [Página con base de datos de personajes del Universo Marvel](http://marvelousdb.com/)

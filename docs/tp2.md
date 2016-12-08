@@ -191,7 +191,10 @@ Diseñar esta nueva primitiva de manera tal que se comporte en orden $$\mathcal{
 
 # Consideraciones adicionales
 
-Ver los apartados de [lectura de archivos](https://algoritmos-rw.github.io/fiuba-algo2-2c2016-tp1/enunciado/#lectura-de-archivos) y [deps.mk](https://algoritmos-rw.github.io/fiuba-algo2-2c2016-tp1/enunciado/#depsmk) del Trabajo Práctico 1.
+Ver los apartados de [lectura de archivos][l] y [deps.mk][d] del Trabajo Práctico 1.
+
+[l]: {{ site.baseurl }}{% link tp1.md %}#lectura-de-archivos
+[d]: {{ site.baseurl }}{% link tp1.md %}#depsmk
 
 
 # Criterios de aprobación
