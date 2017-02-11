@@ -2,11 +2,14 @@ title: Algoritmos y Programación II
 description: >
   Página de la materia Algoritmos y Programación II (curso Wachenchauzer).
   Facultad de Ingeniería, Universidad de Buenos Aires.
+
 baseurl: "/algo2"
 url: "https://algoritmos-rw.github.io"
 
 theme: minima
 markdown: kramdown
+permalink: pretty
+
 kramdown:
   footnote_backlink: "&#x21A9;&#xFE0E;"
 
@@ -22,3 +25,5 @@ defaults:
       type: "tps"
     values:
       layout: tp
+
+exclude: ["Gemfile", "Gemfile.lock"]
