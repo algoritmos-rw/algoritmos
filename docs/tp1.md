@@ -1,9 +1,3 @@
----
-title: TP 1
-layout: default
-permalink: /:path/:basename/
----
-
 TP 1: manejo de archivos y cadenas
 ==================================
 

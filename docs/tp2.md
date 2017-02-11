@@ -1,9 +1,6 @@
 ---
-layout: default
-title: Trabajo práctico n.º 2
 excerpt: |
   TP2 de Algoritmos II (2016/2): hashes, ABBs y heaps. Fecha de entrega 11/11/16.
-permalink: /:path/:basename/
 math: true
 ---
 

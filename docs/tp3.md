@@ -1,7 +1,4 @@
 ---
-title: Trabajo práctico n.º 3
-layout: default
-permalink: /:path/:basename/
 excerpt: |
   TP3 de Algoritmos II (2016/2): grafos. Fecha de entrega 2/12/16.
 math: true
