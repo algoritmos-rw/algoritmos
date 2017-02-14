@@ -24,5 +24,8 @@ $ bundle install --path=../gems
 # Para visualizar al editar
 
 $ cd algo2/docs
-$ bundle exec jekyll serve
+$ bundle exec jekyll serve --livereload
 ```
+
+(La opción `--livereload` es opcional, pero fuerza al navegador a mostrar
+el nuevo contenido tras escribir un archivo.)
