@@ -1,0 +1,12 @@
+# Site settings
+title: Algoritmos y Programación II
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
