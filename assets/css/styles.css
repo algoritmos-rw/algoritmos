@@ -1,0 +1,45 @@
+@media (min-width: 768px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 720px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 960px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 768px;
+    max-width: 100%;
+  }
+}
+
+.collapse.navbar-collapse {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.page-content p {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.page-content li {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.navbar {
+  margin-bottom: 0!important;
+}
