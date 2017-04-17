@@ -26,7 +26,7 @@ Este trabajo práctico es *individual* y consiste de cuatro partes separadas, a 
 
 # Complejidad computacional
 
-Se desea implementar una función en C de firma `double* obtener_promedio_movil(int* arreglo, size_t n, size_t k)`, que calcule el promedio movil del arreglo, en ventana de tamaño `k` (supóngase que `k <= n/2`). El promedio móvil de un arreglo es el promedio del mismo, tomando solamente en cuenta los elementos que se encuentran en una posición dada +- k, calculándolo para todas las posiciones posibles. Lo que debe devolver la función es un arreglo (dinámico) cuyos valores sean el promedio móvil tomado desde cada posición.
+Se desea implementar una función en C de firma `double* obtener_promedio_movil(int* arreglo, size_t n, size_t k)`, que calcule el promedio movil del arreglo, en ventana de tamaño `k` (supóngase que `k <= n`). El promedio móvil de un arreglo es el promedio del mismo, tomando solamente en cuenta los elementos que se encuentran en una posición dada +- k, calculándolo para todas las posiciones posibles. Lo que debe devolver la función es un arreglo (dinámico) cuyos valores sean el promedio móvil tomado desde cada posición.
 
 Por ejemplo, supongamos el arreglo `{ 1, 3, 12, 6, 17, 9 }`, `n = 6`, `k = 1`.
 
@@ -37,10 +37,10 @@ Por ejemplo, supongamos el arreglo `{ 1, 3, 12, 6, 17, 9 }`, `n = 6`, `k = 1`.
     pm[4] = (6 + 18 + 9) / 3 = 11
     pm[5] = (17 + 9) / 2 = 13   (En este caso, no hay más elementos hacia derecha)
 
-Una solución trivial es realizar este cálculo tal cual está: por cada elemento en el arreglo original, calcular el promedio móvil. Esto implica recorrer el arreglo entero, y por cada elemento, recorrer K elementos, por lo que el orden de dicha solución es _O(n*k)_. Se pide:
+Una solución trivial es realizar este cálculo tal cual está: por cada elemento en el arreglo original, calcular el promedio móvil. Esto implica recorrer el arreglo entero, y por cada elemento, recorrer _2K_ elementos, por lo que el orden de dicha solución es _O(nk)_. Se pide:
 
 1. Implementar dicha solución.
-2. Implementar una solución tal que el orden de la función *no dependa* del valor de _k_.
+2. Implementar una solución de orden lineal que *no dependa* del valor de _k_.
 3. Implementar pruebas donde se pruebe ambas implementaciones para distintos valores de _n_ y _k_.
 4. Escribir un breve informe (máximo cuatro párrafos) en dónde expliquen qué orden tiene la versión optimizada, incluyendo mediciones de las ejecuciones.
 
@@ -78,7 +78,7 @@ Con las siguientes consideraciones:
 
 ## fixcol
 
-Se pide implementar una utilidad llamada `fixcol`, que dado el nombre de un archivo y un tamaño `n` en bytes, divida todas las líneas del archivo en columnas de hasta `n` columnas:
+Se pide implementar una utilidad llamada `fixcol`, que dado el nombre de un archivo y un tamaño `n` en bytes, divida todas las líneas del archivo en columnas de hasta `n` columnas y las imprima por salida estándar. Por ejemplo:
 
     $ cat lorem.txt
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -167,10 +167,10 @@ El prototipo y documentación es:
 
 Casos borde:
 
-    join([])        →  ""
-    join([""])      →  ""
-    join(["abc"])   →  "abc"
-    join(["", ""])  →  ","
+    join([], ",")        →  ""
+    join([""], ",")      →  ""
+    join(["abc"], ",")   →  "abc"
+    join(["", ""], ",")  →  ","
 
 
 Complejidad algorítmica: se espera que la función tenga complejidad O(n) (Siendo n la longitud de la cadena resultante).
