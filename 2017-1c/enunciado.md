@@ -289,5 +289,5 @@ La entrega incluye, obligatoriamente, un pequeño informe en formato PDF para la
 
 La entrega se realiza:
 
-1. por mail a la casilla de TPs (tps.7541rw@gmail.com): todos los archivos mencionados en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP1 - <Padrón> - <Apellido>`.
+1. por mail a la casilla de TPs (`tps.7541rw@gmail.com`): todos los archivos mencionados en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP1 - <Padrón> - <Apellido>`.
 2. en papel durante la clase (si su ayudante lo requiere), tanto el informe como el código. No es necesario reimprimir el código de los TDA.
