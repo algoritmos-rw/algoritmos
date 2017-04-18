@@ -7,7 +7,7 @@ permalink: /:path/:basename/
 TP 1: complejidad computacional, manejo de archivos y cadenas
 ==================================
 
-Este trabajo práctico es *individual* y consiste de cuatro partes separadas, a ser entregadas el lunes 12 de mayo.
+Este trabajo práctico es *individual* y consiste de cuatro partes separadas, a ser entregadas el lunes 8 de mayo.
 
 ## Contenido
   1. [Complejidad computacional](#complejidad-computacional)
