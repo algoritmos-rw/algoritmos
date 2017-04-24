@@ -33,8 +33,8 @@ Por ejemplo, supongamos el arreglo `{ 1, 3, 12, 6, 17, 9 }`, `n = 6`, `k = 1`.
     pm[0] = (1 + 3) / 2 = 2   (En este caso no hay más elementos hacia la izquierda)
     pm[1] = (1 + 3 + 12) / 3 = 5.3333
     pm[2] = (3 + 12 + 6) / 3 = 7
-    pm[3] = (12 + 6 + 18) / 3 = 12
-    pm[4] = (6 + 18 + 9) / 3 = 11
+    pm[3] = (12 + 6 + 17) / 3 = 11.6666
+    pm[4] = (6 + 17 + 9) / 3 = 10.6666
     pm[5] = (17 + 9) / 2 = 13   (En este caso, no hay más elementos hacia derecha)
 
 Una solución trivial es realizar este cálculo tal cual está: por cada elemento en el arreglo original, calcular el promedio móvil. Esto implica recorrer el arreglo entero, y por cada elemento, recorrer _2K_ elementos, por lo que el orden de dicha solución es _O(nk)_. Se pide:
