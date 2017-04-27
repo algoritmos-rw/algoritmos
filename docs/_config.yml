@@ -1,12 +1,34 @@
 # Site settings
 title: Algoritmos y Programación II
-baseurl: ""
-url: ""
+description: >
+  Página de la materia Algoritmos y Programación II (curso Wachenchauzer).
+  Facultad de Ingeniería, Universidad de Buenos Aires.
 
-# Build settings
+baseurl: "/algo2"
+# url: "https://algoritmos-rw.github.io"
+
+theme: minima
 markdown: kramdown
+permalink: pretty
+
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+
+kramdown:
+  footnote_backlink: "&#x21A9;&#xFE0E;"
+
+collections:
+  tps:
+    output: true
+    permalink: /:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "tps"
+    values:
+      layout: tp

@@ -1,3 +1,13 @@
-<footer class="site-footer" style="margin-bottom: 25px">
+{% if page.math %}
+  <script>
+    $("script[type='math/tex']").replaceWith(function() {
+        var tex = $(this).text();
+        return katex.renderToString(tex, {displayMode: false});
+    });
 
-</footer>
+    $("script[type='math/tex; mode=display']").replaceWith(function() {
+        var tex = $(this).html();
+        return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+    });
+  </script>
+{% endif %}
