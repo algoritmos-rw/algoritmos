@@ -124,12 +124,12 @@ El prototipo y la documentación de `split()`` queda en:
 
     /*
      * Devuelve en un arreglo dinámico terminado en NULL con todos los subsegmentos
-     * de ‘str’ separados por el carácter ‘sep’. Tanto el arreglo devuelto como las
+     * de 'str' separados por el carácter 'sep'. Tanto el arreglo devuelto como las
      * cadenas que contiene son allocadas dinámicamente.
      *
      * Quien llama a la función toma responsabilidad de la memoria dinámica del
      * arreglo devuelto. La función devuelve NULL si falló alguna llamada a
-     * malloc(), o si ‘sep’ es '\0'.
+     * malloc(), o si 'sep' es '\0'.
      */
     char** split(const char* str, char sep);
 
@@ -158,10 +158,11 @@ El prototipo y documentación es:
 
     /*
      * Devuelve una cadena, allocada dinámicamente, resultado de unir todas las
-     * cadenas del arreglo terminado en NULL ‘strv’.
+     * cadenas del arreglo terminado en NULL 'strv'.
      *
      * Quien llama a la función toma responsabilidad de la memoria dinámica de la
-     * cadena devuelta. La función devuelve NULL si no se pudo allocar memoria.
+     * cadena devuelta. La función devuelve NULL si no se pudo allocar memoria o
+     * o si 'sep' es '\0'.
      */
     char* join(char** strv, char sep);
 
