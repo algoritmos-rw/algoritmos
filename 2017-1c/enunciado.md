@@ -4,43 +4,34 @@ Twitter y una implementación del TT
 Introducción
 ------------
 
-Twitter es una red social donde cada usuario puede seguir a otro, compartir contenido (imagenes, video, texto de hasta 140 caracteres). También existe lo que se denomina como Trending Topic (TT). Esto es, las tendencias de ciertos temas, caracterizados de cierta forma (en el caso puntual de la red, poniendo el caracter numeral antes de la palabra que representa el hecho, por ejemplo `#Algoritmos2`). Esto es teniendo en cuenta un determinado tiempo, frecuencia y lugar geográfico, pero nosotros nos vamos a centrar a nivel global. 
+Twitter es una red social basada en la publicación mensajes cortos, llamados tweets. Una de las características de esta red es la publicación de los temas más comentados del momento, llamados trending topics (TT). Los usuarios pueden contribuir a la popularidad de ciertos temas mencionándolos usando un caracter numeral, por ejemplo `#Algoritmos2`. A estas menciones se las llama hashtags. El objetivo de este trabajo práctico es modelar un sistema que calcule los TTs de una serie de tweets.
 ¿Cómo hace Twitter para llevar la cuenta de la cantidad de veces que se menciona cada hashtag? 
-Una primera opción es, ya que se trata de cadenas, utilizar un diccionario. Dado que no nos interesa a priori tener un orden, y Twitter tiene que funcionar muy rápido, podríamos utilizar un TDA Hash. Ahora bien, supongan la cantidad de datos que procesa Twitter no es precisamente pequeña. Si almacenáramos todos los hashtags posibles (con un contador asociado) desde que se creó la plataforma, eventualmente nos quedaremos sin memoria. Esto no escala. Otra opción es que tengamos varios hashes en computadoras distintas (con comunicaciones en el medio), pero.. ¿cómo sabemos en cuál computadora se encuentra la cantidad de menciones de `#Algoritmos2`? Si bien es una posibilidad, escapa completamente los contenidos de nuestra materia, por lo que nos olvidaremos de esta opción. 
-
-Otra opción para mantener el uso de memoria constante es resignar un poco de precisión y utilizar algún algoritmo que realice una aproximación. Nosotros utilizaremos uno que se llama Counting Bloom Filters.
 
 Counting Bloom Filters
 ----------------------
 
-Supongamos que utilizaramos un arreglo de contadores. Cuando viene un nuevo hashtag, simplemente aumentamos en uno la posición que le corresponde dada una función de hashing. Si quisiéramos saber cuántas veces apareció una cadena, simplemente aplicamos la función de hashing, y vemos el contador en dicha posición. ¿Y qué hacemos con las colisiones?
+Almacenar lo que potencialmente pueden ser millones de hashtags puede ser requerir mucha infraestructura, y muchas veces alcanza con tener una aproximación. Utilizaremos este enfoque para realizar este trabajo práctico.
+Para esto se propone usar una idea basada en el funcionamiento de las tablas de hash. Simplemente almacenaremos la cantidad de apariciones de cada hashtag en un arreglo, al que accederemos a través de una función de hashing. Por lo tanto, si `f("Algoritmos2") = 4`, incrementaremos en uno el valor almacenado en la posición 4 de nuestro arreglo. A esta técnica se la llama counting bloom filters.
 
-Es cierto que aquí si 3 palabras caen en la misma posición, se le van a sumar las apariciones, lo cual puede ser un problema. Supongamos que tenemos *2 contadores*, cada uno con una función de hashing diferente (y que creamos que es poco probable que esas mismas palabras vuelvan a colisionar). Entonces, podríamos decir que la cantidad de apariciones de una palabra es igual al mínimo de los contadores que le corresponden a cada una. Esto puede ser falso, porque se siguen contando otras colisiones, pero si tenemos K contadores, y tomamos el mínimo entre ellos, entonces podemos decir que si bien puede haber aparecido menos veces, seguro no más. Sigue siendo una aproximación, pero es mejor. 
-
-Ventajas: 
-	- El espacio ocupado es constante. Siendo que la cantidad de contadores (y funciones de hashing) es constante, y cada uno tiene un largo constante (considerable, pero constante), entonces nunca variará y nunca nos quedaremos sin memoria. 
-	- Es aun más veloz que el hash, puesto que no hay redimensión posible, ni resolución de colisiones.
-
-Desventajas:
-	- A medida que aumenten la cantidad de elementos en los contadores, y vayan habiendo cada vez más colisiones, se volverá cada vez menos preciso. 
-	- Acá no pueden haber bajas, o se nos van a empezar a complicar las cosas (si bien la estructura lo permite). Para el dominio de nuestro problema, esto no nos importa. 
-
-Conclusión: Somos más veloces y ocupamos menos memoria, a cambio de ser menos precisos. Ahora bien, es poco probable que importe mucho si el TT n$^\circ$ 1 queda segundo en algún momento. 
-
+Es cierto que aquí si 3 palabras caen en la misma posición, se le van a sumar las apariciones, lo cual puede ser un problema. Supongamos que tenemos *2 contadores*, cada uno con una función de hashing diferente (y que creamos que es poco probable que esas mismas palabras vuelvan a colisionar). Entonces, podríamos decir que la cantidad de apariciones de una palabra es igual al mínimo de los contadores que le corresponden a cada una. Esto puede ser falso, porque se siguen contando otras colisiones, pero si tenemos _K_ contadores, y tomamos el mínimo entre ellos, entonces podemos decir que si bien puede haber aparecido menos veces, seguro no más. Sigue siendo una aproximación, pero es mejor. 
 
 Consigna
 --------
-Implementar un programa en C que lea por *entrada estándar* los usuarios y los hashtags de un mensaje. Dicho programa debe realizar las siguientes operaciones dependiendo de los parámetros que reciba:
-	--TT: Para este comando, puede que la entrada estandar no termine nunca. Si recibe este parámetro, debe recibir otros dos, numéricos, a llamar N y K. El programa, cada N lineas (equivalentes a N tweets) debe escribir por salida estandar los K Trending Topics aproximados, ordenados, utilizando Counting Bloom Filters. Pueden suponer que N y K serán valores tales que se pueden almacenar en memoria esa cantidad de cadenas (o estructuras auxiliares). Esto se debe a que no podemos asumir que la entrada estándar vaya a terminar jamás, por lo que almacenar todos los usuarios, tags, etc.. en memoria recordando la cantidad de apariciones no es viable.
-	El tiempo de procesamiento de cada tag debe ser O(1), mientras que la impresión de los K TT debe realizarse en O(N log K).
+Implementar dos programas en C:
+	- procesar_tweets: 
+	Este programa se utilizará para contar los trending topics en un conjunto de tweets, leyendo cada línea proveniente de la *entrada estándar*. Como se sabe que la cantidad de mensajes puede ser ilimitada, para usarlo se requieren dos parámetros enteros, llamados _n_ y _k_. El programa deberá imprimir por *salida estándar* el histórico de los _k_ TTs aproximados cada _n_ lineas, ordenados por ocurrencias. Pueden suponer que _n_ y _k_ serán valores tales que se pueda almacenar en memoria esa cantidad de cadenas o estructuras auxiliares.
+	El tiempo de procesamiento de cada tag debe ser _O(1)_, mientras que la impresión de los _k_ TT debe realizarse en _O(n log k)_.
 	
 	Ejemplos de invocación:
-		`~$ cat tweets.txt | ./tp2 300000 20` 
-		`~$ ./capturador_de_tweets | ./tp2 500000 30`
+		`~$ cat tweets.txt | ./procesar_tweets 300000 20` 
 		
-	-o: Para este comando, se puede asumir que la entrada estándar es acotada (por lo que se puede almacenar en las estructuras que se crean convenientes). El programa, luego de terminar de leer dicha entrada, debe escribir por salida estándar, por cada cantidad de tags posibles, los usuarios que tienen dicha cantidad de tags (como lista). Cada lista debe encontrarse ordenada (alfanuméricamente). 
-	El procesamiento de cada línea debe realizarse en tiempo constante, mientras que la parte de impresión debe realizarse en tiempo O(U + T), siendo U la cantidad de usuarios que hayan, y T la cantidad de tags distintos que hubieran.
-	Ejemplo:
+	- procesar_usuarios: Este programa tendrá como objetivo contar la cantidad de hashtags que usa cada usuario, leyendo cada línea del archivo pasado por parámetro. Como se sabe que la cantidad de usuarios es mucho menor a la cantidad de TTs, y que dicho archivo termina, consideramos que se puede almacenar en memoria todo lo necesario para procesar la entrada.
+	El programa deberá procesar la entrada y luego deberá escribir por *salida estándar* los usuarios y la cantidad de hashtags que utilizaron en tiempo lineal: _O(u + t)_ siendo _u_ la cantidad de usuarios encontrados y _t_ la cantidad de hashtags diferentes, ordenados según ocurrencias, y dentro de cada ocurrencia, ordenado alfanuméricamente.
+	
+	Ejemplo de invocación:
+		`~$ ./procesar_tweets tweets.txt` 
+		
+	Ejemplo de salida:
 		El usuario Fede tiene 5 tags, Martín 3, Jorge 3, Javier 5, Nacho 8, Constanza 2, Agustina 5, Gonzalo 3, Matías 2, Joaquín 6, Ana 1, Juan 1
 		Se debe escribir por salida estándar:
 		```
