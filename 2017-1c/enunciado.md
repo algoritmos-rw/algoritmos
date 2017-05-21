@@ -67,7 +67,7 @@ En ambos casos, la entrada debe tener el siguiente formato:
 
 Donde cada línea corresponde a un tweet realizado por el usuario mencionado, continuado por una los tags en dicho tweet. Por eso, un mismo usuario puede aparecer más de una vez. No hay líneas que no contengan al menos un tag.
 
-Para esto, contarán con un [archivo de prueba provisto por el curso](https://drive.google.com/file/d/0B_oxuLrlET2hU1ZYbDJ2LXY1Z2s/view?usp=sharing). Dicho archivo fue procesado de sus originales [aquí](https://snap.stanford.edu/data/twitter7.html).
+Para esto, contarán con un [archivo de prueba provisto por el curso](https://drive.google.com/file/d/0B_oxuLrlET2hU1ZYbDJ2LXY1Z2s/view?usp=sharing). Dicho archivo fue procesado de sus originales [aquí](https://snap.stanford.edu/data/twitter7.html). También les brindamos una [versión con los primeros cien tweets](https://drive.google.com/file/d/0B0x0VPz_v-f_RlZydHY4LVNsSFk/view?usp=sharing) para usar durante la etapa de desarrollo.
 
 Pueden crear otros archivos de pruebas que a ustedes les sirva para probar el programa.
 
