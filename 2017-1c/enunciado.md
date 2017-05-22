@@ -76,7 +76,7 @@ Pueden crear otros archivos de pruebas que a ustedes les sirva para probar el pr
 Criterios de aprobación
 -----------------------
 El código entregado debe ser claro y legible y ajustarse a las especificaciones de la consigna. Debe compilar sin advertencias y correr sin errores de memoria. La entrega incluye, obligatoriamente, un pequeño informe en formato PDF para explicar la complejidad de cada uno de los algoritmos utilizados, y todos los archivos que correspondan a la elaboración del TP, modularizado como les parezca adecuado. Además, debe adjuntarse un archivo Makefile para la compilación del programa.
-La fecha de entrega del TP es el **viernes 9/6**.
+La fecha de entrega del TP es el **lunes 12/6**.
 
 La entrega se realiza:
 
