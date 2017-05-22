@@ -41,7 +41,7 @@ Implementar dos programas en C:
 
 - `procesar_usuarios`: este programa tendrá como objetivo contar la cantidad de hashtags que usa cada usuario, leyendo cada línea del archivo pasado por parámetro. Como se sabe que la cantidad de usuarios es mucho menor a la cantidad de TTs, y que dicho archivo termina, consideramos que se puede almacenar en memoria todo lo necesario para procesar la entrada.
 
-	El programa deberá procesar la entrada y luego deberá escribir por *salida estándar* los usuarios y la cantidad de hashtags que utilizaron en tiempo lineal: _O(u + t)_ siendo _u_ la cantidad de usuarios encontrados y _t_ la cantidad de hashtags diferentes, ordenados según ocurrencias, y dentro de cada ocurrencia, ordenado alfanuméricamente.
+	El programa deberá procesar la entrada y luego deberá escribir por *salida estándar* los usuarios y la cantidad de hashtags que utilizaron en tiempo lineal: _O(u + t)_ siendo _u_ la cantidad de usuarios encontrados y _t_ la cantidad de hashtags diferentes, ordenados según ocurrencias. Los usuarios que tienen la misma cantidad de hashtags pueden ser impresos en cualquier orden.
 
 	Ejemplo de invocación:
 		`~$ ./procesar_tweets tweets.txt`
@@ -51,9 +51,9 @@ Implementar dos programas en C:
 	Se debe escribir por salida estándar:
 
 		1: Ana, Juan
-		2: Constanza, Matias
+		2: Matias, Constanza
 		3: Gonzalo, Jorge, Martín
-		5: Agustina, Fede, Javier
+		5: Fede, Agustina, Javier
 		6: Joaquín
 		8: Nacho
 
