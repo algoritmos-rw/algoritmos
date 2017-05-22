@@ -80,5 +80,5 @@ La fecha de entrega del TP es el **lunes 12/6**.
 
 La entrega se realiza:
 
-1. por mail a la casilla de TPs (`tps.7541rw@gmail.com`): todos los archivos mencionados en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP1 - <Padrón> - <Apellido>`.
+1. por mail a la casilla de TPs (`tps.7541rw@gmail.com`): todos los archivos mencionados en un único archivo ZIP, más el informe como un adjunto PDF sin comprimir. En el asunto deben indicar: `TP2 - <Padrón 1> - <Apellido 1> - <Padrón 2> - <Apellido 2>`.
 2. en papel durante la clase (si su ayudante lo requiere), tanto el informe como el código. No es necesario reimprimir el código de los TDA.
