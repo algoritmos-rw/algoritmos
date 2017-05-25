@@ -1,17 +1,17 @@
-#Algoritmos BackTracking
+# Algoritmos BackTracking
 
 
-##Ejercicio Resuelto:
+## Ejercicio Resuelto:
 
 Se tiene una lista de materias que deben ser cursadas en el mismo cuatrimestre, cada materia está representada con una lista de cursos/horarios posibles a cursar (solo debe elegirse uno de todos ellos). Cada materia puede tener varios cursos. 
 
 Implementar el pseudocódigo de un algoritmo de backtracking que devuelva un listado con todas las combinaciones posibles que permitan asistir a un curso de cada materia sin que se solapen los horarios.
 Considerar que existe una función `son_compatibles(curso_1, curso_2)` que dados dos cursos devuelve un valor booleano que indica si se pueden cursar al mismo tiempo.
 
-###Solucion:
+### Solucion:
 
 Lo primero que hay que tratar de entender, es que es necesario tratar de ir generando las combinaciones hasta encontrar alguna válida. Por fuerza bruta, sería obtener primero todas las combinaciones de materias (un curso por cada materia) y luego ver cuáles son incompatibles para filtrar.
-Suponiendo que todas las materias tenga _k_ cursos, y que tenemos _n_ materias, tendríamos un orden de $O(k^n)$ para generar cada combinacion (pues hay $k^n$ combinaciones, supondremos que generar cada una costará a lo sumo _O(n)_, despreciable al lado del otro término aunque _k_ fuere constante o muy pequeño).
+Suponiendo que todas las materias tenga _k_ cursos, y que tenemos _n_ materias, tendríamos un orden de $$O(k^n)$$ para generar cada combinacion (pues hay $$k^n$$ combinaciones, supondremos que generar cada una costará a lo sumo _O(n)_, despreciable al lado del otro término aunque _k_ fuere constante o muy pequeño).
 Luego, sería necesario filtrar las opciones incorrectas, pero esto lo vamos a obviar porque la idea es plantear que esto no sea necesario. La idea va a ser ir generando todas esas combinaciones posibles, pero en cuanto detectemos que una opcion no es válida, simplemente descartarla. 
 
 Por ejemplo, si ya sabemos que el primer curso de Algoritmos y Programación II no es compatible con el primer curso de Álgebra II, por qué ver todas las combinaciones que incluyan estos dos cursos? Ya podemos descartarlas al encontrar esta colisión. En el peor de los casos, todos los cursos son compatibles entre sí sin colisión y mantendremos el orden (aunque siendo realistas, esto no sucede ni cuando las materias son de curso único).
@@ -53,7 +53,7 @@ def solucion_posible(horarios):
     return True
 ```
 
-##Ejercicios Propuestos:
+## Ejercicios Propuestos:
 
 
 1. Diseñar un algoritmo de backtracking que resuelva el siguiente problema: dado una pieza de caballo de ajedrez (_knight_, o caballero) dentro de un tablero, determinar los movimientos a hacer para que el caballo logre pasar por todos los casilleros, una única vez.

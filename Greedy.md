@@ -1,6 +1,6 @@
-#Algoritmos Greedy
+# Algoritmos Greedy
 
-##Ejercicio Resuelto:
+## Ejercicio Resuelto:
 
 Un camión debe viajar desde una ciudad a otra deteniéndose a cargar combustible cuando sea necesario. El tanque de combustible le permite viajar hasta _K_ kilometros.  
 Las estaciones se encuentran distribuidas a lo largo de la ruta siendo di la distancia desde la estación _i-1_ a la estación _i_.
@@ -8,7 +8,7 @@ Las estaciones se encuentran distribuidas a lo largo de la ruta siendo di la dis
 1. Implementar un algoritmo que decida en qué estaciones debe cargar combustible de manera que se detenga la menor cantidad de veces posible.
 2. ¿Cuál es la complejidad algorítmica?
 
-###Solución:
+### Solución:
 
 Desde un inicio, es muy probable que la primer idea que se nos ocurra sea "_vayamos hasta al estación de servicio más alejada desde el inicio, que se mantenga a distancia K, y hacer eso en cada paso_". Esa suena como una buena primera propuesta, ante lo cual deberíamos preguntarnos:
 
@@ -50,7 +50,7 @@ def carga_estaciones(L, K, total_km):
 ```    
 Para la pregunta de la complejidad, se ve que pasamos una vez por cada estación para validar la condición, y una sola vez, y nada depende del valor de _K_. Por lo tanto, el algoritmo es _O(n)_, con _n = |L|_.
 
-##Ejercicios Propuestos:
+## Ejercicios Propuestos:
 
 1. Se tienen paquetes que se quieren transportar, y camiones para realizar dichos transportes. Cada camión puede utilizarse más de una vez, y puede utilizarse para algunos paquetes (no todos los camiones pueden transportar todos los paquetes, se conoce cuáles paquetes puede llevar cada camión) y cada camión tiene un costo de envío diferente (por cada paquete se debe realizar un envío por separado).
 
@@ -60,7 +60,7 @@ Para la pregunta de la complejidad, se ve que pasamos una vez por cada estación
 
  Implementar el pseudocódigo de un algoritmo greedy que, teniendo una lista de pesos de _n_ productos comprados, encuentre la mejor forma de distribuir los productos en la menor cantidad posible de bolsas.
  
- Realizar el seguimiento del algoritmo propuesto para bolsas con peso máximo 5 y para una lista con los pesos: [ 4, 2, 1, 3, 5 ].
+ Realizar el seguimiento del algoritmo propuesto para bolsas con peso máximo 5 y para una lista con los pesos: `[ 4, 2, 1, 3, 5 ]`.
 ¿El algoritmo implementado encuentra siempre la solución óptima? Justificar.
 
 3. Una empresa tiene _n_ empleados, y _k_ proyectos posibles a realizar. Cada proyecto debe ser realizado por unos empleados en particular, y cada empleado puede realizar a lo sumo dos trabajos en total, en el tiempo que se tiene destinado para realizar todos los proyectos (suponer que podrían trabajar en ambos en simultáneo).
