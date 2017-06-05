@@ -93,3 +93,10 @@ Para la pregunta de la complejidad, se ve que pasamos una vez por cada estación
     1. ¿Es esta un algoritmo de tipo Greedy? ¿Por qué?
     2. ¿Encuentra siempre alguna solución? Si encuentra una solución, ¿podemos estar seguros de que es la mejor?
 Justificar.
+
+## Bibliografía y referencias
+
+- Weiss, Mark Allen: "Data Structures and Algorithms" (tercera edición), Pearson, 1999. Cap. 10.1: _Greedy algorithms_.
+- Kruse, Robert Leroy;  Tondon, Clovis L.;  Leung, Bruce P: "Data structures and program design in C", Prentice-Hall, 1997. Cap 12.5: _A Greedy Algorithm_
+- Guerequeta, Rosa; Vallecillo, Antonio: "Técnicas de Diseño de Algoritmos" (segunda edición), Servicio de Publicaciones de la Universidad de Málaga, 1998. Cap 4: _Algoritmos ávidos_.
+- Cormen, Thomas; Leiserson, Charles; Rivest, Ronald; Stein, Clifford: "Introduction to Algorithms" (tercera edición), MIT Press, 2009. Cap. 16: _Greedy algorithms_.

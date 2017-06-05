@@ -140,3 +140,9 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 6. ¡Ejercicio difícil! En este barrio todos viven alrededor de la plaza y los vecinos contiguos se odian entre sí. Hay _n_ vecinos y el primer vecino es contiguo con el último. Cuando le preguntan a cada uno cuánto es lo máximo que va a donar para arreglar la plaza la respuesta se registra en el array `donar = [d0, d1, ..., d(n-1)]`, pero la condición es: solo donaré si no dona ninguno de mis vecinos contiguos.
 
    Usando programación dinámica resolver cuánto es lo máximo que se puede recolectar por donaciones.
+
+## Bibliografía y referencias
+
+- Weiss, Mark Allen: "Data Structures and Algorithms" (tercera edición), Pearson, 1999. Cap. 10.3: _Dynamic programming_.
+- Guerequeta, Rosa; Vallecillo, Antonio: "Técnicas de Diseño de Algoritmos" (segunda edición), Servicio de Publicaciones de la Universidad de Málaga, 1998. Cap 5: _Programación dinámica_.
+- Cormen, Thomas; Leiserson, Charles; Rivest, Ronald; Stein, Clifford: "Introduction to Algorithms" (tercera edición), MIT Press, 2009. Cap. 15: _Dynamic programming_.

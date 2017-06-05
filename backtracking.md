@@ -67,7 +67,7 @@ def solucion_posible(horarios):
     return True
 ```
 
-## Ejercicios propuestos:
+## Ejercicios propuestos
 
 1. Diseñar un algoritmo de backtracking que resuelva el siguiente problema: dado una pieza de caballo de ajedrez (_knight_, o caballero) dentro de un tablero, determinar los movimientos a hacer para que el caballo logre pasar por todos los casilleros, una única vez.
 
@@ -80,3 +80,9 @@ def solucion_posible(horarios):
 3. Escribir una función en pseudocódigo que, utilizando backtracking, dada una lista de enteros positivos _L_ y un entero _n_ devuelva todos los subconjuntos de _L_ que suman exactamente _n_. ¿Cómo cambia el comportamiento del algoritmo frente a una solución por fuerza bruta? Explicar con al menos dos ejemplos de _L_ y _n_.
 
 4. ¡Ejercicio difícil! Realizar el ejercicio anterior, si además se agregar como restricción que no se puede utilizar más de una vez un mismo elemento de la lista L, pero se quieren maximizar la cantidad de conjuntos obtenidos.
+
+## Bibliografía y referencias
+
+- Weiss, Mark Allen: "Data Structures and Algorithms" (tercera edición), Pearson, 1999. Cap. 10.5: _Backtracking algorithms_.
+- Kruse, Robert Leroy;  Tondon, Clovis L.;  Leung, Bruce P: "Data structures and program design in C", Prentice-Hall, 1997. Cap 5.3: _Backtracking: Postponing the Work_.
+- Guerequeta, Rosa; Vallecillo, Antonio: "Técnicas de Diseño de Algoritmos" (segunda edición), Servicio de Publicaciones de la Universidad de Málaga, 1998. Cap 6: _Vuelta atrás_.
