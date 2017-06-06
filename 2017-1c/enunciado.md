@@ -7,7 +7,7 @@ permalink: /:path/:basename/
 math: true
 ---
 
-# Grafos en Youtube
+# Grafos en YouTube
 {:.no_toc}
 
 ## Contenidos
@@ -60,7 +60,7 @@ En label propagation lo que hacemos es:
 
   4) Si no se llegó a la condición de corte, volver a 2. La condición de corte puede ser una vez que se llegó a una cantidad determinada de comunidades, se cree que se llegó a la convergencia (la mayoría de los vecinos de cada vértice tiene la misma Label que dicho vértice), o simplemente por una cantidad de iteraciones prefijada.
 
-Como opción alternativa, brindamos otro algoritmo que utiliza Random Walks para obtener las posibles comunidades: [entropy walker](https://drive.google.com/file/d/0B8rBD4QSqWnSLTdWTXdFaUtUNjQ/view).
+Como opción alternativa, brindamos otro algoritmo que utiliza random walks para obtener las posibles comunidades: [entropy walker](https://drive.google.com/file/d/0B8rBD4QSqWnSLTdWTXdFaUtUNjQ/view).
 
 ## Consigna
 
