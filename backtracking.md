@@ -29,7 +29,7 @@ Luego, sería necesario filtrar las opciones incorrectas, pero esto lo vamos a o
 
 Por ejemplo, si ya sabemos que el primer curso de Algoritmos y Programación II no es compatible con el primer curso de Álgebra II, por qué ver todas las combinaciones que incluyan estos dos cursos? Ya podemos descartarlas al encontrar esta colisión. En el peor de los casos, todos los cursos son compatibles entre sí sin colisión y mantendremos el orden (aunque siendo realistas, esto no sucede ni cuando las materias son de curso único).
 
-Por lo tanto, allí estará la poda: cuando detectemos que un curso es incompatible con el resto, descartamos la opción. Simplemente con analizar si la ultima materia agregada en cada paso es compatible con las anteriores, será suficiente (luego, no es necesario validar la primera con la segunda, la primera con la tercera, etc... porque eso ya debería haberse hecho). De esta forma reducimos el costo de esa poda de $O(n^2)$ a $O(n)$.
+Por lo tanto, allí estará la poda: cuando detectemos que un curso es incompatible con el resto, descartamos la opción. Simplemente con analizar si la ultima materia agregada en cada paso es compatible con las anteriores, será suficiente (luego, no es necesario validar la primera con la segunda, la primera con la tercera, etc... porque eso ya debería haberse hecho). De esta forma reducimos el costo de esa poda de $$O(n^2)$$ a $$O(n)$$.
 
 ```python
 def horarios_posibles(materias, solucion_parcial):

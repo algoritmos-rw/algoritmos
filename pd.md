@@ -71,7 +71,7 @@ _O(n * (n + O(es_cuadrado_perfecto)))_. La función `es_cuadrado_perfecto` se pu
 
 #### Opción 2
 
-Una mejora importante es simplemente restar los cuadrados perfectos. Si yo sé que $$10 = 9 + 1ˆ2 = 6 + 2ˆ2 = 1 + 3ˆ2$$, sabemos que el segundo término de cada igualdad es ya de por sí un término cuadrático (por ende, se escribe con un solo término). Si supiéramos la cantidad óptima para 9, para la primera opción solo tendríamos que decir `opt1(10) = opt(9) + 1`. Para la segunda opción, si tuviéramos el óptimo para 6, el óptimo para esa opción sería la cantidad óptima para 6, más 1 por el $$2ˆ2$$ (se escribe en un solo término, esa es la gracia). Entonces, la ecuación de recurrencia nos quedaría:
+Una mejora importante es simplemente restar los cuadrados perfectos. Si yo sé que $$10 = 9 + 1^2 = 6 + 2^2 = 1 + 3^2$$, sabemos que el segundo término de cada igualdad es ya de por sí un término cuadrático (por ende, se escribe con un solo término). Si supiéramos la cantidad óptima para 9, para la primera opción solo tendríamos que decir `opt1(10) = opt(9) + 1`. Para la segunda opción, si tuviéramos el óptimo para 6, el óptimo para esa opción sería la cantidad óptima para 6, más 1 por el $$2^2$$ (se escribe en un solo término, esa es la gracia). Entonces, la ecuación de recurrencia nos quedaría:
 `opt(n) = 0 si n == 0; min(opt(n-i^2) + 1), para i tal que i^2 <= n, en otro caso`
 
 (Notar que los cuadrados perfectos van a ser tenidos en cuenta ya que al hacer, por ejemplo, $$9 = 0 + 3^2$$, el 0 no agrega término).
@@ -90,9 +90,9 @@ def terminos(n):
             j += 1
     return v[n]
 ```
-Sobre el orden, es fácil primero pensar que es $$O(nˆ2)$$. A los fines de un parcialito, si alguien escribiera esto para dicha solución, sería visto como correcto.
+Sobre el orden, es fácil primero pensar que es $$O(n^2)$$. A los fines de un parcialito, si alguien escribiera esto para dicha solución, sería visto como correcto.
 
-Ahora bien, en realidad si bien el primer for se itera _n_ veces, el while no itera _n_ veces, sino que itera por los cuadrados perfectos anteriores. La variable _j_ a lo sumo va a valer la raíz cuadrada de _i_. Eso implica que ese for se itera $$\sqrt{i}$$ veces, por lo tanto el orden va a ser $$O(n * \sqrt{n}) = O(nˆ{1.5})$$.
+Ahora bien, en realidad si bien el primer for se itera _n_ veces, el while no itera _n_ veces, sino que itera por los cuadrados perfectos anteriores. La variable _j_ a lo sumo va a valer la raíz cuadrada de _i_. Eso implica que ese for se itera $$\sqrt{i}$$ veces, por lo tanto el orden va a ser $$O(n * \sqrt{n}) = O(n^{1.5})$$.
 
 Otra forma de verlo, es que este ejercicio es *muy similar* al problema del cambio. Supongamos que nuestras monedas fueran los infinitos cuadrados perfectos (o con considerar hasta el próximo al _N_ que nos interese, sería suficiente). Antes tratábamos de formar el cambio con las monedas que teníamos, ahora tratamos de formar un número con los cuadrados perfectos. Se puede ver que hay una equivalencia directa, teniendo de monedas el 1, 4, 9, 16, 25, ...
 A su vez, también se puede ver que la solución greedy para el problema del cambio no aplicaría para este problema (al menos de forma óptima), puesto que no se cumple la propiedad de tener que una moneda sea al menos del doble de valor que su anterior.
@@ -102,7 +102,7 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
 1. La cantidad de posibles colocaciones de paréntesis para i operadores binarios está dada por la fórmula:
 
-   $$v[i] = \sum_{j=0}^{n-1} v[j] * v[(n-1)-j]$, con $v[0] = 1$ y $v[1] = 1$$.
+   $$v[i] = \sum_{j=0}^{n-1} v[j] * v[(n-1)-j]$$, con $$v[0] = 1$$ y $$v[1] = 1$$.
 
    Escribir una función que obtenga la cantidad de agrupaciones para un valor N de operadores de forma eficiente.
 
@@ -110,12 +110,12 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
    Tener en cuenta que:
 
-   $$(a + b)^n = \sum_{k=0}^n \comb{n}{k} \dot a \dot b$$
+   $$(a + b)^n = \sum_{k=0}^n \binom{n}{k} \dot a \dot b$$
 
    Por lo tanto, lo que nos interesa conocer son los valores de todos esos combinatorios. Sabiendo que:
-   - $$\comb{n}{0} = 1$$
-   - $$\comb{n}{n} = 1$$
-   - $$\comb{n}{k} = \comb{n-1}{k} + \comb{n-1}{k-1}$$ (en otro caso)
+   - $$\binom{n}{0} = 1$$.
+   - $$\binom{n}{n} = 1$$.
+   - $$\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}$$ (en otro caso).
 
    Implementar un algoritmo que por programación dinámica nos permita obtener todos los coeficientes de un binomio de grado _n_.
 
