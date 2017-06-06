@@ -95,6 +95,10 @@ Los comandos se ejecutarán de la siguiente forma:
 
 	> comando parametro1 parametro2 ... parametroN
 
+Notar que esto permite tener un archivo de instrucciones a ser ejecutadas:
+
+	> cat comandos.txt | ./tp3 youtube.txt
+
 ### Comandos a implementar
 
 1. _Similares_: dado un usuario, encontrar los personajes más similares a este.
@@ -198,7 +202,7 @@ Los comandos se ejecutarán de la siguiente forma:
 			> Distancia 13: 23
 			> Distancia 14: 17
 
-6. _Estadísticas_: muchas veces es de interés obtener ciertas estadísticas sobre las uniones del grafo. Nos interesa que nos muestre el total de vértices, el total de aristas, el promedio del grado de cada vértice, el desvío estándar del grado de cada vértice y la densidad del grafo (la proporción entre la cantidad de aristas, y la cantidad de aristas máximas que puede llegar tener el grafo, con esa cantidad de vértices).
+6. _Estadísticas_: muchas veces es de interés obtener ciertas estadísticas sobre las uniones del grafo. Nos interesa que nos muestre el total de vértices, el total de aristas, el promedio del grado de cada vértice y la densidad del grafo (la proporción entre la cantidad de aristas, y la cantidad de aristas máximas que puede llegar tener el grafo, con esa cantidad de vértices).
 
 	Parámetros: (ninguno)
 
@@ -207,7 +211,6 @@ Los comandos se ejecutarán de la siguiente forma:
 	- Cantidad de aristas.
 	- Promedio del grado de entrada cada vértice.
   - Promedio del grado de salida cada vértice.
-	- Desvío estándar del grado de cada vértice.
 	- Densidad del grafo.
 
 	Ejemplo:
@@ -217,13 +220,7 @@ Los comandos se ejecutarán de la siguiente forma:
 			> Cantidad de aristas: 144
 			> Promedio de grado de entrada de cada vértice: 11
 			> Promedio de grado de salida de cada vértice: 11
-			> Desvío estándar del grado de cada vértice: 1
 			> Densidad del grafo: 1
-
-	_Nota_: el desvío estándar es una medida que permite saber cuánto desvío hay respecto a la media, y es muy utilizado en Probabilidad y Estadística. Para estimarlo en función de nuestras muestras, se puede aplicar la fórmula:
-	$$ std = \sqrt{\frac{\sum_{i=0}^n (x_i - \mu)^2}{n-1}} $$
-
-	Siendo $$\mu$$ el promedio de los grados de los vértices, $$x_i$$ el grado de cada vértice, y $$n$$ la cantidad de vértices del grafo. 	
 
 7. _Comunidades_: nos permite mostrar las comunidades que se encuentren en la red. Recomendamos utilizar el algoritmo de Label Propagation descrito en la introducción de este trabajo práctico.
 
