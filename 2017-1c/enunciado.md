@@ -19,7 +19,7 @@ math: true
 ## Objetivo
 
 El objetivo de este Trabajo Práctico es usar el TDA grafo y sus algoritmos para modelar una red social y obtener información de ella.
-En este caso trabajaremos con la red social conformada por los usuarios de [YouTube](www.youtube.com).
+En este caso trabajaremos con la red social conformada por los usuarios de [YouTube](http://www.youtube.com).
 
 ## Algoritmos
 
