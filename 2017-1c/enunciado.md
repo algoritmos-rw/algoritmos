@@ -210,7 +210,7 @@ Notar que esto permite tener un archivo de instrucciones a ser ejecutadas:
 	- Cantidad de vértices.
 	- Cantidad de aristas.
 	- Promedio del grado de entrada cada vértice.
-  - Promedio del grado de salida cada vértice.
+	- Promedio del grado de salida cada vértice.
 	- Densidad del grafo.
 
 	Ejemplo:
