@@ -44,7 +44,7 @@ Implementar dos programas en C:
 	El programa deberá procesar la entrada y luego deberá escribir por *salida estándar* los usuarios y la cantidad de hashtags que utilizaron en tiempo lineal: _O(u + t)_ siendo _u_ la cantidad de usuarios encontrados y _t_ la cantidad de hashtags diferentes, ordenados según ocurrencias. Los usuarios que tienen la misma cantidad de hashtags pueden ser impresos en cualquier orden.
 
 	Ejemplo de invocación:
-		`~$ ./procesar_tweets tweets.txt`
+		`~$ ./procesar_usuarios tweets.txt`
 
 	Ejemplo de salida:
 	El usuario Fede tiene 5 tags, Martín 3, Jorge 3, Javier 5, Nacho 8, Constanza 2, Agustina 5, Gonzalo 3, Matías 2, Joaquín 6, Ana 1, Juan 1
