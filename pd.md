@@ -59,10 +59,10 @@ def minimos_terminos(n):
             v[i] = 1
             continue
         #inicialmente ponemos la solución que seguro existe
-        v[i] = n
+        v[i] = i
         #Podria iterarse solo hasta la mitad, porque vamos a repetir combinaciones:
         for j in [1.. i-1]:
-            v[n] = min(v[n], v[n-i] + v[i])
+            v[i] = min(v[i], v[n-i] + v[i])
     return v[n]
 ```
 
@@ -83,10 +83,10 @@ def terminos(n):
     v[0] = 0
     for i in [1.. n]:
         j = 1
-        v[n] = n
+        v[i] = i
         #veo todos los cuadrados perfectos menores o iguales a i:
         while j*j <= i:
-            v[i] = min(v[n], v[i - j*j] + 1)
+            v[i] = min(v[i], v[i - j*j] + 1)
             j += 1
     return v[n]
 ```
