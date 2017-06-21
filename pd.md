@@ -62,7 +62,7 @@ def minimos_terminos(n):
         v[i] = i
         #Podria iterarse solo hasta la mitad, porque vamos a repetir combinaciones:
         for j in [1.. i-1]:
-            v[i] = min(v[i], v[n-i] + v[i])
+            v[i] = min(v[i], v[i-j] + v[j])
     return v[n]
 ```
 
