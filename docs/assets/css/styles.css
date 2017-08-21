@@ -40,6 +40,10 @@
   text-align: justify;
 }
 
+.post-excerpt {
+  display: inline;
+}
+
 .navbar {
   margin-bottom: 0!important;
 }
