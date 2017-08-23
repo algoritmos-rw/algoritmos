@@ -1,0 +1,1195 @@
+<html>
+		<head>
+		<meta charset="utf-8">
+		<title>Resultados de las encuestas - 7541-2017-1c</title>
+
+		<style type="text/css">
+
+			h1 {
+				line-height: 34px;
+				font-size: 20px;
+				font-weight: bold;
+				margin-top:1em;
+				margin-bottom:1em;
+			}
+
+			h2 {
+				line-height: 34px;
+				font-size: 16px;
+				font-weight: bold;
+			}
+
+			h3 {
+				line-height: 34px;
+				font-size: 14px;
+				font-weight: bold;
+				font-style: italic;
+			}
+
+			.grid {
+				width: 800px;
+				margin: auto;
+				font-family: Verdana, Geneva, sans-serif;
+			}
+
+			.chart {
+				width: 400px;
+				margin: auto;
+			}
+
+			body {
+				background-color: #ffedcf;
+			}
+
+			.question {
+				background-color: white;
+				border: 2px solid #dbcba7;
+				padding-left:1em;
+				padding-right:1em;
+				margin-bottom:1em;
+			}
+
+			.question_content {
+				padding-left:1em;
+				padding-right:1em;
+			}
+
+		</style>
+
+		<script type="text/javascript" src="https://www.google.com/jsapi">
+		</script>
+
+		<script type="text/javascript">
+			google.load('visualization', '1.0', {'packages':['corechart']});
+			google.setOnLoadCallback(drawCharts);
+			charts = [];
+
+			function drawChart(chart) {
+				var data = new google.visualization.DataTable();
+				data.addColumn('string', 'Respuesta');
+				data.addColumn('number', 'Cantidad');
+				data.addRows(chart.rows);
+
+				var options = {
+					'width':400, 'height':300,
+					'sliceVisibilityThreshold': 0,
+					'slices': chart.colors,
+				};
+
+				var chart = new google.visualization.PieChart(
+					document.getElementById(chart.chartid)
+				);
+				chart.draw(data, options);
+			}
+
+			function drawCharts() {
+				for (var i = 0; i < charts.length; i++)
+					drawChart(charts[i]);
+			}
+		</script>
+		</head>
+		<body>
+			<div class="grid">
+			<h1>Resultados de las encuestas - 7541-2017-1c</h1>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy bueno', 22],['b: Bueno', 13],['c: Regular', 2],['d: Malo', 0],['e: Muy malo', 0], ],
+			'chartid': 'chart0',
+			'commentsid': 'comments0',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"FireBrick"}},
+		});</script>
+	
+		<div id="question0" class="question">
+			<h2>¿Qué te pareció el curso en general?</h2>
+			<div class="question_content">
+			<div id="chart0" class="chart"></div>
+			
+			
+			
+				<div id="comments0">
+					<h3>Comentarios:</h3>
+					<ul><li>Excelente curso. Recomiendo muchísimo</li>
+<li> </li>
+<li>Las clases teoricas son muy tediosas</li>
+<li>Las clases practicas son lo mejor del curso!.</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy bueno', 13],['b: Bueno', 21],['c: Regular', 3],['d: Malo', 0],['e: Muy malo', 0], ],
+			'chartid': 'chart1',
+			'commentsid': 'comments1',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"FireBrick"}},
+		});</script>
+	
+		<div id="question1" class="question">
+			<h2>¿Qué te pareció el régimen de promoción?</h2>
+			<div class="question_content">
+			<div id="chart1" class="chart"></div>
+			
+			
+			
+				<div id="comments1">
+					<h3>Comentarios:</h3>
+					<ul><li>Las fechas de recuperatorio se superpusieron con fechas de finales.</li>
+<li>Promocionar es muy posible si uno le pone muchas ganas. Lástima que no pudo ser posible para alguno de nosotros en el curso.</li>
+<li>  </li>
+<li>Aprobar con promedio 7 los parciales, con promedio 8 los tps, ganar el dark souls 3 y no ir a segundo recuperatorio. Un poco excesivo por temas de tiempo, para la mitad de la cursada estas malabareando "tengo que entregar todo esto para el viernes y el lunes me toman parcial y el otro viernes tengo esto y esto" hasta la explosion.</li>
+<li>Es un regimen justo.</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Mucho', 17],['b: Suficiente', 18],['c: Poco', 2],['d: Nada', 0], ],
+			'chartid': 'chart2',
+			'commentsid': 'comments2',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"}},
+		});</script>
+	
+		<div id="question2" class="question">
+			<h2>¿Te resultó útil la lista de correos?</h2>
+			<div class="question_content">
+			<div id="chart2" class="chart"></div>
+			
+			
+			
+				<div id="comments2">
+					<h3>Comentarios:</h3>
+					<ul><li>Mucho lío de mails. Medio spam...</li>
+<li>Ojalá se pudiesen evitar los mails donde simplemente dicen "gracias por responder" o "Ahhhh ya re entedni graciaaaa"...</li>
+<li>Al igual que en Algoritmos I, es uno de los recursos más valiosos para llevar adelante la materia.</li>
+<li>Muchas pavadas generalmente</li>
+<li>Y los mails individuales a correctores!</li>
+<li>Siempre estudiaba y practicaba con material de la lista.</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy buenas', 0],['b: Buenas', 14],['c: Regulares', 13],['d: Malas', 7],['e: Muy malas', 3], ],
+			'chartid': 'chart3',
+			'commentsid': 'comments3',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"FireBrick"}},
+		});</script>
+	
+		<div id="question3" class="question">
+			<h2>¿Qué te parecieron las clases teóricas?</h2>
+			<div class="question_content">
+			<div id="chart3" class="chart"></div>
+			
+			
+			
+				<div id="comments3">
+					<h3>Comentarios:</h3>
+					<ul><li>Son demasiado aburridas y poco útiles en general siento que la mayoría de la gente no entiende lo que esta diciendo rosita y una prueba de eso es que cuando pregunta algo nadie le responde porque nadie entendió lo que dijo</li>
+<li>El pseudocódigo se entendió poco y nada.</li>
+<li>Sólo pude asistir hasta las clases correspondientes al tercer parcial, por cuestiones laborales. El pseudocódigo de Rosita es un tanto complicado a veces, y sus explicaciones también, pero el nivel es muy bueno. Sólo pongo regular por esas dos cosas.</li>
+<li>No me sentí enganchado con las teóricas en ningún momento. No las sentía 'engaging'</li>
+<li>Útiles como introducción a los temas. Tendencia a volverse pesadas.</li>
+<li>seguimientos demasiado exaustivos en algunos algoritmos que le quita dinamismo a la clase</li>
+<li>Rosita es una genia, y se nota que sabe un montón, pero se me hizo muy difícil seguirle las clases</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Sí', 22],['b: Algo', 11],['c: Poco', 2],['d: Nada', 0],['No contesta', 2], ],
+			'chartid': 'chart4',
+			'commentsid': 'comments4',
+			'colors': {0:{"color":"Green"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question4" class="question">
+			<h2>¿Te parece que los temas fueron tratados con suficiente rigor?</h2>
+			<div class="question_content">
+			<div id="chart4" class="chart"></div>
+			
+			
+			
+				<div id="comments4">
+					<h3>Comentarios:</h3>
+					<ul><li>Le falto rigor a arboles B y A*</li>
+<li>Especialmente en las prácticas se aclaraba todo.</li>
+<li>La última parte se necesita mostrar más código</li>
+<li>¿Programación dinámica? ¿Que es eso?</li>
+<li>Siento que algunos temas -como programación dinámica- fueron vistos bastante "por arriba".</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy buenas', 25],['b: Buenas', 8],['c: Regulares', 1],['d: Malas', 0],['e: Muy malas', 0],['No contesta', 3], ],
+			'chartid': 'chart5',
+			'commentsid': 'comments5',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"FireBrick"},5:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question5" class="question">
+			<h2>¿Qué te parecieron las clases prácticas?</h2>
+			<div class="question_content">
+			<div id="chart5" class="chart"></div>
+			
+			
+			
+				<div id="comments5">
+					<h3>Comentarios:</h3>
+					<ul><li>Excelentes clases. Me llevo lo mejor.</li>
+<li>Son las mejores clases que tuve hasta ahora en la facultad, y temo que por culpa de esta materia el resto me resulten infumables!</li>
+<li>Martín y Fede unos genios</li>
+<li>Fede y Martín saben llevar muy bien la materia.</li>
+<li>Lo mejor del curso. 10/10</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy buena', 15],['b: Buena', 16],['c: Regular', 4],['d: Mala', 0],['e: Muy mala', 0],['No contesta', 2], ],
+			'chartid': 'chart6',
+			'commentsid': 'comments6',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"FireBrick"},5:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question6" class="question">
+			<h2>¿Qué te pareció la organización de las clases prácticas?</h2>
+			<div class="question_content">
+			<div id="chart6" class="chart"></div>
+			
+			
+			
+				<div id="comments6">
+					<h3>Comentarios:</h3>
+					<ul><li>De vez en cuando se superponen los temas con los de la teoria, por un lado es bueno porque pasan en limpio lo que explica rosita.</li>
+<li>Siempre al dia con los temas y se entendía perfecto.</li>
+<li>Muy dinámico todo y se preocupan en serio que entiendas</li>
+<li>Hubo muchas clases desorganizadas</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Sí', 23],['b: No', 12],['No contesta', 2], ],
+			'chartid': 'chart7',
+			'commentsid': 'comments7',
+			'colors': {0:{"color":"Green"},1:{"color":"FireBrick"},2:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question7" class="question">
+			<h2>¿Asististe a las clases de consulta (talleres)?</h2>
+			<div class="question_content">
+			<div id="chart7" class="chart"></div>
+			
+			
+			
+				<div id="comments7">
+					<h3>Comentarios:</h3>
+					<ul><li>A la de python por que no conocia el lenguaje, me vino de 10</li>
+<li>Solamente a una</li>
+<li>Estaría bueno que haya más diversidad de horarios</li>
+<li>Solo al taller antes de cuarto parcialito.</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy buenas', 3],['b: Buenas', 18],['c: Regulares', 9],['d: Malas', 0],['e: Muy malas', 0],['No contesta', 7], ],
+			'chartid': 'chart8',
+			'commentsid': 'comments8',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"FireBrick"},5:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question8" class="question">
+			<h2>¿Qué te parecieron las clases de consulta (talleres)?</h2>
+			<div class="question_content">
+			<div id="chart8" class="chart"></div>
+			
+			
+			
+				<div id="comments8">
+					<h3>Comentarios:</h3>
+					<ul><li>No fui.</li>
+<li>Varios talleres fueron algo densos en el sentido de que la gente no sabia bien que temas queria consultar.</li>
+<li>No asistí a ellas</li>
+<li>Gastón va directo al punto a la hora de explicar los problemas, y siempre hay algún otro ayudante al que se le puede consultar un poco más en profundidad por si aún quedan dudas. Shoutout a Nacho en particular por estar ahí casi siempre!</li>
+<li>Estaría bueno que estén más al tanto de lo que se ve mucho en clase así no repiten</li>
+<li>Utiles para repasar. Aunque siento que a veces se repasaban los temas mas fáciles dejando de lado los mas complicados -Por pedido de la gente-. EJ: Ver seguimientos antes que ejercicios de programación.</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy buenos', 8],['b: Buenos', 23],['c: Regulares', 3],['d: Malos', 1],['e: Muy malos', 0],['No contesta', 2], ],
+			'chartid': 'chart9',
+			'commentsid': 'comments9',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"FireBrick"},5:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question9" class="question">
+			<h2>¿Cómo fue la calidad de los parcialitos (redacción, especificación, formalidad, etc.)?</h2>
+			<div class="question_content">
+			<div id="chart9" class="chart"></div>
+			
+			
+			
+				<div id="comments9">
+					<h3>Comentarios:</h3>
+					<ul><li>En varios tuvieron que hacer aclaraciones al enunciado porque faltaban datos o estaban mal.</li>
+<li>Se que no pueden dar más tiempo pero 1h 30min no te deja pensar los ejercicios o lo sabes hacer o te quedaste sin tiempo</li>
+<li>Dificultad correcta. Se tomaron los temas vistos en clase sin ningun agregado innecesario.</li>
+<li>Muy buenos y divertidos.</li>
+<li>Están bien redactados y son justos, creo que uno puede opinar que son malos si no estudió o fue sin prepararse lo suficiente.</li>
+<li>El primero recuerdo me pareció larguísimo, y el 2do y 3ro más cortos, no se si por compensación o había quedado con la sensación del primero.</li>
+<li>siempre estan explicando 2 o 3 ejercicios por falta de claridad. no especifican que es exactamente lo que evaluaran (o a que le daran mas importancia), queda muy al aire y criterio de cada corrector. no tienen sistema de puntaje que deje claro punto a punto que tiene mas prioridad en un ejercicio (o para no saltarse un paso por considerarlo mecanico)</li>
+<li>Algunas redacciones se pueden mejorar...</li>
+<li>9/10. Solo pierden un punto porque sentí que a veces los seguimientos se hacían muy largos.</li>
+<li>en algunos casos los ejercicios de seguimiento eran demasiado largos y ocupaban mucho tiempo de examen</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy difíciles', 0],['b: Difíciles', 8],['c: Normales', 26],['d: Fáciles', 0],['e: Muy fáciles', 0],['No contesta', 3], ],
+			'chartid': 'chart10',
+			'commentsid': 'comments10',
+			'colors': {0:{"color":"FireBrick"},1:{"color":"Chocolate"},2:{"color":"GoldenRod"},3:{"color":"Olive"},4:{"color":"DarkGreen"},5:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question10" class="question">
+			<h2>¿Cuál fue la dificultad de los parcialitos?</h2>
+			<div class="question_content">
+			<div id="chart10" class="chart"></div>
+			
+			
+			
+				<div id="comments10">
+					<h3>Comentarios:</h3>
+					<ul><li>Los ejercicios son adecuados para el tiempo del que se dispone.</li>
+<li>Totalmente posible de hacer si estudiabas los temas y le hacías caso a Fede Barrios (Cuando decia que algo entraba en el parcial, literalmente entraba)</li>
+<li>El primer parcialito me pareció el más complicado, por no estar familiarizado con C y tener poca introducción a la sintaxis de ese lenguaje.</li>
+<li>Excepto el ultimo</li>
+<li>los parcialitos no son dificiles, el problema es que no todos revisan igual y a veces son muy literales, sin tomar en consideracion lo que el estudiante sabe</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Sí', 28],['b: Más o menos', 6],['c: No', 0],['No contesta', 3], ],
+			'chartid': 'chart11',
+			'commentsid': 'comments11',
+			'colors': {0:{"color":"Green"},2:{"color":"FireBrick"},3:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question11" class="question">
+			<h2>¿Te parece que las notas de los parcialitos fueron justas?</h2>
+			<div class="question_content">
+			<div id="chart11" class="chart"></div>
+			
+			
+			
+				<div id="comments11">
+					<h3>Comentarios:</h3>
+					<ul><li>Depende muchísimo del corrector.</li>
+<li>Sí, las correciones fueron justas, no regalan nota.</li>
+<li>Hay correcciones mal hechas</li>
+<li>Creo que de todas maneras hay una disparidad en el criterio de corrección entre correctores</li>
+<li>se explica con los 2 puntos anteriores</li>
+<li>Algunas veces sentí -Comparando con mis compañeros- que la nota variaba dependiendo el corrector. Puedo estar equivocado.</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Mucho', 10],['b: Suficiente', 24],['c: Poco', 0],['d: Nada', 0],['No contesta', 3], ],
+			'chartid': 'chart12',
+			'commentsid': 'comments12',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question12" class="question">
+			<h2>¿Considerás que los temas evaluados en los parcialitos fueron adecuadamente vistos en clase?</h2>
+			<div class="question_content">
+			<div id="chart12" class="chart"></div>
+			
+			
+			
+				<div id="comments12">
+					<h3>Comentarios:</h3>
+					<ul><li>Se le podría haber dedicado un poco más de tiempo a programación dinámica, incluso después de rendir el cuarto parcialito no estoy seguro de haber entendido bien el tema.</li>
+<li>En algunos parcialitos evaluaban temas cuyo TP no habíamos empezado. EJ: Evaluar el TDA Lista en el primer parcialito, con la entrega del TP siendo diez días después. Hacer el TP me facilitó mucho el entendimiento, hubiese estado bueno hacerlo antes del parcialito. Entiendo si no es posible por los tiempos.</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy buenos', 11],['b: Buenos', 17],['c: Regulares', 5],['d: Malos', 1],['e: Muy malos', 0],['No contesta', 3], ],
+			'chartid': 'chart13',
+			'commentsid': 'comments13',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"FireBrick"},5:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question13" class="question">
+			<h2>¿Cómo fue la calidad de los TPs y entregas (redacción, especificación, formalidad, etc.)?</h2>
+			<div class="question_content">
+			<div id="chart13" class="chart"></div>
+			
+			
+			
+				<div id="comments13">
+					<h3>Comentarios:</h3>
+					<ul><li>Muchos se quejaron del TP1, pero los soquetes no sabían que era el "mal necesario" para no arrancarte la cabeza en el TP2. Aguante el TP1!!</li>
+<li>Creo que fueron muy entretenidos, se aplicaron bien los conceptos vistos en clase. Las consignas fueron claras.</li>
+<li>Las entregas de los TPS se solaparon con los de los parcialitos, y al final no sabes si estudiar o hacer el tp y no atrasarte con el resto de los tp!</li>
+<li>Muy interesantes los desafíos de cada TP en relación a temas ya vistos. Y sobre todo el poder reutilizar en cada nueva entrega cosas ya hechas en entregas anteriores.</li>
+<li>el cielo y la tierra con respecto a los parcialitos</li>
+<li>Y muy permisibles con las fechas de entrega (sin contar el TP3 para los que querian promocionar). Sirvio bastante eso</li>
+<li>Correcciones claras.</li>
+<li>Un poco confusa la consigna del tp2 la parte de actualizacion de los TT, y el TP1 un poco aburrido</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy difíciles', 1],['b: Difíciles', 14],['c: Normales', 19],['d: Fáciles', 0],['e: Muy fáciles', 0],['No contesta', 3], ],
+			'chartid': 'chart14',
+			'commentsid': 'comments14',
+			'colors': {0:{"color":"FireBrick"},1:{"color":"Chocolate"},2:{"color":"GoldenRod"},3:{"color":"Olive"},4:{"color":"DarkGreen"},5:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question14" class="question">
+			<h2>¿Cuál fue la dificultad de los TPs y entregas?</h2>
+			<div class="question_content">
+			<div id="chart14" class="chart"></div>
+			
+			
+			
+				<div id="comments14">
+					<h3>Comentarios:</h3>
+					<ul><li>La dificultad era normal pero demanda mucho tiempo realizar todas las entregas.</li>
+<li>Menos mal que eran difíciles, si no, no hubiera aprendido nada.</li>
+<li>Creo que la dificultad de los TPs pasa por el ritmo de entrega de los mismos, más que por los contenidos. Me pasó bastante de hacerlos en uno o dos días, pero sentir mucha presión porque antes de entregar uno ya estaba subido el siguiente y así.</li>
+<li>algunos llevan buen tiempo si, hay que acostumbrarse</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Sí', 30],['b: Más o menos', 3],['c: No', 1],['No contesta', 3], ],
+			'chartid': 'chart15',
+			'commentsid': 'comments15',
+			'colors': {0:{"color":"Green"},2:{"color":"FireBrick"},3:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question15" class="question">
+			<h2>¿Te parece que las notas de los TPs y entregas fueron justas?</h2>
+			<div class="question_content">
+			<div id="chart15" class="chart"></div>
+			
+			
+			
+				<div id="comments15">
+					<h3>Comentarios:</h3>
+					<ul><li>Depende mucho del corrector.</li>
+<li>Sí, al igual que en los parciales no se regala nota en los TPs. Si algo está mal, se pide re-entrega (nunca olvidaré tener que re-entregar el TP0 por una línea). Lo cual es excelente porque de esta forma uno puede asentar bien los conocimientos vistos en clase.</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Muy bueno', 5],['b: Bueno', 12],['c: Regular', 8],['d: Malo', 7],['e: Muy malo', 2],['No contesta', 3], ],
+			'chartid': 'chart16',
+			'commentsid': 'comments16',
+			'colors': {0:{"color":"DarkGreen"},1:{"color":"Olive"},2:{"color":"GoldenRod"},3:{"color":"Chocolate"},4:{"color":"FireBrick"},5:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question16" class="question">
+			<h2>El tiempo de corrección de los TPs y entregas fue...</h2>
+			<div class="question_content">
+			<div id="chart16" class="chart"></div>
+			
+			
+			
+				<div id="comments16">
+					<h3>Comentarios:</h3>
+					<ul><li>Mi corrector tardó mucho en hacer las devoluciones, pero fue justo aclarando que si nos atrasábamos por esto lo iba a tener en cuenta.</li>
+<li>Vi necesario programar casi todas las semanas, cosa que me ayudó a aprender bastante, pero me consumió tiempo que podría haber estudiado para otras materias</li>
+<li>Mi corrector de TPs individuales siempre realizó las correcciones rápidamente y con buena predisposición para responder dudas por mail. El corrector de los TPs grupales tardó bastante en corregir estas entregas y en realizar devoluciones, pero la calidad de las mismas fue excelente.</li>
+<li>En mi caso mi corrector se demoro hasta dos meses para algunas entregas</li>
+<li>Al principio después fue decayendo</li>
+<li>Tardé 11 días en recibir primera devolución de TP2 y eso hizo que, a pesar de haber entregado todo a tiempo, se me junte todo en la última semana de cursada (parcialito, reentrega TP2, entrega TP3).</li>
+<li>lo malo si es que son tantas entregas que se empiezan a juntar cosas a final del cuatri</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	<script type="text/javascript">
+		charts.push({
+			'rows': [ ['a: Individuales', 4],['b: Grupales', 10],['c: Individuales y grupales', 12],['d: Indistinto', 8],['No contesta', 3], ],
+			'chartid': 'chart17',
+			'commentsid': 'comments17',
+			'colors': {4:{"color":"Gray"}},
+		});</script>
+	
+		<div id="question17" class="question">
+			<h2>En función de los TPs y entregas que realizaste, preferís que sean...</h2>
+			<div class="question_content">
+			<div id="chart17" class="chart"></div>
+			
+			
+			
+				<div id="comments17">
+					<h3>Comentarios:</h3>
+					<ul><li>Por lo menos las entregas se pueden hacer perfectamente en forma individual.</li>
+<li>Si bien esta carrera es recomendable trabajar en grupo, había muchos que se aprovechaban del otro y no hacía nada.</li>
+<li>Individuales por favor! La pasé muy mal con los TPs en la segunda parte de la materia por tener un compañero completamente dejado, me colgó todas las entregas y fue bastante estresante tener que hacer la parte del otro sobre la hora. Creo que los trabajos grupales permiten que gente que no se esfuerza logre aprobar gratis, y eso es un bajón cuando uno es el que pone el esfuerzo.</li>
+<li>esta bien como esta. esta bueno que cada persona maneje si desea trabajar solo simplemente</li></ul>
+				</div>
+			
+			</div>
+		</div>
+	
+		<div id="question18" class="question">
+			<h2>¿Qué aspecto del curso te gustó y deberíamos mantener?</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers18">
+					<h3>Respuestas:</h3>
+					<ul><li>Me gusto la pagina de la catedra, el foro y el dinamismo de las clases practicas.</li>
+<li>- Buena y dinámica la práctica. 
+- Fechas flexibles sometidas a voto.
+- Buena manera de encarar algunos temas pesados. Más para aquellos que no vieron C.</li>
+<li>Las clases prácticas y las clases de repaso.
+Las clases prácticas y de repaso a veces se van mucho de tema y se pierde tiempo valioso.</li>
+<li>El paso de las clases prácticas, y las ganas que tienen de explicar</li>
+<li>La calidad de las clases prácticas. Fueron muy amenas y los temas fueron vistos en buen detalle.</li>
+<li>la práctica, el que sea muy dinamica. </li>
+<li>Los TPS fuerzan a solidificar lo aprendido</li>
+<li>Las entregas semanales, los contenidos, el regimen de promocion.</li>
+<li>La honestidad, transparencia y pasión con la que abordan todos los temas de la materia.</li>
+<li>La lista de mails y los powerpoints que dieron en clase y los pasaban luego.</li>
+<li>La buenísima onda por parte de los ayudantes.</li>
+<li> La informalidad en las clases prácticas, creo que si uno se divierte al aprender, aprende mucho más. Sobretodo considerando que es una materia pesada y con un ritmo muy acelerado.
+ El tener ayudantes siempre dispuestos a responder todo tipo de consultas, en especial porque no te hacen sentir como un tonto cuando la consulta es muy "básica".</li>
+<li>El buen ambiente de las clases </li>
+<li>Entre otras cosas la buena onda de los profesores</li>
+<li>La practica, es muy buena</li>
+<li>El regimen de promocion me parece bueno, ya que te motiva para estudiar mas y llegar a tiempo con las entregas</li>
+<li>La buena onda de los ayudantes de clases practicas</li>
+<li>Las clases practicas son escenciales, deberian estar antes de la teorica.</li>
+<li>El ritmo de las prácticas, las clases con diapositivas (ayudan a entender en el momento en vez de tener que copiar cosas, hizo que llevando la compu casi ni tuviera que tomar apuntes). También agradezco la interacción en la lista y el hecho que si llevabas las entregas relativamente al día esa era la práctica necesaria para los parcialitos.</li>
+<li>la cantidad de ayudantes para los tps, es bueno que esten mas disponibles para pocos estudiantes</li>
+<li>Buena predisposición de la gente</li>
+<li>Las clases de Martin y Barrios</li>
+<li>las filminas de las clases prácticas</li>
+<li>Destaco mucho la clase de Makefile, GDB y los 30 minutos que nos quedamos viendo MOSS. Esta bueno cuando vemos temas para mejorar nuestro entorno de trabajo (como los talleres de linux, cuando aprendimos los comandos de bash, etc) aunque no necesariamente entren en los examenes.</li>
+<li>La calidez y buena onda de las clases practicas. </li>
+<li>Deberían mantener a Martín y sus ganas de trabajar, y hacer repasitos pre parcial</li>
+<li>Los tps aplicados a cosas que conocemos (twitter, youtube), las prácticas entretenidas, y hablar sobre las aplicaciones reales de las cosas que vemos en clase</li>
+<li>Las clases practicas son muy completas y ayudan a entender los temas para los que no pueden asistir a las Teoricas.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question19" class="question">
+			<h2>¿Qué aspecto del curso no te gustó y deberíamos cambiar?</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers19">
+					<h3>Respuestas:</h3>
+					<ul><li>- Se tardó mucho tiempo en corregir los TPs y dejaba una ventana de corrección muy corta.
+- Teóricas muy lentas. Muchas veces preferible faltar y lo veías en la práctica.</li>
+<li>La parte teorica de las clases. Deberían ser 3 horas de clases prácticas, o la parte teorica dada  por Federico o Martín.</li>
+<li>El primer coloquio no lo pudo rendir nadie porque todavía no estaban las notas del último parcial. El Segundo coloquio sólo lo pudieron rendir aquellos que no promocionaban pero habían aprobado todo. </li>
+<li>Las clases teoría, y el método de evaluación, si no pueden cambiar los tiempos quizá cambiar la cantidad de exámenes más si es necesario </li>
+<li>Nada que no fuera responsabilidad mía, realmente.</li>
+<li>Las clases teóricas fueron demasiado monotonas y mucho se pierde de audio en aulas grandes.</li>
+<li>Se llega muy justo con las entregas y el parcialito 4 al final del cuatrimestre.</li>
+<li>No tengo ninguna crítica ni queja.</li>
+<li>tps mas motivantes</li>
+<li>Las clases teóricas podría ser más divertidas.</li>
+<li> Tal vez algún ayudante podría robarle un par de clases teóricas a Rosita y eso haría que se vuelvan más llevaderas, Martín dio una o dos si no me falla la memoria, y fueron excelentes.
+ Y eliminar la modalidad grupal de los trabajos prácticos, los vuelve más complicados de lo que son.
+ </li>
+<li>Me hubiera gustado que estén mas organizados los temas y textos de la pagina de la materia, no me resulto comodo la forma en que esta implementado el buscador ni que no haya una lista completa con todos los textos/temas que hay a disposicion para el alumno, ya que hay cosas utiles que solo aparecian en el buscador</li>
+<li>El tiempo de parcialitos a veces suele ser muy justo</li>
+<li>La forma de dar las clases teóricas</li>
+<li>Me hubiera gustado ver mas teoría en la teorica.</li>
+<li>* Las clases teóricas fueron muy aburridas, rosita no transmite interés en la materia
+* Mucha cantidad de TPS en época de parciales
+* Las clases practicas hacen mucho seguimiento de codigo pero estaria bueno mas ejemplos de codigos completos, en especial de PROGRAMACION DINAMICA
+* Debería haber mejores explicaciones de los Tps en clase, la explicación escrita es poco clara.
+* Tps grupales de mas personas para que si alguno se baja los compañeros no queden solos
+* El Tp3 queda muy encima del final de la materia </li>
+<li>Backtracking y Programacion dinamica deberia explicarse con más clases, mas claridad y mas ejemplos interactivos</li>
+<li>Las teóricas, como comenté anteriormente. No me enganché nunca. </li>
+<li>la cantidad de ayudantes para la revision de parcialitos. cada uno revisa como quiere, cosas como que no se ponen de acuerdo en si 2 B's es un 4 o un 6, etc 
+no esta bien que la profesora no revise ningun solo parcial y no tenga idea de como van los estudiantes</li>
+<li>La teorica no se entiende y se vuelve pesada, los temas que se evaluan solo en final no se ven lo suficiente </li>
+<li>las teóricas son muy aburridas y no se entiende el pseudocódigo</li>
+<li>La curva de dificultad. Pasamos de tener powerpoints y apuntes de todo tipo de temas a que algunos TDA sean explicados muy rapido sin ningun tipo de repaso. </li>
+<li>Las clases teoricas eran por momentos muy tediosas y desorganizadas, Rosita deberia ser mas clara con la notacion.</li>
+<li>A veces tardan muuucho con las correcciones de tp</li>
+<li>Nunca llegué a conocerles la cara a algunos correctores. Se hacía mas complicado encontrarlos (personalmente) para hacer algún comentario si te tocaban como corrector.</li>
+<li>el tiempo de los parciales, o al menos aclarar que no hace falta hacer con tanto detalle los seguimientos, o ir avisando cuanto tiempo queda de parcial</li>
+<li>No esta muy bueno que digamos que las fechas de entrega se superpongan con parciales. Y que la fecha de correccion de las mismas sea tan lento. Igual es entendible si los correctores a su vez son alumnos en otra materia.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question20" class="question">
+			<h2>¿Algún comentario adicional?</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers20">
+					<h3>Respuestas:</h3>
+					<ul><li>Me llevo comentarios célebres de una chica que tiraba cada tanto:
+
+-"La recursión es algo que usas." (Explicando diferencias entre recursividad y backtracking)
+-"Noo! Es N * N" (Cuando dijeron que el orden de un algoritmo era N^2)
+-"Ah, es log n entonces, porque es recursivo" (Analizando el orden de un algoritmo)
+-"26!" (Cuando se preguntó la altura de un ABB con 6 elementos)
+-"Los grafos son las cosas" (Definiendo los grafos luego de la teórica)</li>
+<li>Me pareció MUY bueno que a los que teníamos a F. Barrios de corrector nos ofrecieron hacer las entregas por GIT. Estaría bárbaro que lo sigan fomentando.</li>
+<li>No</li>
+<li>Quizas se podría:
+-definir los grupos antes de la publicacion de la primer entrega grupal
+-publicar la seleccion de ejercicios pre-parcial al menos una semana antes de cada parcialito
+-adelantar el TP1 si es que solamente requiere conocer C y no el uso de TDAs
+</li>
+<li>Como recursante aprecio 2 puntos que siento que mejoraron con respecto al cuatrimestre anterior:
+1. Los docentes son más duros a la hora de pedir silencio. A veces algunos alumnos hacen mucho ruido y si los docentes no controlan esto es complicado prestar atención en clase. Este cuatrimestre fueron más estrictos con esto y se agradece.
+2. Me pareció correcto que primero se explique Grafos para cerrar toda una etapa de TDAs, y cerrar la materia con tecnicas de diseño de algoritmos. Antes se daba primero tecnicas de diseño de algoritmos y luego Grafos, y creo que no era tan consistente como ahora.</li>
+<li>no</li>
+<li>Mucha gente puede pensar que las teóricas no sirven para nada y te dicen que no vayas. NO LE HAGAS CASO A ESAS PERSONAS. Todo sirve y por más que sientas que no entendés nada, siempre hay algo que sí vas a entender. Mi recomendación: Ir a las clases teóricas y prestar mucha atención (no importa si en el medio te perdés) TODO sirve.</li>
+<li> Tal vez armar una guía estilo Algoritmos I, al menos para explicar los primeros temas y algunas particularidades de C, como punteros, más a fondo, que es lo que más me costó enganchar de la materia (y bueno, programación dinámica que sigue siendo algo que sale por revelación divina en mi caso).</li>
+<li>Gracias por el tiempo y dedicación en las clases y las correcciones de tps, entregas y par parcialitos. Son todos unos cracks</li>
+<li>El curso necesitaría mas horas para poder ver mejor las cosas, los contenidos son muy interesantes pero el tiempo no alcanza para poder verlos completamente</li>
+<li>Mi corrector tardo MUCHO en responder y corregir mis los tps y al hacerle consultas particulares, tambien fueron lentas y las respuestas malas, no respondían mis dudas y me generaba mas conflictos. La pase mal y muchas veces considere abandonar la materia</li>
+<li>Donde esta GASTON!????</li>
+<li>Gracias! </li>
+<li>por favor, "divide y venceras" o "divide y conquista/ras"   
+sangran los oidos cada vez que escucho "division y conquista". no usar google translate para esto jajaja</li>
+<li>Nunca entendi como dibugear sin printear todo</li>
+<li>Creo que el tp1 fue muy difícil. Una clase más de cadenas hubiera estado buena. </li>
+<li>"Mejor" (en el sentido de mas accesible) bibliografia. Si con algunos temas nos dijesen de donde podemos seguir aprendiendolos y de donde no, para saber cuando la implementacion de la catedra es la misma que la "publica". Ej Counting Sort o Prim. Sigo sin saber que pseudocodigo es el valido, si el mio, el de rosita, el de la practica o el que encuentro en internet. O mas apuntes de pseudo. "Aca un pdf con los pseudo de lo que vamos a ver hoy" me hubiese salvado de muchas googleadas y confusiones de que es valido de lo que estoy aprendiendo por mi cuenta y que no.
+
+A lo que me refiero es que siendo esta materia, si faltas a una clase o no prestas atencion la forma de recuperar los temas perdidos son infinitas (con google), a diferencia de Fisica, que todo es igual, salga del libro que salga. Si hubiese un standard (como el apunte de python de AyP1) seria mas facil y accesible todo, en vez de un conflicto de foros, googleadas, mails y libros</li>
+<li>Los TP2 y TP3 fueron excelentes, muy interesante para aprender cosas de redes sociales. </li>
+<li>Me pasó que tenía el TP listo para entregar en fecha, habiéndome esforzado bastante para llegar en tiempo. El día de la entrega, como había varios grupos que todavía no habían entregado el anterior TP, se terminó posponiendo la fecha. 
+No me molesta que se alargué el tiempo como ayuda a los que no llegaron, pero es verdad que me desalentó un poco y empecé a realizar los TPs con menos esfuerzo.</li>
+<li>La ultima parte de la materia (greedy, backtrack, pd) era casi un tema totalmente diferente al resto antes visto y se conto con poco tiempo para procesar la idea de dichos procedimientos.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question21" class="question">
+			<h2>Rosita Wachenchauzer</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers21">
+					<h3>Respuestas:</h3>
+					<ul><li>- Se toma su tiempo para explicar los temas. Ideal para los que están perdidos. Pero a veces te puede hacer perder más.</li>
+<li>Es una persona muy capaz y con mucha carrera y buena voluntad, pero no es buena dando clases. Las clases se hacen lentas, pesadas y confusas.</li>
+<li>Muy atenta a consultas y clara al explicar.</li>
+<li>Rosa seguro sabe mucho, pero interpretar los pseudocódigo que hace ya debería venir con un título, y también su forma de explicar es muy lenta</li>
+<li>Buena profesora. Explica muy bien</li>
+<li>Da buenas clases teoricas</li>
+<li>Monótona.</li>
+<li>De vez en cuando resulta dificil darse cuenta a donde quiere llegar con lo que esta explicando, tambien tiende a modificar la notacion y los ejemplos sobre la marcha. Estas cosas hacen que sea facil distraerse. Es comun que durante las teoricas haya gente conversando. Pasaron varias clases hasta que finalmente les llamo la atencion a un par de personas que hablaban en forma constante. Por otra parte no tiene problema en explicar algo las veces que sea necesario o hacer mas ejemplos para que quede claro.</li>
+<li>Excelente docente. Algunas clases se tornan un poco pesadas a lo largo de la clase, pero explica bien y con mucha buena onda.</li>
+<li>algunas clases me parecieron demasiado en el aire, que no sabia que anotar y que no de lo que decia o anotaba en el pizarron</li>
+<li>Rosita es una genia, siempre venía con una sonrisa a la clase y explica muy bien! Había veces que me perdía con los nombres de las variables que ponía en el pseudocódigo, pero nada terrible.</li>
+<li> Está siempre dispuesta a responder dudas o volver a explicar algo si no quedó claro. Dicho esto, a veces sus clases se tornan un poco densas pero justamente por el nivel que tiene ella. 
+ Depende de qué tan ágil sea la mente de uno para seguirla, a mi me hubiera servido tener clases un poco más "for dummies".</li>
+<li>Me parecieron buenas sus clases, pero todavia no entiendo como la escuchaban los que se sientan al fondo. Estaria bueno que hable mas fuerte y que se fije de echar a los alumnos que hablan, que en sus clases eran muchos</li>
+<li>Las clases se hacen pesadas y a medida que avanza la cursada se hace más dificil</li>
+<li>Aburrida</li>
+<li>Se nota que sabe muchisimo, pero el pseudocodigo que usa no es muy bueno, es un poco desprolija</li>
+<li>Rosita sabe mucho... etc.
+Pero sus clases no transmiten nada, son lentas y pierde mucho tiempo con ejemplos con dibujos y el pseudo código es poco claro.
+Como habla muy bajo te distraes facil y copias lo que escribe en el pizarron sin entender de todo.
+Tendria que haber un profesor que haga las clases mas dinamicas
+</li>
+<li>Genia!</li>
+<li>No me gustó como daba la materia, tanto pizarrón para explicar y hacer seguimiento de algoritmos cuando quizás aggiornando la teórica para que use diapositivas sería más didáctico. Me aburrió de a ratos inclusive.</li>
+<li>No se entendía el pseudocódigo que escribía y las clases eran muy monótonas y largas.</li>
+<li>Sabe mucho, pero le cuesta darse a enteder</li>
+<li>Las clases no son llevaderas</li>
+<li>Perfecta profesora en todo tipo de sentido. Desde preguntar constantemente si estabamos perdidos, a repetir los temas las veces necesarias, a contar bien de que libro sale cada cosa, a un mini repaso de lo visto en la clase anterior antes de empezar con la del dia. </li>
+<li>Desorganizada y dubitativa por momentos, se me hacia dificil seguirla y prestarle atencion.</li>
+<li>No voy a mentir, no le pude entender nada en todo el cuatri, su pseudo es muy raro y para mí, bastante inentendible. </li>
+<li>No pude asistir a todas las teoricas, solo a las primeras 2 o 3. Parece que enseña bien aunque de una forma muy tecnica.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question22" class="question">
+			<h2>Federico Barrios</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers22">
+					<h3>Respuestas:</h3>
+					<ul><li>- Explica a la velocidad del rayo.
+- Recomienda buenas series.
+- No tiene puntería para tirar caramelos.</li>
+<li>Muy claro y hace las clases entretenidas. Explica bien y trata bien a los estudiantes. 10/10</li>
+<li>Excelente. Muy claro en sus clases y también con las correcciones. </li>
+<li>Fede es muy buen profesor que le pone una onda que hace llevar la clase llevadera, y  aunque a veces le cuesta clavar los frenos avisa y avisa para que hagamos consultas, muy bueno en general</li>
+<li>También explica muy bien.</li>
+<li>Gracias por el soporte durante la cursada.</li>
+<li>Muy estricto con la correcciones pero visto del lado bueno te ayuda a mejorar lo que es programar de forma correcta.
+Fuera de eso, explica muy bien.</li>
+<li>Bien. Sabe mucho.</li>
+<li>Hace las clases muy entretenidas, es claro explicando. Las correcciones son justas, busca que el codigo de uno quede lo mejor posible.</li>
+<li>Excelente docente, claro y justo. Su forma de dar clase y la  simpatía ayudan a disfrutar más de la cursada y de la práctica. </li>
+<li>explica bien y se hace entender</li>
+<li>Fede se viste tan bien que debería ser ilegal... Creo que muy pocas chicas pudieron prestar atención a la clase cuando se vino con esa camisa bordó que combinaba con sus zapatos. Académicamente, Fede es un excelente profesor. Un toque policía, pero no lo hace de malo, sino con el fin de poner cierto orden en el curso, lo cual me parece perfecto. Fede es buena onda, muy gracioso y sabe muchísimo. Te repite las cosas 100 veces si es que no entendés y cuando dice "chicos esto entra en el parcial" POSTA entra en el parcial. Crack en todo sentido, considerate afortunado si lo tenés como profesor. (Y si hacés preguntas ó contestás las de él, y además están las encuestas cerca, te regala un palito de la selva) Genio Fede!</li>
+<li> Excelente docente y se nota que sabe muchísimo. Hizo que algunos temas que resultan pesados se vuelvan sencillos gracias a cómo los explicó. 
+ Muy rápido para los chistes también, +1 por eso.</li>
+<li>Excelente profesor, hace las clases muy llevaderas. Ademas en los recuperatorios lo vi muy atento dando oportunidad a los alumnos que estudiaron de demostrar lo que sabian</li>
+<li>Genio</li>
+<li>Pilar fundamental de la catedra. Hace para que las clases sean mas distendidas</li>
+<li>explica muy bien y hacia las clases muy entretenidas</li>
+<li>Muy buen profesor le pone ganas a la materia y responde consultas con buena predisposición  </li>
+<li>El mejor explicando</li>
+<li>Muy piola siempre para responder, lleva la clase con un muy buen ritmo, sabe ponerse del otro lado del escritorio porque allí estuvo en su momento. Inclusive firme para controlar la clase cuando a veces la charla se iba de las manos y no permitía prestar atención.</li>
+<li>le pone ganas, aunque a veces se pasa de rosca jaja dificil dormirse mientras explica</li>
+<li>Se hacía el mala onda pero se preocupaba por que entendieras.</li>
+<li>Me scracheo en clase, 11/10</li>
+<li>Explica muy bien y las clases son divertidas</li>
+<li>Muy atento en los mails individuales, sea o no mi corrector. Muy buenas clases de la practica. Un poco duro con las correcciones</li>
+<li>Muy claro y con experiencia dando clases, pero tarda mucho en corregir</li>
+<li>Genio <3</li>
+<li>Explicaciones claras. Siempre suma el humor a la hora de explicar.
+Quedarse después de clase a enseñar como era la arquitectura del corrector le sumó muchos puntos.
+Lo mejor del curso: 20/10</li>
+<li>Enseña muy bien y es muy carismatico. Un crack.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question23" class="question">
+			<h2>Martín Buchwald</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers23">
+					<h3>Respuestas:</h3>
+					<ul><li>- Explica joya.
+- Hace buenos comentarios auxiliares para ayudar al que está explicando.
+
+Frase célebre: "Y van a entregar la Cola!" (Cuando Fede preguntó que íbamos a hacer, para responder que estudiabamos para el parcialito.)</li>
+<li>Sabe mucho, explica bien y siempre está muy predispuesto a responder todas las consultas de manera clara y rápida. 10/10</li>
+<li>Excelentes clases! </li>
+<li>Al igual que fede atento a todo aspecto, siempre está ahí respondiendo preguntas aunque sean las 4 am en la lista de correos</li>
+<li>Explica muy bien la materia y los Trabajos Prácticos, con buen detalle.</li>
+<li>Explica muy bien y de forma concisa los temas a dar.
+Muy justo cuando se trato de las correcciones de parcialitos.</li>
+<li>Severo, aunque justo. Sabe mucho.</li>
+<li>Buenas explicaciones.</li>
+<li>Excelente docente. Explica con mucha claridad, da los ejemplos justos y necesarios y siempre las acotaciones que hace cuando no está frente al pizarrón vienen muy bien.</li>
+<li>muy buen profe y siempre responde los mails</li>
+<li>Martín es la persona correcta para calmar la aceleración de Barrios. Creo que ambos se complementan muy bien y eso hace que las prácticas sean geniales. Genio en todo sentido, si le demostrás que tenés ganas de aprender, no va a parar hasta hacerte entender. Cualquier consulta que uno tiene, si le mandás un mail te responde en 2 minutos literalmente y te saca la duda al toque. Al frente del pizarrón es confiado y para nada tímido, lo cual hace que las clases fluyan como debe ser. Martín es uno de los pocos profesores de la FIUBA que verdaderamente entiende al alumno y trata de ayudarlo en serio. Sabe muchísimo sobre todo, y además sabe muy bien como transmitirlo. En las correcciones es muy justo. Si te corrigió él y te sacaste una buena nota, es porque te lo ganaste por mérito propio, porque él nunca va a regalarte nada, lo cual me parece perfecto. Resumiendo, Martín es un excelente profesor, y uno de los mejores que hayas tenido. Ojalá tengas la misma suerte que yo y Martín siga estando cuando curses Algoritmos 2.</li>
+<li> También excelente docente. Super accesible por la lista de mails y por mail personal (estoy seguro de que me debe odiar por la cantidad de mails que le mandé).
+ Responde consultas detalladamente, bajando el tema a tierra al igual que Fede, lo cual hace que la materia sea más llevadera. 
+ Es exigente con las correciones pero vale la pena hacer las re-entregas, se aprende mucho más así.</li>
+<li>Buen profesor, da buenas clases y se nota que entiende mucho de programacion</li>
+<li>Un genio, me preocupa su miedo a las pirañas</li>
+<li>Pilar fundamental de la catedra tambien. Muy paciente al explicar y responder dudas</li>
+<li>un genio!, las clases son excelentes, y contesta rapidísimo los emails</li>
+<li>Increíble su dedicación con el curso, siempre responde de la mejor manera y rápidamente, con buenos ejemplos y buena onda! Me gusto mucho la clase teórica que dio.</li>
+<li>Excelente profesor, un genio, le pone ganas a la materia y responde consultas con buena predisposición </li>
+<li>Explica tambien muy bien.</li>
+<li>Interesantes las clases que daba él, siempre dio tips y cuestiones a tener en cuenta a la hora de resolver problemas. Siempre responde rápido a la lista y está atento a los hilos que se abren por ciertos temas.</li>
+<li>sabe harto teoricamente, peso pesado</li>
+<li>Respuesta mails nivel legendario. También se preocupaba porque entendieras y siempre le podías preguntar. Hacen un buen dúo con fede barrios</li>
+<li>Un groso que sabe muchisimo</li>
+<li>Explica muy bien </li>
+<li>Sin Martín no sabria lo que es un puntero. Me habra contestado mil mails al respecto y siempre terminando con un "si tenes alguna otra duda, pregunta tranquilo". Muy buenas clases. Siempre explica el "por que" de las correcciones, que ayuda un monton</li>
+<li>Excelente en todo aspecto, dando clases un 10, lleva las correcciones al dia, siempre que ibas con una duda te la contestaba con la mejor onda y lo mismo en la lista de mails. Se nota que sabe muchisimo y es apasionado por lo que hace, un placer haberlo tenido de corrector.</li>
+<li>Genio, altas ganas de trabajar, responde los mail al toque</li>
+<li>Explicaciones claras siempre acompañadas de algún chiste. 10/10</li>
+<li>Al igual que fede, enseña MUY bien y tambien explica los temas de una manera que te hace razonar y comprender. Aparte siempre estuvo respondiendo en el grupo las consultas. Otro crack.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question24" class="question">
+			<h2>Ignacio Raik</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers24">
+					<h3>Respuestas:</h3>
+					<ul><li>- Un campeón, explica muy bien pero cada vez que subía al podio se le terminaba la tinta al marcador y era difícil de seguir si no escuchabas.
+
+Frase célebre: "En la Cola no les vamos a dar nada." (Hablando de las pruebas de los TPs)</li>
+<li>No sabe controlar bien a los estudiantes, le falta control y los temas explicados no son muy claros.</li>
+<li>Muy bien!Me gustó cómo dio los temas que le tocaron</li>
+<li>Ok</li>
+<li>Explica bien y muy justo con la correccion de parcialitos </li>
+<li>No sé entendieron mucho sus clases.</li>
+<li>No me resultaron muy claras sus clases. Tuvo bastante presencia en la lista de correos.</li>
+<li>Los temas que dió fueron claros. Tiene que mejorar más la letra y la prolijidad en el pizarrón.</li>
+<li>explica bien</li>
+<li>Nacho es muy genio, la verdad es que se le entendió todo muy bien! </li>
+<li> Las clases que dio Nacho fueron claras y concisas, en especial la de Prim y Kruskal!
+ Su participación en el taller de repaso fue muy útil también ya que se complementó bien con Gastón en mi opinión. 
+</li>
+<li>Me parecio que sus clases eran buenas, no me gustó que tardara tanto a la hora de corregir ya que para el momento en que el me mandaba las correcciones mi cabeza ya estaba en otros tps, pero entiendo que pueda tener sus razones para demorar y daba buenas explicaciones en el grupo y por mails</li>
+<li>Claro explicando y amigable</li>
+<li>Buen ayudante</li>
+<li>Bueno corrigiendo, explica hasta ahi.</li>
+<li>ns/nc</li>
+<li>Un buen ayudante</li>
+<li>creo que le falta un poco de teoría, no me gustó la clase que dio de kruskal. No quedó claro cómo funcionaban los conjuntos ni tampoco la importancia de que no se formen ciclos.</li>
+<li>Muy atento en el grupo de correos, siempre contesta. Las clases que tuvimos, en especial la del problema del caballo, muy buenas</li>
+<li>Se notan las ganas que le pone, siempre buena onda para responder dudas y lo vi en todos los talleres. Un poco nervioso para dar la clase pero es entendible.</li>
+<li>Muy buena redisposición</li>
+<li>Explicaciones claras, muy buena honda. 10/10</li>
+<li>Trata de ponerle onda pero sus clases parecen mas una copia de la resolucion de un ajercicio. Le falta un poco de pedagogia. Igualmente, el que copie resoluciones literales sirve a la hora de repasar, ya tenes la respuesta exacta a un problema.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question25" class="question">
+			<h2>Jorge Collinet</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers25">
+					<h3>Respuestas:</h3>
+					<ul><li>- Explica bien.
+- Tarda mucho con los TPs.
+
+Frase célebre: "Alan invita a Bárbara a tomar un cafe..." (Cualquiera de sus explicaciones)</li>
+<li>Explica muy claramente, los temas se entienden.</li>
+<li>Muy bien!Me gustó cómo dio los temas que le tocaron</li>
+<li>Jorge Da buenas clases, pero cuando no está dando clase es complicado que te responda una consulta</li>
+<li>Ok</li>
+<li>Explica muy bien y de forma clara. Como corrector tarda en corregir pero es muy justo.</li>
+<li>Poco contenido de clases. No esclareció mucho las dudas.</li>
+<li>Fue muy claro las veces que intervino en las clases.</li>
+<li>Buen ayudante. Las pocas clases que vi que dio fueron divertidas y entendibles.</li>
+<li>muy buenos ejemplos da</li>
+<li>Jorge es muy gracioso, en especial con las historias de Bárbara y Alan o el árbol que quería ser heap. Se entendió todo muy bien.</li>
+<li> Las clases de Jorge fueron claras, y la historia del pequeño árbol que quería ser heap fue conmovedora. 
+ Muy buena predisposición para responder consultas.</li>
+<li>Muy buena onda, dio buenas clases aunque quizá se detuvo mucho en las historias de Alan y Barbara, pero es solo un detalle y me parecio buen profesor</li>
+<li>Buen ayudante, esta bueno que tenga preparadas las dispositivas antes de la clase, mas rapido</li>
+<li>Explica bien</li>
+<li>ns/nc</li>
+<li>No se mucho de el, pero las clases que dio le entendi</li>
+<li>Muy bueno, muy buenas las filminas</li>
+<li>Excelentes powerpoints, con muy buen pseudocodigo.  Todo lo que sea recorridos lo se por Jorge.</li>
+<li>Cuando dio las clases se lo noto tranquilo y muy claro.</li>
+<li>No tuve interacción, recibí algunos comentarios no muy alentadores.</li>
+<li>Estuvo pocas clases al frente pero los temas que dio se entendieron bien.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question26" class="question">
+			<h2>Agustina Méndez</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers26">
+					<h3>Respuestas:</h3>
+					<ul><li>- Una genia, canchera dentro y fuera del aula.
+- Siempre dispuesta a hablar de las correcciones.
+- Se tardó en corregir pero fue comprensiva en los temas a ver.</li>
+<li>Muy bien! Me gustó cómo dio los temas que le tocaron</li>
+<li>Buena ayudante atenta</li>
+<li>Ok</li>
+<li>explica bien.</li>
+<li>Nsnc</li>
+<li>A veces se enredaba un poco en las explicaciones.</li>
+<li>Buena ayudante, entiende las cosas muy rápidamente y en sus explicaciones siempre contesta de forma concreta y certera, aunque a veces va demasiado rápido.</li>
+<li>explica bien</li>
+<li>Agus no dio muchas clases, pero estuvo muy presente. Excelente las clases de hash, le entendí todo muy bien, ya que explicó con mucho detalle y es muy prolija en el pizarrón. Y me mató cuando le dijo a una alumna que era imposible que pueda hacer una función de hashing buena (ya que éstas son muy difíciles de pensar, incluso para los ayudantes mismos) jaja una genia!</li>
+<li>Muy alegre y buena onda, me cayo muy bien. Dio pocas clases pero en las que dio entendi los temas</li>
+<li>Buen ayudante</li>
+<li>Todo lo que explico se entendio</li>
+<li>ns/nc</li>
+<li>una grosa</li>
+<li>Buena onda</li>
+<li>Un amor de ayudante</li>
+<li>Explica bien pero a veces aturde.</li>
+<li>Se notan las ganas que le pone, muy buena onda todo el tiempo. Tambien la vi en varios talleres. Cuando dio la clase se entendio bastante bien</li>
+<li>Genia, muy buena honda. Explicaciones claras. 10/10</li>
+<li>Estuvo pocas clases al frente pero los temas que dio se entendieron bien.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question27" class="question">
+			<h2>Gonzalo Marino</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers27">
+					<h3>Respuestas:</h3>
+					<ul><li>- Explicó una vez y después acechaba desde el costado. Creo que una vez dibujó algo en el pizarrón.</li>
+<li>-</li>
+<li>Yo lo conozco, explicó los Tps muy bien.</li>
+<li>explica bien.
+
+
+
+</li>
+<li>Nsnc</li>
+<li>-</li>
+<li>No tuve trato con él</li>
+<li>Muy relajado en el pizarrón (no en el mal sentido), lo cual hace que explique todo con más detalle y sea más fácil de entender.</li>
+<li>En lo personal lo veia desganado/incomodo a la hora de dar clases</li>
+<li>Pocas ganas para exlpicar</li>
+<li>Me gustó como explicó algunos temas de técnicas de diseño de algoritmos.</li>
+<li>Capo corrector</li>
+<li>Un buen ayudante</li>
+<li>No creo que haya preparado bien la clase en la que se explico el ejemplo de greedy de la mochila. El ejemplo fue muy malo y en vez de esclarecer oscurecía.</li>
+<li>Muy buen corrector y siempre entendiendo los tiempos de cada alumno. Muy buena la clase de programacion dinamica.</li>
+<li>Se lo noto un poco nervioso cuando dio las clases</li>
+<li>Creo que explicó pocas cosas, pero cuando le tocó lo hizo bien. 8/10</li>
+<li>Dio una clase y no me gusto su metodo de preguntar todo el tiempo a la clase en vez de guiarlos.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question28" class="question">
+			<h2>Juan Manuel Fresia</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers28">
+					<h3>Respuestas:</h3>
+					<ul><li>- Quien?</li>
+<li>-</li>
+<li>Buen ayudante. Me guió bastante bien en los trabajos grupales.</li>
+<li>Nsnc</li>
+<li>-</li>
+<li>No tuve trato con él</li>
+<li>Se notaba que sabia mucho en la clase que dio, pero hablaba muy bajito y tendria que cambiar eso</li>
+<li>Muy buen ayudante, me toco en los tp grupales y fue claro y rapido en las correciones.</li>
+<li>-</li>
+<li>ns/nc</li>
+<li>No estoy seguro quien es</li>
+<li>Sólo dio una clase pero fue muy buena</li>
+<li>Muy claro cuando dio la clase</li>
+<li>¿Quien? ...</li>
+<li>No lo ubico.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question29" class="question">
+			<h2>Matías Cano</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers29">
+					<h3>Respuestas:</h3>
+					<ul><li>- Capo. 
+- Por lo que escuché tardó para corregir los TPs.
+- Explicó re bien Arbol B pero nunca lo tomaron.</li>
+<li>-</li>
+<li>Muy Buen ayudante, muy metido en la facultad en el buen aspecto</li>
+<li>Ok</li>
+<li>Explica bien y es muy justo con la correccion de parcialitos.</li>
+<li>Nsnc</li>
+<li>-</li>
+<li>No tuve trato con él</li>
+<li>Le entendí muy bien cuando explicó árboles B, incluso siendo un tema bastante confuso y con muchos pasos a seguir. Ah, y además tiene cara de buena persona, lo cual invita a hacer preguntas cuando uno no entendió bien.</li>
+<li> La clase de árboles B fue muy buena, y también la explicación de cómo resolver un sudoku utilizando backtraking. Hubiera estado bueno que le dieran más clases, pero supongo que ya le llegará el momento.
+ Las veces que consulté algo con él, se tomó el tiempo para ayudar y fue claro con las respuestas.</li>
+<li>Dio buenas clases, es bueno explicando</li>
+<li>Genio</li>
+<li>Crack</li>
+<li>Buena onda, aunque algunos seguimientos que hizo en pizarrón se me hicieron tediosos.</li>
+<li>Bien</li>
+<li>Un ayudante copado aunque le cueste dar algun tema </li>
+<li>Me gustó mucho su clase de arboles b</li>
+<li>No se entendio nada la clase de arboles B</li>
+<li>Igual que Gonzalo Marino, no me molestaría verlo explicando más cosas. 8/10</li>
+<li>Parece que sabe bastante pero no tuvo chance de dar muchas clases.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question30" class="question">
+			<h2>Ana Czarnitzki</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers30">
+					<h3>Respuestas:</h3>
+					<ul><li>- Ojala tuviera tantos stickers en mi PC como ella.
+- Lástima que nunca se la escuchó explicar.</li>
+<li>-</li>
+<li>Ok</li>
+<li>Nsnc</li>
+<li>-</li>
+<li>No tuve trato con ella</li>
+<li>No hable con ella ni tampoco la vi dar clases</li>
+<li>-</li>
+<li>ns/nc</li>
+<li>Ella no estaba el cuatri pasado, me huele a personaje de relleno (?)</li>
+<li>-</li>
+<li>¿Quien? ...</li>
+<li>No la ubico.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question31" class="question">
+			<h2>Joaquín Torré Zaffaroni</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers31">
+					<h3>Respuestas:</h3>
+					<ul><li>- Quien?</li>
+<li>-</li>
+<li>Ok</li>
+<li>Nsnc</li>
+<li>-</li>
+<li>No tuve trato con él</li>
+<li>No lo vi dar clases ni hable con el</li>
+<li>Buen corrector, tarda un poquito demás con las entregas</li>
+<li>Tardó en corregir pero es entendible por temas laborales. Cuando charlamos por reentregas siempre hizo devoluciones interesantes y que dejaban para pensar.</li>
+<li>No lo vi nunca</li>
+<li>-</li>
+<li>¿Quien? ...</li>
+<li>No lo ubico.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question32" class="question">
+			<h2>Javier Choque</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers32">
+					<h3>Respuestas:</h3>
+					<ul><li>- Cada tanto aparecía para dar alguna explicación agresiva de un tema.
+- No parece tener paciencia para los temas más básicos.</li>
+<li>-</li>
+<li>Ok</li>
+<li>Por favor respondé los mails.</li>
+<li>Nsnc</li>
+<li>-</li>
+<li>No tuve trato con él</li>
+<li> Está más que claro que Javier sabe un montón, y las veces que me hizo devoluciones sobre los trabajos fueron útiles para resolver los errores que tenían.
+ Las correcciones de los trabajos fueron bastante lentas, pero por lo que leí de encuestas anteriores, esto no es lo usual en él. Hasta donde sé este cuatrimestre justo estuvo con la Tesis así que es completamente entendible la demora. Menciono esto por si alguien le da una review negativa por las demoras, al menos sepan que fue por una razón justa!</li>
+<li>No lo vi dar clases ni hable con el</li>
+<li>-</li>
+<li>ns/nc</li>
+<li>Un buen ayudante</li>
+<li>-</li>
+<li>¿Quien? ...</li>
+<li>No lo ubico.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+		<div id="question33" class="question">
+			<h2>Constanza González</h2>
+			<div class="question_content">
+			
+			
+				<div id="answers33">
+					<h3>Respuestas:</h3>
+					<ul><li>- Quien?</li>
+<li>-</li>
+<li>Ok</li>
+<li>Nsnc</li>
+<li>-</li>
+<li>No tuve trato con ella</li>
+<li> Las clases que dio Constanza fueron muy buenas, explica claro y al punto, en especial la de Counting/Bucket/Radix Sort.
+ Algo importante a destacar es que tiene una voz muy potente y eso es un golazo porque tapa a los grupitos que se pasan la clase murmurando sin pensar en lo mucho que distraen a quienes tienen alrededor.</li>
+<li>No la vi dar clases ni hable con ella</li>
+<li>Muchos conflictos con las correciones de Tp, corrige tarde y no es clara, tendria que haber un corrector que este mas presente</li>
+<li>-</li>
+<li>ns/nc</li>
+<li>Un amor de ayudante</li>
+<li>-</li>
+<li>¿Quien? ...</li>
+<li>No la ubico.</li></ul>
+				</div>
+			
+			
+			
+			</div>
+		</div>
+	
+			</div>
+		</body>
+		</html>
+	

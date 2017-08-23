@@ -1,0 +1,1690 @@
+- ¿Qué te pareció el curso en general?
+   22  52%  a: Muy bueno
+   17  40%  b: Bueno
+    3   7%  c: Regular
+    0   0%  e: Muy malo
+    0   0%  d: Malo
+
+   Comentario: Creo que a veces dan demasiadas cosas por sabidas; La parte de TADs en
+      la teórica estuvo muuuuy aburrida
+   Comentario: Las practicas son muy buenas, en especial cuando explica Marga, pero
+      la teorica no se entiende nada
+
+
+- ¿Habías comenzado a cursar Algoritmos y Programación II alguna vez?
+   39  92%  b: No
+    3   7%  a: Sí
+
+
+- Si contestaste que sí, ¿cuánto tiempo cursaste anteriormente?
+   no curse anteriormente
+   1 año
+   1 cuatrimestre incompleto
+   Cursada completa
+
+
+- ¿Te aportó algo el curso por sobre tus conocimientos previos?
+   37  88%  a: Bastante
+    2   4%  c: Poco
+    1   2%  b: Algo
+    0   0%  d: Nada
+    2   4%  No contesta
+
+   Comentario: muchisimo en realidad
+
+
+- Si te aportó algo, ¿qué te aportó?
+   Conocimientos que no tenia en general
+   Mayor conocimiento sobre estructuras de datos y algoritmos
+   Todo, no tenia conocimientos previos en C ni en la teoría de algoritmos.
+   Manejo de memoria, realizar algoritmos mas eficientes.
+   conocimiento y herramientas para el desarrollo de mis propios algoritmos
+   Conocimiento sobre las estructuras de datos abstractas, conocimiento sobre
+      C. También me obligó a organizarme con el tiempo para poder
+      entregar los TPs.
+   mas conocimientos sobre algoritmos
+   me sirvió muchisimo sobre cómo programar, y cómo programar bien.... me
+      enseñó a todas las variables que hay que tener en cuanta a la hora
+      de diseñar un algoritmo y la estrategia a seguir, fue un curso muy
+      dinámico y completo
+   Mucha práctica de programación y el apredizaje de distintas técnicas de
+      programación.
+   Programación dinámica, algoritmos greedy, backtracking
+   Me abrio la cabeza completamente y me cambió mi manera de ver la
+      programación, para bien.
+   Conocimiento sobre estructuras de datos nuevas y como organizar mejor el
+      codigo de un programa.
+   básicamente casi todo el programa, porque no tenía conocimientos previos
+      más allá de algoritmos I
+   Maneras de manejarme solo en el desarrollo de algoritmos nuevos. Aprender
+      a buscar en libros y otras fuentes además de mis apuntes. Bastante
+      libre en cuanto a desarrollo.
+   Igual que el años pasado, me enseño a trabajar en equipo.
+   Conocimientos sobre TADs, metodos de resolucion de problemas, conocimiento
+      sobre varios lenguajes,etc
+   Muchos más conocimientos de lo que son las estructuras de datos y mucha
+      práctica en la programación
+   Memoria dinámica en C, TDAs y todos los algoritmos que vimos.
+   Todo el contenido de la materia, no sabía nada en un principio ..
+   temas de la materia, nuevos lenguajes, practica de programacion
+   Me quedó bastante más claro cómo funcionaban todas las estructuras que
+      vimos en Algoritmos I, entre otras cosas.
+   Casi todo lo que se de programación y Algoritmos.
+   Mas que nada, mejoro ampliamente mi nivel de programacion, aumentando mi
+      prolijidad y y robustez de codigo.
+   Algunas funciones de c y el manjeo de punteros
+   Sobre C yo no habia visto nada, eso fue bueno. Además sobre conceptos de
+      memoria dinamica, etc
+   creo que limpie muchisimo la forma de programar, usar funciones
+      auxiliares, etc.. ademas de los temas nuevos que se vieron
+    Comentario: viendo los tps de algoritmos I me doy cuenta que avance..
+   Aparte de los conocimientos en sí de la materia, organizarme un poco
+      mejor en el código, para tratar de ser más genérico y evitar
+      repetir lo más posible
+   Amplios conocimientos en estructuras de datos y experiencia en eleccion de
+      algoritmos y tdas en diferentes casos
+   Profundizar conocimientos sobre TDAs , cómo optimizar los algoritmos y
+      saber cuales son eficientes y cuales no y por qué.Como pensar
+      ciertos problemas, mas alla del codigo.
+   Buenas nociones sobre rendimiento, mejora de algoritmos y TDAs
+   Mayor conocimiento en estructuras de datos y nuevos algoritmos.
+   Muchos mas conceptos sobre programacion en C y conceptos que no habia
+      visto antes como grafos y algoritmos greedy,programacion dinamica
+      etc.
+   Todo el programa y más, por ejemplo los contenidos de los talleres.
+   conocer y manejar los distintos tdas, que eran desconocidos para mi
+
+
+- ¿Qué te parecieron las clases teóricas?
+   25  59%  b: Buenas
+   10  23%  c: Regulares
+    3   7%  d: Malas
+    2   4%  e: Muy malas
+    1   2%  a: Muy buenas
+    1   2%  No contesta
+
+   Comentario: Le doy regular, pero las clases podían llegar a ser muy aburridas. A
+      mi gusto le faltaba dinamismo a la teórica.
+   Comentario: Me sirvieron mas que nada para estar al tanto de los temas que se dan
+      en la materia y saber cómo encararlos. Pero para terminar de
+      entender siempre tuve que investigar por mi cuenta.
+   Comentario: a veces no se entienden algunas cosas que da rosita, pero como ya
+      estuve en algo I con ustedes me acosutmbré a su manera de dar
+      clases
+   Comentario: Pablo Najt seria exelente para las teoricas.
+   Comentario: Aunque en la explicacion de las extrategias de programacion, al ser
+      totalmente nuevo me perdia bastante.
+   Comentario: muchas veces no se logra entender lo que se intenta explicar
+
+
+- ¿Cómo te resultaron los temas?
+   33  78%  c: Normales
+    4   9%  b: Difíciles
+    2   4%  d: Fáciles
+    1   2%  a: Muy difíciles
+    0   0%  e: Muy fáciles
+    2   4%  No contesta
+
+   Comentario: sobre todo los últimos temas dados
+
+
+- ¿Te parece que hubo suficientes ejemplos en las explicaciones?
+   22  52%  b: Algo
+   14  33%  a: Sí
+    2   4%  c: Poco
+    2   4%  d: Nada
+    2   4%  No contesta
+
+   Comentario: hubiera hecho mas ejemplos o visto mas despacio lo del teorema del
+      maestro
+   Comentario: No siempre, con algunos algoritmos complicados como el de CFCs y
+      puntos de articulacion podria haber habido un poco más
+
+
+- ¿Te parece que los temas fueron tratados con suficiente rigor?
+   18  42%  a: Sí
+   17  40%  b: Algo
+    3   7%  c: Poco
+    2   4%  d: Nada
+    2   4%  No contesta
+
+   Comentario: Para mi gusto, falto práctica a la hora de ver grafos. Se entidía
+      muy bien teóricamente, pero me pareció demaciado de golpe que
+      la primera aplicación de grafos fuera para el TP3.
+   Comentario: del comentario anterior.. mas rigor al teorema del maestro..
+
+
+- ¿Hay algún comentario que quieras hacer respecto de las clases
+  teóricas?
+   Ninguna al respecto.  La chicha que filmaba siempre nunca supe que hacia
+      bien igual se re compenetraba filmando. :o
+   Hay que buscar más participación de los alumnos
+   El pseudocodigo de rosita no es muy claro y las clases son en un tono
+      constante lo que ayuda a distraerse
+   no
+   Las clases teóricas son en general difíciles de seguir (al menos para
+      mi) porque Rosita, que tiene una capacidad increible para hacer
+      analogías y dejarte todo más que claro, es muy abstracta al
+      hablar. Por eso después de la teórica, uno espera con ansias la
+      práctica para que le solucione las dudas. También, Rosita no suele
+      levantar el pizarrón en el que está escribiendo, por lo que si
+      estás atrás no ves, y para colmo no escuchás porque habla bajo.
+   Las clases teoricas fueron bastante buenas, si bien muchos temas son
+      bastante dificiles de asimilar en ese momento, rosita se hace
+      entender con ejemplo claros...
+   Muchas veces se explicaba con ejemplos sin clarificar hacia dónde
+      apuntaban, entonces era difícil seguir la explicación.
+   Las clases teoricas fueron buenas! , en mi caso me sirvieron mucho pero
+      para mi, faltaba que sean un poco mas dinamicas!porque me costaba
+      estar mas de media hora atenta! a medida que pasaban los minutos
+      como que se volvian muy densas y aburridas.
+   Le faltaba dinamismo y claridad, mas de una vez me encontré sin entender
+      un tema, que se explicaba en "5 minutos" en la práctica y se
+      entendía a la perfección.
+   Estaria bueno ver un poquito mejor como es que en realidad llegan a
+      funcionar algunos algoritmos. Como en el Cormen que hacen una prueba
+      despues de presentarlos.
+   Estaría bueno tener un apunte a mano (ya sé que es difícil hacerlo).
+   A veces costaba entenderlas xD
+   No pude prestar atencion en ninguna clase. Terminas durmiendo o mirando el
+      piso, pongan a PABLITO o a Marga!  Aunque esta todo bien con Rosita
+      para Algo1, pero para Algo2 no se puede.
+   aunque los temas a enseñar siempre fueron acertados, las clases son muy
+      pasiiiiiivas, lo que da lugar al cuelgue por parte del alumno..
+   Es medio dificil seguir a rosita da muchas vueltas y siempre se va por las
+      ramas habalndo de cosas que no tienen que ver con el tema q explica
+   La verdad que a Rosita no se le entiende, no digo que no sepa, pero no se
+      sabe explicar... Quizas si llevara las clases programadas en lugar
+      de escribir y borrar mil veces lo mismo, porque eso en general solo
+      marea
+   me es muy simpatico que rosita este contenta siempre, te levanta el animo
+      jaja.. lo unico que en varias clases el pseudocodigo era medio
+      dificil de seguir por las variables que usaba.. igualmente despues
+      de un rato se deducian, pero hasta entonces era medio un limbo,
+      jeje..
+   Me gustaron mucho, aunque a veces se hace difícil seguirla a Rosita
+      cuando empieza un tema nuevo
+   Resulta complicado a veces entenderlas cuando hay muchos dibujos donde se
+      agregan y borran cosas en el pizarron.
+   A veces es complicado seguir a rosita, ya sea porque hace mucho incapie en
+      determinadas partes de la explicacion, o porque parece que resaltar
+      partes muy sencillas como si fueran complicadas
+   A veces se tornaban media densas y crípticas
+
+
+- ¿Qué te parecieron las clases prácticas?
+   19  45%  a: Muy buenas
+   17  40%  b: Buenas
+    2   4%  c: Regulares
+    2   4%  d: Malas
+    0   0%  e: Muy malas
+    2   4%  No contesta
+
+   Comentario: Los ejemplos de los temas dados en la teórica no siempre me ayudaron
+      a terminar de entenderlos.
+   Comentario: Todo depende igual de quién las daba. Igual siempre todos pusieron
+      muy buena voluntad y eso es importante
+   Comentario: son bastante desorganizadas, los ayudantes no saben como dar una clase
+      ni como enseñar un tema. esto dificulta muchisimo el
+      aprendizaje
+
+
+- Si usaste el LiveCD provisto por la cátedra, ¿te resultó útil?
+   15  35%  a: Muy útil
+    4   9%  d: Nada útil
+    3   7%  b: Algo útil
+    1   2%  c: Poco útil
+   19  45%  No contesta
+
+   Comentario: No lo use, me instalé ubuntu directamente.
+   Comentario: Muy facil de usar y practico, ya que te evita pasarte a otro sistema
+      operativo de una (sin conocerlo)
+   Comentario: No me pareció nada intuitivo para una persona como yo que venía de
+      Windows. Me bajé el Ubuntu y me solucionó la vida.
+
+
+- ¿Dónde practicaste? (marcá todos los que sean necesarios)
+   40  95%  a: En mi casa
+   10  23%  d: En casa de un amigo
+    5  11%  b: En los laboratorios de la facu
+    0   0%  c: En el ciber
+    2   4%  No contesta
+   Otros: En el taller
+   Otros: Biblioteca
+   Otros: en el trabajo
+   Otros: biblioteca
+   Otros: Biblioteca
+   Otros: casa de familiares
+
+   Comentario: teniendo la notebook deberia marcar un par mas =P
+
+
+- La disponibilidad de los ayudantes para responder consultas fue...
+   30  71%  a: Muy buena
+    8  19%  b: Suficiente
+    1   2%  c: Poca
+    1   2%  d: Mala
+    2   4%  No contesta
+
+   Comentario: esta bueno el hecho de tener una lista a la cual poder consultar, ya
+      que si por ahí, tu ayudante designado no te puede consultar,
+      tenes la posibilidadd que te responda cualquier otra que haya
+      leido la consulta
+   Comentario: Debo acalrar que estoy muy contento con la disponibilidad de mi
+      ayudante, Diego. Siempre respondiendo mis consultas en un lapso
+      menor a las 24hs, impecable.
+   Comentario: fue buenisimo que no tuvieran problemas cuando los agarraba en la
+      biblioteca para preguntarles cosas.. aunque estuvieran
+      estudiando o haciendo tps.. perdon y gracias!!!!
+   Comentario: Genial que haya muchos ayudantes porque siempre te encontras a alguno
+      por la facu y tiene buena predisposicion hacia las preguntas.
+   Comentario: Por mail estaban todos, y en la clase también. Gaston Kleiman era mi
+      corrector y casi ni lo vimos. Entendemos que no fue por mala
+      voluntad, pero hizo que mi cursada en ese sentido no fuera muy
+      feliz. Por otro lado, cuando nos empezó a corregir Manuel
+      Soldini, las cosas dieron un giro de 180 grados y ahí me sentí
+      más que acompañado! Lastima que fue un poco tarde.
+   Comentario: fui afortunado a que mi ayudante fuera el "ayudante fantasma" y me
+      parece de muy mal gusto que se tenga en cuenta a un ayudante que
+      no tiene tiempo para esto, y encima que se haya insistido con
+      sostenerlo durante todo el cuatrimestre.. fue tarde el cambio
+      que se hizo con respecto a este tema. la mayoria de los demas
+      ayudante no han sabido responder las preguntas totalmente, por
+      lo menos las mias. luego, hay tanto ayudantes y ha habido fines
+      de semanas que no han respondido absolutamente nada sobre las
+      consultas en el grupo. lo mejor de los ayudantes se veia en el
+      taller de los jueves. conclusion: ayudantes, pesimo
+
+
+- ¿Qué tan fáciles o difíciles te resultaron los ejercicios propuestos,
+  tanto en las guías como en clase?
+   28  66%  c: Normales
+   11  26%  b: Difíciles
+    0   0%  a: Muy difíciles
+    0   0%  e: Muy fáciles
+    0   0%  d: Fáciles
+    3   7%  No contesta
+
+   Comentario: No realize ninguno.
+   Comentario: Los de la guia 12 me resultaron muy dificiles y que no los usamos para
+      nada despues.
+   Comentario: la respuesta va por los ejercicios en clase, la guia practicamente no
+      la vi.. solo los ejercicios de arboles que me parecieron
+      normales tambien..
+   Comentario: Aun que no hice las guias, asi que desconoco la dificultad de los
+      mismos
+
+
+- ¿Te resultó útil la lista de correos?
+   19  45%  a: Mucho
+   18  42%  b: Suficiente
+    3   7%  c: Poco
+    0   0%  d: Nada
+    2   4%  No contesta
+
+   Comentario: Algunas personas las usan para hacer consultas personales y eso
+      molesta.
+   Comentario: fue mas una tranquilidad por si salian dudas, aunque no la use mucho..
+      si fue muy util para enterarme de los talleres, cuando subian
+      los tps, etc
+
+
+- ¿Hay algún comentario que quieras hacer respecto de la práctica?
+   Emm a veces perdia sentido pq nosotros estamabos aprendiendo un tema y a
+      la ves el ayudante tambien lo aprendia o, intentaba aprender a
+      explicar entonces se volvian clases sin sentido   Te correjian cosas
+      sin sentido, creo q solo porque eso solo sabian correjir y de lo
+      otro no tenian idea  con respecto a los ayudantes jovenes.    Pero
+      en general bien
+   Que no hagan mas estructuras humanas, pierden mucho tiempo y aporta poco.
+   Los últimos algoritmos, los de Grafos, no fueron vistos con mucho rigor.
+      Digamos que faltaron explicaciones, o siempre las explicaciones
+      quedaban la mitad. Tampoco vimos cómo implementar un grafo, ni sus
+      primitivas, y eso complicó bastante el tema. Por el resto,
+      excelente.
+   Muy contento con las clases dadas por Marga. No puedo decir lo mismo de
+      Maxi. Se nota que sabe mucho, pero aveces pareciera como que le
+      cuesta explayarse y empieza a divagar mucho.
+   Estaria bueno que todos los ayudantes esten mas presentes en las
+      practicas. En particular, mi corrector aparecio poco y nada.
+   Muy buena onda en general. Las clases con proyector ayudan mucho, también
+      las de programación en vivo.
+   Exelente la practica, en especial Pablo y Marga! Sigan asi!
+   Definitivamente lo mejor de la catedra y lo que probablemente haga que sea
+      la mejor de la facultad comparandola con el resto de los cursos de
+      algoritmos II
+   Algunas clases parecen poco preparadas de parte de algunos ayudantes mas
+      nuevos, y tienen q improvisar mientras explican.
+   Es muy buena la practica, quizas en cuanto a organizacion con los tiempos
+      de entregas de los TP y trabajos a entregar, porque a veces se nos
+      hizo muy escaso el tiempo para lograr terminarlos. Otra cosa que
+      seria muy buena seria explicar un poquito mejor el contenido que
+      esperan en el informe, al menos al iniciar, ya que no estabamos muy
+      seguros de qué cosas se debian poner y qué no, ya que no es del
+      mismo tipo de informe que se realiza en fisica, etc...
+   son muy divertidas, se la pasa bien.. y juro que aunque no respondiamos no
+      era porque no dabamos bola o no sabiamos de que hablaban!!!
+   Muy buena practica, donde lo que se ve en la teorica comienza a tener un
+      poco mas de sentido.
+   Talvez se deberia intentar hacer algo mas practico y no un complemento de
+      la teoria, que era lo que sucedia las clases adiccionales, que
+      desgraciadamente muchos no podiamos asistir
+   aprendí todo en la práctica
+   lo dicho anteriormente.  -son clases muy desorganizadas.  -muchos TDAs
+      para tan poco tiempo (no he podido aprobar otras materias por
+      dedicarme a esto)  -tendrian que rever el nivel de los ayudantes y/o
+      rever la responsabilidad que se les da. hicieron ejercicios
+      importantisimos y mal explicados llegando a ninguna conclusion.
+      -ser mas coherentes a la hora de elegir el criterio con que se
+      corrigen los parcialitos.  (el 2do parcialito que di, para mi, no
+      estaba para ser aprobado, me pusieron un nueve porq entendi los
+      temas y las ideas estaban bien. en el 3er parcialito, para mi me
+      tendria que haber sacado minimo un 6, y me destrozaron por que no
+      aclare cosas obvias. asi mismo, yo fui al taller siguiente del
+      tercer parcial y por lo que hablaban los ayudantes yo lo hubiese
+      aprobado.. entonces, yo siento, que mis notas de los parcialitos
+      varia segun la suerte que yo tenga, suerte que decide que ayudante
+      lo corrige)
+
+
+- ¿Cuantas veces fuiste al taller?
+   No podia :(
+   3
+   3
+   2
+   4
+   4 o 5
+   3
+   ninguna porque se me superponia con otra materia
+   casi siempre, muy pocas veces falté...
+   Ninguna.
+   No pude asistir a ninguno de los talleres.
+   0
+   4 o 5 veces
+   6 veces
+   Pocas, 3 o 4, pero muy utiles. Me hubiera gustado ir mas, pero me quedaba
+      muy a trasmano, los jueves salia 12:30 y volver a las 7 era tedioso,
+      tomando en cuenta que tengo hora de ida y hora de vuelta de viaje.
+   Nunca, pero no por falta de ganas, sino mas bien por falta de tiempos.
+   3
+   Ninguna, por los horarios.
+   4 ó 5 veces
+   Ninguna, por coincidir los horarios con mi trabajo, pero hubiera ido de
+      haber podido.
+   0
+   Un par de veces.
+   5 o 6 veces.
+   5, 6
+   2
+   1
+   1
+   Casi todas
+   Unas 4 o 5, no pude seguir asistiendo por el horario
+   todas =)
+   2
+   Una
+   5 o 6
+   Las que pude, pero fueron bastantes al final
+   Fui 1 vez, a la charla de "Control de versiones"
+   2
+   falte una sola vez
+   una vez
+   5 o 6. Siempre en medida que el horario iba bien
+   mmm.. no las tengo contadas. pero masomenos habre ido el 80% de las
+      clases.
+
+
+- ¿Las veces que fuiste, te resultó útil el taller?
+   16  38%  b: Suficiente
+   13  30%  a: Mucho
+    2   4%  d: Nada
+    1   2%  c: Poco
+   10  23%  No contesta
+
+   Comentario: Una vez no me resultó util porque yo no habia llevado consultas para
+      hacer, y la explicación empezaba después de que todos hagan
+      sus consultas y yo me tuve que ir.
+   Comentario: Me tenia que ir antes, asi que siempre me perdia la parte mas
+      interesante, Además fui solo a los primeros, asi que mucho no
+      pude hacer. El de Python fue muy bueno, al que pude asistir solo
+      cuando lo dieron en otro horario
+   Comentario: hay temas muy interesantes, otros casi imposibles de aprender  en dos
+      horas y otros no tan interesantes.
+
+
+- ¿Hay algún comentario que quieras hacer respecto del taller?
+   Excelente la predisposicion
+   Sabemos que es difícil, pero quizás sea posible charlar en clase que
+      horario resulta más conveniente para los cursantes
+   Me gusto, lastima que por el horario se me complicaba ir
+   los horarios fueron muy tarde haciendo muy dificil mis posibilidades de
+      asistir
+   Se ven las cosas muy rápido, en general ni siquiera da tiempo a copiar o
+      tomar apuntes. Sirve muy bien para obtener alguna mirada general del
+      tema, pero no para salir del taller y comenzar a hacer cosas. El
+      taller de Latex fue el mejor, sin dudas, muy organizado.
+   esta bueno porque es un espacio donde se aclaran dudas y en el cual se dan
+      temas de interes que capaz no son inmediatos para algoritmos 2 pero
+      te van a servir para mas adelante, como para que uno ya tenga una
+      base o por lo menos una idea....
+   A pesar de no haber ido, los temas seleccionados siempre me parecieron
+      interesantes.
+   estuvo muy bueno, lástima que no me dieron los horarios para seguir yendo
+   Es muy bueno que hagan lo del taller, lastima que por los horarios no pude
+      ir
+   Estaría bueno que sea obligatorio usar un sistema de controles para los
+      TPs (nuestro grupo lo usó y fue muy útil). Lo pongo acá porque
+      fue un tema dado en el taller.
+   horarios muy tarde
+   Solo fui al segundo de python y me parecio util (no me fichen :P)
+   Me resulto muy util
+   Quizas seria bueno programarlo un poquito mas, al menos en los primeros se
+      daba muchas vueltas en cuanto a los contenidos que querian dar hasta
+      que los daban. Pero en general esta muy bueno lo del taller, en
+      especial si queres ver temas nuevos, o consultar dudas. Aunque lo
+      ideal seria ponerlo cuando te vas a anotar a la catedra para poder
+      tenerlo en cuanta al anotarte a otras materias y no perdertelo solo
+      por eso (ponerlo como taller optativo o algo asi)
+   esta muy bueno!! y me gustaria seguir yendo si es que lo hacen el año que
+      viene..  es una lastima que el curso en gral no haya respondido al
+      taller, pero a mi me gusto mucho
+   Me encantó la clase de Pygame que dio diego. Te da una herramienta para
+      agregarle un poco mas de "accion" a lo que estas programando y que a
+      la vez no sea tan compleja.  Por otro lado, el dia y horario que le
+      pusieron al taller era bastante bueno (a diferencia de algoritmos I
+      que era los viernes a la tarde), porque un jueves es bastante
+      probable que estes en la facultad y te puedas quedar.
+   Se dan temas muy entretenidos e interesantes, sobretodo cuando expone
+      temas Maxi o Diego(sin ofender a los humeantes y al doctor (?) que
+      dieron bien los temas que expusieron)
+   Muy bueno, tendria que ser el practico asi, mas que clases adicionales
+   Iba principalmente a debuggear el código con los ayudantes y vino genial
+   agradecimiento por el esfuerzo que hicieron para que nosotros tengamos
+      conocimientos nuevos.   hay cosas interesantes que yo desconocia
+
+
+- ¿Qué tan fáciles te resultaron los parcialitos?
+   28  66%  c: Normales
+    8  19%  b: Difíciles
+    3   7%  d: Fáciles
+    1   2%  e: Muy fáciles
+    0   0%  a: Muy difíciles
+    2   4%  No contesta
+
+   Comentario: algunos me parecieron difiles en el sentido del tiempo con el cual se
+      cuenta para hacer el parcialito....como el 4 .... los demas
+      parcialitos tenian sus puntos mas o menos jodidos pero tambien
+      sus puntos accsibles
+   Comentario: Algunos más difíciles que otros :P
+   Comentario: lo que los hacia dificiles era que solo habia 3 ejercicios, de los
+      cuales uno era el dificil y te hacia quedar en 4, 5..
+   Comentario: A veces los enunciados resultaban un poco confusos.
+   Comentario: a veces los enunciados son poco entendibles
+
+
+- ¿Te parece que las notas de los parcialitos fueron justas?
+   27  64%  a: Sí
+   10  23%  b: Mas o menos
+    3   7%  c: No
+    2   4%  No contesta
+
+   Comentario: Los enunciados eran poco precisos y luego bajaban la nota por cosas
+      que no se pedían
+   Comentario: Depende siempre del corrector
+   Comentario: Para nada. ya he hecho mi descargo. tiene que haber mas coherencia de
+      criterios a la hora de corregir
+
+
+- ¿Considerás que los temas tomados en los parcialitos fueron
+  adecuadamente vistos en clase?
+   24  57%  b: Suficiente
+   14  33%  a: Mucho
+    2   4%  c: Poco
+    0   0%  d: Nada
+    2   4%  No contesta
+
+   Comentario: la respuesta es entre "suficiente" y "mucho" en realidad..
+
+
+- El tiempo de corrección de los parcialitos fue...
+   33  78%  a: Muy bueno
+    7  16%  b: Bueno
+    0   0%  c: Regular
+    0   0%  e: Muy malo
+    0   0%  d: Malo
+    2   4%  No contesta
+
+
+- ¿Qué recursos utilizaste para estudiar? (marcar todos los utilizados)
+   35  83%  a: Carpeta
+   33  78%  c: Páginas web
+   19  45%  b: Apunte
+   18  42%  d: Libros
+    2   4%  No contesta
+
+   Comentario: La carpeta la usé como una guia para ir estudiando todos los temas
+      dados y en el orden dado.
+   Comentario: No entiendo la diferencia entre carpeta y apunte, el apunte de clase
+      practicamente no lo usé
+   Comentario: los links de grafos en la pagina fueron la salvacion..
+   Comentario: los videos de BFS, DFS, Dijkstra, etc de "enlaces utiles" me salvaron
+      la vida xD
+   Comentario: Todos! Estaba muy repartido el contenido
+
+
+- Si usaste libros o páginas web además de los provistos, ¿cuáles
+  fueron?
+   youtube,  y googleando se encuenta todo y bastante
+   Wikipedia para presentación general de algoritmos varios
+   Wikipedia
+   Cormen
+   wikipedia
+   Kahn Academy y MIT OpenCourseWare, principalmente para el tema Grafos.
+   Técnicas de Diseño de Algoritmos, Apunte de Inacap, Estructuras de Datos
+      en C (Tanenbaum),
+   Cormen, Universidad de Málaga
+   wikipedia  libro: Estructura de datos y algoritmos  autor: Addison-Wesley
+   Lo que google provea.
+   Weiss
+   Cormen, Sedgewick, StackOverflow.
+   Generalmente primero leía la Wikipedia, como para tener una idea general
+      del tema. Despues lo que mas usé fue: Manual de Análisis y Diseño
+      de Algoritmos, Inacap, Chile. Porque los ejemplos eran los mismos
+      que se dan en la teorica. Me sirvio mucho tambien buscar vídeos en
+      youtube de los algoritmos que me costaba entender.
+   La mayoria de los algoritmos vistos están muy bien explicados en
+      Wikipedia, hay muchas preguntas bien respondidas en
+      http://stackoverflow.com ; la parte de grafos la leí en Artificial
+      Intelligence Through Prolog.
+   La link de la página de la cátedra, Wikipedia y lo que encontré en
+      Google.
+   wikipedia, una pagina de preguntas y respuestas que se llama
+      stackoverflow.com, K&R y los videos explicativos de youtube
+      sobretodo en la última parte de la cursada.
+   videos explicativos en youtube, wikipedia
+   Por lo general Wikipedia
+   Wikipedia y Youtube.
+   Solo use el cormen y el kruse
+   wikipedia, bibliografia de la pagina y algunos videos en youtube para los
+      recorridos de los grafos
+   La verdad no recuerdo, la mayoria fue poner en google y ver a donde te
+      llevaba, y de ahi ir viendo varias paginas, por lo general, la
+      Wikipedia. Además todos los apuntes de Matematica Discreta para la
+      ultinma parte, lo de grafos, esta mejor explicado ahi y se entienden
+      mejor la dinamica de los algoritmos
+   use los de la pagina.. los otros realmente no recuerdo.. google y empezar
+      a entrar..
+   Estructura de Datos y Algoritmos, Aho, Hopcroft
+   internet en general, sobretodo c.conclase para revisar funciones o
+      librerias de C y despues wikipedia
+   Google y Wikipedia
+   Generalmente Wikipedia o algunas paginas universitarias
+   El Kruse y el Weiss en su mayoría. Por otro lado, Cormen con el tema del
+      Teorema del Maestro.
+
+
+- ¿Qué tan fáciles o difíciles te resultaron los trabajos prácticos?
+   19  45%  c: Normales
+   16  38%  b: Difíciles
+    5  11%  a: Muy difíciles
+    0   0%  e: Muy fáciles
+    0   0%  d: Fáciles
+    2   4%  No contesta
+
+   Comentario: el 2....dificiliso para el tiempo con el que contamos....y ademas....
+      un tecer tp
+   Comentario: Marco dificiles por el TP3. Me pareció bastante mas dificl que los
+      otros dos.
+   Comentario: Lo mas dificil fue el manejo de la memoria. Despues con mi compañero
+      nos pasaba mucho que creíamos que entendíamos lo que teníamos
+      que hacer, hasta que nos poníamos a hacerlo. Nuestro ayudante
+      nos dio siempre una mano.
+   Comentario: A veces el tiempo dado era insuficiente como para entregarlo al 100%
+   Comentario: poco tiempo para hacerlos perfectos o lo suficientemente bien
+   Comentario: Hubo poco tiempo para el tp2 y tp3 y perdi tiempo hasta adaptarme a
+      compilar por consola
+   Comentario: En especial el TP3, muy poco tiempo, y no solo eran contenidos nuevos
+      sino que era un lenguaje totalmente desonocido el de Python
+   Comentario: en cuanto a dificultad normales.. pero muy largos teniendo en cuenta
+      que todas las semanas teniamos entregas lo que nos atrasaba en
+      las demas materias.. (lo digo en plural porque eramos varios
+      asi).. igualmente deberia haber organizado mejor mis tiempos,
+      pero bue, es un comentario no mas..
+   Comentario: El uso de getopt costó bastante entenderlo.
+   Comentario: Me costaron muchísimo, pero tal vez porque Gastón no nos acompaño
+      como debía.
+   Comentario: faciles no son, sobre todo los que venimos del paraiso llamado python.
+      pero bueno, a mi se me hizo mucho mas cuesta arriba gracias a la
+      ayuda incondicional de mi ayudante fantasma
+
+
+- ¿Te parece que las notas de los trabajos prácticos fueron justas?
+   33  78%  a: Sí
+    5  11%  b: Mas o menos
+    2   4%  c: No
+    2   4%  No contesta
+
+   Comentario: mal que nos bajaba muchos puntos por los opcionales!!
+   Comentario: mi ayudante nunca me dio una nota
+
+
+- El tiempo de corrección de los trabajos prácticos fue...
+   16  38%  a: Muy bueno
+   13  30%  b: Bueno
+    8  19%  c: Regular
+    3   7%  e: Muy malo
+    0   0%  d: Malo
+    2   4%  No contesta
+
+   Comentario: Pongo muy bueno por Manuel Soldini, que nos corrigió dos tps en una
+      semana. Si es por Gastón Kleiman, está entre paupérrimo y muy
+      malo ya que tardó 2 meses para entregar el tp uno, mucho
+      después de saber que habíamos aprobado el 3 y el 2.
+
+
+- ¿Habías visto código en C antes de comenzar el curso?
+   20  47%  a: Sí
+   20  47%  b: No
+    2   4%  No contesta
+
+   Comentario: En algo 1, pero nada mas
+   Comentario: esa semana y tanto de algoritmos I .. pero la verdad no habia
+      entendido mucho jeje
+   Comentario: En algoritmos I
+   Comentario: en realidad c++, que es bastante similar
+
+
+- ¿Qué tan fácil o difícil fue instalar el compilador?
+   17  40%  e: Muy fácil
+   12  28%  d: Fácil
+    9  21%  c: Normal
+    1   2%  a: Muy difícil
+    1   2%  b: Difícil
+    2   4%  No contesta
+
+   Comentario: todavia no logro instalarlo en windows y que construya
+   Comentario: Ya lo tenía en linux :P
+   Comentario: ya estaba instalado en el livecd :P
+
+
+- ¿Qué tan fácil o difícil te resultó programar en C?
+   17  40%  c: Normal
+    8  19%  b: Difícil
+    8  19%  d: Fácil
+    6  14%  a: Muy difícil
+    1   2%  e: Muy fácil
+    2   4%  No contesta
+
+   Comentario: Por el manejo de la memoria y los errores de compilación. Hacia el
+      final uno va conociendo los errores que tira y los warnings y se
+      va haciendo mas facil, pero al principio costó.
+   Comentario: Se queja mucho jaja
+   Comentario: al principio dificil pero a medida que iban pasando las entregas, se
+      fue haciendo mas facil y mas facil
+   Comentario: con que te acordaras de ";" y las variables antes, andaba.. lo dificil
+      era programar con valgrind jajaja
+   Comentario: Empezar fue dificil en realidad, luego te acostumbras.
+   Comentario: Al principio, luego resultó ser más amigable
+   Comentario: los mallocs y frees son una pesadilla
+
+
+- ¿Qué recursos utilizaste como guía del lenguaje?
+   Apuntes de clase
+   Internet
+   Khernighan - Ritchie : El lenguaje de programación C
+   internet y apuntes de clase y de la catedra
+   La carpeta, el man y foros en internet, para dudas específicas. Wikipedia
+      fue de gran ayuda para entender ciertas funciones que vienen con C.
+   me compre un libro de programacion en c y tambien utilize algunos apuntes
+      y tutoriales
+   los provistos por la cátedra
+   Apuntes buscando en internet!  Programando pequeños codigos
+   Apuntes provistos por la cátedra. También mi carpeta de 6to año de la
+      secundaria.
+   Las clases, y cuando necesitaba alguna funcion mas especifica internet,
+      junto con la pagina man de la funcion que encontrara util.
+   apuntes, man, internet
+   The C Programming Language, Kernighan & Ritchie
+   Usé los apuntes de la materia y despues no tenia algo fijo, iba
+      googleando y leyendo lo que me parecia mas claro.
+   http://c.conclase.net/librerias/
+   Internet? Alguna vez miré el K & R.
+   el K&R, google jaja.
+   man de C, internet
+   Don Google
+   c.conclase.net
+   Intenet / lista del curso / Amigos / Manual bajado de internet
+   la carpeta..
+   Me base en lo que enseñaban en clase, y en caso de no saber algo en
+      particular, lo buscaba en internet
+   El lenguaje de programacio C, Kernighan y Ritchie
+   el libro de kernighan y ritchie, internet.
+   La carpeta y c.conclase
+   Internet
+   el kerningan
+   internet
+   el libro lenguaje de programacion C de ritchie
+   La página y el kernigan ritchie
+   me alcanzo con los apuntes de las clases.  pero si tenia alguna duda
+      utilizaba alguna pagina web
+
+
+- ¿Hay algún comentario que quieras hacer respecto del lenguaje?
+   Es un buen recurso para la creación de las estructuras de la materia.
+      Enseña a no perder de vista punteros de memoria
+   no
+   Es bastante grande el salto entre Python y C, pero C ayuda muchísimo a
+      entender, al menos en parte, cómo funciona o cómo se organiza la
+      memoria.
+   MUY dificil, un lenguaje con muchas vueltas (poco feliz, como se dice)
+   Me gusto bastante, pero el tema del manejo de memoria dinamica puede ser
+      medio hincha a veces..
+   Muy estructurado, muy prolijo. Me gusta más que python, pero mucho mas
+      complejo.
+   Me parece ok que se utilice C. Está bueno saber cómo funciona
+      internamente Python, por ejemplo.
+   complicado usar punteros, todavía se me complica
+   Esta bueno en el sentido de que te obliga a ser estricto con tu código y
+      ser ordenado. Pero le falta muchas funciones, y es un bajón tener
+      que programarlas a veces.
+   Si Python es Merlin el mago, C es el rey Arturo..
+   Me parece molesto tenes que estar compilando uno a mano, que no le aporta
+      ningun conocimiento, en vez de usar idle que simplifican las cosas.
+   Seria bueno la primer clase ver los comandos basicos, o sea, no dar una
+      explicacion muy detallada, pero si dar la estructura basica de como
+      se escribe el while, el for etc, como para no encontrarse con
+      absolutamente todo nuevo de golpe
+   termino gustandome..
+   Me gusto programar en C , resulta muy util.
+   Me pareció un buen lenguaje, con el cual hay que tener en consideración
+      varias cosas las cuales hay que pensar, lo cual enseña bastante.
+   No
+
+
+- ¿Cuáles fueron los temas que te resultaron más difíciles?
+   Ninguno
+   Algoritmos de ordenamiento y algoritmos aplicados a grafos
+   Grafos, TP3, arbol binario de busqueda
+   Greedy, programación dinamica, backtracking
+   Arboles
+   Algoritmos greedy ya que no hay un metodo a seguir para hacer uno y
+      division y conquista
+   Grafos, sin dudas, fue el tema que más me complicó. También
+      programación dinámica. Sé que se dieron muchos ejemplos, pero tal
+      vez faltaba mirar cada uno un poco más, entre todos, y explicarlos.
+   grafos
+   las estrategias algoritmicas en el sentido de programar a cociencia
+      utilizando alguna (greedy, bactraking, programacion dinamica, ) y
+      grafos
+   Programación dinámica y backtracking.
+   Árboles, Grafos
+   grafos
+   Grafos  Programacion Dinamica  Greedy  Backtracking
+   La programación de un grafo, no el concepto. Hash me costó entenderlo en
+      un principio pero le agarré la mano rapido
+   Programacion dinamica
+   Dijkstra, A*, CFCs, Arboles AVL, Puntos de articulacion (me parecio un
+      poco mal dado)
+   Los que no tratamos directamente en los parcialitos.  Por ejemplo el
+      teorema maestro todavía me sigue costando, complejdad algorítmica
+      y los algoritmos de los grafos también.
+   programacion dinamica
+   Programación dinámica.
+   De los algoritmos que vimos al final como dijkstra, kruskal etc me cuesta
+      entender el costo que tienen y el pseudocódigo de cada uno.
+   programación dinámica, greedy, backtracking. Dijkstra, ordenamientos
+      (quicksort, heapsort)
+   Programación Dinámica
+   Programacion dinamica, aunque despues cayo la ficha.
+   Programacion dinamica , bractracking , gredy y teorema maestro
+   Programacion Dinamica, se lo dio muy rapido y no se entendio bien
+   teorema del maestro jaja..  tambien un poco el entender A* y Dijkstra..
+      pero a comparacion con el teorema nada XD
+    Comentario: en sentido teorico hablando.. programar el borrar del arbol no fue
+       lindo XD
+   Los últimos temas de grafos, que no terminaron de quedar muy claros
+      (flujo, puntos de articulación)
+   Los algoritmos para los grafos y los cálculos de eficiencia
+   Las estrategia de programacion me resultaron complejas de entender, sobre
+      todo lo de la mochila. Tambien el tema de como calcular la
+      complejidad algoritmica.
+   teorema maestro
+   Al principio los punteros y su aritmética me costaron. Luego en si
+      teóricamente no resultaron muy difíciles los temas. La
+      programación de la estructura del árbol fue lo que más costo.
+   Programacion dinamica
+   Algoritmos de programacion dinamica, greedy, backtracking
+   Grafos, heap
+   hash, y todos los ultimos temas a partir de backtracking
+
+
+- ¿Cuáles fueron los temas que te resultaron más fáciles?
+   Ninguna
+   Listas enlazadas, pila, cola, heap, hash
+   hash, heap, abb, avl, las estructuras en general.
+   Hash, pila
+   programacion dinamica y grafos
+   Árboles, Heap, Hash, y los primeros temas de la materia.
+   hash y heap
+   Pilas, listas, colas, hash, heap
+   Pila  Cola  Lista  Heap  Arbol Binario de Busqueda  Algoritmos de
+      ordenamientos
+   ABB, heap y bueno, pilas y colas.
+   Las estructuras de datos en general, aunque algunas son mas complejas que
+      otras (por ejemplo, los distintos algoritmos para grafos son medio
+      complicados, a pesar de que la estructura de grafo en si me parecio
+      bastante intuitiva)
+   Heap, ABB, Hash.
+   El funcionamiento de las estructuras de datos en sí (tabla de hash, abb,
+      cola, pila, etc)
+   TDAs
+   Pila y cola.
+    Comentario: No quiere decir que sea innecesario, por algo se empieza siempre.
+   Los tdas y sus implementaciones, salvo grafos.
+   tipos de datos abstractos: pila, cola, lista
+   Los primeros, ya que los habíamos visto en Algoritmos I en parte.
+   Manejo de listas, diccionarios, pilas, colas...
+   Pila lista cola
+   Grafos, pero por estar viendolo en Matematica Discreta
+   hash (abiertooo, el cerrado todavia lo estoy pensando).. el heap tambien,
+      no se porque, pero me resulto sencillo..
+    Comentario: continuando en sentido teorico..
+   Pilas, colas, listas
+   El heap
+   Los temas mas faciles fueron las estructuras vistas en algoritmos I, que
+      si bien se profundizan, uno ya sabe mas o menos como funcionan. Los
+      abb me resultaron faciles dentro de todo entender como funcionan
+      (otra cosa es implementarlos)
+   Está más o menos en conjunto respondido con la pregunta de arriba.
+   pilas, colas, listas
+   Grafos
+   Algoritmos de ordenamientos, hash y arboles
+   lista enlazada, pila y cola
+
+
+- ¿Te parece que hubo algún tema de más?
+   No
+   no
+   No
+   no
+   Para nada.
+   no
+   No
+   A mi parecer no hubo temas demas.
+   Mochilas.
+   No, para nada
+   No.
+   No.
+   No
+   No.
+   No
+   No
+   El de la ultima clase, la verdad que no se ni cual era la idea de eso
+   no..
+   No
+   No
+   Si lo hubo nunca es malo saber algo de más.
+   no
+   no
+   No
+   No
+
+
+- ¿Te parece que hubo algún tema al que se le dedicó demasiado poco
+  tiempo?
+   Grafos fue dado velozmente, se entiende que se debe a la acumulación de
+      feriados
+   no
+   No
+   backtracking
+   Grafos. A*, Dijkstra, y demás.
+   no
+   no, me parece que dentro de todo estuvo bien, es verdad que igual en
+      general el tiempo hace que se den algunas cosas a las corridas pero
+      creo que con el resto de herramientas que te brinda la catedra, se
+      termina entendiendo
+   grafos
+   Si, se le dedico poco tiempo a los grafos.
+   No se si poco tiempo, pero programación dinámica podría haber sido un
+      poco mejor explicado creo.
+   Capaz hubiera estado bueno un poquito mas de tiempo para la parte de
+      programacion dinamica, pero no demasiado.
+   Puntos de articulacion, arboles, grafos.
+   Programación dinámica.
+   No
+   Mo.
+   No
+   el tp2 y tp3
+   Si, al de dinamica, o fue muy poco tiempo o no se logro dar a entender
+   demasiado poco no, pero, ya dije antes, hubiera visto mas el teorema del
+      maestro
+   Me hubiese gustado ver un poco más de programación
+      dinámica/Greedy/Backtracking
+   No
+   Quizas faltaba un poco mas de ejercitacion de grafos para el parcialito,
+      como resolucion de parcialitos pasados.  A la vez, ejercitar para el
+      final tambien seria util ya que son un poco distintos los ejercicios
+      de final que los de parcialitos.
+   Me dio la imprecion de que podriamos haber visto un poco de implementacion
+      de A*
+   A mi parecer no.
+   no
+   no
+   Árboles
+   muchisimos. como dije antes, me parece que se le dedico pocas clases a los
+      ultimos temas (mas alla que estos temas fueron a los que mas clases
+      se le dedicaron, la dificultad de los mismos amerita muchisimas mas
+      clases) pocos ejercicios tambien.
+
+
+- ¿Qué destacás en general del curso como positivo?
+   Todo, expecto eso de los ayudantes nuevos que intentaban aprender
+      explicando y a veces te confundian mas de lo q estabas.
+   El contacto constante entre el profesor y el alumno, esencial para una
+      materia con tanta aplicación práctica
+   Me pareció muy buen curso, estoy muy conforme con la cursada.
+   Aporta muchos temas, bien explicados en general.
+   Las practicas fueron muy buenas
+   se mantiene al dia solo por el metodo de darlo
+   Hay muchos ayudantes, muchas ganas de ayudar y enseñar. Marga y Maxy le
+      ponen mucha onda, y Rosita se nota que sabe muchísimo. Aprendí
+      algunas curiosidades del mundo de la computación, y a programar en
+      un lenguaje más "complicado" que python.
+   la buena onda de los ayudantes y las clases practicas
+   un curso bastante completo en cuanto a teoria, trabajos, consultas....
+      clases amenas,flexibilidad en algunas fechas de entrega.... Buena
+      onda de todos, profesores y ayudantes
+   En general todos los temas fueron muy útiles, tanto las estructuras de
+      datos como las técnicas de diseño de algoritmos (éstas último me
+      parecieron muy interesantes).
+   La abundante práctica gracias a los trabajos prácticos.
+   los temas vistos, el tiempo invertido en la implementación de los TADs
+   Que es un buen curso! Saben organizarse y los ayudantes son un poco mas
+      piadosos :)
+   La clase práctica, la exigencia con los tps y entregas.
+   La buena onda de los ayudantes, la modalidad de 'parcialitos' y entregas
+      casi semanales. Eso te ayuda a mantener la materia al dia, lo cual
+      para mi fue muy importante porque la pude llevar sin casi ningun
+      esfuerzo. Si no tuviera este metodo, hubiera colgado y no la sacaba
+      adelante jamas jajaja
+   Mucha disponibilidad para consultas. Muchas entregas en poco tiempo.
+   Que me ayudó a aprender a investigar los temas por mi cuenta y no
+      depender tanto de mis notas. Empecé a leer mas libros, hacer mis
+      resumenes, ver videos, etc. Tambien empecé a recurrir mas a los
+      ayudantes, me di cuenta que saben muchísimo y hay que
+      aprovecharlos.
+   La cantidad de TPs sirve para aprender a programar y a utilizar todo lo
+      visto en clase
+   La buena onda que hace que la clase sea más llevadera.
+   La disponibilidad y la buena onda de los ayudantes y docentes. Siempre
+      encontras respuestas a tus dudas tanto en la lista de google... en
+      clase, en el taller, IRC...siempre hay alguien para responder.
+   buena aplicación de los temas vistos. aprender a usar otros lenguajes,
+   Muy buena onda de todos los profesores, en general explican muy bien.
+   Exelente curso, buena Practica, bien organizado y estructurado.
+   Aunque la cantidad enorme de entregas me hizo dedicarle tiempo a la
+      materia que no siempre tenia y me hacia atrasar con otras materias,
+      fueron lo que potencio ampliamente mi nivel de programacion y que
+      practicamente siempre este al dia con los temas.
+   Que esta todo muy organizado en cuanto al tema de la lista, la pagina, la
+      guia de ejercicios y que graban las clases aunque no se si las
+      subian. Se nota q estan hace años con esto y que estan
+      comprometidos de verdad y que les intereza progresar.
+   La buena onda de los profesores y ayudantes de la practica, que siempre te
+      tratan de explicar
+   la buena onda y ganas de enseñar
+   La dinámica que tuvo y la buena predisposición de los docentes a
+      responder cualquier duda.
+   La predisposicion y disponibilidad de los docentes, el buen ambiente en
+      las clases, el nivel de conocimiento de los docentes y la
+      preocupacion porque los alumnos realmente aprendan
+   Por un lado, los temas que se dan me parecen muy interesantes para
+      adentrarse mas en la carrera. Tambien destaco la buena onda de los
+      profesores y ayudantes de la practica, siempre dispuestos a
+      responder consultas y no te presionan tanto con las fechas de
+      entrega de tps si se te complica con otra materia o lo que fuere.
+      Por otro lado, con respecto a algoritmos I, me gusto mas que las
+      clases practicas sean en el aula y no en el gabinete porque aprendes
+      mas trabajando todos juntos.  Tambien me gusta el sistema de los 4
+      parcialitos y los 3 TPs porque te obliga a estar al dia con la
+      materia y hace que sea mas leve (por mas que te pases todos los
+      findes frente a la pc)
+   La practica me parece muy buena como el cuatri pasado, donde se clarifica
+      todo lo que puede llegar a perderse con las clases de rosita, asi
+      que hacen buen complemento, y se dan nociones mas practicas y reales
+      lo que ayuda mucho a la hora de pensar el codigo. El taller con los
+      temas interesantes que se dan
+   La buena onda y la manera en que se dan los temas.
+   Las teoricas fueron muy buenas, y los temas fueron dados con mucho datalle
+      y muchisimo mas de los que vieron en otro curso, por compañeros que
+      cursaron y ni llegaron a nuestro nivel. Nivel teorico muy bueno
+   los genios que dan las prácticas
+   Que a comparacion, la exigencia es bastante elevada por las entregas
+      semanales de los TDAS y los tps pero se aprende mucho sobre como
+      funciona cada uno porque lo programa uno mismo
+   La onda de todos los profesores y ayudantes, la poca distancia entre los
+      alumnos y los profesores que hace que nos sintamos comodos y en
+      confianza para preguntar absolutamente todo y sacarnos dudas. A
+      diferencia de mi cátedra de Algoritmos 1 donde me sentía
+      totalmente intimidado, acá fue muy fructífero el clima para
+      aprender y hasta divertirse.
+   -la practica que nos dan para programar. uno aprende mucho mas en frente
+      de una pc que tratar de hacer un algoritmo de un parcialito.  -el
+      taller
+
+
+- ¿Qué le cambiarías al curso?
+   Nada, trata de que los temas en general los explique algien q sepa del
+      tema que habla
+   Tal vez dar un poco más de tiempo entre las entregas, tener la materia al
+      día te hace descuidar las demás materias que estas cursando.
+   Que enseñen C++ en algun momento o en un taller almenos. O que el tp3 sea
+      en C++.
+   Quizas que las clases de rosita sean con marga o con algun ayudante para
+      darle un poco mas de dinamica
+   nada
+   Las entregas semanales. Simplemente hay tiempo para tantas.
+   las clases teoricas, no se entienden mucho y se hacen aburridas
+   un poquito mas de tiempo entre entrega y entrega, porque si bien, te
+      permiten que luego de la entrega lo vuelvas a corregir y entregar,
+      no alcanzas a tener terminado un trabajo que ya tenes que hacer
+      todo....entiendo que los tiempos son cortos y hay muchas cosas por
+      ver pero bueno...
+   Que las clases teoricas sean un poco menos aburrida y mas dinamicas.
+   La forma de dar la teórica.
+   Nada importante, funciona bastante bien.
+   un poco más de organización en la práctica
+   Nada.
+   Mas ejercitación práctica.
+   nada
+   Nada.
+   Las teóricas, se me complicó un poco entender lo que queria decir
+      Rosita.
+   El horario :P Estaría genial un poquito más temprano.
+   La Teorica. Termine estudiando las cosas teoricas de wikipedia.
+   Las horas de cursada, seria interesante que el taller sea parte del curso.
+   Las clases de rosita que sean mas didacticas y las de maxi tambien.
+   Las teoricas, sin duda. En cuanto a las practicas quizas seria bueno que
+      las organizaran antes, no esta bueno que discutan sobre si es de una
+      determinada forma o no lo es cuando están los ayudantes dando la
+      clase...
+   el horario, jaja.. y el aula!
+   Los tiempos de los tps y las entregas de los tda son muy justos y por
+      mucho que uno se siente a programar hay puntos en los que se traba y
+      se atrasa demasiado
+   El horario del taller
+   Nada en particular.
+   Las clases practicas en particular no me gustaron. Fueron innecesarias, en
+      particular cuando la daban algunos de los ayudantes, no aportaban
+      nada nuevo y no senti que se resuelvan problemas, en si todo quedaba
+      en una lluvia de opiniones, pero nada en concreto
+   la teorica
+   posiblemente un poco menos de volumen de entregas semanales
+   Por ahora no mucho!
+   que los ayudantes no den clases. solo que se dediquen a corregir.
+
+
+- Los docentes en general
+   Buenos
+   Siempre están para cualquier consulta. Hay buena onda y ganas de enseñar
+   Muy bien
+   Buena disposición, en general le ponen ganas a las clases, con los
+      talleres, quedandose hasta tarde para consultas, etc.
+   Muy buena onda, siempre ahi para responder cualquier consulta
+   Muy bien
+   Todos con muchisimas ganas de ayudar, responder dudas y hacer chistes para
+      mejorar el ritmo de la clase.
+   muy buenos
+   MUY buena onda, disponibilidad, buenas expliacaciones....
+   Muy buena dedicación al curso y predisposición al dar las clases.
+   en general, muy bien
+   Son muy buenos explicando los temas.
+   En general estoy conforme.
+   Muy buena onda, siempre con ganas de ayudar.
+   muy buenos
+   En general muy buenos.
+   Muy Buenos
+   Muy buenos.
+   Muy buena onda todos, a la hora de explicar y a la hora de consultar
+      dudas.
+   Muy Buenos.
+   Fue muy copado haberlos tenido y definitivamente valio la pena.
+   Buenos
+   Muy buena predisposicion. Se nota que tienen altos conocimientos sobre
+      programacion y la materia en general.
+   muy atentos siempre y dispuestos a responder
+   Tuvieron muy buena predisposición a responder cualquier pregunta, en el
+      caso de los ayudantes que están cursando la carrera un par de años
+      por arriba de nosotros, nos ayudaron contándonos experiencias
+      propias
+   Muy buenos
+   Muy buenos
+   un nivel muy bueno en cuanto a los principales, y bueno en cuanto a los
+      ayudantes
+   Me parecieron buena onda y atentos.
+   Muy buenos docentes. Siempre dispuestos a explicar.
+   Muy bien, por cualquier duda contestan, nunca hubo problemas
+   Espectacular
+   se nota que los docentes saben mucho. seria interesante que puedan
+      transmitir mas sus conocimientos.
+
+
+- Rosita Wachenchauzer
+   Excelente
+   A veces es difícil entenderla, especialmente cuando se entra en contacto
+      con nuevos temas
+   Muy buena profesora
+   Da buenas teoricas, a veces se vuelven un poco densas las clases
+      dependiendo el tema pero en general muy buenas.
+   Le pone todas las ganas a la clase aunque sean medio monotonas
+   bien
+   Sabe muchísimo, se nota. Hace excelente analogías, y cuando intenta
+      explicar algún tema complicado lo suele bajar a tierra. Otras veces
+      se va por las ramas con la matemática y nos deja un poco aturdidos,
+      pero estoy orgulloso de haberla tenido como profesora.
+   a veces se cuelga con un tema y se torna aburrida la clase
+   clara, siempre tratanto de que se entiendo todo...siempre de buen humor...
+   Muy buena docente, aunq sus clases deberian ser mas dinamicas
+   Siento mucho respeto por Rosita, pero lamento decir que no estoy
+      satisfecho con las clases teóricas.
+   Explica muy bien, a veces se va mucho con el aspecto matematico de las
+      cosas, pero si la seguis sus clases son muy buenas.
+   es muy teórica, a veces cuesta un poco seguirla
+   Calma, paciente, un poco lenta, didactica.
+   Dedica mucho tiempo de la clase a un solo ejemplo, pero en general es muy
+      clara
+   Muy simpática.
+   A veces cuesta entender lo que quiso explicar, pero el resto, todo bien.
+   Muy pasiva y abstracta, aunque siempre explica de buen humor y se nota que
+      sabe mucho.
+   Explica dentro de todo bien pero a veces aburre y no se le entiende.
+   Es inentendible lo que te quiere explicar. Da muchas vueltas y no te dice
+      nada realmente. Por lo general salis mas confundido al final de su
+      clase
+   se la va a extrañar en algoritmos III
+   Me gustaron mucho sus clases, aunque a veces se hace un poco difícil
+      seguirla en un tema nuevo, y a veces con los dibujos que se hacen,
+      se borran y vuelven a hacer se hace complicado entender a veces
+   Siempre con una sonrisa y dispuesta a explicar N veces
+   Muy buena profesora, se nota que sabe muchisimo. Hay veces que te cuenta
+      todo como un cuento y lo entendes perfecto y otras que no (cuando se
+      pone a hacer muchos dibujos en el pizarron y empieza a borrar cosas
+      mientras estas copiando)
+   Se nota que sabe demasiado, aun que a veces me pierdo en los idas y
+      vueltas que da con lso ejemplos, pero mirando lo que escribe las
+      cosas tienen sentido
+   Dentro de todo me pareció que dio bien los temas en la teórica
+   Muy buena docente. Nada que reprochar y si de admirar.
+   No me gustaron mucho las teóricas de dio Rosita. Entendía más en las
+      prácticas.
+   Rosa tiene la mejor predisposición y consideración para corregir y para
+      escuchar al alumno. A veces se me hacían un poco densa las
+      explicaciones teóricas, no obstante.
+   como dije antes, no logra transmitir el 100% de los conceptos y cuando
+      toca un tema dificil se complica mucho.
+
+
+- Pablo Najt
+   Excelente
+   Destaco su calma y buena onda
+   Muy buen profesor, pero en este curso no dio muchas clases a comparacion
+      de algoritmos 1, estaría bueno que de más.
+   Las clases que dio se le entendio muy bien.
+   bien
+   Explica un poco rápido, pero se encarga de que todos entendamos. Además,
+      suele hacer chistes que aligeran el ambiente.
+   muy buenas explicaciones
+   sirvieron sus ejercicios antes de los parcialitos y sus explicaciones
+   Buen ayudante,explica bien los temas y siempre esta cuando uno lo necesita
+      y sobretodo sabe tener mucha paciencia hacia los alumnos! :)
+   Las veces que dio la clase se entendió muy bien.
+   Muy claro cuando pasaba al pizarron a explicar algun ejercicio, me hubiera
+      gustado que pasara mas seguido jajaja.
+   explica muy bien
+   Muy buen profesor, CLARISIMO.
+   Dio pocas clases, pero cuando la dio la hizo la entretenida y instructiva
+   Explica excelente y siempre se preocupa por dejar un problema para pensar.
+      Las introducciones graciosas a los problemas eran geniales.
+   me gusta como explica
+   Cuando le toca explicar algún tema, se le entiende todo, aclara mucho las
+      cosas!
+   Muy buen profesor. El mejor de la catedra.
+   Si bien al principio no me causo una buena impresion, con el tiempo me di
+      cuenta que eso solo fue un prejuicio de mi parte. Explica bien, es
+      atinado con sus ejemplos y es buena onda.
+   Es muy claro y da ejemplos muy buenos
+   Sabe muchisimo. Tiene mucha paciencia para explicarte. =)
+   no hable mucho con el, pero cuando explicaba en clase era muy claro y
+      divertidos los ejemplos que traia
+   Un genio, así de simple :P
+   Muy buena onda y claro para explicar
+   Genio, siempre entiendo lo que explica y lo hace de forma divertida.
+   Demasiado groso, se extrañaron sus clases, pero cuando dio demostro la
+      gran capacidad que tiene para enseñar y su conocimiento, muy copado
+      al explicar
+   Se entendía cuando daba los temas y de forma entretenida
+   Muy bueno, creo q fue uno de los que me atraia en las practicas, y vi
+      utilidad, lastima q fueron pocas las clases en si que dio
+   La capacidad para explicar es impresionante. Es imposible no entender algo
+      que te explique Pablo! Que de las teóricas ! genio
+   Pablo es estricto para corregir, pero explica clárisimo y es muy
+      llevadero a la hora de dar clase.
+
+
+- Margarita Manterola
+   Muy bueno, excepto que a veces se aceleraba demasiado nose pq, y dsp venia
+      otro y explicaba lo mismo y  no se le entendia nada
+   Siempre está para ayudar. Muy clara durante explicaciones en clase
+   Muy clara explicando, le pone ganas a las clases. Estaría mejor si no
+      interrumpiera tanto a Maxi cuando le toca explicar a el.
+   Muy buena explicando los temas
+   bien
+   Una genia. Se nota que sabe muchísimo, y que está muy preocupada por que
+      todo salga bien. Por ahí sale al cruce de las explicaciones
+      intrincadas (pero muy nutritivas) de Maxy, para aclararnos todo con
+      un par de frases.
+   siempre dispuesta a responder las consultas
+   muy buena profesora y siempre muy atenta.....
+   Es una genia! Tambien sabe explicar muy bien. Aprendi mucho con ella :-)
+   Muy conforme, buenos ejemplos para aclarar temas.
+   Siempre ahi para contestar cualquier duda, especialmente en la cadena de
+      mails, y explica muy bien en clase, sin complicarla demasiado.
+   muy buena, sus clases son muy dinámicas
+   Excelente, te busco en Algoritmos III de una.
+   Muy buena explicando. Se le entiende muy bien
+   Siempre contestando todas las preguntas y con la mejor onda. Cuando algo
+      no se entendía, aparecía y explicaba todo de nuevo.
+   me gusta como explica
+   También, cuando explica se le entiende todo, quedan claros los temas.
+   Muy buena profesora tambien, aunque un poco exigente corrigiendo los
+      parciales.
+   Excelente profesora, elije buenos ejemplos, es capaz de explicar los
+      mismos temas desde distintos angulos, le pone mucha onda a las
+      clases, sabe mucho, mucho y se nota, coordina bien al resto de los
+      profesores/ayudantes (al menos eso parece, no se como se manejaran
+      puertas para adentro) y no se que mas poner..
+    Comentario: Perdon, pero agregarle un comentario al comentario?!
+   Se le entiende todo y tambien da buenos ejemplos
+   Es una genia en informatica =) Me gusta mucho cuando explica. Por ahi no
+      esta bueno que discuta con todos mientras dan la clase, quizas seria
+      bueno que lo hablara con ellos antes de que empiecen
+   el cuatri pasado pudo dar mas clases, esta vuelta muchos ayudante habia,
+      jaja.. igualmente cuando, por ejemplo, dio la clase teorica de
+      grafos, fue muy clara y se entendieron bien las cosas
+   la ídola del curso, siempre haciendo que entendamos las cosas que faltan
+      de la teórica
+   Excelente docente, super predispuesta a ayudar y siempre preocupada porque
+      los conceptos sean entendidos por la mayor cantidad de gente posible
+   Genia, sabe muchisimo y de alguna forma siempre logra que entiendas las
+      cosas por mas que te lo tenga que repetir cien veces.
+   Junto con maxi los principales pilares de las clases, sabe demasiado y
+      tiene una gran iniciativa para las clases, siempre que necesitas
+      algo te contesta y si es necesario te reta
+   Explica bien los temas y de forma entretenida
+   Bueno. Aportes utiles, y la rema cuando no esta rosita,
+   Gracias a ella la cátedra es la mejor de todas. Explica muy bien, y si
+      bien es severa con las correcciones me parecen muy justas ademas de
+      que te ayudan a que la próxima vez lo hagas perfecto.
+   La mejor onda siempre! Te escucha todos los problemas que tenés y en lo
+      posible trata de darte una solución! Casi perfecta.
+   excelente.. gracias marga por salvarnos da tantas dudas
+
+
+- Maximiliano Curia
+   Sabe Muchisimo, explicar es un de sus puntos debiles,(mas el reto de
+      marga)
+   Puede serle difícil expresarse, o desviarse en cuestiones más avanzadas
+   Cuesta seguirlo al comienzo, pero cuando te acostumbras se puede aprender
+      mucho de el.
+   Se nota que sabe aunque tendria que preparar un poco las clases antes de
+      darlas porque se marea solo
+   bien
+   Parece ser el gurú del grupo. Impresionante lo que sabe. Una vez me
+      solucionó un problema antes de que terminara de explicarle cuál
+      era. Un genio.
+   algo confusas las clases practicas de el
+   EL SABER MÁXIMO.....
+   Buen ayudante aunque me cuesta mucho entenderlo cuando explica algun tema.
+   No tan conforme, me terminé perdiendo mas de una vez en las explicaciones
+      y divagues de Maxi.
+   Sabe mucho, pero a veces en clase no sabe hacerse entender muy bien. En
+      cambio, las veces que me acerque con alguna consulta me supo
+      explicar muy claramente y siempre con buena onda.
+   se nota que sabe mucho, pero a veces cuesta entenderle  estaría bueno que
+      marga no lo interrumpiera tanto, porque se pierde el hilo
+   Sabe demasiado, pero se traba al decirlo. Genio. Libro abierto.
+   Se traba al intentar expresar las ideas, pero se nota que sabe mucho
+   Un genio. Te responde TODO. La colección de remeras NERDS son lo más
+      (Debian, Google Summer of Code, Debconf, etc.). Este último
+      comentario se aplica a Marga también, jajjaja.
+   no entiendo mucho cuando explica
+   A veces le cuesta explicar algunos temas, pero por lo general, todo bien
+   Buen profesor, pero se deja llevar mucho por los pequeños detalles de las
+      cosas y aveces uno se pierde del tema.
+   Hace un muy buen trabajo con la catedra. Le importa mucho mas que los
+      alumnos vean desde el principio como son las cosas en realidad o el
+      potencial que pueden adquirir antes que vean el caso basico y se
+      queden con eso. Por ejemplo, el DFS del grafo, muchos no lo hubiesen
+      explicado tan completo de entrada con tal de que se entienda y sí,
+      costo al principio ver de que se trataba, pero despues de eso, hizo
+      que practicamente todos los algoritmos de grafos sean faciles de
+      entender.  Es notorio que sabe muchisisimo, tal vez su punto debil
+      es que a veces se traba un poco al explicar, no se si por los
+      nervios o que, pero de todas maneras, siempre se las ingenia para
+      hacerse entender...nada que un buen té de tilo no pueda resolver
+      jaja  En fin, valio la pena tenerlo de profesor.
+   Explica mal, y casi siempre termina desviandoce en cosas secundarias que
+      no hacen al problema en si, al punto tal que hasta margatira le dice
+      q no de vueltas, y el insiste.A veces parece q no prepara las clases
+      porque no sabe por donde empesar ni como seguir y lo termina dando
+      marga.
+   Nadie duda que sepa, pero no sabe explicar a gente que tiene menos
+      conocimientos que el, porque son un poco enredadas sus explicaciones
+   muy bueno!! me subio el autoestima que este cuatri le entendia mas,
+      jajaja..   la clase de redes que dio en el taller me parecio que dio
+      muchas cosas "muy nuevas" para mi, pero igualmente estuvo muy bueno,
+      y cuando explicaba las listas de python con el "codigo real" se le
+      entendio muy bien!
+   Aunque es muy difícil entenderlo en general, se nota que intenta que
+      entendamos cuánto pueda
+   Un especialista en todo. Increible lo que sabe, aunque se hace algunos
+      nudos para hacerse entender, principalmente porque tiene una
+      cantidad de ideas enorme en la cabeza
+   Se nota que sabe muchisimo, solo que a veces no es tan bueno expresandolo.
+   un genio, solo le hace falta poder enseñar su conocimiento a un nivel
+      donde los estupidos entendamos
+   Explica bien dentro de todo
+   Bueno, Faltaria que se exprese un poquito mejor, ya que los conocimientos
+      son muchos, pero a la hora de explicar hay veces que no se entiende
+      a que quiere llegar
+   La persona que más sabe de la cátedra. Aprendés y te divertís al mismo
+      tiempo.
+   Se nota que sabe un montón y nos soluciono un par de problemas bastante
+      complicados que teníamos en el código. Sin embargo, se me hace un
+      poco complicado seguirlo cuando da clase.
+
+
+- Diego Essaya
+   Parece Saber
+   bien
+   bien
+   sabe muchisimo y me gustaron muchos los temas que explicó el... se
+      entendieron muy bien
+   Muy satisfecho, como ayudante impecable, los temas dados en clases se
+      entendieron muy bien.
+   Las pocas veces que paso a explicar algo al frente, fue muy claro.
+   es claro
+   Se nota que sabe, pero falta que sea mas didactico.
+   Dio buenos ejemplos en clase. fue muy claro
+   Claro y preciso, explica muy bien.
+   Muy bueno.
+   Toma su rol seriamente, es sumamente bueno explicando y si bien, quizas,
+      no tiene tanta presencia en clase, se nota su presencia en el curso.
+   Bien
+   estuvieron muy buenas las clases del taller de Haskell y Pygame!! a parte
+      de ello, siempre lo estabamos buscando los dias clases, pero supongo
+      que tenia que estar en otro lugar =P
+   Muy bueno explicando, excelentes sus ejemplos, se nota que tiene los
+      conceptos muy claros
+   Muy bueno.
+   muy copado, dio muy buenas clases en el taller, con cosas muy utiles, y de
+      forma muy entretenida
+   Explica bien
+   Bueno
+   un crack con todas las letras
+
+
+- Gastón Martínez
+   Puede llegar a exaltarse
+   Da muy buenos ejemplos, hace las clases un poco mas didacticas y
+      divertidas.
+   bien
+   bien
+   muy piola, nos brindó bastante confianza y nos ayudó con muchos
+      consejos....
+   Fue mi ayudante. Muy bueno, siempre dispuesto a responder preguntas.
+   Satisfecho.
+   Muy buena onda, y sabe explicar muy bien.
+   explica bien
+   Siempre tiene muy buena onda cuando le hacemos consultas (sobre todo del
+      ultimo tp, se nota que le gustan mucho los juegos)
+   -
+   explica algo rapido
+   Siempre haciendo comentarios graciosos jaja :P
+   Uno de los ayudantes mas copados que con tal de que entiendan lo que esta
+      explicando, es capaz de decir "nunca nadie pirateo un juego?!"
+      delante de una camara prendida. Fue un buen aporte para el grupo.
+   bien
+   La verdad que mucha onda para explicarte no tiene, se lo vio como con mas
+      ganas de jugar, en especial con el asunto de los hongos esos de los
+      parcialitos...
+   muy divertido el ejemplo del heap, y gracias por matarme con tanto cariño
+      los honguitos.. jajaja  ademas, fue muy claro con el ejercicio de
+      greedy y atento cuando tenia consultas =)
+   tiene que dejar de hablar de cosas truchas frente a la camara (?)
+   Explica bien y de forma entretenida
+   Bueno
+   No fue muy util para contestar mis dudas cuando recurrí a él. Las dos
+      veces que le pregunté me respondió totalmente lo contrario a lo
+      que me respondió Rosa 5 minutos después.
+
+
+- Pablo Musumeci
+   Gran dupla de enseñanza con nacho
+   Muy buen ayudante!
+   Da clases divertidas, y entendibles.
+   bien
+   nada
+   Las veces que dio la clase se entendió muy bien.
+   Muy copado explicando ejecricios con Nacho
+   No llegue a tratarlo.
+   La clase de Dijkstra con la presentación estuvo muy buena!
+   Tambien se toma su rol seriamente, corrije bien y es buena onda.
+   Deberia preparar un poco mas las clases quisas, se confundia mucho cuando
+      explico algo de colas y pilas y temrinamos todos confundidos
+   Emm no se si Pable Pablo, el que es un poquito más grande es este o el
+      que iba antes, el comentario era para ese... :S
+   se me pego decirle villero a los codigos feos jajaja..  buenisima la forma
+      que explico el ejercicio de grafos y el laberinto..
+   Daba buenas clases complotado con nacho
+   puro humo (?) pero cuando tenia que dar clase lo hacia muy entendible y
+      entretenido
+   Bien dentro de todo
+   Bueno
+   La mejor voluntad y la mejor onda siempre!
+
+
+- Ignacio Garay
+   Siempre para ayudar con trabajos. No sólo se queda con los contenidos de
+      la materia, además incentiva a explorar nuevos contenidos
+   Da buenas clases, entendibles y claras. Se complementa mucho con Pablo
+      Musumeci
+   bien
+   Las veces que dio la clase se entendió muy bien, me tiro algunos tips
+      claves para el TP3.
+   Lo mismo que pablo, los dos juntos explicaron muy bien los ejercicios que
+      daban
+   explica bien
+   Genio, crack, clases de 10.
+   Se nota que la tiene clara.
+   Muy bueno, siempre atendiendo dudas.
+   Muy exigente con las correcciones (no se, me contaron), le pone mas onda
+      al curso de la que ya tiene y es otro de los que se nota que sabe
+      bastante. En fin, muy buen aporte al grupo de docentes.
+   Explica bien
+   Sabe, es medio enredado explicando. Pero tiene paciencia y
+      predisposición. Es complicado que solo vaya uno de los dias si es
+      que tenes que preguntarle algo
+   creo que no va a pisar mas la biblioteca desp de la cantidad de veces que
+      le pregunte cosas XD  muy atento y copado para explicar! me corrigio
+      cosas importantes de los codigos y te incentivaba mucho las ganas
+      que ponia cuando explicaba
+   Buena onda, responde nuestras dudas.
+   Explica bien dentro de todo y de forma entretenida
+   Bueno
+   Igual que Pablo, la mejor voluntad y la mejor onda! A ambos me los
+      encontré en la biblioteca varias veces y dejaron de estudiar cosas
+      de ellos para responderme dudas!
+
+
+- Bruno Merlo Schrumann
+   Muy buen ayudante siempre bien predispuesto a responder dudas.
+   Siempre a disposicion para consultas tanto en el taller como en las
+      practicas.
+   bien
+   Explica bien, tiene muchas ganas de ayudar, no tiene problema en contestar
+      los mails cuando tiene tiempo, y si es necesario te tira una pista
+      sobre por dónde seguir.
+   tardo mucho en corregirnos los tps y no nos contestaba los mail
+   siempre presente para poder consultar cualquier duda, muy piola
+      tambien....
+   Es  bueno explicando sus temas, sabe darse a entender.
+   Las veces que dio la clase se entendió muy bien, me tiro algunos tips
+      claves para el TP3.
+   explica bien
+   Muy didactico, muy buena onda.
+   Explica muy bien y me ayudó en varios temas que no entendía.
+   Creo que fue uno de los que siempre estuvo.
+   no entiendo mucho cuando explica en el pizarrón
+   Si bien no se lo vio taaanto en el aula, fue bastante activo en la lista y
+      dando buenas respuestas a cada consulta.
+   No recuerdo clases de el
+   pobre que quedaba solo a las 18 en el taller!! jaja  estuvo bueno el
+      ejemplo de las parejas que habia dado en clase y era muy atento
+      preguntandonos como nos iba y como ibamos con los tps
+   Siempre presente en el taller para responder dudas.
+   deja de acreditar bruno
+   Explica bien
+   Bueno
+   Siempre servicial y con ganas de ayudar, también la mejor onda para
+      responderte dudas.
+   Siempre disponible para resolver cualquier duda.
+
+
+- Federico López
+   Conciso y claro
+   bien
+   Dio pocas clases según recuerdo, pero bien.
+   Me acerque un par de veces a hacerle consultas y me sirvió mucho lo que
+      me explicó, es muy paciente y habla claro.
+   -
+   Me lo cruce poco como para opinar sobre el, pero las pocas clases que dio
+      fueron buenas.
+   No recuerdo clases de el
+   no charle mucho con el en cuanto a ejercicios etc, pero fue muy simpatico
+      cuando no tuvo problemas en venir a resolvernos unas dudas del getop
+      cuando le preguntamos con una amiga..  muy atento y claro cuando le
+      preguntamos =)
+   Buena predisposicion para responder consultas.
+   Me pareció que explicaba bien
+   Bueno
+   Igual que todos los chicos, siempre dispuesto a dar una mano!
+   una vez tuve un problema con un TDA y se tomo todo el tiempo para tratar
+      de ver donde estaba el error. como no lo encontro me dio un consejo.
+      y gracias a ese consejo pude encontrar el error.   bien
+
+
+- Federico Barrios
+   Dice que es introvertido, pero explicó muy bien cuando le tocó
+   bien
+   Las veces que dio la clase se entendió muy bien.
+   Muy didactico.
+   Fue mi ayudante y siempre tuvo una excelente predisposición.
+   -
+   Copado como él solo, compite cabeza a cabeza con Gaston Martinez. Activo
+      y claro con sus explicaciones, hace participar al publico y le
+      deberian dar mas temas para dar en clase.
+   Explica bien
+   si bien decia que se ponia nervioso cuando estaba adelante explicando,
+      quedate tranquilo que se te entendia bien y la hacias divertida =)
+   Buena onda
+   Explica bien aunque habla un poco rápido a veces
+   Bueno
+   La mejor onda con todo!
+
+
+- Gastón Kleimann
+   bien
+   No tengo recuerdos de una clase dada por el, no hay crítica.
+   ser etéreo,  tengo la teoría de que pertenece a otro plano existencial y
+      que desciende al nuestro, esporádicamente, para comunicarte que
+      todavía no cerró la nota del tp1
+   -
+   Se quien es, pero practicamente no me lo cruce en todo el cuatrimestre,
+      parece buena onda igual :D
+   No recuerdo clases de el
+   eeemm.. se quien es, pero la verdad no hable con el..
+   Bueno
+   No tuvimos una muy buena experiencia con Gastón. Entiendo perfectamente
+      sus problemas con el trabajo, porque me pongo en su lugar y estoy
+      seguro que no tuvo un año fácil. La única bronca que me da es que
+      lo terminé pagando yo y mi compañera que no teníamos nada que ver
+      y recién al final, cuando empezamos a trabajar con Manuel, nos
+      dimos cuenta que la materia nos había costado tante en parte porque
+      Gastón no nos daba bolilla.
+   Irresponsable. Nunca cumplio con su deber
+
+
+- Javier Choque
+   Llega a extremos: de empezar una explicación muy lentamente llega a
+      acelerarse demasiado
+   Muy buen ayudante.
+   Las veces que dio clases en la practica fueron buenas, con buenos
+      ejemplos. Exelente cuando explico LaTeX en el taller.
+   bien
+   Explica muy organizado. Es genial, la clase de Latex fue perfecta.
+   Recuerdo solo la clase en la que explicó la resolución del parcial.
+      Bien.
+   Las pocas veces que explico algo, siempre supo explicarse muy bien.
+   habla muy bajo
+   No muy claro.
+   -
+   Tambien toma su rol seriamente y exige lo necesario al corregir.
+   Muy claro y pausado
+   en el taller le pregunte unas cosas una vez y me ayudo bastante.. se me
+      hizo mucho lio cuando explico lo de puntos de artuculacion! pero
+      igualmente desp agarre el codigo y lo entendi por suerte
+   Bien dentro de todo, en momentos hablaba algo bajo
+   Bueno
+
+
+- Manuel Soldini
+   Sabe bastante se explica bien
+   bien
+   Muy cómico y muy llevadero. Mejoró mucho la clase con él.
+   explica bien, un poco desorganizado en el pizarrón
+   Muy formal con algunas cosas (muy positivo). Muy didactico.
+   Se que estuvo en la medida que pudo en las clases, pero se nota mucho
+      cuando esta. Por la buena onda y los ejemplos claros y didácticos.
+   La clase del laberinto fue muy buena.
+   Explica bien, aunque a veces es un poco estricto con las correcciones :P
+   Aquel ayudante que siempre te saca una sonrisa por la onda que le pone a
+      sus explicaciones. Claro y conciso con sus ejemplos. Deberian
+      ponerle una foto aparte con el mate en la seccion de ayudantes para
+      que todos sepan quien es :P
+   Claro, didactico y divertido
+   muuucho carisma, jajaja, imposible no reirte cuando explicaba, igualmente,
+      bien!! los ejercicios que traia eran divertidos, los explicaba bien
+      y se entendian..   me gusto mucho la muestra que hizo con el
+      laberinto y la comparasion de los tiempos
+   Dio buenas clases
+   Explica bien y de forma entretenida
+   Bueno
+   Un genio! muy buena onda y siempre dispuesto a ayudar.
+   Manuel se portó de diez. Nos mandó ÉL un mail para preguntarnos como
+      iba el TP y si nos queríamos juntar a verlo, después de trabajar
+      todo el día igual tenía ganas de juntarse en la biblioteca a
+      codear.  Estuvo tres horas con nosotros y nos dio una mano más que
+      grande y siempre con la mejor onda!  La verdad que un genio, y me
+      sentí cien por ciento respaldado por él.  Más que agradecido.
+
+
+- Gastón Goncalves
+   bien
+   Aparecio muy poco, no muy bueno.
+   -
+   Lamentablemente, no se quien es.
+   mmm.. no se quien es =S
+   Bueno
+
+
