@@ -1,6 +1,6 @@
-Este es el repositorio de Algoritmos II.
+Este es el repositorio del sitio web de Algoritmos y Programación II.
 
-Es un repo privado, que contiene la página web pública en el directorio [docs](docs). Por tanto, no se debe añadir material privado (como soluciones a los TPs).
+Contiene la página web pública en el directorio [docs](docs). Por tanto, no se debe añadir material privado (como soluciones a los TPs).
 
 La página web se publica en:
 

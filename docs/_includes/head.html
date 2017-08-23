@@ -6,12 +6,10 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-
   <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | relative_url }}" type="text/css" >
   <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}" type="text/css" />
   <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | relative_url }}" type="image/x-icon">
   <!-- <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}"> -->
-
 
   {% if page.math %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">

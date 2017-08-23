@@ -23,7 +23,7 @@ Apuntes
 * [Implementación de mergesort y quicksort en C](https://sites.google.com/site/fiuba7541rw/apuntes/Ordenamiento.pdf?attredirects=0)
 * [Introducción al uso de Makefile](https://sites.google.com/site/fiuba7541rw/apuntes/Makefile.pdf?attredirects=0)
 
-Además, puede resultar de interés consultar el [Apunte de Algoritmos y Programación I](https://drive.google.com/file/d/0B_7NYctMIDOLR0tWbWcwdldYcGc/view).
+Además, puede resultar de interés consultar el [Apunte de Algoritmos y Programación I](https://drive.google.com/file/d/0B0KKEIBDHL7tdEQ3bFZ2M3VrZzA/view).
 
 
 Recomendamos escribir los informes utilizando [LaTeX](http://www.latex-project.org/).
@@ -41,7 +41,7 @@ y un [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/Inf
 * [Makefile](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/Makefile?attredirects=0)
 * [Eliminación de recursión](https://sites.google.com/site/fiuba7541rw/clases/eliminacionderecursionclase2012-09-10/recursion-elim.zip?attredirects=0)
 * [Punteros a funciones](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/funciones.c?attredirects=0)
-* [Ejemplos de progra mación dinámica](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/ejemplosProgramacionDinamica.zip?attredirects=0) (coeficientes, escalones, soga y teléfono).
+* [Ejemplos de programación dinámica](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/ejemplosProgramacionDinamica.zip?attredirects=0) (coeficientes, escalones, soga y teléfono).
 
 Implementaciones de ordenamientos recursivos
 
