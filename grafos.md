@@ -1,5 +1,5 @@
 ---
-title: Grafos
+title: Grafos: Usos, implementaciones, recorridos.
 layout: default
 permalink: /:path/:basename/
 math: true
@@ -22,10 +22,10 @@ Implementar un algoritmo que, dado un grafo no dirigido, nos devuelva un ciclo d
 
 Antes que nada, debemos entender que el ejercicio en sí es el mismo, se trate de un grafo dirigido o uno no dirigido. La única diferencia se encuentra en que un ciclo por definción necesita contar con al menos dos aristas. Esta definición en sí no nos importaría mucho en el caso de un grafo dirigido, pero si en el de uno no dirigido. Si no lo tuviéramos en cuenta, todo grafo no dirigido, con al menos una arista, va a tener un ciclo, lo cual no es cierto. 
 
-Para resolver este problema, podemos pensar en simplemente recorrer el grafo no dirigido, sea con un recorrido BFS o DFS. Una vez que nos topemos con un vértice ya visitado, ahí tenemos un posible ciclo. Esto es, si estoy viendo los adyacentes a un vértice dado, y dicho vértice está visitado, uno se apresuraría a decir que ahí se cierra un ciclo. Esto es cierto, salvo un caso: que dicho vértice visitado sea el antecesor a nuestro vértice en el recorrido (BFS o DFS). Recordar que se trata de un grafo no dirigido, por ende si _v_ tiene de adyacente a _w_, entonces también vale la recíproca, y no por ello se crea un ciclo. El problema se da con la arista de la que vengo. Básicamente, deberíamos obviar al vértice del que vengo en el recorrido, que justamente es el padre. Si nosotros ya tenemos que padre[W] = V, entonces simplemente tenemos que saltearnos a V cuando veamos a los adyacentes ya visitados.
+Para resolver este problema, podemos pensar en simplemente recorrer el grafo no dirigido, sea con un recorrido _BFS_ o _DFS_. Una vez que nos topemos con un vértice ya visitado, ahí tenemos un posible ciclo. Esto es, si estoy viendo los adyacentes a un vértice dado, y dicho vértice está visitado, uno se apresuraría a decir que ahí se cierra un ciclo. Esto es cierto, salvo un caso: que dicho vértice visitado sea el antecesor a nuestro vértice en el recorrido (BFS o DFS). Recordar que se trata de un grafo no dirigido, por ende si _v_ tiene de adyacente a _w_, entonces también vale la recíproca, y no por ello se crea un ciclo. El problema se da con la arista de la que vengo. Básicamente, deberíamos obviar al vértice del que vengo en el recorrido, que justamente es el padre. Si nosotros ya tenemos que `padre[W] = V`, entonces simplemente tenemos que saltearnos a V cuando veamos a los adyacentes ya visitados.
 
 
-Lo resolvemos con ambos recorridos. Por BFS:
+Lo resolvemos con ambos recorridos. Por _BFS_:
 ```
 def obtener_ciclo_bfs(grafo):
   visitados = {}
@@ -66,7 +66,7 @@ def ciclo(padre, inicio, fin):
   camino.append(inicio)
   return camino.invertir() 
 ```
-La solución por DFS sería:
+La solución por _DFS_ sería:
 ```
 def obtener_ciclo_dfs(grafo):
   visitados = {}
@@ -93,7 +93,7 @@ def dfs_ciclo(grafo, v, visitados, padre):
   return None
 ```
 
-Ahora bien, para ver el orden, podemos ver que en el caso feliz, vamos a encontrar un ciclo muy rapido. Pero claramente eso no nos cambia mucho. Pensemos el caso de, a lo sumo, encontrar el ciclo muy tarde en el recorrido (también veremos el caso de no haber ciclo). En ese caso, en cualquiera de los dos recorridos vamos a pasar por cada vértice una vez, y solo una vez (a fin de cuentas, no volvemos a estar sobre un vértice ya visitado). Por cada vértice vemos SUS aristas. Recordar que es muy importante no caer en la tentación de decir que entonces el algoritmo es _O(V*E)_, porque si bien es cierto, es una muy mala cota. Por cada vértice pasamos por SUS arisas, que distan de ser las totales del grafo. Si por cada vértice vemos sus aristas (y no las de todo el grafo), en total estamos viendo todas las aristas del grafo, dos veces (una por cada extremo). Entonces, el orden será _O(V + 2 E) = O(V + E)_.
+Ahora bien, para ver el orden, podemos ver que en el caso feliz, vamos a encontrar un ciclo muy rapido. Pero claramente eso no nos cambia mucho. Pensemos el caso de, a lo sumo, encontrar el ciclo muy tarde en el recorrido (también veremos el caso de no haber ciclo). En ese caso, en cualquiera de los dos recorridos vamos a pasar por cada vértice una vez, y solo una vez (a fin de cuentas, no volvemos a estar sobre un vértice ya visitado). Por cada vértice vemos _sus_ aristas. Recordar que es muy importante no caer en la tentación de decir que entonces el algoritmo es _O(V*E)_, porque si bien es cierto, es una muy mala cota. Por cada vértice pasamos por _sus_ arisas, que distan de ser las totales del grafo. Si por cada vértice vemos sus aristas (y no las de todo el grafo), en total estamos viendo todas las aristas del grafo, dos veces (una por cada extremo). Entonces, el orden será _O(V + 2 E) = O(V + E)_.
 
 Haciendo un poco más de análisis: es acaso el caso de no tener ciclos nuestro peor caso? Supongamos que el grafo es conexo, por simplifcación. Si el grafo no tiene ciclos, y es conexo, necesariamente se trata de un árbol. Para este caso, _E = V - 1_, por ende nuestro orden a fin de cuentas terminaría siendo _O(V)_. Esto implica que entonces nuestro algoritmo es en realidad _O(V)_? No, significa que ese, que a priori podíamos pensar que era nuestro peor caso, en realidad no lo es. Nuestro peor caso implica que haya un ciclo, pero tener la mala suerte de tardar en encontrarlo. Ya sea porque el vértice en el que se empieza el recorrido está lejos del ciclo, o por el orden aleatorio de las cosas.
 
@@ -103,21 +103,28 @@ Cuáles serían las diferencias si en vez de trabajar con un grafo no dirigido, 
 1) Implementar un algoritmo que, dado un grafo dirigido, nos devuelva un ciclo dentro del mismo, si es que los tiene. Indicar el orden del algoritmo. 
 
 2) Un árbol es un grafo no dirigido que cumple con las siguientes propiedades:
-  a) _|E| = |V| + 1_
-  b) Es acíclico
-  c) Es conexo
 
-  Por teorema, si un grafo cumple dos de estas tres condiciones, será árbol (y por consiguiente, cumplirá la tercera). Haciendo uso de ésto (y únicamente de ésto), se pide implementar una función que reciba un grafo no dirigido y determine si se trata de un árbol, o no. Indicar el orden de la función implementada. 
+    a) _|E| = |V| + 1_
+
+    b) Es acíclico
+
+    c) Es conexo
+
+    Por teorema, si un grafo cumple dos de estas tres condiciones, será árbol (y por consiguiente, cumplirá la tercera). Haciendo uso de ésto (y únicamente de ésto), se pide implementar una función que reciba un grafo no dirigido y determine si se trata de un árbol, o no. Indicar el orden de la función implementada. 
 
 3) Se tiene un grafo dirigido G, que representa la jerarquía de personal dentro de una empresa (es un _organigrama_). En este grafo los vértices modelan a personas, y una arista _(v, w)_ representa la relación _v es jefe directo de w_. 
 Implementar una función que nos devuelva una secuencia para comunicar cierta noticia a todos los empleados, siendo que los cargos de mayor rango deben enterarse primero. Tener en cuenta que hay personas que tienen varios jefes, y que no pueden enterarse de la noticia antes que todos ellos. Además, podría haber más de un dueño/accionista de la empresa, por lo que no puede asumirse que haya una única persona sin jefe. 
 
 4) Proponer una primitiva para calcular el grafo traspuesto $$G^T$$ de un grafo dirigido _G_. El grafo traspuesto $$GˆT$$ posee los mismos vértices que G, pero con todas sus aristas invertidas (por cada arista _(v, w)_ en _G_, existe una arista _(w, v)_ en $$G^T$$) para un grafo implementado con:
-  a) lista de adyancencias
-  b) matriz de adyacencias
+
+    a) lista de adyancencias
+
+    b) matriz de adyacencias
 
 5) La teoría de los 6 grados de separación dice que cualquiera en la Tierra puede estar conectado a cualquier otra persona del planeta a través de una cadena de conocidos que no tiene más de cinco intermediarios (conectando a ambas personas con solo seis enlaces). Suponiendo que se tiene un grafo G en el que cada vértice es una persona y cada arista conecta gente que se conoce (el grafo es no dirigido): 
-  a) Implementar un algoritmo para comprobar si se cumple tal teoría para todo el conjunto de personas representadas en el grafo G. Indicar el orden del algoritmo. 
-  b) Suponiendo que en el grafo G no habrán altas ni bajas de vértices, pero podrían haberla de aristas (la gente se va conociendo), explicar ventajas y desventajas tendría implementar al grafo G con una matriz de adyacencia. 
+
+    a) Implementar un algoritmo para comprobar si se cumple tal teoría para todo el conjunto de personas representadas en el grafo G. Indicar el orden del algoritmo. 
+
+    b) Suponiendo que en el grafo G no habrán altas ni bajas de vértices, pero podrían haberla de aristas (la gente se va conociendo), explicar ventajas y desventajas tendría implementar al grafo G con una matriz de adyacencia. 
 
 ## Bibliografía y referencias
