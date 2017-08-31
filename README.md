@@ -1,11 +1,12 @@
 Este es el repositorio del sitio web de Algoritmos y Programación II.
 
-Contiene la página web pública en el directorio [docs](docs). Por tanto, no se debe añadir material privado (como soluciones a los TPs).
-
-La página web se publica en:
+Contiene la página web pública en el directorio [docs](docs), publicada en:
 
 <https://algoritmos-rw.github.io/algo2/>
 
+y redireccionada desde:
+
+<https://algoritmos7541-rw.tk/>
 
 ## Instrucciones para actualizar la página web
 
