@@ -14,26 +14,26 @@ Las clases teóricas se dictarán los días lunes y viernes de 17:30 a 19:00 hs 
 Fechas importantes:
 
 {: .table .table-striped}
-| Día        |   Fecha   |      Detalle     |
-|------------|-----------|------------------|
-| Viernes    | 25/09/17 | Entrega del TP0 |
-| Viernes    | 01/09/17 | Entrega del vector dinámico |
-| Viernes    | 08/09/17 | Entrega de la pila |
-| Viernes    | 15/09/17 | 1er parcialito (en el horario de la teórica) |
-| Viernes    | 15/09/17 | Entrega de la cola |
-| Viernes    | 22/09/17 | Entrega de la lista enlazada |
-| Viernes    | 06/10/17 | Entrega del hash |
-| Lunes      | 09/10/17 | Entrega del TP1 |
-| Viernes    | 13/10/17 | 2do parcialito (en el horario de la teórica) |
-| Lunes      | 23/10/17 | Entrega del ABB |
-| Viernes    | 06/11/17 | Entrega del heap |
-| Viernes    | 06/11/17 | 3er parcialito (en el horario de la teórica) |
-| Viernes    | 17/11/17 | Entrega del TP2 |
-| Viernes    | 01/12/17 | Entrega del TP3 |
-| Viernes    | 01/12/17 | 4to parcialito (en el horario de la teórica) |
-| Lunes      | 04/12/17 | 1er recuperatorio (parcialitos 1 y 2) |
-| Viernes    | 11/12/17 | 1er recuperatorio (parcialitos 3 y 4) |
-| Lunes      | 15/12/17 | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
+| Día         |   Fecha      |      Detalle     |
+|-------------|--------------|------------------|
+| **Viernes** | **25/08/17** | **Entrega del TP0** |
+| Viernes     | 01/09/17     | Entrega del vector dinámico |
+| Viernes     | 08/09/17     | Entrega de la pila |
+| **Viernes** | **15/09/17** | **1er parcialito (en el horario de la teórica)** |
+| Viernes     | 15/09/17     | Entrega de la cola |
+| Viernes     | 22/09/17     | Entrega de la lista enlazada |
+| Viernes     | 06/10/17     | Entrega del hash |
+| **Lunes**   | **09/10/17** | **Entrega del TP1** |
+| **Viernes** | **13/10/17** | **2do parcialito (en el horario de la teórica)** |
+| Lunes       | 23/10/17     | Entrega del ABB |
+| Lunes       | 06/11/17     | Entrega del heap |
+| **Viernes** | **06/11/17** | **3er parcialito (en el horario de la teórica)** |
+| **Viernes** | **17/11/17** | **Entrega del TP2** |
+| **Viernes** | **01/12/17** | **4to parcialito (en el horario de la teórica)** |
+| **Viernes** | **01/12/17** | **Entrega del TP3** |
+| Lunes       | 04/12/17     | 1er recuperatorio (parcialitos 1 y 2) |
+| Viernes     | 11/12/17     | 1er recuperatorio (parcialitos 3 y 4) |
+| Lunes       | 15/12/17     | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
 
 {: .table .table-striped}
 | Fecha       |      Detalle       |
