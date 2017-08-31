@@ -50,3 +50,6 @@ Los temas a ser evaluados en cada parcialito son:
 - **2do parcialito**: Ordenamientos no comparativos. Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. AVL. Iteradores. Árboles B y QuadTrees.
 - **3er parcialito**: Heap y heapsort. Grafos: Implementaciones y usos de grafos. Orden topológico. Recorridos DFS y BFS.
 - **4to parcialito**: Camino mínimo (algoritmos de Dijkstra, A* y BFS). Árboles de tendido mínimo (algoritmos de Prim y Kruskal). Algoritmos greedy. Backtracking. Programación dinámica.
+
+También contamos con un [calendario detallado](https://docs.google.com/spreadsheets/d/e/2PACX-1vSB6XSrrr8DApYSShBEgudIIlqQbjDxzru-_8P3mq5YYBlFMsnwDt1u635w4D_lbi0mZCJu35-uLLx-/pubhtml?gid=8&single=true) de las clases para descargar.
+
