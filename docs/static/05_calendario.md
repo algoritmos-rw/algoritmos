@@ -25,15 +25,15 @@ Fechas importantes:
 | Viernes    | 06/10/17 | Entrega del hash |
 | Lunes      | 09/10/17 | Entrega del TP1 |
 | Viernes    | 13/10/17 | 2do parcialito (en el horario de la teórica) |
-| Lunes      | 15/05/17 | Entrega del ABB |
-| Viernes    | 26/05/17 | Entrega del heap |
-| Viernes    | 02/06/17 | 3er parcialito (en el horario de la teórica) |
-| Viernes    | 02/06/17 | Entrega del TP2 |
-| Viernes    | 23/06/17 | Entrega del TP3 |
-| Viernes    | 23/06/17 | 4to parcialito (en el horario de la teórica) |
-| Lunes      | 26/06/17 | 1er recuperatorio (parcialitos 1 y 2) |
-| Viernes    | 30/06/17 | 1er recuperatorio (parcialitos 3 y 4) |
-| Lunes      | 03/07/17 | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
+| Lunes      | 23/10/17 | Entrega del ABB |
+| Viernes    | 06/11/17 | Entrega del heap |
+| Viernes    | 06/11/17 | 3er parcialito (en el horario de la teórica) |
+| Viernes    | 17/11/17 | Entrega del TP2 |
+| Viernes    | 01/12/17 | Entrega del TP3 |
+| Viernes    | 01/12/17 | 4to parcialito (en el horario de la teórica) |
+| Lunes      | 04/12/17 | 1er recuperatorio (parcialitos 1 y 2) |
+| Viernes    | 11/12/17 | 1er recuperatorio (parcialitos 3 y 4) |
+| Lunes      | 15/12/17 | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
 
 {: .table .table-striped}
 | Fecha       |      Detalle       |
