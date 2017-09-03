@@ -39,10 +39,12 @@ Además de todos los casos no descriptos que ustedes crean necesarios.
 
 Para compilar y verificar las pruebas:
 1. Compilar todo el código:
-    gcc -g -std=c99 -Wall -Wconversion -Wno-sign-conversion -Werror -o pruebas *.c
+
+        gcc -g -std=c99 -Wall -Wconversion -Wno-sign-conversion -Werror -o pruebas *.c
 
 1. Verificar que no pierden memoria:
-    valgrind --leak-check=full --track-origins=yes --show-reachable=yes ./pruebas
+
+        valgrind --leak-check=full --track-origins=yes --show-reachable=yes ./pruebas
     
 Al igual que en los casos anteriores, deberán entregar el código en papel, con el nombre y padrón, imprimiendo el archivo `pila.c` y el archivo `pruebas_alumno.c`.
 Además, deben subir el código a la [página de entregas de la materia](https://algoritmos7541-rw.tk/entregas/), con el código completo.
