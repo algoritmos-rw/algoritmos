@@ -27,7 +27,7 @@ Fechas importantes:
 | **Viernes** | **13/10/17** | **2do parcialito (en el horario de la teórica)** |
 | Lunes       | 23/10/17     | Entrega del ABB |
 | Lunes       | 06/11/17     | Entrega del heap |
-| **Viernes** | **06/11/17** | **3er parcialito (en el horario de la teórica)** |
+| **Lunes**   | **06/11/17** | **3er parcialito (en el horario de la teórica)** |
 | **Viernes** | **17/11/17** | **Entrega del TP2** |
 | **Viernes** | **01/12/17** | **4to parcialito (en el horario de la teórica)** |
 | **Viernes** | **01/12/17** | **Entrega del TP3** |
