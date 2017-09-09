@@ -4,7 +4,7 @@ title: Cola
 permalink: /tps/cola
 ---
 
-Cola Enlazada
+Cola enlazada
 =============
 
 Se incluye en [cola.zip](https://sites.google.com/site/fiuba7541rw/tps/cola/cola.zip?attredirects=0&d=1) el archivo `cola.h` correspondiente al ejercicio de la cola enlazada para el viernes 15 de septiembre.
