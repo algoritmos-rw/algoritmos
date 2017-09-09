@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Cola publicado"
+title: "Publicado TDA Cola"
 date: 2017-09-09 15:00:00 -0300
 ---
 
-Publicada la [Cola]({{ 'tps/cola' | relative_url }}).
+Publicado TDA [Cola]({{ 'tps/cola' | relative_url }}).
