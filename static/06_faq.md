@@ -6,6 +6,10 @@ permalink: /faq/
 
 Preguntas frecuentes
 =========
+{:.no_toc}
+
+* Contenido
+{:toc}
 
 ## Preguntas generales
 
