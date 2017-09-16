@@ -16,3 +16,4 @@ A continuación encontrarán los trabajos prácticos para entregar que iremos pl
 | [VD](vd)      | [vd.zip](https://sites.google.com/site/fiuba7541rw/tps/vector-dinamico/vd.zip?attredirects=0&d=1) | 	1ro de septiembre
 | [Pila](pila)      | [pila.zip](https://sites.google.com/site/fiuba7541rw/tps/pila/pila.zip?attredirects=0&d=1) | 	8 de septiembre
 | [Cola](cola)      | [cola.zip](https://sites.google.com/site/fiuba7541rw/tps/cola/cola.zip?attredirects=0&d=1) | 	15 de septiembre
+| [Lista](lista)      | [lista.zip](https://sites.google.com/site/fiuba7541rw/tps/lista/lista.zip?attredirects=0&d=1) | 	22 de septiembre
