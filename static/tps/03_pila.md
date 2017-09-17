@@ -15,7 +15,7 @@ Hay que escribir el archivo `pila.c`, con la implementación de la estructura de
 
 En el archivo pila.c ya se les sugiere la siguiente estructura para la pila:
 
-```C
+``` cpp
 struct pila {
     void** datos;
     size_t cantidad;  // Cantidad de elementos almacenados.
