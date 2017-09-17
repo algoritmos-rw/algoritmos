@@ -19,6 +19,7 @@ exclude:
 
 kramdown:
   footnote_backlink: "&#x21A9;&#xFE0E;"
+  highlighter: rouge
 
 collections:
   tps:
