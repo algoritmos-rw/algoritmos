@@ -50,17 +50,21 @@ Wachencoin un *rosita*.
 En Wachencoin, los programas tienen la siguiente forma:    
 
 ```
-push coordenadas
-push id_usuario
+<id_usuario>
+<coordenadas>
 validar_usuario
-push dinero
-push id_usuario
+<id_usuario>
+<dinero>
 validar_pago
-push dinero
-push user_id_2
-push user_id
+<dinero>
+<user_id_2>
+<user_id>
 pagar
-```    
+```     
+(**nota**: arriba está escrito en varias líneas por claridad; en realidad
+el programa se escribe en una sola línea separada por el caracter `;` -- ver
+ejemplos abajo.)  
+
 Para clarificar, marcamos las siguientes operaciones:    
 
 * `push`: empuja un dato al stack
@@ -70,7 +74,7 @@ Para clarificar, marcamos las siguientes operaciones:
 fondos suficientes para hacer la operación. 
 * `pagar`: desapila tres elementos y hace el movimiento de fondos.   
 
-**Atención**: Si bien el de arriba es una transacción bien escrita, no es
+**Atención**: Si bien la de arriba es una transacción bien escrita, no es
 la *única* posible. También habrá transacciones que hacen pagos a múltiples
 personas; o de varias personas a una sola.   
 
@@ -82,7 +86,7 @@ programa y no se realiza el pago.
 Es necesario implementar una **interfaz** del programa, que leerá por entrada 
 entrada estándar los siguientes comandos:       
 
-* `agregar_pago <id> <monto> "<código>"`, que agregará a la cola de 
+* `agregar_pago <id> <monto> <código>`, que agregará a la cola de 
 procesamiento la transacción. El código se manifiesta en una sola línea, 
 separando las distintas instrucciones con el caracter punto y coma (`;`). 
 * `pagos_pendientes`: devuelve la cantidad y monto total de los pagos sin 
@@ -99,10 +103,12 @@ El estado inicial de las cuentas (número, saldo, coordenadas) se carga de un
 archivo pasado por parámetro al programa, que tiene el siguiente formato:   
 
 ```
+0, 13.37, 14f6c9dae22
 1, 58.92, 916f4c31aaa
 2, 9301.92, e9a7f54270d
 (...)
-```
+```  
+Los números de cuenta son consecutivos empezando desde 0.   
 
 
 **Restricciones sobre la complejidad**: todas las operaciones del lenguaje de 
