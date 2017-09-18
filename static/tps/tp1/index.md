@@ -67,12 +67,12 @@ ejemplos abajo.)
 
 Para clarificar, marcamos las siguientes operaciones:    
 
-* `push`: empuja un dato al stack
 * `validar_usuario`: desapila dos elementos y revisa que las coordenadas
 (contraseña) sean apropiadas para el usuario. 
 * `validar_pago`: desapila dos elementos y revisa que el usuario tenga
 fondos suficientes para hacer la operación. 
-* `pagar`: desapila tres elementos y hace el movimiento de fondos.   
+* `pagar`: desapila tres elementos y hace el movimiento de fondos. 
+* por defecto: empuja un dato al stack.
 
 **Atención**: Si bien la de arriba es una transacción bien escrita, no es
 la *única* posible. También habrá transacciones que hacen pagos a múltiples
