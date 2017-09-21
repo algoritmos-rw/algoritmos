@@ -56,3 +56,9 @@
 .navbar {
   margin-bottom: 0!important;
 }
+
+@media (max-width: 450px) {
+  .hidden-xxs {
+    display: none !important;
+  }
+}
