@@ -9,9 +9,9 @@ Entorno de desarrollo
 
 Para poder hacer los ejercicios y TPs de este curso necesitás tener funcionando en tu PC los siguientes programas:
 
-*   compilador C: **gcc** (y opcionalmente **clang**)
+*   compilador C: **GCC** (y opcionalmente **clang**)
 *   **GNU make**
-*   **valgrind**
+*   **Valgrind**
 *   **Python** (opcional, para el último TP)
 
 Además es altamente recomendado contar con un **editor de texto** o un **entorno de desarrollo (IDE)** que permita programar y compilar cómodamente. Algunas posibilidades son:
@@ -21,31 +21,31 @@ Además es altamente recomendado contar con un **editor de texto** o un **entorn
 
 ## Instalar Linux
 
-Todas las herramientas mencionadas son multiplataforma, lo que significa que pueden ser utilizadas en cualquier sistema operativo. Todas... salvo una: valgrind. Lamentablemente **valgrind no funciona sobre Windows** (existen algunos sustitutos, pero como en esta cátedra utilizamos valgrind para corregir los trabajos prácticos, es recomendable que también uses valgrind). Para Mac OS X existe una versión pero aún no es estable. Esto significa que nuestra única opción es **Linux**.
+Todas las herramientas mencionadas son multiplataforma, lo que significa que pueden ser utilizadas en cualquier sistema operativo. Todas... salvo una: Valgrind. Lamentablemente **Valgrind no funciona sobre Windows** (existen algunos sustitutos, pero como en este curso utilizamos Valgrind para corregir los trabajos prácticos, es recomendable que también uses Valgrind). Para Mac OS X existe una versión pero aún no es estable. Esto significa que nuestra única opción es **Linux**.
 
-Existen muchas distribuciones de Linux, y cada una se configura de manera diferente. La distribución más popular hoy en día es **Ubuntu**, y es la que explicamos en esta guía. Si ya tenés Ubuntu instalado, podés saltear al paso de instalación de las herramientas.
+Existen muchas distribuciones de Linux, y cada una se configura de manera diferente. Una de las distribuciones más populares hoy en día es **Ubuntu**, y es la que explicamos en esta guía. Si ya tenés Ubuntu instalado, podés saltear al paso de instalación de las herramientas.
 
 ## ¡Pero quiero seguir usando Windows!
 
-Si actualmente tenés Windows, básicamente tenés 3 opciones para instalar Linux en tu PC:
+Si actualmente tenés Windows, básicamente tenés tres opciones para instalar Linux en tu PC:
 
 1.  Linux como único sistema operativo (**chau Windows**).
 1.  Linux **al lado de Windows** (esta opción se conoce como **_dual boot_**).
 1.  Linux **dentro de Windows**, corriendo dentro de una **máquina virtual**.
 
-Si no querés borrar Windows, la opción 3 suele ser la más fácil y es la que se explica a continuación.</div>
+Si no querés borrar Windows, la opción 3 suele ser la más fácil y es la que se explica a continuación.
 
 ## Virtualbox + Ubuntu
 
 Virtualbox es el software de virtualización (es decir, que permite ejecutar una máquina virtual) recomendado. A grandes resgos, los pasos necesarios para llevar a cabo la instalación son:
 
-1.  [Instalar Virtualbox](http://www.virtualbox.org/wiki/Downloads) en Windows
+1.  [Instalar Virtualbox](http://www.virtualbox.org/wiki/Downloads) en Windows.
 1.  Utilizando Virtualbox, crear una máquina virtual. Recomendamos asignar al menos 4 GB de disco y 512 MB de memoria RAM.
-1.  [Bajar la ISO de Ubuntu](http://www.ubuntu.com/getubuntu/download) de 32 bits
-1.  Arrancar la máquina virtual con la ISO asignada a la lectora de CD
-1.  Seguir los pasos de instalación de Ubuntu
-1.  (Opcional) Instalar los _Guest Additions_ de Virtualbox dentro de Ubuntu ([explicado acá](http://reciclado100.blogspot.com.ar/2009/02/como-instalar-guest-additions.html) en español o [acá](http://helpdeskgeek.com/linux-tips/install-virtualbox-guest-additions-in-ubuntu/) en inglés)
-1.  Instalar dentro de Ubuntu las herramientas necesarias para el curso (explicado más adelante)
+1.  [Bajar la ISO de Ubuntu](http://www.ubuntu.com/getubuntu/download) de 32 bits.
+1.  Arrancar la máquina virtual con la ISO asignada a la lectora de CD.
+1.  Seguir los pasos de instalación de Ubuntu.
+1.  (Opcional) Instalar los _Guest Additions_ de Virtualbox dentro de Ubuntu ([explicado acá](http://reciclado100.blogspot.com.ar/2009/02/como-instalar-guest-additions.html) en español o [acá](http://helpdeskgeek.com/linux-tips/install-virtualbox-guest-additions-in-ubuntu/) en inglés).
+1.  Instalar dentro de Ubuntu las herramientas necesarias para el curso (explicado más adelante).
 
 Los pasos 1 a 5 están explicados en detalle en cualquiera de las siguientes guías:
 
@@ -59,8 +59,6 @@ El último paso se explica a continuación.
 
 Abrir una terminal (CTRL+ALT+T) y escribir lo siguiente:
 
-``` cpp
-sudo apt-get install build-essential valgrind geany manpages-dev clang gdb
-```
+`sudo apt-get install build-essential valgrind geany manpages-dev clang gdb`
 
 Te va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas. ¡Ya está!
