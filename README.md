@@ -12,7 +12,7 @@ y redireccionada desde:
 
 Cualquier commit en el directorio raíz se auto-publica en la página al hacer push a la rama _master_. GitHub se encarga de ese proceso.
 
-Para visualizar los cambios de manera local, se debe instalar Jekyll. El archivo [Gemfile](docs/Gemfile) lo hace bastante fácil:
+Para visualizar los cambios de manera local, se debe instalar Jekyll. El archivo [Gemfile](Gemfile) lo hace bastante fácil:
 
 ```
 # Setup inicial
