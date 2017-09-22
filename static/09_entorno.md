@@ -37,7 +37,7 @@ Si no querés borrar Windows, la opción 3 suele ser la más fácil y es la que 
 
 ## Virtualbox + Ubuntu
 
-Virtualbox es el software de virtualización (es decir, que permite ejecutar una máquina virtual) recomendado. A grandes resgos, los pasos necesarios para llevar a cabo la instalación es:
+Virtualbox es el software de virtualización (es decir, que permite ejecutar una máquina virtual) recomendado. A grandes resgos, los pasos necesarios para llevar a cabo la instalación son:
 
 1.  [Instalar Virtualbox](http://www.virtualbox.org/wiki/Downloads) en Windows
 1.  Utilizando Virtualbox, crear una máquina virtual. Recomendamos asignar al menos 4 GB de disco y 512 MB de memoria RAM.
