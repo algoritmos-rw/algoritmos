@@ -1,4 +1,11 @@
-![](tp1logo.png)\   
+---
+layout: page
+title: TP1: Wachencoin
+permalink: '/tps/tp1'
+---
+
+
+![](tp1logo.png)
 
 Trabajo práctico 1
 ================    
@@ -16,10 +23,8 @@ explicación normal de lo que tienen que utilizar
 
 Interludio: Bitcoin
 -------------------   
-**Bitcoin** es un programa que corre en sistemas distribuídos que simula un 
-sistema de pagos; lo esencial es que es descentralizado y no requiere un 
-respaldo externo (en billetes, por ejemplo) del dinero que utiliza. 
-
+**Bitcoin** es un sistema de pagos digital descentralizado que no requiere un
+respaldo externo (en billetes, por ejemplo) del dinero que utiliza.
 
 En Bitcoin y sus derivados, los pagos son en realidad programas (*scripts*)
 que se escriben en un *lenguaje de pila*.    
@@ -28,13 +33,9 @@ Un lenguaje de pila opera básicamente de dos formas: apilando y desapilando
 datos del stack, para poder usar funciones sobre ellos. Un ejemplo puede ser
 la polaca inversa que se utilizaba en las antiguas calculadoras digitales.  
 
-Bitcoin es una criptomoneda y utiliza fuertemente criptografía de clave
-pública y funciones de hashing para garantizar que sólo los dueños
-de las monedas puedan utilizarlas, pero todos puedan validar las transacciones.
-
-**¡A no desesperar!** Para este TP sólo nos interesa las estructuras de datos
-que pueden servir en un programa como Bitcoin. Cómo utilizar la criptografía 
-y las funciones de hash no nos concierne para este trabajo.
+Aunque Bitcoin tiene una arquitectura compleja para garantizar transferencias
+seguras e instantáneas entre miembros de la red, en este TP sólo nos interesan
+las estructuras de datos que pueden ser útiles en una red de este tipo.
 
 Wachencoin
 ----------    
