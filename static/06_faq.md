@@ -55,6 +55,15 @@ void f(int x){
 
 De esta forma, el compilador puede hacer el chequeo de tipos sin conocer el cuerpo de la función.
 
+### ¿Por qué mis `printf` no se imprimen?  
+
+La convención en Unix es que la entrada estándar y la salida estándar tengan un búfer asociado. Esto significa que al utilizar `printf` de la manera normal, no se imprime inmediatamente a la consola: sólo sucede cuando suficientes mensajes están esperando ser impresos. Por esto, si el programa se termina por algún error entre que llamamos a `printf` y que el búfer se vacía, nuestro mensaje no se muestra.   
+La solución es utilizar un canal específico para los errores, que no tiene un búfer asociado: `stderr`. Se puede utilizar como cualquier archivo llamando a `fprintf`:  
+
+```c
+fprintf(stderr, ...);
+```   
+
 ## ¿Cómo hago para que gcc escupa los mensajes de error en inglés?
 
 Cuando gcc (o cualquier otro programa) imprime un mensaje de error en castellano e intentamos buscarlo en internet porque no lo entendemos, es probable que encontremos poca información. Lamentablemente hay muchísima más información en inglés que en castellano.
