@@ -25,7 +25,7 @@ Para más información se puede ver la [ayuda de Google](https://support.google.
 
 ### ¿Cómo hago para instalar el entorno de desarrollo en mi PC?
 
-Hay varias opciones, según tu sistema operativo y tus preferencias. Contamos con una página dedicada al entorno de desarrollo donde explicamos cómo instalar Ubuntu dentro de una máquina virtual, y luego cómo instalar el editor y compilador dentro de Ubuntu.
+Hay varias opciones, según tu sistema operativo y tus preferencias. Contamos con una página dedicada al [entorno de desarrollo](entorno) donde explicamos cómo instalar Ubuntu dentro de una máquina virtual, y luego cómo instalar el editor y compilador dentro de Ubuntu.
 
 
 ## Lenguaje C y compilación
