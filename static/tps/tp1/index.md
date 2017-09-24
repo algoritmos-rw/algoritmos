@@ -1,6 +1,6 @@
 ---
 layout: page
-title: TP1: Wachencoin
+title: TP1 -- Wachencoin
 permalink: '/tps/tp1'
 ---
 
@@ -8,14 +8,17 @@ permalink: '/tps/tp1'
 ![](tp1logo.png)
 
 Trabajo práctico 1
-================    
-
+================
+{:.no_toc}
 
 El trabajo práctico está divido en dos partes, si bien están relacionadas:
 
 * implementación de funciones auxiliares para strings (`strutil`)
 * implementación de un sistema similar a Bitcoin (*Wachencoin*)
 
+
+* Contenido
+{:toc}    
 
 strutil
 -------
@@ -27,8 +30,7 @@ Interludio: Bitcoin
 respaldo externo (en billetes, por ejemplo) del dinero que utiliza.
 
 En Bitcoin y sus derivados, los pagos son en realidad programas (*scripts*)
-que se escriben en un *lenguaje de pila*.    
-
+que se escriben en un *lenguaje de pila*.
 Un lenguaje de pila opera básicamente de dos formas: apilando y desapilando
 datos del stack, para poder usar funciones sobre ellos. Un ejemplo puede ser
 la polaca inversa que se utilizaba en las antiguas calculadoras digitales.  
@@ -40,36 +42,70 @@ las estructuras de datos que pueden ser útiles en una red de este tipo.
 Wachencoin
 ----------    
 
-Vamos a implementar un programa que mantiene un estado de los 
-saldos de las billeteras de algunos clientes y permite que se envíen pagos
-entre ellos utilizando un lenguaje de pila¹.   
+Implementaremos un programa que permita realizar pagos entre los usuarios
+de la red y mantenga el estado de los saldos de sus billeteras. Cada
+usuario será identificado unívocamente por un identificador numérico y tendrá
+asociada una coordenada que hará las funciones de contraseña.  
 
-*Curiosidad*. La unidad más pequeña de las bitcoins se llama *satoshi*, por
+*Curiosidad*: la unidad más pequeña del sistema Bitcoin se llama *satoshi*, por
 su creador. Parece justo, entonces, llamar a la pequeña unidad de una 
 Wachencoin un *rosita*.  
 
-En Wachencoin, los programas tienen la siguiente forma:    
+La ejecución de la aplicación recibe como parámetro el nombre de un archivo csv 
+con el estado inicial de las cuentas (número, saldo, coordenadas), que tiene el
+siguiente formato:   
 
 ```
-<id_usuario>
-<coordenadas>
+0, 13.37, 14f6c9dae22
+1, 58.92, 916f4c31aaa
+2, 9301.92, e9a7f54270d
+(...)
+```
+
+Los números de cuenta son consecutivos empezando desde 0.   
+
+### Interfaz
+
+Es necesario implementar una **interfaz** del programa, que leerá por entrada 
+entrada estándar los siguientes comandos:       
+
+* `agregar_pago <id_pago> <monto> <código>`, que agregará a la cola de 
+procesamiento la transacción. El código se manifiesta en una sola línea, 
+separando las distintas instrucciones con el caracter punto y coma (`;`). 
+* `pagos_pendientes`: devuelve la cantidad y monto total de los pagos sin 
+procesar. 
+* `procesar <numero>`: procesa hasta un número de pagos pendientes. 
+* `guardar_cuentas <archivo>`: guarda en un archivo el estado *actual* de las
+cuentas. 
+* `finalizar`: finaliza el programa (si quedan pagos sin procesar, no se 
+procesan).
+
+### Código de pago
+
+Como Bitcoin, en Wachencoin los códigos de pago se escriben utilizando un 
+lenguaje de pila¹ de la siguiente forma:
+
+```
+<id_usuario_1>
+<coordenadas_usuario_1>
 validar_usuario
-<id_usuario>
-<dinero>
+<id_usuario_1>
+<monto>
 validar_pago
-<dinero>
-<user_id_2>
-<user_id>
+<monto>
+<id_usuario_2>
+<id_usuario_1>
 pagar
 ```     
+
 (**nota**: arriba está escrito en varias líneas por claridad; en realidad
-el programa se escribe en una sola línea separada por el caracter `;` -- ver
+el código se escribe en una sola línea separada por el caracter `;` -- ver
 ejemplos abajo.)  
 
 Para clarificar, marcamos las siguientes operaciones:    
 
 * `validar_usuario`: desapila dos elementos y revisa que las coordenadas
-(contraseña) sean apropiadas para el usuario. 
+sean apropiadas para el usuario. 
 * `validar_pago`: desapila dos elementos y revisa que el usuario tenga
 fondos suficientes para hacer la operación. 
 * `pagar`: desapila tres elementos y hace el movimiento de fondos. 
@@ -83,33 +119,6 @@ Además, cada instrucción puede **terminar** la ejecución del programa si
 devuelve algún error. Esto es particularmente importante para las funciones
 de validación; si algún chequeo no se cumple, entonces se termina el 
 programa y no se realiza el pago.   
-
-Es necesario implementar una **interfaz** del programa, que leerá por entrada 
-entrada estándar los siguientes comandos:       
-
-* `agregar_pago <id> <monto> <código>`, que agregará a la cola de 
-procesamiento la transacción. El código se manifiesta en una sola línea, 
-separando las distintas instrucciones con el caracter punto y coma (`;`). 
-* `pagos_pendientes`: devuelve la cantidad y monto total de los pagos sin 
-procesar. 
-* `procesar <numero>`: procesa hasta un número definido por parámetro de pagos
-de los pendientes. Si algún pago falla, se debe avisar. 
-* `guardar_cuentas <archivo>`: guarda en un archivo el estado *actual* de las
-cuentas. 
-* `finalizar`: finaliza el programa (si quedan pagos sin procesar, no se 
-procesan).
-
-
-El estado inicial de las cuentas (número, saldo, coordenadas) se carga de un 
-archivo pasado por parámetro al programa, que tiene el siguiente formato:   
-
-```
-0, 13.37, 14f6c9dae22
-1, 58.92, 916f4c31aaa
-2, 9301.92, e9a7f54270d
-(...)
-```  
-Los números de cuenta son consecutivos empezando desde 0.   
 
 
 **Restricciones sobre la complejidad**: todas las operaciones del lenguaje de 
