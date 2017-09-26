@@ -35,9 +35,10 @@ Un lenguaje de pila opera básicamente de dos formas: apilando y desapilando
 datos del stack, para poder usar funciones sobre ellos. Un ejemplo puede ser
 la polaca inversa que se utilizaba en las antiguas calculadoras digitales.  
 
-Aunque Bitcoin tiene una arquitectura compleja para garantizar transferencias
-seguras e instantáneas entre miembros de la red, en este TP sólo nos interesan
-las estructuras de datos que pueden ser útiles en una red de este tipo.
+**¡A no desesperar!** Aunque Bitcoin tiene muchas decisiones de diseño
+para garantizar transferencias seguras y válidas entre los miembros de
+la red, en este TP sólo nos interesan las estructuras de datos que
+pueden ser útiles en un sistema de este estilo.
 
 Wachencoin
 ----------    
