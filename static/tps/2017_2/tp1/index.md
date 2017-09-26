@@ -1,11 +1,8 @@
 ---
 layout: page
-title: TP1 -- Wachencoin
-permalink: '/tps/tp1'
+title: TP1 – Wachencoin
+permalink: '/tps/2017_2/tp1'
 ---
-
-
-![](tp1logo.png)
 
 Trabajo práctico 1
 ================
@@ -16,13 +13,74 @@ El trabajo práctico está divido en dos partes, si bien están relacionadas:
 * implementación de funciones auxiliares para strings (`strutil`)
 * implementación de un sistema similar a Bitcoin (*Wachencoin*)
 
-
 * Contenido
 {:toc}    
 
 strutil
 -------
-explicación normal de lo que tienen que utilizar    
+Se pide implementar las funciones del archivo 
+[strutil.h]({{ 'assets/tps/2017_2/tp1/strutil.h' | relative_url }}) que
+se describen a continuación. Para la implementación de estas funciones no se
+puede hacer uso de TDAs:
+
+### split()
+
+La función split() divide una cadena en subcadenas en cada ocurrencia de un
+caracter de separación determinado. Por ejemplo, separando por comas:
+
+``` cpp
+split("abc,def,ghi", ',')  →  ["abc", "def", "ghi"]
+```
+
+En C, devolveremos el resultado como un arreglo dinámico de cadenas dinámicas
+terminado en `NULL`. Esto es:
+
+``` cpp
+// Ejemplo de arreglo dinámico de cadenas
+char **strv = malloc(sizeof(char*) * 4);
+strv[0] = strdup("abc");
+strv[1] = strdup("def");
+strv[2] = strdup("ghi");
+strv[3] = NULL;
+```
+
+El prototipo y la documentación de `split()` queda en:
+
+``` cpp
+/*
+ * Devuelve en un arreglo dinámico terminado en NULL con todos los subsegmentos
+ * de 'str' separados por el carácter 'sep'. Tanto el arreglo devuelto como las
+ * cadenas que contiene son allocadas dinámicamente.
+ *
+ * Quien llama a la función toma responsabilidad de la memoria dinámica del
+ * arreglo devuelto. La función devuelve NULL si falló alguna llamada a
+ * malloc(), o si 'sep' es '\0'.
+ */
+char** split(const char* str, char sep);
+```
+
+Considerar los siguientes casos borde:
+
+``` cpp
+split("abc,,def", ',')  →  ["abc", "", "def"]
+split("abc,def,", ',')  →  ["abc", "def", ""]
+split(",abc,def", ',')  →  ["", "abc", "def"]
+
+split("", ',')  →  [""]
+split(",", ',') →  ["", ""]
+```
+
+### free_strv()
+
+`free_strv()` libera la memoria asociada con un arreglo dinámico de cadenas dinámicas:
+
+``` cpp
+/*
+ * Libera un arreglo dinámico de cadenas, y todas las cadenas que contiene.
+ */
+void free_strv(char *strv[]);
+```
+
 
 Interludio: Bitcoin
 -------------------   
@@ -41,7 +99,9 @@ la red, en este TP sólo nos interesan las estructuras de datos que
 pueden ser útiles en un sistema de este estilo.
 
 Wachencoin
-----------    
+----------
+
+![]({{ 'assets/tps/2017_2/tp1/logo.png' | relative_url }})
 
 Implementaremos un programa que permita realizar pagos entre los usuarios
 de la red y mantenga el estado de los saldos de sus billeteras. Cada
@@ -123,16 +183,16 @@ programa y no se realiza el pago.
 
 
 **Restricciones sobre la complejidad**: todas las operaciones del lenguaje de 
-pila deben ser $O(1)$. La operación de agregar un pago debe ser $O(1)$, la de
-pagos pendientes $O(P)$ siendo P la cantidad de transacciones sin procesar, 
-y la de guardar cuentas debe ser $O(C)$ (con C la cantidad de cuentas).   
+pila deben ser _O(1)_. La operación de agregar un pago debe ser _O(1)_, la de
+pagos pendientes _O(P)_ siendo P la cantidad de transacciones sin procesar, 
+y la de guardar cuentas debe ser _O(C)_ (con C la cantidad de cuentas).   
 
 
 ### Ejemplos    
 
 a completar luego de haberlo implementado
 
-Más información y links
+Anexo: más información y links
 ------------------------   
 
 Esta implementación de *Wachencoin* es bastante sencilla pero introduce 
