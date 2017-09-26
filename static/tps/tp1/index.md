@@ -130,15 +130,8 @@ y la de guardar cuentas debe ser $O(C)$ (con C la cantidad de cuentas).
 
 ### Diseño
 
-Se recomiendas las siguientes estructuras de datos para implementar la segunda
-parte del Trabajo Práctico:
-
-* Un vector dinámico genérico o un arreglo dinámico para almacenar los usuarios.
-* Una cola para almacenar los pagos.
-* Una pila para procesar los códigos de pago.
-
-Las estructuras para almacenar los usuarios y los pagos podrían tener los
-siguientes miembros:
+Se recomienda usar las siguientes estructuras para almacenar los usuarios y los
+pagos:
 
 ``` cpp
 typedef struct usuario {
@@ -155,9 +148,6 @@ typedef struct pago {
 	double monto;
 } pago_t;
 ```
-
-Se sugirere el uso de la función `split()` para la interpretación de comandos
-por entrada estándar y el código de pila, y la lectura del archivo de cuentas.
 
 ### Ejemplos    
 
