@@ -49,8 +49,8 @@ usuario será identificado unívocamente por un identificador numérico y tendr�
 asociada una coordenada que hará las funciones de contraseña.  
 
 *Curiosidad*: la unidad más pequeña del sistema Bitcoin se llama *satoshi*, por
-su creador. Parece justo, entonces, llamar a la pequeña unidad de una 
-Wachencoin un *rosita*.  
+su creador. Parece justo, entonces, llamar a la unidad de Wachencoin un
+*rosita*.
 
 La ejecución de la aplicación recibe como parámetro el nombre de un archivo csv 
 con el estado inicial de las cuentas (número, saldo, coordenadas), que tiene el
