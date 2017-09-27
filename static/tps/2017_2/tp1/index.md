@@ -188,7 +188,28 @@ pagos pendientes _O(P)_ siendo P la cantidad de transacciones sin procesar,
 y la de guardar cuentas debe ser _O(C)_ (con C la cantidad de cuentas).   
 
 
-### Ejemplos
+### Diseño
+
+Se recomienda usar las siguientes estructuras para almacenar los usuarios y los
+pagos:
+
+``` cpp
+typedef struct usuario {
+	size_t id;
+	char* coordenadas;
+	double saldo;
+} usuario_t;
+```
+
+``` cpp
+typedef struct pago {
+	size_t id;
+	char* codigo;
+	double monto;
+} pago_t;
+```
+
+### Ejemplos    
 
 El siguiente es un ejemplo de una ejecución bien formada:
 
