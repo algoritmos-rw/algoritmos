@@ -1,11 +1,8 @@
 ---
 layout: page
-title: TP1 -- Wachencoin
-permalink: '/tps/tp1'
+title: TP1 – Wachencoin
+permalink: '/tps/2017_2/tp1'
 ---
-
-
-![](tp1logo.png)
 
 Trabajo práctico 1
 ================
@@ -16,13 +13,74 @@ El trabajo práctico está divido en dos partes, si bien están relacionadas:
 * implementación de funciones auxiliares para strings (`strutil`)
 * implementación de un sistema similar a Bitcoin (*Wachencoin*)
 
-
 * Contenido
 {:toc}    
 
 strutil
 -------
-explicación normal de lo que tienen que utilizar    
+Se pide implementar las funciones del archivo 
+[strutil.h]({{ 'assets/tps/2017_2/tp1/strutil.h' | relative_url }}) que
+se describen a continuación. Para la implementación de estas funciones no se
+puede hacer uso de TDAs:
+
+### split()
+
+La función split() divide una cadena en subcadenas en cada ocurrencia de un
+caracter de separación determinado. Por ejemplo, separando por comas:
+
+``` cpp
+split("abc,def,ghi", ',')  →  ["abc", "def", "ghi"]
+```
+
+En C, devolveremos el resultado como un arreglo dinámico de cadenas dinámicas
+terminado en `NULL`. Esto es:
+
+``` cpp
+// Ejemplo de arreglo dinámico de cadenas
+char **strv = malloc(sizeof(char*) * 4);
+strv[0] = strdup("abc");
+strv[1] = strdup("def");
+strv[2] = strdup("ghi");
+strv[3] = NULL;
+```
+
+El prototipo y la documentación de `split()` queda en:
+
+``` cpp
+/*
+ * Devuelve en un arreglo dinámico terminado en NULL con todos los subsegmentos
+ * de 'str' separados por el carácter 'sep'. Tanto el arreglo devuelto como las
+ * cadenas que contiene son allocadas dinámicamente.
+ *
+ * Quien llama a la función toma responsabilidad de la memoria dinámica del
+ * arreglo devuelto. La función devuelve NULL si falló alguna llamada a
+ * malloc(), o si 'sep' es '\0'.
+ */
+char** split(const char* str, char sep);
+```
+
+Considerar los siguientes casos borde:
+
+``` cpp
+split("abc,,def", ',')  →  ["abc", "", "def"]
+split("abc,def,", ',')  →  ["abc", "def", ""]
+split(",abc,def", ',')  →  ["", "abc", "def"]
+
+split("", ',')  →  [""]
+split(",", ',') →  ["", ""]
+```
+
+### free_strv()
+
+`free_strv()` libera la memoria asociada con un arreglo dinámico de cadenas dinámicas:
+
+``` cpp
+/*
+ * Libera un arreglo dinámico de cadenas, y todas las cadenas que contiene.
+ */
+void free_strv(char *strv[]);
+```
+
 
 Interludio: Bitcoin
 -------------------   
@@ -41,7 +99,9 @@ la red, en este TP sólo nos interesan las estructuras de datos que
 pueden ser útiles en un sistema de este estilo.
 
 Wachencoin
-----------    
+----------
+
+![]({{ 'assets/tps/2017_2/tp1/logo.png' | relative_url }})
 
 Implementaremos un programa que permita realizar pagos entre los usuarios
 de la red y mantenga el estado de los saldos de sus billeteras. Cada
@@ -49,17 +109,17 @@ usuario será identificado unívocamente por un identificador numérico y tendr�
 asociada una coordenada que hará las funciones de contraseña.  
 
 *Curiosidad*: la unidad más pequeña del sistema Bitcoin se llama *satoshi*, por
-su creador. Parece justo, entonces, llamar a la pequeña unidad de una 
-Wachencoin un *rosita*.  
+su creador. Parece justo, entonces, llamar a la unidad de Wachencoin un
+*rosita*.
 
 La ejecución de la aplicación recibe como parámetro el nombre de un archivo csv 
 con el estado inicial de las cuentas (número, saldo, coordenadas), que tiene el
 siguiente formato:   
 
 ```
-0, 13.37, 14f6c9dae22
-1, 58.92, 916f4c31aaa
-2, 9301.92, e9a7f54270d
+0,13.37,14f6c9dae22
+1,58.92,916f4c31aaa
+2,9301.92,e9a7f54270d
 (...)
 ```
 
@@ -123,9 +183,9 @@ programa y no se realiza el pago.
 
 
 **Restricciones sobre la complejidad**: todas las operaciones del lenguaje de 
-pila deben ser $O(1)$. La operación de agregar un pago debe ser $O(1)$, la de
-pagos pendientes $O(P)$ siendo P la cantidad de transacciones sin procesar, 
-y la de guardar cuentas debe ser $O(C)$ (con C la cantidad de cuentas).   
+pila deben ser _O(1)_. La operación de agregar un pago debe ser _O(1)_, la de
+pagos pendientes _O(P)_ siendo P la cantidad de transacciones sin procesar, 
+y la de guardar cuentas debe ser _O(C)_ (con C la cantidad de cuentas).   
 
 
 ### Diseño
@@ -151,9 +211,32 @@ typedef struct pago {
 
 ### Ejemplos    
 
-a completar luego de haberlo implementado
+El siguiente es un ejemplo de una ejecución bien formada:
 
-Más información y links
+```
+agregar_pago 1 10.00 1;916f4c31aaa;validar_usuario;1;10.00;validar_pago;10.00;0;1;pagar
+procesar 1
+guardar_cuentas cuentas_out.csv
+finalizar
+```
+
+Con un archivo de cuentas inicial como el siguiente:
+
+```
+0,13.37,14f6c9dae22
+1,21.12,916f4c31aaa
+```
+
+El programa:
+
+1. Agrega un pago pendiente del usuario 1 al usuario 2 por el monto de 10
+rositas.
+2. Procesa el pago.
+3. Guarda el estado de las cuentas en el archivo `cuentas_out.csv`.
+4. Finaliza la ejecución.
+
+
+Anexo: más información y links
 ------------------------   
 
 Esta implementación de *Wachencoin* es bastante sencilla pero introduce 
