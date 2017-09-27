@@ -136,7 +136,7 @@ Los números de cuenta son consecutivos empezando desde 0.
 ### Interfaz
 
 Es necesario implementar una **interfaz** del programa, que leerá por entrada 
-entrada estándar los siguientes comandos:       
+estándar los siguientes comandos:
 
 * `agregar_pago <id_pago> <monto> <código>`, que agregará a la cola de 
 procesamiento la transacción. El código se manifiesta en una sola línea, 
@@ -370,7 +370,7 @@ de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
 
 La entrega incluye, obligatoriamente, los siguientes archivos de código:
 
-- `strutil.c` con las imlementaciones de las funciones `split` y `free_strv`.
+- `strutil.c` con las implementaciones de las funciones `split` y `free_strv`.
 - el código de la solución de wachencoin.
 - el código de los TDAs programados en la cursada que se requieran, con las
 modificaciones que sean necesarias.
