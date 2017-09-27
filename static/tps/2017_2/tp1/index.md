@@ -8,13 +8,17 @@ Trabajo práctico 1
 ================
 {:.no_toc}
 
-El trabajo práctico está divido en dos partes, si bien están relacionadas:
-
-* implementación de funciones auxiliares para strings (`strutil`)
-* implementación de un sistema similar a Bitcoin (*Wachencoin*)
+Contenido
+---------
+{:.no_toc}
 
 * Contenido
-{:toc}    
+{:toc}
+
+El trabajo práctico está divido en dos partes, si bien están relacionadas:
+* implementación de funciones auxiliares para cadenas (`strutil`)
+* implementación de un sistema similar a Bitcoin (*Wachencoin*)
+
 
 strutil
 -------
@@ -25,7 +29,7 @@ puede hacer uso de TDAs:
 
 ### split()
 
-La función split() divide una cadena en subcadenas en cada ocurrencia de un
+La función `split()` divide una cadena en subcadenas en cada ocurrencia de un
 caracter de separación determinado. Por ejemplo, separando por comas:
 
 ``` cpp
@@ -91,7 +95,8 @@ En Bitcoin y sus derivados, los pagos son en realidad programas (*scripts*)
 que se escriben en un *lenguaje de pila*.
 Un lenguaje de pila opera básicamente de dos formas: apilando y desapilando
 datos del stack, para poder usar funciones sobre ellos. Un ejemplo puede ser
-la polaca inversa que se utilizaba en las antiguas calculadoras digitales.  
+la [notación polaca inversa](http://www-stone.ch.cam.ac.uk/documentation/rrf/rpn.html)
+que se utilizaba en las antiguas calculadoras digitales.
 
 **¡A no desesperar!** Aunque Bitcoin tiene muchas decisiones de diseño
 para garantizar transferencias seguras y válidas entre los miembros de
@@ -101,7 +106,9 @@ pueden ser útiles en un sistema de este estilo.
 Wachencoin
 ----------
 
-![]({{ 'assets/tps/2017_2/tp1/logo.png' | relative_url }})
+<p style="text-align: center;">
+    <img src="{{ 'assets/tps/2017_2/tp1/logo.png' | relative_url }}">
+</p>
 
 Implementaremos un programa que permita realizar pagos entre los usuarios
 de la red y mantenga el estado de los saldos de sus billeteras. Cada
@@ -112,7 +119,8 @@ asociada una coordenada que hará las funciones de contraseña.
 su creador. Parece justo, entonces, llamar a la unidad de Wachencoin un
 *rosita*.
 
-La ejecución de la aplicación recibe como parámetro el nombre de un archivo csv 
+La ejecución de la aplicación recibe como parámetro el nombre de un archivo
+[csv](https://en.wikipedia.org/wiki/Comma-separated_values)
 con el estado inicial de las cuentas (número, saldo, coordenadas), que tiene el
 siguiente formato:   
 
@@ -229,7 +237,7 @@ Con un archivo de cuentas inicial como el siguiente:
 
 El programa:
 
-1. Agrega un pago pendiente del usuario 1 al usuario 2 por el monto de 10
+1. Agrega un pago pendiente del usuario 1 al usuario 0 por el monto de 10
 rositas.
 2. Procesa el pago.
 3. Guarda el estado de las cuentas en el archivo `cuentas_out.csv`.
