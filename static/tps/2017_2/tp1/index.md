@@ -140,19 +140,20 @@ entrada estándar los siguientes comandos:
 
 * `agregar_pago <id_pago> <monto> <código>`, que agregará a la cola de 
 procesamiento la transacción. El código se manifiesta en una sola línea, 
-separando las distintas instrucciones con el caracter punto y coma (`;`). 
+separando las distintas instrucciones con el caracter punto y coma (`;`). El
+monto es siempre positivo.
 * `pagos_pendientes`: devuelve la cantidad y monto total de los pagos sin 
 procesar. 
-* `procesar <numero>`: procesa hasta un número de pagos pendientes. 
+* `procesar <numero>`: procesa hasta un número no negativo de pagos pendientes.
 * `guardar_cuentas <archivo>`: guarda en un archivo el estado *actual* de las
-cuentas. 
+cuentas. Si no existe lo debe crear, y si existe lo sobreescribe.
 * `finalizar`: finaliza el programa (si quedan pagos sin procesar, no se 
 procesan).
 
 ### Código de pago
 
-Como Bitcoin, en Wachencoin los códigos de pago se escriben utilizando un 
-lenguaje de pila¹ de la siguiente forma:
+Como Bitcoin, en Wachencoin los códigos de pago (también llamados _scripts_) se
+escriben utilizando un lenguaje de pila¹ como el siguiente:
 
 ```
 <id_usuario_1>
@@ -165,11 +166,7 @@ validar_pago
 <id_usuario_2>
 <id_usuario_1>
 pagar
-```     
-
-(**nota**: arriba está escrito en varias líneas por claridad; en realidad
-el código se escribe en una sola línea separada por el caracter `;` -- ver
-ejemplos abajo.)  
+```
 
 Para clarificar, marcamos las siguientes operaciones:    
 
@@ -184,17 +181,41 @@ fondos suficientes para hacer la operación.
 la *única* posible. También habrá transacciones que hacen pagos a múltiples
 personas; o de varias personas a una sola.   
 
-Además, cada instrucción puede **terminar** la ejecución del programa si 
-devuelve algún error. Esto es particularmente importante para las funciones
-de validación; si algún chequeo no se cumple, entonces se termina el 
-programa y no se realiza el pago.   
-
-
 **Restricciones sobre la complejidad**: todas las operaciones del lenguaje de 
 pila deben ser _O(1)_. La operación de agregar un pago debe ser _O(1)_, la de
 pagos pendientes _O(P)_ siendo P la cantidad de transacciones sin procesar, 
 y la de guardar cuentas debe ser _O(C)_ (con C la cantidad de cuentas).   
 
+### Manejo de errores y precondiciones
+
+Para este Trabajo Práctico se podrá considerar:
+
+- Que el monto total de un comando `agregar_pago` es correcto. Es decir: que
+correctamente simboliza la suma de las transacciones que se van a realizar en el
+código.
+- Que todos los montos son flotantes positivos.
+
+La implementación deberá manejar correctamente los siguientes casos de error:
+
+- Error 1: cuando un código de pila tiene un error. Por ejemplo:
+    - Id de usuario inexistente.
+    - Las coordenadas de un usuario son inválidas.
+    - El usuario no tiene saldo suficiente.
+- Error 2: cuando un comando es inválido. Por ejemplo:
+    - Se encuentra una cadena de texto cuando se espera un número entero.
+    - Hay parámetros de más.
+    - Faltan parámetros.
+
+En caso de error 1, el programa deberá imprimir por `stderr`: `Error en pago <id>`
+con el id de pago inválido. Ese pago no se procesará pero sí los siguientes (si
+corresponde). 
+
+En caso de error 2, el programa deberá imprimir por `stderr`: `Error en comando <nombre>`
+con el nombre del comando que falló. Un error de tipo 2 hará que termine la
+ejecución del programa.   
+
+En caso de que un comando no tenga errores de tipo 2 deberá imprimir `OK` por
+`stdout`.
 
 ### Diseño
 
@@ -217,35 +238,115 @@ typedef struct pago {
 } pago_t;
 ```
 
-### Ejemplos    
+### Ejemplos
+
+Los siguientes ejemplos son tomados a partir de un archivo de cuentas inicial
+como el siguiente:
+
+```
+0,23.37,14f6c9dae22
+1,5.12,916f4c31aaa
+2,5.14,c353bcb74b3
+```
+
+#### Con una transacción con un pago
 
 El siguiente es un ejemplo de una ejecución bien formada:
 
 ```
-agregar_pago 1 10.00 1;916f4c31aaa;validar_usuario;1;10.00;validar_pago;10.00;0;1;pagar
+agregar_pago 1 5.00 1;916f4c31aaa;validar_usuario;1;5.00;validar_pago;5.00;0;1;pagar
 procesar 1
 guardar_cuentas cuentas_out.csv
 finalizar
 ```
 
-Con un archivo de cuentas inicial como el siguiente:
-
-```
-0,13.37,14f6c9dae22
-1,21.12,916f4c31aaa
-```
-
 El programa:
 
-1. Agrega un pago pendiente del usuario 1 al usuario 0 por el monto de 10
+1. Agrega un pago pendiente del usuario 1 al usuario 0 por el monto de 5
 rositas.
 2. Procesa el pago.
 3. Guarda el estado de las cuentas en el archivo `cuentas_out.csv`.
 4. Finaliza la ejecución.
 
+Al finalizar esta ejecución se espera que por salida estándar se imprima:
+
+```
+OK
+OK
+OK
+OK
+```
+
+#### Con una transacción con dos pagos
+
+El siguiente ejemplo realiza dos transacciones en un mismo código de pago:
+
+```
+agregar_pago 1 10.02 0;14f6c9dae22;validar_usuario;1;916f4c31aaa;validar_usuario;0;5.22;validar_pago;1;4.80;validar_pago;5.22;2;0;pagar;4.80;2;1;pagar
+procesar 1
+guardar_cuentas cuentas_out.csv
+finalizar
+```
+
+El programa:
+
+1. Agrega un pago pendiente del usuario 0 al usuario 2 por el monto de 5,22
+rositas; y un pago pendiente de 4,80 rositas del usuario 1 al usuario 2.
+2. Procesa el pago (que ejecutará las dos transacciones).
+3. Guarda el estado de las cuentas en el archivo `cuentas_out.csv`.
+4. Finaliza la ejecución.
+
+La salida esperada en este caso es:
+
+```
+OK
+OK
+OK
+OK
+```
+
+#### Con un código de pago inválido
+
+El siguiente ejemplo es inválido por tener mal las coordenadas del usuario 1:
+
+```
+agregar_pago 1 10.00 1;fd36fbf2562;validar_usuario;1;10.00;validar_pago;10.00;0;1;pagar
+procesar 1
+finalizar
+```
+
+Deberá producir la siguiente salida:
+
+```
+OK
+Error en pago 1
+OK
+OK
+```
+
+#### Con un comando inválido
+
+El siguiente ejemplo es inválido por faltarle un parámetro al comando
+`procesar`:
+
+```
+agregar_pago 1 5.00 1;916f4c31aaa;validar_usuario;1;5.00;validar_pago;5.00;0;1;pagar
+procesar
+guardar_cuentas cuentas_out.csv
+finalizar
+```
+
+Deberá producir la siguiente salida:
+
+```
+OK
+Error en comando procesar
+```
+
+Y deberá terminar la ejecución sin ejecutar los últimos dos comandos.
 
 Anexo: más información y links
-------------------------   
+------------------------
 
 Esta implementación de *Wachencoin* es bastante sencilla pero introduce 
 algunos conceptos fundamentales de criptomonedas. A continuación se enumeran
@@ -259,6 +360,29 @@ el TP y para nada necesarios para su resolución:
 * [Criptografía con RSA](http://pub.gajendra.net/2012/09/an_explanation_of_the_rsa_cryptosystem)
 * [Majority Rule](http://hackingdistributed.com/2014/06/19/bitcoin-and-voting-power/)
 * [Ejemplos de programas en Bitcoin Scripting Language](https://en.bitcoin.it/wiki/Transaction#Pay-to-PubkeyHash)   
+
+
+Criterios de aprobación
+------------------------
+
+El código entregado debe ser claro y legible y ajustarse a las especificaciones
+de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
+
+La entrega incluye, obligatoriamente, los siguientes archivos de código:
+
+- `strutil.c` con las imlementaciones de las funciones `split` y `free_strv`.
+- el código de la solución de wachencoin.
+- el código de los TDAs programados en la cursada que se requieran, con las
+modificaciones que sean necesarias.
+- un archivo `deps.mk` con las dependencias del proyecto en formato make.
+
+La entrega se realiza:
+
+1. en forma digital a través del [sistema de entregas](entregas.algoritmos7541-rw.tk):
+todos los archivos mencionados en un único archivo ZIP.
+2. en papel durante la clase (si su ayudante lo requiere) el código del Trabajo
+en hoja A4 **abrochadas, sin folio, informe ni carátula**. No es necesario 
+reimprimir el código de los TDA.
 
 
 -----
