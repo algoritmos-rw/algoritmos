@@ -109,17 +109,17 @@ usuario será identificado unívocamente por un identificador numérico y tendr�
 asociada una coordenada que hará las funciones de contraseña.  
 
 *Curiosidad*: la unidad más pequeña del sistema Bitcoin se llama *satoshi*, por
-su creador. Parece justo, entonces, llamar a la pequeña unidad de una 
-Wachencoin un *rosita*.  
+su creador. Parece justo, entonces, llamar a la unidad de Wachencoin un
+*rosita*.
 
 La ejecución de la aplicación recibe como parámetro el nombre de un archivo csv 
 con el estado inicial de las cuentas (número, saldo, coordenadas), que tiene el
 siguiente formato:   
 
 ```
-0, 13.37, 14f6c9dae22
-1, 58.92, 916f4c31aaa
-2, 9301.92, e9a7f54270d
+0,13.37,14f6c9dae22
+1,58.92,916f4c31aaa
+2,9301.92,e9a7f54270d
 (...)
 ```
 
@@ -188,9 +188,32 @@ pagos pendientes _O(P)_ siendo P la cantidad de transacciones sin procesar,
 y la de guardar cuentas debe ser _O(C)_ (con C la cantidad de cuentas).   
 
 
-### Ejemplos    
+### Ejemplos
 
-a completar luego de haberlo implementado
+El siguiente es un ejemplo de una ejecución bien formada:
+
+```
+agregar_pago 1 10.00 1;916f4c31aaa;validar_usuario;1;10.00;validar_pago;10.00;0;1;pagar
+procesar 1
+guardar_cuentas cuentas_out.csv
+finalizar
+```
+
+Con un archivo de cuentas inicial como el siguiente:
+
+```
+0,13.37,14f6c9dae22
+1,21.12,916f4c31aaa
+```
+
+El programa:
+
+1. Agrega un pago pendiente del usuario 1 al usuario 2 por el monto de 10
+rositas.
+2. Procesa el pago.
+3. Guarda el estado de las cuentas en el archivo `cuentas_out.csv`.
+4. Finaliza la ejecución.
+
 
 Anexo: más información y links
 ------------------------   
