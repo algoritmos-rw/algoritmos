@@ -4,7 +4,7 @@ title: TP1 – Wachencoin
 permalink: '/tps/2017_2/tp1'
 ---
 
-Trabajo práctico 1
+Trabajo Práctico 1
 ================
 {:.no_toc}
 
@@ -15,7 +15,8 @@ Contenido
 * Contenido
 {:toc}
 
-El trabajo práctico está divido en dos partes, si bien están relacionadas:
+El Trabajo Práctico número 1 tiene fecha de entrega para el **viernes 13/10**, y
+está divido en dos partes, si bien están relacionadas:
 * implementación de funciones auxiliares para cadenas (`strutil`)
 * implementación de un sistema similar a Bitcoin (*Wachencoin*)
 
