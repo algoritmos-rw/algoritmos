@@ -22,13 +22,13 @@ Fechas importantes:
 | **Viernes** | **15/09/17** | **1er parcialito (en el horario de la teórica)** |
 | Viernes     | 15/09/17     | Entrega de la cola |
 | Viernes     | 22/09/17     | Entrega de la lista enlazada |
-| Viernes     | 06/10/17     | Entrega del hash |
-| **Lunes**   | **09/10/17** | **Entrega del TP1** |
-| **Viernes** | **13/10/17** | **2do parcialito (en el horario de la teórica)** |
-| Lunes       | 23/10/17     | Entrega del ABB |
-| Lunes       | 06/11/17     | Entrega del heap |
+| **Lunes**   | **09/10/17** | **2do parcialito (en el horario de la teórica)** |
+| Viernes     | 13/10/17     | Entrega del hash |
+| **Viernes** | **13/10/17** | **Entrega del TP1** |
+| Viernes     | 27/10/17     | Entrega del ABB |
 | **Lunes**   | **06/11/17** | **3er parcialito (en el horario de la teórica)** |
-| **Viernes** | **17/11/17** | **Entrega del TP2** |
+| Lunes       | 06/11/17     | Entrega del heap |
+| **Lunes**   | **13/11/17** | **Entrega del TP2** |
 | **Viernes** | **01/12/17** | **4to parcialito (en el horario de la teórica)** |
 | **Viernes** | **01/12/17** | **Entrega del TP3** |
 | Lunes       | 04/12/17     | 1er recuperatorio (parcialitos 1 y 2) |
@@ -46,10 +46,12 @@ Fechas importantes:
 
 
 Los temas a ser evaluados en cada parcialito son:
-- **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas. Listas.
-- **2do parcialito**: Ordenamientos no comparativos. Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. AVL. Iteradores. Árboles B y QuadTrees.
+- **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas. Listas. **Iteradores de listas.**
+- **2do parcialito**: Ordenamientos no comparativos. Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. Iteradores internos y externos de árboles binarios. **AVL. Árboles B. QuadTrees.**
 - **3er parcialito**: Heap y heapsort. Grafos: Implementaciones y usos de grafos. Orden topológico. Recorridos DFS y BFS.
 - **4to parcialito**: Camino mínimo (algoritmos de Dijkstra, A* y BFS). Árboles de tendido mínimo (algoritmos de Prim y Kruskal). Algoritmos greedy. Backtracking. Programación dinámica.
+
+(En negrita los temas que no se evaluarán en la primera oportunidad pero sí en recuperatorios.)
 
 También contamos con un [calendario detallado](https://docs.google.com/spreadsheets/d/e/2PACX-1vSB6XSrrr8DApYSShBEgudIIlqQbjDxzru-_8P3mq5YYBlFMsnwDt1u635w4D_lbi0mZCJu35-uLLx-/pubhtml?gid=8&single=true) de las clases para descargar.
 
