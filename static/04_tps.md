@@ -17,4 +17,5 @@ A continuación encontrarán los trabajos prácticos para entregar que iremos pl
 | [Pila](pila)      | [pila.zip](https://sites.google.com/site/fiuba7541rw/tps/pila/pila.zip?attredirects=0&d=1) | 	8 de septiembre
 | [Cola](cola)      | [cola.zip](https://sites.google.com/site/fiuba7541rw/tps/cola/cola.zip?attredirects=0&d=1) | 	15 de septiembre
 | [Lista](lista)      | [lista.zip](https://sites.google.com/site/fiuba7541rw/tps/lista/lista.zip?attredirects=0&d=1) | 	22 de septiembre
+| [Hash](hash)      | [hash.zip](https://sites.google.com/site/fiuba7541rw/tps/hash/hash.zip?attredirects=0&d=1) | 	13 de octubre
 | **[TP1](2017_2/tp1)**      | | 13 de octubre |
