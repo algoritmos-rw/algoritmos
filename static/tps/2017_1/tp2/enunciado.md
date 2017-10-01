@@ -1,7 +1,7 @@
 ---
 title: TP 2
 layout: default
-permalink: /:path/:basename/
+permalink: '/tps/2017_1/tp2'
 ---
 
 Twitter y una implementación del TT

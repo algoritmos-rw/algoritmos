@@ -1,7 +1,7 @@
 ---
 title: TP 1
 layout: default
-permalink: /:path/:basename/
+permalink: '/tps/2016_2/tp1'
 ---
 
 TP 1: manejo de archivos y cadenas

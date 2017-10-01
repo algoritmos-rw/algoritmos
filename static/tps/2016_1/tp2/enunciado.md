@@ -1,7 +1,7 @@
 ---
 title: TP 2
 layout: default
-permalink: /:path/:basename/
+permalink: '/tps/2016_1/tp2'
 ---
 
 TP2: utilidades con hashes, ABBs y heaps
