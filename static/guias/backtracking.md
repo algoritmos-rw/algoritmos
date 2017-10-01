@@ -31,7 +31,7 @@ Por ejemplo, si ya sabemos que el primer curso de Algoritmos y Programación II 
 
 Por lo tanto, allí estará la poda: cuando detectemos que un curso es incompatible con el resto, descartamos la opción. Simplemente con analizar si la ultima materia agregada en cada paso es compatible con las anteriores, será suficiente (luego, no es necesario validar la primera con la segunda, la primera con la tercera, etc... porque eso ya debería haberse hecho). De esta forma reducimos el costo de esa poda de $$O(n^2)$$ a $$O(n)$$.
 
-```python
+``` python
 def horarios_posibles(materias, solucion_parcial):
     # Si no nos quedan materias por ver
     if len(materias) == 0:

@@ -38,7 +38,8 @@ A 74 lo podemos escribir como 73 + 1, también como 72 + 2, también como 71 + 3
 - _min(opt(n-i) + opt(i))_, para _i_ en _[1; n-1]_ en otro caso
 
 El código de la resolución recursiva sería:
-```Python
+
+``` python
 def minimos_terminos(n):
     if n == 0:
         return 0
@@ -49,8 +50,10 @@ def minimos_terminos(n):
     for i in range(1, n):
         mejor = min(mejor, minimos_terminos(n-i) + minimos_terminos(i))
 ```
+
 Como vemos, se hacen muchísimos llamados resursivos (para 74 se hacen para 1 y 73, 2 y 72, etc.. y dentro de estos también se hacen muchos). Si ya tuviéramos calculados los términos para todos los valores anteriores, esto podría evitarse. Entonces, simplemente hacemos:
-```Python
+
+``` python
 def minimos_terminos(n):
     #arreglo en el que guardaremos los resultados
     int v[n+1];
@@ -69,6 +72,7 @@ def minimos_terminos(n):
 Claramente esta solución es mucho mejor que la anterior. En espacio es muy fácil de ver que es _O(n)_, dado el arreglo auxiliar que estamos utilizando, mientras que en tiempo podríamos decir que es:
 _O(n * (n + O(es_cuadrado_perfecto)))_. La función `es_cuadrado_perfecto` se puede implementar trivialmente con un orden $$O(\sqrt{n})$$, aunque también se podría hacer es $$O(log n)$$. En cualquier caso, es claramente despreciable al lado del _O(n)_ de la segunda iteración, por lo que el algoritmo será finalmente $$O(n^2)$$.
 
+
 #### Opción 2
 
 Una mejora importante es simplemente restar los cuadrados perfectos. Si yo sé que $$10 = 9 + 1^2 = 6 + 2^2 = 1 + 3^2$$, sabemos que el segundo término de cada igualdad es ya de por sí un término cuadrático (por ende, se escribe con un solo término). Si supiéramos la cantidad óptima para 9, para la primera opción solo tendríamos que decir `opt1(10) = opt(9) + 1`. Para la segunda opción, si tuviéramos el óptimo para 6, el óptimo para esa opción sería la cantidad óptima para 6, más 1 por el $$2^2$$ (se escribe en un solo término, esa es la gracia). Entonces, la ecuación de recurrencia nos quedaría:
@@ -77,7 +81,8 @@ Una mejora importante es simplemente restar los cuadrados perfectos. Si yo sé q
 (Notar que los cuadrados perfectos van a ser tenidos en cuenta ya que al hacer, por ejemplo, $$9 = 0 + 3^2$$, el 0 no agrega término).
 
 Obviando la implementación recursiva (la dejamos de tarea, pero será muy parecida a la anterior), la solución optimizada será:
-```Python
+
+``` python
 def terminos(n):
     int v[n+1];
     v[0] = 0
@@ -90,6 +95,7 @@ def terminos(n):
             j += 1
     return v[n]
 ```
+
 Sobre el orden, es fácil primero pensar que es $$O(n^2)$$. A los fines de un parcialito, si alguien escribiera esto para dicha solución, sería visto como correcto.
 
 Ahora bien, en realidad si bien el primer for se itera _n_ veces, el while no itera _n_ veces, sino que itera por los cuadrados perfectos anteriores. La variable _j_ a lo sumo va a valer la raíz cuadrada de _i_. Eso implica que ese for se itera $$\sqrt{i}$$ veces, por lo tanto el orden va a ser $$O(n * \sqrt{n}) = O(n^{1.5})$$.
@@ -127,13 +133,10 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
 4. Se tiene una grilla de `MxN` casilleros. Si solo se puede comer hacia abajo y hacia la derecha:
 
-   a. Determinar la cantidad de caminos posibles que hay para llegar desde el casillero `(0, 0)` hasta el casillero `(M-1, N-1)`.
-
-   b. Idem anterior, pero teniendo en cuenta que hay casilleros (conocidos) sobre los que no se puede pisar (hay obstáculos).
-
-   c. Si en cada casillero hubiera una cantidad de dinero (que pudiera ser 0) que se puede recoger, determinar la máxima cantidad de dinero que se puede obtener partiendo desde el casillero `(0, 0)` hasta el `(M-1, N-1)`.
-
-   d. Idem anterior, pero sabiendo que además hay obstáculos en algunos casilleros (símil al inciso b).
+   1. Determinar la cantidad de caminos posibles que hay para llegar desde el casillero `(0, 0)` hasta el casillero `(M-1, N-1)`.
+   2. Idem anterior, pero teniendo en cuenta que hay casilleros (conocidos) sobre los que no se puede pisar (hay obstáculos).
+   3. Si en cada casillero hubiera una cantidad de dinero (que pudiera ser 0) que se puede recoger, determinar la máxima cantidad de dinero que se puede obtener partiendo desde el casillero `(0, 0)` hasta el `(M-1, N-1)`.
+   4. Idem anterior, pero sabiendo que además hay obstáculos en algunos casilleros (símil al inciso b).
 
 5. Dado un conjunto de números positivos _L_ y un número _n_, determinar si existe un subconjunto de _L_ que sume exactamente _n_.
 
