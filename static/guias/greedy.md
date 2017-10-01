@@ -1,7 +1,7 @@
 ---
 title: Greedy
 layout: default
-permalink: /:path/:basename/
+permalink: '/guias/greedy'
 math: true
 ---
 

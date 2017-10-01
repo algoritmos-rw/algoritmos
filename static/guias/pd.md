@@ -1,7 +1,7 @@
 ---
 title: Programación dinámica
 layout: default
-permalink: /:path/:basename/
+permalink: '/guias/pd'
 math: true
 ---
 

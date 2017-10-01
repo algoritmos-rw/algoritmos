@@ -1,7 +1,7 @@
 ---
 title: Backtracking
 layout: default
-permalink: /:path/:basename/
+permalink: '/guias/backtracking'
 math: true
 ---
 

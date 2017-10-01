@@ -1,7 +1,7 @@
 ---
-title: Grafos: Usos, implementaciones, recorridos.
+title: "Grafos: Usos, implementaciones, recorridos."
 layout: default
-permalink: /:path/:basename/
+permalink: '/guias/grafos'
 math: true
 ---
 
