@@ -11,11 +11,5 @@ A continuación encontrarán los trabajos prácticos para entregar que iremos pl
 
 {: .table .table-striped}
 | TP       | Código      | Fecha de entrega |
-|----------|-------------|------------------|
-| [TP0](tp0)      | [tp0.zip](https://sites.google.com/site/fiuba7541rw/tps/tp0/tp0.zip?attredirects=0&d=1) | 	25 de agosto
-| [VD](vd)      | [vd.zip](https://sites.google.com/site/fiuba7541rw/tps/vector-dinamico/vd.zip?attredirects=0&d=1) | 	1ro de septiembre
-| [Pila](pila)      | [pila.zip](https://sites.google.com/site/fiuba7541rw/tps/pila/pila.zip?attredirects=0&d=1) | 	8 de septiembre
-| [Cola](cola)      | [cola.zip](https://sites.google.com/site/fiuba7541rw/tps/cola/cola.zip?attredirects=0&d=1) | 	15 de septiembre
-| [Lista](lista)      | [lista.zip](https://sites.google.com/site/fiuba7541rw/tps/lista/lista.zip?attredirects=0&d=1) | 	22 de septiembre
-| [Hash](hash)      | [hash.zip](https://sites.google.com/site/fiuba7541rw/tps/hash/hash.zip?attredirects=0&d=1) | 	13 de octubre
-| **[TP1](2017_2/tp1)**      | | 13 de octubre |
+|----------|-------------|------------------|{% for tp in site.data.tps %}{% if tp.is_publicado %}
+|[{{tp.nombre}}]({{tp.link_enunciado | relative_url}}) | [{{tp.zip}}]({{tp.link_zip}}) | {{tp.fecha_entrega}}{% endif %}{% endfor %}
