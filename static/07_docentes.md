@@ -17,7 +17,7 @@ permalink: /docentes/
   <tr>
     <td></td>
     <td>
-      <img src="../assets/img/docentes/Rosita Wachenchauzer.jpg" title="Rosita Wachenchauzer" alt="Rosita Wachenchauzer" class="center-block img-rounded img-responsive">
+      <img src="../assets/img/docentes/rosita.jpg" title="Rosita Wachenchauzer" alt="Rosita Wachenchauzer" class="center-block img-rounded img-responsive">
       <span class="hidden-xxs">Rosita Wachenchauzer</span>
     </td>
     <td></td>
@@ -31,18 +31,12 @@ permalink: /docentes/
     <td></td>
   </tr>
   
-{% for image in site.static_files %}
-    {% if image.path contains "docentes" %}
-    {% unless image.path contains "Rosita" %} 
-        <p hidden>{% increment counter %}</p>
-        {% assign mod = counter | minus:1 | modulo:3 %}
-        {% if mod == 0 %}
-            <tr>
-        {% endif %}
-        <td>
-            <img src="{{site.baseurl}}{{image.path}}" title="{{image.basename}}" alt="{{image.basename}}" class="center-block img-rounded img-responsive" />
-            <span class="hidden-xxs">{{image.basename}}</span>
-        </td>
-    {% endunless %}
-    {% endif %}
+{% for ayudante in site.data.docentes.ayudantes %}
+    <p hidden>{% increment counter %}</p>
+    {% assign mod = counter | minus:1 | modulo:3 %}
+    {% if mod == 0 %}<tr>{% endif %}
+    <td>
+        <img src="{{site.baseurl}}{{ayudante.foto}}" title="{{ayudante.nombre}}" alt="{{ayudante.nombre}}" class="center-block img-rounded img-responsive" />
+        <span class="hidden-xxs">{{ayudante.nombre}}</span>
+    </td>
 {% endfor %}
