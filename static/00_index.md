@@ -13,7 +13,7 @@ permalink: /
   <h3 class="page-heading">Trabajos Prácticos</h3>
   
   <ul class="post-list">
-	{% for tp in site.data.tps %}{% if tp.is_publicado %}
+	{% for tp in site.data.tps reversed %}{% if tp.is_publicado %}
 	  <li>
         <span class="post-meta">{{ tp.fecha_publicacion }}</span>
       &ndash;
