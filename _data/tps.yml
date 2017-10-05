@@ -60,32 +60,32 @@
 
 - nombre: ABB
   is_publicado: False
-  fecha_publicacion:
-  fecha_entrega:
+  fecha_publicacion: 09/10/2017
+  fecha_entrega: 27 de septiembre
   zip: abb.zip
-  link_zip:
+  link_zip: https://sites.google.com/site/fiuba7541rw/tps/arbol/abb.zip?attredirects=0&d=1
   link_enunciado: /tps/abb
 
 - nombre: Heap
   is_publicado: False
-  fecha_publicacion:
-  fecha_entrega:
+  fecha_publicacion: 23/10/2017
+  fecha_entrega: 6 de noviembre
   zip: heap.zip
-  link_zip:
+  link_zip: https://sites.google.com/site/fiuba7541rw/tps/heap/heap.zip?attredirects=0&d=1
   link_enunciado: /tps/heap
 
 - nombre: TP2
   is_publicado: False
-  fecha_publicacion:
-  fecha_entrega:
+  fecha_publicacion: 23/10/2017
+  fecha_entrega: 13 de noviembre
   zip:
   link_zip:
   link_enunciado: /tps/2017_2/tp2
 
 - nombre: TP3
   is_publicado: False
-  fecha_publicacion:
-  fecha_entrega:
+  fecha_publicacion: 10/11/2017
+  fecha_entrega: 1ro de diciembre
   zip:
   link_zip:
   link_enunciado: /tps/2017_2/tp3
