@@ -33,7 +33,7 @@ Fechas importantes:
 | **Viernes** | **01/12/17** | **Entrega del TP3** |
 | Lunes       | 04/12/17     | 1er recuperatorio (parcialitos 1 y 2) |
 | Lunes       | 11/12/17     | 1er recuperatorio (parcialitos 3 y 4) |
-| Lunes       | 15/12/17     | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
+| Viernes     | 15/12/17     | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
 
 {: .table .table-striped}
 | Fecha       |      Detalle       |
