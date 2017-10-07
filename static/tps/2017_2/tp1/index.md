@@ -151,6 +151,9 @@ cuentas. Si no existe lo debe crear, y si existe lo sobreescribe.
 * `finalizar`: finaliza el programa (si quedan pagos sin procesar, no se 
 procesan).
 
+*Nota*: recomendamos usar el siguiente formato para la impresión de números
+decimales en C: `%.3f`, que imprime el número redondeado a tres decimales.
+
 ### Código de pago
 
 Como Bitcoin, en Wachencoin los códigos de pago (también llamados _scripts_) se
