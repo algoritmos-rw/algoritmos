@@ -422,7 +422,13 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
 - el código de la solución de wachencoin.
 - el código de los TDAs programados en la cursada que se requieran, con las
 modificaciones que sean necesarias.
-- un archivo `deps.mk` con las dependencias del proyecto en formato make.
+- un archivo `deps.mk` con las dependencias del proyecto en formato make. Este
+deberá contener sólamente una línea que indique qué _objetos_ necesita para
+compilar el ejecutable wachencoin, por ejemplo:
+
+```
+wachencoin: tp1.c pila.o lista.o strutil.o vector.o 
+```
 
 La entrega se realiza:
 
