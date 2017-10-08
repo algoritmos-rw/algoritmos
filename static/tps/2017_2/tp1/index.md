@@ -139,10 +139,8 @@ Los números de cuenta son consecutivos empezando desde 0.
 Es necesario implementar una **interfaz** del programa, que leerá por entrada 
 estándar los siguientes comandos:
 
-* `agregar_pago <id_pago> <monto> <código>`, que agregará a la cola de 
-procesamiento la transacción. El código se manifiesta en una sola línea, 
-separando las distintas instrucciones con el caracter punto y coma (`;`). El
-monto es siempre positivo.
+* `agregar_pago <id_pago> <monto> -código de pago-`, que agregará a la cola de 
+procesamiento la transacción. El monto es siempre positivo. El formato del código de pago se detalla debajo.
 * `pagos_pendientes`: devuelve la cantidad y monto total de los pagos sin 
 procesar. 
 * `procesar <numero>`: procesa hasta un número no negativo de pagos pendientes.
@@ -168,6 +166,14 @@ validar_pago
 <id_usuario_1>
 pagar
 ```
+
+Las distintas instrucciones del código de pago van en **una linea** separadas por `;`, por ejemplo:
+
+```
+0;14f6c9dae22;validar_usuario;0;5.00;validar_pago;5.00;3;0;pagar
+```
+
+Ese código corresponde a un pago del usuario 0 de coordenadas 14f6c9dae22 de 5.00 rositas para el usuario 3.
 
 Para clarificar, marcamos las siguientes operaciones:    
 
