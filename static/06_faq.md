@@ -367,7 +367,9 @@ estructura_iter_destruir(iter);
 O usando la sintaxis de ciclos definidos de C:
 
 ``` cpp
-for(estructura_iter_t* iter = estructura_iter_crear(estructura);
+estructura_iter_t* iter;
+
+for(iter = estructura_iter_crear(estructura);
   !estructura_iter_al_final(iter);
   estructura_iter_avanzar(iter))
 {
@@ -375,8 +377,10 @@ for(estructura_iter_t* iter = estructura_iter_crear(estructura);
     /* Usar dato. */
 }
 
-  estructura_iter_destruir(iter);
+estructura_iter_destruir(iter);
 ```
+
+Se debe tener en cuenta que si bien `estructura_iter_t* iter` puede ser inicializado en el `for` (como en el ejemplo) o fuera del mismo (al ser declarada la variable), la declaración debe estar siempre fuera del `for` para no perder la referencia y poder de esta forma destruirlo cuando se termina de iterar.
 
 ### Una vez que se llega al fin, ¿El iterador no sirve más?
 
