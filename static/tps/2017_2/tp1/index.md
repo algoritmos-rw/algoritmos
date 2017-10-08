@@ -212,8 +212,8 @@ La implementación deberá manejar correctamente los siguientes casos de error:
     - El comando no existe.
 
 En caso de error 1, el programa deberá imprimir por `stderr`: `Error en pago <id>`
-con el id de pago inválido. Ese pago no se procesará pero sí los siguientes (si
-corresponde). 
+con el id de pago inválido. Queda a elección de ustedes decidir si el resto de
+los pagos del código se procesaran o no.
 
 En caso de error 2, el programa deberá imprimir por `stderr`: `Error en comando <nombre>`
 con el nombre del comando que falló. Un error de tipo 2 hará que termine la
