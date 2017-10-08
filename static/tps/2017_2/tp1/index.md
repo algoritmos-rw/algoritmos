@@ -426,8 +426,16 @@ modificaciones que sean necesarias.
 deberá contener sólamente una línea que indique qué _objetos_ necesita para
 compilar el ejecutable wachencoin, por ejemplo:
 
+``` makefile
+wachencoin: tp1.c vector.o pila.o lista.o strutil.o
 ```
-wachencoin: tp1.c pila.o lista.o strutil.o vector.o 
+
+El corrector automático va a interpretar ese archivos de dependencias y va a
+compilar todos los `.o` especificados a partir de los `.h` y `.c` que deberán
+enviar, con los siguientes flags de GCC:
+
+``` makefile
+-std=c99 -Wall -Wtype-limits -pedantic -Wconversion -Wno-sign-conversion
 ```
 
 La entrega se realiza:
