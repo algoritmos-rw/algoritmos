@@ -1,0 +1,77 @@
+profesores:
+- nombre: Rosita Wachenchauzer
+  foto: /assets/img/docentes/rosita.jpg
+
+ayudantes:
+- nombre: Agustina Méndez
+  foto: /assets/img/docentes/agusm.png
+
+- nombre: Ana Czarnitzki
+  foto: /assets/img/docentes/anac.png
+
+- nombre: Ana Secchi
+  foto: /assets/img/docentes/anas.jpg
+
+- nombre: Casimiro Pastine
+  foto: /assets/img/docentes/casimirop.jpg
+
+- nombre: Ezequiel Genender
+  foto: /assets/img/docentes/ezeg.jpg
+
+- nombre: Federico Barrios
+  foto: /assets/img/docentes/fedeb.png
+
+- nombre: Federico del Mazo
+  foto: /assets/img/docentes/fededm.jpg
+
+- nombre: Florencia Rodríguez
+  foto: /assets/img/docentes/florr.png
+
+- nombre: Gianmarco Cafferata
+  foto: /assets/img/docentes/gianc.jpg
+
+- nombre: Gonzalo Marino
+  foto: /assets/img/docentes/gonzam.jpg
+
+- nombre: Jasmina Sella Faena
+  foto: /assets/img/docentes/jasminasf.jpg
+
+- nombre: Javier Choque
+  foto: /assets/img/docentes/javic.jpg
+
+- nombre: Joaquín Torré
+  foto: /assets/img/docentes/joaquint.jpg
+
+- nombre: Jorge Collinet
+  foto: /assets/img/docentes/jorgec.jpg
+
+- nombre: Juan Manuel Fresia
+  foto: /assets/img/docentes/juanmaf.jpg
+
+- nombre: Lautaro Manzano
+  foto: /assets/img/docentes/lautarom.jpg
+
+- nombre: Manuel Battan
+  foto: /assets/img/docentes/manub.jpg
+
+- nombre: Martín Buchwald
+  foto: /assets/img/docentes/martinb.jpg
+
+- nombre: Matías Cano
+  foto: /assets/img/docentes/matic.jpg
+
+- nombre: Miguel Alfaro
+  foto: /assets/img/docentes/miguela.png
+
+- nombre: Ignacio Raik
+  foto: /assets/img/docentes/nachor.jpg
+
+- nombre: Nicolás Vázquez
+  foto: /assets/img/docentes/nicolasv.png
+
+- nombre: Olivia Fernández
+  foto: /assets/img/docentes/olif.jpg
+
+- nombre: Tomás Accini
+  foto: /assets/img/docentes/tomasa.jpg
+

@@ -139,17 +139,19 @@ Los números de cuenta son consecutivos empezando desde 0.
 Es necesario implementar una **interfaz** del programa, que leerá por entrada 
 estándar los siguientes comandos:
 
-* `agregar_pago <id_pago> <monto> <código>`, que agregará a la cola de 
-procesamiento la transacción. El código se manifiesta en una sola línea, 
-separando las distintas instrucciones con el caracter punto y coma (`;`). El
-monto es siempre positivo.
-* `pagos_pendientes`: devuelve la cantidad y monto total de los pagos sin 
-procesar. 
+* `agregar_pago <id_pago> <monto> -código de pago-`, que agregará a la cola de 
+procesamiento la transacción. El monto es siempre positivo. El formato del 
+código de pago se detalla debajo.
+* `pagos_pendientes`: imprime por `stdout` la cantidad y el monto total de los
+pagos pendientes, separados por una coma.
 * `procesar <numero>`: procesa hasta un número no negativo de pagos pendientes.
 * `guardar_cuentas <archivo>`: guarda en un archivo el estado *actual* de las
 cuentas. Si no existe lo debe crear, y si existe lo sobreescribe.
 * `finalizar`: finaliza el programa (si quedan pagos sin procesar, no se 
 procesan).
+
+*Nota*: recomendamos usar el siguiente formato para la impresión de números
+decimales en C: `%.3f`, que imprime el número redondeado a tres decimales.
 
 ### Código de pago
 
@@ -168,6 +170,16 @@ validar_pago
 <id_usuario_1>
 pagar
 ```
+
+Las distintas instrucciones del código de pago se ingresan en **una línea** 
+separadas por `;`, por ejemplo:
+
+```
+0;14f6c9dae22;validar_usuario;0;5.00;validar_pago;5.00;3;0;pagar
+```
+
+Que corresponde a un pago del usuario 0 de coordenadas 14f6c9dae22 
+de 5 rositas para el usuario 3.
 
 Para clarificar, marcamos las siguientes operaciones:    
 
@@ -206,17 +218,19 @@ La implementación deberá manejar correctamente los siguientes casos de error:
     - Se encuentra una cadena de texto cuando se espera un número entero.
     - Hay parámetros de más.
     - Faltan parámetros.
+    - El comando no existe.
 
 En caso de error 1, el programa deberá imprimir por `stderr`: `Error en pago <id>`
-con el id de pago inválido. Ese pago no se procesará pero sí los siguientes (si
-corresponde). 
+con el id de pago inválido. Queda a elección de ustedes decidir si el resto de
+los pagos del código se procesaran o no.
 
 En caso de error 2, el programa deberá imprimir por `stderr`: `Error en comando <nombre>`
 con el nombre del comando que falló. Un error de tipo 2 hará que termine la
 ejecución del programa.   
 
 En caso de que un comando no tenga errores de tipo 2 deberá imprimir `OK` por
-`stdout`.
+`stdout`. Esta cadena deberá ser lo último impreso por la aplicación en caso de
+error.
 
 ### Diseño
 
@@ -316,7 +330,8 @@ procesar 1
 finalizar
 ```
 
-Deberá producir la siguiente salida:
+Deberá producir la siguiente salida (teniendo en cuenta lo mostrado por `stdout`
+y por `stderr`):
 
 ```
 OK
@@ -337,7 +352,8 @@ guardar_cuentas cuentas_out.csv
 finalizar
 ```
 
-Deberá producir la siguiente salida:
+Deberá producir la siguiente salida (teniendo en cuenta lo mostrado por `stdout`
+y por `stderr`)::
 
 ```
 OK
@@ -345,6 +361,46 @@ Error en comando procesar
 ```
 
 Y deberá terminar la ejecución sin ejecutar los últimos dos comandos.
+
+#### Con un comando inexistente
+
+La siguiente serie de comandos incluye uno que es inexistente:
+
+```
+agregar_pago 1 5.00 1;916f4c31aaa;validar_usuario;1;5.00;validar_pago;5.00;0;1;pagar
+imprimir_deudas 4
+procesar 2
+finalizar
+```
+
+Deberá producir la siguiente salida (teniendo en cuenta lo impreso por `stdout`
+y `stderr`):
+
+```
+OK
+Error en comando imprimir_deudas
+```
+
+Y deberá terminar la ejecución sin ejecutar los últimos dos comandos.
+
+#### Con impresión de pagos pendientes
+
+La siguiente serie de comandos:
+
+```
+agregar_pago 1 10.02 0;14f6c9dae22;validar_usuario;1;916f4c31aaa;validar_usuario;0;5.22;validar_pago;1;4.80;validar_pago;5.22;2;0;pagar;4.80;2;1;pagar
+pagos_pendientes
+finalizar
+```
+
+Deberá producir la siguiente salida:
+
+```
+OK
+1,10.02
+OK
+OK
+```
 
 Anexo: más información y links
 ------------------------
@@ -375,7 +431,21 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
 - el código de la solución de wachencoin.
 - el código de los TDAs programados en la cursada que se requieran, con las
 modificaciones que sean necesarias.
-- un archivo `deps.mk` con las dependencias del proyecto en formato make.
+- un archivo `deps.mk` con las dependencias del proyecto en formato make. Este
+deberá contener sólamente una línea que indique qué _objetos_ necesita para
+compilar el ejecutable wachencoin, por ejemplo:
+
+``` makefile
+wachencoin: tp1.c vector.o pila.o lista.o strutil.o
+```
+
+El corrector automático va a interpretar ese archivos de dependencias y va a
+compilar todos los `.o` especificados a partir de los `.h` y `.c` que deberán
+enviar, con los siguientes flags de GCC:
+
+``` makefile
+-std=c99 -Wall -Wtype-limits -pedantic -Wconversion -Wno-sign-conversion
+```
 
 La entrega se realiza:
 
