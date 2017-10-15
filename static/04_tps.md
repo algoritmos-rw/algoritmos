@@ -8,7 +8,8 @@ permalink: /tps/
 TPs
 =======
 
-A continuación encontrarán los trabajos prácticos para entregar que iremos planteando a lo largo de la materia.
+A continuación encontrarán las entregas que iremos planteando a lo largo de la
+materia.
 
 {: .table .table-striped}
 | TP       | Código      | Fecha de entrega |
