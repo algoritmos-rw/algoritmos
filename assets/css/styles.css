@@ -44,6 +44,11 @@
   display: inline;
 }
 
+a.post-link:hover,
+a.post-link:focus {
+  display: inline-block;
+}
+
 .table-borderless > tbody > tr > td,
 .table-borderless > tbody > tr > th,
 .table-borderless > tfoot > tr > td,
