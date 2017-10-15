@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Arbol Binario de Búsqueda
+title: Árbol Binario de Búsqueda
 permalink: /tps/abb
 ---
 
-Arbol Binario de Búsqueda
+Árbol Binario de Búsqueda
 =============
 
-Para el **viernes 27 de octubre** deben implementar un Arbol Binario de Búsqueda (ABB), según las siguientes definiciones y primitivas:
+Para el **viernes 27 de octubre** deben implementar un Árbol Binario de Búsqueda (ABB), según las siguientes definiciones y primitivas:
 
 ``` cpp
 typedef struct abb abb_t;
