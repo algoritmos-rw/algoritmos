@@ -13,7 +13,7 @@ permalink: /
   <h3 class="page-heading">Novedades</h3>
   
   <ul class="post-list">
-	{% for post in site.posts %}
+	{% for post in site.posts limit:15 %}
 	  <li>
       <a class="post-link" href="{{ post.url | relative_url }}">
         <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
