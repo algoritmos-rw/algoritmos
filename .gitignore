@@ -6,3 +6,7 @@ _site
 .idea
 
 Gemfile.lock
+
+.Gemfile.lock.swp
+.bundle/config
+
