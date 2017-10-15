@@ -11,5 +11,5 @@ A continuación encontrarán los trabajos prácticos para entregar que iremos pl
 
 {: .table .table-striped}
 | TP       | Código      | Fecha de entrega |
-|----------|-------------|------------------|{% for tp in site.data.tps %}{% if tp.is_publicado %}
-|[{{tp.nombre}}]({{tp.link_enunciado | relative_url}}) | [{{tp.zip}}]({{tp.link_zip}}) | {{tp.fecha_entrega}}{% endif %}{% endfor %}
+|----------|-------------|------------------|{% for tp in site.posts reversed %}{% if tp.es_TP %}
+|[{{tp.nombre_TP}}]({{tp.link_enunciado | relative_url}}) | [{{tp.zip}}]({{tp.link_zip}}) | {{tp.fecha_entrega}}{% endif %}{% endfor %}
