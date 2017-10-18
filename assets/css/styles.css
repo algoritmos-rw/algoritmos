@@ -49,6 +49,10 @@ a.post-link:focus {
   display: inline-block;
 }
 
+pre code {
+  white-space: pre;
+}
+
 .table-borderless > tbody > tr > td,
 .table-borderless > tbody > tr > th,
 .table-borderless > tfoot > tr > td,
