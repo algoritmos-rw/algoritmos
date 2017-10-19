@@ -32,7 +32,7 @@ La función de comparación (de tipo `abb_comparar_clave_t`), recibe dos cadenas
 * Un entero mayor que 0 si la primera cadena es mayor que la segunda. 
 * 0 si ambas claves son iguales. 
 
-Qué impleque que una cadena sea igual, mayor o menor que otra va a depender del usuario del TDA. 
+Qué implica que una cadena sea igual, mayor o menor que otra va a depender del usuario del TDA. 
 Por ejemplo, `strcmp` cumple con esta especificación.
 
 La función `destruir_dato` se recibe en el constructor, para usarla en `abb_destruir` y en `abb_insertar` en el caso de que tenga que reemplazar el dato de una clave ya existente.
