@@ -27,8 +27,15 @@ size_t abb_cantidad(abb_t *arbol);
 
 void abb_destruir(abb_t *arbol);
 ```
+La función de comparación (de tipo `abb_comparar_clave_t`), recibe dos cadenas y devuelve:
+* Un entero menor que 0 si la primera cadena es menor que la segunda. 
+* Un entero mayor que 0 si la primera cadena es mayor que la segunda. 
+* 0 si ambas claves son iguales. 
 
-La función ```destruir_dato``` se recibe en el constructor, para usarla en ```abb_destruir``` y en ```abb_insertar``` en el caso de que tenga que reemplazar el dato de una clave ya existente.
+Qué implica que una cadena sea igual, mayor o menor que otra va a depender del usuario del TDA. 
+Por ejemplo, `strcmp` cumple con esta especificación.
+
+La función `destruir_dato` se recibe en el constructor, para usarla en `abb_destruir` y en `abb_insertar` en el caso de que tenga que reemplazar el dato de una clave ya existente.
 
 Por otro lado deben implementar dos iteradores inorder.
 
