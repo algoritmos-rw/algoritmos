@@ -41,3 +41,25 @@ Al igual que para las entregas anteriores, deberán entregar el código en papel
 
 Además, deben subir el código a la [página de entregas de la materia](https://algoritmos7541-rw.tk/entregas/), con el código completo.
 
+### Registro de tiempos
+
+Quienes quieran mejorar sus tiempos pueden correr [este script]({{ 'assets/tps/tda/hash/tiempos_volumen.sh' | relative_url }}),
+que es similar al que usa el corrector automático. Imprime por salida estándar
+el registro de tiempos y consumo para ciertas cantidades de inserciones:
+
+```
+12500 elementos - Tardó: 0.07s - Consumió: 3332 KiB
+25000 elementos - Tardó: 0.10s - Consumió: 5208 KiB
+50000 elementos - Tardó: 0.22s - Consumió: 9124 KiB
+100000 elementos - Tardó: 0.31s - Consumió: 16728 KiB
+200000 elementos - Tardó: 0.73s - Consumió: 32268 KiB
+400000 elementos - Tardó: 1.29s - Consumió: 63700 KiB
+```
+
+Simplemente tienen que descargarlo, darse permisos de ejecución y correrlo
+indicándole por parámetro el nombre del ejecutable:
+
+```
+chmod +x tiempos_volumen.sh
+./tiempos_volumen ./main
+```
