@@ -44,6 +44,11 @@
   display: inline;
 }
 
+a.post-link:hover,
+a.post-link:focus {
+  display: inline-block;
+}
+
 pre code {
   white-space: pre;
 }
