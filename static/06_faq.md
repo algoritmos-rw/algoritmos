@@ -485,6 +485,14 @@ A esta clave será necesario aplicar la función de hashing, que debería dar un
 
 Por otro lado, el `hash_dato_t` es la información que va ir asociada a esa clave, y puede ser cualquier puntero.  En la tabla de hash esta información tiene que quedar guardada como una pareja, ya que la clave y el dato tienen que estar juntos, en una estructura adicional (que se puede llamar, por ejemplo, `hash_nodo_t` o `hash_elem_t`).  De esta forma es posible recuperar el dato asociado a la clave cuando así se lo solicite.
 
+### ¿Por qué se crean copias de las claves al guardar?
+
+Las claves en nuestra implementación del hash son cadenas, que en C son arreglos
+de caracteres. Si no se hicieran copias de las claves, el usuario podría
+modificar la cadena (sin cambiar el puntero). Tal cambio podría ocasionar que la
+función de hash devuelva un resultado diferente, haciendo que el par clave–valor
+fuera imposible de localizar nuevamente.
+
 ### ¿Cómo se itera un hash abierto?
 
 El objetivo del iterador es permitir recorrer todos los elementos de la tabla de hash, sin importar el orden en que se encuentren. Cada vez que se pide ver el elemento actual, se deben devolver tanto la clave como el dato, ya que el usuario no sabe cuál es ninguno de los dos.
