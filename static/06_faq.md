@@ -479,11 +479,11 @@ Adicionalmente, esta función devuelve un valor booleano. Si en algún momento s
 
 ### ¿Qué son las claves y los datos dentro del hash?
 
-La clave es la cadena mediante la cual se ubica el dato, tanto al guardarlo como al buscarlo o sacarlo.  Por ejemplo, si se guarda una estructura alumno, la clave podría ser el padrón o el apellido, según con qué criterio se quiere guardar y luego encontrar los datos.
+La clave es la cadena mediante la cual se ubica el dato, tanto al guardarlo como al obtenerlo o borrarlo. Por ejemplo, si se guarda una estructura `alumno_t`, la clave podría ser el padrón (como cadena) o el apellido, según con qué criterio se quiere guardar y luego encontrar los datos.
 
-A esta clave será necesario aplicar la función de hashing, que debería dar un número más o menos grande, al que luego se lo acota aplicando el resto de la división entera con el largo del arreglo del hash.
+A esta clave será necesario aplicar la función de hashing, que debe devolver un número entre 0 y _m-1_, siendo _m_ el largo de la tabla de hash. La forma más usada de obtener un valor en este rango es aplicando la operación módulo _m_, que devuelve el resto de la división entera entre un número y _m_.
 
-Por otro lado, el `hash_dato_t` es la información que va ir asociada a esa clave, y puede ser cualquier puntero.  En la tabla de hash esta información tiene que quedar guardada como una pareja, ya que la clave y el dato tienen que estar juntos, en una estructura adicional (que se puede llamar, por ejemplo, `hash_nodo_t` o `hash_elem_t`).  De esta forma es posible recuperar el dato asociado a la clave cuando así se lo solicite.
+Las claves y los datos asociados se guardan en la tabla de hash como una pareja. Para esto usamos una estructura adicional (que se puede llamar, por ejemplo, `hash_campo_t` o `hash_elem_t`).  De esta forma es posible recuperar el dato asociado a la clave cuando así se lo solicite.
 
 ### ¿Cómo se itera un hash abierto?
 
