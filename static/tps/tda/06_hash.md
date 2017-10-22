@@ -61,5 +61,5 @@ indicándole por parámetro el nombre del ejecutable:
 
 ```
 chmod +x tiempos_volumen.sh
-./tiempos_volumen ./main
+./tiempos_volumen.sh ./main
 ```
