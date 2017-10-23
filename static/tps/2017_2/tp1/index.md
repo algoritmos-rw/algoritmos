@@ -449,7 +449,7 @@ enviar, con los siguientes flags de GCC:
 
 La entrega se realiza:
 
-1. en forma digital a través del [sistema de entregas](entregas.algoritmos7541-rw.tk):
+1. en forma digital a través del [sistema de entregas](http://entregas.algoritmos7541-rw.tk):
 todos los archivos mencionados en un único archivo ZIP.
 2. en papel durante la clase (si su ayudante lo requiere) el código del Trabajo
 en hoja A4 **abrochadas, sin folio, informe ni carátula**. No es necesario 
