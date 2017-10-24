@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: TP1 – Wachencoin
 permalink: '/tps/2017_2/tp1'
@@ -444,7 +444,7 @@ compilar todos los `.o` especificados a partir de los `.h` y `.c` que deberán
 enviar, con los siguientes flags de GCC:
 
 ``` makefile
--std=c99 -Wall -Wtype-limits -pedantic -Wconversion -Wno-sign-conversion
+-g -std=c99 -Wall -Wtype-limits -pedantic -Wconversion -Wno-sign-conversion
 ```
 
 La entrega se realiza:
