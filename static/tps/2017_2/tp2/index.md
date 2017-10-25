@@ -22,6 +22,12 @@ Contenido
 Introducción
 ------------
 
+<p style="text-align: center;">
+    <img src="{{ 'assets/tps/2017_2/tp2/uma1.png' | relative_url }}" width="200">
+    <img src="{{ 'assets/tps/2017_2/tp2/uma2.png' | relative_url }}" width="250">
+</p>
+
+
 Una cierta materia de una prestigiosa Universidad de Música ha puesto a
 disposición un corrector automático de partituras. Puesto que los docentes a
 cargo del curso no tienen demasiada experiencia en programación de sistemas web,
