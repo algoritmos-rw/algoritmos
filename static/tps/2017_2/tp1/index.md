@@ -443,7 +443,7 @@ El corrector automático va a interpretar ese archivos de dependencias y va a
 compilar todos los `.o` especificados a partir de los `.h` y `.c` que deberán
 enviar, con los siguientes flags de GCC:
 
-``` makefile
+```
 -g -std=c99 -Wall -Wtype-limits -pedantic -Wconversion -Wno-sign-conversion
 ```
 
