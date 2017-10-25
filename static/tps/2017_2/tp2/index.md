@@ -156,8 +156,8 @@ Este comando mostrará los _n_ recursos más solicitados. Esta información suel
 ser útil para analizar cuales son las páginas más visitadas a nivel global.
 
 *Ejemplo:* `ver_mas_visitados 10` mostrará los 10 recursos más solicitados, para
-todos los logs analizados. Las IPs se muestran ordenadas comenzando por la de
-mayor cantidad de solicitudes, separando con un guión a la cantidad. En caso de
+todos los logs analizados. Los sitios se muestran ordenados comenzando por el de
+mayor cantidad de solicitudes, separado con un guión a la cantidad. En caso de
 empate se pueden mostrar en cualquier orden.
 
 *Ejemplo de salida:*
