@@ -174,7 +174,7 @@ Estos dos archivos se van a usar para generar un grafo donde los vértices sean 
 	La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí (distancia mayor o igual a 2), pero hayan trabajado con la mayor cantidad de actores en común
     ```
     similares("Clint Eastwood", 2)
-    >>> ["Christian Bale", "Marlon Brando", ...]
+    >>> ["Christian Bale", "Marlon Brando"]
     ```
 	
 # Anexo: Links y más
