@@ -42,6 +42,8 @@ Por ejemplo, con la idea de conectar a Naomi Watts con Kevin Bacon, se puede dec
 
 De acá se puede decir que **Naomi Watts tiene un Bacon Number de 2**.
 
+Es importante ver que **el camino no es unico.**, pero por ser siempre el mas corto **el Bacon Number es siempre el mismo**. Tanto porque los actores colaboren juntos en más de una película (De Naomi Watts a Sean Penn se puede llegar por _**The Assassination of Richard Nixon**_), como por que se tome un camino distinto (por ejemplo, Naomi Watts trabajo con Jeffrey Donovan en _**J Edgar**_ quien a su vez trabajo con Kevin Bacon en _**Sleepers**_).
+
 ¹Tanto Río Místico como 21 Gramos son fuertes recomendaciones de muy buenas películas.
 
 ## Trabajo
