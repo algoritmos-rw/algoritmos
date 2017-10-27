@@ -35,14 +35,14 @@ Para esto, decidió sabiamente confiar en los alumnos de Algoritmos y Programaci
 
 La teoría de los Seis grados de Kevin Bacon lleva esta idea al cine, donde afirma que el prolífico actor Kevin Bacon actuó en tantas peliculas y con tantos actores conocidos que está conectado a cualquier actor del mundo en una cadena de 6 películas como máximo.
 
-Por ejemplo, con la idea de conectar a Jake Gyllenhaal con Kevin Bacon, se puede decir que:
+Por ejemplo, con la idea de conectar a Naomi Watts con Kevin Bacon, se puede decir que:
 
-* Jake Gyllenhaal actuó con Beth Grant en _**Donnie Darko.¹**_
-* Por su parte, Beth Grant actuó con **Kevin Bacon** en _**Flatliners.**_
+* Naomi Watts actuó con Sean Penn en _**21 Gramos.**_
+* Por su parte, Sean Penn actuó con **Kevin Bacon** _**en Río Místico¹.**_
 
-De acá se puede decir que **Jake Gyllenhaal tiene un Bacon Number de 2**.
+De acá se puede decir que **Naomi Watts tiene un Bacon Number de 2**.
 
-¹Donnie Darko es una muy fuerte recomendación de buena película.
+¹Tanto Río Místico como 21 Gramos son fuertes recomendaciones de muy buenas películas.
 
 ## Trabajo
 
@@ -90,7 +90,7 @@ peliculas_mas_populares(2)
 
 Devuelve una lista con los n actores más similares a Kevin Bacon. 
 
-¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? Contrata al que mas se le parece!
+¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
 
 ¿A quién le recomendamos a KB que trabaje en su siguiente pelicula?
 
@@ -109,19 +109,19 @@ similares(2)
 
 ## Implementación
 
-Para lograr todo esto, IMDB nos proporcionó³ dos sets de datos, actores.csv y actrices.csv (**comma separated values**) con un total de 2 millones 480 mil actores. Estos tienen el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...`. Por ejemplo:
+Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, `actores.csv` (**comma separated values**) con un total de 2.480.000 actores. Estos tienen el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...`. Por ejemplo:
 
 ```
-Bacon  Kevin (I),A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995)  ,Beauty Shop (2005),Beyond All Boundaries (2009)  ,Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
+Bacon  Kevin (I),A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995),Beauty Shop (2005),Beyond All Boundaries (2009),Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
 ```
 
-Estos dos archivos se van a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado juntos, así conectandolos.
+Estos dos archivos se van a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado juntos, así conectándolos.
 
 ³ Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Para ver cómo se trabajo con el archivo original ir [acá](https://github.com/FdelMazo/IMDBtoCSV/blob/master/imdbtocsv.py)
 
 ### Primitivas del grafo
 
-Si bien el grafo es abstracto y **debe ser escrito en terminos de vértices y aristas**, se deja el analogo a un grafo de actores y películas al lado de cada primitva.
+Si bien el grafo es abstracto y **debe ser escrito en terminos de vértices y aristas**, se deja el análogo a un grafo de actores y películas al lado de cada primitva.
 
 1. Crear grafo (y de ser necesario destruirlo).
 1. Agregar y borrar arista -> Agregar película.
@@ -131,7 +131,7 @@ Si bien el grafo es abstracto y **debe ser escrito en terminos de vértices y ar
 1. Obtener aristas.
 1. Obtener vértices.
 
-### Funciones a Implementar
+### Funciones a implementar
 
 1. _Camino_: (actor1, actor2) 
  
@@ -146,7 +146,7 @@ Si bien el grafo es abstracto y **debe ser escrito en terminos de vértices y ar
    Lista de actores a n pasos del actorbase (ni más ni menos). De n ser 0 debe devolver una lista con solo el nombre del actor
    ```
    distancia("Clint Eastwood", 2)
-   >>> ["Paul Rudd", "Michael Douglas"]
+   >>> ["Paul Rudd", "Michael Douglas", ...]
    ```
 
 3. _Cantidad Conocidos_: (actorbase) 
