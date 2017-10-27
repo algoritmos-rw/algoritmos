@@ -35,14 +35,14 @@ Para esto, decidió sabiamente confiar en los alumnos de Algoritmos y Programaci
 
 La teoría de los Seis grados de Kevin Bacon lleva esta idea al cine, donde afirma que el prolífico actor Kevin Bacon actuó en tantas peliculas y con tantos actores conocidos que está conectado a cualquier actor del mundo en una cadena de 6 películas como máximo.
 
-Por ejemplo, con la idea de conectar a Naomi Watts con Kevin Bacon, se puede decir que:
+Por ejemplo, con la idea de conectar a Jake Gyllenhaal con Kevin Bacon, se puede decir que:
 
-* Naomi Watts actuó con Sean Penn en _**21 Gramos.**_
-* Por su parte, Sean Penn actuó con **Kevin Bacon** _**en Río Místico¹.**_
+* Jake Gyllenhaal actuó con Beth Grant en _**Donnie Darko.¹**_
+* Por su parte, Beth Grant actuó con **Kevin Bacon** en _**Flatliners.**_
 
-De acá se puede decir que **Naomi Watts tiene un Bacon Number de 2**.
+De acá se puede decir que **Jake Gyllenhaal tiene un Bacon Number de 2**.
 
-¹Tanto Río Místico como 21 Gramos son fuertes recomendaciones de muy buenas películas.
+¹Donnie Darko es una muy fuerte recomendación de buena película.
 
 ## Trabajo
 
