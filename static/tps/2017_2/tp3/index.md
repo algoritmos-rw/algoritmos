@@ -121,15 +121,15 @@ Estos dos archivos se van a usar para generar un grafo donde los vértices sean 
 
 ### Primitivas del grafo
 
-1. Crear grafo (y de ser necesario destruirlo)
-1. Agregar arista
-1. Borrar arista
-1. Agregar vértice
-1. Borrar vértice
-1. Obtener adyacentes de un V
-1. Verificar si dos V son adyacentes
-1. Obtener aristas
-1. Obtener vértices
+Si bien el grafo es abstracto y **debe ser escrito en terminos de vértices y aristas**, se deja el analogo a un grafo de actores y películas al lado de cada primitva.
+
+1. Crear grafo (y de ser necesario destruirlo).
+1. Agregar y borrar arista -> Agregar película.
+1. Agregar y borrar vértice -> Agregar actor.
+1. Obtener adyacentes de un vértice -> Obtener actores con los que trabajó.
+1. Verificar si dos vértice son adyacentes -> Verificar si dos actores trabajaron juntos.
+1. Obtener aristas.
+1. Obtener vértices.
 
 ### Funciones a Implementar
 
