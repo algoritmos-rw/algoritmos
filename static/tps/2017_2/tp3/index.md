@@ -95,12 +95,12 @@ similares(2)
 
 * Estadísticas²: 
     
-    1. actores_mas_conocidos(n): Devuelve los n actores que con más gente hayan trabajado
-    1. cantidad_peliculas(): Devuelve la cantidad de peliculas en el dataset
-    1. cantidad_actores(): Devuelve la cantidad de actores en el dataset
+    1. actores_con_mas_conexiones(n): Devuelve los n actores que a más gente lleguen.
+    1. cantidad_peliculas(): Devuelve la cantidad de peliculas en el dataset.
+    1. cantidad_actores(): Devuelve la cantidad de actores en el dataset.
 ```
-actores_mas_conocidos(2)
->>> Los dos actores más conocidos son "Leonardo DiCaprio", "George Clooney".
+actores_con_mas_conexiones(2)
+>>> Los dos actores que a más gente lleguen son "Leonardo DiCaprio", "George Clooney".
 cantidad_peliculas()
 >>> El dataset contiene N películas.
 cantidad_actores()
@@ -149,18 +149,17 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
    >>> ["Paul Rudd", "Michael Douglas", ...]
    ```
 
-3. _Cantidad Conocidos_:
+3. _Cantidad Alcanzados_:
 
    Devuelve la cantidad de personas a las que puede llegar el actor ingresado.   
    ```
-   cantidad_conocidos("Clint Eastwood")
+   cantidad_alcanzados("Clint Eastwood")
    >>> 2331685
    ```
    
 4. _Popularidad_: 
  
-    La popularidad de un actor puede ser medida por la sumatoria de cuántos conocidos tiene toda persona con la que el actor trabajó alguna vez, dividido la cantidad de actores con los que trabajó, multiplicado por la cantidad de películas hechas. 
-    
+    La popularidad de un actor puede ser medida por la sumatoria de a cuanta gente llega toda persona con la que el actor trabajó alguna vez, dividido la cantidad de actores con los que trabajó, y eso dividido por la cantidad de películas hechas.    
     ```
     popularidad("Clint Eastwood")
     >>>  ???
