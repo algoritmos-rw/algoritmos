@@ -21,9 +21,7 @@ está divido en tres partes interconectadas:
 * Libreria de funciones de grafos de actores
 * Programa 'Seis grados de Kevin Bacon'
 
-
 ## Introducción
-
 
 Llega diciembre, y la conocida comunidad IMDB está realizando un balance del año. Son devotos de conocer qué películas son las más populares y a qué actores se les podría llamar más famosos. 
 Pero no solo quieren saber esto, ya que este año el CEO de la página escuchó sobre la idea de los “6 grados de Kevin Bacon” y decidió que podía utilizar la enorme base de datos que maneja diariamente la página para corroborar la vericidad de este concepto.
@@ -94,8 +92,6 @@ Devuelve una lista con los n actores más similares a Kevin Bacon.
 
 ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
 
-¿A quién le recomendamos a KB que trabaje en su siguiente pelicula?
-
 ```
 similares(2)
 >>> ["Christopher Lee", "Morgan Freeman"]
@@ -117,7 +113,7 @@ Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, `actores.csv` (
 Bacon  Kevin (I),A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995),Beauty Shop (2005),Beyond All Boundaries (2009),Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
 ```
 
-Estos dos archivos se van a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado juntos, así conectándolos.
+Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado juntos, así conectándolos.
 
 ³ Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Para ver cómo se trabajo con el archivo original ir [acá](https://github.com/FdelMazo/IMDBtoCSV/blob/master/imdbtocsv.py)
 
@@ -159,8 +155,7 @@ Estos dos archivos se van a usar para generar un grafo donde los vértices sean 
    
 4. _Popularidad_: (actorbase) 
  
-    1. Fácil fácil: La popularidad de un actor puede ser medida como la cantidad de actores que conoce uno sobre la cantidad de películas en las que trabajó
-    1. Recursivo fácil: La popularidad de un actor puede ser medida por la sumatoria de cuánta gente conoce toda persona con la que el actor trabajó en alguna película (es decir, actores a distancia 1), dividido la cantidad de películas en las que el actor trabajó 
+    La popularidad de un actor puede ser medida por la sumatoria de cuántos conocidos tiene toda persona con la que el actor trabajó alguna vez, dividido la cantidad de actores con los que trabajó, multiplicado por la cantidad de películas hechas. 
     
     ```
     popularidad("Clint Eastwood")
@@ -171,7 +166,7 @@ Estos dos archivos se van a usar para generar un grafo donde los vértices sean 
 
     Devuelve los n actores más similares al actor base.
     
-	La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí (distancia mayor o igual a 2), pero hayan trabajado con la mayor cantidad de actores en común
+	La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad de actores en común
     ```
     similares("Clint Eastwood", 2)
     >>> ["Christian Bale", "Marlon Brando"]
