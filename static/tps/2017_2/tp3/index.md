@@ -146,7 +146,7 @@ Si bien el grafo es abstracto y **debe ser escrito en terminos de vértices y ar
    Lista de actores a n pasos del actorbase (ni más ni menos). De n ser 0 debe devolver una lista con solo el nombre del actor
    ```
    distancia("Clint Eastwood", 2)
-   >>> ["Paul Rudd", "Michael Douglas", ...]
+   >>> ["Paul Rudd", "Michael Douglas"]
    ```
 
 3. _Cantidad Conocidos_: (actorbase) 
