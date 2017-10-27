@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: TP3 – Seis Grados de Kevin Bacon
 permalink: '/tps/2017_2/tp3'
@@ -24,7 +24,7 @@ está divido en tres partes interconectadas:
 ## Introducción
 
 Llega diciembre, y la conocida comunidad IMDB está realizando un balance del año. Son devotos de conocer qué películas son las más populares y a qué actores se les podría llamar más famosos. 
-Pero no solo quieren saber esto, ya que este año el CEO de la página escuchó sobre la idea de los “6 grados de Kevin Bacon” y decidió que podía utilizar la enorme base de datos que maneja diariamente la página para corroborar la vericidad de este concepto.
+Pero no solo quieren saber esto, ya que este año el CEO de la página escuchó sobre la idea de los “Seis grados de Kevin Bacon” y decidió que podía utilizar la enorme base de datos que maneja diariamente la página para corroborar la vericidad de este concepto.
 Para esto, decidió sabiamente confiar en los alumnos de Algoritmos y Programación II de la FIUBA, aprovechando su conocimiento para poder así resolver el misterio.
 
 ## Interludio: ¿Seis grados de separación? ¿Seis grados de Kevin Bacon? 
@@ -36,11 +36,11 @@ La teoría de los Seis grados de Kevin Bacon lleva esta idea al cine, donde afir
 Por ejemplo, con la idea de conectar a Naomi Watts con Kevin Bacon, se puede decir que:
 
 * Naomi Watts actuó con Sean Penn en _**21 Gramos.**_
-* Por su parte, Sean Penn actuó con **Kevin Bacon** _**en Río Místico¹.**_
+* Por su parte, Sean Penn actuó con **Kevin Bacon** en _**Río Místico¹.**_
 
 De acá se puede decir que **Naomi Watts tiene un Bacon Number de 2**.
 
-Es importante ver que **el camino no es unico.**, pero por ser siempre el mas corto **el Bacon Number de un actor es siempre el mismo**. Tanto porque los actores colaboren juntos en más de una película (De Naomi Watts a Sean Penn se puede llegar por _**The Assassination of Richard Nixon**_), como por que se tome un camino distinto (por ejemplo, Naomi Watts trabajo con Jeffrey Donovan en _**J Edgar**_ quien a su vez trabajo con Kevin Bacon en _**Sleepers**_).
+Es importante ver que **el camino no es unico**, pero por ser siempre el mas corto **el Bacon Number de un actor es siempre el mismo**. Esto es tanto porque los actores colaboren juntos en más de una película (De Naomi Watts a Sean Penn se puede llegar por _**The Assassination of Richard Nixon**_), como por que se tome un camino distinto (por ejemplo, Naomi Watts trabajo con Jeffrey Donovan en _**J Edgar**_ quien a su vez trabajo con Kevin Bacon en _**Sleepers**_).
 
 ¹Tanto _**Río Místico**_ como _**21 Gramos**_ son fuertes recomendaciones de muy buenas películas.
 
@@ -48,62 +48,56 @@ Es importante ver que **el camino no es unico.**, pero por ser siempre el mas co
 
 IMDB nos pidió las siguientes funciones:
 
-1. camino_hasta_KB(actor)
+* camino_hasta_KB(actor)
 
 Devuelve una lista de cómo llegar desde cualquier actor hasta Kevin Bacon. 
-
 ```
 camino_hasta_KB("Watts Naomi")
 >>> "Naomi Watts" actuó con "Sean Penn" en "Mystic River".
 >>> "Sean Penn" actuó con "Kevin Bacon" en "21 Grams".
 ```
 
-2. bacon_number(actor)
+* bacon_number(actor)
 
 Devuelve el Kevin Bacon Number del actor recibido.
-
 ```
 bacon_number("Naomi Watts")
 >>> "Naomi Watts" tiene un Kevin Bacon Number igual a 2.
 ```
-3. bacon_number_mayor_a_6() 
+
+* bacon_number_mayor_a_6() 
 
 Devuelve la lista de actores (¿existirán?) a una distancia mayor que 6 pasos de Kevin Bacon.
-
 ```
 bacon_number_mayor_a_6()
 >>> Los actores con un KBN mayor a 6 son: ???
 ```
 
-4. peliculas_mas_populares(n)
+* peliculas_mas_populares(n)
 
 Devuelve una lista con las n películas más populares de Kevin Bacon. 
 
-La "popularidad" de una película se puede calcular como el promedio de la popularidad de los actores.
-
+La "popularidad" de una película se puede calcular como el promedio de la popularidad de sus actores.
 ```
 peliculas_mas_populares(2)
 >>> Las 2 películas más populares de Kevin Bacon son: "Footloose", "X Men First Class".
 ```
 
-5. similares(n)
+* similares(n)
 
 Devuelve una lista con los n actores más similares a Kevin Bacon. 
 
 ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
-
 ```
 similares(2)
 >>> Los dos actores más similares KB son "Christopher Lee", "Morgan Freeman".
 ```
 
-6. Estadísticas²: 
+* Estadísticas²: 
     
     1. actores_mas_conocidos(n): Devuelve los n actores que con más gente hayan trabajado
     1. cantidad_peliculas(): Devuelve la cantidad de peliculas en el dataset
     1. cantidad_actores(): Devuelve la cantidad de actores en el dataset
-
-
 ```
 actores_mas_conocidos(2)
 >>> Los dos actores más conocidos son "Leonardo DiCaprio", "George Clooney".
@@ -117,7 +111,7 @@ cantidad_actores()
 
 ## Implementación
 
-Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, `actores.csv` (**comma separated values**) con un total de 2.480.000 actores. Este tienen el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...`. Por ejemplo:
+Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, `actores.csv` (**comma separated values**) con un total de 2.480.000 actores. Este tienen el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
 
 ```
 Bacon  Kevin (I),A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995),Beauty Shop (2005),Beyond All Boundaries (2009),Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
@@ -192,4 +186,6 @@ Para una buena lectura sobre grafos en Python pueden leer [este ensayo](https://
 
 # Criterios de aprobación
 
-El trabajo puede ser realizado en cualquier lenguaje de programación. Se pide 3 archivos (grafo, libreria de grafos de actores y programa de KB). 
+El trabajo puede ser realizado en cualquier lenguaje de programación. 
+
+Se pide 3 archivos: grafo, libreria de grafos de actores y programa de KB. 
