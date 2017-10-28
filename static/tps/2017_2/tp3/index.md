@@ -102,6 +102,15 @@ popularidad_contra_KB("Robert Pattinson")
 >>> "Robert Pattinson" es un 10% de lo popular que es Kevin Bacon
 ```
 
+* KBN_promedio()
+
+Devuelve cual es el Kevin Bacon Number promedio.
+
+```
+KBN_promedio()
+>>> El Kevin Bacon Number promedio es N
+```
+
 * Estadísticas²: 
     
     1. cantidad_peliculas(): Devuelve la cantidad de peliculas en el dataset.
@@ -120,7 +129,12 @@ cantidad_actores()
 Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, `actores.csv` (**comma separated values**) con un total de 2.480.000 actores. Este tienen el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
 
 ```
-Bacon  Kevin (I),A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995),Beauty Shop (2005),Beyond All Boundaries (2009),Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
+Bacon Jon,Atlantic Blues (2009),I Fight Piranhas (2009),Violet Party (2009)
+Bacon Karl,Catch 22 (2013)
+Bacon Kevin (I),A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995),Beauty Shop (2005),Beyond All Boundaries (2009),Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
+Bacon Kevin (II),Behind the Scene (2011)
+Bacon Les,Barack Obama on 60 Minutes Talks Osama Bin Laden (2011)
+Bacon Lewis,Beverley (2015)
 ```
 
 Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado juntos, así conectándolos. 
@@ -165,7 +179,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
    
 4. _Popularidad_: 
  
-    La popularidad de un actor puede ser medida por la sumatoria de a cuanta gente llega toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas.    
+    La popularidad de un actor puede ser medida por la sumatoria de a cuanta gente alcanza toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas.    
     ```
     popularidad("Clint Eastwood")
     >>>  ???
