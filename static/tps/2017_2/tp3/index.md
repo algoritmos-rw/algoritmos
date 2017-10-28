@@ -15,32 +15,32 @@ permalink: '/tps/2017_2/tp3'
 * Contenido
 {:toc}
 
-El Trabajo Práctico número 3 es de elaboracion grupal, tiene fecha de entrega para el **viernes 1/12**, y
+El Trabajo Práctico número 3 es de elaboración grupal, tiene fecha de entrega para el **viernes 1/12**, y
 está divido en tres partes interconectadas:
 * TDA Grafo con sus primitivas
-* Libreria de funciones de grafos de actores
+* Librería de funciones de grafos de actores
 * Programa 'Seis grados de Kevin Bacon'
 
 ## Introducción
 
-Llega diciembre, y la conocida comunidad IMDB está realizando un balance del año. Son devotos de conocer qué películas son las más populares y a qué actores se les podría llamar más famosos. 
-Pero no solo quieren saber esto, ya que este año el CEO de la página escuchó sobre la idea de los “Seis grados de Kevin Bacon” y decidió que podía utilizar la enorme base de datos que maneja diariamente la página para corroborar la vericidad de este concepto.
+Llega diciembre y la conocida comunidad IMDB está realizando un balance del año. Son devotos de conocer qué películas son las más populares y a qué actores se les podría llamar más famosos. 
+Pero no solo quieren saber esto, ya que este año el CEO de la página escuchó sobre la idea de los “Seis grados de Kevin Bacon” y decidió que podía utilizar la enorme base de datos que maneja diariamente la página para corroborar la veracidad de esta idea.
 Para esto, decidió sabiamente confiar en los alumnos de Algoritmos y Programación II de la FIUBA, aprovechando su conocimiento para poder así resolver el misterio.
 
 ## Interludio: ¿Seis grados de separación? ¿Seis grados de Kevin Bacon? 
 
-"Seis grados de separación" es un concepto que asegura que toda persona está a seis "pasos" o menos de cualquiera otra persona en el mundo con la idea de ir encadenando amigos de amigos. Por ejemplo, si Juan conoce a Martín y Martín conoce a Pedro, Juan está, por lo tanto, a dos pasos de Pedro. Para más información de por qué esto se cumple se puede ver [este](https://youtu.be/TcxZSmzPw8k)  video.
+"Seis grados de separación" es la idea que asegura que toda persona está a seis "pasos" o menos de cualquiera otra persona en el mundo, a partir de una cadena de conocidos. Por ejemplo, si Juan conoce a Martín y Martín conoce a Pedro, Juan está, entonces, a dos pasos de Pedro. Para más información de por qué esto se cumple se puede ver [este video](https://youtu.be/TcxZSmzPw8k).
 
-La teoría de los Seis grados de Kevin Bacon lleva esta idea al cine, donde afirma que el prolífico actor Kevin Bacon actuó en tantas peliculas y con tantos actores conocidos que está conectado a cualquier actor del mundo en una cadena de 6 películas como máximo.
+La teoría de los "Seis grados de Kevin Bacon" lleva esta idea al cine, afirmando que el prolífico actor Kevin Bacon actuó en tantas peliculas y con tantos actores conocidos que está conectado a cualquier actor del mundo en una cadena de 6 películas como máximo.
 
-Por ejemplo, con la idea de conectar a Naomi Watts con Kevin Bacon, se puede decir que:
+Por ejemplo, con la idea de conectar a Naomi Watts con Kevin Bacon:
 
 * Naomi Watts actuó con Sean Penn en _**21 Gramos.**_
-* Por su parte, Sean Penn actuó con **Kevin Bacon** en _**Río Místico¹.**_
+* Sean Penn actuó con **Kevin Bacon** en _**Río Místico¹.**_
 
-De acá se puede decir que **Naomi Watts tiene un Bacon Number de 2**.
+Por lo tanto, **Naomi Watts tiene un Bacon Number de 2**.
 
-Es importante ver que **el camino no es unico**, pero por ser siempre el mas corto **el Bacon Number de un actor es siempre el mismo**. Esto es tanto porque los actores colaboren juntos en más de una película (De Naomi Watts a Sean Penn se puede llegar por _**The Assassination of Richard Nixon**_), como por que se tome un camino distinto (por ejemplo, Naomi Watts trabajo con Jeffrey Donovan en _**J Edgar**_ quien a su vez trabajo con Kevin Bacon en _**Sleepers**_).
+Es importante ver que **el Bacon Number de un actor es siempre el mismo**, sin importar el camino. Esto es tanto porque los actores colaboren juntos en más de una película (De Naomi Watts a Sean Penn se puede llegar por _**The Assassination of Richard Nixon**_), como por que se tome un camino distinto (por ejemplo, Naomi Watts trabajo con Jeffrey Donovan en _**J Edgar**_ quien a su vez trabajo con Kevin Bacon en _**Sleepers**_).
 
 ¹Tanto _**Río Místico**_ como _**21 Gramos**_ son fuertes recomendaciones de muy buenas películas.
 
@@ -50,9 +50,9 @@ IMDB nos pidió las siguientes funciones:
 
 * camino_hasta_KB(actor)
 
-Devuelve una lista de cómo llegar desde cualquier actor hasta Kevin Bacon. 
+Devuelve el camino de cómo llegar desde cualquier actor hasta Kevin Bacon. 
 ```
-camino_hasta_KB("Watts Naomi")
+camino_hasta_KB("Naomi Watts")
 >>> "Naomi Watts" actuó con "Sean Penn" en "Mystic River".
 >>> "Sean Penn" actuó con "Kevin Bacon" en "21 Grams".
 ```
@@ -67,7 +67,7 @@ bacon_number("Naomi Watts")
 
 * bacon_number_mayor_a_6() 
 
-Devuelve la lista de actores (¿existirán?) a una distancia mayor que 6 pasos de Kevin Bacon.
+Devuelve los actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon.
 ```
 bacon_number_mayor_a_6()
 >>> Los actores con un KBN mayor a 6 son: ???
@@ -75,7 +75,7 @@ bacon_number_mayor_a_6()
 
 * peliculas_mas_populares(n)
 
-Devuelve una lista con las n películas más populares de Kevin Bacon. 
+Devuelve las n películas más populares de Kevin Bacon. 
 
 La "popularidad" de una película se puede calcular como el promedio de la popularidad de sus actores.
 ```
@@ -85,7 +85,7 @@ peliculas_mas_populares(2)
 
 * similares(n)
 
-Devuelve una lista con los n actores más similares a Kevin Bacon. 
+Devuelve los n actores más similares a Kevin Bacon. 
 
 ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
 ```
@@ -95,7 +95,7 @@ similares(2)
 
 * popularidad_contra_KB(actor)
 
-Todo el mundo sabe que Kevin Bacon es el actor mas popular de todos. Usando su popularidad como base (puede ser calculada solamente una vez), devuelve en porcentaje cuan popular es el actor en comparación a KB.
+Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base (puede ser calculada solamente una vez), devuelve en porcentaje cuán popular es el actor en comparación a KB.
 
 ```
 popularidad_contra_KB("Robert Pattinson")
@@ -113,7 +113,7 @@ KBN_promedio()
 
 * Estadísticas²: 
     
-    1. cantidad_peliculas(): Devuelve la cantidad de peliculas en el dataset.
+    1. cantidad_peliculas(): Devuelve la cantidad de películas en el dataset.
     1. cantidad_actores(): Devuelve la cantidad de actores en el dataset.
 ```
 cantidad_peliculas()
@@ -122,11 +122,11 @@ cantidad_actores()
 >>> El dataset contiene N películas.
 ```
 
-² IMDB se copó tanto con Kevin Bacon que dejó el balance anual para el final de todo, ¡casi se olvidan!
+²IMDB se copó tanto con Kevin Bacon que dejó el balance anual para el final de todo, ¡casi se olvidan!
 
 ## Implementación
 
-Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, `actores.csv` (**comma separated values**) con un total de 2.480.000 actores. Este tienen el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
+Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, `actores.csv` (**comma separated values**) con un total de 2.480.000 actores. Este tiene el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
 
 ```
 Bacon Jon,Atlantic Blues (2009),I Fight Piranhas (2009),Violet Party (2009)
@@ -137,9 +137,9 @@ Bacon Les,Barack Obama on 60 Minutes Talks Osama Bin Laden (2011)
 Bacon Lewis,Beverley (2015)
 ```
 
-Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado juntos, así conectándolos. 
+Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado, así conectándolos. 
 
-³ Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá](https://github.com/FdelMazo/IMDBtoCSV/blob/master/imdbtocsv.py)
+³Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/blob/master/imdbtocsv.py)
 
 ### Primitivas del grafo
 
@@ -147,7 +147,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
 1. Agregar y borrar arista.
 1. Agregar y borrar vértice.
 1. Obtener adyacentes de un vértice.
-1. Verificar si dos vértice son adyacentes.
+1. Verificar si dos vértices son adyacentes.
 1. Obtener aristas.
 1. Obtener vértices.
 
@@ -155,7 +155,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
 
 1. _Camino_: 
  
-   Dado dos actores, mostrar el camino **más corto** que recorre el primer actor para llegar al segundo.
+   Dado dos actores, devuelve el camino **más corto** que recorre el primer actor para llegar al segundo.
    ```
    camino("Clint Eastwood", "Christian Bale")
    >>> [("Empire of The Sun (1987)", "Clint Eastwood", "Ben Stiller"), ("Unite for Japan (2011)", "Ben Stiller", "Christian Bale")]
@@ -163,7 +163,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
 
 2. _Distancia_: 
 
-   Lista de actores a n pasos del actor (ni más ni menos). De n ser 0 debe devolver una lista con solo el nombre del actor
+   Devuelve la lista de actores a n pasos del actor (ni más ni menos). De n ser 0 debe devolver una lista con solo el nombre del actor
    ```
    distancia("Clint Eastwood", 2)
    >>> ["Paul Rudd", "Michael Douglas", ...]
@@ -179,7 +179,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
    
 4. _Popularidad_: 
  
-    La popularidad de un actor puede ser medida por la sumatoria de a cuanta gente alcanza toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas.    
+    La popularidad⁴ de un actor puede ser medida por la sumatoria de a cuánta gente alcanza toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.    
     ```
     popularidad("Clint Eastwood")
     >>>  ???
@@ -187,17 +187,18 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
 
 5. _Similares_:
 
-    Devuelve los n actores más similares al actor base.
+    Devuelve una lista de los n actores más similares al actor dado.
     
 	La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad de actores en común
     ```
     similares("Clint Eastwood", 2)
     >>> ["Christian Bale", "Marlon Brando"]
     ```
-	
+⁴El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
+
 # Anexo: Links y más
 
-Para ver una implementación online de Six Degrees of Bacon, pueden entrar al [Oracle de Bacon](https://oracleofbacon.org/). En su sección "How it Works" pueden ver mucha información interesante sobre teoría de grafos.
+Para ver una implementación online de Six Degrees of Bacon, pueden entrar al [Oracle de Bacon](https://oracleofbacon.org/). En su sección "How it Works" pueden encontrar información útil sobre teoría de grafos.
 
 También tengan en cuenta que con solo escribir en Google, por ejemplo, `bacon number of Clint Eastwood` pueden rápidamente comprobar sus resultados.
 
@@ -207,4 +208,4 @@ Para una buena lectura sobre grafos en Python pueden leer [este ensayo](https://
 
 El trabajo puede ser realizado en cualquier lenguaje de programación. 
 
-Se pide 3 archivos: grafo, libreria de grafos de actores y programa de KB. 
+Se pide 3 archivos: grafo, librería de grafos de actores y programa de Kevin Bacon. 
