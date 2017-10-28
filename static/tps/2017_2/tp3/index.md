@@ -93,14 +93,20 @@ similares(2)
 >>> Los dos actores más similares KB son "Christopher Lee", "Morgan Freeman".
 ```
 
+* popularidad_contra_KB(actor)
+
+Todo el mundo sabe que Kevin Bacon es el actor mas popular de todos. Usando su popularidad como base (puede ser calculada solamente una vez), devuelve en porcentaje cuan popular es el actor en comparación a KB.
+
+```
+popularidad_contra_KB("Robert Pattinson")
+>>> "Robert Pattinson" es un 10% de lo popular que es Kevin Bacon
+```
+
 * Estadísticas²: 
     
-    1. actores_con_mas_conexiones(n): Devuelve los n actores que a más gente lleguen.
     1. cantidad_peliculas(): Devuelve la cantidad de peliculas en el dataset.
     1. cantidad_actores(): Devuelve la cantidad de actores en el dataset.
 ```
-actores_con_mas_conexiones(2)
->>> Los dos actores que a más gente lleguen son "Leonardo DiCaprio", "George Clooney".
 cantidad_peliculas()
 >>> El dataset contiene N películas.
 cantidad_actores()
@@ -151,7 +157,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
 
 3. _Cantidad Alcanzados_:
 
-   Devuelve la cantidad de personas a las que puede llegar el actor ingresado.   
+   Devuelve la cantidad de personas a las que puede llegar el actor ingresado. 
    ```
    cantidad_alcanzados("Clint Eastwood")
    >>> 2331685
@@ -159,7 +165,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
    
 4. _Popularidad_: 
  
-    La popularidad de un actor puede ser medida por la sumatoria de a cuanta gente llega toda persona con la que el actor trabajó alguna vez, dividido la cantidad de actores con los que trabajó, y eso dividido por la cantidad de películas hechas.    
+    La popularidad de un actor puede ser medida por la sumatoria de a cuanta gente llega toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas.    
     ```
     popularidad("Clint Eastwood")
     >>>  ???
