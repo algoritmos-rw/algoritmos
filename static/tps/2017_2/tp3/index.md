@@ -126,7 +126,7 @@ cantidad_actores()
 
 ## Implementación
 
-Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, `actores.csv` (**comma separated values**) con un total de 2.480.000 actores. Este tiene el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
+Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, [`actors.csv`](https://drive.google.com/drive/folders/0B2J1xTZnFQnBVnZzcF8xR3Z3SVE?usp=sharing)⁴ (**comma separated values**) con un total de 2.480.000 actores. Este tiene el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
 
 ```
 Bacon Jon,Atlantic Blues (2009),I Fight Piranhas (2009),Violet Party (2009)
@@ -140,6 +140,8 @@ Bacon Lewis,Beverley (2015)
 Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado, así conectándolos. 
 
 ³Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/blob/master/imdbtocsv.py)
+
+⁴Siendo que `actors.csv` es muy pesado, un archivo más ligero, `test.csv`, también es proporcionado para no tener que procesar el dataset entero a la hora de probar resultados localmente. Este contiene lineas del archivo original escogidas al azar, más la linea de Kevin Bacon.
 
 ### Primitivas del grafo
 
@@ -179,7 +181,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
    
 4. _Popularidad_: 
  
-    La popularidad⁴ de un actor puede ser medida por la sumatoria de a cuánta gente alcanza toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.    
+    La popularidad⁵ de un actor puede ser medida por la sumatoria de a cuánta gente alcanza toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.    
     ```
     popularidad("Clint Eastwood")
     >>>  ???
@@ -194,7 +196,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
     similares("Clint Eastwood", 2)
     >>> ["Christian Bale", "Marlon Brando"]
     ```
-⁴El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
+⁵El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
 
 # Anexo: Links y más
 
