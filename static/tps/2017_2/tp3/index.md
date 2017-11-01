@@ -204,7 +204,7 @@ Para ver una implementación online de Six Degrees of Bacon, pueden entrar al [O
 
 También tengan en cuenta que con solo escribir en Google, por ejemplo, `bacon number of Clint Eastwood` pueden rápidamente comprobar sus resultados.
 
-Para una buena lectura sobre grafos en Python pueden leer [este ensayo](https://www.python.org/doc/essays/graphs/)
+Para una buena lectura sobre grafos en Python pueden leer [este ensayo](https://www.python.org/doc/essays/graphs/), y para un mejor manejo de clases pueden leer [acá](http://www.siafoo.net/article/57) y [acá](http://www.diveintopython3.net/special-method-names.html) acerca de los 'métodos magicos' (o 'dunder methods') de Python
 
 # Criterios de aprobación
 
