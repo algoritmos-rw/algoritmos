@@ -1,6 +1,4 @@
-Este es el repositorio del sitio web de Algoritmos y Programación II.
-
-Contiene la página web pública en el directorio [docs](docs), publicada en:
+Este es el repositorio del sitio web de Algoritmos y Programación II, publicado en:
 
 <https://algoritmos-rw.github.io/algo2/>
 
