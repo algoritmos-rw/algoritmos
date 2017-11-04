@@ -52,17 +52,17 @@ IMDB nos pidió las siguientes funciones:
 
 Devuelve el camino de cómo llegar desde cualquier actor hasta Kevin Bacon. 
 ```
-camino_hasta_KB("Naomi Watts")
->>> "Naomi Watts" actuó con "Sean Penn" en "Mystic River".
->>> "Sean Penn" actuó con "Kevin Bacon" en "21 Grams".
+camino_hasta_KB('Naomi Watts')
+>>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
+>>> 'Sean Penn' actuó con 'Kevin Bacon' en '21 Grams (2003)'.
 ```
 
 * bacon_number(actor)
 
 Devuelve el Kevin Bacon Number del actor recibido.
 ```
-bacon_number("Naomi Watts")
->>> "Naomi Watts" tiene un Kevin Bacon Number igual a 2.
+bacon_number('Naomi Watts')
+>>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
 ```
 
 * bacon_number_mayor_a_6() 
@@ -80,7 +80,7 @@ Devuelve las n películas más populares de Kevin Bacon.
 La "popularidad" de una película se puede calcular como el promedio de la popularidad de sus actores.
 ```
 peliculas_mas_populares(2)
->>> Las 2 películas más populares de Kevin Bacon son: "Footloose", "X Men First Class".
+>>> Las 2 películas más populares de Kevin Bacon son: 'Footloose', 'X Men First Class'.
 ```
 
 * similares(n)
@@ -90,7 +90,7 @@ Devuelve los n actores más similares a Kevin Bacon.
 ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
 ```
 similares(2)
->>> Los dos actores más similares KB son "Christopher Lee", "Morgan Freeman".
+>>> Los dos actores más similares KB son 'Christopher Lee', 'Morgan Freeman'.
 ```
 
 * popularidad_contra_KB(actor)
@@ -98,8 +98,8 @@ similares(2)
 Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base (puede ser calculada solamente una vez), devuelve en porcentaje cuán popular es el actor en comparación a KB.
 
 ```
-popularidad_contra_KB("Robert Pattinson")
->>> "Robert Pattinson" es un 10% de lo popular que es Kevin Bacon
+popularidad_contra_KB('Robert Pattinson')
+>>> 'Robert Pattinson' es un 10% de lo popular que es Kevin Bacon
 ```
 
 * KBN_promedio()
@@ -108,7 +108,7 @@ Devuelve cual es el Kevin Bacon Number promedio.
 
 ```
 KBN_promedio()
->>> El Kevin Bacon Number promedio es N
+>>> El Kevin Bacon Number promedio es 3.1515729187146184
 ```
 
 * Estadísticas²: 
@@ -117,24 +117,21 @@ KBN_promedio()
     1. cantidad_actores(): Devuelve la cantidad de actores en el dataset.
 ```
 cantidad_peliculas()
->>> El dataset contiene N películas.
+>>> El dataset contiene 797932 películas.
 cantidad_actores()
->>> El dataset contiene N películas.
+>>> El dataset contiene 2472838 actores.
 ```
 
 ²IMDB se copó tanto con Kevin Bacon que dejó el balance anual para el final de todo, ¡casi se olvidan!
 
 ## Implementación
 
-Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, [`actors.csv`](https://drive.google.com/drive/folders/0B2J1xTZnFQnBVnZzcF8xR3Z3SVE?usp=sharing)⁴ (**comma separated values**) con un total de 2.480.000 actores. Este tiene el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
+Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, [`actors.csv`](https://drive.google.com/drive/folders/0B2J1xTZnFQnBVnZzcF8xR3Z3SVE?usp=sharing)⁴ (**comma separated values**) con un total de 2.480.000 actores y actrices y 800.000 películas. Este tiene el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
 
 ```
-Bacon Jon,Atlantic Blues (2009),I Fight Piranhas (2009),Violet Party (2009)
-Bacon Karl,Catch 22 (2013)
-Bacon Kevin (I),A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995),Beauty Shop (2005),Beyond All Boundaries (2009),Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
-Bacon Kevin (II),Behind the Scene (2011)
-Bacon Les,Barack Obama on 60 Minutes Talks Osama Bin Laden (2011)
-Bacon Lewis,Beverley (2015)
+Bacon Kevin,A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995),Beauty Shop (2005),Beyond All Boundaries (2009),Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
+García Bernal Gael,A Little Bit of Heaven (2011),Amores perros (2000),Babel (2006/I),Blindness (2008),Casa de mi Padre (2012),Cerebro (2000),Coco (2017/I),Dantes Lunch A Short Tail (2017),De tripas corazón (1996),Desierto (2015),Diarios de motocicleta (2004),Dot the I (2003),Dreaming of Julia (2003),Déficit (2007),El Ardor (2014),El aula vacía (2015),El crimen del Padre Amaro (2002),El ojo en la nuca (2001),El pasado (2007),Eva no duerme (2015),Im with Lucy (2002),In viaggio con Che Guevara (2004),La mala educación (2004),La santa muerte (2007/III),La science des rêves (2006),Letters to Juliet (2010),Mammoth (2009),Me estás matando Susana (2016),Museo (2018),Neruda (2016),No (2012/I),Rosewater (2014),Rudo y Cursi (2008),Salt and Fire (2016),Si tu voyais son coeur (2017),Sin noticias de Dios (2001),También la lluvia (2010),Terra (????/I),The Kindergarten Teacher,The King (2005),The Last Post (2001),The Limits of Control (2009),The Loneliest Planet (2011),Vidas privadas (2001),Y tu mamá también (2001),Z (????/II),Zalet (2012),Zoom (2015)
+
 ```
 
 Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado, así conectándolos. 
@@ -159,31 +156,33 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
  
    Dado dos actores, devuelve el camino **más corto** que recorre el primer actor para llegar al segundo.
    ```
-   camino("Clint Eastwood", "Christian Bale")
-   >>> [("Empire of The Sun (1987)", "Clint Eastwood", "Ben Stiller"), ("Unite for Japan (2011)", "Ben Stiller", "Christian Bale")]
+   camino('Clint Eastwood', 'Christian Bale')
+   >>> [('Clint Eastwood', 'Ben Stiller', 'Unite for Japan (2011)'), , ('Ben Stiller', 'Christian Bale' , 'Empire of The Sun (1987)')]
    ```
 
 2. _Distancia_: 
 
    Devuelve la lista de actores a n pasos del actor (ni más ni menos). De n ser 0 debe devolver una lista con solo el nombre del actor
    ```
-   distancia("Clint Eastwood", 2)
-   >>> ["Paul Rudd", "Michael Douglas", ...]
+   distancia('Clint Eastwood', 2)
+   >>> ['Paul Rudd', 'Michael Douglas', ...]
    ```
 
 3. _Cantidad Alcanzados_:
 
    Devuelve la cantidad de personas a las que puede llegar el actor ingresado. 
+   
+   Un actor llega a otro simplemente teniendo una conexion hacia el, sin importar en cuantos pasos. Es por esto que el resultado suele ser un número bastante grande. 
    ```
-   cantidad_alcanzados("Clint Eastwood")
-   >>> 2331685
+   cantidad_alcanzados('Clint Eastwood')
+   >>> 2176971
    ```
    
 4. _Popularidad_: 
  
     La popularidad⁵ de un actor puede ser medida por la sumatoria de a cuánta gente alcanza toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.    
     ```
-    popularidad("Clint Eastwood")
+    popularidad('Clint Eastwood')
     >>>  ???
     ```
 
@@ -193,8 +192,8 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
     
 	La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad de actores en común
     ```
-    similares("Clint Eastwood", 2)
-    >>> ["Christian Bale", "Marlon Brando"]
+    similares('Clint Eastwood', 2)
+    >>> ['Christian Bale', 'Marlon Brando']
     ```
 ⁵El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
 
