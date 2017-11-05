@@ -61,7 +61,7 @@ def bfs_ciclo(grafo, v, visitados):
 def ciclo(padre, inicio, fin):
   v = fin
   camino = []
-  while padre[v] is not None:
+  while padre[v] is not inicio:
     camino.append(v)
     v = padre[v]
   camino.append(inicio)
