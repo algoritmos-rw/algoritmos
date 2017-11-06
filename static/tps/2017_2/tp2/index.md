@@ -270,19 +270,19 @@ Para la siguiente entrada:
 
 Se espera una salida como la siguiente:
 
-    DoS: 83.149.10.216
-    DoS: 93.114.45.13
     OK
+    DoS: 50.139.66.106
+    DoS: 67.61.65.249
     OK
 
 En esta se reportan dos posibles ataques de DoS en el primer archivo agregado,
-`access001.log`, y ninguno en el segundo.
+`access002.log`, pero ninguno en el primero.
 
 ### Ver más visitados
 
 Para la siguiente entrada:
 
-    agregar_archivo access003.log
+    agregar_archivo access001.log
     agregar_archivo access004.log
     ver_mas_visitados 3
 
@@ -291,9 +291,9 @@ Se espera una salida como la siguiente:
     OK
     OK
     Sitios más visitados:
-    	/style2.css - 13
-    	/favicon.ico - 9
-    	/robots.txt - 3
+    	/favicon.ico - 144
+    	/ - 129
+    	/style2.css - 116
     OK
 
 Notar que:
@@ -308,18 +308,18 @@ el momento.
 
 Para la siguiente entrada:
 
-    agregar_archivo access003.log
+    agregar_archivo access001.log
     agregar_archivo access004.log
-    ver_visitantes 83.149.9.0 110.136.166.0
+    ver_visitantes 200.49.0.0 201.30.0.0
 
 Se espera una salida como la siguiente:
 
     OK
     OK
     Visitantes:
-    	83.149.9.216
-    	83.149.10.216
-    	93.114.45.13
+    	200.49.190.100
+    	200.49.190.101
+    	201.26.152.202
     OK
 
 Notar que, igual que en el ejemplo anterior, los visitantes son reportados
