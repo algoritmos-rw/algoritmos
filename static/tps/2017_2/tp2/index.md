@@ -108,8 +108,8 @@ directorio donde se ejecuta el programa.
 *Ejemplo:* `agregar_archivo 20171025.log`
 
 Al ejecutarse deberán procesar el archivo, y detectar posibles casos de ataques
-de denegación de servicio. Si se detecta que una dirección IP realizó más de
-cinco peticiones en menos de dos segundos, el comando debe alertarlo por salida
+de denegación de servicio. Si se detecta que una dirección IP realizó cinco o más
+peticiones en menos de dos segundos, el comando debe alertarlo por salida
 estándar como sospechosa de intento de DoS.
 
 A la hora de detectar denegaciones de servicio, varios archivos se consideran
