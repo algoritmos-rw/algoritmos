@@ -70,7 +70,10 @@ bacon_number('Naomi Watts')
 Devuelve los actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon.
 ```
 bacon_number_mayor_a_6()
->>> Los actores con un KBN mayor a 6 son: ???
+>>> Los actores con un KBN mayor a 6 son:
+>>> Con distancia 7: ???
+>>> Con distancia 8: ???
+>>> ...
 ```
 
 * peliculas_mas_populares(n)
@@ -80,17 +83,17 @@ Devuelve las n películas más populares de Kevin Bacon.
 La "popularidad" de una película se puede calcular como el promedio de la popularidad de sus actores.
 ```
 peliculas_mas_populares(2)
->>> Las 2 películas más populares de Kevin Bacon son: 'Footloose', 'X Men First Class'.
+>>> Las 2 películas más populares de Kevin Bacon son:  ['Super (2010/I)', 'JFK (1991)']
 ```
 
 * similares(n)
 
-Devuelve los n actores más similares a Kevin Bacon. 
+Devuelve los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
 
 ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
 ```
-similares(2)
->>> Los dos actores más similares KB son 'Christopher Lee', 'Morgan Freeman'.
+similares(3)
+>>> Los 3 actores más similares KB son  ['Buscemi Steve', 'Brocksmith Roy', 'Hollander Providence']
 ```
 
 * popularidad_contra_KB(actor)
@@ -98,8 +101,8 @@ similares(2)
 Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base (puede ser calculada solamente una vez), devuelve en porcentaje cuán popular es el actor en comparación a KB.
 
 ```
-popularidad_contra_KB('Robert Pattinson')
->>> 'Robert Pattinson' es un 10% de lo popular que es Kevin Bacon
+popularidad_contra_KB('Pattinson Robert')
+>>> 'Pattinson Robert' es un 6.02 % de lo popular que es Kevin Bacon
 ```
 
 * KBN_promedio()
@@ -108,7 +111,7 @@ Devuelve cual es el Kevin Bacon Number promedio.
 
 ```
 KBN_promedio()
->>> El Kevin Bacon Number promedio es 3.1515729187146184
+>>> El Kevin Bacon Number promedio es 3.156346264631298
 ```
 
 * Estadísticas²: 
@@ -117,9 +120,9 @@ KBN_promedio()
     1. cantidad_actores(): Devuelve la cantidad de actores en el dataset.
 ```
 cantidad_peliculas()
->>> El dataset contiene 797932 películas.
+>>> El dataset contiene 786879 películas.
 cantidad_actores()
->>> El dataset contiene 2472838 actores.
+>>> El dataset contiene 2454209 actores.
 ```
 
 ²IMDB se copó tanto con Kevin Bacon que dejó el balance anual para el final de todo, ¡casi se olvidan!
@@ -136,7 +139,7 @@ García Bernal Gael,A Little Bit of Heaven (2011),Amores perros (2000),Babel (20
 
 Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado, así conectándolos. 
 
-³Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/blob/master/imdbtocsv.py)
+³Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/blob/master/)
 
 ⁴Siendo que `actors.csv` es muy pesado, un archivo más ligero, `test.csv`, también es proporcionado para no tener que procesar el dataset entero a la hora de probar resultados localmente. Este contiene lineas del archivo original escogidas al azar, más la linea de Kevin Bacon.
 
@@ -156,44 +159,34 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
  
    Dado dos actores, devuelve el camino **más corto** que recorre el primer actor para llegar al segundo.
    ```
-   camino('Clint Eastwood', 'Christian Bale')
-   >>> [('Clint Eastwood', 'Ben Stiller', 'Unite for Japan (2011)'), , ('Ben Stiller', 'Christian Bale' , 'Empire of The Sun (1987)')]
+   camino('Eastwood Clint', 'Bale Christian')
+   >>> [('Eastwood Clint', 'Stiller Ben', 'Unite for Japan (2011)'), , ('Stiller Ben', 'Bale Christian' , 'Empire of The Sun (1987)')]
    ```
 
 2. _Distancia_: 
 
    Devuelve la lista de actores a n pasos del actor (ni más ni menos). De n ser 0 debe devolver una lista con solo el nombre del actor
    ```
-   distancia('Clint Eastwood', 2)
-   >>> ['Paul Rudd', 'Michael Douglas', ...]
+   distancia('Eastwood Clint', 2)
+   >>> ['Rudd Paul', 'Douglas Michael', ...]
    ```
-
-3. _Cantidad Alcanzados_:
-
-   Devuelve la cantidad de personas a las que puede llegar el actor ingresado. 
-   
-   Un actor llega a otro simplemente teniendo una conexion hacia el, sin importar en cuantos pasos. Es por esto que el resultado suele ser un número bastante grande. 
-   ```
-   cantidad_alcanzados('Clint Eastwood')
-   >>> 2176971
-   ```
-   
-4. _Popularidad_: 
+  
+3. _Popularidad_: 
  
-    La popularidad⁵ de un actor puede ser medida por la sumatoria de a cuánta gente alcanza toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.    
+   La popularidad⁵ de un actor puede ser medida por la sumatoria de con cuanta gente trabajo toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.
     ```
-    popularidad('Clint Eastwood')
-    >>>  ???
+    popularidad('Eastwood Clint')
+    >>>  100640852
     ```
 
-5. _Similares_:
+4. _Similares_:
 
     Devuelve una lista de los n actores más similares al actor dado.
     
 	La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad de actores en común
     ```
-    similares('Clint Eastwood', 2)
-    >>> ['Christian Bale', 'Marlon Brando']
+    similares('Eastwood Clint', 2)
+    >>> ['Snyder Brian', 'Mortensen Viggo']
     ```
 ⁵El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
 
