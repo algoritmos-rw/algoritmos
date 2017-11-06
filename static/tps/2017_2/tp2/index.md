@@ -205,6 +205,9 @@ Ejemplo:
 
 Además, todas las entradas en un archivo de log están registradas en orden cronológico.
 
+Se provee una colección de logs de ejemplo
+[aquí](https://drive.google.com/drive/folders/0B0x0VPz_v-f_UENLUnVCMlBiWUE?usp=sharing).
+
 
 ### Fecha y hora
 
@@ -251,6 +254,77 @@ Esta variable de tipo `time_t` puede ser usada junto con la función `timediff`
 ([info](http://man7.org/linux/man-pages/man3/difftime.3.html))
 para calcular la diferencia en segundos entre dos fechas.
 
+
+Ejemplos
+--------
+
+Se proveen ejemplos completos para mostrar la salida esperada en cada
+instrucción.
+
+### Reporte de DoS
+
+Para la siguiente entrada:
+
+    agregar_archivo access001.log
+    agregar_archivo access002.log
+
+Se espera una salida como la siguiente:
+
+    DoS: 83.149.10.216
+    DoS: 93.114.45.13
+    OK
+    OK
+
+En esta se reportan dos posibles ataques de DoS en el primer archivo agregado,
+`access001.log`, y ninguno en el segundo.
+
+### Ver más visitados
+
+Para la siguiente entrada:
+
+    agregar_archivo access003.log
+    agregar_archivo access004.log
+    ver_mas_visitados 3
+
+Se espera una salida como la siguiente:
+
+    OK
+    OK
+    Sitios más visitados:
+    	/style2.css - 13
+    	/favicon.ico - 9
+    	/robots.txt - 3
+    OK
+
+Notar que:
+
+- de haberse detectado posibles DoS, deberían haberse reportado antes de los
+`OK` de `agregar_archivo`.
+- los sitios más visitados se totalizan sumando los dos archivos agregados hasta
+el momento.
+- los sitios más visitados son reportados en orden según su frecuencia.
+
+### Ver vistantes
+
+Para la siguiente entrada:
+
+    agregar_archivo access003.log
+    agregar_archivo access004.log
+    ver_visitantes 83.149.9.0 110.136.166.0
+
+Se espera una salida como la siguiente:
+
+    OK
+    OK
+    Visitantes:
+    	83.149.9.216
+    	83.149.10.216
+    	93.114.45.13
+    OK
+
+Notar que, igual que en el ejemplo anterior, los visitantes son reportados
+cuando aparecen en alguno de los archivos agregados hasta ese momento, en orden,
+según las direcciones IPs.
 
 Criterios de aprobación
 ------------------------
