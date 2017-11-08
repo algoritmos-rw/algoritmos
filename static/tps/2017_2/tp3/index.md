@@ -17,9 +17,9 @@ permalink: '/tps/2017_2/tp3'
 
 El Trabajo Práctico número 3 es de elaboración grupal, tiene fecha de entrega para el **viernes 1/12**, y
 está divido en tres partes interconectadas:
-* TDA Grafo con sus primitivas
+* TDA Grafo
 * Librería de funciones de grafos de actores
-* Programa 'Seis grados de Kevin Bacon'
+* Programa principal
 
 ## Introducción
 
@@ -42,19 +42,38 @@ Por ejemplo, con la idea de conectar a Naomi Watts con Kevin Bacon:
 * Naomi Watts actuó con Sean Penn en _**21 Gramos.**_
 * Sean Penn actuó con **Kevin Bacon** en _**Río Místico¹.**_
 
-Por lo tanto, **Naomi Watts tiene un Bacon Number de 2**.
+Por lo tanto, **Naomi Watts tiene un Kevin Bacon Number (KBN) de 2**.
 
 Es importante ver que **el Bacon Number de un actor es siempre el mismo**, sin importar el camino. Esto es tanto porque los actores colaboren juntos en más de una película (De Naomi Watts a Sean Penn se puede llegar por _**The Assassination of Richard Nixon**_), como por que se tome un camino distinto (por ejemplo, Naomi Watts trabajo con Jeffrey Donovan en _**J Edgar**_ quien a su vez trabajo con Kevin Bacon en _**Sleepers**_).
 
 ¹Tanto _**Río Místico**_ como _**21 Gramos**_ son fuertes recomendaciones de muy buenas películas.
 
-## Trabajo
+## Implementación
 
-IMDB nos pidió las siguientes funciones:
+**El trabajo consiste de tres secciones**:
+
+* El TDA Grafo, con sus primitivas.
+
+* Una librería de funciones de grafos, que permita hacer distintas operaciones sobre un grafo de actores/películas, sin importar quienes sean.
+
+* El programa 'Seis grados de Kevin Bacon' que utilice tanto el TDA como la librería para poder implementar todo lo requerido poniendo el foco en Kevin Bacon.
+
+Para lograr esto, IMDB nos proporcionó² un sets de datos, [`actors.csv`](https://drive.google.com/drive/folders/0B2J1xTZnFQnBVnZzcF8xR3Z3SVE?usp=sharing) (**comma separated values**) con un total de 2.480.000 actores y actrices y 800.000 películas. Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado, así conectándolos. Cada linea de este archivo tiene el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
+
+```
+Bacon Kevin,A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995),Beauty Shop (2005),Beyond All Boundaries (2009),Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
+```
+
+Siendo que `actors.csv` es muy pesado, un archivo de prueba más ligero, `test.csv`, también es proporcionado para probar resultados localmente. Este contiene lineas del archivo original escogidas al azar, más la linea de Kevin Bacon.
+
+²Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/blob/master/)
+
+
+### Programa
 
 * camino_hasta_KB(actor)
 
-Imprime el camino de cómo llegar desde cualquier actor hasta Kevin Bacon. Devuelve una lista de los actores que conforman el recorrido. De no existir el actor ingresado o de no haber camino posible entre los dos, se debe devolver None. 
+    Imprime y devuelve el camino de cómo llegar desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe devolver una lista vacía, y de no existir el actor ingresado se debe devolver None.
 ```
 camino_hasta_KB('Naomi Watts')
 >>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
@@ -63,16 +82,17 @@ camino_hasta_KB('Naomi Watts')
 
 * bacon_number(actor)
 
-Imprime y devuelve el Kevin Bacon Number del actor recibido. De no existir el actor se debe devolver None, y si no existiese conexión entre los dos, el bacon_number esperado es -1.
+    Imprime y devuelve el Kevin Bacon Number del actor recibido. De no existir conexión entre los dos el KBN esperado es -1, y de no existir el actor se debe devolver None. Tener en cuenta que el KBN de Kevin Bacon es 0.
 ```
-bacon_number('Naomi Watts')
+bacon_number(grafo, 'Naomi Watts')
 >>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
 ```
 
 * bacon_number_mayor_a_6() 
-Imprime la cantidad de actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon. Se debe devolver la sumatoria de estos. De no existir actor a más pasos que 6, se espera que se devuelva None.
+
+    Imprime la cantidad de actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon y devuelve el total de estos. De no existir actores a más pasos que 6, se espera que se devuelva -1.
 ```
-bacon_number_mayor_a_6()
+bacon_number_mayor_a_6(grafo)
 >>> Los actores con un KBN mayor a 6 son:
 >>> Con distancia 7: ???
 >>> Con distancia 8: ???
@@ -81,60 +101,86 @@ bacon_number_mayor_a_6()
 
 * similares(n)
 
-Imprime los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
+    ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
 
-¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
+    Imprime y devuelve una lista de los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
+
 ```
-similares(3)
+similares(grafo, 3)
 >>> Los 3 actores más similares KB son  ['Buscemi Steve', 'Brocksmith Roy', 'Hollander Providence']
 ```
 
 * popularidad_contra_KB(actor)
 
-Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base (puede ser calculada solamente una vez), imprime en porcentaje cuán popular es el actor en comparación a KB, devolviendo finalmente dicho porcentaje. De no existir el actor ingresado, debe devolverse None.
+    Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base (puede ser calculada una vez sola), imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, debe devolverse None.
 
 ```
-popularidad_contra_KB('Pattinson Robert')
+popularidad_contra_KB(grafo, 'Pattinson Robert')
 >>> 'Pattinson Robert' es un 6.02 % de lo popular que es Kevin Bacon
 ```
 
 * KBN_promedio()
 
-Imprime y devuelve cual es el Kevin Bacon Number promedio.
+    Imprime y devuelve el Kevin Bacon Number promedio.
 
 ```
-KBN_promedio()
+KBN_promedio(grafo)
 >>> El Kevin Bacon Number promedio es 3.156346264631298
 ```
 
-* Estadísticas²: 
+* Estadísticas³: 
     
-    1. cantidad_peliculas(): Devuelve la cantidad de películas en el dataset.
-    1. cantidad_actores(): Devuelve la cantidad de actores en el dataset.
+    1. cantidad_peliculas(): Imprime y devuelve la cantidad de películas en el dataset.
+    1. cantidad_actores(): Imprime y devuelve la cantidad de actores en el dataset.
+
 ```
-cantidad_peliculas()
+cantidad_peliculas(grafo)
 >>> El dataset contiene 786879 películas.
-cantidad_actores()
+cantidad_actores(grafo)
 >>> El dataset contiene 2454209 actores.
 ```
 
-²IMDB se copó tanto con Kevin Bacon que dejó el balance anual para el final de todo, ¡casi se olvidan!
+³IMDB se copó tanto con Kevin Bacon que dejó el balance anual para el final de todo, ¡casi se olvidan!
 
-## Implementación
+### Librería de funciones
 
-Para lograr todo esto, IMDB nos proporcionó³ un sets de datos, [`actors.csv`](https://drive.google.com/drive/folders/0B2J1xTZnFQnBVnZzcF8xR3Z3SVE?usp=sharing)⁴ (**comma separated values**) con un total de 2.480.000 actores y actrices y 800.000 películas. Este tiene el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
+1. _Camino_: 
+ 
+   Dado dos actores, busca el camino **más corto** que recorre el primer actor para llegar al segundo.
+   ```
+   camino('Eastwood Clint', 'Bale Christian')
+   >>> [('Eastwood Clint', 'Stiller Ben', 'Unite for Japan (2011)'), , ('Stiller Ben', 'Bale Christian' , 'Empire of The Sun (1987)')]
+   ```
 
-```
-Bacon Kevin,A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Apollo 13 (1995/I),Balto (1995),Beauty Shop (2005),Beyond All Boundaries (2009),Black Mass (2015),Cavedweller (2004),Cop Car (2015),Crazy Stupid Love (2011),Criminal Law (1988),Death Sentence (2007),Digging to China (1997),Diner (1982),Elephant White (2011),End of the Line (1987),Enormous Changes at the Last Minute (1983),Flatliners (1990),Footloose (1984),Forty Deuce (1982),Friday the 13th (1980),Frost/Nixon (2008),He Said She Said (1991),Hero at Large (1980),Hollow Man (2000),Jayne Mansfields Car (2012),JFK (1991),Lemon Sky (1988),Loverboy (2005),Murder in the First (1995),My Dog Skip (2000),My One and Only (2009),Mystic River (2003),New York Skyride (1994),Only When I Laugh (1981),Patriots Day (2016),Picture Perfect (1997),Pyrates (1991),Queens Logic (1991),Quicksilver (1986),RIPD (2013),Rails & Ties (2007),Saving Angelo (2007),Shes Having a Baby (1988),Sleepers (1996),Starting Over (1979),Stir of Echoes (1999),Super (2010/I),Telling Lies in America (1997),The Air I Breathe (2007),The Air Up There (1994),The Big Green (2014),The Big Picture (1989),The Darkness (2016/I),The Making of Apollo 13 (1995),The River Wild (1994),The Woodsman (2004),These Vagabond Shoes (2009),Tough Day (2014),Trapped (2002/I),Tremors (1990),Where the Truth Lies (2005),White Water Summer (1987),Wild Things (1998),X First Class (2011)
-García Bernal Gael,A Little Bit of Heaven (2011),Amores perros (2000),Babel (2006/I),Blindness (2008),Casa de mi Padre (2012),Cerebro (2000),Coco (2017/I),Dantes Lunch A Short Tail (2017),De tripas corazón (1996),Desierto (2015),Diarios de motocicleta (2004),Dot the I (2003),Dreaming of Julia (2003),Déficit (2007),El Ardor (2014),El aula vacía (2015),El crimen del Padre Amaro (2002),El ojo en la nuca (2001),El pasado (2007),Eva no duerme (2015),Im with Lucy (2002),In viaggio con Che Guevara (2004),La mala educación (2004),La santa muerte (2007/III),La science des rêves (2006),Letters to Juliet (2010),Mammoth (2009),Me estás matando Susana (2016),Museo (2018),Neruda (2016),No (2012/I),Rosewater (2014),Rudo y Cursi (2008),Salt and Fire (2016),Si tu voyais son coeur (2017),Sin noticias de Dios (2001),También la lluvia (2010),Terra (????/I),The Kindergarten Teacher,The King (2005),The Last Post (2001),The Limits of Control (2009),The Loneliest Planet (2011),Vidas privadas (2001),Y tu mamá también (2001),Z (????/II),Zalet (2012),Zoom (2015)
+2. _Distancia_: 
 
-```
+   Los actores a n distancia del actor original son aquellos que esten n pasos del actor (ni más ni menos).
+   ```
+   distancia('Eastwood Clint', 2)
+   >>> ['Rudd Paul', 'Douglas Michael', ...]
+   ```
+  
+3. _Popularidad_⁴: 
+ 
+   La popularidad de un actor puede ser medida por la sumatoria de con cuanta gente trabajo toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.
+    ```
+    popularidad('Eastwood Clint')
+    >>>  100640852
+    ```
+    
+4. _Similares_:
 
-Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado, así conectándolos. 
+    Encuentra  a los n actores más similares al actor dado.
+    
+    La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad de actores en común.
+    
+    Para calcular la similitud, podemos utilizar [random walks](https://en.wikipedia.org/wiki/Random_walk). Un random walk es, como su nombre lo indica, un recorrido aleatorio. Comienza desde un vértice y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino de este, incluyendo el original. Este proceso continúa hasta que el recorrido cumpla con un largo n prefijado. Si realizamos muchos de estos recorridos aleatorios, partiendo desde el actor en cuestión y moviéndonos de forma completamente aleatoria, los actores que más veces aparezcan entre todos los recorridos, deben ser los más similares al actor de origen. Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo.
+    ```
+    similares('Eastwood Clint', 2)
+    >>> ['Snyder Brian', 'Mortensen Viggo']
+    ```
 
-³Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/blob/master/)
-
-⁴Siendo que `actors.csv` es muy pesado, un archivo más ligero, `test.csv`, también es proporcionado para no procesar constantemente el dataset entero a la hora de probar resultados localmente. Este contiene lineas del archivo original escogidas al azar, más la linea de Kevin Bacon.
+⁴El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
 
 ### Primitivas del grafo
 
@@ -146,45 +192,6 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
 1. Obtener aristas.
 1. Obtener vértices.
 
-### Funciones a implementar
-
-1. _Camino_: 
- 
-   Dado dos actores, devuelve el camino **más corto** que recorre el primer actor para llegar al segundo.
-   ```
-   camino('Eastwood Clint', 'Bale Christian')
-   >>> [('Eastwood Clint', 'Stiller Ben', 'Unite for Japan (2011)'), , ('Stiller Ben', 'Bale Christian' , 'Empire of The Sun (1987)')]
-   ```
-
-2. _Distancia_: 
-
-   Devuelve la lista de actores a n pasos del actor (ni más ni menos). De n ser 0 debe devolver una lista con solo el nombre del actor
-   ```
-   distancia('Eastwood Clint', 2)
-   >>> ['Rudd Paul', 'Douglas Michael', ...]
-   ```
-  
-3. _Popularidad_: 
- 
-   La popularidad⁵ de un actor puede ser medida por la sumatoria de con cuanta gente trabajo toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.
-    ```
-    popularidad('Eastwood Clint')
-    >>>  100640852
-    ```
-
-4. _Similares_:
-
-    Devuelve una lista de los n actores más similares al actor dado.
-    
-	La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad de actores en común
-    ```
-    similares('Eastwood Clint', 2)
-    >>> ['Snyder Brian', 'Mortensen Viggo']
-    ```
-⁵El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
-
-Se deberá ademas , para poder utilizar el grafo,  contar con una función llamada cargar_grafo, la cual recibirá los archivos dados, para así cargar su contendio en el grafo.
-
 # Anexo: Links y más
 
 Para ver una implementación online de Six Degrees of Bacon, pueden entrar al [Oracle de Bacon](https://oracleofbacon.org/). En su sección "How it Works" pueden encontrar información útil sobre teoría de grafos.
@@ -195,6 +202,12 @@ Para una buena lectura sobre grafos en Python pueden leer [este ensayo](https://
 
 # Criterios de aprobación
 
-El trabajo puede ser realizado en cualquier lenguaje de programación. 
+El trabajo puede ser realizado en cualquier lenguaje de programación y se pide 3 archivos: grafo, librería de grafos de actores y programa de Kevin Bacon. 
 
-Se pide 3 archivos: grafo, librería de grafos de actores y programa de Kevin Bacon. 
+De ser realizado en Python, los archivos entregados deben ser:
+
+* `grafo.py`.
+
+* `grafo_lib.py`, que deberá contener una función `generar_grafo(nombre_archivo)`.
+
+* `kevinbacon.py`, que deberá respetar los nombres y firmas de las funciones dadas en este enunciado.
