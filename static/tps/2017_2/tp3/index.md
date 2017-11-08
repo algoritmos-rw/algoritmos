@@ -27,7 +27,11 @@ Llega diciembre y la conocida comunidad IMDB está realizando un balance del añ
 Pero no solo quieren saber esto, ya que este año el CEO de la página escuchó sobre la idea de los “Seis grados de Kevin Bacon” y decidió que podía utilizar la enorme base de datos que maneja diariamente la página para corroborar la veracidad de esta idea.
 Para esto, decidió sabiamente confiar en los alumnos de Algoritmos y Programación II de la FIUBA, aprovechando su conocimiento para poder así resolver el misterio.
 
-## Interludio: ¿Seis grados de separación? ¿Seis grados de Kevin Bacon? 
+## ¿Seis grados de separación? ¿Seis grados de Kevin Bacon? 
+
+<p align="center">
+  <img src=https://github.com/algoritmos-rw/algo2/blob/Enunciado-TP3/static/tps/2017_2/tp3/kv%20logo2.png>
+</p>
 
 "Seis grados de separación" es la idea que asegura que toda persona está a seis "pasos" o menos de cualquiera otra persona en el mundo, a partir de una cadena de conocidos. Por ejemplo, si Juan conoce a Martín y Martín conoce a Pedro, Juan está, entonces, a dos pasos de Pedro. Para más información de por qué esto se cumple se puede ver [este video](https://youtu.be/TcxZSmzPw8k).
 
@@ -50,7 +54,7 @@ IMDB nos pidió las siguientes funciones:
 
 * camino_hasta_KB(actor)
 
-Devuelve el camino de cómo llegar desde cualquier actor hasta Kevin Bacon. 
+Imprime el camino de cómo llegar desde cualquier actor hasta Kevin Bacon. Devuelve una lista de los actores que conforman el recorrido. De no existir el actor ingresado o de no haber camino posible entre los dos, se debe devolver None. 
 ```
 camino_hasta_KB('Naomi Watts')
 >>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
@@ -59,15 +63,14 @@ camino_hasta_KB('Naomi Watts')
 
 * bacon_number(actor)
 
-Devuelve el Kevin Bacon Number del actor recibido.
+Imprime y devuelve el Kevin Bacon Number del actor recibido. De no existir el actor se debe devolver None, y si no existiese conexión entre los dos, el bacon_number esperado es -1.
 ```
 bacon_number('Naomi Watts')
 >>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
 ```
 
 * bacon_number_mayor_a_6() 
-
-Devuelve los actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon.
+Imprime la cantidad de actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon. Se debe devolver la sumatoria de estos. De no existir actor a más pasos que 6, se espera que se devuelva None.
 ```
 bacon_number_mayor_a_6()
 >>> Los actores con un KBN mayor a 6 son:
@@ -76,19 +79,9 @@ bacon_number_mayor_a_6()
 >>> ...
 ```
 
-* peliculas_mas_populares(n)
-
-Devuelve las n películas más populares de Kevin Bacon. 
-
-La "popularidad" de una película se puede calcular como el promedio de la popularidad de sus actores.
-```
-peliculas_mas_populares(2)
->>> Las 2 películas más populares de Kevin Bacon son:  ['Super (2010/I)', 'JFK (1991)']
-```
-
 * similares(n)
 
-Devuelve los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
+Imprime los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
 
 ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
 ```
@@ -98,7 +91,7 @@ similares(3)
 
 * popularidad_contra_KB(actor)
 
-Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base (puede ser calculada solamente una vez), devuelve en porcentaje cuán popular es el actor en comparación a KB.
+Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base (puede ser calculada solamente una vez), imprime en porcentaje cuán popular es el actor en comparación a KB, devolviendo finalmente dicho porcentaje. De no existir el actor ingresado, debe devolverse None.
 
 ```
 popularidad_contra_KB('Pattinson Robert')
@@ -107,7 +100,7 @@ popularidad_contra_KB('Pattinson Robert')
 
 * KBN_promedio()
 
-Devuelve cual es el Kevin Bacon Number promedio.
+Imprime y devuelve cual es el Kevin Bacon Number promedio.
 
 ```
 KBN_promedio()
@@ -141,7 +134,7 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
 
 ³Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/blob/master/)
 
-⁴Siendo que `actors.csv` es muy pesado, un archivo más ligero, `test.csv`, también es proporcionado para no tener que procesar el dataset entero a la hora de probar resultados localmente. Este contiene lineas del archivo original escogidas al azar, más la linea de Kevin Bacon.
+⁴Siendo que `actors.csv` es muy pesado, un archivo más ligero, `test.csv`, también es proporcionado para no procesar constantemente el dataset entero a la hora de probar resultados localmente. Este contiene lineas del archivo original escogidas al azar, más la linea de Kevin Bacon.
 
 ### Primitivas del grafo
 
@@ -189,6 +182,8 @@ Este archivo se va a usar para generar un grafo donde los vértices sean actores
     >>> ['Snyder Brian', 'Mortensen Viggo']
     ```
 ⁵El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
+
+Se deberá ademas , para poder utilizar el grafo,  contar con una función llamada cargar_grafo, la cual recibirá los archivos dados, para así cargar su contendio en el grafo.
 
 # Anexo: Links y más
 
