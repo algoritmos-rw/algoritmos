@@ -41,31 +41,24 @@ def bfs_ciclo(grafo, v, visitados):
   q = Cola()
   q.encolar(v)
   visitados[v] = True
-  # Para poder reconstruir el ciclo
-  padre = {}
+  padre = {}  # Para poder reconstruir el ciclo
   padre[v] = None
+
   while not q.esta_vacia():
     v = q.desencolar()
     for w in grafo.adyacentes(v):
       if w in visitados:
-        # W fue visitado, pero si es mi padre, entonces es la arista de donde vengo!
+        # w fue visitado, pero si es mi padre, ¡entonces es la arista de donde vengo!
         if w != padre[v]:
-          # Cerre un ciclo, que empieza en w y v lo cierra con esta arista!
-          return ciclo(padre, w, v)
+          # Con esta arista (v, w) cerré un ciclo que empieza en w.
+          return reconstruir_ciclo(padre, w, v)
       else:
         q.encolar(w)
+        visitados[v] = True
         padre[w] = v
-  # Si llegamos hasta aca es que no encontramos ciclo
-  return None
 
-def ciclo(padre, inicio, fin):
-  v = fin
-  camino = []
-  while padre[v] is not inicio:
-    camino.append(v)
-    v = padre[v]
-  camino.append(inicio)
-  return camino.invertir() 
+  # Si llegamos hasta acá es porque no encontramos ningún ciclo.
+  return None
 ```
 
 La solución por _DFS_ sería:
@@ -85,15 +78,28 @@ def dfs_ciclo(grafo, v, visitados, padre):
   visitados[v] = True
   for w in grafo.adyacentes(v):
     if w in visitados:
-      # W fue visitado, pero si es mi padre, entonces es la arista de donde vengo!
+      # w fue visitado, pero si es mi padre, ¡entonces es la arista de donde vengo!
       if w != padre[v]:
-        # Cerre un ciclo, que empieza en w y v lo cierra con esta arista!
-        return ciclo(padre, w, v)
+        # Con esta arista (v, w) cerré un ciclo que empieza en w.
+        return reconstruir_ciclo(padre, w, v)
     else:
       ciclo = dfs_ciclo(grafo, w, visitados, padre)
       if ciclo is not None:
         return ciclo
   return None
+```
+
+Ambas técnicas usan la función para reconstruir el ciclo:
+
+```python
+def reconstruir_ciclo(padre, inicio, fin):
+  v = fin
+  camino = []
+  while padre[v] != inicio:
+    camino.append(v)
+    v = padre[v]
+  camino.append(inicio)
+  return camino.invertir()
 ```
 
 Ahora bien, para ver el orden, podemos ver que en el caso feliz, vamos a encontrar un ciclo muy rapido. Pero claramente eso no nos cambia mucho. Pensemos el caso de, a lo sumo, encontrar el ciclo muy tarde en el recorrido (también veremos el caso de no haber ciclo). En ese caso, en cualquiera de los dos recorridos vamos a pasar por cada vértice una vez, y solo una vez (a fin de cuentas, no volvemos a estar sobre un vértice ya visitado). Por cada vértice vemos _sus_ aristas. Recordar que es muy importante no caer en la tentación de decir que entonces el algoritmo es _O(V*E)_, porque si bien es cierto, es una muy mala cota. Por cada vértice pasamos por _sus_ arisas, que distan de ser las totales del grafo. Si por cada vértice vemos sus aristas (y no las de todo el grafo), en total estamos viendo todas las aristas del grafo, dos veces (una por cada extremo). Entonces, el orden será _O(V + 2 E) = O(V + E)_.
@@ -117,7 +123,7 @@ Haciendo un poco más de análisis: ¿es acaso el caso de no tener ciclos nuestr
 3. Se tiene un grafo dirigido G, que representa la jerarquía de personal dentro de una empresa (es un _organigrama_). En este grafo los vértices modelan a personas, y una arista _(v, w)_ representa la relación _v es jefe directo de w_. 
 Implementar una función que nos devuelva una secuencia para comunicar cierta noticia a todos los empleados, siendo que los cargos de mayor rango deben enterarse primero. Tener en cuenta que hay personas que tienen varios jefes, y que no pueden enterarse de la noticia antes que todos ellos. Además, podría haber más de un dueño/accionista de la empresa, por lo que no puede asumirse que haya una única persona sin jefe. 
 
-4. Proponer una primitiva para calcular el grafo traspuesto $$G^T$$ de un grafo dirigido _G_. El grafo traspuesto $$GˆT$$ posee los mismos vértices que G, pero con todas sus aristas invertidas (por cada arista _(v, w)_ en _G_, existe una arista _(w, v)_ en $$G^T$$) para un grafo implementado con:
+4. Proponer una primitiva para calcular el grafo traspuesto $$G^T$$ de un grafo dirigido _G_. El grafo traspuesto $$G^T$$ posee los mismos vértices que G, pero con todas sus aristas invertidas (por cada arista _(v, w)_ en _G_, existe una arista _(w, v)_ en $$G^T$$) para un grafo implementado con:
 
     1. lista de adyancencias
     2. matriz de adyacencias
