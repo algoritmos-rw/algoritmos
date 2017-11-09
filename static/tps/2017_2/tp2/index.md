@@ -254,6 +254,22 @@ Esta variable de tipo `time_t` puede ser usada junto con la función `timediff`
 ([info](http://man7.org/linux/man-pages/man3/difftime.3.html))
 para calcular la diferencia en segundos entre dos fechas.
 
+### Tiempos de ejecución
+
+- Agregar archivo:
+    - La búsqueda de DoS debe ser en _O(n)_ siendo _n_ la cantidad de líneas del
+      log.
+    - El mantenimiento para actualizar los sitios más visitados también debe ser
+      _O(n)_.
+    - El mantenimiento para actualizar los visitantes debe ser _O(n log V)_
+      siendo _V_ la cantidad de visitantes en toda la historia del programa.
+- Ver más visitados: debe ser _O(S log k)_ siendo _S_ la cantidad diferentes de
+  sitios en toda la historia y _k_ el parámetro
+- Ver visitantes: debe ser _O(V)_ en el peor caso (en el que se tenga que
+  mostrar todos los visitantes), _O(log V)_ en un caso promedio (en el caso en
+  el que no se pidan mostrar demasiados visitantes). _V_ nuevamente es la
+  cantidad histórica de visitantes. 
+
 
 Ejemplos
 --------
@@ -275,7 +291,7 @@ Se espera una salida como la siguiente:
     DoS: 67.61.65.249
     OK
 
-En esta se reportan dos posibles ataques de DoS en el primer archivo agregado,
+En esta se reportan dos posibles ataques de DoS en el segundo archivo agregado,
 `access002.log`, pero ninguno en el primero.
 
 ### Ver más visitados
