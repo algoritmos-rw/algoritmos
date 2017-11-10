@@ -94,8 +94,8 @@ bacon_number(grafo, 'Naomi Watts')
 ```
 bacon_number_mayor_a_6(grafo)
 >>> Los actores con un KBN mayor a 6 son:
->>> Con distancia 7: ???
->>> Con distancia 8: ???
+>>> Con distancia 7: N actores
+>>> Con distancia 8: N actores
 >>> ...
 ```
 
@@ -112,7 +112,7 @@ similares(grafo, 3)
 
 * popularidad_contra_KB(actor)
 
-    Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base (puede ser calculada una vez sola), imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, debe devolverse None.
+    Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, debe devolverse None.
 
 ```
 popularidad_contra_KB(grafo, 'Pattinson Robert')
@@ -160,7 +160,7 @@ cantidad_actores(grafo)
    >>> ['Rudd Paul', 'Douglas Michael', ...]
    ```
   
-3. _Popularidad_⁴: 
+3. _Popularidad_ ⁴: 
  
    La popularidad de un actor puede ser medida por la sumatoria de con cuanta gente trabajo toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.
     ```
