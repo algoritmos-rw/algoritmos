@@ -46,6 +46,9 @@ Por lo tanto, **Naomi Watts tiene un Kevin Bacon Number (KBN) de 2**.
 
 Es importante ver que **el Bacon Number de un actor es siempre el mismo**, sin importar el camino. Esto es tanto porque los actores colaboren juntos en más de una película (De Naomi Watts a Sean Penn se puede llegar por _**The Assassination of Richard Nixon**_), como por que se tome un camino distinto (por ejemplo, Naomi Watts trabajo con Jeffrey Donovan en _**J Edgar**_ quien a su vez trabajo con Kevin Bacon en _**Sleepers**_).
 
+Cuando un actor esta completamente desconectado de KB, es decir, no tiene forma de llegar a el, se dice que tiene un 'Kevin Bacon Number of infinity'.
+
+
 ¹Tanto _**Río Místico**_ como _**21 Gramos**_ son fuertes recomendaciones de muy buenas películas.
 
 ## Implementación
@@ -134,7 +137,7 @@ camino_hasta_KB(grafo, 'Naomi Watts')
 
 * Bacon Number
 
-    Imprime y devuelve el Kevin Bacon Number del actor recibido. De no existir conexión entre los dos se debe imprimir un mensaje acorde y el KBN esperado es -1, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que el KBN de Kevin Bacon es 0.
+    Imprime y devuelve el Kevin Bacon Number del actor recibido. Para representar un KBN infinito (no hay conexión entre KB y el actor) el KBN esperado es -1, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que el KBN de Kevin Bacon es 0.
 ```
 bacon_number(grafo, 'Naomi Watts')
 >>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
@@ -142,7 +145,7 @@ bacon_number(grafo, 'Naomi Watts')
 
 * Bacon Number mayor a 6 
 
-    Imprime la cantidad de actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon y devuelve el total de estos. De no existir actores a más pasos que 6, se imprime un mensaje acorde y se espera que se devuelva -1.
+    Imprime la cantidad de actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon y devuelve el total de estos. De no existir actores a más pasos que 6, se imprime un mensaje acorde y se espera que se devuelva -1. En este numero no influyen la cantidad de actores con un KBN infinito.
 ```
 bacon_number_mayor_a_6(grafo)
 >>> Los actores con un KBN mayor a 6 son:
@@ -152,8 +155,6 @@ bacon_number_mayor_a_6(grafo)
 ``` 
 
 * Bacon Number infinito
-
-	Cuando un actor esta completamente desconectado de KB, es decir, no tiene forma de llegar a el, se dice que tiene un 'Kevin Bacon Number of infinity'.
 	
 	Imprime y devuelve cuantos actores (¿existirán?) con un KBN infinito hay. De no haber, se debe imprimir un mensaje acorde y devolver -1.
 ```
@@ -164,7 +165,6 @@ bacon_number_infinito(grafo)
 * Bacon Number promedio
 
     Imprime y devuelve el Kevin Bacon Number promedio. En este numero no influyen la cantidad de actores con un KBN infinito.
-
 ```
 KBN_promedio(grafo)
 >>> El Kevin Bacon Number promedio es N
@@ -183,7 +183,7 @@ similares_a_KB(grafo, 3)
 
 * Popularidad contra Kevin Bacon
 
-    Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, se debe imprimir un mensaje acorde y devolver None.
+    Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que Kevin Bacon es un 100% de lo popular que es Kevin Bacon 
 
 ```
 popularidad_contra_KB(grafo, 'Pattinson Robert')
@@ -224,6 +224,8 @@ Para una buena lectura sobre grafos en Python pueden leer [este ensayo](https://
 # Criterios de aprobación
 
 El trabajo puede ser realizado en cualquier lenguaje de programación y se pide 3 archivos: grafo, librería de grafos de actores y programa de Kevin Bacon. 
+
+**Los resultados presentes en este enunciado no son definitivos, fueron dados solo como ejemplo.**
 
 De ser realizado en Python, los archivos entregados deben ser:
 
