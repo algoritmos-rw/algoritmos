@@ -52,11 +52,19 @@ Es importante ver que **el Bacon Number de un actor es siempre el mismo**, sin i
 
 **El trabajo consiste de tres secciones**:
 
-* El TDA Grafo, con sus primitivas.
+* El TDA Grafo, con sus primitivas. 
 
 * Una librería de funciones de grafos, que permita hacer distintas operaciones sobre un grafo de actores/películas, sin importar quienes sean.
 
 * El programa 'Seis grados de Kevin Bacon' que utilice tanto el TDA como la librería para poder implementar todo lo requerido poniendo el foco en Kevin Bacon.
+
+Los archivos entregados deben ser, por consiguiente:
+
+* `grafo`.
+
+* `grafo_lib`, que deberá contener una función `generar_grafo(nombre_archivo)`.
+
+* `kevinbacon`, que deberá respetar los nombres y firmas de las funciones dadas en este enunciado.
 
 Para lograr esto, IMDB nos proporcionó² un sets de datos, [`actors.csv`](https://drive.google.com/drive/folders/0B2J1xTZnFQnBVnZzcF8xR3Z3SVE?usp=sharing) (**comma separated values**) con un total de 2.480.000 actores y actrices y 800.000 películas. Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado, así conectándolos. Cada linea de este archivo tiene el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
 
@@ -69,78 +77,15 @@ Siendo que `actors.csv` es muy pesado, un archivo de prueba más ligero, `test.c
 ²Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/blob/master/)
 
 
-### Programa
+### Primitivas del grafo
 
-* camino_hasta_KB(actor)
-
-    Imprime y devuelve el camino de cómo llegar desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe devolver una lista vacía, y de no existir el actor ingresado se debe devolver None.
-```
-camino_hasta_KB('Naomi Watts')
->>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
->>> 'Sean Penn' actuó con 'Kevin Bacon' en '21 Grams (2003)'.
-```
-
-* bacon_number(actor)
-
-    Imprime y devuelve el Kevin Bacon Number del actor recibido. De no existir conexión entre los dos el KBN esperado es -1, y de no existir el actor se debe devolver None. Tener en cuenta que el KBN de Kevin Bacon es 0.
-```
-bacon_number(grafo, 'Naomi Watts')
->>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
-```
-
-* bacon_number_mayor_a_6() 
-
-    Imprime la cantidad de actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon y devuelve el total de estos. De no existir actores a más pasos que 6, se espera que se devuelva -1.
-```
-bacon_number_mayor_a_6(grafo)
->>> Los actores con un KBN mayor a 6 son:
->>> Con distancia 7: N actores
->>> Con distancia 8: N actores
->>> ...
-```
-
-* similares(n)
-
-    ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
-
-    Imprime y devuelve una lista de los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
-
-```
-similares(grafo, 3)
->>> Los 3 actores más similares KB son  ['Buscemi Steve', 'Brocksmith Roy', 'Hollander Providence']
-```
-
-* popularidad_contra_KB(actor)
-
-    Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, debe devolverse None.
-
-```
-popularidad_contra_KB(grafo, 'Pattinson Robert')
->>> 'Pattinson Robert' es un 6.02 % de lo popular que es Kevin Bacon
-```
-
-* KBN_promedio()
-
-    Imprime y devuelve el Kevin Bacon Number promedio.
-
-```
-KBN_promedio(grafo)
->>> El Kevin Bacon Number promedio es 3.156346264631298
-```
-
-* Estadísticas³: 
-    
-    1. cantidad_peliculas(): Imprime y devuelve la cantidad de películas en el dataset.
-    1. cantidad_actores(): Imprime y devuelve la cantidad de actores en el dataset.
-
-```
-cantidad_peliculas(grafo)
->>> El dataset contiene 786879 películas.
-cantidad_actores(grafo)
->>> El dataset contiene 2454209 actores.
-```
-
-³IMDB se copó tanto con Kevin Bacon que dejó el balance anual para el final de todo, ¡casi se olvidan!
+1. Crear grafo (y de ser necesario destruirlo).
+1. Agregar y borrar arista.
+1. Agregar y borrar vértice.
+1. Obtener adyacentes de un vértice.
+1. Verificar si dos vértices son adyacentes.
+1. Obtener aristas.
+1. Obtener vértices.
 
 ### Librería de funciones
 
@@ -182,15 +127,93 @@ cantidad_actores(grafo)
 
 ⁴El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
 
-### Primitivas del grafo
 
-1. Crear grafo (y de ser necesario destruirlo).
-1. Agregar y borrar arista.
-1. Agregar y borrar vértice.
-1. Obtener adyacentes de un vértice.
-1. Verificar si dos vértices son adyacentes.
-1. Obtener aristas.
-1. Obtener vértices.
+### Programa
+
+* camino_hasta_KB(actor)
+
+    Imprime y devuelve el camino de cómo llegar desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde y devolverse una lista vacía, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None.
+```
+camino_hasta_KB('Naomi Watts')
+>>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
+>>> 'Sean Penn' actuó con 'Kevin Bacon' en '21 Grams (2003)'.
+```
+
+* bacon_number(actor)
+
+    Imprime y devuelve el Kevin Bacon Number del actor recibido. De no existir conexión entre los dos se debe imprimir un mensaje acorde  el KBN esperado es -1, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que el KBN de Kevin Bacon es 0.
+```
+bacon_number(grafo, 'Naomi Watts')
+>>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
+```
+
+* bacon_number_mayor_a_6() 
+
+    Imprime la cantidad de actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon y devuelve el total de estos. De no existir actores a más pasos que 6, se imprime un mensaje acorde y se espera que se devuelva -1.
+```
+bacon_number_mayor_a_6(grafo)
+>>> Los actores con un KBN mayor a 6 son:
+>>> Con distancia 7: N actores
+>>> Con distancia 8: N actores
+>>> ...
+``` 
+* bacon_number_infinito()
+    Imprime y devuelve la cantidad de actores que no están conectados a Kevin Bacon. 
+```
+bacon_number_infinito(grafo)
+>>> La cantidad de actores no conectados a KB son : 540
+``` 
+
+* similares(n)
+
+    ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
+
+    Imprime y devuelve una lista de los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
+
+```
+similares(grafo, 3)
+>>> Los 3 actores más similares KB son  ['Buscemi Steve', 'Brocksmith Roy', 'Hollander Providence']
+```
+
+* popularidad_contra_KB(actor)
+
+    Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, se imprime un mensaje acorde y debe devolverse None.
+
+```
+popularidad_contra_KB(grafo, 'Pattinson Robert')
+>>> 'Pattinson Robert' es un 6.02 % de lo popular que es Kevin Bacon
+```
+
+* KBN_promedio()
+
+    Imprime y devuelve el Kevin Bacon Number promedio.
+
+```
+KBN_promedio(grafo)
+>>> El Kevin Bacon Number promedio es 3.156346264631298
+```
+
+* Estadísticas³: 
+    
+    1. cantidad_peliculas(): Imprime y devuelve la cantidad de películas en el dataset.
+    1. cantidad_actores(): Imprime y devuelve la cantidad de actores en el dataset.
+
+```
+cantidad_peliculas(grafo)
+>>> El dataset contiene 786879 películas.
+cantidad_actores(grafo)
+>>> El dataset contiene 2454209 actores.
+```
+
+³IMDB se copó tanto con Kevin Bacon que dejó el balance anual para el final de todo, ¡casi se olvidan!
+
+# Trivia
+
+Como última tarea, y con el proposito de darle un pequeño uso al programa realizado, dejamos está trivia (no obligatoría) para que puedan completar haciendo uso del progama:
+
+  * ¿Actuó algún famoso Argentino con Kevin Bacon?
+  * ¿ Actor argentino más popular con respecto a KB?
+  * ¿ Pudieron encontrar mejor resultados con otro actor distinto a KB? Osea, un actor que tal vez esté más unido a los demás, y tenga menos actores con los que no se pueda conectar.
 
 # Anexo: Links y más
 
@@ -204,10 +227,3 @@ Para una buena lectura sobre grafos en Python pueden leer [este ensayo](https://
 
 El trabajo puede ser realizado en cualquier lenguaje de programación y se pide 3 archivos: grafo, librería de grafos de actores y programa de Kevin Bacon. 
 
-De ser realizado en Python, los archivos entregados deben ser:
-
-* `grafo.py`.
-
-* `grafo_lib.py`, que deberá contener una función `generar_grafo(nombre_archivo)`.
-
-* `kevinbacon.py`, que deberá respetar los nombres y firmas de las funciones dadas en este enunciado.
