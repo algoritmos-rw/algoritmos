@@ -71,9 +71,11 @@ Bacon Kevin,A Few Good Men (1992),A Little Vicious (1991),Animal House (1978),Ap
 
 Siendo que `actors.csv` es muy pesado, un archivo de prueba más ligero, `test.csv`, también es proporcionado para probar resultados localmente. Este contiene lineas del archivo original escogidas al azar, más la linea de Kevin Bacon.
 
-²Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/blob/master/)
+²Las bases de datos de IMDB eran un poco más confusas que las proporcionadas. Si quieren ver cómo se trabajo con el archivo original ir [acá.](https://github.com/FdelMazo/IMDBtoCSV/)
 
 ### Primitivas del grafo
+
+Se aclara previamente que no es necesario para el alcance de este TP hacer el grafo dirigido y pesado.
 
 1. Crear grafo (y de ser necesario destruirlo).
 1. Agregar y borrar arista.
@@ -89,7 +91,7 @@ Siendo que `actors.csv` es muy pesado, un archivo de prueba más ligero, `test.c
  
    Dado dos actores, busca el camino **más corto** que recorre el primer actor para llegar al segundo.
    ```
-   camino('Eastwood Clint', 'Bale Christian')
+   camino "Eastwood Clint" "Bale Christian"
    >>> [('Eastwood Clint', 'Stiller Ben', 'Unite for Japan (2011)'), , ('Stiller Ben', 'Bale Christian' , 'Empire of The Sun (1987)')]
    ```
 
@@ -97,15 +99,15 @@ Siendo que `actors.csv` es muy pesado, un archivo de prueba más ligero, `test.c
 
    Los actores a n distancia del actor original son aquellos que esten n pasos del actor (ni más ni menos).
    ```
-   distancia('Eastwood Clint', 2)
+   distancia "Eastwood Clint" 2
    >>> ['Rudd Paul', 'Douglas Michael', ...]
    ```
   
 3. _Popularidad_ ⁴: 
  
-   La popularidad de un actor puede ser medida por la sumatoria de con cuanta gente trabajo toda persona con la que el actor trabajó alguna vez, multiplicado por la cantidad de películas hechas por él.
+   Calculamos la popularidad de un actor como la sumatoria de la cantidad de personas con la que trabajó alguien que trabajó con él (es decir, los actores a distancia dos), multiplicado por la cantidad de películas en las que participó.
     ```
-    popularidad('Eastwood Clint')
+    popularidad "Eastwood Clint"
     >>>  100640852
     ```
     
@@ -117,20 +119,20 @@ Siendo que `actors.csv` es muy pesado, un archivo de prueba más ligero, `test.c
     
     Para calcular la similitud, podemos utilizar [random walks](https://en.wikipedia.org/wiki/Random_walk). Un random walk es, como su nombre lo indica, un recorrido aleatorio. Comienza desde un vértice y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino de este, incluyendo el original. Este proceso continúa hasta que el recorrido cumpla con un largo n prefijado. Si realizamos muchos de estos recorridos aleatorios, partiendo desde el actor en cuestión y moviéndonos de forma completamente aleatoria, los actores que más veces aparezcan entre todos los recorridos, deben ser los más similares al actor de origen. Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo.
     ```
-    similares('Eastwood Clint', 2)
+    similares "Eastwood Clint" 2
     >>> ['Snyder Brian', 'Mortensen Viggo']
     ```
 
-⁴El algoritmo de popularidad no es universal, fue pensado para el presente trabajo
+⁴Esta métrica de popularidad es una estimación muy simple pero útil para el alcance de este trabajo práctico.
 
 
 ### Comandos del programa
 
 * Camino hasta Kevin Bacon
 
-    Imprime y devuelve el camino de cómo llegar desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde y devolverse una lista vacía, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None.
+    Imprime y devuelve el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde y devolverse una lista vacía, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None.
 ```
-camino_hasta_KB(grafo, 'Naomi Watts')
+camino_hasta_KB "Naomi Watts"
 >>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
 >>> 'Sean Penn' actuó con 'Kevin Bacon' en '21 Grams (2003)'.
 ```
@@ -139,7 +141,7 @@ camino_hasta_KB(grafo, 'Naomi Watts')
 
     Imprime y devuelve el Kevin Bacon Number del actor recibido. Para representar un KBN infinito (no hay conexión entre KB y el actor) el KBN esperado es -1, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que el KBN de Kevin Bacon es 0.
 ```
-bacon_number(grafo, 'Naomi Watts')
+bacon_number "Naomi Watts"
 >>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
 ```
 
@@ -158,7 +160,7 @@ bacon_number_mayor_a_6(grafo)
 	
 	Imprime y devuelve cuantos actores (¿existirán?) con un KBN infinito hay. De no haber, se debe imprimir un mensaje acorde y devolver -1.
 ```
-bacon_number_infinito(grafo)
+bacon_number_infinito
 >>>  Los actores con un Bacon Number infinito son N
 ``` 
 
@@ -166,7 +168,7 @@ bacon_number_infinito(grafo)
 
     Imprime y devuelve el Kevin Bacon Number promedio. En este numero no influyen la cantidad de actores con un KBN infinito.
 ```
-KBN_promedio(grafo)
+KBN_promedio
 >>> El Kevin Bacon Number promedio es N
 ```
 
@@ -177,7 +179,7 @@ KBN_promedio(grafo)
     Imprime y devuelve una lista de los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
 
 ```
-similares_a_KB(grafo, 3)
+similares_a_KB '3'
 >>> Los 3 actores más similares KB son  ['Buscemi Steve', 'Brocksmith Roy', 'Hollander Providence']
 ```
 
@@ -186,7 +188,7 @@ similares_a_KB(grafo, 3)
     Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que Kevin Bacon es un 100% de lo popular que es Kevin Bacon 
 
 ```
-popularidad_contra_KB(grafo, 'Pattinson Robert')
+popularidad_contra_KB "Pattinson Robert"
 >>> 'Pattinson Robert' es un 6.02 % de lo popular que es Kevin Bacon
 ```
 
@@ -196,9 +198,7 @@ popularidad_contra_KB(grafo, 'Pattinson Robert')
     1. Cantidad de actores: Imprime y devuelve la cantidad de actores en el dataset.
 
 ```
-cantidad_peliculas(grafo)
 >>> El dataset contiene 786879 películas.
-cantidad_actores(grafo)
 >>> El dataset contiene 2454209 actores.
 ```
 
@@ -223,7 +223,7 @@ Para una buena lectura sobre grafos en Python pueden leer [este ensayo](https://
 
 # Criterios de aprobación
 
-El trabajo puede ser realizado en cualquier lenguaje de programación y se pide 3 archivos: grafo, librería de grafos de actores y programa de Kevin Bacon. 
+El trabajo puede ser realizado en cualquier lenguaje de programación y debe estar separado al menos en tres archivos: grafo, librería de grafos de actores y programa de Kevin Bacon. 
 
 **Los resultados presentes en este enunciado no son definitivos, fueron dados solo como ejemplo.**
 
