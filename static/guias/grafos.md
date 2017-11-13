@@ -48,9 +48,9 @@ def bfs_ciclo(grafo, v, visitados):
     v = q.desencolar()
     for w in grafo.adyacentes(v):
       if w in visitados:
-        # w fue visitado, pero si es mi padre, ¡entonces es la arista de donde vengo!
+        # Si w fue visitado y es padre de v, entonces es la arista de donde vengo (no es ciclo).
+        # Si no es su padre, esta arista (v, w) cierra un ciclo que empieza en w.
         if w != padre[v]:
-          # Con esta arista (v, w) cerré un ciclo que empieza en w.
           return reconstruir_ciclo(padre, w, v)
       else:
         q.encolar(w)
@@ -78,14 +78,16 @@ def dfs_ciclo(grafo, v, visitados, padre):
   visitados[v] = True
   for w in grafo.adyacentes(v):
     if w in visitados:
-      # w fue visitado, pero si es mi padre, ¡entonces es la arista de donde vengo!
+      # Si w fue visitado y es padre de v, entonces es la arista de donde vengo (no es ciclo).
+      # Si no es su padre, esta arista (v, w) cierra un ciclo que empieza en w.
       if w != padre[v]:
-        # Con esta arista (v, w) cerré un ciclo que empieza en w.
         return reconstruir_ciclo(padre, w, v)
     else:
       ciclo = dfs_ciclo(grafo, w, visitados, padre)
       if ciclo is not None:
         return ciclo
+        
+  # Si llegamos hasta acá es porque no encontramos ningún ciclo.
   return None
 ```
 
@@ -95,7 +97,7 @@ Ambas técnicas usan la función para reconstruir el ciclo:
 def reconstruir_ciclo(padre, inicio, fin):
   v = fin
   camino = []
-  while padre[v] != inicio:
+  while v != inicio:
     camino.append(v)
     v = padre[v]
   camino.append(inicio)
