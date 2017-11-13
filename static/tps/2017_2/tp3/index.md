@@ -179,7 +179,7 @@ KBN_promedio
     Imprime y devuelve una lista de los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
 
 ```
-similares_a_KB '3'
+similares_a_KB 3
 >>> Los 3 actores más similares KB son  ['Buscemi Steve', 'Brocksmith Roy', 'Hollander Providence']
 ```
 
@@ -198,6 +198,7 @@ popularidad_contra_KB "Pattinson Robert"
     1. Cantidad de actores: Imprime y devuelve la cantidad de actores en el dataset.
 
 ```
+estadisticas
 >>> El dataset contiene 786879 películas.
 >>> El dataset contiene 2454209 actores.
 ```
