@@ -61,7 +61,7 @@ Cuando un actor esta completamente desconectado de KB, es decir, no tiene forma 
 
 * El programa 'Seis grados de Kevin Bacon' que utilice tanto el TDA como la librería para poder implementar todo lo requerido poniendo el foco en Kevin Bacon.
 
-El programa a realizar debe recibir por parámetro y cargar en memoria al dataset (`$ ./kevinbacon actors.csv`) y luego solicitar el ingreso de comandos por entrada estándar, del estilo `comando "parametro"`. Notar que esto permite tener un archivo de instrucciones a ser ejecutadas (`cat comandos.txt | ./kevinbacon actors.csv`).
+El programa a realizar debe recibir por parámetro y cargar en memoria al dataset (`$ ./kevinbacon actors.csv`) y luego solicitar el ingreso de comandos por entrada estándar, del estilo `comando 'parametro'`. Notar que esto permite tener un archivo de instrucciones a ser ejecutadas (`cat comandos.txt | ./kevinbacon actors.csv`).
 
 Para lograr esto, IMDB nos proporcionó² un sets de datos, [`actors.csv`](https://drive.google.com/drive/folders/0B2J1xTZnFQnBVnZzcF8xR3Z3SVE?usp=sharing) (**comma separated values**) con un total de 2.480.000 actores y actrices y 800.000 películas. Este archivo se va a usar para generar un grafo donde los vértices sean actores y las aristas sean las películas en las que hayan colaborado, así conectándolos. Los demás algoritmos y recorridos trabajaran directamente usando las primitivas de este TDA. Cada linea de este archivo tiene el formato de `apellido nombre, pelicula1, pelicula2, pelicula3, ...` Por ejemplo:
 
@@ -75,10 +75,10 @@ Siendo que `actors.csv` es muy pesado, un archivo de prueba más ligero, `test.c
 
 ### Primitivas del grafo
 
-Se aclara previamente que no es necesario para el alcance de este TP hacer el grafo dirigido y pesado.
+Se aclara previamente que no es necesario para el alcance de este TP hacer el grafo dirigido o pesado.
 
 1. Crear grafo (y de ser necesario destruirlo).
-1. Agregar y borrar arista.
+1. Agregar y borrar arista. (tener en cuenta que en este trabajo las aristas tienen como nombre a la pelicula conectora)
 1. Agregar y borrar vértice.
 1. Obtener adyacentes de un vértice.
 1. Verificar si dos vértices son adyacentes.
@@ -91,23 +91,23 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
  
    Dado dos actores, busca el camino **más corto** que recorre el primer actor para llegar al segundo.
    ```
-   camino "Eastwood Clint" "Bale Christian"
-   >>> [('Eastwood Clint', 'Stiller Ben', 'Unite for Japan (2011)'), , ('Stiller Ben', 'Bale Christian' , 'Empire of The Sun (1987)')]
+   camino('Eastwood Clint', 'Bale Christian')
+   >>> [('Eastwood Clint', 'Stiller Ben', 'Unite for Japan (2011)') , ('Stiller Ben', 'Bale Christian' , 'Empire of The Sun (1987)')]
    ```
 
 2. _Distancia_: 
 
-   Los actores a n distancia del actor original son aquellos que esten n pasos del actor (ni más ni menos).
+   Los actores a n distancia del actor original son aquellos que esten n pasos del actor (ni más ni menos). Ordenarlos alfabéticamente.
    ```
-   distancia "Eastwood Clint" 2
-   >>> ['Rudd Paul', 'Douglas Michael', ...]
+   distancia('Eastwood Clint', 2)
+   >>> ['Douglas Michael', 'Rudd Paul', ...]
    ```
   
 3. _Popularidad_ ⁴: 
  
    Calculamos la popularidad de un actor como la sumatoria de la cantidad de personas con la que trabajó alguien que trabajó con él (es decir, los actores a distancia dos), multiplicado por la cantidad de películas en las que participó.
     ```
-    popularidad "Eastwood Clint"
+    popularidad('Eastwood Clint')
     >>>  100640852
     ```
     
@@ -119,7 +119,7 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
     
     Para calcular la similitud, podemos utilizar [random walks](https://en.wikipedia.org/wiki/Random_walk). Un random walk es, como su nombre lo indica, un recorrido aleatorio. Comienza desde un vértice y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino de este, incluyendo el original. Este proceso continúa hasta que el recorrido cumpla con un largo n prefijado. Si realizamos muchos de estos recorridos aleatorios, partiendo desde el actor en cuestión y moviéndonos de forma completamente aleatoria, los actores que más veces aparezcan entre todos los recorridos, deben ser los más similares al actor de origen. Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo.
     ```
-    similares "Eastwood Clint" 2
+    similares('Eastwood Clint', 2)
     >>> ['Snyder Brian', 'Mortensen Viggo']
     ```
 
@@ -130,9 +130,9 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
 
 * Camino hasta Kevin Bacon
 
-    Imprime y devuelve el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde y devolverse una lista vacía, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None.
+    Imprime y devuelve el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde (por ejemplo: "No hay conexion entre KB y el actor") y devolverse una lista vacía, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None.
 ```
-camino_hasta_KB "Naomi Watts"
+camino_hasta_KB 'Naomi Watts'
 >>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
 >>> 'Sean Penn' actuó con 'Kevin Bacon' en '21 Grams (2003)'.
 ```
@@ -141,7 +141,7 @@ camino_hasta_KB "Naomi Watts"
 
     Imprime y devuelve el Kevin Bacon Number del actor recibido. Para representar un KBN infinito (no hay conexión entre KB y el actor) el KBN esperado es -1, y de no existir el actor ingresado se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que el KBN de Kevin Bacon es 0.
 ```
-bacon_number "Naomi Watts"
+bacon_number 'Naomi Watts'
 >>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
 ```
 
@@ -149,7 +149,7 @@ bacon_number "Naomi Watts"
 
     Imprime la cantidad de actores (¿existirán?) a una distancia mayor a 6 pasos de Kevin Bacon y devuelve el total de estos. De no existir actores a más pasos que 6, se imprime un mensaje acorde y se espera que se devuelva -1. En este numero no influyen la cantidad de actores con un KBN infinito.
 ```
-bacon_number_mayor_a_6(grafo)
+bacon_number_mayor_a_6
 >>> Los actores con un KBN mayor a 6 son:
 >>> Con KBN igual a 6: N actores
 >>> Con KBN igual a 7: N actores
@@ -166,7 +166,7 @@ bacon_number_infinito
 
 * Bacon Number promedio
 
-    Imprime y devuelve el Kevin Bacon Number promedio. En este numero no influyen la cantidad de actores con un KBN infinito.
+    Imprime y devuelve el Kevin Bacon Number promedio. En este numero no influyen la cantidad de actores con un KBN infinito, pero si lo hace el KBN de Kevin Bacon.
 ```
 KBN_promedio
 >>> El Kevin Bacon Number promedio es N
@@ -179,7 +179,7 @@ KBN_promedio
     Imprime y devuelve una lista de los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
 
 ```
-similares_a_KB 3
+similares_a_KB '3'
 >>> Los 3 actores más similares KB son  ['Buscemi Steve', 'Brocksmith Roy', 'Hollander Providence']
 ```
 
@@ -188,18 +188,19 @@ similares_a_KB 3
     Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que Kevin Bacon es un 100% de lo popular que es Kevin Bacon 
 
 ```
-popularidad_contra_KB "Pattinson Robert"
+popularidad_contra_KB 'Pattinson Robert'
 >>> 'Pattinson Robert' es un 6.02 % de lo popular que es Kevin Bacon
 ```
 
-* Estadísticas³: 
+* Estadísticas ³: 
     
     1. Cantidad de películas: Imprime y devuelve la cantidad de películas en el dataset.
     1. Cantidad de actores: Imprime y devuelve la cantidad de actores en el dataset.
 
 ```
-estadisticas
+cantidad_peliculas
 >>> El dataset contiene 786879 películas.
+cantidad_actores
 >>> El dataset contiene 2454209 actores.
 ```
 
@@ -228,9 +229,7 @@ El trabajo puede ser realizado en cualquier lenguaje de programación y debe est
 
 **Los resultados presentes en este enunciado no son definitivos, fueron dados solo como ejemplo.**
 
-De ser realizado en Python, los archivos entregados deben ser:
-
-* `grafo.py`.
+De ser realizado en Python, para poder ser probado, los nombres de dos de los archivos entregados deben ser:
 
 * `grafo_lib.py`, que deberá contener una función `generar_grafo(nombre_archivo)`.
 
