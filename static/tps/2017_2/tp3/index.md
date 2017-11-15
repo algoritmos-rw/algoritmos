@@ -93,11 +93,11 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
    >>> [('Eastwood Clint', 'Stiller Ben', 'Unite for Japan (2011)') , ('Stiller Ben', 'Bale Christian' , 'Empire of The Sun (1987)')]
    ```
 
-2. _Distancia_: 
+2. _Actores a distancia_: 
 
    Los actores a _n_ distancia del actor original son aquellos que esten _n_ pasos del actor. Ordenarlos alfabéticamente.
    ```
-   distancia('Eastwood Clint', 2)
+   actores_a_distancia('Eastwood Clint', 2)
    >>> ['Douglas Michael', 'Rudd Paul', ...]
    ```
   
@@ -227,7 +227,7 @@ El trabajo puede ser realizado en cualquier lenguaje de programación previo acu
 
 De ser realizado en Python, para poder ser probado, los nombres de dos de los archivos entregados deben ser:
 
-* `grafo_lib.py`, que deberá contener una función `generar_grafo(nombre_archivo)`.
+* `seis_grados.py`, que deberá contener las funciones descriptas en la sección "[librería de funciones](#librería-de-funciones)".
+  Se provee un archivo con los [prototipos de las funciones en Python]({{ 'assets/tps/2017_2/tp3/seis_grados.py' | relative_url }}).
 
-* `kevinbacon.py`, que deberá respetar los nombres y firmas de las funciones dadas en este enunciado.
-
+* `kevin_bacon.py`, que deberá respetar la interfaz de entrada y salida de este enunciado, descriptas en la sección "[comandos del programa](#comandos-del-programa)".
