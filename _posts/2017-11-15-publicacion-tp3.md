@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Publicado TP3"
-date: 2017-09-27 23:35:00 -0300
+date: 2017-11-15 20:00:00 -0300
 
 es_TP: True
 nombre_TP: "**TP3**"
