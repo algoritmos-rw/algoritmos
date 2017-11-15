@@ -104,24 +104,24 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
 3. _Popularidad_ ⁴: 
  
    Calculamos la popularidad de un actor como la sumatoria de la cantidad de personas con la que trabajó alguien que trabajó con él (es decir, los actores a distancia dos), multiplicado por la cantidad de películas en las que participó.
-    ```
-    popularidad('Eastwood Clint')
-    >>> 100640852
-    ```
+   ```
+   popularidad('Eastwood Clint')
+   >>> 100640852
+   ```
     
 4. _Similares_:
 
-    Encuentra  a los _n_ actores más similares al actor dado.
-    
-    La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad de actores en común.
-    
-    Para calcular la similitud, podemos utilizar [random walks](https://en.wikipedia.org/wiki/Random_walk). Un random walk es, como su nombre lo indica, un recorrido aleatorio. Comienza desde un vértice y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino de este, incluyendo el original. Este proceso continúa hasta que el recorrido cumpla con un largo n prefijado. Si realizamos muchos de estos recorridos aleatorios, partiendo desde el actor en cuestión y moviéndonos de forma completamente aleatoria, los actores que más veces aparezcan entre todos los recorridos, deben ser los más similares al actor de origen. Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo.
-    ```
-    similares('Eastwood Clint', 2)
-    >>> ['Snyder Brian', 'Mortensen Viggo']
-    ```
+   Encuentra  a los _n_ actores más similares al actor dado.
+   
+   La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad de actores en común.
+   
+   Para calcular la similitud, podemos utilizar [random walks](https://en.wikipedia.org/wiki/Random_walk). Un random walk es, como su nombre lo indica, un recorrido aleatorio. Comienza desde un vértice y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino de este, incluyendo el original. Este proceso continúa hasta que el recorrido cumpla con un largo n prefijado. Si realizamos muchos de estos recorridos aleatorios, partiendo desde el actor en cuestión y moviéndonos de forma completamente aleatoria, los actores que más veces aparezcan entre todos los recorridos, deben ser los más similares al actor de origen. Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo.
+   ```
+   similares('Eastwood Clint', 2)
+   >>> ['Snyder Brian', 'Mortensen Viggo']
+   ```
 
-⁴Esta métrica de popularidad es una estimación muy simple pero útil para el alcance de este trabajo práctico.
+   ⁴Esta métrica de popularidad es una estimación muy simple pero útil para el alcance de este trabajo práctico.
 
 
 ### Comandos del programa
@@ -159,7 +159,7 @@ bacon_number_mayor_a_6
 	Imprime la cantidad de actores (¿existirán?) con un KBN infinito. De no haber, se debe imprimir un mensaje acorde.
 ```
 bacon_number_infinito
->>>  Los actores con un Bacon Number infinito son N
+>>> Los actores con un Bacon Number infinito son N
 ``` 
 
 * Bacon Number promedio
@@ -190,14 +190,14 @@ popularidad_contra_KB 'Pattinson Robert'
 
 * Estadísticas ³: 
     
-    1. Cantidad de películas: Imprime y devuelve la cantidad de películas en el dataset.
-    1. Cantidad de actores: Imprime y devuelve la cantidad de actores en el dataset.
+    1. Cantidad de películas: imprime y devuelve la cantidad de películas en el dataset.
+    1. Cantidad de actores: imprime y devuelve la cantidad de actores en el dataset.
 
     ```
-    cantidad_peliculas
-    >>> El dataset contiene 786879 películas.
-    cantidad_actores
-    >>> El dataset contiene 2454209 actores.
+cantidad_peliculas
+>>> El dataset contiene 786879 películas.
+cantidad_actores
+>>> El dataset contiene 2454209 actores.
     ```
 
 ³IMDB se copó tanto con Kevin Bacon que dejó el balance anual para el final de todo, ¡casi se olvidan!
