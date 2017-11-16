@@ -106,9 +106,9 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
 ## Ejercicios propuestos
 
-1. La cantidad de posibles colocaciones de paréntesis para i operadores binarios está dada por la fórmula:
+1. La cantidad de posibles colocaciones de paréntesis para n operadores binarios está dada por la fórmula:
 
-   $$v[i] = \sum_{j=0}^{n-1} v[j] * v[(n-1)-j]$$, con $$v[0] = 1$$ y $$v[1] = 1$$.
+   $$v[n] = \sum_{j=0}^{n-1} v[j] * v[(n-1)-j]$$, con $$v[0] = 1$$ y $$v[1] = 1$$.
 
    Escribir una función que obtenga la cantidad de agrupaciones para un valor N de operadores de forma eficiente.
 
@@ -116,7 +116,7 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
    Tener en cuenta que:
 
-   $$(a + b)^n = \sum_{k=0}^n \binom{n}{k} \dot a \dot b$$
+   $$(a + b)^n = \sum_{k=0}^n \binom{n}{k} a^{n} \times b^{n-k}$$
 
    Por lo tanto, lo que nos interesa conocer son los valores de todos esos combinatorios. Sabiendo que:
    - $$\binom{n}{0} = 1$$.
