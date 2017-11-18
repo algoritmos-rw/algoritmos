@@ -128,7 +128,7 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
 
 * Camino hasta Kevin Bacon
 
-    Imprime y devuelve el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde (por ejemplo: "No hay conexion entre KB y el actor") y devolverse una lista vacía, y de no existir el actor ingresado se debe imprimir un mensaje acorde.
+    Imprime el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde (por ejemplo: "No hay conexion entre KB y el actor") y devolverse una lista vacía, y de no existir el actor ingresado se debe imprimir un mensaje acorde.
 ```
 camino_hasta_KB 'Naomi Watts'
 >>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
@@ -137,7 +137,7 @@ camino_hasta_KB 'Naomi Watts'
 
 * Bacon Number
 
-    Imprime y devuelve el Kevin Bacon Number del actor recibido. Para representar un KBN infinito (no hay conexión entre KB y el actor) el KBN esperado es -1, y de no existir el actor ingresado se debe imprimir un mensaje acorde. Tener en cuenta que el KBN de Kevin Bacon es 0.
+    Imprime el Kevin Bacon Number del actor recibido. Para representar un KBN infinito (no hay conexión entre KB y el actor) el KBN esperado es -1, y de no existir el actor ingresado se debe imprimir un mensaje acorde. Tener en cuenta que el KBN de Kevin Bacon es 0.
 ```
 bacon_number 'Naomi Watts'
 >>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
@@ -164,7 +164,7 @@ bacon_number_infinito
 
 * Bacon Number promedio
 
-    Imprime y devuelve el Kevin Bacon Number promedio. En este numero no influyen la cantidad de actores con un KBN infinito, pero si lo hace el KBN de Kevin Bacon.
+    Imprime el Kevin Bacon Number promedio. En este numero no influyen la cantidad de actores con un KBN infinito, pero si lo hace el KBN de Kevin Bacon.
 ```
 KBN_promedio
 >>> El Kevin Bacon Number promedio es N
@@ -174,7 +174,7 @@ KBN_promedio
 
     ¿Si una película quisiese contratar a Kevin Bacon pero no tiene el presupuesto para pagarlo? ¡Contrata al que más se le parece!
 
-    Imprime y devuelve una lista de los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
+    Imprime una lista de los n actores más similares a Kevin Bacon, ordenados de mayor similitud a menor. 
 ```
 similares_a_KB '3'
 >>> Los 3 actores más similares KB son  ['Buscemi Steve', 'Brocksmith Roy', 'Hollander Providence']
@@ -182,7 +182,7 @@ similares_a_KB '3'
 
 * Popularidad contra Kevin Bacon
 
-    Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime y devuelve en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que Kevin Bacon es un 100% de lo popular que es Kevin Bacon 
+    Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que Kevin Bacon es un 100% de lo popular que es Kevin Bacon 
 ```
 popularidad_contra_KB 'Pattinson Robert'
 >>> 'Pattinson Robert' es un 6.02 % de lo popular que es Kevin Bacon
@@ -190,8 +190,8 @@ popularidad_contra_KB 'Pattinson Robert'
 
 * Estadísticas ³: 
     
-    1. Cantidad de películas: imprime y devuelve la cantidad de películas en el dataset.
-    1. Cantidad de actores: imprime y devuelve la cantidad de actores en el dataset.
+    1. Cantidad de películas: imprime la cantidad de películas en el dataset.
+    1. Cantidad de actores: imprime la cantidad de actores en el dataset.
 
     ```
 cantidad_peliculas
