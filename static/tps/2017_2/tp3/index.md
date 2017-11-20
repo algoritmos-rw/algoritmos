@@ -128,7 +128,7 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
 
 * Camino hasta Kevin Bacon
 
-    Imprime el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde (por ejemplo: "No hay conexion entre KB y el actor") y devolverse una lista vacía, y de no existir el actor ingresado se debe imprimir un mensaje acorde.
+    Imprime el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde (por ejemplo: "No hay conexion entre KB y el actor"), y de no existir el actor ingresado se debe imprimir un mensaje acorde.
 ```
 camino_hasta_KB 'Naomi Watts'
 >>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
@@ -185,7 +185,7 @@ similares_a_KB '3'
     Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que Kevin Bacon es un 100% de lo popular que es Kevin Bacon 
 ```
 popularidad_contra_KB 'Pattinson Robert'
->>> 'Pattinson Robert' es un 6.02 % de lo popular que es Kevin Bacon
+>>> 'Pattinson Robert' es un 6.02% de lo popular que es Kevin Bacon
 ```
 
 * Estadísticas ³: 
