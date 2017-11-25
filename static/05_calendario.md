@@ -36,14 +36,16 @@ Fechas importantes:
 | Viernes     | 15/12/17     | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
 
 {: .table .table-striped}
-| Fecha       |      Detalle       |
-|- -----------|--------------------|
-| A confirmar | 1ra fecha de final |
-| A confirmar | 2da fecha de final |
-| A confirmar | 3ra fecha de final |
-| A confirmar | 4ta fecha de final |
-| A confirmar | 5ta fecha de final |
+| Día         | Fecha        | Detalle            |
+|- -----------|--------------|--------------------|
+| Miércoles   | 06/12/2017   | 1ra fecha de final |
+| Lunes       | 11/12/2017   | 2da fecha de final |
+| Lunes       | 18/12/2017   | 3ra fecha de final |
+| Viernes     | 09/02/2018   | 4ta fecha de final |
+| Viernes     | 16/02/2018   | 5ta fecha de final |
 
+Las cinco fechas de final son a las 18:00, en aula a confirmar a través
+del sistema [SIU Guaraní](http://guaranigrado.fi.uba.ar/autogestion/).
 
 Los temas a ser evaluados en cada parcialito son:
 - **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas. Listas. **Iteradores de listas.**
