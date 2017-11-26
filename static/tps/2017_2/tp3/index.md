@@ -113,9 +113,24 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
 
    Encuentra  a los _n_ actores más similares al actor dado.
    
-   La similitud entre dos actores se refiere a dos actores que no hayan trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad de actores en común.
+   La similitud entre dos actores se refiere a dos actores que no hayan
+   trabajado juntos entre sí, pero hayan trabajado con la mayor cantidad
+   de actores en común.
    
-   Para calcular la similitud, podemos utilizar [random walks](https://en.wikipedia.org/wiki/Random_walk). Un random walk es, como su nombre lo indica, un recorrido aleatorio. Comienza desde un vértice y se mueve aleatoriamente a un vecino; y luego, se mueve a un vecino de este, incluyendo el original. Este proceso continúa hasta que el recorrido cumpla con un largo n prefijado. Si realizamos muchos de estos recorridos aleatorios, partiendo desde el actor en cuestión y moviéndonos de forma completamente aleatoria, los actores que más veces aparezcan entre todos los recorridos, deben ser los más similares al actor de origen. Tener en cuenta que cuantos más largos y más recorridos se hagan, debería ser más preciso el algoritmo.
+   Para calcular la similitud, podemos utilizar [random walks](https://en.wikipedia.org/wiki/Random_walk),
+   o recorrido aleatorio.
+   Comienza desde un vértice de origen y se mueve aleatoriamente a un
+   vecino; y luego, se mueve a un vecino de este, incluyendo el original.
+   Este proceso continúa hasta que el camino cumpla con un largo _m_
+   prefijado o proporcional a la cantidad de vértices del grafo.
+
+   Si realizamos muchos de estos random walks, partiendo desde el actor en
+   cuestión y moviéndonos de forma completamente aleatoria, los actores
+   que más veces se visiten entre todos los recorridos, deben ser los más
+   similares al actor de origen.
+   
+   Tener en cuenta que el algoritmo debería ser más preciso cuantos más
+   largos y más recorridos se hagan.
    ```
    similares('Eastwood Clint', 2)
    >>> ['Snyder Brian', 'Mortensen Viggo']
@@ -128,7 +143,7 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
 
 * Camino hasta Kevin Bacon
 
-    Imprime el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde (por ejemplo: "No hay conexion entre KB y el actor") y devolverse una lista vacía, y de no existir el actor ingresado se debe imprimir un mensaje acorde.
+    Imprime el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde (por ejemplo: "No hay conexion entre KB y el actor"), y de no existir el actor ingresado se debe imprimir un mensaje acorde.
 ```
 camino_hasta_KB 'Naomi Watts'
 >>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
@@ -185,7 +200,7 @@ similares_a_KB '3'
     Todo el mundo sabe que Kevin Bacon es el actor más popular de todos. Usando su popularidad como base, imprime en porcentaje cuán popular es el actor en comparación a KB. De no existir el actor ingresado, se debe imprimir un mensaje acorde y devolver None. Tener en cuenta que Kevin Bacon es un 100% de lo popular que es Kevin Bacon 
 ```
 popularidad_contra_KB 'Pattinson Robert'
->>> 'Pattinson Robert' es un 6.02 % de lo popular que es Kevin Bacon
+>>> 'Pattinson Robert' es un 6.02% de lo popular que es Kevin Bacon
 ```
 
 * Estadísticas ³: 
