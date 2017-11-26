@@ -145,17 +145,17 @@ Se aclara previamente que no es necesario para el alcance de este TP hacer el gr
 
     Imprime el camino más corto con el cual se llega desde cualquier actor hasta Kevin Bacon. De no haber camino posible se debe imprimir un mensaje acorde (por ejemplo: "No hay conexion entre KB y el actor"), y de no existir el actor ingresado se debe imprimir un mensaje acorde.
 ```
-camino_hasta_KB 'Naomi Watts'
->>> 'Naomi Watts' actuó con 'Sean Penn' en 'Mystic River (2003)'.
->>> 'Sean Penn' actuó con 'Kevin Bacon' en '21 Grams (2003)'.
+camino_hasta_KB 'Watts Naomi'
+>>> 'Watts Naomi' actuó con 'Penn Sean' en 'Mystic River (2003)'.
+>>> 'Penn Sean' actuó con 'Bacon Kevin' en '21 Grams (2003)'.
 ```
 
 * Bacon Number
 
     Imprime el Kevin Bacon Number del actor recibido. Para representar un KBN infinito (no hay conexión entre KB y el actor) el KBN esperado es -1, y de no existir el actor ingresado se debe imprimir un mensaje acorde. Tener en cuenta que el KBN de Kevin Bacon es 0.
 ```
-bacon_number 'Naomi Watts'
->>> 'Naomi Watts' tiene un Kevin Bacon Number igual a 2.
+bacon_number 'Watts Naomi'
+>>> 'Watts Naomi' tiene un Kevin Bacon Number igual a 2.
 ```
 
 * Bacon Number mayor a 6 
