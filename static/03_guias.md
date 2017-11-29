@@ -4,7 +4,7 @@ title: Guías de ejercicios
 permalink: /guias/
 ---
 
-Apuntes
+Guías de ejercicios
 =======
 
 ### Estas son las guías de ejercicios para la segunda parte de la materia
