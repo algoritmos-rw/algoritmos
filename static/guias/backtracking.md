@@ -78,6 +78,7 @@ def solucion_posible(horarios):
    ¿De qué orden es el algoritmo en tiempo y memoria?
 
 3. Escribir una función en pseudocódigo que, utilizando backtracking, dada una lista de enteros positivos _L_ y un entero _n_ devuelva todos los subconjuntos de _L_ que suman exactamente _n_. ¿Cómo cambia el comportamiento del algoritmo frente a una solución por fuerza bruta? Explicar con al menos dos ejemplos de _L_ y _n_.
+[(Solución)](soluciones/subset_sum.py)
 
 4. ¡Ejercicio difícil! Realizar el ejercicio anterior, si además se agregar como restricción que no se puede utilizar más de una vez un mismo elemento de la lista L, pero se quieren maximizar la cantidad de conjuntos obtenidos.
 
