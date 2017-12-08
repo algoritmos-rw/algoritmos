@@ -1,7 +1,7 @@
 <header class="site-header" role="banner">
 
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container-fluid" style="margin-left: 15%">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Navegación</span>
@@ -13,17 +13,17 @@
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="{{ '/' | relative_url }}">Inicio</a></li>
-            <li><a href="{{ '/regimen/' | relative_url }}">Régimen</a></li>
-            <li><a href="{{ '/bibliografia/' | relative_url }}">Bibliografía</a></li>
-            <li><a href="{{ '/guias/' | relative_url }}">Guías</a></li>
-            <li><a href="{{ '/tps/' | relative_url }}">TPs</a></li>
-            <li><a href="{{ '/calendario/' | relative_url }}">Calendario</a></li>
-            <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
-            <li><a href="{{ '/docentes/' | relative_url }}">Docentes</a></li>
-            <li><a href="{{ '/encuestas/' | relative_url }}">Encuestas</a></li>
-            <li class="dropdown">
+          <ul class="nav navbar-nav" style="width: 100%; text-align: center">
+            <li style="float: none; display: inline-block"><a href="{{ '/' | relative_url }}">Inicio</a></li>
+            <li style="float: none; display: inline-block"><a href="{{ '/regimen/' | relative_url }}">Régimen</a></li>
+            <li style="float: none; display: inline-block"><a href="{{ '/bibliografia/' | relative_url }}">Bibliografía</a></li>
+            <li style="float: none; display: inline-block"><a href="{{ '/guias/' | relative_url }}">Guías</a></li>
+            <li style="float: none; display: inline-block"><a href="{{ '/tps/' | relative_url }}">TPs</a></li>
+            <li style="float: none; display: inline-block"><a href="{{ '/calendario/' | relative_url }}">Calendario</a></li>
+            <li style="float: none; display: inline-block"><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+            <li style="float: none; display: inline-block"><a href="{{ '/docentes/' | relative_url }}">Docentes</a></li>
+            <li style="float: none; display: inline-block"><a href="{{ '/encuestas/' | relative_url }}">Encuestas</a></li>
+            <li class="dropdown" style="float: none; display: inline-block">
               <a class="dropdown-toggle" data-toggle="dropdown">Alumno
                 <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -31,6 +31,7 @@
                 <li><a href="https://algoritmos7541-rw.tk/notas/">Notas</a></li>
               </ul>
             </li>
+
           </ul>
         </div>
       </div>
