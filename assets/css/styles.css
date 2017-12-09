@@ -76,6 +76,10 @@ pre code {
   margin-bottom: 0!important;
 }
 
+.navbar .dropdown-menu li {
+  width: 100%;
+}
+
 @media (max-width: 450px) {
   .hidden-xxs {
     display: none !important;
