@@ -1,7 +1,7 @@
 <header class="site-header" role="banner">
 
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Navegación</span>
@@ -23,6 +23,14 @@
             <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
             <li><a href="{{ '/docentes/' | relative_url }}">Docentes</a></li>
             <li><a href="{{ '/encuestas/' | relative_url }}">Encuestas</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Alumno
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://algoritmos7541-rw.tk/entregas">Entregas</a></li>
+                <li><a href="https://algoritmos7541-rw.tk/notas/">Notas</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
