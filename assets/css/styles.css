@@ -52,7 +52,8 @@
 }
 
 .navbar-toggle[aria-expanded="true"]:after {
-  content:"🞫";
+  content:"X";
+  font-weight:bold;
   color:#888;
 }
 
