@@ -23,6 +23,7 @@ Bibliografía
 * [Manejo de memoria dinámica en C](https://sites.google.com/site/fiuba7541rw/apuntes/MemoriaDinamica.pdf?attredirects=0)
 * [Vectores y punteros en C](https://sites.google.com/site/fiuba7541rw/apuntes/Vectores_y_Punteros.pdf?attredirects=0)
 * [Parámetros de línea de comandos en C](https://sites.google.com/site/fiuba7541rw/apuntes/Parametros.pdf?attredirects=0)
+* [Diapositivas de archivos en C](https://sites.google.com/site/fiuba7541rw/filminas_archivos.pdf?attredirects=0&d=1)
 * [Manejo de archivos en C](https://sites.google.com/site/fiuba7541rw/apuntes/Archivos.pdf?attredirects=0)
 * [Implementación de mergesort y quicksort en C](https://sites.google.com/site/fiuba7541rw/apuntes/Ordenamiento.pdf?attredirects=0)
 * [Introducción al uso de Makefile](https://sites.google.com/site/fiuba7541rw/apuntes/Makefile.pdf?attredirects=0)
