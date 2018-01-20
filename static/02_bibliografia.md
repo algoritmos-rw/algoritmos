@@ -10,6 +10,7 @@ Bibliografía
 ### Libros sugeridos por el curso
 
 * Weiss, Mark Allen: **"Estructuras de datos y algoritmos"**, Addison-Wesley Iberoamericana, 1995.
+* Cormen, Thomas H.; Leiserson Charles E.; Rivest Ronald L; Stein Clifford: **"Introduction to Algorithms"**, The MIT Press, 2009.
 * Kruse, Robert Leroy;  Tondon, Clovis L.;  Leung, Bruce P: **"Data structures and program design in C"**, Prentice-Hall, 1997.
 * Brassard, Gilles;  Bratley, Paul: **"Algorithmics: theory and practice"**, Prentice-Hall, 1988.
 * Sedgewick, Robert: **"Algorithms in C++"**, Addison-Wesley, 1992.
