@@ -1,19 +1,26 @@
-#Algoritmos de Ordenamientos Externos
+---
+layout: default
+title: Algoritmos de Ordenamiento Externo
+permalink: /apuntes/ordenamiento_externo
+math: true
+---
 
-Llamamos ordenamiento externo cuando debemos ordenar archivos que son (mucho) más grandes de lo que nuestra memoria puede llegar a abarcar. Esto es así porque sino, podríamos simplemente cargar el archivo en memoria y ordenarlo usando cualquier algoritmo de ordenamiento convencional. 
+# Algoritmos de Ordenamientos Externos
+
+Llamamos ordenamiento externo cuando debemos ordenar archivos que son (mucho) más grandes de lo que nuestra memoria puede llegar a abarcar. Esto es así porque, sino, podríamos simplemente cargar el archivo en memoria y ordenarlo usando cualquier algoritmo de ordenamiento convencional. 
 
 Hoy en día es raro necesitar utilizar algoritmos como estos debido a que contamos con mucha más memoria RAM de lo que se hacía una década atrás. 
-Este era un tema que hasta hace unos años se daba en Organización de Datos, pero dado que poco tenía que ver con el resto del temario (que tiene más sentido en nuestra materia) decidieron sacarlo del temario. 
+Este era un tema que hasta hace unos años se daba en la materia _Organización de Datos_, pero dado que poco tenía que ver con el resto del temario, y que tiene más sentido en nuestra materia, decidieron dejar de darlo. 
 
-Ahora bien, supongamos que contamos con un caso así. Estamos queriendo ordenar un archivo completamente desordenado, bajo algún criterio X, que no importa. El algoritmo que podríamos utilizar podría hacer algo como:
-1. Generar K particiones ordenadas. Cada archivo tendrá n_i (i entre 0 y K-1) elementos, donde la suma de todos los n_i será N, la cantidad total de elementos del archivo original. 
-2. Juntar las K particiones ordenadas en un nuevo archivo ordenado. Esto sería una generalización del "intercalar ordenado" de mergesort. 
+Supongamos entonces que contamos con un caso así. Estamos queriendo ordenar un archivo completamente desordenado, bajo algún criterio que no es importante. El algoritmo que podríamos utilizar podría hacer algo como:
+1. Generar _k_ particiones ordenadas. Cada archivo tendrá $$n_i$$ (_i_ entre 0 y _k-1_) elementos, donde la suma de todos los $$n_i$$ será _n_, la cantidad total de elementos del archivo original. 
+2. Juntar las _k_ particiones ordenadas en un nuevo archivo ordenado. Esto sería una generalización del _intercalar ordenado_ de mergesort. 
 
-Veremos cómo podemos implementar cada una de esas partes. Primero veremos la segunda, que es la más sencilla:
+Veremos cómo podemos implementar cada una de esas partes. Primero veremos la segunda, que es la más sencilla.
 
-##Juntar K archivos ordenados
+## Juntar _k_ archivos ordenados
 
-Esto en sí ya no necesariamente aplica para archivos, podría tranquilamente ser para arreglos (solo que en el caso de archivos, iremos leyendo del archivo en vez de un arreglo). Acá la idea va a ser reutilizar el heap. Así como tenemos la opción de utilizar un heap para obtener los K elementos de un heap de _n_ elementos en _O(n log k)_, también podemos hacer el merge de _n_ archivos (o arreglos) **ordenados** en _O(n log k)_.
+Esto en sí ya no necesariamente aplica para archivos, podría tranquilamente ser para arreglos (solo que en el caso de archivos, iremos leyendo del archivo en vez de un arreglo). La idea va a ser reutilizar el heap. Así como tenemos la opción de utilizar un heap para obtener los _k_ elementos más grandes de un arreglo de _n_ elementos en _O(n log k)_, también podemos hacer el merge de _k_ archivos (o arreglos) **ordenados** que tienen en total _n_ elementos, en _O(n log k)_.
 
 Así como es el caso del otro algoritmo, que el orden sea logarítmico sobre _k_ implica que en nuestro heap no tendremos nunca más de _k_ elementos. Pero recordemos que _k_ es la cantidad de archivos que tenemos. La idea es aprovechar el ordenamiento que tiene los archivos desde el inicio. 
 
@@ -29,7 +36,7 @@ Eso quiere decir, que el menor entre todos los _K_ primeros va a ser el menor de
 
 Dado que se hacen _n_ encolar y desencolar en un heap que siempre tiene a lo sumo _k_ elementos, cada operación es _O(log k)_, al ser _n_ las veces que se hace: _O(n log k)_.
 
-##Generar particiones ordenadas
+## Generar particiones ordenadas
 
 Veremos 3 implementaciones para esto. Una particularidad: el valor de _n_ no puede cambiar (depende del archivo original), pero si podemos ver de manejar el valor de _k_. Cuanto menor cantidad de particiones ordenadas genermos, menor costo tendremos a la hora de hacer el merge ordenado explicado arriba. 
 
