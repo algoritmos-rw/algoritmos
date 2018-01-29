@@ -90,5 +90,8 @@ Con eso comprobamos que, lógicamente, nuestro algoritmo ordena en _O(n log n)_.
 
 A la hora de trabajar con accesos a disco, es importante tener en cuenta que a menos que trabajen con un disco de estado solido (SDD), leer seguido puede ser una operación (muy) costosa, y lo mismo al escribir. 
 Pueden utilizar tanto getline como cualquier otra función ya vista, pero recomendamos:
-* Para lecturas: no usar getline, sino algo que les permita leer directamente una mayor cantidad de bytes de un solo acceso a disco¸usando fread. Tendrán que tener en cuenta que tendrán que separar ustedes por los `\n` (sencillo utilizando el `split` ya implementado, y mucho más veloz por utilizar accesos a memoria volátil). ¡Cuidado! Recuerden que la _última linea_ podría haber quedado incompleta al leer del archivo. 
+* Para lecturas: no usar getline, sino algo que les permita leer directamente una mayor cantidad de bytes de un solo acceso a disco¸usando fread. Tendrán que tener en cuenta que tendrán que separar ustedes por los `\n` (sencillo utilizando el `split` ya implementado, y mucho más veloz por utilizar accesos a memoria volátil). ¡Cuidado! Recuerden que la _última linea_ podría haber quedado incompleta al leer del archivo.
 * Para escrituras, hacer algún tipo de buffer. Pueden por ejemplo guardar en una lista o cola _n_ líneas (fijado por ustedes), luego unirlas (utilizando `join`), y finalmente escribirlas a disco. 
+
+En caso que se trate de un archivo binario, cuyos registros son de tamaño fijo, esta operación se hace mucho más sencillo, puesto que fread y fwrite ya pueden funcionar perfectamente con arreglos de estructuras.
+
