@@ -13,10 +13,10 @@ Hoy en día es raro necesitar utilizar algoritmos como estos debido a que contam
 Este era un tema que hasta hace unos años se daba en la materia _Organización de Datos_, pero dado que poco tenía que ver con el resto del temario, y que tiene más sentido en nuestra materia, decidieron dejar de darlo. 
 
 Supongamos entonces que contamos con un caso así. Estamos queriendo ordenar un archivo completamente desordenado, bajo algún criterio que no es importante. El algoritmo que podríamos utilizar podría hacer algo como:
-1. Generar _k_ particiones ordenadas. Una partición de un archivo es un sub-archivo, donde todos juntos tienen todas las líneas ó registros del archivo original, sin repeticiones. Cada archivo tendrá $$n_i$$ (_i_ entre 0 y _k-1_) registros, donde la suma de todos los $$n_i$$ será _n_, la cantidad total de registros del archivo original. 
+1. Generar _k_ particiones ordenadas. Una partición de un archivo es un sub-archivo, donde todos juntos tienen todas las líneas ó registros del archivo original, sin repeticiones. Cada archivo tendrá $$n_i$$ registros (con _i_ entre 0 y _k-1_), donde la suma de todos los $$n_i$$ será _n_, la cantidad total de registros del archivo original. 
 2. Juntar las _k_ particiones ordenadas en un nuevo archivo ordenado. Esto sería una generalización del _intercalar ordenado_ de mergesort. 
 
-Por lo tanto, la idea es: separamos el archivo original en _k_ particiones. Cada una de esas particiones nos aseguraremos que estén ordenadas, y luego uniremos las particiones en un archivo final, ordenado. 
+En resumen, la idea es: separamos el archivo original en _k_ particiones. Cada una de esas particiones nos aseguraremos que queden ordenadas, y luego uniremos las particiones en un archivo final ordenado, aprovechando que las particiones quedaron ordenadas. 
 
 Veremos cómo podemos implementar cada una de esas partes. Empezaremos por la segunda, que es la más sencilla.
 
@@ -24,7 +24,7 @@ Veremos cómo podemos implementar cada una de esas partes. Empezaremos por la se
 
 Esto en sí ya no necesariamente aplica para archivos, podría tranquilamente ser para arreglos (solo que en el caso de archivos, iremos leyendo del archivo en vez de un arreglo). La idea va a ser reutilizar el heap. Así como tenemos la opción de utilizar un heap para obtener los _k_ registros más grandes de un arreglo de _n_ registros en _O(n log k)_, también podemos hacer el merge de _k_ archivos (o arreglos) **ordenados** que tienen en total _n_ registros, en _O(n log k)_.
 
-Así como es el caso del otro algoritmo, que el orden sea logarítmico sobre _k_ implica que en nuestro heap no tendremos nunca más de _k_ registros. Pero recordemos que _k_ es la cantidad de archivos que tenemos. La idea es aprovechar el ordenamiento que tiene los archivos desde el inicio. 
+Así como es el caso del algoritmo de _top-k_, que el orden sea logarítmico sobre _k_ implica que en nuestro heap no tendremos nunca más de _k_ registros. Pero recordemos que _k_ es la cantidad de archivos que tenemos. La idea es aprovechar el ordenamiento que tiene los archivos desde el inicio. 
 
 El primer registro en cada archivo es el menor de todos los registros dentro de cada uno de ellos. Digamos, en el primer archivo el primer registro es el más chico entre todos los registros del primer archivo (o a lo sumo, igual).
 
@@ -94,4 +94,18 @@ Pueden utilizar tanto getline como cualquier otra función ya vista, pero recome
 * Para escrituras, hacer algún tipo de buffer. Pueden por ejemplo guardar en una lista o cola _n_ líneas (fijado por ustedes), luego unirlas (utilizando `join`), y finalmente escribirlas a disco. 
 
 En caso que se trate de un archivo binario, cuyos registros son de tamaño fijo, esta operación se hace mucho más sencillo, puesto que fread y fwrite ya pueden funcionar perfectamente con arreglos de estructuras.
+
+## Preguntas adicionales
+
+* ¿Qué sucedería si el archivo es tan, pero tan grande, que la cantidad de particiones que generamos (_k_) es mayor a la cantidad de registros que podemos mantener en memoria (_C_)? ¿Cómo podemos hacer el merge de las _k_ particiones? 
+Esto podría resolverse haciendo más de una pasada del merge: En vez de mergear las _k_ particiones, juntamos $$\sqrt{k}$$. Juntamos las primeras $$\sqrt{k}$$ particiones, luego las segundas $$\sqrt{k}$$, etc... Finalmente tendremos $$\sqrt{k}$$ particiones resultantes, ordenadas, y las podemos unir. 
+* Pero... ¿Y si la cantidad de particiones es tal que incluso haciendo lo anterior, no entran en memoria $$\sqrt{k}$$ registros (por serían mayor a C)? 
+Vayamos a los números: En general se suele trabajar con computadoras de 8 o 16GB de memoria RAM. Supongamos que por diversas cuestiones, contamos con 512MB de memoria RAM a disposición de nuestro programa. No suena, hoy en día, un número tan grande (aunque puede serlo si el sistema debe realizar muchas tareas). Con lo que vimos anteriormente, podemos generar particiones de hasta tamaño (promedio) _3C_. Eso quiere decir que tendremos _n/3C_ particiones. Que no entren _k_ registros en memoria implicaría que _n/3C_ registros deberían ser mayor a C. Esto quiere decir que:
+
+	$$\frac{n}{3C} > C$$
+	$$n > 3Cˆ2$$
+	
+	Si nuestra memoria para el programa es de 512MB, donde supongamos que cada registro nos ocupe en promedio 32 Bytes (no solemos querer ordenar simples números). Eso querría decir que tenemos alrededor de $$C ~ 16.777.216$$ registros. Eso implicaría que nuestro _n_ debería ser mayor a $$1.35e^{16}$$ que, mantiendo que cada registro ocupe 32 bytes, implicaría que nuestro archivo original es de 384 Peta Bytes (ni siquiera Tera). Esas capacidades ni siquiera existen para fines remotamente cercanos a fines de nuestra materia. Cuando llegamos a tales números, nos olvidaremos completamente de intentar implementar algoritmos de este estilo. Porque, a fin de cuentas... ¿Quién va a validar que esa gigantezca masa de datos está ordenada? El manejo de inmensos (o cuasi infinitos) volúmenes de datos es analizado en la materia _Organización de Datos_.
+
+
 
