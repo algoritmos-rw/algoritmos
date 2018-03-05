@@ -7,7 +7,7 @@ permalink: /
 
   <p>
     Este es el sitio de la materia <strong>Algoritmos y Programación II</strong>, 
-    curso <strong>Wachenchauzer</strong>, de FIUBA.
+    curso <strong>Buchwald</strong> (ex <strong>Wachenchauzer</strong>), de FIUBA.
   </p>
 
   <h3 class="page-heading">Novedades</h3>
