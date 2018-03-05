@@ -1,7 +1,3 @@
-profesores:
-- nombre: Rosita Wachenchauzer
-  foto: /assets/img/docentes/rosita.jpg
-
 ayudantes:
 - nombre: Ana Secchi
   foto: /assets/img/docentes/anas.jpg
@@ -41,9 +37,6 @@ ayudantes:
 
 - nombre: Lautaro Manzano
   foto: /assets/img/docentes/lautarom.jpg
-
-- nombre: Martín Buchwald
-  foto: /assets/img/docentes/martinb.jpg
 
 - nombre: Milena Marchese
   foto: /assets/img/docentes/unknown.png

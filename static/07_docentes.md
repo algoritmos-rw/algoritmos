@@ -9,7 +9,7 @@ permalink: /docentes/
   <tr>
     <td class="col-md-4"></td>
     <td class="col-md-4">
-      <h2 class="hidden-xxs">Profesora</h2>
+      <h2 class="hidden-xxs">Profesor</h2>
     </td>
     <td class="col-md-4"></td>
   </tr>
@@ -17,8 +17,8 @@ permalink: /docentes/
   <tr>
     <td></td>
     <td>
-      <img src="../assets/img/docentes/rosita.jpg" title="Rosita Wachenchauzer" alt="Rosita Wachenchauzer" class="center-block img-rounded img-responsive">
-      <span class="hidden-xxs">Rosita Wachenchauzer</span>
+      <img src="../assets/img/docentes/martinb.jpg" title="Martín Buchwald" alt="Martín Buchwald" class="center-block img-rounded img-responsive">
+      <span class="hidden-xxs">Martín Buchwald</span>
     </td>
     <td></td>
   </tr>
