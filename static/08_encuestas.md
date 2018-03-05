@@ -12,6 +12,7 @@ Estos son los resultados de las encuestas de cuatrimestres anteriores:
 {: .table .table-striped}
 | Cuatrimestre  |  Enlace  |
 |---------------|----------|
+| 1ro 2017      | [Ver](../assets/encuestas/2017-2c.html) |
 | 1ro 2017      | [Ver](../assets/encuestas/2017-1c.html) |
 | 2ro 2016      | [Ver](../assets/encuestas/2016-2c.html) |
 | 1ro 2016      | [Ver](../assets/encuestas/2016-1c.html) |
