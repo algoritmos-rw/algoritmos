@@ -35,3 +35,8 @@ La función de comparación (de tipo `cmp_func_t`) debe recibir dos punteros del
 *   mayor a 0  si  a > b  
   
 Como siempre, deben subir el código completo a la [página de entregas de la materia](https://algoritmos7541-rw.tk/entregas/) y también entregarlo impreso con nombre y padrón de ambos integrantes, si su corrector así lo requiere.
+
+---
+### Bibliografia recomendada
+* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": **Chapter 6: Priority Queues (Heaps).**
+* Cormen, Thomas H. "Introduction to Algorithms": **6.1. Heaps**, **6.2. Maintaining the heap property**, **6.5. Priority queues.**
