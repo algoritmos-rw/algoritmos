@@ -63,3 +63,8 @@ indicándole por parámetro el nombre del ejecutable:
 chmod +x tiempos_volumen.sh
 ./tiempos_volumen.sh ./main
 ```
+
+---
+### Bibliografia recomendada
+* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": **Chapter 5: Hashing.**
+* Cormen, Thomas H. "Introduction to Algorithms": **11. Hash Tables.**
