@@ -16,33 +16,33 @@ Fechas importantes:
 {: .table .table-striped}
 | Día         |   Fecha      |      Detalle     |
 |-------------|--------------|------------------|
-| **Viernes** | **25/08/17** | **Entrega del TP0** |
-| Viernes     | 01/09/17     | Entrega del vector dinámico |
-| Viernes     | 08/09/17     | Entrega de la pila |
-| **Viernes** | **15/09/17** | **1er parcialito (en el horario de la teórica)** |
-| Viernes     | 15/09/17     | Entrega de la cola |
-| Viernes     | 22/09/17     | Entrega de la lista enlazada |
-| **Lunes**   | **09/10/17** | **2do parcialito (en el horario de la teórica)** |
-| Viernes     | 13/10/17     | Entrega del hash |
-| **Viernes** | **13/10/17** | **Entrega del TP1** |
-| Viernes     | 27/10/17     | Entrega del ABB |
-| **Lunes**   | **06/11/17** | **3er parcialito (en el horario de la teórica)** |
-| Lunes       | 06/11/17     | Entrega del heap |
-| **Lunes**   | **13/11/17** | **Entrega del TP2** |
-| **Viernes** | **01/12/17** | **4to parcialito (en el horario de la teórica)** |
-| **Viernes** | **01/12/17** | **Entrega del TP3** |
-| Lunes       | 04/12/17     | 1er recuperatorio (parcialitos 1 y 2) |
-| Lunes       | 11/12/17     | 1er recuperatorio (parcialitos 3 y 4) |
-| Viernes     | 15/12/17     | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
+| **Viernes** | **23/03/18** | **Entrega del TP0** |
+| Lunes       | 25/03/18     | Entrega del vector dinámico |
+| Viernes     | 06/04/18     | Entrega de la pila |
+| **Lunes**   | **16/04/18** | **1er parcialito (en el horario de la teórica)** |
+| Lunes       | 16/04/18     | Entrega de la cola |
+| Lunes       | 23/04/18     | Entrega de la lista enlazada |
+| **Viernes** | **11/05/18** | **2do parcialito (en el horario de la teórica)** |
+| Viernes     | 11/05/18     | Entrega del hash |
+| **Lunes**   | **14/05/18** | **Entrega del TP1** |
+| Lunes       | 28/05/18     | Entrega del ABB |
+| **Viernes** | **08/06/18** | **3er parcialito (en el horario de la teórica)** |
+| Viernes     | 08/06/18     | Entrega del heap |
+| **Viernes** | **15/06/18** | **Entrega del TP2** |
+| **Viernes** | **29/06/18** | **4to parcialito (en el horario de la teórica)** |
+| **Viernes** | **29/06/18** | **Entrega del TP3** |
+| Lunes       | 02/07/18     | 1er recuperatorio (parcialitos 1 y 2) |
+| Viernes     | 06/07/18     | 1er recuperatorio (parcialitos 3 y 4) |
+| Viernes     | 13/07/18     | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
 
 {: .table .table-striped}
-| Día         | Fecha        | Detalle            |
-|- -----------|--------------|--------------------|
-| Miércoles   | 06/12/2017   | 1ra fecha de final |
-| Lunes       | 11/12/2017   | 2da fecha de final |
-| Lunes       | 18/12/2017   | 3ra fecha de final |
-| Viernes     | 09/02/2018   | 4ta fecha de final |
-| Viernes     | 16/02/2018   | 5ta fecha de final |
+| Día         | Fecha       | Detalle            |
+|- -----------|-------------|--------------------|
+| A definir   | A definir   | 1ra fecha de final |
+| A definir   | A definir   | 2da fecha de final |
+| A definir   | A definir   | 3ra fecha de final |
+| A definir   | A definir   | 4ta fecha de final |
+| A definir   | A definir   | 5ta fecha de final |
 
 Las cinco fechas de final son a las 18:00, en aula a confirmar a través
 del sistema [SIU Guaraní](http://guaranigrado.fi.uba.ar/autogestion/).
@@ -55,5 +55,5 @@ Los temas a ser evaluados en cada parcialito son:
 
 (En negrita los temas que no se evaluarán en la primera oportunidad pero sí en recuperatorios.)
 
-También contamos con un [calendario detallado](https://docs.google.com/spreadsheets/d/e/2PACX-1vSB6XSrrr8DApYSShBEgudIIlqQbjDxzru-_8P3mq5YYBlFMsnwDt1u635w4D_lbi0mZCJu35-uLLx-/pubhtml?gid=8&single=true) de las clases para descargar.
+También contamos con un [calendario detallado](https://docs.google.com/spreadsheets/d/e/2PACX-1vT3ZlR8CUHPbk2EJMstUziRXGcjfqazkr81PdT7iRfm7D0-cHDYiIKxDHRMU3rNhG_pNPC8xNtePtRa/pubhtml?gid=8&single=true) de las clases para descargar.
 
