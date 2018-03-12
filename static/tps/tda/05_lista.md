@@ -69,5 +69,5 @@ Además, deben subir el código a la [página de entregas de la materia](https:/
 
 ---
 ### Bibliografia recomendada
-* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": **3.2. The List ADT.**
-* Cormen, Thomas H. "Introduction to Algorithms": **10.2. Linked lists.**
+* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *3.2. The List ADT*.
+* Cormen, Thomas H. "Introduction to Algorithms": *10.2. Linked lists*.

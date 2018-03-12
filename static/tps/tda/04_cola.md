@@ -21,5 +21,5 @@ Además, deben subir el código a la [página de entregas de la materia](https:/
 
 ---
 ### Bibliografia recomendada
-* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": **3.4. The Queue ADT.**
-* Cormen, Thomas H. "Introduction to Algorithms": **10.1. Stacks and queues.**
+* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *3.4. The Queue ADT*.
+* Cormen, Thomas H. "Introduction to Algorithms": *10.1. Stacks and queues*.
