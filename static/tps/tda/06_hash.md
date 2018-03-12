@@ -66,5 +66,5 @@ chmod +x tiempos_volumen.sh
 
 ---
 ### Bibliografia recomendada
-* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": **Chapter 5: Hashing.**
-* Cormen, Thomas H. "Introduction to Algorithms": **11. Hash Tables.**
+* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *Chapter 5: Hashing*.
+* Cormen, Thomas H. "Introduction to Algorithms": *11. Hash Tables*.

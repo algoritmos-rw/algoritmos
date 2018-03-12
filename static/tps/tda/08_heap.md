@@ -38,5 +38,5 @@ Como siempre, deben subir el código completo a la [página de entregas de la ma
 
 ---
 ### Bibliografia recomendada
-* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": **Chapter 6: Priority Queues (Heaps).**
-* Cormen, Thomas H. "Introduction to Algorithms": **6.5. Priority queues**, **6.1. Heaps**, **6.2. Maintaining the heap property.** 
+* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *Chapter 6: Priority Queues (Heaps)*.
+* Cormen, Thomas H. "Introduction to Algorithms": *6.5. Priority queues*, *6.1. Heaps*, *6.2. Maintaining the heap property*. 

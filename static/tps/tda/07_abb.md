@@ -62,6 +62,6 @@ Como siempre, deben subir el código completo a la [página de entregas de la ma
 
 ---
 ### Bibliografia recomendada
-* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": **Chapter 4: Trees**, en particular desde **4.3. The Search Tree ADT- - Binary Search Trees.**
-* Cormen, Thomas H. "Introduction to Algorithms": **12. Binary Search Trees.**
+* Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *Chapter 4: Trees*, en particular desde *4.3. The Search Tree ADT- - Binary Search Trees*.
+* Cormen, Thomas H. "Introduction to Algorithms": *12. Binary Search Trees*.
 
