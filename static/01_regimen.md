@@ -16,8 +16,7 @@ Régimen de cursada
 * Las condiciones del régimen de promoción son las siguientes:
   - Es necesario aprobar los **cuatro parcialitos** y los **tres trabajos prácticos**.
   - El **promedio** de notas de todos los **trabajos prácticos** debe ser al menos 8.
-  - El **promedio** de notas de todos los **parcialitos** debe ser al menos 7.
-  - Al menos **tres parcialitos** deben estar aprobados con nota **7 o superior**.
+  - Las **notas** de todos los **parcialitos** debe ser al menos 7.
   - Todos los parcialitos deben estar aprobados en la **primera instancia** o el **primer recuperatorio**.
 
 
