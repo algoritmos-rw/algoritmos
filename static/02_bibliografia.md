@@ -19,14 +19,15 @@ Bibliografía
 
 ### Apuntes del curso
 
-* [Diapositivas del lenguaje C](https://sites.google.com/site/fiuba7541rw/filminas_c.pdf?attredirects=0&d=1)
-* [Introducción al lenguaje C](https://sites.google.com/site/fiuba7541rw/apuntes/Lenguaje_C.pdf?attredirects=0)
-* [Manejo de memoria dinámica en C](https://sites.google.com/site/fiuba7541rw/apuntes/MemoriaDinamica.pdf?attredirects=0)
-* [Vectores y punteros en C](https://sites.google.com/site/fiuba7541rw/apuntes/Vectores_y_Punteros.pdf?attredirects=0)
-* [Parámetros de línea de comandos en C](https://sites.google.com/site/fiuba7541rw/apuntes/Parametros.pdf?attredirects=0)
-* [Manejo de archivos en C](https://sites.google.com/site/fiuba7541rw/apuntes/Archivos.pdf?attredirects=0)
-* [Implementación de mergesort y quicksort en C](https://sites.google.com/site/fiuba7541rw/apuntes/Ordenamiento.pdf?attredirects=0)
-* [Introducción al uso de Makefile](https://sites.google.com/site/fiuba7541rw/apuntes/Makefile.pdf?attredirects=0)
+* [Diapositivas del lenguaje C](https://drive.google.com/open?id=1ARcGbWEjwR2uC4kAV6oNozyWP-wZt-If)
+* [Introducción al lenguaje C](https://drive.google.com/open?id=17gyhdJwEcxxLVrD_X0AlPnZzQajXOFE5)
+* [Manejo de memoria dinámica en C](https://drive.google.com/open?id=1rwD-wgSSW0sjPdowHOg_3Uv7_gplJtAq)
+* [Vectores y punteros en C](https://drive.google.com/open?id=1J3uJd0SLZ1DHvPTf7H4ZaKPTwi2mRC0X)
+* [Parámetros de línea de comandos en C](https://drive.google.com/open?id=18tXTY-zwSTGlbeFHhyxQ9MAG1XJlZwyu)
+* [Diapositivas de archivos en C](https://drive.google.com/open?id=1ESqGw93lMLXCrtTl8rADlHSQV9BDpwWh)
+* [Manejo de archivos en C](https://drive.google.com/open?id=1v9Pvi72JvhMJCgVHFreBpK5mqApS3b4c)
+* [Implementación de mergesort y quicksort en C](https://drive.google.com/open?id=1XPDf2z9J0v9dGlaTgqFj8pGL3RQUPMpb)
+* [Introducción al uso de Makefile](https://drive.google.com/open?id=1iMUDd8tPJ-uZrZWRlw7uTmfcM1CEAJva)
 
 Además, puede resultar de interés consultar el [Apunte de Algoritmos y Programación I](https://drive.google.com/file/d/0B0KKEIBDHL7tdEQ3bFZ2M3VrZzA/view).
 
@@ -52,7 +53,7 @@ Además, puede resultar de interés consultar el [Apunte de Algoritmos y Program
 ### Material disponible en internet sobre estructuras de datos
 
 * [Algoritmos y estructuras de datos](http://venus.ceride.gov.ar/twiki/bin/view/AED/WebHome#Bibliograf_a), apunte de la materia, Universidad del Litoral.
-* [Árboles B, B+ y B*](https://sites.google.com/site/fiuba7541rw/bibliografia/Arboles%20B.pdf?attredirects=0&d=1), apunte del curso de Organización de Datos (66.06) de FIUBA.
+* [Árboles B, B+ y B*](https://drive.google.com/open?id=1Inanv7DGbHiF7dCBOD6jxuxhsNz0Uz7j), apunte del curso de Organización de Datos (66.06) de FIUBA.
 
 ### Videos explicativos de temas de la materia
 
@@ -69,23 +70,23 @@ Además, puede resultar de interés consultar el [Apunte de Algoritmos y Program
 
 ### Ejemplos de código
 
-* [malloc y struct](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/malloc.zip?attredirects=0)
-* [Archivos](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/archivos.tar.gz?attredirects=0)
-* [rot13](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/rot13.c?attredirects=0) (ejemplo básico de lectura y escritura de archivos)
-* [Potenciación eficiente](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/potencia.c?attredirects=0)
-* [Medición  de tiempos](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/medicion.c?attredirects=0)
-* [Makefile](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/Makefile?attredirects=0)
-* [Eliminación de recursión](https://sites.google.com/site/fiuba7541rw/clases/eliminacionderecursionclase2012-09-10/recursion-elim.zip?attredirects=0)
-* [Punteros a funciones](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/funciones.c?attredirects=0)
-* [Ejemplos de programación dinámica](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/ejemplosProgramacionDinamica.zip?attredirects=0) (coeficientes, escalones, soga y teléfono).
+* [malloc y struct](https://drive.google.com/open?id=1L3-Hh9YWFa4_pZmsroA3frPClHcATsGf)
+* [Archivos](https://drive.google.com/open?id=1QJ2Z-Rd2ciTKIM-0R96q_jXI1dW4hzH5)
+* [rot13](https://drive.google.com/open?id=1GSTRmDn1aikcd9G5ujHIilA1525zPUJM) (ejemplo básico de lectura y escritura de archivos)
+* [Potenciación eficiente](https://drive.google.com/open?id=1OAhV9cmYYO0bbRGuABjYsN6alY2AeIUj)
+* [Medición  de tiempos](https://drive.google.com/open?id=1TtDg-XpgbJcDZjM44nCvHoTJ2Jv0Lw-a)
+* [Makefile](https://drive.google.com/open?id=15QDg5EmjCXVE_jrthNm-78TkG9fvG9K8)
+* [Eliminación de recursión](https://drive.google.com/open?id=1o3o1mqMfubTvy1Q4A7gHtoJ36MwzSki4)
+* [Punteros a funciones](https://drive.google.com/open?id=1vjQZalFTNfWXCYJEVL9sU4i8FcZSn2io)
+* [Ejemplos de programación dinámica](https://drive.google.com/open?id=1d74zabP5mQ7V71ujqqheWShTOWkVgvjb) (coeficientes, escalones, soga y teléfono).
 
 Implementaciones de ordenamientos recursivos
 
-* [Merge sort simple](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/mergesort_simple.c?attredirects=0)
-* [Merge sort con un buffer](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/mergesort_buffer.c?attredirects=0)
-* [Merge sort con punteros en lugar de vectores](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/mergesort_punteros.c?attredirects=0)
-* [Quick sort simple](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/quicksort.c?attredirects=0)
-* [Quick sort alternativo](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/quicksort_alt.c?attredirects=0)
+* [Merge sort simple](https://drive.google.com/open?id=109SXbXwH-HOoCzfHJERNeaJcyt7gcl_D)
+* [Merge sort con un buffer](https://drive.google.com/open?id=10bVMcFF57iFWjbHw-YBRndkRR-aJodSj)
+* [Merge sort con punteros en lugar de vectores](https://drive.google.com/open?id=1ISdUlErJziiO_3Do8i3HjYRBuHtJ5lW7)
+* [Quick sort simple](https://drive.google.com/open?id=1AU4HaMJZpe6F4C7YFNnVoNkYwyKBF0wc)
+* [Quick sort alternativo](https://drive.google.com/open?id=1wId-_djgfYMQB62lfgV5C4czm--MkNm_)
 
 ### Otros enlaces
 
@@ -104,6 +105,6 @@ Implementaciones de ordenamientos recursivos
   * [Mercurial](http://mercurial.selenic.com/).
 
 Finalmente, cuando corresponda recomendamos escribir los informes utilizando [LaTeX](http://www.latex-project.org/).
-Contamos con una [introducción al desarrollo de documentos en LaTeX](https://sites.google.com/site/fiuba7541rw/apuntes/INTRODUCCIONALATEX.pdf?attredirects=0),
-un [ejemplo](https://sites.google.com/site/fiuba7541rw/apuntes/Ejemplo.zip?attredirects=0) para tomar de punto de partida,
-y un [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/InformeEjemplo.tar.gz?attredirects=0).
+Contamos con una [introducción al desarrollo de documentos en LaTeX](https://drive.google.com/open?id=1CgB9Qsd_rkvYCW0f1qzh-p9FKe2jelHR),
+un [ejemplo](https://drive.google.com/open?id=1kh0Vm2Yj30kOpIlmwMKL9WnpZw36BPid) para tomar de punto de partida,
+y un [informe de ejemplo](https://drive.google.com/open?id=11ufmyqYKWt18Ty3Wg0fxtjqU7slRU-MT).

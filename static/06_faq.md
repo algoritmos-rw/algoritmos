@@ -131,7 +131,7 @@ En este caso, la dirección de memoria de `x` es válida aún cuando termine la 
 
 Un archivo Makefile es un archivo creado para automatizar el proceso de compilación, ejecución y mantenimiento del código fuente. Al ejecutar el programa `make` se buscan estos archivos para ejecutar sus instrucciones y compilar el código fuente cuando sea necesario.
 
-Para más información se puede consultar este [apunte de la cátedra](https://sites.google.com/site/fiuba7541rw/apuntes/Makefile.pdf?attredirects=0) y el [Makefile de ejemplo](https://sites.google.com/site/fiuba7541rw/ejemplos-de-codigo/Makefile?attredirects=0).
+Para más información se puede consultar este [apunte de la cátedra](https://drive.google.com/open?id=1iMUDd8tPJ-uZrZWRlw7uTmfcM1CEAJva) y el [Makefile de ejemplo](https://drive.google.com/open?id=15QDg5EmjCXVE_jrthNm-78TkG9fvG9K8).
 
 ## Valgrind
 
@@ -204,7 +204,7 @@ int main(int argc, char* argv[])
 
 En dónde el primer argumento es la cantidad de parámetros, y el segundo es un arreglo con cada uno de ellos. En todos los casos `argc` siempre es mayor que 1 porque `argv[0]` contiene el nombre con el que se invocó al programa.
 
-Pueden leer más sobre parámetros de la línea de comandandos en el [apunte del curso](https://sites.google.com/site/fiuba7541rw/apuntes/Parametros.pdf?attredirects=0).
+Pueden leer más sobre parámetros de la línea de comandandos en el [apunte del curso](https://drive.google.com/open?id=18tXTY-zwSTGlbeFHhyxQ9MAG1XJlZwyu).
 
 ## Abstracción
 
