@@ -14,9 +14,16 @@
           {{ content }}
         </div>
       </main>
-      
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+      <script>
+        $("#markdown-toc li a").click(function(e) {
+            e.preventDefault();
+            var aux = $(this).attr("href");
+            $('html,body').animate({scrollTop: $(aux).position().top-$("nav.navbar").height()},0);
+        });
+      </script>
 
       {% include footer.html %}
 
