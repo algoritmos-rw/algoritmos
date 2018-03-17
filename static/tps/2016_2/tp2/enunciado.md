@@ -209,7 +209,7 @@ El código entregado debe ser claro y legible y ajustarse a las especificaciones
   * `hash.c`, `abb.c` y `heap.c` (las implementaciones del grupo de estos TDA; incorporando las funciones adicionales pedidas en el presente trabajo, incluyendo los archivos .h actualizados).
   * un archivo `deps.mk` con las dependencias del proyecto en formato make.
 
-Para la confección del informe, pueden revisar el [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/InformeEjemplo.tar.gz?attredirects=0) disponible en el sitio de la materia.
+Para la confección del informe, pueden revisar el [informe de ejemplo](https://drive.google.com/open?id=11ufmyqYKWt18Ty3Wg0fxtjqU7slRU-MT) disponible en el sitio de la materia.
 
 La entrega se realiza:
 

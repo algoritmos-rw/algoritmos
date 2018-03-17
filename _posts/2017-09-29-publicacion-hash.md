@@ -8,7 +8,7 @@ nombre_TP: Hash
 fecha_entrega: 13 de octubre
 fin_cuatrimestre: 2018-02-01
 zip: hash.zip
-link_zip: https://sites.google.com/site/fiuba7541rw/tps/hash/hash.zip?attredirects=0&d=1
+link_zip: https://drive.google.com/open?id=1SiMNVEP6VhlDNl4YnBaewmgCJBNVHRhR
 link_enunciado: /tps/hash
 ---
 

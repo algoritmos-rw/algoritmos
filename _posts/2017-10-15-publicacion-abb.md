@@ -8,7 +8,7 @@ nombre_TP: ABB
 fecha_entrega: 27 de octubre
 fin_cuatrimestre: 2018-02-01
 zip: abb.zip
-link_zip: https://sites.google.com/site/fiuba7541rw/tps/arbol/abb.zip?attredirects=0&d=1
+link_zip: https://drive.google.com/open?id=1p8V7p5dNo5FxLCJcysBXSmP0kdrPSnHy
 link_enunciado: /tps/abb
 ---
 

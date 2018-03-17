@@ -8,7 +8,7 @@ nombre_TP: Lista
 fecha_entrega: 22 de septiembre
 fin_cuatrimestre: 2018-02-01
 zip: lista.zip
-link_zip: https://sites.google.com/site/fiuba7541rw/tps/lista/lista.zip?attredirects=0&d=1
+link_zip: https://drive.google.com/open?id=171IO3RKSbpuI8EsK9YFWrmNNvg-stjF1
 link_enunciado: /tps/lista
 ---
 
