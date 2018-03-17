@@ -7,7 +7,7 @@ permalink: /tps/heap
 Heap
 =============
 
-Para el **lunes 6 de noviembre** deben implementar el tipo de dato abstracto Cola de Prioridad, utilizando un Heap.
+El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Cola de Prioridad, utilizando un Heap.
 
 #### Primitivas del heap
 ``` cpp

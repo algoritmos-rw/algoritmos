@@ -7,7 +7,7 @@ permalink: /tps/lista
 Lista enlazada
 ==============
 
-Estas son las primitivas de listas que tienen que implementar para el viernes 22 de septiembre. 
+Estas son las primitivas de listas que tienen que implementar.
 
 En esta entrega les agregamos el requerimiento de escribir la documentación completa de las primitivas, con sus correspondientes pre y post condiciones, para esto pueden usar de muestra los archivos .h que ya utilizaron para la implementación de pilas y colas.
 
