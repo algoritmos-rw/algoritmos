@@ -7,7 +7,7 @@ permalink: /tps/pila
 Pila
 =======
 
-Para el viernes 8 de septiembre tienen que entregar una implementación de pila dinámica (es decir que pueda crecer o reducirse según la cantidad de elementos) que contenga punteros genéricos (`void*`).
+El trabajo a realizar es el de una implementación de pila dinámica (es decir que pueda crecer o reducirse según la cantidad de elementos) que contenga punteros genéricos (`void*`).
 
 En el archivo [pila.zip](https://sites.google.com/site/fiuba7541rw/tps/pila/pila.zip?attredirects=0&d=1) encontrarán el archivo `pila.h` que tienen que utilizar.  En este archivo están definidas las primitivas que tendrán que implementar, con su correspondiente documentación. Todas las primitivas tienen que funcionar en _tiempo constante_.
 

@@ -7,7 +7,7 @@ permalink: /tps/abb
 Árbol Binario de Búsqueda
 =============
 
-Para el **viernes 27 de octubre** deben implementar un Árbol Binario de Búsqueda (ABB), según las siguientes definiciones y primitivas:
+El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Árbol Binario de Búsqueda (ABB), según las siguientes definiciones y primitivas:
 
 ``` cpp
 typedef struct abb abb_t;
