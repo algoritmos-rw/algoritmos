@@ -12,4 +12,4 @@ link_zip: https://sites.google.com/site/fiuba7541rw/tps/tp0/tp0.zip?attredirects
 link_enunciado: /tps/tp0
 ---
 
-Publicado el [TP0]({{ 'tps/tp0' | relative_url }}).
+Publicado el [TP0]({{ 'tps/tp0' | relative_url }}) con fecha de entrega para el 23 de marzo.
