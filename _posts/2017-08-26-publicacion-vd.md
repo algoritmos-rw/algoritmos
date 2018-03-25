@@ -8,7 +8,7 @@ nombre_TP: VD
 fecha_entrega: 1ro de septiembre
 fin_cuatrimestre: 2018-02-01
 zip: vd.zip
-link_zip: https://sites.google.com/site/fiuba7541rw/tps/vector-dinamico/vd.zip?attredirects=0&d=1
+link_zip: https://drive.google.com/open?id=1t6Uj8rUQUEZk7E5OpzxoKtlyFi5HGDxC
 link_enunciado: /tps/vd
 ---
 

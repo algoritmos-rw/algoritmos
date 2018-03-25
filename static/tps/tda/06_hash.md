@@ -35,7 +35,7 @@ void hash_iter_destruir(hash_iter_t* iter);
 
 El iterador debe permitir recorrer todos los elementos almacenados en el hash, sin importar el orden en el que son devueltos.
 
-Se adjunta, además, un [archivo de pruebas](https://sites.google.com/site/fiuba7541rw/tps/hash/hash.zip?attredirects=0&d=1) que pueden utilizar para verificar que la estructura funciona correctamente.  El corrector automático, igualmente, añade más pruebas.
+Se adjunta, además, un [archivo de pruebas](https://drive.google.com/open?id=1SiMNVEP6VhlDNl4YnBaewmgCJBNVHRhR) que pueden utilizar para verificar que la estructura funciona correctamente.  El corrector automático, igualmente, añade más pruebas.
 
 Al igual que para las entregas anteriores, deberán entregar el código en papel, con el nombre y padrón de los integrantes del grupo, imprimiendo los archivos `hash.h` y `hash.c`.   
 

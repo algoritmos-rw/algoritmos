@@ -8,7 +8,7 @@ nombre_TP: Cola
 fecha_entrega: 15 de septiembre
 fin_cuatrimestre: 2018-02-01
 zip: cola.zip
-link_zip: https://sites.google.com/site/fiuba7541rw/tps/cola/cola.zip?attredirects=0&d=1
+link_zip: https://drive.google.com/open?id=14FBBgw5aO4BgyhSit93M3YVhUqYAZYlR
 link_enunciado: /tps/cola
 ---
 

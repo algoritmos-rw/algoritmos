@@ -192,7 +192,7 @@ Siendo `buf_destino` una posición de memoria tal que pueda albergar la cadena a
 
 Desde el curso se recomienda la creación de una función auxiliar `strdup` que encapsule esta lógica.
 
-Pueden leer más sobre sobre cadenas en el [apunte del curso](https://sites.google.com/site/fiuba7541rw/apuntes/Vectores_y_Punteros.pdf?attredirects=0).
+Pueden leer más sobre sobre cadenas en el [apunte del curso](https://drive.google.com/open?id=1J3uJd0SLZ1DHvPTf7H4ZaKPTwi2mRC0X).
 
 ### ¿Cómo se le pasan parámetros por línea de comandos a un programa?
 

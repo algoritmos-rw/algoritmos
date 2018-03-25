@@ -218,7 +218,7 @@ El informe deberá consistir de las siguientes partes:
   * carátula con los datos personales del grupo y el ayudante asignado.
   * análisis y diseño de la solución, en particular: algoritmos y estructuras de datos utilizados; orden de ejecución de cada programa o función.
 
-Nuevamente, pueden revisar el [informe de ejemplo](https://sites.google.com/site/fiuba7540rw/material/InformeEjemplo.tar.gz?attredirects=0) para la confección del mismo.
+Nuevamente, pueden revisar el [informe de ejemplo](https://drive.google.com/open?id=11ufmyqYKWt18Ty3Wg0fxtjqU7slRU-MT) para la confección del mismo.
 
 Adicionalmente los alentamos a sacar conclusiones sobre la estructura de la red social de Marvel. Además de estudiar el orden de los algoritmos, nos interesa ver qué conclusiones se puedan sacar conclusiones a partir de ellos.
 
