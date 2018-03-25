@@ -12,4 +12,4 @@ link_zip: https://sites.google.com/site/fiuba7541rw/tps/vector-dinamico/vd.zip?a
 link_enunciado: /tps/vd
 ---
 
-Publicado el [vector dinámico]({{ 'tps/vd' | relative_url }}).
+Publicado el [vector dinámico]({{ 'tps/vd' | relative_url }}) con fecha de entrega para el 26 de marzo.
