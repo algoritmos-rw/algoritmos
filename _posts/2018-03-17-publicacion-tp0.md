@@ -12,4 +12,4 @@ link_zip: https://drive.google.com/open?id=1yMiOLQiE2yrTBqoCirNAq5cG4-l3f0_n
 link_enunciado: /tps/tp0
 ---
 
-Publicado el [TP0]({{ 'tps/tp0' | relative_url }}).
+Publicado el [TP0]({{ 'tps/tp0' | relative_url }}) con fecha de entrega para el 23 de marzo.

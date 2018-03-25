@@ -12,4 +12,4 @@ link_zip: https://drive.google.com/open?id=1t6Uj8rUQUEZk7E5OpzxoKtlyFi5HGDxC
 link_enunciado: /tps/vd
 ---
 
-Publicado el [vector dinámico]({{ 'tps/vd' | relative_url }}).
+Publicado el [vector dinámico]({{ 'tps/vd' | relative_url }}) con fecha de entrega para el 26 de marzo.

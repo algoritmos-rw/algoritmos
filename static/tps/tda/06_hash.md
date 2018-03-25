@@ -7,7 +7,7 @@ permalink: /tps/hash
 Tabla de Hash
 =============
 
-Para el **viernes 13 de octubre** deben entregar de **forma grupal** el tipo abstracto de datos Tabla de Hash, que se puede implementar mediante un hash abierto o cerrado, a elección.
+El trabajo que deben entregar de **forma grupal** es el tipo abstracto de datos Tabla de Hash, que se puede implementar mediante un hash abierto o cerrado, a elección.
 
 #### Primitivas del hash
 ``` cpp

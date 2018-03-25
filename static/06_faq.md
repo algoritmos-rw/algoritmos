@@ -23,6 +23,10 @@ La [lista de correos](https://groups.google.com/forum/#!forum/fiuba-7541rw-alu) 
 
 Para más información se puede ver la [ayuda de Google](https://support.google.com/groups/?hl=es#topic=9216) sobre el tema.
 
+### ¿Puedo navegar en el grupo de Google a pesar de que la cuenta con la que me registré no es de Google?
+
+Sí, y contamos con un [instructivo](groups-ui) que explica paso a paso cómo hacerlo.
+
 ### ¿Cómo hago para instalar el entorno de desarrollo en mi PC?
 
 Hay varias opciones, según tu sistema operativo y tus preferencias. Contamos con una página dedicada al [entorno de desarrollo](entorno) donde explicamos cómo instalar Ubuntu dentro de una máquina virtual, y luego cómo instalar el editor y compilador dentro de Ubuntu.
