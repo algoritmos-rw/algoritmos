@@ -53,5 +53,6 @@ Régimen de cursada
 		* Que sea oral no implica que no deban escribir absolutamente nada. Llevar hojas y algo para escribir. 
 		* Como en el final escrito, puede entrar cualquier tema de la materia. 
 		* La cantidad de preguntas podrá variar según el caso, para poder cerrar la nota. 
-		* Para poder rendir el examen oral, se deben inscribir normalmente en el sistema SIU Guaraní para rendir el final, y además simplemente completar el formulario que se encontrará en la sección de [calendario]({{ 'calendario' | relative_url }}) de esta página, cuando se publiquen las fechas de final. En caso de no completarlo, no se podrá rendir el examen de forma oral. Mismo, en caso de haber completado para todas las fechas del corriente llamado, se considerará que no se completó el formulario, debido a que se usa para poder preparar los exámenes.
+		* Para poder rendir el examen oral, se deben inscribir normalmente en el sistema SIU Guaraní para rendir el final.
+		* Se debe completar el formulario que se encontrará en la sección de [calendario]({{ 'calendario' | relative_url }}) de esta página, cuando se publiquen las fechas de final. Se debe completar con 48 hs de anticipación, sin excepción. En caso de no completarlo, **no se podrá rendir el examen de forma oral**. Mismo, en caso de haber completado para todas las fechas del corriente llamado, se considerará que no se completó el formulario, debido a que se usa para poder preparar los exámenes.
 
