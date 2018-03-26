@@ -45,3 +45,13 @@ Régimen de cursada
 * La nota de la materia es un promedio de la nota del final y la nota de la cursada.
 * La nota de la cursada surge del promedio entre: el promedio de la nota de los parcialitos y el promedio de la nota de los trabajos prácticos (con redondeo conceptual por parte del ayudante asignado).
 * En caso de promocionar la materia, la nota de la materia será igual a la nota de la cursada.
+
+### Final
+* Una vez aprobada la cursada, es necesario rendir un final escrito, en el cuál entran todos los temas vistos en la materia. Tanto en las clases teóricas como en las clases prácticas. 
+* Aquellos alumnos que hayan cumplido con los requisitos del régimen de promoción, no deben rendir el examen final. 
+* En el caso de alumnos que hayan tenido un promedio de cursada mayor o igual a 8 (**sin tener en cuenta el redondeo conceptual del ayudante asignado**) podrán rendir, a elección, un examen oral en vez del examen escrito. Consideraciones del examen oral:
+		* Que sea oral no implica que no deban escribir absolutamente nada. Llevar hojas y algo para escribir. 
+		* Como en el final escrito, puede entrar cualquier tema de la materia. 
+		* La cantidad de preguntas podrá variar según el caso, para poder cerrar la nota. 
+		* Para poder rendir el examen oral, se deben inscribir normalmente en el sistema SIU Guaraní para rendir el final, y además simplemente completar el formulario que se encontrará en la sección de [calendario]({{ 'calendario' | relative_url }}) de esta página, cuando se publiquen las fechas de final. En caso de no completarlo, no se podrá rendir el examen de forma oral. Mismo, en caso de haber completado para todas las fechas del corriente llamado, se considerará que no se completó el formulario, debido a que se usa para poder preparar los exámenes.
+
