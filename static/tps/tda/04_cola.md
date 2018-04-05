@@ -17,7 +17,7 @@ Deben entregar un archivo `pruebas_alumno.c` que haga las correspondientes prueb
 
 Deberán entregar el código en papel, con el nombre y padrón, imprimiendo el archivo `cola.c` y el archivo `pruebas_alumno.c`.  
 
-Además, deben subir el código a la [página de entregas de la materia](https://algoritmos7541-rw.tk/entregas/), con el código completo.
+Además, deben subir el código a la [página de entregas de la materia](https://algoritmos-rw.turing.pink/entregas/), con el código completo.
 
 ---
 ### Bibliografia recomendada
