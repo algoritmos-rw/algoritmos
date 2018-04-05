@@ -39,7 +39,7 @@ Se adjunta, además, un [archivo de pruebas](https://drive.google.com/open?id=1S
 
 Al igual que para las entregas anteriores, deberán entregar el código en papel, con el nombre y padrón de los integrantes del grupo, imprimiendo los archivos `hash.h` y `hash.c`.   
 
-Además, deben subir el código a la [página de entregas de la materia](https://algoritmos-rw.turing.pink/entregas/), con el código completo.
+Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 
 ### Registro de tiempos
 

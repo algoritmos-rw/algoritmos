@@ -58,7 +58,7 @@ void abb_iter_in_destruir(abb_iter_t* iter);
 ```
 Contamos con un [script de pruebas](https://github.com/algoritmos-rw/algo2_abb_test) que pueden ejecutar para verificar que la estructura que implementaron funciona correctamente. De todas formas, al igual que en entregas anteriores, deben realizar sus propias pruebas (pueden tomar las pruebas del hash como referencia, ya que el comportamiento de ambas estructuras es muy similar).
 
-Como siempre, deben subir el código completo a la [página de entregas de la materia](https://algoritmos-rw.turing.pink/entregas/) y también entregarlo impreso con nombre y padrón de ambos integrantes, si su corrector así lo requiere.
+Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}) y también entregarlo impreso con nombre y padrón de ambos integrantes, si su corrector así lo requiere.
 
 ---
 ### Bibliografia recomendada
