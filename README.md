@@ -56,11 +56,11 @@ Con agregar el post, se actualiza automáticamente:
 
 Además, es necesario habilitar la entrega en el sistema de entregas (de esto se encargan algunas personas con permisos).
 
-# Actualizar página de docentes
+## Actualizar página de docentes
 
 Una vez que está por comenzar el cuatrimestre, es necesario actualizar la página de docentes con los que van a ser parte del curso. Para esto, lo único necesario es actualizar en el directorio `_data` el archivo `docentes.yml` con el nombre de cada docente, y el archivo de la foto. Mientras no se tenga una foto de algún corrector, se puede usar el archivo `assets/img/docentes/unknown.png`. 
 
-# Subir nuevas encuestas
+## Subir nuevas encuestas
 
 Para subir las encuestas de un cuatrimestre, subir el archivo dentro del directorio `assets/encuestas`, con nombre `YYYY-cuat.html`. Actualizar también la página de encuestas (`static/08_encuestas.md`).
 
