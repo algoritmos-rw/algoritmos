@@ -2,10 +2,6 @@ Este es el repositorio del sitio web de Algoritmos y Programación II, publicado
 
 <https://algoritmos-rw.github.io/algo2/>
 
-y redireccionada desde:
-
-<https://algoritmos7541-rw.tk/>
-
 ## Instrucciones para actualizar la página web
 
 Cualquier commit en el directorio raíz se auto-publica en la página al hacer push a la rama _master_. GitHub se encarga de ese proceso.
