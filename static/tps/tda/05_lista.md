@@ -65,7 +65,7 @@ Y los casos con / sin corte del iterador interno.
 
 Al igual que en los casos anteriores, deberán entregar el código en papel, con el nombre y padrón y el nombre del ayudante correspondiente, imprimiendo los archivos `lista.h`, `lista.c` y `pruebas_alumno.c`.
 
-Además, deben subir el código a la [página de entregas de la materia](https://algoritmos7541-rw.tk/entregas/), con el código completo.
+Además, deben subir el código a la [página de entregas de la materia](https://algoritmos-rw.turing.pink/entregas/), con el código completo.
 
 ---
 ### Bibliografia recomendada
