@@ -1,0 +1,25 @@
+fin_cuatrimestre: 2018-08-01
+#Primeros cuatrimestres terminan el primero de agosto
+#Segundos Cuatrimestres terminan el primero de febrero
+
+trabajos:
+- id: TP0
+  publicacion: 2018-03-17
+  entrega: 23 de marzo
+  zip: tp0.zip
+  zip_link: https://drive.google.com/open?id=1yMiOLQiE2yrTBqoCirNAq5cG4-l3f0_n
+  enunciado_link: /tps/tp0
+
+- id: VD
+  publicacion: 2018-03-23
+  entrega: 26 de marzo
+  zip: vd.zip
+  zip_link: https://drive.google.com/open?id=1t6Uj8rUQUEZk7E5OpzxoKtlyFi5HGDxC
+  enunciado_link: /tps/vd
+
+- id: Pila
+  publicacion: 2018-03-27
+  entrega: 6 de abril
+  zip: pila.zip
+  zip_link: https://drive.google.com/open?id=1oPWpgKH4kePwSXDnkkAKeNRpabsV2SsI
+  enunciado_link: /tps/pila
