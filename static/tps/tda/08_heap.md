@@ -34,7 +34,7 @@ La función de comparación (de tipo `cmp_func_t`) debe recibir dos punteros del
 *   0      si  a == b  
 *   mayor a 0  si  a > b  
 
-Como siempre, deben subir el código completo a la [página de entregas de la materia](https://algoritmos-rw.turing.pink/entregas/) y también entregarlo impreso con nombre y padrón de ambos integrantes, si su corrector así lo requiere.
+Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}) y también entregarlo impreso con nombre y padrón de ambos integrantes, si su corrector así lo requiere.
 
 ---
 ### Bibliografia recomendada

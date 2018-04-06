@@ -47,7 +47,7 @@ Para compilar y verificar las pruebas:
         valgrind --leak-check=full --track-origins=yes --show-reachable=yes ./pruebas
     
 Al igual que en los casos anteriores, deberán entregar el código en papel, con el nombre y padrón, imprimiendo el archivo `pila.c` y el archivo `pruebas_alumno.c`.
-Además, deben subir el código a la [página de entregas de la materia](https://algoritmos-rw.turing.pink/entregas/), con el código completo.
+Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 
 ---
 ### Bibliografia recomendada
