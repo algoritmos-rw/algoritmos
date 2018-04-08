@@ -27,32 +27,30 @@ el nuevo contenido tras escribir un archivo.)
 
 ## Cómo realizar la publicación de un TP
 
-Para todo tipo de TPs (incluyendo TDAs), es necesario crear un archivo de post dentro del directorio `_posts`. El nombre del archivo debe ser `YYYY-MM-DD-nombre.md`, como convención para todos los posts. El formato que debe tener un post de TP debe ser: 
+Al principio del cuatrimestre actualizar el archivo `_data/trabajos.yml` para reflejar las nuevas fechas de publicación y entrega.
+
+Para todo tipo de TPs (incluyendo TDAs), es necesario crear un archivo de post dentro del directorio `_posts`. El nombre del archivo debe ser `YYYY-MM-DD-publicacion-trabajo.md`, como convención para todos los posts. El formato que debe tener un post de TP debe ser: 
 ```
 ---
 layout: post
-title: "Título entrega"
-date: YYYY-MM-DD 13:00:00 -0300 (fecha de publicacion)
+title: "Publicado TDA Cola"
+date: 2018-04-07 15:00:00 -0300
 
-es_TP: True
-nombre_TP: Nombre (e.g. Pila)
-fin_cuatrimestre: YYYY-MM-DD
-fecha_entrega: fecha
-zip: nombre.zip
-link_zip: Link del zip
-link_enunciado: /tps/nombre-entrega
+trabajo: 'Cola'
 ---
-
-Contenido (que aparece en la página principal, en `Novedades`)
+{% for tp in site.data.trabajos.trabajos %}
+{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
+{% endfor %}
+Publicado: [{{TP.id}}]({{TP.enunciado_link | relative_url }}) para el {{TP.entrega}}.
 ```
 
-Para los TDAs, con solamente poner la información correspondiente, es suficiente (salvo alguna eventual actualización, o corrección del enunciado). Se puede encontrar el link al zip (y otros detalles) en posts de misma publicación de tp de cuatrimestres anteriores. 
+Solo deben modificarse las primeras 3 lineas. El resto es magia de Liquid. Por último, fijarse en `_data/trabajos.yml` que los datos esten al día.
 
-Para el caso de TPs, es necesario crear el enunciado agregando el directorio `static/tps/cuatrimestre/tpX` (`X` sea 1, 2 o 3), y que dentro de éste haya un archivo `index.md` con el enunciado correspondiente. Después, hacer también el post. En caso de no tener algo para descargar desde la página de tps, se pueden obviar los campos `zip` y `link_zip`. Cualquier archivo adicional que quiera subirse para el tp (e.g. imágenes) debe hacerse dentro del directorio `assets/tps`. 
+Para el caso de TPs, es necesario crear el enunciado agregando el directorio `static/tps/cuatrimestre/tpX` (`X` sea 1, 2 o 3), y que dentro de éste haya un archivo `index.md` con el enunciado correspondiente. Después, hacer también el post. Cualquier archivo adicional que quiera subirse para el tp (e.g. imágenes) debe hacerse dentro del directorio `assets/tps`. 
 
 Con agregar el post, se actualiza automáticamente: 
 - La sección de novedades, de la página principal (muestra las últimas 15 novedades).
-- La página de TPs, que automáticamente obtiene todos los posts relacionados a tps (campo `es_TP`) para listarlos. Por este listado es importante el campo `fin_cuatrimestre`, ya que no muestra TPs cuya fecha de fin de cuatrimestre haya sido superada. Por lo tanto, la fecha a poner será el primero de agosto del corriente año, para el primer cuatrimestre, y el primero de enero o febrero del año siguiente para el segundo cuatrimestre. 
+- La página de TPs, que automáticamente obtiene todos los posts relacionados a tps para listarlos. 
 
 Además, es necesario habilitar la entrega en el sistema de entregas (de esto se encargan algunas personas con permisos).
 
