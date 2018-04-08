@@ -29,7 +29,7 @@ el nuevo contenido tras escribir un archivo.)
 
 Al principio del cuatrimestre actualizar el archivo `_data/trabajos.yml` para reflejar las nuevas fechas de publicación y entrega.
 
-Para todo tipo de TPs (incluyendo TDAs), es necesario crear un archivo de post dentro del directorio `_posts`. El nombre del archivo debe ser `YYYY-MM-DD-publicacion-trabajo.md`, como convención para todos los posts. El formato que debe tener un post de TP debe ser: 
+Para todo tipo de TPs (incluyendo TDAs), es necesario crear un archivo de post dentro del directorio `_posts`. El nombre del archivo debe ser `YYYY-MM-DD-publicacion-trabajo.md`, como convención para todos los posts. El formato que debe tener un post de TP debe ser, con el ejemplo de la publicación de cola: 
 ```
 ---
 layout: post
