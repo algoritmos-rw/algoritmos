@@ -28,7 +28,7 @@ Además de `pila.c`, tienen que entregar otro archivo `pruebas_alumno.c`, que co
 Las pruebas deberán verificar que:
 1. Se pueda crear y destruir correctamente la estructura.
 1. Se puedan apilar elementos, que al desapilarlos se mantenga el invariante de pila.
-1. Se pueden apilar muchos elementos (prueba de volumen): hacer crecer la pila hasta un valor sabido mucho mayor que el tamaño inicial, y desapilar elementos hasta que esté vacía, comprobando que siempre cumpla el invariante. Recordar _no apilar siempre el mismo puntero_, validar que se cumpla siempre que el tope de la pila sea el correcto paso a paso, y que el nuevo tope después de cada `desapilar` también sea el correcto. 
+1. _Prueba de volumen_: Se pueden apilar muchos elementos (1000, 10000 elementos, o el volumen que corresponda): hacer crecer la pila hasta un valor sabido mucho mayor que el tamaño inicial, y desapilar elementos hasta que esté vacía, comprobando que siempre cumpla el invariante. Recordar _no apilar siempre el mismo puntero_, validar que se cumpla siempre que el tope de la pila sea el correcto paso a paso, y que el nuevo tope después de cada `desapilar` también sea el correcto. 
 1. El apilamiento del elemento NULL es válido.
 1. Condición de borde: comprobar que al desapilar hasta que está vacía hace que la pila se comporte como recién creada.
 1. Condición de borde: las acciones de desapilar y ver_tope en una pila recién creada son inválidas.
