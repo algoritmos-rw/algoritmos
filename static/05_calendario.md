@@ -49,7 +49,7 @@ del sistema [SIU Guaraní](http://guaranigrado.fi.uba.ar/autogestion/).
 
 Los temas a ser evaluados en cada parcialito son:
 - **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas. Listas. **Iteradores de listas.**
-- **2do parcialito**: Ordenamientos no comparativos. Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. Iteradores internos y externos de árboles binarios. **AVL. Árboles B. QuadTrees.**
+- **2do parcialito**: Ordenamientos no comparativos. Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. Iteradores internos y externos de árboles binarios. **AVL. Árboles B.**
 - **3er parcialito**: Heap y heapsort. Grafos: Implementaciones y usos de grafos. Orden topológico. Recorridos DFS y BFS.
 - **4to parcialito**: Camino mínimo (algoritmos de Dijkstra, A* y BFS). Árboles de tendido mínimo (algoritmos de Prim y Kruskal). Algoritmos greedy. Backtracking. Programación dinámica.
 
