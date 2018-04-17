@@ -20,8 +20,8 @@ Fechas importantes:
 | Lunes       | 25/03/18     | Entrega del vector dinámico |
 | Viernes     | 06/04/18     | Entrega de la pila |
 | Lunes       | 16/04/18     | Entrega de la cola |
-| **Lunes**   | **20/04/18** | **1er parcialito (en el horario de la teórica)** |
-| Lunes       | 27/04/18     | Entrega de la lista enlazada |
+| **Viernes**   | **20/04/18** | **1er parcialito (en el horario de la teórica)** |
+| Viernes       | 27/04/18     | Entrega de la lista enlazada |
 | **Viernes** | **11/05/18** | **2do parcialito (en el horario de la teórica)** |
 | Viernes     | 11/05/18     | Entrega del hash |
 | **Lunes**   | **14/05/18** | **Entrega del TP1** |
