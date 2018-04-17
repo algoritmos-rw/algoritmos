@@ -2,7 +2,12 @@
 layout: page
 title: Hash
 permalink: /tps/hash
+
+trabajo: 'Hash'
 ---
+{% for tp in site.data.trabajos %}
+{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
+{% endfor %}
 
 Tabla de Hash
 =============
@@ -35,7 +40,7 @@ void hash_iter_destruir(hash_iter_t* iter);
 
 El iterador debe permitir recorrer todos los elementos almacenados en el hash, sin importar el orden en el que son devueltos.
 
-Se adjunta, además, un [archivo de pruebas](https://drive.google.com/open?id=1SiMNVEP6VhlDNl4YnBaewmgCJBNVHRhR) que pueden utilizar para verificar que la estructura funciona correctamente.  El corrector automático, igualmente, añade más pruebas.
+Se adjunta, además, un [archivo de pruebas]({{TP.zip_link}}) que pueden utilizar para verificar que la estructura funciona correctamente.  El corrector automático, igualmente, añade más pruebas. Para esta entrega no deben entregarse pruebas propias.
 
 Al igual que para las entregas anteriores, deberán entregar el código en papel, con el nombre y padrón de los integrantes del grupo, imprimiendo los archivos `hash.h` y `hash.c`.   
 

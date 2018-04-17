@@ -2,7 +2,14 @@
 layout: page
 title: Heap
 permalink: /tps/heap
+
+trabajo: 'Heap'
 ---
+{% for tp in site.data.trabajos %}
+{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
+{% endfor %}
+
+Se incluye en [{{TP.zip}}]({{TP.zip_link}}) el archivo `heap.h` correspondiente al ejercicio de la cola de prioridad.
 
 Heap
 =============
