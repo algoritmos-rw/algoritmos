@@ -19,8 +19,8 @@ Fechas importantes:
 | **Viernes** | **23/03/18** | **Entrega del TP0** |
 | Lunes       | 25/03/18     | Entrega del vector dinámico |
 | Viernes     | 06/04/18     | Entrega de la pila |
-| **Lunes**   | **16/04/18** | **1er parcialito (en el horario de la teórica)** |
 | Lunes       | 16/04/18     | Entrega de la cola |
+| **Viernes**   | **20/04/18** | **1er parcialito (en el horario de la teórica)** |
 | Lunes       | 23/04/18     | Entrega de la lista enlazada |
 | **Viernes** | **11/05/18** | **2do parcialito (en el horario de la teórica)** |
 | Viernes     | 11/05/18     | Entrega del hash |
@@ -56,4 +56,3 @@ Los temas a ser evaluados en cada parcialito son:
 (En negrita los temas que no se evaluarán en la primera oportunidad pero sí en recuperatorios.)
 
 También contamos con un [calendario detallado](https://docs.google.com/spreadsheets/d/e/2PACX-1vT3ZlR8CUHPbk2EJMstUziRXGcjfqazkr81PdT7iRfm7D0-cHDYiIKxDHRMU3rNhG_pNPC8xNtePtRa/pubhtml?gid=8&single=true) de las clases para descargar.
-
