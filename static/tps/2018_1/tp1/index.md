@@ -184,6 +184,8 @@ En nuestro caso, el programa no acepta nombre de archivo y siempre trabaja con e
 
 - No se permite almacenar todo el archivo en memoria. Se puede almacenar, como máximo, `N` líneas. Tampoco se permite el uso de archivos temporales.
 
+- Se debe validar tanto que la cantidad de parámetros sea la correcta, como que el parámetro sea efectivamente un número. En caso de no contar con la cantidad de parámetros correctos se debe imprimir por salida de error "Cantidad de parametros erronea", y finalizar la ejecución. En caso que el parámetro no sea un número, se debe imprimir por salida de error "Tipo de parametro incorrecto".
+
 - Cabe notar que, al tratarse de entrada estándar, en ningún caso puede ser leída dos veces para averiguar el número de líneas primero.
 
 ### Diff
