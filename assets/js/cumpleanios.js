@@ -2,6 +2,7 @@
 ---
 window.onload = mostrarCumpleanios;
 function mostrarCumpleanios() {
+    document.getElementById("cumpleanios").innerHTML = "";
     var dtHoy = new Date();
     var hoy = (dtHoy.getMonth() + 1) + "/" + (dtHoy.getDate());
 
