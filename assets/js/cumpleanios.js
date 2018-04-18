@@ -9,7 +9,7 @@ function mostrarCumpleanios() {
         var dtCumple = new Date("1900-" + "{{x.cumple}}");
         var cumple = (dtCumple.getMonth() + 1) + "/" + (dtCumple.getDate()+1);
         if (cumple == hoy){
-            document.getElementById("cumpleanios").innerHTML = "¡Hoy cumple {{x.apodo}}!";
+            document.getElementById("cumpleanios").innerHTML += "¡Hoy cumple {{x.apodo}}! <br>";
         }
     {% endfor %}
 
