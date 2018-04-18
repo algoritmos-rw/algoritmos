@@ -4,12 +4,18 @@ ayudantes:
 
 - nombre: Casimiro Pastine
   foto: /assets/img/docentes/casimirop.jpg
+  cumple: 09-16
+  apodo: Casi
 
 - nombre: Camila Bojman
   foto: /assets/img/docentes/camib.jpg
+  cumple: 05-01
+  apodo: Cami
 
 - nombre: Cecilia Hortas
   foto: /assets/img/docentes/cecih.jpg
+  cumple: 04-30
+  apodo: Ceci
 
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
@@ -19,12 +25,16 @@ ayudantes:
 
 - nombre: Federico del Mazo
   foto: /assets/img/docentes/fededm.jpg
+  cumple: 04-19
+  apodo: Fede dM
 
 - nombre: Fiona González Lisella
   foto: /assets/img/docentes/fionag.jpg
 
 - nombre: Gianmarco Cafferata
   foto: /assets/img/docentes/gianc.jpg
+  cumple: 03-01
+  apodo: Gian
 
 - nombre: Jasmina Sella Faena
   foto: /assets/img/docentes/jasminasf.jpg
@@ -37,19 +47,27 @@ ayudantes:
 
 - nombre: Lautaro Manzano
   foto: /assets/img/docentes/lautarom.jpg
+  cumple: 07-07
+  apodo: Lauti
 
 - nombre: Milena Marchese
   foto: /assets/img/docentes/milem.jpg
 
 - nombre: Nicolás Vázquez
   foto: /assets/img/docentes/nicolasv.png
+  cumple: 10-06
+  apodo: Nico
 
 - nombre: Olivia Fernández
   foto: /assets/img/docentes/olif.jpg
+  cumple: 04-08
+  apodo: Oli
 
 - nombre: Rodrigo Souto
   foto: /assets/img/docentes/rodris.jpg
 
 - nombre: Tomás Accini
   foto: /assets/img/docentes/tomasa.jpg
+  cumple: 03-29
+  apodo: Tomi
 

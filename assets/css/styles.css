@@ -102,3 +102,9 @@ pre code {
     display: none !important;
   }
 }
+
+#cumpleanios {
+  display:none;
+  color:purple;
+}
+

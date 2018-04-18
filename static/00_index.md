@@ -11,7 +11,9 @@ permalink: /
   </p>
 
   <h3 class="page-heading">Novedades</h3>
-  
+
+  <h4 id="cumpleanios"></h4>
+
   <ul class="post-list">
 	{% for post in site.posts limit:15 %}
 	  <li>
@@ -25,5 +27,13 @@ permalink: /
   </ul>
 
   <p>Suscribirse con <a href="{{ '/feed.xml' | relative_url }}" class="rss-subscribe">RSS</a>.</p>
+
+<script src="{{ '/assets/js/cumpleanios.js' | relative_url }}"></script>
+
+
+
+
+
+
 
 
