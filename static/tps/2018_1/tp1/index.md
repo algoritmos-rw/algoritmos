@@ -243,7 +243,7 @@ Se pide implementar una versión muy simplificada de la utilidad [diff](http://m
 
 ## Syntax Validation
 
-Se pide implementar un programa que permita realizar validaciones a scripts que contengan secuencias de paréntesis, llaves o corchetes. El programa debe recibir un archivo por parámetro, cuyas líneas sean secuencias a validar, e indicar si dichas secuencias se encuentran correctamente balanceadas. Adicionalmente, en caso de encontrarse encerradas dentro de comillas simples las cadenas, no deben considerarse para determinar si la secuencia se encuentra balanceada. 
+Se pide implementar un programa que permita realizar validaciones a scripts que contengan secuencias de paréntesis, llaves o corchetes. El programa debe leer las líneas de entrada estándar, donde cada una de dichas líneas sean secuencias a validar, e indicar si las secuencias se encuentran correctamente balanceadas. Adicionalmente, en caso de encontrarse encerradas dentro de comillas simples las cadenas, no deben considerarse para determinar si la secuencia se encuentra balanceada. 
 
 ```
 	$ cat scripts1.txt
@@ -253,7 +253,7 @@ Se pide implementar un programa que permita realizar validaciones a scripts que 
 	[[[[[]]]]]
 	[[(({{}}))]]
 	[hola mundo]
-	$ ./syntax_val scripts1.txt
+	$ cat scripts1.txt | ./syntax_val
 	OK
 	OK
 	OK
@@ -265,7 +265,7 @@ Se pide implementar un programa que permita realizar validaciones a scripts que 
 	[(])
 	()(
 	[(}]
-	$ ./syntax_val scripts2.txt
+	$ cat scripts2.txt | ./syntax_val
 	OK
 	ERROR
 	ERROR
@@ -277,7 +277,7 @@ Se pide implementar un programa que permita realizar validaciones a scripts que 
 	[]'hola'
 	[']
 	[]'
-	$ ./syntax_val scripts3.txt
+	$ cat scripts3.txt | ./syntax_val
 	OK
 	OK
 	OK
@@ -288,8 +288,6 @@ Se pide implementar un programa que permita realizar validaciones a scripts que 
 
 #### Observaciones
 
-- El programa debe validar que el archivo pasado por parámetro exista. En caso que no exista (o bien no se tengan permisos de lectura), imprimir por salida de error (`stderr`): `"Archivo erroneo"`.
-
-- Todas las otras salidas deben hacerse por salida estándar (`stdout`).
+- Todas las salidas deben hacerse por salida estándar (`stdout`).
 
 
