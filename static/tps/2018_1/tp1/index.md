@@ -222,7 +222,7 @@ Se pide implementar una versión muy simplificada de la utilidad [diff](http://m
 	---
 	> Carolina
 
-	< Caronlina
+	< Carolina
 	---
 	> Alberto
 
