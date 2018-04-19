@@ -2,10 +2,17 @@
 layout: page
 title: Lista
 permalink: /tps/lista
+
+trabajo: 'Lista'
 ---
+{% for tp in site.data.trabajos %}
+{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
+{% endfor %}
 
 Lista enlazada
 ==============
+
+Se incluye en [{{TP.zip}}]({{TP.zip_link}}) un ejemplo de uso de iteradores externos.
 
 Estas son las primitivas de listas que tienen que implementar.
 

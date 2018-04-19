@@ -2,12 +2,17 @@
 layout: page
 title: Cola
 permalink: /tps/cola
+
+trabajo: 'Cola'
 ---
+{% for tp in site.data.trabajos %}
+{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
+{% endfor %}
 
 Cola enlazada
 =============
 
-Se incluye en [cola.zip](https://drive.google.com/open?id=14FBBgw5aO4BgyhSit93M3YVhUqYAZYlR) el archivo `cola.h` correspondiente al ejercicio de la cola enlazada.
+Se incluye en [{{TP.zip}}]({{TP.zip_link}}) el archivo `cola.h` correspondiente al ejercicio de la cola enlazada.
 
 La entrega es muy similar a la realizada para el TDA Pila.  Excepto que la función para destruir la cola recibe por parámetro una función para destruir uno a uno los elementos, que puede ser `NULL` en el caso de que no haya que destruirlos.
 
