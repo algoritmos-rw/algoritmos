@@ -210,28 +210,33 @@ Se pide implementar una versión muy simplificada de la utilidad [diff](http://m
 	Alberto
 	$ ./diff nombres1.txt nombres1.txt
 	$ ./diff nombres1.txt nombres2.txt
+	Diferencia en linea 3 
 	< Carolina
 	---
 	> Roberto
 	$ ./diff nombres2.txt nombres1.txt
+	Diferencia en linea 3
 	< Roberto
 	---
 	> Carolina
 	$ ./diff nombres1.txt nombres3.txt
+	Diferencia en linea 2
 	< Bruno
 	---
 	> Carolina
-
+	Diferencia en linea 3
 	< Carolina
 	---
 	> Alberto
-
+	Diferencia en linea 4
 	< Daniel
 	---
 	>
 ```
 
 #### Observaciones
+
+- Las lineas se comienzan a contar desde 1
 
 - No se pueden almacenar los archivos en memoria. Se debe trabajar en memoria con una línea por archivo. 
 
