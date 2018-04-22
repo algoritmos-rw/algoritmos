@@ -5,7 +5,7 @@ permalink: /tps/hash
 
 trabajo: Hash
 ---
-{% assign TP = site.data.trabajos.[page.trabajo] %}
+{% assign TP = site.data.trabajos[page.trabajo] %}
 
 Tabla de Hash
 =============

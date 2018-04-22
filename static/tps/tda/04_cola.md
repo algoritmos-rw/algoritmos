@@ -5,7 +5,7 @@ permalink: /tps/cola
 
 trabajo: Cola
 ---
-{% assign TP = site.data.trabajos.[page.trabajo] %}
+{% assign TP = site.data.trabajos[page.trabajo] %}
 
 Cola enlazada
 =============

@@ -5,7 +5,7 @@ permalink: /tps/pila
 
 trabajo: Pila
 ---
-{% assign TP = site.data.trabajos.[page.trabajo] %}
+{% assign TP = site.data.trabajos[page.trabajo] %}
 
 Pila
 =======

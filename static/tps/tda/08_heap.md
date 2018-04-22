@@ -5,7 +5,7 @@ permalink: /tps/heap
 
 trabajo: Heap
 ---
-{% assign TP = site.data.trabajos.[page.trabajo] %}
+{% assign TP = site.data.trabajos[page.trabajo] %}
 
 Se incluye en [{{TP.zip}}]({{TP.zip_link}}) el archivo `heap.h` correspondiente al ejercicio de la cola de prioridad.
 

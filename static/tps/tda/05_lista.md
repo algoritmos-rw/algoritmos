@@ -5,7 +5,7 @@ permalink: /tps/lista
 
 trabajo: Lista
 ---
-{% assign TP = site.data.trabajos.[page.trabajo] %}
+{% assign TP = site.data.trabajos[page.trabajo] %}
 
 Lista enlazada
 ==============
