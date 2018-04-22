@@ -204,13 +204,10 @@ Se pide implementar una versión muy simplificada de la utilidad [diff](http://m
 #### Observaciones
 
 - Las lineas se comienzan a contar desde 1
-
 - No se pueden almacenar los archivos en memoria. Se debe trabajar en memoria con una línea por archivo. 
-
 - Todas las diferencias deben escribirse en salida estándar (`stdout`).
-
+- Se debe validar que se reciban dos parametros exactamente. En caso de recibirse más, o bien menos, debe indicarse por salida de error: `"Cantidad de parametros erronea"`.
 - Se debe validar que ambos archivos existan. En caso que alguno no exista (o bien no se tengan permisos de lectura), imprimir por salida de error (`stderr`): `"Archivo erroneo"`.
-
 - En caso que los archivos no tengan la misma cantidad de líneas (como en el último ejemplo), se debe imprimir las diferencias, como si se estuviera comparando contra una cadena vacía.
 
 ## Syntax Validation
