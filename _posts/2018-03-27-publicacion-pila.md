@@ -5,9 +5,5 @@ date: 2018-03-27 13:00:00 -0300
 
 trabajo: 'Pila'
 ---
-
-{% for tp in site.data.trabajos %}
-{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
-{% endfor %}
+{% assign TP = site.data.trabajos.[page.trabajo] %}
 Publicado: [{{TP.id}}]({{TP.enunciado_link | relative_url }}) para el {{TP.entrega}}.
-
