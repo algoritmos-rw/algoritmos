@@ -24,8 +24,7 @@ está divido en tres partes:
 
 ## Manejo de cadenas
 
-Se pide implementar las funciones del archivo [strutil.h]({{ 'assets/tps/2018_1/tp1/strutil.h' | relative_url }}) que se describen a continuación. Para la implementación de estas funciones no se
-puede hacer uso de TDAs:
+Se pide implementar las funciones del archivo [strutil.h](https://drive.google.com/open?id=1tTT0YJbjpJeMqwlk8keAvJUXlBH6Y8xx) que se describen a continuación. Se permite utilizar cualquier funcion de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
 
 ### split()
 
@@ -48,21 +47,6 @@ strv[2] = strdup("ghi");
 strv[3] = NULL;
 ```
 
-El prototipo y la documentación de `split()` queda en:
-
-``` cpp
-/*
- * Devuelve en un arreglo dinámico terminado en NULL con todos los subsegmentos
- * de 'str' separados por el carácter 'sep'. Tanto el arreglo devuelto como las
- * cadenas que contiene son allocadas dinámicamente.
- *
- * Quien llama a la función toma responsabilidad de la memoria dinámica del
- * arreglo devuelto. La función devuelve NULL si falló alguna llamada a
- * malloc(), o si 'sep' es '\0'.
- */
-char** split(const char* str, char sep);
-```
-
 Considerar los siguientes casos borde:
 
 ``` cpp
@@ -78,32 +62,22 @@ split(",", ',') →  ["", ""]
 
 La función `join()` es la inversa de `split()`. Concatena un arreglo de cadenas terminado en NULL mediante un caracter de separación:
 
-    // Ejemplo de uso de join
-    char **strv = split("abc,def,ghi", ',');
-    char *resultado = join(strv, ';');  // "abc;def;ghi"
+``` cpp
+// Ejemplo de uso de join
+char **strv = split("abc,def,ghi", ',');
+char *resultado = join(strv, ';');  // "abc;def;ghi"
 
-    char **palabras = split("Hola mundo", ' ');
-    char *otro_resultado = join(palabras, ',');  // "Hola,mundo"
-
-El prototipo y documentación es:
-
-    /*
-     * Devuelve una cadena, allocada dinámicamente, resultado de unir todas las
-     * cadenas del arreglo terminado en NULL 'strv'.
-     *
-     * Quien llama a la función toma responsabilidad de la memoria dinámica de la
-     * cadena devuelta. La función devuelve NULL si no se pudo allocar memoria o
-     * o si 'sep' es '\0'.
-     */
-    char* join(char** strv, char sep);
+char **palabras = split("Hola mundo", ' ');
+char *otro_resultado = join(palabras, ',');  // "Hola,mundo"
+```
 
 Casos borde:
-
-    join([], ",")        →  ""
-    join([""], ",")      →  ""
-    join(["abc"], ",")   →  "abc"
-    join(["", ""], ",")  →  ","
-
+``` cpp
+join([], ",")        →  ""
+join([""], ",")      →  ""
+join(["abc"], ",")   →  "abc"
+join(["", ""], ",")  →  ","
+```
 
 Complejidad algorítmica: se espera que la función tenga complejidad O(n) (Siendo n la longitud de la cadena resultante).
 
@@ -142,18 +116,11 @@ Y este con comportamiento cuadrático:
 
 `free_strv()` libera la memoria asociada con un arreglo dinámico de cadenas dinámicas:
 
-``` cpp
-/*
- * Libera un arreglo dinámico de cadenas, y todas las cadenas que contiene.
- */
-void free_strv(char *strv[]);
-```
-
 ## Aplicaciones
 
 ### Tail
 
-Se pide implementar una versión simplificada de la utilidad [tail](http://www.gnu.org/software/coreutils/manual/html_node/tail-invocation.html) de Unix. 
+Se pide implementar una versión simplificada de la utilidad [tail](http://man7.org/linux/man-pages/man1/tail.1.html) de Unix. 
 `tail` imprime las últimas `N` lineas de un archivo, o de entrada estándar.
 
 En nuestro caso, el programa no acepta nombre de archivo y siempre trabaja con entrada estándar. Nuestra implementación acepta un número entero `N` como único argumento. Por ejemplo, usando el archivo `nombres.txt`:
