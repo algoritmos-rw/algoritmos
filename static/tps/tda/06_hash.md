@@ -3,11 +3,9 @@ layout: page
 title: Hash
 permalink: /tps/hash
 
-trabajo: 'Hash'
+trabajo: Hash
 ---
-{% for tp in site.data.trabajos %}
-{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
-{% endfor %}
+{% assign TP = site.data.trabajos.[page.trabajo] %}
 
 Tabla de Hash
 =============

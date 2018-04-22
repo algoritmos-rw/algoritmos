@@ -3,11 +3,9 @@ layout: page
 title: Lista
 permalink: /tps/lista
 
-trabajo: 'Lista'
+trabajo: Lista
 ---
-{% for tp in site.data.trabajos %}
-{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
-{% endfor %}
+{% assign TP = site.data.trabajos.[page.trabajo] %}
 
 Lista enlazada
 ==============

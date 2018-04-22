@@ -3,11 +3,9 @@ layout: page
 title: Árbol Binario de Búsqueda
 permalink: /tps/abb
 
-trabajo: 'ABB'
+trabajo: ABB
 ---
-{% for tp in site.data.trabajos %}
-{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
-{% endfor %}
+{% assign TP = site.data.trabajos.[page.trabajo] %}
 
 Árbol Binario de Búsqueda
 =============

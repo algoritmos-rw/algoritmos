@@ -3,11 +3,9 @@ layout: page
 title: Pila
 permalink: /tps/pila
 
-trabajo: 'Pila'
+trabajo: Pila
 ---
-{% for tp in site.data.trabajos %}
-{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
-{% endfor %}
+{% assign TP = site.data.trabajos.[page.trabajo] %}
 
 Pila
 =======
