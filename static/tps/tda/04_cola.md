@@ -3,11 +3,9 @@ layout: page
 title: Cola
 permalink: /tps/cola
 
-trabajo: 'Cola'
+trabajo: Cola
 ---
-{% for tp in site.data.trabajos %}
-{% if tp.id == page.trabajo %}{% assign TP = tp%}{% endif %}
-{% endfor %}
+{% assign TP = site.data.trabajos[page.trabajo] %}
 
 Cola enlazada
 =============
