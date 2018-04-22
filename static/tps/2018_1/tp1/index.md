@@ -19,7 +19,9 @@ El Trabajo Práctico número 1 tiene fecha de entrega para el **lunes 14/05**, y
 está divido en tres partes:
 * implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
 * implementación de aplicaciones similares a comandos Unix: [`tail`](#tail) y [`diff`](#diff). 
-* implementación de un programa [`syntax_val`](#syntax-validation). 
+* implementación de un programa [`syntax_val`](#syntax-validation).
+
+El trabajo debe ser enviado a través de [la página de entregas de la materia]({{site.entregas}}). 
 
 
 ## Manejo de cadenas
@@ -258,5 +260,3 @@ Se pide implementar un programa que permita realizar validaciones a scripts que 
 #### Observaciones
 
 - Todas las salidas deben hacerse por salida estándar (`stdout`).
-
-
