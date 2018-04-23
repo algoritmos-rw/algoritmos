@@ -40,10 +40,10 @@ Lista:
 
 TP1:
   id: TP1
-  publicacion: 2018-04-23
+  publicacion: 2018-04-22
   entrega: 14 de mayo
-  zip:
-  zip_link:
+  zip: strutil.h
+  zip_link: https://drive.google.com/file/d/1tTT0YJbjpJeMqwlk8keAvJUXlBH6Y8xx/view
   enunciado_link: /tps/2018_1/tp1
 
 Hash:
@@ -76,7 +76,7 @@ TP2:
   entrega: 15 de junio
   zip:
   zip_link:
-  enunciado_link: /tps/2018_01/tp2
+  enunciado_link: /tps/2018_1/tp2
 
 TP3:
   id: TP3
@@ -84,4 +84,4 @@ TP3:
   entrega: 29 de junio
   zip:
   zip_link:
-  enunciado_link: /tps/2018_01/tp3
+  enunciado_link: /tps/2018_1/tp3
