@@ -271,7 +271,7 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
 - el código de los TDAs programados en la cursada que se requieran, con las
 modificaciones que sean necesarias.
 - un archivo `deps.mk` con las dependencias del proyecto en formato make. Este
-deberá contener sólamente una línea que indique qué _objetos_ necesita para
+deberá contener sólamente una línea por programa que indique qué _objetos_ necesita para
 compilar el ejecutable de cada uno de los archivos, por ejemplo:
 
 ``` makefile
