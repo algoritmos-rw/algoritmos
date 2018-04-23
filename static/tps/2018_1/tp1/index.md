@@ -2,7 +2,10 @@
 layout: page
 title: TP1 – Manejo de archivos, cadenas y TDAs básicos
 permalink: '/tps/2018_1/tp1'
+
+trabajo: TP1
 ---
+{% assign TP = site.data.trabajos[page.trabajo] %}
 
 # Trabajo Práctico 1
 
@@ -24,7 +27,7 @@ está divido en tres partes:
 
 ## Manejo de cadenas
 
-Se pide implementar las funciones del archivo [strutil.h](https://drive.google.com/open?id=1tTT0YJbjpJeMqwlk8keAvJUXlBH6Y8xx) que se describen a continuación. Se permite utilizar cualquier funcion de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
+Se pide implementar las funciones del archivo [{{TP.zip}}]({{TP.zip_link}}) que se describen a continuación. Se permite utilizar cualquier funcion de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
 
 ### split()
 
@@ -215,44 +218,44 @@ Se pide implementar una versión muy simplificada de la utilidad [diff](http://m
 Se pide implementar un programa que permita realizar validaciones a scripts que contengan secuencias de paréntesis, llaves o corchetes. El programa debe leer las líneas de entrada estándar, donde cada una de dichas líneas sean secuencias a validar, e indicar si las secuencias se encuentran correctamente balanceadas. Adicionalmente, en caso de encontrarse encerradas dentro de comillas simples las cadenas, no deben considerarse para determinar si la secuencia se encuentra balanceada. 
 
 ```
-	$ cat scripts1.txt
-	[]
-	[()]
-	[(){}]
-	[[[[[]]]]]
-	[[(({{}}))]]
-	[hola mundo]
-	$ cat scripts1.txt | ./syntax_val
-	OK
-	OK
-	OK
-	OK
-	OK
-	OK
-	$ cat script2.txt
-	[]()
-	[(])
-	()(
-	[(}]
-	$ cat scripts2.txt | ./syntax_val
-	OK
-	ERROR
-	ERROR
-	ERROR
-	$ cat script3.txt
-	['hola']
-	('mundo')
-	[']']
-	[]'hola'
-	[']
-	[]'
-	$ cat scripts3.txt | ./syntax_val
-	OK
-	OK
-	OK
-	OK
-	ERROR
-	ERROR
+$ cat scripts1.txt
+[]
+[()]
+[(){}]
+[[[[[]]]]]
+[[(({}))]]
+[hola mundo]
+$ cat scripts1.txt | ./syntax_val
+OK
+OK
+OK
+OK
+OK
+OK
+$ cat script2.txt
+[]()
+[(])
+()(
+[(}]
+$ cat scripts2.txt | ./syntax_val
+OK
+ERROR
+ERROR
+ERROR
+$ cat script3.txt
+['hola']
+('mundo')
+[']']
+[]'hola'
+[']
+[]'
+$ cat scripts3.txt | ./syntax_val
+OK
+OK
+OK
+OK
+ERROR
+ERROR
 ```
 
 #### Observaciones
