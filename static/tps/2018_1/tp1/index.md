@@ -19,9 +19,7 @@ El Trabajo Práctico número 1 tiene fecha de entrega para el **lunes 14/05**, y
 está divido en tres partes:
 * implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
 * implementación de aplicaciones similares a comandos Unix: [`tail`](#tail) y [`diff`](#diff). 
-* implementación de un programa [`syntax_val`](#syntax-validation).
-
-El trabajo debe ser enviado a través de [la página de entregas de la materia]({{site.entregas}}). 
+* implementación de un programa [`syntax_val`](#syntax-validation). 
 
 
 ## Manejo de cadenas
@@ -260,3 +258,40 @@ Se pide implementar un programa que permita realizar validaciones a scripts que 
 #### Observaciones
 
 - Todas las salidas deben hacerse por salida estándar (`stdout`).
+
+## Criterios de aprobación
+
+El código entregado debe ser claro y legible y ajustarse a las especificaciones
+de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
+
+La entrega incluye, obligatoriamente, los siguientes archivos de código:
+
+- `strutil.c` con las implementaciones de las funciones `split`, `join` y `free_strv`.
+- el código de la solución de `tail`, `diff` y `syntax_val`.
+- el código de los TDAs programados en la cursada que se requieran, con las
+modificaciones que sean necesarias.
+- un archivo `deps.mk` con las dependencias del proyecto en formato make. Este
+deberá contener sólamente una línea que indique qué _objetos_ necesita para
+compilar el ejecutable de cada uno de los archivos, por ejemplo:
+
+``` makefile
+tail: tail.c vector.o pila.o lista.o strutil.o
+diff: 
+syntax_val: cola.o
+```
+
+El corrector automático va a interpretar ese archivos de dependencias y va a
+compilar todos los `.o` especificados a partir de los `.h` y `.c` que deberán
+enviar, con los siguientes flags de `GCC`:
+
+```
+-g -std=c99 -Wall -Wtype-limits -pedantic -Wconversion -Wno-sign-conversion
+```
+
+La entrega se realiza:
+
+1. en forma digital a través del [sistema de entregas]({{site.entregas}}):
+todos los archivos mencionados en un único archivo ZIP.
+2. en papel durante la clase (si su ayudante lo requiere) el código del Trabajo
+en hoja A4 **abrochadas, sin folio, informe ni carátula**. No es necesario 
+reimprimir el código de los TDA.
