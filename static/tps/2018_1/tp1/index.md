@@ -278,9 +278,9 @@ deberá contener sólamente una línea por programa que indique qué _objetos_ n
 compilar el ejecutable de cada uno de los archivos, por ejemplo:
 
 ``` makefile
-tail: tail.c vector.o pila.o lista.o strutil.o
-diff: 
-syntax_val: cola.o
+tail: tail.c 
+syntax_val: syntax_val.c
+diff: diff.c tda.o
 ```
 
 El corrector automático va a interpretar ese archivos de dependencias y va a
