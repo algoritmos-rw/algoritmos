@@ -128,26 +128,26 @@ Se pide implementar una versión simplificada de la utilidad [tail](http://man7.
 
 En nuestro caso, el programa no acepta nombre de archivo y siempre trabaja con entrada estándar. Nuestra implementación acepta un número entero `N` como único argumento. Por ejemplo, usando el archivo `nombres.txt`:
 ```
-	$ cat nombres.txt
-	Alicia
-	Bruno
-	Carolina
-	Daniel
-	$ cat nombres.txt | ./tail 2
-	Carolina
-	Daniel
-	$ cat nombres.txt | ./tail 1
-	Daniel
-	$ cat nombres.txt | ./tail 4
-	Alicia
-	Bruno
-	Carolina
-	Daniel
-	$ cat nombres.txt | ./tail 100
-	Alicia
-	Bruno
-	Carolina
-	Daniel
+$ cat nombres.txt
+Alicia
+Bruno
+Carolina
+Daniel
+$ cat nombres.txt | ./tail 2
+Carolina
+Daniel
+$ cat nombres.txt | ./tail 1
+Daniel
+$ cat nombres.txt | ./tail 4
+Alicia
+Bruno
+Carolina
+Daniel
+$ cat nombres.txt | ./tail 100
+Alicia
+Bruno
+Carolina
+Daniel
 ```
 
 #### Observaciones
@@ -164,44 +164,44 @@ Se pide implementar una versión muy simplificada de la utilidad [diff](http://m
 `diff` recibe dos archivos por comando, y muestra las líneas diferentes entre uno y otro archivo.
 
 ```
-	$ cat nombres1.txt
-	Alicia
-	Bruno
-	Carolina
-	Daniel
-	$ cat nombres2.txt
-	Alicia
-	Bruno
-	Roberto
-	Daniel
-	$ cat nombres3.txt
-	Alicia
-	Carolina
-	Alberto
-	$ ./diff nombres1.txt nombres1.txt
-	$ ./diff nombres1.txt nombres2.txt
-	Diferencia en linea 3 
-	< Carolina
-	---
-	> Roberto
-	$ ./diff nombres2.txt nombres1.txt
-	Diferencia en linea 3
-	< Roberto
-	---
-	> Carolina
-	$ ./diff nombres1.txt nombres3.txt
-	Diferencia en linea 2
-	< Bruno
-	---
-	> Carolina
-	Diferencia en linea 3
-	< Carolina
-	---
-	> Alberto
-	Diferencia en linea 4
-	< Daniel
-	---
-	>
+$ cat nombres1.txt
+Alicia
+Bruno
+Carolina
+Daniel
+$ cat nombres2.txt
+Alicia
+Bruno
+Roberto
+Daniel
+$ cat nombres3.txt
+Alicia
+Carolina
+Alberto
+$ ./diff nombres1.txt nombres1.txt
+$ ./diff nombres1.txt nombres2.txt
+Diferencia en linea 3 
+< Carolina
+---
+> Roberto
+$ ./diff nombres2.txt nombres1.txt
+Diferencia en linea 3
+< Roberto
+---
+> Carolina
+$ ./diff nombres1.txt nombres3.txt
+Diferencia en linea 2
+< Bruno
+---
+> Carolina
+Diferencia en linea 3
+< Carolina
+---
+> Alberto
+Diferencia en linea 4
+< Daniel
+---
+>
 ```
 
 #### Observaciones
@@ -278,9 +278,9 @@ deberá contener sólamente una línea por programa que indique qué _objetos_ n
 compilar el ejecutable de cada uno de los archivos, por ejemplo:
 
 ``` makefile
-tail: tail.c vector.o pila.o lista.o strutil.o
-diff: 
-syntax_val: cola.o
+tail: tail.c 
+syntax_val: syntax_val.c
+diff: diff.c tda.o
 ```
 
 El corrector automático va a interpretar ese archivos de dependencias y va a
