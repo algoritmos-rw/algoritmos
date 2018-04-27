@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Publicado TDA Hash"
-date: 2018-04-27 15:00:00 -0300
+date: 2018-04-27 13:00:00 -0300
 
 trabajo: Hash
 ---
