@@ -79,9 +79,21 @@ Por ende, el orden del algoritmo debe ser _O(n^C log n)_ = _O(log n)_
 
 ## Ejercicios propuestos
 
-1. 
+1. Implementar, por división y conquista, una función que determine si un elemento se encuentra en un _arreglo desordenado_. Indicar el orden del algoritmo, justificando con el Teorema Maestro.
 
-1. 
+1. Se tiene un arreglo tal que `[1, 1, 1, ..., 0, 0, ...]` (es decir, _unos seguidos de ceros_). Se pide:
+
+    a. una función de orden _O(log n)_ que encuentre el índice del primer 0. Si no hay ningún 0 (solo hay unos), debe devolver -1.
+
+    b. demostrar con el Teorema del Maestro que la función es, en efecto, _O(log n)_.
+
+    Ejemplos:
+
+        [1, 1, 0, 0, 0] →  2
+        [0, 0, 0, 0, 0] →  0
+        [1, 1, 1, 1, 1] → -1
+
+1. Implementar un algoritmo que, por división y conquista, permita obtener la parte entera de la raíz cuadrada de un número _n_, en tiempo _O(log n)_.
 
 ## Bibliografía y referencias
 
