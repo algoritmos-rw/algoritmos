@@ -22,7 +22,7 @@ Fechas importantes:
 | Lunes       | 16/04/18     | Entrega de la cola |
 | **Viernes**   | **20/04/18** | **1er parcialito (en el horario de la teórica)** |
 | Lunes       | 23/04/18     | Entrega de la lista enlazada |
-| **Viernes** | **11/05/18** | **2do parcialito (en el horario de la teórica)** |
+| **Lunes** | **14/05/18** | **2do parcialito (en el horario de la teórica)** |
 | Lunes     | 14/05/18     | Entrega del hash |
 | **Lunes**   | **14/05/18** | **Entrega del TP1** |
 | Lunes       | 28/05/18     | Entrega del ABB |
