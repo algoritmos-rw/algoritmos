@@ -22,7 +22,7 @@ Fechas importantes:
 | Lunes       | 16/04/18     | Entrega de la cola |
 | **Viernes**   | **20/04/18** | **1er parcialito (en el horario de la teórica)** |
 | Lunes       | 23/04/18     | Entrega de la lista enlazada |
-| **Viernes** | **11/05/18** | **2do parcialito (en el horario de la teórica)** |
+| **Lunes** | **14/05/18** | **2do parcialito (en el horario de la teórica)** |
 | Lunes     | 14/05/18     | Entrega del hash |
 | **Lunes**   | **14/05/18** | **Entrega del TP1** |
 | Lunes       | 28/05/18     | Entrega del ABB |
@@ -49,7 +49,7 @@ del sistema [SIU Guaraní](http://guaranigrado.fi.uba.ar/autogestion/).
 
 Los temas a ser evaluados en cada parcialito son:
 - **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas. Listas. **Iteradores de listas.**
-- **2do parcialito**: Ordenamientos no comparativos. Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. Iteradores internos y externos de árboles binarios. **AVL. Árboles B.**
+- **2do parcialito**: Ordenamientos no comparativos. Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. Iteradores internos y externos de árboles binarios. AVL. **Árboles B.**
 - **3er parcialito**: Heap y heapsort. Grafos: Implementaciones y usos de grafos. Orden topológico. Recorridos DFS y BFS.
 - **4to parcialito**: Camino mínimo (algoritmos de Dijkstra, A* y BFS). Árboles de tendido mínimo (algoritmos de Prim y Kruskal). Algoritmos greedy. Backtracking. Programación dinámica.
 
