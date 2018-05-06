@@ -102,3 +102,9 @@ pre code {
     display: none !important;
   }
 }
+
+.header-icon {
+  position: relative;
+  /* Adjust these values accordingly */
+  top: 3px;
+}
