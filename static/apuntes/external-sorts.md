@@ -28,7 +28,7 @@ Así como es el caso del algoritmo de _top-k_, que el orden sea logarítmico sob
 
 El primer registro en cada archivo es el menor de todos los registros dentro de cada uno de ellos. Digamos, en el primer archivo el primer registro es el más chico entre todos los registros del primer archivo (o a lo sumo, igual).
 
-Eso quiere decir, que el menor entre todos los _K_ primeros va a ser el menor de todos los _n_ registros. Por lo tanto, va a ser el primer registro, sí o sí, del archivo (o archivo) final. Ahora tenemos que ver cuál va a ser el segundo. Pero, ¿no es posible que el segundo registro sea también proveniente del archivo del que vino el más chico que sacamos antes? Por ejemplo, si tenemos los archivos [0, 1, 2] y [2, 3, 4], los dos registros más chicos vienen del primer archivo. Entonces, tenemos que conseguir siempre comprar _k_ registros, uno de cada archivo. Pero cuando sacamos uno, entonces quedarnos con _su sucesor_. Ya sabiendo que vamos a comparar _k_ cosas, podemos usar el heap de manera similar:
+Eso quiere decir, que el menor entre todos los _K_ primeros va a ser el menor de todos los _n_ registros. Por lo tanto, va a ser el primer registro, sí o sí, del archivo (o arreglo) final. Ahora tenemos que ver cuál va a ser el segundo. Pero, ¿no es posible que el segundo registro sea también proveniente del archivo del que vino el más chico que sacamos antes? Por ejemplo, si tenemos los archivos [0, 1, 2] y [2, 3, 4], los dos registros más chicos vienen del primer archivo. Entonces, tenemos que conseguir siempre comprar _k_ registros, uno de cada archivo. Pero cuando sacamos uno, entonces quedarnos con _su sucesor_. Ya sabiendo que vamos a comparar _k_ cosas, podemos usar el heap de manera similar:
 1. Creamos un heap de minimos (o de máximos con función de comparación alternada).
 2. Guardamos el primer registro de cada archivo. _Importante_: vamos a necesitar poder reconstruir de dónde vino ese registro, por lo que no se puede encolar así nada más. Será necesario crear una estructura ad-hoc solamente para este fin, y guardar: el registro en si y el número de archivo del que vino. La función de comparación solo debe tener en cuenta lo primero. 
 3. Sacamos un registro del heap, que sabemos será el menor de todos, por lo que será el primer registro de nuestro archivo final (por lo que directamente deberíamos escribirlo).
@@ -39,8 +39,7 @@ Dado que se hacen _n_ encolar y desencolar en un heap que siempre tiene a lo sum
 
 ## Generar particiones ordenadas
 
-Veremos 3 implementaciones para esto. Una particularidad: el valor de _n_ no puede cambiar (depende del archivo original), pero si podemos ver de manejar el valor de _k_. Cuanto menor cantidad de particiones ordenadas genermos, menor costo tendremos a la hora de hacer el merge ordenado explicado arriba. 
-
+Veremos 3 implementaciones para esto. Una particularidad: el valor de _n_ no puede cambiar (depende del archivo original), pero si podemos ver de manejar el valor de _k_. Cuanto menor cantidad de particiones ordenadas generemos, menor costo tendremos a la hora de hacer el merge ordenado explicado arriba. 
 
 Para los 3 algoritmos propuestos vamos a suponer que tenemos una cota _C_ de elemenos máximos que podemos tener en memoria. Nunca podemos tener más de _C_ registros en memoria. El valor de _C_ óptimo será cuestión de experimentación, o de poner un valor razonable. 
 
@@ -72,7 +71,6 @@ Similar al anterior, pero en vez de guardar los archivos en una lista, los guard
 
 Antes, al toparnos con que teníamos _C_ registros en la lista, no teníamos nada para guardar, pero ahora vamos a tener _C_ registros (los que quedaron en el heap, que siempre va a tener _C_ registros, salvo en el caso final que tendrá uno menos). Entonces, en vez de generar particiones de _2C_, las genera de tamaño _3C_, teniendo entonces _n/3C_ particiones. La contra en este caso es tener que cargar los registros del archivo temporal provenientes de disco. 
 
-
 ### Costo de generar las particiones
 
 En cualquiera de los casos, notar que siempre estaremos trabajando con un heap con _C_ registros, y de alguna forma u otra guardaremos todos los registros en el heap, por lo tanto, el orden de realizar estas operaciones es _O(n log c)_. 
@@ -89,11 +87,11 @@ Con eso comprobamos que, lógicamente, nuestro algoritmo ordena en _O(n log n)_.
 ## Recomendaciones
 
 A la hora de trabajar con accesos a disco, es importante tener en cuenta que a menos que trabajen con un disco de estado solido (SDD), leer seguido puede ser una operación (muy) costosa, y lo mismo al escribir. 
-Pueden utilizar tanto getline como cualquier otra función ya vista, pero recomendamos:
-* Para lecturas: no usar getline, sino algo que les permita leer directamente una mayor cantidad de bytes de un solo acceso a disco¸usando fread. Tendrán que tener en cuenta que tendrán que separar ustedes por los `\n` (sencillo utilizando el `split` ya implementado, y mucho más veloz por utilizar accesos a memoria volátil). ¡Cuidado! Recuerden que la _última linea_ podría haber quedado incompleta al leer del archivo.
+Pueden utilizar tanto `getline` como cualquier otra función ya vista, pero recomendamos:
+* Para lecturas: no usar `getline`, sino algo que les permita leer directamente una mayor cantidad de bytes de un solo acceso a disco¸usando fread. Tendrán que tener en cuenta que tendrán que separar ustedes por los `\n` (sencillo utilizando el `split` ya implementado, y mucho más veloz por utilizar accesos a memoria volátil). ¡Cuidado! Recuerden que la _última linea_ podría haber quedado incompleta al leer del archivo.
 * Para escrituras, hacer algún tipo de buffer. Pueden por ejemplo guardar en una lista o cola _n_ líneas (fijado por ustedes), luego unirlas (utilizando `join`), y finalmente escribirlas a disco. 
 
-En caso que se trate de un archivo binario, cuyos registros son de tamaño fijo, esta operación se hace mucho más sencillo, puesto que fread y fwrite ya pueden funcionar perfectamente con arreglos de estructuras.
+En caso que se trate de un archivo binario, cuyos registros son de tamaño fijo, esta operación se hace mucho más sencilla, puesto que fread y fwrite ya pueden funcionar perfectamente con arreglos de estructuras.
 
 ## Preguntas adicionales
 
@@ -106,6 +104,3 @@ Vayamos a los números: En general se suele trabajar con computadoras de 8 o 16G
 	$$n > 3Cˆ2$$
 	
 	Si nuestra memoria para el programa es de 512MB, donde supongamos que cada registro nos ocupe en promedio 32 Bytes (no solemos querer ordenar simples números). Eso querría decir que tenemos alrededor de $$C ~ 16.777.216$$ registros. Eso implicaría que nuestro _n_ debería ser mayor a $$1.35e^{16}$$ que, mantiendo que cada registro ocupe 32 bytes, implicaría que nuestro archivo original es de 384 Peta Bytes (ni siquiera Tera). Esas capacidades ni siquiera existen para fines remotamente cercanos a los de nuestra materia. Cuando llegamos a tales números, nos olvidaremos completamente de intentar implementar algoritmos de este estilo. Porque, a fin de cuentas... ¿Quién va a validar que esa gigantezca masa de datos está ordenada? El manejo de inmensos (o cuasi infinitos) volúmenes de datos es analizado en la materia _Organización de Datos_.
-
-
-
