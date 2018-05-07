@@ -24,7 +24,7 @@ Veremos cómo podemos implementar cada una de esas partes. Empezaremos por la se
 
 Esto en sí ya no necesariamente aplica para archivos, podría tranquilamente ser para arreglos (solo que en el caso de archivos, iremos leyendo del archivo en vez de un arreglo). La idea va a ser reutilizar el heap. Así como tenemos la opción de utilizar un heap para obtener los _k_ registros más grandes de un arreglo de _n_ registros en _O(n log k)_, también podemos hacer el merge de _k_ archivos (o arreglos) **ordenados** que tienen en total _n_ registros, en _O(n log k)_.
 
-Así como es el caso del algoritmo de _top-k_, que el orden sea logarítmico sobre _k_ implica que en nuestro heap no tendremos nunca más de _k_ registros. Pero recordemos que _k_ es la cantidad de archivos que tenemos. La idea es aprovechar el ordenamiento que tiene los archivos desde el inicio. 
+Así como es el caso del algoritmo de _top-k_, que el orden sea logarítmico sobre _k_ implica que en nuestro heap no tendremos nunca más de _k_ registros. Pero recordemos que _k_ es la cantidad de archivos que tenemos. La idea es aprovechar el ordenamiento que tienen los archivos desde el inicio. 
 
 El primer registro en cada archivo es el menor de todos los registros dentro de cada uno de ellos. Digamos, en el primer archivo el primer registro es el más chico entre todos los registros del primer archivo (o a lo sumo, igual).
 
