@@ -9,9 +9,6 @@ math: true
 
 Llamamos ordenamiento externo cuando debemos ordenar archivos que son (mucho) más grandes de lo que nuestra memoria puede llegar a abarcar. Esto es así porque, en caso contrario, podríamos simplemente cargar el archivo en memoria y ordenarlo usando cualquier algoritmo de ordenamiento convencional. 
 
-Hoy en día es raro necesitar utilizar algoritmos como estos debido a que contamos con mucha más memoria RAM de lo que se hacía una década atrás. 
-Este era un tema que hasta hace unos años se daba en la materia _Organización de Datos_, pero dado que poco tenía que ver con el resto del temario, y que tiene más sentido en nuestra materia, decidieron dejar de darlo. 
-
 Supongamos entonces que contamos con un caso así. Estamos queriendo ordenar un archivo completamente desordenado, bajo algún criterio que no es importante. El algoritmo que podríamos utilizar podría hacer algo como:
 1. Generar _k_ particiones ordenadas. Una partición de un archivo es un sub-archivo, donde todos juntos tienen todas las líneas ó registros del archivo original, sin repeticiones. Cada archivo tendrá $$n_i$$ registros (con _i_ entre 0 y _k-1_), donde la suma de todos los $$n_i$$ será _n_, la cantidad total de registros del archivo original. 
 2. Juntar las _k_ particiones ordenadas en un nuevo archivo ordenado. Esto sería una generalización del _intercalar ordenado_ de mergesort. 
@@ -86,7 +83,7 @@ Con eso comprobamos que, lógicamente, nuestro algoritmo ordena en _O(n log n)_.
 
 ## Recomendaciones
 
-A la hora de trabajar con accesos a disco, es importante tener en cuenta que a menos que trabajen con un disco de estado solido (SDD), leer seguido puede ser una operación (muy) costosa, y lo mismo al escribir. 
+A la hora de trabajar con accesos a disco, es importante tener en cuenta que aún trabahjando con un disco de estado solido (SSD), leer de disco seguido puede ser una operación (muy) costosa, y lo mismo al escribir. 
 Pueden utilizar tanto `getline` como cualquier otra función ya vista, pero recomendamos:
 * Para lecturas: no usar `getline`, sino algo que les permita leer directamente una mayor cantidad de bytes de un solo acceso a disco¸usando fread. Tendrán que tener en cuenta que tendrán que separar ustedes por los `\n` (sencillo utilizando el `split` ya implementado, y mucho más veloz por utilizar accesos a memoria volátil). ¡Cuidado! Recuerden que la _última linea_ podría haber quedado incompleta al leer del archivo.
 * Para escrituras, hacer algún tipo de buffer. Pueden por ejemplo guardar en una lista o cola _n_ líneas (fijado por ustedes), luego unirlas (utilizando `join`), y finalmente escribirlas a disco. 
