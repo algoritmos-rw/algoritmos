@@ -80,6 +80,7 @@ join([], ",")        →  ""
 join([""], ",")      →  ""
 join(["abc"], ",")   →  "abc"
 join(["", ""], ",")  →  ","
+join([NULL], ",")    →  ""
 ```
 
 Complejidad algorítmica: se espera que la función tenga complejidad O(n) (Siendo n la longitud de la cadena resultante).
