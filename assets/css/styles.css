@@ -103,8 +103,13 @@ pre code {
   }
 }
 
-.header-icon {
+.header-icon svg {
   position: relative;
+  opacity: 0.5;
   /* Adjust these values accordingly */
   top: 3px;
+}
+
+.header-icon:hover svg {
+  opacity: 1.0;
 }
