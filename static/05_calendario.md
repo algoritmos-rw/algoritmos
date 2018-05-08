@@ -11,6 +11,8 @@ La materia será dictada en 32 clases a lo largo de 16 semanas.
 Cada clase estará dividida en una parte teórica y una práctica, de 1:30 hs cada una.
 Las clases teóricas se dictarán los días lunes y viernes de 17:30 a 19:00 hs y las clases prácticas, los mismos días en el horario de 19:00 a 20:30 hs.
 
+Contamos con un [calendario detallado](https://docs.google.com/spreadsheets/d/e/2PACX-1vT3ZlR8CUHPbk2EJMstUziRXGcjfqazkr81PdT7iRfm7D0-cHDYiIKxDHRMU3rNhG_pNPC8xNtePtRa/pubhtml?gid=8&single=true) de las clases para descargar.
+
 Fechas importantes:
 
 {: .table .table-striped}
@@ -54,5 +56,3 @@ Los temas a ser evaluados en cada parcialito son:
 - **4to parcialito**: Camino mínimo (algoritmos de Dijkstra, A* y BFS). Árboles de tendido mínimo (algoritmos de Prim y Kruskal). Algoritmos greedy. Backtracking. Programación dinámica.
 
 (En negrita los temas que no se evaluarán en la primera oportunidad pero sí en recuperatorios.)
-
-También contamos con un [calendario detallado](https://docs.google.com/spreadsheets/d/e/2PACX-1vT3ZlR8CUHPbk2EJMstUziRXGcjfqazkr81PdT7iRfm7D0-cHDYiIKxDHRMU3rNhG_pNPC8xNtePtRa/pubhtml?gid=8&single=true) de las clases para descargar.
