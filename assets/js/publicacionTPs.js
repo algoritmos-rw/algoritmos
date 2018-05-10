@@ -25,10 +25,10 @@ function agregarTPsATabla() {
         var tabla = document.getElementById("tabla-trabajos");
         var fila = document.createElement("tr")
         
-        if (hoy >= publicacion) fila.innerHTML += "<td> <a href={{tp.enunciado_link}}'>{{tp.id}}</a> </td>"
-        else fila.innerHTML += "<td>" +finCuatrimestre +"</td>"
+        if (hoy >= publicacion && hoy <= finCuatrimestre) fila.innerHTML += "<td> <a href={{tp.enunciado_link}}'>{{tp.id}}</a> </td>"
+        else fila.innerHTML += "<td> {{tp.id}} </td>"
         
-        if (hoy >= publicacion) fila.innerHTML += "<td> <a href='{{tp.zip_link}}'>{{tp.zip}}</a> </td>"
+        if (hoy >= publicacion && hoy <= finCuatrimestre) fila.innerHTML += "<td> <a href='{{tp.zip_link}}'>{{tp.zip}}</a> </td>"
         else fila.innerHTML += "<td> {{tp.zip}} </td>"
         var prettyPublicacion = dtPublicacion.getDate() + ' de ' + monthNames[dtPublicacion.getMonth()];
         var prettyEntrega = dtEntrega.getDate() + ' de ' + monthNames[dtEntrega.getMonth()];

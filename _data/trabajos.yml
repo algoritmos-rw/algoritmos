@@ -73,7 +73,7 @@ Heap:
 TP2:
   id: TP2
   publicacion: 2018-05-21
-  entrega:  2018-06-15
+  entrega: 2018-06-15
   zip:
   zip_link:
   enunciado_link: /tps/2018_1/tp2
@@ -81,7 +81,7 @@ TP2:
 TP3:
   id: TP3
   publicacion: 2018-06-11
-  entrega:  2018-06-29
+  entrega: 2018-06-29
   zip:
   zip_link:
   enunciado_link: /tps/2018_1/tp3
