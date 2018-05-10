@@ -30,8 +30,8 @@ function agregarTPsATabla() {
         
         if (hoy >= publicacion && hoy <= finCuatrimestre) fila.innerHTML += "<td> <a href='{{tp.zip_link}}'>{{tp.zip}}</a> </td>"
         else fila.innerHTML += "<td> {{tp.zip}} </td>"
-        var prettyPublicacion = dtPublicacion.getDate() + ' de ' + monthNames[dtPublicacion.getMonth()];
-        var prettyEntrega = dtEntrega.getDate() + ' de ' + monthNames[dtEntrega.getMonth()];
+        var prettyPublicacion = dtPublicacion.getDate()+1 + ' de ' + monthNames[dtPublicacion.getMonth()];
+        var prettyEntrega = dtEntrega.getDate()+1 + ' de ' + monthNames[dtEntrega.getMonth()];
 
         if (hoy <= finCuatrimestre) fila.innerHTML += "<td>" + prettyPublicacion + "</td>"
         else fila.innerHTML += "<td> </td>"
