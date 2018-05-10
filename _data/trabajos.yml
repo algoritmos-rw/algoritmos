@@ -1,7 +1,7 @@
 TP0:
   id: TP0
   publicacion: 2018-03-17
-  entrega: 23 de marzo
+  entrega: 2018-03-23
   zip: tp0.zip
   zip_link: https://drive.google.com/open?id=1yMiOLQiE2yrTBqoCirNAq5cG4-l3f0_n
   enunciado_link: /tps/tp0
@@ -9,7 +9,7 @@ TP0:
 VD:
   id: VD
   publicacion: 2018-03-23
-  entrega: 26 de marzo
+  entrega: 2018-03-26
   zip: vd.zip
   zip_link: https://drive.google.com/open?id=1t6Uj8rUQUEZk7E5OpzxoKtlyFi5HGDxC
   enunciado_link: /tps/vd
@@ -17,7 +17,7 @@ VD:
 Pila:
   id: Pila
   publicacion: 2018-03-27
-  entrega: 6 de abril
+  entrega: 2018-04-06
   zip: pila.zip
   zip_link: https://drive.google.com/open?id=1oPWpgKH4kePwSXDnkkAKeNRpabsV2SsI
   enunciado_link: /tps/pila
@@ -25,7 +25,7 @@ Pila:
 Cola:
   id: Cola
   publicacion: 2018-04-06
-  entrega: 16 de abril
+  entrega: 2018-04-16
   zip: cola.zip
   zip_link: https://drive.google.com/open?id=14FBBgw5aO4BgyhSit93M3YVhUqYAZYlR
   enunciado_link: /tps/cola
@@ -33,7 +33,7 @@ Cola:
 Lista:
   id: Lista
   publicacion: 2018-04-16
-  entrega: 23 de abril
+  entrega: 2018-04-23
   zip: lista.zip
   zip_link: https://drive.google.com/open?id=171IO3RKSbpuI8EsK9YFWrmNNvg-stjF1
   enunciado_link: /tps/lista
@@ -41,7 +41,7 @@ Lista:
 TP1:
   id: TP1
   publicacion: 2018-04-22
-  entrega: 14 de mayo
+  entrega: 2018-05-14
   zip: strutil.h
   zip_link: https://drive.google.com/file/d/1tTT0YJbjpJeMqwlk8keAvJUXlBH6Y8xx/view
   enunciado_link: /tps/2018_1/tp1
@@ -49,7 +49,7 @@ TP1:
 Hash:
   id: Hash
   publicacion: 2018-04-27
-  entrega: 14 de mayo
+  entrega: 2018-05-14
   zip: hash.zip
   zip_link: https://drive.google.com/open?id=1SiMNVEP6VhlDNl4YnBaewmgCJBNVHRhR
   enunciado_link: /tps/hash
@@ -57,7 +57,7 @@ Hash:
 ABB:
   id: ABB
   publicacion: 2018-05-11
-  entrega: 28 de mayo
+  entrega: 2018-05-28
   zip: abb.zip
   zip_link: https://drive.google.com/open?id=1p8V7p5dNo5FxLCJcysBXSmP0kdrPSnHy
   enunciado_link: /tps/abb
@@ -65,7 +65,7 @@ ABB:
 Heap:
   id: Heap
   publicacion: 2018-05-21
-  entrega: 6 de junio
+  entrega: 2018-06-06
   zip: heap.zip
   zip_link: https://drive.google.com/open?id=1zfNPouzWN4HCnKvSTbY5HH9N_E-qPG2n
   enunciado_link: /tps/heap
@@ -73,7 +73,7 @@ Heap:
 TP2:
   id: TP2
   publicacion: 2018-05-21
-  entrega: 15 de junio
+  entrega:  2018-06-15
   zip:
   zip_link:
   enunciado_link: /tps/2018_1/tp2
@@ -81,7 +81,7 @@ TP2:
 TP3:
   id: TP3
   publicacion: 2018-06-11
-  entrega: 29 de junio
+  entrega:  2018-06-29
   zip:
   zip_link:
   enunciado_link: /tps/2018_1/tp3
