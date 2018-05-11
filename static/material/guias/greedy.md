@@ -1,7 +1,7 @@
 ---
 title: Greedy
 layout: default
-permalink: '/guias/greedy'
+permalink: 'material/guias/greedy'
 math: true
 ---
 
