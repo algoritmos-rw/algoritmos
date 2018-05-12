@@ -21,7 +21,7 @@ function agregarTPsATabla() {
         var tabla = document.getElementById("tabla-trabajos");
         var fila = document.createElement("tr")
         
-        if (dtHoy >= dtPublicacion && dtHoy <= dtFinCuatrimestre) fila.innerHTML += "<td> <a href='{{tp.enunciado_link}}'>{{tp.id}}</a> </td>"
+        if (dtHoy >= dtPublicacion && dtHoy <= dtFinCuatrimestre) fila.innerHTML += "<td> <a href='algo2/{{tp.enunciado_link}}'>{{tp.id}}</a> </td>"
         else fila.innerHTML += "<td> {{tp.id}} </td>"
         
         if (dtHoy >= dtPublicacion && dtHoy <= dtFinCuatrimestre) fila.innerHTML += "<td> <a href='{{tp.zip_link}}'>{{tp.zip}}</a> </td>"
