@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Material del curso
+title: Material del curso 
 permalink: /material/
 ---
 
@@ -9,7 +9,8 @@ permalink: /material/
 ## Apuntes del curso
 
   * [Apunte de Algoritmos y Programación I](https://drive.google.com/file/d/0B0KKEIBDHL7tdEQ3bFZ2M3VrZzA/view).
-  * LINKS A DIAPOSITIVAS
+  * [Drive general de la materia](https://drive.google.com/drive/folders/0B0x0VPz_v-f_ekhhQUpkay13RnM?usp=sharing)
+  * [Diapositivas de las clases](https://drive.google.com/drive/folders/1HCOatwNQiIC__CAEJa0u0Rb7DultMcmc?usp=sharing)
   * [Implementación de mergesort y quicksort en C](https://drive.google.com/open?id=1XPDf2z9J0v9dGlaTgqFj8pGL3RQUPMpb)
   * [Introducción al uso de Makefile](https://drive.google.com/open?id=1iMUDd8tPJ-uZrZWRlw7uTmfcM1CEAJva)
  
