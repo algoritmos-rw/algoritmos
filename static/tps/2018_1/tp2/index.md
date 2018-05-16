@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "TP2 – analog: análisis de logs"
-permalink: '/tps/2017_2/tp2'
+permalink: '/tps/2018_1/tp2'
 ---
 
 Trabajo Práctico 2
@@ -85,7 +85,7 @@ Es necesario implementar una interfaz del programa, que leerá por entrada
 estándar los siguientes comandos:
 
 - `ordenar_archivo <nombre_archivo> <nombre_salida>`: como utilidad, permite ordenar un archivo
-de log.  
+de log.
 - `agregar_archivo <nombre_archivo>`: procesa de forma completa un archivo de
 log.
 - `ver_visitantes <desde> <hasta>`: muestra todas las IPs que solicitaron algún
@@ -342,7 +342,7 @@ enviar, con los siguientes flags de GCC:
 
 La entrega se realiza:
 
-1. en forma digital a través del [sistema de entregas](http://entregas.algoritmos7541-rw.tk),
+1. en forma digital a través del [sistema de entregas]({{site.entregas}}),
 con todos los archivos mencionados en un único archivo ZIP.
 2. en papel durante la clase (si su ayudante lo requiere) el código del Trabajo
 en hoja A4 **abrochadas, sin folio, informe ni carátula**. No es necesario
