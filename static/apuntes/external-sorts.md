@@ -94,7 +94,7 @@ En caso que se trate de un archivo binario, cuyos registros son de tamaño fijo,
 
 * ¿Qué sucedería si el archivo es tan, pero tan grande, que la cantidad de particiones que generamos (_k_) es mayor a la cantidad de registros que podemos mantener en memoria (_C_)? ¿Cómo podemos hacer el merge de las _k_ particiones? 
 Esto podría resolverse haciendo más de una pasada del merge: En vez de mergear las _k_ particiones, juntamos $$\sqrt{k}$$. Juntamos las primeras $$\sqrt{k}$$ particiones, luego las segundas $$\sqrt{k}$$, etc... Finalmente tendremos $$\sqrt{k}$$ particiones resultantes, ordenadas, y las podemos unir. 
-* Pero... ¿Y si la cantidad de particiones es tal que incluso haciendo lo anterior, no entran en memoria $$\sqrt{k}$$ registros (por serían mayor a C)? 
+* Pero... ¿Y si la cantidad de particiones es tal que incluso haciendo lo anterior, no entran en memoria $$\sqrt{k}$$ registros (porque serían mayor a C)? 
 Vayamos a los números: En general se suele trabajar con computadoras de 8 o 16GB de memoria RAM. Supongamos que por diversas cuestiones, contamos con 512MB de memoria RAM a disposición de nuestro programa. No suena, hoy en día, un número tan grande (aunque puede serlo si el sistema debe realizar muchas tareas). Con lo que vimos anteriormente, podemos generar particiones de hasta tamaño (promedio) _3C_. Eso quiere decir que tendremos _n/3C_ particiones. Que no entren _k_ registros en memoria implicaría que _n/3C_ registros deberían ser mayor a C. Esto quiere decir que:
 
 	$$\frac{n}{3C} > C$$
