@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Algoritmos de Ordenamiento Externo
-permalink: /apuntes/ordenamiento_externo
+title: Algoritmos de Ordenamientos Externos
+permalink: /material/ordenamientos_externos
 math: true
 ---
 
