@@ -37,6 +37,8 @@ Como cada acceso al sistema queda registrado, los músicos han buscado ayuda a
 estudiantes de Algoritmos y Programación II con mucha experiencia en manejo de
 archivos y entrada estándar en C.
 
+VER SI CAMBIAMOS WRAPPER
+
 ### Servidores y archivos de log
 
 En algunas situaciones es preferible que una página web no esté habilitada en un
@@ -104,15 +106,15 @@ archivos procesados.
 ### Ordenar Archivo
 
 El comando se acompaña del nombre de un archivo de log, accesible desde el mismo
-directorio donde se ejecuta el programa.
+directorio donde se ejecuta el programa, y otro como salida del comando.
 
 *Ejemplo:* `ordenar_archivo 20171025.log 20171025-ordenado.log`
 
 Al ejecutarse, se deberá ordenar el archivo, y dejar el resultado ordenado
-en la ruta especificada como desinto. 
+en la ruta especificada como desinto (segundo parámetro). 
 
 El archivo puede no caber en memoria, por lo que deberán utilizar
-algún [algoritmo de ordenamiento externo](/apuntes/ordenamiento_externo).
+algún [algoritmo de ordenamiento externo](/algo2/apuntes/ordenamiento_externo).
 Pueden considerar que el servidor en el que se ejecutará el programa cuenta con hasta 
 50 MB para la ejecución.
 
@@ -170,7 +172,7 @@ Visitantes:
 OK
 ```
 
-Notar que la salida _contiene_ el texto "`Visitantes:`" y luego lista las IPs,
+Notar que la salida _contiene_ el texto "`Visitantes:`" (con salto de línea luego del caracter `:`) y luego lista las IPs,
 en orden, precedidas por un caracter de tabulación (`\t`), una por línea.
 
 Consideraciones adicionales
@@ -199,7 +201,7 @@ Además, todas las entradas en un archivo de log están registradas en orden cro
 
 Se provee una colección de logs de ejemplo
 [aquí](https://drive.google.com/drive/folders/0B0x0VPz_v-f_UENLUnVCMlBiWUE?usp=sharing).
-
+(TODO: AGREGAR CASOS DESORNDEADOS)
 
 ### Fecha y hora
 
@@ -251,16 +253,13 @@ para calcular la diferencia en segundos entre dos fechas.
 - Agregar archivo:
     - La búsqueda de DoS debe ser en _O(n)_ siendo _n_ la cantidad de líneas del
       log.
-    - El mantenimiento para actualizar los sitios más visitados también debe ser
-      _O(n)_.
     - El mantenimiento para actualizar los visitantes debe ser _O(n log V)_
       siendo _V_ la cantidad de visitantes en toda la historia del programa.
-- Ver más visitados: debe ser _O(S log k)_ siendo _S_ la cantidad diferentes de
-  sitios en toda la historia y _k_ el parámetro
 - Ver visitantes: debe ser _O(V)_ en el peor caso (en el que se tenga que
   mostrar todos los visitantes), _O(log V)_ en un caso promedio (en el caso en
   el que no se pidan mostrar demasiados visitantes). _V_ nuevamente es la
   cantidad histórica de visitantes. 
+- Ordenar archivo: debe ser _O(n log n)_, siendo _n_ la cantidad de líneas del log. 
 
 
 Ejemplos
@@ -268,6 +267,18 @@ Ejemplos
 
 Se proveen ejemplos completos para mostrar la salida esperada en cada
 instrucción.
+
+### Ordenar archivo
+
+Para la siguiente entrada:
+  ordenar_archivo access001.log access001-ordenado.log
+
+Se espera que el archivo ordenado sea igual al original (que ya estaba ordenado):
+  diff access001.log access001-ordenado.log | wc
+  0
+
+
+TODO: Agregar en funcion de ejemplos desordenados
 
 ### Reporte de DoS
 
