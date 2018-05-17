@@ -112,7 +112,7 @@ Al ejecutarse, se deberá ordenar el archivo, y dejar el resultado ordenado
 en la ruta especificada como desinto. 
 
 El archivo puede no caber en memoria, por lo que deberán utilizar
-algún algoritmo de ordenamiento externo (LINK AL APUNTE).
+algún [algoritmo de ordenamiento externo](/apuntes/ordenamiento_externo).
 Pueden considerar que el servidor en el que se ejecutará el programa cuenta con hasta 
 50 MB para la ejecución.
 
