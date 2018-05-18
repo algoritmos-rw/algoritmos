@@ -2,6 +2,7 @@
 layout: page
 title: "TP2 – analog: análisis de logs"
 permalink: '/tps/2018_1/tp2'
+math: true
 ---
 
 Trabajo Práctico 2
