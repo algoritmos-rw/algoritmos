@@ -11,7 +11,7 @@ permalink: /
   </p>
 
   <p>
-    En caso de encontrar algún problema con la página (desde errores, de fechas, links rotos, falta publicar algún trabajo, o lo que fuere), por favor crear un issue en <a href="https://github.com/algoritmos-rw/algo2/issues">la página de issues del repositorio</a>.
+    En caso de encontrar algún problema con la página (desde errores de fechas, links rotos, falta publicar algún trabajo, o lo que fuere), por favor crear un issue en <a href="https://github.com/algoritmos-rw/algo2/issues">la página de issues del repositorio</a>.
   </p>
 
   <h3 class="page-heading">Novedades</h3>
