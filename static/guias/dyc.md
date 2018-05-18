@@ -98,7 +98,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 
     a. una función de orden $$\mathcal{O}(\log n)$$ que encuentre el índice del primer 0. Si no hay ningún 0 (solo hay unos), debe devolver -1.
 
-    b. demostrar con el Teorema del Maestro que la función es, en efecto, $$O(\log n)$$.
+    b. demostrar con el Teorema del Maestro que la función es, en efecto, $$\mathcal{O}(\log n)$$.
 
     Ejemplos:
 
