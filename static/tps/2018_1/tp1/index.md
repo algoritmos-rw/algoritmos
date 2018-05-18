@@ -83,7 +83,7 @@ join(["", ""], ",")  →  ","
 join([NULL], ",")    →  ""
 ```
 
-Complejidad algorítmica: se espera que la función tenga complejidad O(n) (Siendo n la longitud de la cadena resultante).
+Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(n)$$ (Siendo $$n$$ la longitud de la cadena resultante).
 
 Las pruebas del corrector automático proveen una indicación. Este sería un test con comportamiento lineal:
 
