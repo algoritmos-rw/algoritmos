@@ -2,6 +2,7 @@
 layout: page
 title: FAQ
 permalink: /faq/
+math: true
 ---
 
 Preguntas frecuentes
