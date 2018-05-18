@@ -24,7 +24,6 @@ permalink: /material/
   * [The C Library Reference Guide](http://www.acm.uiuc.edu/webmonkeys/book/c_guide/), referencia del lenguaje C, incluyendo las bibliotecas más comunes.
   * [C Language Reference Manual](http://techpubs.sgi.com/library/dynaweb_docs/0650/SGI_Developer/books/CLanguageRef/sgi_html/index.html), otra referencia del lenguaje C.
   * [Essential C](http://cslibrary.stanford.edu/101/), resumen del lenguaje C.
-  * [Diapositivas del lenguaje C](https://drive.google.com/open?id=1ARcGbWEjwR2uC4kAV6oNozyWP-wZt-If)
   * [Introducción al lenguaje C](https://drive.google.com/open?id=17gyhdJwEcxxLVrD_X0AlPnZzQajXOFE5)
   * [Manejo de memoria dinámica en C](https://drive.google.com/open?id=1rwD-wgSSW0sjPdowHOg_3Uv7_gplJtAq)
   * [Vectores y punteros en C](https://drive.google.com/open?id=1J3uJd0SLZ1DHvPTf7H4ZaKPTwi2mRC0X)
