@@ -1,7 +1,7 @@
 ---
 title: División y Conquista
 layout: default
-permalink: '/guias/dyc'
+permalink: 'material/guias/dyc'
 math: true
 ---
 

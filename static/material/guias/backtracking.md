@@ -1,7 +1,7 @@
 ---
 title: Backtracking
 layout: default
-permalink: '/guias/backtracking'
+permalink: 'material/guias/backtracking'
 math: true
 ---
 

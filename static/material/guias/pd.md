@@ -1,7 +1,7 @@
 ---
 title: Programación dinámica
 layout: default
-permalink: '/guias/pd'
+permalink: 'material/guias/pd'
 math: true
 ---
 

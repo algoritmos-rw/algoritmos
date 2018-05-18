@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Guías de ejercicios
-permalink: /guias/
+permalink: material/guias/
 ---
 
 Guías de ejercicios
