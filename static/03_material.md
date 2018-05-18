@@ -14,6 +14,10 @@ permalink: /material/
   * [Implementación de mergesort y quicksort en C](https://drive.google.com/open?id=1XPDf2z9J0v9dGlaTgqFj8pGL3RQUPMpb)
   * [Introducción al uso de Makefile](https://drive.google.com/open?id=1iMUDd8tPJ-uZrZWRlw7uTmfcM1CEAJva)
   * [Apunte de Ordenamientos Externos](ordenamientos_externos)
+
+## Guías de ejercicios
+
+   * [Aquí](guias) la guía de ejercicios de la materia.
  
 ## Material disponible sobre el lenguaje C
 
@@ -46,11 +50,6 @@ permalink: /material/
   * [Merge sort con punteros en lugar de vectores](https://drive.google.com/open?id=1ISdUlErJziiO_3Do8i3HjYRBuHtJ5lW7)
   * [Quick sort simple](https://drive.google.com/open?id=1AU4HaMJZpe6F4C7YFNnVoNkYwyKBF0wc)
   * [Quick sort alternativo](https://drive.google.com/open?id=1wId-_djgfYMQB62lfgV5C4czm--MkNm_)
-
-
-## Guías de ejercicios
-
-[Aquí](guias) la guía de ejercicios de la materia.
 
 ## Material y links disponibles de Estructuras de Datos
 
