@@ -251,15 +251,15 @@ para calcular la diferencia en segundos entre dos fechas.
 ### Tiempos de ejecución
 
 - Agregar archivo:
-    - La búsqueda de DoS debe ser en _O(n)_ siendo _n_ la cantidad de líneas del
+    - La búsqueda de DoS debe ser en  $$\mathcal{O}(n)$$ siendo $$n$$ la cantidad de líneas del
       log.
-    - El mantenimiento para actualizar los visitantes debe ser _O(n log V)_
-      siendo _V_ la cantidad de visitantes en toda la historia del programa.
-- Ver visitantes: debe ser _O(V)_ en el peor caso (en el que se tenga que
-  mostrar todos los visitantes), _O(log V)_ en un caso promedio (en el caso en
-  el que no se pidan mostrar demasiados visitantes). _V_ nuevamente es la
+    - El mantenimiento para actualizar los visitantes debe ser  $$\mathcal{O}(n \log V)$$
+      siendo $$V$$ la cantidad de visitantes en toda la historia del programa.
+- Ver visitantes: debe ser  $$\mathcal{O}(V)$$ en el peor caso (en el que se tenga que
+  mostrar todos los visitantes),  $$\mathcal{O}(\log V)$$ en un caso promedio (en el caso en
+  el que no se pidan mostrar demasiados visitantes). $$V$$ nuevamente es la
   cantidad histórica de visitantes. 
-- Ordenar archivo: debe ser _O(n log n)_, siendo _n_ la cantidad de líneas del log. 
+- Ordenar archivo: debe ser  $$\mathcal{O}(n \log n)$$, siendo $$n$$ la cantidad de líneas del log. 
 
 
 Ejemplos
