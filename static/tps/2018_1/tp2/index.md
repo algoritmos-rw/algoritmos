@@ -111,7 +111,7 @@ directorio donde se ejecuta el programa, y otro como salida del comando.
 
 *Ejemplo:* `ordenar_archivo 20171025.log 20171025-ordenado.log`
 
-Al ejecutarse, se deberá ordenar el archivo, y dejar el resultado ordenado
+Al ejecutarse, se deberá ordenar el archivo por el campo de tiempo, y dejar el resultado ordenado
 en la ruta especificada como desinto (segundo parámetro). 
 
 El archivo puede no caber en memoria, por lo que deberán utilizar
@@ -122,7 +122,7 @@ Pueden considerar que el servidor en el que se ejecutará el programa cuenta con
 
 ### Agregar archivo
 
-El comando se acompaña del nombre de un archivo de log **ordenado**, accesible desde el mismo
+El comando se acompaña del nombre de un archivo de log **ordenado por tiempo**, accesible desde el mismo
 directorio donde se ejecuta el programa.
 
 *Ejemplo:* `agregar_archivo 20171025.log`
@@ -201,8 +201,7 @@ Ejemplo:
 Además, todas las entradas en un archivo de log están registradas en orden cronológico.
 
 Se provee una colección de logs de ejemplo
-[aquí](https://drive.google.com/drive/folders/0B0x0VPz_v-f_UENLUnVCMlBiWUE?usp=sharing).
-(TODO: AGREGAR CASOS DESORNDEADOS)
+[aquí](https://drive.google.com/drive/folders/1CHCUvxaCiuMasKMsg7BfRkOyjzVECkLb).
 
 ### Fecha y hora
 
@@ -254,12 +253,12 @@ para calcular la diferencia en segundos entre dos fechas.
 - Agregar archivo:
     - La búsqueda de DoS debe ser en  $$\mathcal{O}(n)$$ siendo $$n$$ la cantidad de líneas del
       log.
-    - El mantenimiento para actualizar los visitantes debe ser  $$\mathcal{O}(n \log V)$$
-      siendo $$V$$ la cantidad de visitantes en toda la historia del programa.
-- Ver visitantes: debe ser  $$\mathcal{O}(V)$$ en el peor caso (en el que se tenga que
-  mostrar todos los visitantes),  $$\mathcal{O}(\log V)$$ en un caso promedio (en el caso en
-  el que no se pidan mostrar demasiados visitantes). $$V$$ nuevamente es la
-  cantidad histórica de visitantes. 
+    - El mantenimiento para actualizar los visitantes debe ser  $$\mathcal{O}(n \log v)$$
+      siendo $$v$$ la cantidad de visitantes en toda la historia del programa.
+- Ver visitantes: debe ser  $$\mathcal{O}(v)$$ en el peor caso (en el que se tenga que
+  mostrar todos los visitantes),  $$\mathcal{O}(\log v)$$ en un caso promedio (en el caso en
+  el que no se pidan mostrar demasiados visitantes). $$v$$ nuevamente es la cantidad histórica de 
+  visitantes. 
 - Ordenar archivo: debe ser  $$\mathcal{O}(n \log n)$$, siendo $$n$$ la cantidad de líneas del log. 
 
 
@@ -272,19 +271,37 @@ instrucción.
 ### Ordenar archivo
 
 Para la siguiente entrada:
-  ordenar_archivo access001.log access001-ordenado.log
+    ordenar_archivo access001.log access001-ordenado.log
+
+El programa, además de ordenar el archivo, debe imprimir por salida estándar `OK`: 
+
+    OK
 
 Se espera que el archivo ordenado sea igual al original (que ya estaba ordenado):
-  diff access001.log access001-ordenado.log | wc
-  0
+
+    diff access001.log access001-ordenado.log | wc
+    0
+
+El archivo `access010.log` es el archivo `access001.log`, desordenado, así como `access011.log` es igual al archivo `access003.log`, pero desordenado: 
+
+    diff access001.log access010-ordenado.log | wc
+    0  
+    diff access003.log access011-ordenado.log | wc
+    0 
+
+Además, luego de realizar la ejecución se debe imprimir `OK` por salida estándar:
+  
 
 
-TODO: Agregar en funcion de ejemplos desordenados
+Se recuerda que se pueden generar más ejemplos desordenados utilizando el comando: 
+
+    perl -MList::Util -e 'print List::Util::shuffle <>' archivo_original > archivo_desordenado
+
 
 ### Reporte de DoS
 
 Para la siguiente entrada:
-
+    
     agregar_archivo access001.log
     agregar_archivo access002.log
 
@@ -306,13 +323,15 @@ Notar que:
 ### Ver vistantes
 
 Para la siguiente entrada:
-
-    agregar_archivo access001.log
+    
+    ordenar_archivo access010.log access010-ordenado.log
+    agregar_archivo access010-ordenado.log
     agregar_archivo access004.log
     ver_visitantes 200.49.0.0 201.30.0.0
 
 Se espera una salida como la siguiente:
 
+    OK
     OK
     OK
     Visitantes:
