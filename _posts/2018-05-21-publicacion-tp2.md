@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Publicado Enunciado TP2"
-date: 2018-05-21 10:00:00 -0300
+date: 2018-05-20 20:00:00 -0300
 
 trabajo: TP2
 ---
