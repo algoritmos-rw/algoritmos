@@ -23,22 +23,24 @@ Contenido
 Introducción
 ------------
 
-<p style="text-align: center;">
-    <img src="{{ 'assets/tps/2018_1/tp2/uma1.png' | relative_url }}" width="200">
-    <img src="{{ 'assets/tps/2018_1/tp2/uma2.png' | relative_url }}" width="250">
-</p>
+<!--p style="text-align: center;">
+    Anita me dijo que el martes después de rendir agrega una imagen
+    <img src="{{ 'assets/tps/2018_1/tp2/uma2.png' | relative_url }}" width="200">
+</p-->
 
 
-Una cierta materia de una prestigiosa Universidad de Música ha puesto a
-disposición un corrector automático de partituras. Puesto que los docentes a
+Una cierta materia de una prestigiosa Universidad de Danza clásica ha puesto a
+disposición un corrector automático de coreografías. Puesto que los docentes a
 cargo del curso no tienen demasiada experiencia en programación de sistemas web,
 la decenas de visitas diarias al sitio han hecho que los servidores se caigan.
 
-Como cada acceso al sistema queda registrado, los músicos han buscado ayuda a
-estudiantes de Algoritmos y Programación II con mucha experiencia en manejo de
-archivos y entrada estándar en C.
+Se les suma el problema de que, como los servidores estaban muy mal configurados,
+las entradas en dichos archivos están completamente desordenados. 
 
-VER SI CAMBIAMOS WRAPPER
+Como cada acceso al sistema queda registrado, los bailarines han buscado ayuda a
+estudiantes de Algoritmos y Programación II con mucha experiencia en manejo de
+archivos, ordenamientos y entrada estándar en C.
+
 
 ### Servidores y archivos de log
 
