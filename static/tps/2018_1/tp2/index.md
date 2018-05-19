@@ -117,7 +117,7 @@ Al ejecutarse, se deberá ordenar el archivo por el campo de tiempo, y dejar el 
 en la ruta especificada como desinto (segundo parámetro). 
 
 El archivo puede no caber en memoria, por lo que deberán utilizar
-algún [algoritmo de ordenamiento externo](/algo2/apuntes/ordenamiento_externo).
+algún [algoritmo de ordenamiento externo](/algo2/material/ordenamientos_externos).
 Pueden considerar que el servidor en el que se ejecutará el programa cuenta con hasta 
 10 MB para la ejecución (el servidor de la universidad está compartido con el de la 
 Universidad de Danza contemporánea, y otras más).
