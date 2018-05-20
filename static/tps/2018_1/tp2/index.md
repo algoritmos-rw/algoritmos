@@ -124,6 +124,16 @@ algún [algoritmo de ordenamiento externo](/algo2/material/ordenamientos_externo
 Por simplicidad, el programa recibirá por parámetro la cantidad de memoria que puede utilizarse
 para esta tarea. 
 
+Una forma de probar que el programa efectivamente cumple con la restricción, es usando el comando `ulimit`. 
+Recomendamos usarlo creando un script (e.g. `limite_memoria.sh`) con el contenido: 
+        
+        ulimit -v 1000
+        ./analog 200
+
+Dado que ese límite es para todo el programa en su totalidad, no solamente lo que pidamos para hacer el ordenamiento, 
+poner un valor más alto que el pasado por parámetro. Por ejemplo, si piensan trabajar con 100 KB, poner como límite al
+menos 400 KB (la unidad del parámetro que recibe ulimit es en KB). 
+
 ### Agregar archivo
 
 El comando se acompaña del nombre de un archivo de log **ordenado por tiempo**, accesible desde el mismo
