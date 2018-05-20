@@ -2,6 +2,7 @@
 layout: page
 title: TP1 – Manejo de archivos, cadenas y TDAs básicos
 permalink: '/tps/2018_1/tp1'
+math: true
 
 trabajo: TP1
 ---
@@ -83,7 +84,7 @@ join(["", ""], ",")  →  ","
 join([NULL], ",")    →  ""
 ```
 
-Complejidad algorítmica: se espera que la función tenga complejidad O(n) (Siendo n la longitud de la cadena resultante).
+Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(n)$$ (Siendo $$n$$ la longitud de la cadena resultante).
 
 Las pruebas del corrector automático proveen una indicación. Este sería un test con comportamiento lineal:
 

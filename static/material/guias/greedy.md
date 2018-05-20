@@ -62,7 +62,7 @@ def carga_estaciones(L, K, total_km):
 
     return estaciones
 ```    
-Para la pregunta de la complejidad, se ve que pasamos una vez por cada estación para validar la condición, y una sola vez, y nada depende del valor de _K_. Por lo tanto, el algoritmo es _O(n)_, con _n = |L|_.
+Para la pregunta de la complejidad, se ve que pasamos una vez por cada estación para validar la condición, y una sola vez, y nada depende del valor de $$K$$. Por lo tanto, el algoritmo es $$\mathcal{O}(n)$$, con $$n = |L|$$.
 
 ## Ejercicios propuestos
 

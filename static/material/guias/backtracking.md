@@ -24,12 +24,12 @@ Considerar que existe una función `son_compatibles(curso_1, curso_2)` que dados
 ### Solución
 
 Lo primero que hay que tratar de entender, es que es necesario tratar de ir generando las combinaciones hasta encontrar alguna válida. Por fuerza bruta, sería obtener primero todas las combinaciones de materias (un curso por cada materia) y luego ver cuáles son incompatibles para filtrar.
-Suponiendo que todas las materias tenga _k_ cursos, y que tenemos _n_ materias, tendríamos un orden de $$O(k^n)$$ para generar cada combinacion (pues hay $$k^n$$ combinaciones, supondremos que generar cada una costará a lo sumo _O(n)_, despreciable al lado del otro término aunque _k_ fuere constante o muy pequeño).
+Suponiendo que todas las materias tenga _k_ cursos, y que tenemos _n_ materias, tendríamos un orden de $$\mathcal{O}(k^n)$$ para generar cada combinacion (pues hay $$k^n$$ combinaciones, supondremos que generar cada una costará a lo sumo $$\mathcal{O}(n)$$, despreciable al lado del otro término aunque _k_ fuere constante o muy pequeño).
 Luego, sería necesario filtrar las opciones incorrectas, pero esto lo vamos a obviar porque la idea es plantear que esto no sea necesario. La idea va a ser ir generando todas esas combinaciones posibles, pero en cuanto detectemos que una opcion no es válida, simplemente descartarla.
 
 Por ejemplo, si ya sabemos que el primer curso de Algoritmos y Programación II no es compatible con el primer curso de Álgebra II, por qué ver todas las combinaciones que incluyan estos dos cursos? Ya podemos descartarlas al encontrar esta colisión. En el peor de los casos, todos los cursos son compatibles entre sí sin colisión y mantendremos el orden (aunque siendo realistas, esto no sucede ni cuando las materias son de curso único).
 
-Por lo tanto, allí estará la poda: cuando detectemos que un curso es incompatible con el resto, descartamos la opción. Simplemente con analizar si la ultima materia agregada en cada paso es compatible con las anteriores, será suficiente (luego, no es necesario validar la primera con la segunda, la primera con la tercera, etc... porque eso ya debería haberse hecho). De esta forma reducimos el costo de esa poda de $$O(n^2)$$ a $$O(n)$$.
+Por lo tanto, allí estará la poda: cuando detectemos que un curso es incompatible con el resto, descartamos la opción. Simplemente con analizar si la ultima materia agregada en cada paso es compatible con las anteriores, será suficiente (luego, no es necesario validar la primera con la segunda, la primera con la tercera, etc... porque eso ya debería haberse hecho). De esta forma reducimos el costo de esa poda de $$\mathcal{O}(n^2)$$ a $$\mathcal{O}(n)$$.
 
 ``` python
 def horarios_posibles(materias, solucion_parcial):

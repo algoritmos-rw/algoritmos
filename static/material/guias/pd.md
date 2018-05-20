@@ -69,8 +69,8 @@ def minimos_terminos(n):
     return v[n]
 ```
 
-Claramente esta solución es mucho mejor que la anterior. En espacio es muy fácil de ver que es _O(n)_, dado el arreglo auxiliar que estamos utilizando, mientras que en tiempo podríamos decir que es:
-_O(n * (n + O(es_cuadrado_perfecto)))_. La función `es_cuadrado_perfecto` se puede implementar trivialmente con un orden $$O(\sqrt{n})$$, aunque también se podría hacer es $$O(log n)$$. En cualquier caso, es claramente despreciable al lado del _O(n)_ de la segunda iteración, por lo que el algoritmo será finalmente $$O(n^2)$$.
+Claramente esta solución es mucho mejor que la anterior. En espacio es muy fácil de ver que es $$\mathcal{O}(n)$$, dado el arreglo auxiliar que estamos utilizando, mientras que en tiempo podríamos decir que es:
+$$\mathcal{O}(n * (n + \mathcal{O}(es_cuadrado_perfecto)$$. La función `es_cuadrado_perfecto` se puede implementar trivialmente con un orden $$\mathcal{O}(\sqrt{n})$$, aunque también se podría hacer es $$\mathcal{O}(\log n)$$. En cualquier caso, es claramente despreciable al lado del $$\mathcal{O}(n)$$ de la segunda iteración, por lo que el algoritmo será finalmente $$\mathcal{O}(n^2)$$.
 
 
 #### Opción 2
@@ -96,9 +96,9 @@ def terminos(n):
     return v[n]
 ```
 
-Sobre el orden, es fácil primero pensar que es $$O(n^2)$$. A los fines de un parcialito, si alguien escribiera esto para dicha solución, sería visto como correcto.
+Sobre el orden, es fácil primero pensar que es $$\mathcal{O}(n^2)$$. A los fines de un parcialito, si alguien escribiera esto para dicha solución, sería visto como correcto.
 
-Ahora bien, en realidad si bien el primer for se itera _n_ veces, el while no itera _n_ veces, sino que itera por los cuadrados perfectos anteriores. La variable _j_ a lo sumo va a valer la raíz cuadrada de _i_. Eso implica que ese for se itera $$\sqrt{i}$$ veces, por lo tanto el orden va a ser $$O(n * \sqrt{n}) = O(n^{1.5})$$.
+Ahora bien, en realidad si bien el primer for se itera _n_ veces, el while no itera _n_ veces, sino que itera por los cuadrados perfectos anteriores. La variable _j_ a lo sumo va a valer la raíz cuadrada de _i_. Eso implica que ese for se itera $$\sqrt{i}$$ veces, por lo tanto el orden va a ser $$\mathcal{O}(n * \sqrt{n}) = \mathcal{O}(n^{1.5})$$.
 
 Otra forma de verlo, es que este ejercicio es *muy similar* al problema del cambio. Supongamos que nuestras monedas fueran los infinitos cuadrados perfectos (o con considerar hasta el próximo al _N_ que nos interese, sería suficiente). Antes tratábamos de formar el cambio con las monedas que teníamos, ahora tratamos de formar un número con los cuadrados perfectos. Se puede ver que hay una equivalencia directa, teniendo de monedas el 1, 4, 9, 16, 25, ...
 A su vez, también se puede ver que la solución greedy para el problema del cambio no aplicaría para este problema (al menos de forma óptima), puesto que no se cumple la propiedad de tener que una moneda sea al menos del doble de valor que su anterior.

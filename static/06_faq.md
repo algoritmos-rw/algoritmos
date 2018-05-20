@@ -2,6 +2,7 @@
 layout: page
 title: FAQ
 permalink: /faq/
+math: true
 ---
 
 Preguntas frecuentes
@@ -306,7 +307,7 @@ Estas respuestas son útiles tanto para la pila dinámica, como para la tabla de
 
 ### ¿Cuánto conviene agrandar una estructura dinámica?
 
-Hacer un realloc es una operación lenta: _O(n)_ (siendo n la cantidad de bytes que se mantienen en el bloque de memoria).  De modo que es importante planificar cuánto se va a agrandar la estructura, para que el tiempo gastado en el redimensionamiento no influya en el comportamiento general de la estructura.
+Hacer un realloc es una operación lenta: $$\mathcal{O}(n)$$ (siendo n la cantidad de bytes que se mantienen en el bloque de memoria).  De modo que es importante planificar cuánto se va a agrandar la estructura, para que el tiempo gastado en el redimensionamiento no influya en el comportamiento general de la estructura.
 
 Para ello, lo que se hace es que al agrandar, el espacio utilizado se multiplique -generalmente por 2, pero puede ser por otro factor, según las condiciones del problema a resolver-, de modo que la incidencia del realloc se distribuya siempre de forma pareja entre los elementos, lo que no sucede en el caso de que la estructura crezca una cantidad constante.
 
