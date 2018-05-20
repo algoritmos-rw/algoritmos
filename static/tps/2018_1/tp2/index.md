@@ -305,14 +305,9 @@ El archivo `access010.log` es el archivo `access001.log`, desordenado, así como
     diff access003.log access011-ordenado.log | wc
     0 
 
-Además, luego de realizar la ejecución se debe imprimir `OK` por salida estándar:
-  
-
-
 Se recuerda que se pueden generar más ejemplos desordenados utilizando el comando: 
 
     perl -MList::Util -e 'print List::Util::shuffle <>' archivo_original > archivo_desordenado
-
 
 ### Reporte de DoS
 
