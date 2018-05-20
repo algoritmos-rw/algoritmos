@@ -117,7 +117,7 @@ directorio donde se ejecuta el programa, y otro como salida del comando.
 *Ejemplo:* `ordenar_archivo 20171025.log 20171025-ordenado.log`
 
 Al ejecutarse, se deberá ordenar el archivo por el campo de tiempo, y dejar el resultado ordenado
-en la ruta especificada como desinto (segundo parámetro). 
+en la ruta especificada como destino (segundo parámetro). 
 
 El archivo puede no caber en memoria, por lo que deberán utilizar
 algún [algoritmo de ordenamiento externo](/algo2/material/ordenamientos_externos).
