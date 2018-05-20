@@ -84,7 +84,7 @@ que se están comparando cuatro grupos de números, y que los números se compar
 por valor.
 
 Interfaz
---------
+-------- 
 
 Es necesario implementar una interfaz del programa, que leerá por entrada
 estándar los siguientes comandos:
@@ -106,6 +106,9 @@ más líneas para procesar por entrada estándar. Al finalizar, es importante qu
 libere toda la memoria dinámica utilizada, y cierre correctamente todos los
 archivos procesados.
 
+Adicionalmente, el programa deberá recibir por parámetro un número entero `M` que indique 
+la cantidad de memoria (en kilobytes) disponible para realizar el ordenamiento.
+
 ### Ordenar Archivo
 
 El comando se acompaña del nombre de un archivo de log, accesible desde el mismo
@@ -118,15 +121,15 @@ en la ruta especificada como desinto (segundo parámetro).
 
 El archivo puede no caber en memoria, por lo que deberán utilizar
 algún [algoritmo de ordenamiento externo](/algo2/material/ordenamientos_externos).
-Pueden considerar que el servidor en el que se ejecutará el programa cuenta con hasta 
-10 MB para la ejecución (el servidor de la universidad está compartido con el de la 
-Universidad de Danza contemporánea, y otras más).
-
+Por simplicidad, el programa recibirá por parámetro la cantidad de memoria que puede utilizarse
+para esta tarea. 
 
 ### Agregar archivo
 
 El comando se acompaña del nombre de un archivo de log **ordenado por tiempo**, accesible desde el mismo
-directorio donde se ejecuta el programa.
+directorio donde se ejecuta el programa. Para este comando no es necesario tener en cuenta el parámetro 
+de memoria pasado al programa, dado que la mayoría de los campos del archivo (especialmente los de mayor longitud)
+serán descartados. 
 
 *Ejemplo:* `agregar_archivo 20171025.log`
 
