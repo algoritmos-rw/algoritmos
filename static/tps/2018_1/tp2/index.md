@@ -149,7 +149,7 @@ peticiones en menos de dos segundos, el comando debe alertarlo por salida
 estándar como sospechosa de intento de DoS.
 
 A la hora de detectar denegaciones de servicio, varios archivos se consideran
-independientes ente sí, por lo que no se deberán memorizar entradas entre dos
+independientes entre sí, por lo que no se deberán memorizar entradas entre dos
 ejecuciones diferentes de `agregar_archivo`.
 
 Para alertar una IP, basta con mostrar por salida estándar `DoS: <IP>`.
