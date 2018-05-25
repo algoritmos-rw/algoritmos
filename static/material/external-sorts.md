@@ -35,6 +35,8 @@ Eso quiere decir, que el menor entre todos los $$k$$ primeros va a ser el menor 
 
 Dado que se hacen $$n$$ encolar y desencolar en un heap que siempre tiene a lo sumo $$k$$ registros, cada operación es $$\mathcal{O}(\log k)$$, al ser $$n$$ las veces que se hace: $$\mathcal{O}(n \log k)$$.
 
+**Aclaración**: Es importante eliminar los archivos temporales una vez terminada la operación de merge. 
+
 ## Generar particiones ordenadas
 
 Veremos 3 implementaciones para esto. Una particularidad: el valor de $$n$$ no puede cambiar (depende del archivo original), pero si podemos ver de manejar el valor de $$k$$. Cuanto menor cantidad de particiones ordenadas generemos, menor costo tendremos a la hora de hacer el merge ordenado explicado arriba. 
@@ -86,6 +88,8 @@ $$ \text{SortExterno}(n) = \mathcal{O}(n \log C) + \mathcal{O}(n \log n) - \math
 Con eso comprobamos que, lógicamente, nuestro algoritmo ordena en $$\mathcal{O}(n \log n)$$. Ahora bien: ¿por qué deberíamos darle importancia si generamos más o menos particiones, si a cuestiones del orden no nos importa? Primero, porque a grandes rasgos es una buena optimización, que se escapa del análisis del orden del algoritmo planteado por la notación _Big Oh_. Pero más importante: estamos hablando de operaciones de lectura y escritura sobre disco. Dichas operaciones toman más tiempo que muchas otras operaciones (si bien ese tiempo sigue siendo constante, es muy grande). Por esto, es que planteamos como posibles mejoras tanto Replacement Selection como Natural Selection. 
 
 ## Recomendaciones
+
+En caso de estar trabajando con líneas de texto (i.e. registros de longitud variable), una opción es buscar el máximo tamaño que puede llegar a ocupar una de estas líneas (llamémoslo M). Si tenemos a nuestra disposición _X_ KB de memoria, simplemente tendremos lugar para _X / M_ líneas. Entonces diremos que nuestro $$C$$ vale _X / M_. Esta es una buena forma de trabajar al principio, para simplificar. Una vez que se tenga el código funcionando, se puede mejorar (mucho) calculando en todo momento cuántos bytes estamos leyendo e incluso cuántos fuimos escribiendo. Esto último permite reducir mucho la cantidad de particiones. 
 
 A la hora de trabajar con accesos a disco, es importante tener en cuenta que aún trabahjando con un disco de estado solido (SSD), leer de disco seguido puede ser una operación (muy) costosa, y lo mismo al escribir. 
 Pueden utilizar tanto `getline` como cualquier otra función ya vista, pero recomendamos:
