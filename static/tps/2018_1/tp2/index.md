@@ -117,12 +117,16 @@ directorio donde se ejecuta el programa, y otro como salida del comando.
 *Ejemplo:* `ordenar_archivo 20171025.log 20171025-ordenado.log`
 
 Al ejecutarse, se deberá ordenar el archivo por el campo de tiempo, y dejar el resultado ordenado
-en la ruta especificada como destino (segundo parámetro). 
+en la ruta especificada como destino (segundo parámetro). En caso de dos líneas que tengan el mismo 
+timestamp, se debe comparar por IP (de la misma forma que en `ver_visitantes`), y en caso de una
+igualdad en este último, por recurso (comparación entre strings). Esto último se pide exclusivamente
+para poder realizar comparaciones de forma sencilla en las pruebas automáticas. 
 
 El archivo puede no caber en memoria, por lo que deberán utilizar
 algún [algoritmo de ordenamiento externo](/algo2/material/ordenamientos_externos).
 Por simplicidad, el programa recibirá por parámetro la cantidad de memoria que puede utilizarse
-para esta tarea. 
+para esta tarea. Recordar que es importante eliminar los archivos temporales. En caso de no hacerlo **no
+se aprobará la entrega**. 
 
 Una forma de probar que el programa efectivamente cumple con la restricción, es usando el comando `ulimit`. 
 Recomendamos usarlo creando un script (e.g. `limite_memoria.sh`) con el contenido: 
