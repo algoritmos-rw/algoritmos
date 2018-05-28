@@ -65,7 +65,7 @@ ABB:
 Heap:
   id: Heap
   publicacion: 2018-05-21
-  entrega: 2018-06-06
+  entrega: 2018-06-08
   zip: heap.zip
   zip_link: https://drive.google.com/open?id=1zfNPouzWN4HCnKvSTbY5HH9N_E-qPG2n
   enunciado_link: /tps/heap
