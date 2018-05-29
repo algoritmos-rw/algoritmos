@@ -108,7 +108,7 @@ Ahora bien, para ver el orden, podemos ver que en el caso feliz, vamos a encontr
 
 Haciendo un poco más de análisis: ¿es acaso el caso de no tener ciclos nuestro peor caso? Supongamos que el grafo es conexo, por simplifcación. Si el grafo no tiene ciclos, y es conexo, necesariamente se trata de un árbol. Para este caso, $$E = V - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$\mathcal{O}(V)$$. ¿Esto implica que entonces nuestro algoritmo es en realidad $$\mathcal{O}(V)$$? No, significa que ese, que a priori podíamos pensar que era nuestro peor caso, en realidad no lo es. Nuestro peor caso implica que haya un ciclo, pero tener la mala suerte de tardar en encontrarlo. Ya sea porque el vértice en el que se empieza el recorrido está lejos del ciclo, o por el orden aleatorio de las cosas.
 
-¿Cuáles serían las diferencias si en vez de trabajar con un grafo no dirigido, lo hiciéramos sobre un grafo dirigido? Notar que la solución no debería ser demasiado distinta a estas propuestas, pero tienen sus pequeñas diferencias que dejamos para resolver en los ejercicios propuestos. Además, para el caso de grafos dirigidos, se puede resolver también haciendo uso de una idea similar al cálculo de orden topológico. 
+¿Cuáles serían las diferencias si en vez de trabajar con un grafo no dirigido, lo hiciéramos sobre un grafo dirigido? Notar que la solución no debería ser demasiado distinta a estas propuestas, pero tienen sus pequeñas diferencias que dejamos para resolver en los ejercicios propuestos. 
 
 ## Ejercicios propuestos
 
