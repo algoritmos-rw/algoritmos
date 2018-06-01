@@ -220,8 +220,7 @@ Ejemplo:
 
 Además, todas las entradas en un archivo de log están registradas en orden cronológico.
 
-Se provee una colección de logs de ejemplo
-[aquí](https://drive.google.com/drive/folders/1CHCUvxaCiuMasKMsg7BfRkOyjzVECkLb).
+Se provee una [colección de logs de ejemplo](https://drive.google.com/drive/folders/1CHCUvxaCiuMasKMsg7BfRkOyjzVECkLb).
 
 ### Fecha y hora
 
