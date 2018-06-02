@@ -66,7 +66,7 @@ familia, inclusive para su mamá). También, exportar un archivo KML para que pu
 recorrido.
 1. Obtener un recorrido que minimice el costo de todos los viajes entre todas las sedes, pasando una vez, y solo una vez por 
 cada sede, como pide Claudia. 
-1. Obtener un itinerario de viaje para optimizar la experiencia del viaje, donde no nos importe la distancia entre sedes. 
+1. Obtener un itinerario de viaje para optimizar la experiencia del mismo, donde no nos importe la distancia entre sedes. 
 1. Obtener un Árbol de Tendido Mínimo para tener la ruta deseada para Lorena. 
 
 ### Problema del viajante
@@ -90,6 +90,9 @@ La primera deberá implementarse con un algoritmo de Backtracking, mientras la s
 
 ## Implementación
 
+El trabajo puede realizarse en lenguaje a elección, siendo aceptados Python y C, y cualquier otro a ser discutido con
+el corrector asignado. 
+
 El trabajo consiste de tres partes: 
 * El TDA Grafo, con sus primitivas. 
 * Una biblioteca de funciones de grafos, que permitan hacer distintas operaciones sobre un grafo de ciudades de algún 
@@ -97,17 +100,15 @@ país, sin importar cuál sea el país ni cuáles las ciudades.
 * El programa 'Traeme la copa Moshi' que utilice tanto el TDA como la biblioteca para poder implementar todo lo requerido, 
 poniendo foco en Rusia.
 
-El programa a realizar debe recibir por parámetro y cargar en memoria el set de datos (`$ ./traemelaco ciudades.csv`) y luego 
-solicitar el ingreso de comandos por entrada estándar, del estilo `comando 'parametro'`. Notar que esto permite tener un 
-archivo de instrucciones a ser ejecutadas (`cat comandos.txt | ./traemelaco ciudades.csv`).
+El programa a realizar debe recibir por parámetro y cargar en memoria el set de datos (`$ ./traemelaco ciudades.csv mapa.kml`) y luego solicitar el ingreso de comandos por entrada estándar, del estilo `comando 'parametro'`. Notar que esto permite tener un archivo de instrucciones a ser ejecutadas (`cat comandos.txt | ./traemelaco ciudades.csv`).
 
 El archivo contará con el siguiente formato: 
 ```
 #Cantidad de ciudades (n)
-Ciudad1 lat1 long1
-Ciudad1 lat1 long1
+Ciudad1,lat1,long1
+Ciudad1,lat1,long1
 ...
-Ciudad_n lat_n long_n
+Ciudad_n,lat_n,long_n
 ```
 
 Dado que para este problema en particular consideraremos que todas las ciudades se encuentran conectadas directamente con
@@ -116,6 +117,53 @@ todas las demás, no es necesario incluir las aristas en dicho archivo. Para con
 
 $$ distancia = 2 \times R \times  \arcsin\left( \sqrt{\sin^2\left(\frac{lat_2 - lat_1}{2}\right) + \cos(lat_1) \cos(lat_2) \sin^2\left( \frac{long_2 - long_1}{2} \right) } \right)$$
 
-**Importante**: es necesario pasar las longitudes y latitudes (originalmente en coordenadas polares) a radianes antes de aplicar la fórmula. 
+Siendo $$R$$ el radio de la tierra, que lo podemos aproximar a 6371 Km. **Importante**: es necesario pasar las longitudes y latitudes (originalmente en coordenadas polares) a radianes antes de aplicar la fórmula. 
 
-(Seguir, poniendo comandos, funciones de la biblioteca, etc...)
+### Funciones de la biblioteca
+
+La biblioteca a implementar debe tener la siguientes funciones implementadas: 
+
+* `camino_minimo(grafo, desde, hasta)`, que nos devuelva una lista con el camino mínimo entre ese par de sedes.
+* `viajante(grafo, origen)`, que nos devuelva una lista con el recorrido a hacer para resolver de forma óptima el
+problema del viajante. 
+* `viajante_aproximado(grafo, origen)`, idem anterior, pero de forma aproximada, siendo este mucho más rápido. 
+* `orden_topologico(grafo)`, que nos devuelva una lista con un orden topológico del grafo. En caso de no existir, 
+devolver `None`, `NULL`, o el equivalente en el lenguaje elegido. Notar que para esta función, el grafo recibido
+debe ser dirigido. 
+* `arbol_tendido_minimo(grafo)`, recibe un grafo (que se puede asumir conexo) y devuelve un nuevo grafo, que representa
+un árbol de tendido mínimo del original. 
+
+### Comandos
+
+Los comandos a implementar serán: 
+* `ir desde hasta`: nos devolverá el camino mínimo entre la ciudad `desde` y la ciudad `hasta`. Por ejemplo: 
+	MEJORAR ESTO, PORQUE POR DESIGUALDAD TRIANGULAR ES IMPOSIBLE QUE DE LA FORMA QUE ESTA PLANTEADO PUEDA MEJORARSE
+	EL IR DIRECTAMENTE DE UN VÉRTICE A OTRO
+* `viajero optimo/aproximado origen`: nos devuelve un listado con el orden de las ciudades a visitar para ver todas las ciudades una vez y volver al origen. La solución debe ser óptima o aproximada según el valor del segundo parámetro. Ejemplo:
+		```
+		viajero optimo Sochi
+		```
+		Nos puede devolver (Suponiendo que sólo tuviéramos 3 ciudades): `Sochi -> Moscu -> San Petesburgo -> Sochi`
+
+* `itinerario recomendaciones.csv`: el archivo `recomendaciones.csv` es un archivo con formato: 
+		```
+		ciudad_1,ciudad_2
+		...
+		```
+	Donde indica que la `ciudad_1` debe visitarse antes que la `ciudad_2`. Notar que todas las ciudades a tener en cuenta son
+	las del mapa original, pero podría tranquilamente suceder que alguna ciudad no aparezca en el archivo `recomendaciones.csv
+	`, e igualmente es necesario visitarla. 
+	Luego de cargar el archivo, se deberá devolver un itinerario válido para visitar las ciudades, cumpliendo con las 
+	recomendaciones. El formato en el cual se deben mostrar es igual al de `ir` y `viajero`. 
+* `reducir_caminos destino.csv`: nos crea un archivo csv con el formato igual al de `recomendaciones.csv`, donde lo 
+interpretado es que se guarda la arista `ciudad_1` a `ciudad_2` (que es equivalente a la inversa, ya que es un grafo
+no dirigido).
+
+Para **todos** estos comandos, será necesario además exportar un archivo KML a la ruta indicada por parámetro al invocarse
+el programa. 
+
+### Archivos KML
+
+Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/kml).
+
+(PONER CRITERIOS DE APROBACION Y BLA BLA BLA)
