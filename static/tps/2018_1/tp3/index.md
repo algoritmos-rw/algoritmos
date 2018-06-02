@@ -97,7 +97,7 @@ país, sin importar cuál sea el país ni cuáles las ciudades.
 * El programa 'Traeme la copa Moshi' que utilice tanto el TDA como la biblioteca para poder implementar todo lo requerido, 
 poniendo foco en Rusia.
 
-El programa a realizar debe recibir por parámetro y cargar en memoria el set de datos (`$ ./traemelaco ciudades.csv) y luego 
+El programa a realizar debe recibir por parámetro y cargar en memoria el set de datos (`$ ./traemelaco ciudades.csv`) y luego 
 solicitar el ingreso de comandos por entrada estándar, del estilo `comando 'parametro'`. Notar que esto permite tener un 
 archivo de instrucciones a ser ejecutadas (`cat comandos.txt | ./traemelaco ciudades.csv`).
 
