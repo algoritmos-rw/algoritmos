@@ -114,7 +114,7 @@ Dado que para este problema en particular consideraremos que todas las ciudades 
 todas las demás, no es necesario incluir las aristas en dicho archivo. Para conocer la distancia que hay entre dos ciudades
 (el peso de la arista), se podrá utilizar la fórmula de Haversine: 
 
-$$ distancia = 2 \times R \ times \arcsin\left( \sqrt{ \sin^2\left( \frac{lat_2 - lat_1}{2} \right) + \cos(lat_1) \cos(lat_2) \sqrt{ \sin^2\left( \frac{long_2 - long_1}{2} \right)} \right) $$
+$$ distancia = 2 \times R \times  \arcsin\left( \sqrt{\sin^2\left(\frac{lat_2 - lat_1}{2}\right) + \cos(lat_1) \cos(lat_2) \sin^2\left( \frac{long_2 - long_1}{2} \right) } \right)$$
 
 **Importante**: es necesario pasar las longitudes y latitudes (originalmente en coordenadas polares) a radianes antes de aplicar la fórmula. 
 
