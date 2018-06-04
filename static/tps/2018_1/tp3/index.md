@@ -52,7 +52,7 @@ también tiene una particular afición por la historia, y más si se trata de la
 aprovechar y visitar varias ciudades, pero no quiere hacerlo en cualquier orden. Quiere conocer ciertas 
 ciudades antes que otras, porque eso le ayudará a entender mejor los tours y visitas a museos, según un 
 artículo que vio en Trip Advisor. 
-* Lorena: no le gusta andar mucho andar por lugares desconocidos, por lo que prefiere conocer la menor cantidad 
+* Lorena: no le gusta andar mucho por lugares desconocidos, por lo que prefiere conocer la menor cantidad 
 de rutas posibles, pero que al mismo tiempo impliquen el menor costo posible. No le molesta recorrer varias 
 veces la misma ruta, si fuera necesario. 
 

@@ -39,7 +39,8 @@ A continuación se puede agregar el nombre del archivo y una descripción.
 ```
 ## Contenido geográfico
 
-El lenguaje incluye muchos componentes para visualizar en mapas, especificando su estilo y muchos atributos. Para el alcance de este trabajo sólo serán necesarios dos que serán explicados en esta sección. 
+El lenguaje incluye muchos componentes para visualizar en mapas, especificando su estilo y muchos atributos. Por simplificación, explicaremos únicamente dos, con los cuales ya se puede tener una versión simplificada. En caso de querer aprender más sobre archivos KML, los referimos a la documentación antes mencionada. 
+
 Se pueden incluir muchos de estos componentes en un mismo archivo sin necesidad de ordenarlos ni especificar su cantidad previamente.
 
 
@@ -77,4 +78,6 @@ Se indica el fin del archivo.
         </Document>
     </kml>
 ```
+
+Se puede ver [un ejemplo de visualización de este archivo de ejemplo aquí](http://www.gpsvisualizer.com/display/20180602192457-47047-map.html).
 
