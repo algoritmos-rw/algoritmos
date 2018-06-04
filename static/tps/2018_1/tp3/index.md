@@ -54,7 +54,7 @@ ciudades antes que otras, porque eso le ayudará a entender mejor los tours y vi
 artículo que vio en Trip Advisor. 
 * Lorena: no le gusta andar mucho por lugares desconocidos, por lo que prefiere conocer la menor cantidad 
 de rutas posibles, pero que al mismo tiempo impliquen el menor costo posible. No le molesta recorrer varias 
-veces la misma ruta, si fuera necesario. 
+veces la misma ruta, si fuera necesario.
 
 ## Análisis de la situación
 
@@ -106,29 +106,30 @@ algún país, sin importar cuál sea el país ni cuáles las ciudades.
 * El programa 'Traeme la copa Moshi' que utilice tanto el TDA como la biblioteca para poder implementar todo 
 lo requerido, poniendo foco en Rusia.
 
-El programa a realizar debe recibir por parámetro y cargar en memoria el set de datos (`$ ./traemelaco ciudades.csv 
-mapa.kml`) y luego solicitar el ingreso de comandos por entrada estándar, del estilo `comando 'parametro'`. 
+El programa a realizar debe recibir por parámetro y cargar en memoria el set de datos (`$ ./traemelaco 
+ciudades.csv mapa.kml`) y luego solicitar el ingreso de comandos por entrada estándar, del estilo 
+`comando 'parametro'`. 
 Notar que esto permite tener un archivo de instrucciones a ser ejecutadas 
 (`cat comandos.txt | ./traemelaco ciudades.csv`).
 
 El archivo contará con el siguiente formato: 
 ```
-#Cantidad de ciudades (n)
+# Cantidad de ciudades (n)
 Ciudad1,lat1,long1
 Ciudad1,lat1,long1
 ...
 Ciudad_n,lat_n,long_n
+# Cantidad de aristas
+Ciudad_i,Ciudad_j,tiempo
+...
 ```
 
-Dado que para este problema en particular consideraremos que todas las ciudades se encuentran conectadas 
-directamente con todas las demás, no es necesario incluir las aristas en dicho archivo. Para conocer la 
-distancia que hay entre dos ciudades (el peso de la arista), se podrá utilizar la fórmula de Haversine: 
-
-$$ distancia = 2 \times R \times  \arcsin\left( \sqrt{\sin^2\left(\frac{lat_2 - lat_1}{2}\right) + \cos(lat_1) \cos(lat_2) \sin^2\left( \frac{long_2 - long_1}{2} \right) } \right)$$
-
-Siendo $$R$$ el radio de la tierra, que lo podemos aproximar a 6371 Km. 
-**Importante**: es necesario pasar las longitudes y latitudes (originalmente en coordenadas polares) a 
-radianes antes de aplicar la fórmula. 
+En dicho archivo, la cantidad de aristas va a ser igual a la cantidad máxima posible en un grafo no dirigido,
+puesto que consideramos que todos los vértices se conectan con todos los demás. 
+Es necesario tener en cuenta que los tiempos encontrados corresponden a distintos medios de transporte. Debido
+a que la agencia de viajes decidió hacer este negocio casi en el comienzo del certamen, no todos los medios
+de transporte estaban habilitados a la hora de buscar los datos, por lo que se obtuvo lo mejor a nuestra
+disposición. [Se puede encontrar aquí un archivo completo con las sedes](https://drive.google.com/file/d/1Ee_d96cftRCDV4WvpTTi5tdjVkFXVKii/view?usp=sharing).
 
 ### Funciones de la biblioteca
 
@@ -149,10 +150,13 @@ que representa un árbol de tendido mínimo del original.
 ### Comandos
 
 Los comandos a implementar serán: 
-* `ir desde hasta`: nos devolverá el camino mínimo entre la ciudad `desde` y la ciudad `hasta`. 
+* `ir desde,hasta`: nos devolverá el camino mínimo entre la ciudad `desde` y la ciudad `hasta`. 
 	Por ejemplo: 
-	MEJORAR ESTO, PORQUE POR DESIGUALDAD TRIANGULAR ES IMPOSIBLE QUE DE LA FORMA QUE 
-	ESTA PLANTEADO PUEDA MEJORARSE EL IR DIRECTAMENTE DE UN VÉRTICE A OTRO
+	```
+	ir Moscu,Saransk
+	```
+	Nos debería devolver: `Moscu -> Samara -> Saransk`
+
 * `viajero optimo/aproximado origen`: nos devuelve un listado con el orden de las ciudades a 
 visitar para ver todas las ciudades una vez y volver al origen. La solución debe ser óptima o aproximada 
 según el valor del segundo parámetro. Ejemplo:
@@ -174,15 +178,31 @@ según el valor del segundo parámetro. Ejemplo:
 	Luego de cargar el archivo, se deberá devolver un itinerario válido para visitar las ciudades, 
 	cumpliendo con las recomendaciones. El formato en el cual se deben mostrar es igual al de 
 	`ir` y `viajero`. 
-* `reducir_caminos destino.csv`: nos crea un archivo csv con el formato igual al de 
-`recomendaciones.csv`, donde lo interpretado es que se guarda la arista `ciudad_1` a `ciudad_2` 
-(que es equivalente a la inversa, ya que es un grafo no dirigido).
+* `reducir_caminos destino.csv`: nos crea un archivo csv con un formáto idéntico al archivo de ciudades
+inicial, pero únicamente con los caminos estrictamente necesarios.
 
 Para **todos** estos comandos, será necesario además exportar un archivo KML a la ruta indicada por 
-parámetro al invocarse el programa. 
+parámetro al invocarse el programa.
 
 ### Archivos KML
 
 Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/kml).
 
-(PONER CRITERIOS DE APROBACION Y BLA BLA BLA)
+## Criterios de aprobación
+
+El código entregado debe ser claro y legible y ajustarse a las especificaciones
+de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
+
+La entrega incluye, obligatoriamente, los siguientes archivos de código:
+
+- el código del TDA Grafo programado, y cualquier otro TDA que fuere necesario.
+- el código de la solución del TP.
+
+La entrega se realiza:
+
+1. en forma digital a través del [sistema de entregas]({{site.entregas}}),
+con todos los archivos mencionados en un único archivo ZIP.
+2. en papel durante la clase (si su ayudante lo requiere) el código del Trabajo
+en hoja A4 **abrochadas, sin folio, informe ni carátula**. No es necesario
+reimprimir el código de los TDA ni de `strutil`.
+
