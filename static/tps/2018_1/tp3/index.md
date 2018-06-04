@@ -196,7 +196,8 @@ según el valor del segundo parámetro. Ejemplo:
 inicial, pero únicamente con los caminos estrictamente necesarios.
 
 Para **todos** estos comandos, será necesario además exportar un archivo KML a la ruta indicada por 
-parámetro al invocarse el programa.
+parámetro al invocarse el programa. En el caso del comando `reducir_caminos`, se deben mostrar todas las
+rutas marcadas.
 
 ### Archivos KML
 
