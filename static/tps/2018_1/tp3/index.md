@@ -210,6 +210,5 @@ La entrega se realiza:
 1. en forma digital a través del [sistema de entregas]({{site.entregas}}),
 con todos los archivos mencionados en un único archivo ZIP.
 2. en papel durante la clase (si su ayudante lo requiere) el código del Trabajo
-en hoja A4 **abrochadas, sin folio, informe ni carátula**. No es necesario
-reimprimir el código de los TDA ni de `strutil`.
+en hoja A4 **abrochadas, sin folio, informe ni carátula**. 
 
