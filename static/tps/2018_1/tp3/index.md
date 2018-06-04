@@ -162,7 +162,11 @@ Los comandos a implementar serán:
 	```
 	ir Moscu, Saransk
 	```
-	Nos debería devolver: `Moscu -> Samara -> Saransk`
+	Nos debería imprimir: 
+	```
+	Moscu -> Samara -> Saransk
+	Costo total: 8
+	```
 
 * `viajero optimo/aproximado, origen`: nos devuelve un listado con el orden de las ciudades a 
 visitar para ver todas las ciudades una vez y volver al origen. La solución debe ser óptima o aproximada 
@@ -170,8 +174,11 @@ según el valor del segundo parámetro. Ejemplo:
 		```
 		viajero optimo, Sochi
 		```
-		Nos puede devolver (Suponiendo que sólo tuviéramos 3 ciudades): 
-		`Sochi -> Moscu -> San Petesburgo -> Sochi`
+		Nos puede imprimir (Suponiendo que sólo tuviéramos 3 ciudades): 
+		```
+		Sochi -> Moscu -> San Petesburgo -> Sochi
+		Costo total: (costo correspondiente)
+		```
 
 * `itinerario recomendaciones.csv`: el archivo `recomendaciones.csv` es un archivo con formato: 
 		```
