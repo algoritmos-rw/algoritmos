@@ -48,7 +48,7 @@ Fechas importantes:
 
 Las cinco fechas de final son a las 18:00, en aula a confirmar a través
 del sistema [SIU Guaraní](http://guaranigrado.fi.uba.ar/autogestion/).
-En caso de querer rendir el [final de forma oral](regimen), completar [este formulario](https://goo.gl/forms/adkLvU2Kutz4pjXe2). Recordar que se tendrá en cuenta la última vez que se haya completado. 
+En caso de querer rendir el [final de forma oral]({{ 'regimen' | relative_url }}), completar [este formulario](https://goo.gl/forms/adkLvU2Kutz4pjXe2). Recordar que se tendrá en cuenta la última vez que se haya completado. 
 
 Los temas a ser evaluados en cada parcialito son:
 - **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas. Listas. **Iteradores de listas.**
