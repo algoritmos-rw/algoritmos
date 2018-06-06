@@ -83,6 +83,7 @@ def dfs_ciclo(grafo, v, visitados, padre):
       if w != padre[v]:
         return reconstruir_ciclo(padre, w, v)
     else:
+      padre[w] = v
       ciclo = dfs_ciclo(grafo, w, visitados, padre)
       if ciclo is not None:
         return ciclo
