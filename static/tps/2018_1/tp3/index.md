@@ -26,7 +26,7 @@ En medio del revuelo producido por la inminente **Copa Mundial de Tejo de Playa*
 en Rusia, una reconocida agencia de viajes tiene dos preocupaciones:
 
 1. ¿Cómo deberá ser la vestimenta oficial de los participantes?
-1. ¿Cómo aprovechar el mundial para ofrecer distintos paquetes de viajes
+1. ¿Cómo aprovechar el mundial para ofrecer distintos paquetes de viajes?
 
 Dado que la primer cuestión escapa un poco de su control, decidieron atacar la segunda. Para esto, 
 realizaron encuestas por distintas redes sociales para saber cuáles serían los tipos de viajes que 
@@ -46,7 +46,7 @@ y quiere poder conocer todas y volver a la inicial (de dónde puede volver en av
 de tiempo posible (tiene vacaciones limitadas, así que quiere reducir a lo mínimo el tiempo perdido en 
 viajes).
 * Gloria: La hermana de Claudia. Puede darse el lujo de perder un poco más de tiempo en viajes, y prefiere
-que averiguar un buen camino para conocer todas las sedes demore lo menos posible. 
+que el tiempo en averiguar un buen camino para conocer todas las sedes demore lo menos posible.
 * Roberto: dado que no confía en que la selección tenga buenos resultados en el mundial desde que tuvo que 
 jugarse la clasificación con el seleccionado de Eslovaquia (que ni siquiera tiene playas), cree que lo mejor 
 es aprovechar el viaje para conocer el lugar.  Si bien su principal objetivo es ver partidos de la selección, 
@@ -55,8 +55,8 @@ aprovechar y visitar varias ciudades, pero no quiere hacerlo en cualquier orden.
 ciudades antes que otras, porque eso le ayudará a entender mejor los tours y visitas a museos, según un 
 artículo que vio en Trip Advisor. 
 * Lorena: no le gusta mucho andar por lugares desconocidos, por lo que prefiere conocer la menor cantidad 
-de rutas posibles, pero que al mismo tiempo impliquen el menor costo posible. No le molesta recorrer varias 
-veces la misma ruta, si fuera necesario.
+de rutas posibles que la conecten a todas las sedes, pero que al mismo tiempo impliquen el menor costo 
+posible. No le molesta recorrer varias veces la misma ruta, si fuera necesario.
 
 ## Análisis de la situación
 
@@ -67,11 +67,11 @@ la distancia a la que se encuentra una de otra, podamos resolver todas sus inqui
 El programa debe permitir: 
 
 1. Obtener el camino mínimo desde y hacia distintas sedes del mundial (Sergio dijo que compraría pasajes para 
-toda la familia, inclusive para su mamá). También, exportar un archivo KML para que pueda ir viendo en un mapa 
-como va a ser su recorrido.
+toda la familia, inclusive para su mamá). También, exportar algún tipo de archivo que permita visualizar
+el recorrido a hacer.
 1. Obtener un recorrido que minimice el costo de todos los viajes entre todas las sedes, pasando una vez, y solo 
 una vez por cada sede, como pide Claudia. Además, permitir que este proceso pueda demorar poco tiempo, 
-para Gloria.
+para Gloria. En ambos casos, también exportar el archivo que permite visualizar el recorrido a hacer.
 1. Obtener un itinerario de viaje para optimizar la experiencia del mismo (como quiere Roberto), donde no nos 
 importe la distancia entre sedes. 
 1. Obtener un Árbol de Tendido Mínimo para tener la ruta deseada para Lorena. 
@@ -114,7 +114,7 @@ El programa a realizar debe recibir por parámetro y cargar en memoria el set de
 ciudades.csv mapa.kml`) y luego solicitar el ingreso de comandos por entrada estándar, del estilo 
 `comando 'parametro'`. 
 Notar que esto permite tener un archivo de instrucciones a ser ejecutadas 
-(`cat comandos.txt | ./traemelaco ciudades.csv`).
+(`cat comandos.txt | ./traemelaco ciudades.csv mapa.kml`).
 
 El archivo contará con el siguiente formato: 
 ```
