@@ -133,7 +133,7 @@ puesto que consideramos que todos los vértices se conectan con todos los demás
 Es necesario tener en cuenta que los tiempos encontrados corresponden a distintos medios de transporte. Debido
 a que la agencia de viajes decidió hacer este negocio casi en el comienzo del certamen, no todos los medios
 de transporte estaban habilitados a la hora de buscar los datos, por lo que se obtuvo lo mejor a nuestra
-disposición. [Se puede encontrar aquí un archivo completo con las sedes](https://drive.google.com/file/d/1Ee_d96cftRCDV4WvpTTi5tdjVkFXVKii/view?usp=sharing) (cualquier semejanza con las sedes de otro evento
+disposición. [Se puede encontrar aquí un archivo completo con las sedes](https://drive.google.com/file/d/1427w60dvNAg3UdVz5CsgRvafCjA34EkE/view?usp=sharing) (cualquier semejanza con las sedes de otro evento
 deportivo apunto de comenzar, es pura coincidencia).
 
 ### Funciones de la biblioteca
