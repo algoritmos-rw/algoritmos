@@ -159,25 +159,25 @@ que representa un árbol de tendido mínimo del original.
 Los comandos a implementar serán: 
 * `ir desde, hasta`: nos devolverá el camino mínimo entre la ciudad `desde` y la ciudad `hasta`. 
 	Por ejemplo: 
-	```
-	ir Moscu, Saransk
-	```
-	Nos debería imprimir: 
-	```
-	Moscu -> Samara -> Saransk
-	Costo total: 8
-	```
+		```
+		ir Moscu, Saransk
+		```
+		Nos debería imprimir: 
+		```
+		Moscu -> Samara -> Saransk
+		Costo total: 8
+		```
 
-* `viajero optimo/aproximado, origen`: nos devuelve un listado con el orden de las ciudades a 
+* `viaje optimo/aproximado, origen`: nos devuelve un listado con el orden de las ciudades a 
 visitar para ver todas las ciudades una vez y volver al origen. La solución debe ser óptima o aproximada 
 según el valor del segundo parámetro. Ejemplo:
 		```
-		viajero optimo, Sochi
+		viaje optimo, Sochi
 		```
-		Nos puede imprimir (Suponiendo que sólo tuviéramos 3 ciudades): 
+		Nos puede imprimir: 
 		```
-		Sochi -> Moscu -> San Petesburgo -> Sochi
-		Costo total: (costo correspondiente)
+		Sochi -> Volgogrado -> Kazan -> Nizhni Novgorod -> Ekaterinburgo -> Kaliningrado -> San Petesburgo -> Saransk -> Samara -> Moscu -> Rostov del Don -> Sochi 
+		Costo total: 43
 		```
 
 * `itinerario recomendaciones.csv`: el archivo `recomendaciones.csv` es un archivo con formato: 
@@ -191,13 +191,14 @@ según el valor del segundo parámetro. Ejemplo:
 	`recomendaciones.csv `, e igualmente es necesario visitarla. 
 	Luego de cargar el archivo, se deberá devolver un itinerario válido para visitar las ciudades, 
 	cumpliendo con las recomendaciones. El formato en el cual se deben mostrar es igual al de 
-	`ir` y `viajero`. 
+	`ir` y `viajero`. Dejamos [un ejemplo de un posible archivo de recomendaciones](https://drive.google.com/file/d/1fLeb0g6DGlNzh3XwWD7jPYPVbIpcQ1la/view?usp=sharing). 
 * `reducir_caminos destino.csv`: nos crea un archivo csv con un formáto idéntico al archivo de ciudades
-inicial, pero únicamente con los caminos estrictamente necesarios.
+inicial, pero únicamente con los caminos estrictamente necesarios. Al finalizar, debe imprimir por salida
+estándar la suma de los pesos de las aristas del árbol, en formato `"Peso total: ..."`. Para el archivo de ejemplo, 
+el peso del árbol de tendido mínimo debe ser 30.
 
-Para **todos** estos comandos, será necesario además exportar un archivo KML a la ruta indicada por 
-parámetro al invocarse el programa. En el caso del comando `reducir_caminos`, se deben mostrar todas las
-rutas marcadas.
+Salvo para el comando `reducir_caminos`, será necesario además exportar un archivo KML a la ruta indicada por 
+parámetro al invocarse el programa. [Se incluye un ejemplo para el camino mínimo entre Moscu y Sochi](https://drive.google.com/file/d/1u6jkaLcMSHarPgKDwmzDqkfVNcUpvYN2/view?usp=sharing).
 
 ### Archivos KML
 
