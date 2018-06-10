@@ -14,6 +14,7 @@ permalink: /material/
   * [Implementación de mergesort y quicksort en C](https://drive.google.com/open?id=1XPDf2z9J0v9dGlaTgqFj8pGL3RQUPMpb)
   * [Introducción al uso de Makefile](https://drive.google.com/open?id=1iMUDd8tPJ-uZrZWRlw7uTmfcM1CEAJva)
   * [Apunte de Ordenamientos Externos](ordenamientos_externos)
+  * [Explicación sobre uso de archivos KML](kml)
 
 ## Guías de ejercicios
 
