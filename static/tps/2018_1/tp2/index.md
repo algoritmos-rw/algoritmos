@@ -10,7 +10,7 @@ Trabajo Práctico 2
 {:.no_toc}
 
 El Trabajo Práctico número 2 es de elaboración grupal, y tiene fecha de entrega
-para el **lunes 15 de junio**.
+para el **viernes 15 de junio**.
 
 Contenido
 ---------
