@@ -70,7 +70,7 @@ def minimos_terminos(n):
 ```
 
 Claramente esta solución es mucho mejor que la anterior. En espacio es muy fácil de ver que es $$\mathcal{O}(n)$$, dado el arreglo auxiliar que estamos utilizando, mientras que en tiempo podríamos decir que es:
-$$\mathcal{O}(n * (n + \mathcal{O}(es_cuadrado_perfecto)$$. La función `es_cuadrado_perfecto` se puede implementar trivialmente con un orden $$\mathcal{O}(\sqrt{n})$$, aunque también se podría hacer es $$\mathcal{O}(\log n)$$. En cualquier caso, es claramente despreciable al lado del $$\mathcal{O}(n)$$ de la segunda iteración, por lo que el algoritmo será finalmente $$\mathcal{O}(n^2)$$.
+$$\mathcal{O}(n * (n + \mathcal{O}(es\_cuadrado\_perfecto)$$. La función `es_cuadrado_perfecto` se puede implementar trivialmente con un orden $$\mathcal{O}(\sqrt{n})$$, aunque también se podría hacer es $$\mathcal{O}(\log n)$$. En cualquier caso, es claramente despreciable al lado del $$\mathcal{O}(n)$$ de la segunda iteración, por lo que el algoritmo será finalmente $$\mathcal{O}(n^2)$$.
 
 
 #### Opción 2
