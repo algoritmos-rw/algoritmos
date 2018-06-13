@@ -377,7 +377,7 @@ compilar el ejecutable `analog`, por ejemplo:
 analog: tp2.c hash.o abb.o heap.o strutil.o timeutils.o
 ```
 
-El corrector automático va a interpretar ese archivos de dependencias y va a
+El corrector automático va a interpretar ese archivo de dependencias y va a
 compilar todos los `.o` especificados a partir de los `.h` y `.c` que deberán
 enviar, con los siguientes flags de GCC:
 
