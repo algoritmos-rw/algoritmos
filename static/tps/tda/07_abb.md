@@ -10,7 +10,7 @@ trabajo: ABB
 Árbol Binario de Búsqueda
 =============
 
-El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Árbol Binario de Búsqueda (ABB), según las siguientes definiciones y primitivas:
+El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Árbol Binario de Búsqueda (ABB). Se incluye en [{{TP.zip}}]({{TP.zip_link}}) el archivo de main correspondiente al ejercicio. Se debe implementar:
 
 ``` cpp
 typedef struct abb abb_t;
@@ -60,8 +60,6 @@ bool abb_iter_in_al_final(const abb_iter_t *iter);
 void abb_iter_in_destruir(abb_iter_t* iter);
 ```
 Contamos con un [script de pruebas](https://github.com/algoritmos-rw/algo2_abb_test) que pueden ejecutar para verificar que la estructura que implementaron funciona correctamente. De todas formas, al igual que en entregas anteriores, deben realizar sus propias pruebas (pueden tomar las pruebas del hash como referencia, ya que el comportamiento de ambas estructuras es muy similar).
-
-Se incluye en [{{TP.zip}}]({{TP.zip_link}}) el archivo de main correspondiente al ejercicio.
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}) y también entregarlo impreso con nombre y padrón de ambos integrantes, si su corrector así lo requiere.
 
