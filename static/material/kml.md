@@ -79,5 +79,5 @@ Se indica el fin del archivo.
     </kml>
 ```
 
-Se puede ver [un ejemplo de visualización de este archivo de ejemplo aquí](http://www.gpsvisualizer.com/display/20180602192457-47047-map.html).
+Se puede ver [un ejemplo de visualización de este archivo de ejemplo aquí](https://www.doogal.co.uk/KmlViewer.php?url=https://www.doogal.co.uk/UploadedKml/01f198d7-2ddc-4b07-8a73-eb84f3bb2c97.kml).
 
