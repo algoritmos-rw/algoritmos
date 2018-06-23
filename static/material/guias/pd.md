@@ -35,7 +35,7 @@ A 74 lo podemos escribir como 73 + 1, también como 72 + 2, también como 71 + 3
 
 - _opt(n) = 0_ si _n == 0_;
 - 1 si _n_ cuadrado perfecto;
-- _min(opt(n-i) + opt(i))_, para _i_ en _[1; n-1]_ en otro caso
+- _min(n, opt(n-i) + opt(i))_, para _i_ en _[1; n-1]_ en otro caso
 
 El código de la resolución recursiva sería:
 
