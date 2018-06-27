@@ -20,6 +20,7 @@ exclude:
   - Gemfile.lock
 
 kramdown:
+  input: GFM
   footnote_backlink: "&#x21A9;&#xFE0E;"
   highlighter: rouge
 
