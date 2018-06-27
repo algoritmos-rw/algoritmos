@@ -142,7 +142,7 @@ La biblioteca a implementar debe tener la siguientes funciones implementadas:
 
 * `camino_minimo(grafo, desde, hasta)`, que nos devuelva una lista con el camino mínimo entre 
 ese par de sedes. 
-Ejemplo: `camino_minimo(rusia, 'Moscu', 'Saransk') -> ['Moscu', 'Samara', 'Saransk']
+Ejemplo: `camino_minimo(rusia, 'Moscu', 'Saransk') -> ['Moscu', 'Samara', 'Saransk']`
 * `viajante(grafo, origen)`, que nos devuelva una lista con el recorrido a hacer para resolver 
 de forma óptima el problema del viajante. La lista debe tener el mismo formato que
 `camino_minimo`. 
@@ -158,27 +158,30 @@ que representa un árbol de tendido mínimo del original.
 
 Los comandos a implementar serán: 
 * `ir desde, hasta`: nos devolverá el camino mínimo entre la ciudad `desde` y la ciudad `hasta`. 
+
 	Por ejemplo: 
-		```
-		ir Moscu, Saransk
-		```
-		Nos debería imprimir: 
-		```
-		Moscu -> Samara -> Saransk
-		Costo total: 8
-		```
+	```
+	ir Moscu, Saransk
+	```
+	Nos debería imprimir: 
+	```
+	Moscu -> Samara -> Saransk
+	Costo total: 8
+	```
 
 * `viaje optimo/aproximado, origen`: nos devuelve un listado con el orden de las ciudades a 
 visitar para ver todas las ciudades una vez y volver al origen. La solución debe ser óptima o aproximada 
-según el valor del segundo parámetro. Ejemplo:
-		```
-		viaje optimo, Sochi
-		```
-		Nos puede imprimir: 
-		```
-		Sochi -> Volgogrado -> Kazan -> Nizhni Novgorod -> Ekaterinburgo -> Kaliningrado -> San Petesburgo -> Saransk -> Samara -> Moscu -> Rostov del Don -> Sochi 
-		Costo total: 43
-		```
+según el valor del segundo parámetro. 
+	
+	Por ejemplo:
+	```
+	viaje optimo, Sochi
+	```
+	Nos puede imprimir: 
+	```
+	Sochi -> Volgogrado -> Kazan -> Nizhni Novgorod -> Ekaterinburgo -> Kaliningrado -> San Petesburgo -> Saransk -> Samara -> Moscu -> Rostov del Don -> Sochi 
+	Costo total: 43
+	```
 
 * `itinerario recomendaciones.csv`: el archivo `recomendaciones.csv` es un archivo con formato: 
 		```
