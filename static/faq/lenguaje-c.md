@@ -46,6 +46,41 @@ Desde el curso se recomienda la creación de una función auxiliar `strdup` que 
 
 Pueden leer más sobre sobre cadenas en el [apunte del curso](https://drive.google.com/open?id=1J3uJd0SLZ1DHvPTf7H4ZaKPTwi2mRC0X).
 
+### ¿Qué es getline? ¿Cómo uso getline?
+
+[`getline()`](http://man7.org/linux/man-pages/man3/getline.3.html) es una función que lee una linea de un archivo.
+
+`ssize_t getline(char** buffer, size_t* capacidad, FILE* archivo);`
+
+La principal ventaja de esta función es que automáticamente reserva la memoria dinámica necesaria para almacenar la línea. No se necesita invocar manualmente malloc() a mano, ni preocuparse por los tamaños de los buffers.
+
+Sí se necesita, no obstante, liberar memoria al terminar: getline() llama a malloc() pero transfiere la responsabilidad de la memoria al usuario.
+
+La reserva de memoria dinámica se consigue llamando a la función punteros a un buffer igual a NULL y a una capacidad 0:
+
+```char* buffer = NULL;
+size_t capacidad = 0;
+ssize_t longitud = getline(&buffer, &capacidad, archivo);
+// Se debe liberar la memoria al terminar de usarla.
+// Ahora buffer contiene la linea, capacidad la memoria pedida y longitud la cantidad de caracteres leidos
+free(linea);
+```
+
+La función getline() se encuentra definida en la cabecera stdio.h. Como es una función de POSIX.1-2008, hay que declarar un identificador para indicar que la queremos usar:
+
+```
+#define _POSIX_C_SOURCE 200809L
+#include <stdio.h>
+```
+
+#### ¿Qué es POSIX?
+
+Portable Operating System Interface (POSIX) es una familia de estandares especificados por el Instituto de Ingeniería Eléctrica y Electrónica (asociación sin fines de lucro dedicada a estandarización) para mantener la compatibilidad entre distintos sistemas operativos. Entre otras cosas, POSIX define y especifica las funciones que utilizamos en la libreria estandar de C (`stdio`, `stdlib` y más conforman esta librería) ya definida por el estandar ANSI C.
+
+Al hacer `#include <stdio.h>` lo que le decimos al pre-procesador es que en mi programa yo pueda utilizar lo definido por ANSI C en esa cabecera de la librería estandar.
+
+Por otro lado, al hacer `#define _POSIX_C_SOURCE 200809L` y luego `#include <stdio.h>` (respetar el orden), lo que le decimos al pre-procesador es que en mi programa yo pueda utilizar la especificación de POSIX de 2008 de la librería estandar (de ANSI C), que entre otras cosas incluye `getline()` y `getdelim()`.
+
 ## ¿Qué es un puntero a función?
 
 Los punteros a funcion son variables que apuntan a funciones para que puedan ser invocadas sin conocer su nombre. En C, la sintaxis para declararlas es diferente al resto de los tipos. Por ejemplo, la sintaxis para declarar un puntero a función que recibe dos cadenas y devuelve un entero es la siguiente:
