@@ -63,6 +63,8 @@ Contamos con un [script de pruebas](https://github.com/algoritmos-rw/algo2_abb_t
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}) y también entregarlo impreso con nombre y padrón de ambos integrantes, si su corrector así lo requiere.
 
+**No olvidar visitar las [preguntas frecuentes del árbol binario de busqueda](/algo2/faq/abb)**
+
 ---
 ### Bibliografia recomendada
 * Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *Chapter 4: Trees*, en particular desde *4.3. The Search Tree ADT- - Binary Search Trees*.
