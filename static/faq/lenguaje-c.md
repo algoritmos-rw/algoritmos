@@ -58,13 +58,25 @@ Sí se necesita, no obstante, liberar memoria al terminar: getline() llama a mal
 
 La reserva de memoria dinámica se consigue llamando a la función punteros a un buffer igual a NULL y a una capacidad 0:
 
-```char* buffer = NULL;
-size_t capacidad = 0;
-ssize_t longitud = getline(&buffer, &capacidad, archivo);
+```char* buffer = NULL; size_t capacidad = 0; 
+ssize_t leidos = getline(&buffer, &capacidad, archivo);
 // Se debe liberar la memoria al terminar de usarla.
-// Ahora buffer contiene la linea, capacidad la memoria pedida y longitud la cantidad de caracteres leidos
+// Recordar que 'archivo' puede ser el flujo stdin sin problemas
+// Ahora buffer contiene la linea, capacidad la memoria pedida y leidos la cantidad de caracteres leidos
+free(buffer);
+```
+
+Siendo que muchas veces queremos iterar un archivo hasta que no haya más lineas por leer y sabiendo que `leidos` devuelve `-1` cuando no lee caracteres, se puede hacer el siguiente ciclo:
+
+```char* linea = NULL; size_t capacidad = 0; ssize_t leidos; 
+while( (leidos = getline(&linea, &capacidad, archivo) != -1 ) {;
+    // Hago algo con la linea
+}
 free(linea);
 ```
+
+
+
 
 La función getline() se encuentra definida en la cabecera stdio.h. Como es una función de POSIX.1-2008, hay que declarar un identificador para indicar que la queremos usar:
 
