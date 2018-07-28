@@ -41,6 +41,8 @@ La función de comparación (de tipo `cmp_func_t`) debe recibir dos punteros del
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}) y también entregarlo impreso con nombre y padrón de ambos integrantes, si su corrector así lo requiere.
 
+**No olvidar visitar las [preguntas frecuentes del heap](/algo2/faq/heap)**
+
 ---
 ### Bibliografia recomendada
 * Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *Chapter 6: Priority Queues (Heaps)*.

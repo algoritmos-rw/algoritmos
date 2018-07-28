@@ -1,13 +1,19 @@
 ---
 layout: page
-title: Entorno
+title: FAQ - Entorno de Desarollo
 permalink: /faq/entorno
 ---
 
-Entorno de desarrollo
+FAQ - Entorno de Desarollo
 =========
+{:.no_toc}
 
-Para poder hacer los ejercicios y TPs de este curso necesitás tener funcionando en tu PC los siguientes programas:
+* Contenido
+{:toc}
+
+## ¿Cómo hago para instalar el entorno de desarrollo en mi PC?
+
+Hay varias opciones, según tu sistema operativo y tus preferencias. Para poder hacer los ejercicios y TPs de este curso necesitás tener funcionando en tu PC los siguientes programas:
 
 *   compilador C: **GCC** (y opcionalmente **clang**)
 *   **GNU make**

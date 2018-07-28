@@ -67,6 +67,8 @@ chmod +x tiempos_volumen.sh
 ./tiempos_volumen.sh ./main
 ```
 
+**No olvidar visitar las [preguntas frecuentes del hash](/algo2/faq/hash)**
+
 ---
 ### Bibliografia recomendada
 * Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *Chapter 5: Hashing*.
