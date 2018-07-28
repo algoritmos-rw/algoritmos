@@ -114,9 +114,7 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
 2. Dado el binomio $$(a + b)^n$$ (donde _n_ es nuestra variable), queremos conocer todos los coeficientes resultantes de desarrollar el mismo.
 
-   Tener en cuenta que:
-
-   $$(a + b)^n = \sum_{k=0}^n \binom{n}{k} a^{n} \times b^{n-k}$$
+   Tener en cuenta que: $$(a + b)^n = \sum_{k=0}^n \binom{n}{k} a^{n} \times b^{n-k}$$
 
    Por lo tanto, lo que nos interesa conocer son los valores de todos esos combinatorios. Sabiendo que:
    - $$\binom{n}{0} = 1$$.
