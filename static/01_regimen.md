@@ -40,7 +40,7 @@ Régimen de cursada
 * Se puede recuperar parcialitos para levantar la nota sin riesgo de empeorarla (se considera la nota mayor de las obtenidas).
 * Copiarse en un parcialito implica desaprobar la cursada y por lo tanto la materia.
 
-<button class="btn btn-secondary" data-toggle="collapse" data-target="#tabla-notas"> Criterios de corrección </button>  
+<button class="btn btn-secondary" data-toggle="collapse" data-target="#tabla-notas"> Tabla de notas </button>  
 <div id="tabla-notas" class="collapse">	
 	<table class="table table-striped table-bordered table-sm">
 	  <tbody>
