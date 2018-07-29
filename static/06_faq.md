@@ -20,6 +20,8 @@ Preguntas frecuentes
 
 * [Tipos de Datos Abstractos](tda)
 
+* [Cola](colla)
+
 * [Lista Enlazada](lista-enlazada)
 
 * [Hash](hash)
