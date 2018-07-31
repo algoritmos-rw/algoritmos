@@ -22,7 +22,7 @@ Preguntas frecuentes
 
 * [Tipos de Datos Abstractos](tda)
 
-* [Cola](colla)
+* [Cola](cola)
 
 * [Lista Enlazada](lista-enlazada)
 
