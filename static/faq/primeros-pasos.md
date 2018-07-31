@@ -27,7 +27,9 @@ int main(void) {
 }
 ```
 
-Lo guardan en un archivo llamado `hola.c`
+Lo guardan en un archivo llamado `hola.c`.
+
+Es importante notar que todo programa de C debe contener una función que se llame `main`, que es la que ejecutará al comienzo de este (y luego puede llamar subsecuentemente a otras funciones).
 
 Como editor pueden usar [Geany](https://www.geany.org/) o un editor más sencillo que ya esté instalado en el sistema, por ejemplo Gedit. Seguramente lo puedan encontrar en Menu → Editores, y cualquier otro editor también sirve.
 

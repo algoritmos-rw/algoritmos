@@ -75,9 +75,6 @@ while( (leidos = getline(&linea, &capacidad, archivo) != -1 ) {;
 free(linea);
 ```
 
-
-
-
 La función getline() se encuentra definida en la cabecera stdio.h. Como es una función de POSIX.1-2008, hay que declarar un identificador para indicar que la queremos usar:
 
 ```
@@ -147,3 +144,48 @@ void elemento_destruir_wrapper(void* elem)
 ```
 
 De esta manera, la función `elemento_destruir_wrapper` es genérica y puede ser usada con la función `estructura_destruir`.
+
+## ¿Qué es typedef?
+
+Typedef es una característica de C que nos permite darle un alias a distintos tipos o estructuras de C. Por ejemplo, si quisiesemos 'crear' un tipo nuevo en C que se refiera a la edad de las personas, vamos a querer hacer uso del tipo 'unsigned int', que se refiere a números positivos. Pero a su vez queremos dejarle explicito al lector que este es un tipo definido por el programador, sin contar ahorrarnos escribir 'unsigned int' cada vez que se quiera hacer uso de esto.
+
+Por lo tanto, siguiendo la sintaxis `typedef tipo mi_nuevo_tipo`, hacemos:
+
+```cpp
+typedef unsigned int edad_t```
+
+Y luego podemos, como si fuese cualquier otro tipo de datos de C, declarar variables, hacer uso de ellas y demas como:
+
+```cpp
+edad_t luis = 14;
+// Equivale a unsigned int luis = 14
+```
+
+Por otro lado, esto nos puede servir para ahorrarnos la palabra `struct` cada vez que hacemos una estructura en C, más la explicitud de la que se hablo previamente.
+
+```
+struct persona {
+    edad_t edad;
+    char* nombre;
+}
+
+typedef struct persona persona_t;
+```
+
+
+Por último, también podemos hacer uso de typedef para lo que se refiere a punteros a función.
+
+```
+// X es una funcion que recibe un puntero
+// mi_funcion es una funcion que recibe void* y devuelve void
+
+// Versión A, sin typedef.
+void x(void mi_funcion(void*));
+
+// Version B, con typedef
+// Hago un tipo de funciones, funcionvoid_t que se refiere a las funciones que reciben void* y devuelven void
+
+typedef void funcionvoid_t(void*);
+
+void x(funcionvoid_t *mi_funcion);
+```

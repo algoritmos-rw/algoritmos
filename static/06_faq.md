@@ -12,6 +12,8 @@ Preguntas frecuentes
 
 * [Entorno de desarollo](entorno)
 
+* [Primeros Pasos con Linux y C](primeros-pasos)
+
 * [Compilación y Ejecución](compilacion-ejecucion)
 
 * [Lenguaje C](lenguaje-c)
