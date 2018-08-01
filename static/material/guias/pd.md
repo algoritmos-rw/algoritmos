@@ -123,6 +123,13 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
    Implementar un algoritmo que por programación dinámica nos permita obtener todos los coeficientes de un binomio de grado _n_.
 
+   Por ejemplo, para n = 2, `(a+b)² = (a² + 2ab + b²)`, es decir que los coeficientes son [1,2,1].
+
+   ```python
+   coeficientes(2) --> [1,2,1]
+   coeficientes(3) --> [1,3,3,1]
+   ```
+
 3. Juan es ambicioso pero también algo vago. Dispone de varias ofertas de trabajo diarias, pero no quiere trabajar dos días seguidos. Dado un arreglo con el monto esperado a ganar cada día, determinar por programación dinámica el máximo monto a ganar, sabiendo que no aceptará trabajar dos días seguidos.
 
    Por ejemplo, si el arreglo es `[100, 20, 30, 70, 50]` el monto máximo que podrá ganar serán $180 (trabajar el primer, tercer y quinto día). En cambio, si el arreglo fuera `[100, 20, 30, 70, 20]`, el monto máximo a ganar serían $170 (resultado de trabajar el primer y cuarto día).
@@ -138,9 +145,13 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
 5. Dado un conjunto de números positivos _L_ y un número _n_, determinar si existe un subconjunto de _L_ que sume exactamente _n_.
 
+   Por ejemplo, para _L_ = [1,3,5] y _n_ = 4, debe devolver Verdadero, mientras que para el mismo _L_ y _n_ = 9 debe devolver falso.
+
 6. ¡Ejercicio difícil! En este barrio todos viven alrededor de la plaza y los vecinos contiguos se odian entre sí. Hay _n_ vecinos y el primer vecino es contiguo con el último. Cuando le preguntan a cada uno cuánto es lo máximo que va a donar para arreglar la plaza la respuesta se registra en el array `donar = [d0, d1, ..., d(n-1)]`, pero la condición es: solo donaré si no dona ninguno de mis vecinos contiguos.
 
    Usando programación dinámica resolver cuánto es lo máximo que se puede recolectar por donaciones.
+
+   Por ejemplo, para las posibles donaciones [9, 2, 1, 4, 6, 7] debe devolver 16 (sumando 9+1+6), porque aunque 9+4+7 es mayor, el 9 y el 7 son vecinos (primer y último elemento).
 
 ## Bibliografía y referencias
 
