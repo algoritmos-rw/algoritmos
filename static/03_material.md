@@ -63,7 +63,7 @@ permalink: /material/
 * [Matriz y lista de adyacencia](http://www.youtube.com/watch?v=2guA5uMEmZQ)
 * [Algoritmo de Prim](http://www.youtube.com/watch?v=BtGuZ-rrUeY)
 * [Algoritmo de Dijkstra](http://www.youtube.com/watch?v=8Ls1RqHCOPw)
-
+* [Seguimientos de los algoritmos de Dijkstra/Prim/Kruskal](http://weierstrass.is.tokushima-u.ac.jp/ikeda/suuri/dijkstra/Dijkstra.shtml)
 
 ## Material disponible sobre Técnicas de Diseño de Algoritmos
 * [Técnicas de diseño de Algoritmos](http://www.lcc.uma.es/~av/Libro/indice.html), Universidad de Málaga, España.
