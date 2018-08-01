@@ -8,8 +8,14 @@ ayudantes:
 - nombre: Camila Bojman
   foto: /assets/img/docentes/camib.jpg
 
+- nombre: Camila Dvorkin
+  foto: /assets/img/docentes/unknown.jpg
+
 - nombre: Cecilia Hortas
   foto: /assets/img/docentes/cecih.jpg
+
+- nombre: Dato Simó
+  foto: /assets/img/docentes/unknown.jpg
 
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
@@ -23,8 +29,11 @@ ayudantes:
 - nombre: Fiona González Lisella
   foto: /assets/img/docentes/fionag.jpg
 
-- nombre: Gianmarco Cafferata
-  foto: /assets/img/docentes/gianc.jpg
+- nombre: Ignacio Raik
+  foto: /assets/img/docentes/unknown.jpg
+
+- nombre: Javier Di Santo
+  foto: /assets/img/docentes/unknown.jpg
 
 - nombre: Jasmina Sella Faena
   foto: /assets/img/docentes/jasminasf.jpg
@@ -38,6 +47,9 @@ ayudantes:
 - nombre: Lautaro Manzano
   foto: /assets/img/docentes/lautarom.jpg
 
+- nombre: Matías Cano
+  foto: /assets/img/docentes/unknown.jpg
+
 - nombre: Milena Marchese
   foto: /assets/img/docentes/milem.jpg
 
@@ -50,6 +62,12 @@ ayudantes:
 - nombre: Rodrigo Souto
   foto: /assets/img/docentes/rodris.jpg
 
+- nombre: Sebastián González
+  foto: /assets/img/docentes/unknown.jpg
+
 - nombre: Tomás Accini
   foto: /assets/img/docentes/tomasa.jpg
+
+- nombre: Tomás Lofano
+  foto: /assets/img/docentes/unknown.jpg
 
