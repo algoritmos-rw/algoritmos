@@ -56,39 +56,32 @@ La principal ventaja de esta función es que automáticamente reserva la memoria
 
 Sí se necesita, no obstante, liberar memoria al terminar: getline() llama a malloc() pero transfiere la responsabilidad de la memoria al usuario.
 
-La reserva de memoria dinámica se consigue llamando a la función punteros a un buffer igual a NULL y a una capacidad 0:
+La reserva de memoria dinámica se consigue cuando el puntero buffer apunta a NULL, y el puntero capacidad apunta a 0:
 
-```char* buffer = NULL; size_t capacidad = 0; 
+```cpp
+char* buffer = NULL; size_t capacidad = 0; 
 ssize_t leidos = getline(&buffer, &capacidad, archivo);
 // Se debe liberar la memoria al terminar de usarla.
 // Recordar que 'archivo' puede ser el flujo stdin sin problemas
 // Ahora buffer contiene la linea, capacidad la memoria pedida y leidos la cantidad de caracteres leidos
+// De no haber leido caracteres, la función devuelve -1
 free(buffer);
-```
-
-Siendo que muchas veces queremos iterar un archivo hasta que no haya más lineas por leer y sabiendo que `leidos` devuelve `-1` cuando no lee caracteres, se puede hacer el siguiente ciclo:
-
-```char* linea = NULL; size_t capacidad = 0; ssize_t leidos; 
-while( (leidos = getline(&linea, &capacidad, archivo) != -1 ) {;
-    // Hago algo con la linea
-}
-free(linea);
 ```
 
 La función getline() se encuentra definida en la cabecera stdio.h. Como es una función de POSIX.1-2008, hay que declarar un identificador para indicar que la queremos usar:
 
-```
+```cpp
 #define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 ```
 
 #### ¿Qué es POSIX?
 
-Portable Operating System Interface (POSIX) es una familia de estandares especificados por el Instituto de Ingeniería Eléctrica y Electrónica (asociación sin fines de lucro dedicada a estandarización) para mantener la compatibilidad entre distintos sistemas operativos. Entre otras cosas, POSIX define y especifica las funciones que utilizamos en la libreria estandar de C (`stdio`, `stdlib` y más conforman esta librería) ya definida por el estandar ANSI C.
+Portable Operating System Interface (POSIX) es una familia de estándares especificados por el Instituto de Ingeniería Eléctrica y Electrónica (asociación sin fines de lucro dedicada a estandarización) para mantener la compatibilidad entre distintos sistemas operativos. Entre otras cosas, POSIX define y especifica las funciones que utilizamos en la librería estándar de C (`stdio`, `stdlib` y más conforman esta librería) ya definida por el estándar ANSI C.
 
-Al hacer `#include <stdio.h>` lo que le decimos al pre-procesador es que en mi programa yo pueda utilizar lo definido por ANSI C en esa cabecera de la librería estandar.
+Al hacer `#include <stdio.h>` lo que le decimos al pre-procesador es que en mi programa yo quiero poder utilizar lo definido por ANSI C en esa cabecera de la librería estándar.
 
-Por otro lado, al hacer `#define _POSIX_C_SOURCE 200809L` y luego `#include <stdio.h>` (respetar el orden), lo que le decimos al pre-procesador es que en mi programa yo pueda utilizar la especificación de POSIX de 2008 de la librería estandar (de ANSI C), que entre otras cosas incluye `getline()` y `getdelim()`.
+Por otro lado, al hacer `#define _POSIX_C_SOURCE 200809L` y luego `#include <stdio.h>` (respetar el orden), lo que le decimos al pre-procesador es que en mi programa yo quiero poder utilizar la especificación de POSIX de 2008 de la librería estándar (de ANSI C). Entre otras cosas, esta especificación incluye `getline()` y `getdelim()`.
 
 ## ¿Qué es un puntero a función?
 
@@ -163,7 +156,7 @@ edad_t luis = 14;
 
 Por otro lado, esto nos puede servir para ahorrarnos la palabra `struct` cada vez que hacemos una estructura en C, más la explicitud de la que se hablo previamente.
 
-```
+```cpp
 struct persona {
     edad_t edad;
     char* nombre;
@@ -175,7 +168,7 @@ typedef struct persona persona_t;
 
 Por último, también podemos hacer uso de typedef para lo que se refiere a punteros a función.
 
-```
+```cpp
 // X es una funcion que recibe un puntero
 // mi_funcion es una funcion que recibe void* y devuelve void
 

@@ -15,7 +15,7 @@ FAQ - Cola
 
 Siempre que se codifica algo, hay que comprobar que funcione correctamente. Pero esto no puede ser solo ejecutarlo un par de veces y comprobar 'a mano' que funcione todo, porque no se puede confiar en esos resultados. ¿Y si me olvido de probar un caso? ¿Y si cambio una primitiva y nunca confirmo que siga funcionando?
 
-Es por esto que siempre se que codifica algo, hay que codificar en paralelo un set de pruebas. Pruebas tales que **si modifico la _implementación_ del programa, puedo correr las pruebas y verificar que de todas formas no cambiaron los resultados**. Siempre hay que tener en mente la reutilización de las pruebas. Si se rompió algo, las pruebas deben decirme lo más detalladamente posible que rompió y donde.
+Es por esto que siempre se que codifica algo, hay que codificar en paralelo un set de pruebas. Pruebas tales que **si modifico la _implementación_ del programa, puedo correr las pruebas y verificar que de todas formas no cambiaron los resultados**. Siempre hay que tener en mente la reutilización de las pruebas. Si se rompió algo, las pruebas deben decirme lo más detalladamente posible qué rompió y dónde.
 
 Las pruebas que hacemos en el curso son **unitarias**, es decir, prueban solo una cosa a la vez. Algunas propiedades que debe cumplir cada prueba:
 
