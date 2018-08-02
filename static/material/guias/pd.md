@@ -123,7 +123,7 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
    Implementar un algoritmo que por programación dinámica nos permita obtener todos los coeficientes de un binomio de grado _n_.
 
-   Por ejemplo, para n = 2, `(a+b)² = (a² + 2ab + b²)`, es decir que los coeficientes son [1,2,1].
+   Por ejemplo, para n = 2, $ (a + b)^2 = (a^2 + 2ab + b^2) $, es decir que los coeficientes son [1,2,1].
 
    ```python
    coeficientes(2) --> [1,2,1]
