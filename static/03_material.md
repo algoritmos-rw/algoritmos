@@ -8,8 +8,8 @@ permalink: /material/
 
 ## Apuntes del curso
 
-  * [Apunte de Algoritmos y Programación I](https://drive.google.com/file/d/0B0KKEIBDHL7tdEQ3bFZ2M3VrZzA/view).
   * [Drive general de la materia](https://drive.google.com/drive/folders/0B0x0VPz_v-f_ekhhQUpkay13RnM?usp=sharing)
+  * [Apunte de Algoritmos y Programación I](https://drive.google.com/file/d/0B0KKEIBDHL7tdEQ3bFZ2M3VrZzA/view).
   * [Diapositivas de las clases](https://drive.google.com/drive/folders/1HCOatwNQiIC__CAEJa0u0Rb7DultMcmc?usp=sharing)
   * [Implementación de mergesort y quicksort en C](https://drive.google.com/open?id=1XPDf2z9J0v9dGlaTgqFj8pGL3RQUPMpb)
   * [Introducción al uso de Makefile](https://drive.google.com/open?id=1iMUDd8tPJ-uZrZWRlw7uTmfcM1CEAJva)
@@ -20,6 +20,20 @@ permalink: /material/
 
    * [Aquí](guias) la guía de ejercicios de la materia.
  
+## Material y links disponibles de Estructuras de Datos
+
+* [Algoritmos y estructuras de datos](http://venus.ceride.gov.ar/twiki/bin/view/AED/WebHome#Bibliograf_a), apunte de la materia, Universidad del Litoral.
+* [Árboles B, B+ y B*](https://drive.google.com/open?id=1Inanv7DGbHiF7dCBOD6jxuxhsNz0Uz7j), apunte del curso de Organización de Datos (66.06) de FIUBA.
+* [Visualizaciones de algoritmos y estructuras de datos](http://visualgo.net/)
+* [Algoritmos de pathfinding](http://qiao.github.io/PathFinding.js/visual/)
+* [Visualizaciones de estructuras de datos](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+* [BFS - DFS](http://www.youtube.com/watch?v=or9xlA3YYzo)
+* [Matriz y lista de adyacencia](http://www.youtube.com/watch?v=2guA5uMEmZQ)
+* [Algoritmo de Prim](http://www.youtube.com/watch?v=BtGuZ-rrUeY)
+* [Algoritmo de Dijkstra](http://www.youtube.com/watch?v=8Ls1RqHCOPw)
+* [Seguimientos de los algoritmos de Dijkstra/Prim/Kruskal](http://weierstrass.is.tokushima-u.ac.jp/ikeda/suuri/dijkstra/Dijkstra.shtml)
+
+
 ## Material disponible sobre el lenguaje C
 
   * [Introducción a la programación con C](http://repositori.uji.es/xmlui/bitstream/handle/10234/24306/s29.pdf), Universidad de Jaume, España.
@@ -51,27 +65,12 @@ permalink: /material/
   * [Merge sort con punteros en lugar de vectores](https://drive.google.com/open?id=1ISdUlErJziiO_3Do8i3HjYRBuHtJ5lW7)
   * [Quick sort simple](https://drive.google.com/open?id=1AU4HaMJZpe6F4C7YFNnVoNkYwyKBF0wc)
   * [Quick sort alternativo](https://drive.google.com/open?id=1wId-_djgfYMQB62lfgV5C4czm--MkNm_)
-
-## Material y links disponibles de Estructuras de Datos
-
-* [Algoritmos y estructuras de datos](http://venus.ceride.gov.ar/twiki/bin/view/AED/WebHome#Bibliograf_a), apunte de la materia, Universidad del Litoral.
-* [Árboles B, B+ y B*](https://drive.google.com/open?id=1Inanv7DGbHiF7dCBOD6jxuxhsNz0Uz7j), apunte del curso de Organización de Datos (66.06) de FIUBA.
-* [Visualizaciones de algoritmos y estructuras de datos](http://visualgo.net/)
-* [Algoritmos de pathfinding](http://qiao.github.io/PathFinding.js/visual/)
-* [Visualizaciones de estructuras de datos](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-* [BFS - DFS](http://www.youtube.com/watch?v=or9xlA3YYzo)
-* [Matriz y lista de adyacencia](http://www.youtube.com/watch?v=2guA5uMEmZQ)
-* [Algoritmo de Prim](http://www.youtube.com/watch?v=BtGuZ-rrUeY)
-* [Algoritmo de Dijkstra](http://www.youtube.com/watch?v=8Ls1RqHCOPw)
-
+  * [Ejemplos de programación dinámica](https://drive.google.com/open?id=1d74zabP5mQ7V71ujqqheWShTOWkVgvjb) (coeficientes, escalones, soga y teléfono).
 
 ## Material disponible sobre Técnicas de Diseño de Algoritmos
 * [Técnicas de diseño de Algoritmos](http://www.lcc.uma.es/~av/Libro/indice.html), Universidad de Málaga, España.
 * [Manual de Análisis y Diseño de Algoritmos](http://colabora.inacap.cl/sedes/ssur/Asignatura%20Indtroduccion%20a%20la%20Programacn/An%C3%A1lisis%20de%20Algoritmo/Manual-Analisis%20de%20Algoritmos_v1.pdf), Inacap, Chile.
 * [Diseño por Contratos: construyendo software confiable](http://www.revista.unam.mx/vol.4/num5/art11/art11.htm); Rossel, Gerardo y Manna, Andrea (FCEyN, UBA).
-
-### Ejemplos de código
-* [Ejemplos de programación dinámica](https://drive.google.com/open?id=1d74zabP5mQ7V71ujqqheWShTOWkVgvjb) (coeficientes, escalones, soga y teléfono).
 
 ## Otros enlaces
 
@@ -93,4 +92,3 @@ permalink: /material/
   * [LaTeX](http://www.latex-project.org/).
   * [Introducción al desarrollo de documentos en LaTeX](https://drive.google.com/open?id=1CgB9Qsd_rkvYCW0f1qzh-p9FKe2jelHR)
   * [Informe de ejemplo](https://drive.google.com/open?id=11ufmyqYKWt18Ty3Wg0fxtjqU7slRU-MT)
-
