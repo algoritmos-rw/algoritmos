@@ -40,13 +40,14 @@ Régimen de cursada
 * Se puede recuperar parcialitos para levantar la nota sin riesgo de empeorarla (se considera la nota mayor de las obtenidas).
 * Copiarse en un parcialito implica desaprobar la cursada y por lo tanto la materia.
 
+### Final
+* Una vez aprobada la cursada, es necesario rendir un final escrito, en el cuál entran todos los temas vistos en la materia. Tanto en las clases teóricas como en las clases prácticas. 
+* Los finales se aprueban con nota 4 o superior, y constan de 5 ejercicios (se requieren 3 ejercicios bien para aprobar).
+* Aquellos alumnos que hayan cumplido con los requisitos del régimen de promoción, no deben rendir el examen final. 
+
 ### Calificación
 
 * La nota de la materia es un promedio de la nota del final y la nota de la cursada.
 * La nota de la cursada surge del promedio entre: el promedio de la nota de los parcialitos y el promedio de la nota de los trabajos prácticos (con redondeo conceptual por parte del ayudante asignado).
 * En caso de promocionar la materia, la nota de la materia será igual a la nota de la cursada.
-
-### Final
-* Una vez aprobada la cursada, es necesario rendir un final escrito, en el cuál entran todos los temas vistos en la materia. Tanto en las clases teóricas como en las clases prácticas. 
-* Aquellos alumnos que hayan cumplido con los requisitos del régimen de promoción, no deben rendir el examen final. 
 

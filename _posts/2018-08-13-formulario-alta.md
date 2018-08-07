@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Formulario de alta"
-date: 2018-08-15 16:00:00 -0300
+date: 2018-08-13 16:00:00 -0300
 ---
 
 Está disponible el [formulario de alta](https://goo.gl/forms/lDBuU8PiZvQBNDQo1)
