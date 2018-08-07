@@ -43,7 +43,7 @@ Para abrir una terminal también pueden usar el atajo del teclado CTRL + ALT + T
 
 Por omisión la terminal les deja ubicados en “/home/usuario” (por ejemlo “/home/ana” o “/home/martin”).
 
-Luego, tendran que ubicarse en el directorio donde esta el archivo `.c`. Para esto se hace uso del comando `cd` (change directory), al cual le especificaremos en que directorio nos queremos situar con la terminal.
+Luego, tendrán que ubicarse en el directorio donde está el archivo `.c`. Para esto se hace uso del comando `cd` (change directory), al cual le especificaremos en qué directorio nos queremos situar con la terminal.
 
 Si su nombre de usuario es “ana”, lo mejor es que guarden en una carpeta con nombre bien corto, por ejemplo “/home/ana/tp0/hola.c” y luego en la terminal invoquen `cd /home/ana/tp0/`
 
@@ -51,9 +51,11 @@ Si su nombre de usuario es “ana”, lo mejor es que guarden en una carpeta con
 
 Una vez hicieron eso, podrán compilar y ejecutar:
 
-```gcc -o programa hola.c
-./programa```
+```cpp
+gcc -o programa hola.c
+./programa
+```
 
 La primera linea se refiere a la [compilación](/algo2/faq/compilación-ejecución), mientras que la segunda es la ejecución.
 
-Si gcc emite algún error, deberán volver al editor y corregirlo. Una vez guardadas las correcciones, deberan volver a compilar el programa, ya que si no estarian ejecutando una versión vieja de este. 
+Si gcc emite algún error, deberán volver al editor y corregirlo. Una vez guardadas las correcciones, deberán volver a compilar el programa, ya que si no estarían ejecutando una versión vieja de este. 

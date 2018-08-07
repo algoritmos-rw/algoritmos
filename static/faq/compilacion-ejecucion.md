@@ -14,7 +14,7 @@ FAQ - Lenguaje C Compilación y Ejecución
 
 ## ¿Qué signfica que un lenguaje sea, como C, compilado?
 
-Significa que para ejecutar nuestro programa se debe primero traducir a código binario que la CPU de la computadora puede entender. Una vez traducido, el resultado (las instrucciones binarias) se pueden mandar a la CPU para su ejecución.
+Significa que para ejecutar nuestro programa se lo debe primero traducir a código binario que la CPU de la computadora pueda entender. Una vez traducido, el resultado (las instrucciones binarias) se pueden enviar a la CPU para su ejecución.
 
 A ese paso de traducción le llamamos compilación .
 

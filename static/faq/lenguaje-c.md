@@ -61,10 +61,7 @@ La reserva de memoria dinámica se consigue cuando el puntero buffer apunta a NU
 ```cpp
 char* buffer = NULL; size_t capacidad = 0; 
 ssize_t leidos = getline(&buffer, &capacidad, archivo);
-// Se debe liberar la memoria al terminar de usarla.
-// Recordar que 'archivo' puede ser el flujo stdin sin problemas
-// Ahora buffer contiene la linea, capacidad la memoria pedida y leidos la cantidad de caracteres leidos
-// De no haber leido caracteres, la función devuelve -1
+// Hago uso de la linea 
 free(buffer);
 ```
 
@@ -74,6 +71,8 @@ La función getline() se encuentra definida en la cabecera stdio.h. Como es una 
 #define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 ```
+
+Para más información y especificaciones de la función, se puede invocar al comando `man` en la terminal, para ver el manual de esta. `man getline`.
 
 #### ¿Qué es POSIX?
 
@@ -140,7 +139,8 @@ De esta manera, la función `elemento_destruir_wrapper` es genérica y puede ser
 
 ## ¿Qué es typedef?
 
-Typedef es una característica de C que nos permite darle un alias a distintos tipos o estructuras de C. Por ejemplo, si quisiesemos 'crear' un tipo nuevo en C que se refiera a la edad de las personas, vamos a querer hacer uso del tipo 'unsigned int', que se refiere a números positivos. Pero a su vez queremos dejarle explicito al lector que este es un tipo definido por el programador, sin contar ahorrarnos escribir 'unsigned int' cada vez que se quiera hacer uso de esto.
+Typedef es una característica de C que nos permite darle un alias a distintos tipos o estructuras de C. Por ejemplo, si quisiésemos 'crear' un tipo nuevo en C que se refiera a la edad de las personas, vamos a querer hacer uso del tipo 'unsigned int', que se refiere a números positivos. Pero a su vez queremos dejarle explícito al lector que éste es un tipo definido por el programador, además de ahorrarnos escribir 'unsigned int' cada vez que se quiera hacer uso de éste.
+
 
 Por lo tanto, siguiendo la sintaxis `typedef tipo mi_nuevo_tipo`, hacemos:
 

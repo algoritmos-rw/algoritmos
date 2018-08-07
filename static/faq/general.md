@@ -30,44 +30,46 @@ Sí, y contamos con un [instructivo](groups-ui) que explica paso a paso cómo ha
 
 Todos los parcialitos contienen 3 ejercicios, y la nota individual de cada uno de ellos puede ser 'Bien', 'Bien Menos', 'Bien Menos Menos', 'Regular' o 'Mal'. Como regla general, se aprueba con dos ejercicios bien. Tabla completa: 
 
-<br>
-<table class="table table-striped table-bordered table-sm">
-  <tbody id="tabla-notas">
-    <tr>
-      <td><strong>Nota</strong></td>
-      <td><strong>Ejercicios</strong></td>
-    </tr>
-    <tr>
-		<td>10</td>
-      	<td>B B B</td>
-    </tr>
-    <tr>
-		<td>9</td>
-      	<td>B B B-</td>
-    </tr>
-    <tr>
-		<td>8</td>
-      	<td>B B B= | B B- B-</td>
-    </tr>
-    <tr>
-		<td>7 (No puede haber M)</td>
-      	<td>B B- B= | B- B- B- | B B R</td>
-    </tr>
-    <tr>
-		<td>6</td>
-      	<td>B B M | B- B- B= | B B- R | B B= B=</td>
-    </tr>
-    <tr>
-		<td>5</td>
-      	<td>B B- M | B B= R | B- B- R | B B= M | B- B- M | B- B= B=</td>
-    </tr>
-    <tr>
-		<td>4</td>
-      	<td>B= B= M | B- B= M | B- B= R</td>
-    </tr>
-    <tr>
-		<td>Insuficiente</td>
-      	<td>Menos de dos ejercicios Bien</td>
-    </tr>
- </tbody>
-</table>
+<button class="btn btn-secondary" data-toggle="collapse" data-target="#tabla-notas"> Tabla de notas </button>  
+<div id="tabla-notas" class="collapse">	
+	<table class="table table-striped table-bordered table-sm">
+	  <tbody>
+	    <tr>
+	      <td><strong>Nota</strong></td>
+	      <td><strong>Ejercicios</strong></td>
+	    </tr>
+	    <tr>
+			<td>10</td>
+	      	<td>B B B</td>
+	    </tr>
+	    <tr>
+			<td>9</td>
+	      	<td>B B B-</td>
+	    </tr>
+	    <tr>
+			<td>8</td>
+	      	<td>B B B= | B B- B-</td>
+	    </tr>
+	    <tr>
+			<td>7 (No puede haber M)</td>
+	      	<td>B B- B= | B- B- B- | B B R</td>
+	    </tr>
+	    <tr>
+			<td>6</td>
+	      	<td>B B M | B- B- B= | B B- R | B B= B=</td>
+	    </tr>
+	    <tr>
+			<td>5</td>
+	      	<td>B B- M | B B= R | B- B- R | B B= M | B- B- M | B- B= B=</td>
+	    </tr>
+	    <tr>
+			<td>4</td>
+	      	<td>B= B= M | B- B= M | B- B= R</td>
+	    </tr>
+	    <tr>
+			<td>Insuficiente</td>
+	      	<td>Menos de dos ejercicios Bien</td>
+	    </tr>
+	 </tbody>
+	</table>
+</div>

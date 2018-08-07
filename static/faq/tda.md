@@ -21,7 +21,7 @@ Este tipo de punteros puede ser convertido a cualquier otro puntero sin necesida
 
 ### ¿Qué es una estructura en C?
 
-Una estructura en C es un tipo de variables que nos permite almacenar distintos elementos dentro de ellas. Sirven para encapsular lo que refiere a una variable que contendra distintos atributos. Su uso es con la palabra reservada de C `struct`. Por ejemplo, para una entidad de persona, con edad y nombre, se define la estructura:
+Una estructura en C es un tipo de variables que nos permite almacenar distintos elementos dentro de ellas. Sirven para encapsular lo que refiere a una variable que contendrá distintos atributos. Su uso es con la palabra reservada de C `struct`. Por ejemplo, para una entidad de persona, con edad y nombre, se define la estructura:
 
 ```cpp
 struct persona {

@@ -45,9 +45,9 @@ Recordando las que podrían ser las reglas fundamentales de la memoria dinámica
 
 4. En determinadas circunstancias, y si las partes se ponen de acuerdo, es posible transferir, simbólicamente, la “propiedad” de una región de memoria.
 
-Hasta ahora (hasta el TDA Pila), nuestro usuario siempre almaceno datos que existen en la memoria estatica. A estos datos nunca hubo que liberarlos con `free()` porque nunca hubo un `malloc()` asociado ni eramos nosotros (los creadores del TDA pero no del dato) los responsables de liberarlos.
+Hasta ahora (hasta el TDA Pila), nuestro usuario siempre almacenó datos que existían en la memoria estática. A estos datos nunca hubo que liberarlos con `free()` porque nunca hubo un `malloc()` asociado ni eramos nosotros (los creadores del TDA pero no del dato) los responsables de liberarlos. De haber insertado datos de la memoria dinámica, habría sido el usuario el responsable de liberarlo y no la estructura.
 
-En el TDA cola le decimos al usuario: no somos los dueños de estas regiones de memoria que almaceno, pero si vos indicás **cómo**, tomamos “propiedad transitoria” en `cola_destruir()`, y las liberamos a la vez que destruimos el TDA.
+En el TDA cola, si bien no somos los dueños de las regiones de memoria donde se encuentran almacenados los datos a encolar, si el usuario nos dice **cómo**, podemos tomar "propiedad transitoria" en `cola_destruir()` y encargarnos de liberar los datos a la vez que destruimos el TDA
 
 Es este "**cómo**" el segundo parametro de cola_destruir, en forma de [puntero a función de destrucción](/algo2/faq/lenguaje-c#qu%C3%A9-es-un-puntero-a-funci%C3%B3n). (Leer sí o sí antes de continuar).
 
@@ -55,4 +55,4 @@ Si el usuario almacenó enteros, caracteres o cualquier cosa que 'viva' en la me
 
 Si el usuario almacenó punteros a memoria dinámica, llamará a `cola_destruir(cola, free)` ya que un `malloc()` se destruye con un `free()`.
 
-Si el usuario creo su propia estructura, por ejemplo una pila, la función de destrucción debe ser la respectiva a lo que el almacene. El llamado será `cola_destruir(cola, pila_destruir)`.
+Si el usuario creó su propia estructura para almacenar, la función de destrucción deberá ser la asociada a la estructura (de forma que se libere la estructura junto con todo lo que en ella se almacene). Por ejemplo, si el usuario inserta pilas, el llamado será `cola_destruir(cola, pila_destruir)`.
