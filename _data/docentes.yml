@@ -1,4 +1,8 @@
 ayudantes:
+
+- nombre: Agustina Méndez
+  foto: /assets/img/docentes/unknown.png
+
 - nombre: Ana Secchi
   foto: /assets/img/docentes/anas.jpg
 
@@ -35,6 +39,9 @@ ayudantes:
 - nombre: Jasmina Sella Faena
   foto: /assets/img/docentes/jasminasf.jpg
 
+- nombre: Joaquín Torré
+  foto: /assets/img/docentes/unknown.png
+
 - nombre: Jorge Collinet
   foto: /assets/img/docentes/jorgec.jpg
 
@@ -45,6 +52,9 @@ ayudantes:
   foto: /assets/img/docentes/lautarom.jpg
 
 - nombre: Matías Cano
+  foto: /assets/img/docentes/unknown.png
+
+- nombre: Miguel Alfaro
   foto: /assets/img/docentes/unknown.png
 
 - nombre: Milena Marchese
@@ -58,9 +68,6 @@ ayudantes:
 
 - nombre: Rodrigo Souto
   foto: /assets/img/docentes/rodris.jpg
-
-- nombre: Sebastián González
-  foto: /assets/img/docentes/unknown.png
 
 - nombre: Tomás Accini
   foto: /assets/img/docentes/tomasa.jpg
