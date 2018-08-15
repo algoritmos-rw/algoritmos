@@ -22,7 +22,7 @@ Fechas importantes:
 | Viernes       | 07/09/18     | Entrega del vector dinámico |
 | Viernes     | 14/09/18     | Entrega de la pila |
 | Lunes       | 21/09/18     | Entrega de la cola |
-| **Viernes**   | **24/09/18** | **1er parcialito (en el horario de la teórica)** |
+| **Lunes**   | **24/09/18** | **1er parcialito (en el horario de la teórica)** |
 | Lunes       | 28/09/18     | Entrega de la lista enlazada |
 | **Viernes**   | **12/10/18** | **Entrega del TP1** |
 | **Viernes** | **19/10/18** | **2do parcialito (en el horario de la teórica)** |
