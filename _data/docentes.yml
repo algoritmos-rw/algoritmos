@@ -1,4 +1,8 @@
 ayudantes:
+
+- nombre: Agustina Méndez
+  foto: /assets/img/docentes/unknown.png
+
 - nombre: Ana Secchi
   foto: /assets/img/docentes/anas.jpg
 
@@ -8,14 +12,17 @@ ayudantes:
 - nombre: Camila Bojman
   foto: /assets/img/docentes/camib.jpg
 
+- nombre: Camila Dvorkin
+  foto: /assets/img/docentes/unknown.png
+
 - nombre: Cecilia Hortas
   foto: /assets/img/docentes/cecih.jpg
 
+- nombre: Dato Simó
+  foto: /assets/img/docentes/unknown.png
+
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
-
-- nombre: Federico Barrios
-  foto: /assets/img/docentes/fedeb.png
 
 - nombre: Federico del Mazo
   foto: /assets/img/docentes/fededm.jpg
@@ -23,11 +30,17 @@ ayudantes:
 - nombre: Fiona González Lisella
   foto: /assets/img/docentes/fionag.jpg
 
-- nombre: Gianmarco Cafferata
-  foto: /assets/img/docentes/gianc.jpg
+- nombre: Ignacio Raik
+  foto: /assets/img/docentes/unknown.png
+
+- nombre: Javier Di Santo
+  foto: /assets/img/docentes/unknown.png
 
 - nombre: Jasmina Sella Faena
   foto: /assets/img/docentes/jasminasf.jpg
+
+- nombre: Joaquín Torré
+  foto: /assets/img/docentes/unknown.png
 
 - nombre: Jorge Collinet
   foto: /assets/img/docentes/jorgec.jpg
@@ -37,6 +50,12 @@ ayudantes:
 
 - nombre: Lautaro Manzano
   foto: /assets/img/docentes/lautarom.jpg
+
+- nombre: Matías Cano
+  foto: /assets/img/docentes/unknown.png
+
+- nombre: Miguel Alfaro
+  foto: /assets/img/docentes/unknown.png
 
 - nombre: Milena Marchese
   foto: /assets/img/docentes/milem.jpg
@@ -52,4 +71,7 @@ ayudantes:
 
 - nombre: Tomás Accini
   foto: /assets/img/docentes/tomasa.jpg
+
+- nombre: Tomás Lofano
+  foto: /assets/img/docentes/unknown.png
 
