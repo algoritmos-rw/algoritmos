@@ -57,7 +57,7 @@ Considerar los siguientes casos borde:
 split("abc,,def", ',')  →  ["abc", "", "def"]
 split("abc,def,", ',')  →  ["abc", "def", ""]
 split(",abc,def", ',')  →  ["", "abc", "def"]
-split("abc", '\0')      →  ["abc", ""]
+split("abc", '\0')      →  ["abc"]
 
 split("", ',')  →  [""]
 split(",", ',') →  ["", ""]
