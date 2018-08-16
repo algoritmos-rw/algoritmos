@@ -57,6 +57,7 @@ Considerar los siguientes casos borde:
 split("abc,,def", ',')  →  ["abc", "", "def"]
 split("abc,def,", ',')  →  ["abc", "def", ""]
 split(",abc,def", ',')  →  ["", "abc", "def"]
+split("abc", '\0')      →  ["abc"]
 
 split("", ',')  →  [""]
 split(",", ',') →  ["", ""]
@@ -77,7 +78,6 @@ char *otro_resultado = join(palabras, ',');  // "Hola,mundo"
 
 Casos borde:
 ``` cpp
-join([], ",")        →  ""
 join([""], ",")      →  ""
 join(["abc"], ",")   →  "abc"
 join(["", ""], ",")  →  ","
