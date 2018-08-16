@@ -26,6 +26,6 @@ Para más información se puede ver la [ayuda de Google](https://support.google.
 
 Sí, y contamos con un [instructivo](groups-ui) que explica paso a paso cómo hacerlo.
 
-## ¿Cómo se determina la nota de mi parcialito?
+## ¿Cómo se determina la nota de mi parcialito o mi final?
 
-Todos los parcialitos contienen 3 ejercicios, y la nota individual de cada uno de ellos puede ser 'Bien', 'Bien Menos', 'Bien Menos Menos', 'Regular' o 'Mal'. Como regla general, se aprueba con dos ejercicios bien. [Tabla completa de notas](https://docs.google.com/document/d/1kRIMyiF_EnG8LtfCSN5GAU45ylEw4BgOR5lv8igRLMU/edit?usp=sharing)
+Todos los parcialitos contienen 3 ejercicios, y los finales 5. La nota individual de cada uno de ellos puede ser 'Bien', 'Bien Menos', 'Bien Menos Menos', 'Regular' o 'Mal'. Como regla general, los parcialitos se aprueban con dos ejercicios bien, y los finales con 3 ejercicios bien. [Tabla completa de notas](https://docs.google.com/document/d/1kRIMyiF_EnG8LtfCSN5GAU45ylEw4BgOR5lv8igRLMU/edit?usp=sharing)
