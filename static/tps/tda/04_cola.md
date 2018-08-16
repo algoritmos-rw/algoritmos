@@ -22,6 +22,8 @@ Deberán entregar el código en papel, con el nombre y padrón, imprimiendo el a
 
 Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 
+**No olvidar visitar las [preguntas frecuentes de la cola](/algo2/faq/cola)**
+
 ---
 ### Bibliografia recomendada
 * Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *3.4. The Queue ADT*.

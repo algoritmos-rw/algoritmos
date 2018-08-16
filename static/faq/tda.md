@@ -19,6 +19,22 @@ El tipo `void*` es un tipo que representa un puntero a un tipo no especificado. 
 
 Este tipo de punteros puede ser convertido a cualquier otro puntero sin necesidad de un casteo explícito, pero debido a que no se sabe a qué apunta no puede ni desreferenciarse ni ser usado para calcular aritmética de punteros.
 
+### ¿Qué es una estructura en C?
+
+Una estructura en C es un tipo de variables que nos permite almacenar distintos elementos dentro de ellas. Sirven para encapsular lo que refiere a una variable que contendrá distintos atributos. Su uso es con la palabra reservada de C `struct`. Por ejemplo, para una entidad de persona, con edad y nombre, se define la estructura:
+
+```cpp
+struct persona {
+    unsigned int edad;
+    char* nombre;
+    int* dni;
+}
+```
+
+Ahora, ya sabemos que el `struct persona` contiene una edad del tipo `unsigned int` y una cadena para el nombre. También contiene un puntero al dni, que es un entero.
+
+Para acceder a estos miembros de la estructura, se puede acceder tanto al atributo mismo, con el operador punto `juan.nombre` como a lo que apunta un atributo que sea un puntero, con el operador `->`, `juan->dni`.
+
 ### ¿Qué significa el error dereferencing pointer to incomplete type?
 
 Este error se da cuando se trata de acceder a un miembro de una estructura de la cual no se tiene información.  Si en el archivo .h aparece únicamente:

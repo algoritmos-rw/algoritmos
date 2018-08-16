@@ -12,6 +12,44 @@ FAQ - Lenguaje C Compilación y Ejecución
 * Contenido
 {:toc}
 
+## ¿Qué signfica que un lenguaje sea, como C, compilado?
+
+Significa que para ejecutar nuestro programa se lo debe primero traducir a código binario que la CPU de la computadora pueda entender. Una vez traducido, el resultado (las instrucciones binarias) se pueden enviar a la CPU para su ejecución.
+
+A ese paso de traducción le llamamos compilación .
+
+Es por esto que las instrucciones del TP0 consisten en dos pasos. Primero, la compilación:
+
+`gcc -std=c99 -Wall -pedantic -Werror -o pruebas *.c`
+
+(El compilador que empleamos se llama GCC.)
+
+Esto produce en nuestro directorio de trabajo un archivo nuevo llamado pruebas (pero podríamos llamarle cualquier otro nombre que quisiéramos).
+
+A continuación, le podemos decir al sistema operativo que corra ese código binario que se encuentra en el archivo nuevo:
+
+`./pruebas`
+
+Solo en este segundo paso veríamos si nuestro código compilado hace lo que se espera.
+
+En el primer paso, el compilador solamente detecta errores de sintaxis, o errores simples ( advertencias ) que el compilador piensa que pueden conducir a errores de comportamiento.
+
+## ¿Cómo hago para compilar varios archivos?
+
+Para compilar solo un archivo (por ejemplo, `pruebas.c`) se utiliza:
+
+`gcc -std=c99 -Wall -pedantic -Werror -o pruebas pruebas.c`
+
+Acá, `pruebas.c` debe contener la función main, que es la que ejecutará.
+
+Por otro lado, para compilar varios archivos en un solo programa se utiliza:
+
+`gcc -std=c99 -Wall -pedantic -Werror -o pruebas pruebas1.c pruebas2.c`
+
+Para no especificar cada archivo del proyecto, puedo simplemente llamar a todo archivo `.c` del directorio, con el _wildcard_ (comodín) `*.c`
+
+`gcc -std=c99 -Wall -pedantic -Werror -o pruebas *.c`
+
 ## ¿Cómo hago para tener una función que usa otra, pero está más adelante en el código?
 
 Se puede incluir el prototipo de la función para 'avisarle' al compilador que se va a encontrar con la definición de la función más adelante:
@@ -30,6 +68,48 @@ void f(int x){
 ```
 
 De esta forma, el compilador puede hacer el chequeo de tipos sin conocer el cuerpo de la función.
+
+Esto es lo que se llama una **declaración** de una función de C.
+
+##  ¿Qué son los archivos .h?
+
+Un archivo _header_ es un archivo que contiene declaraciones de funciones que utilizaremos en el programa.
+
+Es con estas cabeceras que relacionamos dos archivos `.c`. Ya que un archivo siempre debe conocer el prototipo de una función que utiliza, un archivo debe _incluir_ la cabecera de otro para poder hacer uso de sus funciones.
+
+Por ejemplo, teniendo un archivo principal que imprime hola y un archivo que imprime mundo, desde nuestro archivo principal `hola.c` debemos incluir la función de nuestro segundo archivo. Esto se hace con el comando al preprocesador de C, `#include "mundo.h"` en las primeras lineas del programa. Al compilar, tendremos que compilar al mismo programa tanto el archivo hola como el archivo mundo. No deben incluirse los archivos `.h` en la compilación.
+
+También el mismo archivo `mundo.c` debe incluir a su propia cabecera, para poder ahorrarse el pensar en el orden que tiene que definir las funciones que va a utilizar. Ya que al incluir la cabecera el compilador sabrá todas las declaraciones de sus funciones, luego todas pueden ser escritas en el orden que sea, sin restricciones de declarar una función antes de utilizarla.
+
+Hacemos una distinción del comando de inclusión:
+
+* `#include <archivo.h>`: Incluye cabeceras del lenguaje C, para poder hacer uso de funciones como `printf`, `puts` y otras.
+
+* `#include "archivo.h"`: Incluye cabeceras en nuestro mismo directorio.
+
+Estos archivos también funcionan como documentación del programa. ¿Qué puede usar el usuario de mi programa? ¿Qué tiene a su disposición? ¿Qué hace cada función? 
+
+Es decir, este archivo es la interfaz que se proporciona junto al programa. Por ejemplo, al hacer un juego tendremos varias funciones. Muchas de estas serán públicas (por ejemplo, `jugar`, con su respectiva documentación), ya que son las que le daremos al usuario, pero también algunas son privadas (por ejemplo, `calcular_puntaje`). Son las funciones públicas las que se declaran en el archivo header.
+
+## ¿Qué es un archivo objeto?
+
+Un archivo objeto es el paso intermedio entre los archivos `.c` y `.h` y el programa mismo. Sirven para _encapsular_ comportamiento del programa, y no tener que estar todo el tiempo compilando todos los archivos `.c` de nuestro programa.
+
+Por ejemplo, si tenemos un directorio con `puntaje.c`, `usuarios.c` y `juego.c` y la implementación de puntajes no depende de la de usuarios (y viceversa), vamos a querer generar 2 objetos distintos `puntaje.o` y `usuarios.o`, mientras que el archivo de juego nos servira para _enlacar_ (link) los dos objetos y generar finalmente el juego deseado.
+
+Al hacer esto, suponiendo que queremos arreglar un error en el archivo de puntajes, no tendremos que recompilar el objeto de usuarios, ya que ese funciona correctamente.
+
+Para compilar un archivo (o varios) `.c` a un objeto, se hace con la directiva `-c` de gcc. Sin esta directiva, se compila directamente los archivos `.c` al ejecutable, como venimos trabajando.
+
+Continuando con el ejemplo:
+```
+gcc -std=c99 -Wall -pedantic -Werror -c -o puntaje.o puntaje.c
+gcc -std=c99 -Wall -pedantic -Werror -c -o usuarios.o usuarios.c
+gcc -std=c99 -Wall -pedantic -Werror -o juego juego.c usuarios.o puntaje.o
+./juego
+```
+
+La primera y segunda linea se refieren a compilar los dos archivos .c a sus respectivos objetos. Luego, haciendo uso del archivo principal del juego (el que contiene main), en la tercera linea los enlacamos. Por último, lo ejecutamos normalmente.
 
 ## ¿Por qué mis `printf` no se imprimen?  
 
