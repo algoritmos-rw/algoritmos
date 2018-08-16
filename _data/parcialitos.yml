@@ -1,0 +1,27 @@
+1er:
+  label: 1er parcialito (en el horario de la teórica)
+  fecha: 2018-09-03
+
+2do:
+  label: 2do parcialito (en el horario de la teórica)
+  fecha: 2018-10-19
+
+3ro:
+  label: 3er parcialito (en el horario de la teórica)
+  fecha: 2018-11-09
+
+4to:
+  label: 4to parcialito (en el horario de la teórica)
+  fecha: 2018-12-07
+
+recu1y2:
+  label: 1er recuperatorio (parcialitos 1 y 2)
+  fecha: 2018-12-10
+
+recu2y3:
+  label: 1er recuperatorio (parcialitos 3 y 4)
+  fecha: 2018-12-14
+
+recutodos:
+    label: 2do recuperatorio (parcialitos 1, 2, 3 y 4)
+    fecha: 2018-12-17
