@@ -23,10 +23,10 @@ Fechas importantes:
 | Viernes     | 14/09/18     | Entrega de la pila |
 | Viernes       | 21/09/18     | Entrega de la cola |
 | **Lunes**   | **24/09/18** | **1er parcialito (en el horario de la teórica)** |
-| Viernes       | 28/09/18     | Entrega de la lista enlazada |
-| **Viernes**   | **12/10/18** | **Entrega del TP1** |
-| **Viernes** | **19/10/18** | **2do parcialito (en el horario de la teórica)** |
+| Lunes       | 01/10/18     | Entrega de la lista enlazada |
 | Viernes     | 19/10/18     | Entrega del hash |
+| **Lunes**   | **22/10/18** | **Entrega del TP1** |
+| **Lunes** | **22/10/18** | **2do parcialito (en el horario de la teórica)** |
 | Lunes       | 29/10/18     | Entrega del ABB |
 | Lunes     | 05/11/18     | Entrega del heap |
 | **Viernes** | **09/11/18** | **3er parcialito (en el horario de la teórica)** |
