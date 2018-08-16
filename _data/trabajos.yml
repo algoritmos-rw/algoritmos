@@ -32,24 +32,24 @@ Cola:
 
 Lista:
   id: Lista
-  publicacion: 2018-09-21
-  entrega: 2018-09-28
+  publicacion: 2018-09-24
+  entrega: 2018-10-01
   zip: lista.zip
   zip_link: https://drive.google.com/open?id=171IO3RKSbpuI8EsK9YFWrmNNvg-stjF1
   enunciado_link: /tps/lista
 
 TP1:
   id: TP1
-  publicacion: 2018-09-28
-  entrega: 2018-10-12
+  publicacion: 2018-10-01
+  entrega: 2018-10-19
   zip: strutil.h
   zip_link: https://drive.google.com/file/d/1tTT0YJbjpJeMqwlk8keAvJUXlBH6Y8xx/view
   enunciado_link: /tps/2018_1/tp1
 
 Hash:
   id: Hash
-  publicacion: 2018-10-01
-  entrega: 2018-10-19
+  publicacion: 2018-10-05
+  entrega: 2018-10-22
   zip: hash.zip
   zip_link: https://drive.google.com/open?id=1SiMNVEP6VhlDNl4YnBaewmgCJBNVHRhR
   enunciado_link: /tps/hash
