@@ -11,32 +11,19 @@ La materia será dictada en 32 clases a lo largo de 16 semanas.
 Cada clase estará dividida en una parte teórica y una práctica, de 1:30 hs cada una.
 Las clases teóricas se dictarán los días lunes y viernes de 17:30 a 19:00 hs y las clases prácticas, los mismos días en el horario de 19:00 a 20:30 hs.
 
-Contamos con un [calendario detallado](https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ3OhxRs75vjb6cpnOPrqosvw1_KEoTkptIPj8iEF8T6q3eurpJ5vZ0NwYJuiS89AqSyaKJPOn9pBp/pubhtml?gid=8&single=true) de las clases para descargar.
+Contamos con un [calendario detallado]({{site.data.cuatrimestre.calendario_detallado}}) de las clases para descargar.
 
 Fechas importantes:
 
-{: .table .table-striped}
-| Día         |   Fecha      |      Detalle     |
-|-------------|--------------|------------------|
-| **Lunes** | **03/09/18** | **Entrega del TP0** |
-| Viernes       | 07/09/18     | Entrega del vector dinámico |
-| Viernes     | 14/09/18     | Entrega de la pila |
-| Viernes       | 21/09/18     | Entrega de la cola |
-| **Lunes**   | **24/09/18** | **1er parcialito (en el horario de la teórica)** |
-| Viernes       | 28/09/18     | Entrega de la lista enlazada |
-| **Viernes**   | **12/10/18** | **Entrega del TP1** |
-| **Viernes** | **19/10/18** | **2do parcialito (en el horario de la teórica)** |
-| Viernes     | 19/10/18     | Entrega del hash |
-| Lunes       | 29/10/18     | Entrega del ABB |
-| Lunes     | 05/11/18     | Entrega del heap |
-| **Viernes** | **09/11/18** | **3er parcialito (en el horario de la teórica)** |
-| **Viernes** | **16/11/18** | **Entrega del TP2** |
-| **Viernes** | **7/12/18** | **4to parcialito (en el horario de la teórica)** |
-| **Viernes** | **7/12/18** | **Entrega del TP3** |
-| Lunes       | 10/12/18     | 1er recuperatorio (parcialitos 1 y 2) |
-| Viernes     | 14/12/18     | 1er recuperatorio (parcialitos 3 y 4) |
-| Viernes     | 17/12/18     | 2do recuperatorio (parcialitos 1, 2, 3 y 4) |
-
+<table class="table table-striped">
+  <tbody id="tabla-calendario">
+    <tr>
+      <td><strong>Día</strong></td>
+      <td><strong>Fecha</strong></td>
+      <td><strong>Detalle</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 Los temas a ser evaluados en cada parcialito son:
 - **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas. Listas. **Iteradores de listas.**
@@ -50,12 +37,8 @@ Finales
 -------
 
 {: .table .table-striped}
-| Día       | Fecha        | Detalle            |
-|-----------|--------------|--------------------|
-|           |              |                    |
-|           |              |                    |
-|           |              |                    |
-|           |              |                    |
-|           |              |                    |
+| **Día**       | **Fecha**      | **Detalle** |{%for f in site.data.finales%}{% assign final = f[1] %}
+| {{final.dia}} | {{final.fecha}}| {{final.detalle}}{% endfor %}
 
 
+ <script src="{{ '/assets/js/calendario.js' | relative_url }}"></script>
