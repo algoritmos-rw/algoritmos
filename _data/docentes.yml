@@ -1,5 +1,8 @@
 ayudantes:
 
+- nombre: Adeodato Simó
+  foto: /assets/img/docentes/dato.jpg
+
 - nombre: Agustina Méndez
   foto: /assets/img/docentes/agusm.png
 
@@ -17,9 +20,6 @@ ayudantes:
 
 - nombre: Cecilia Hortas
   foto: /assets/img/docentes/cecih.jpg
-
-- nombre: Dato Simó
-  foto: /assets/img/docentes/unknown.png
 
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
