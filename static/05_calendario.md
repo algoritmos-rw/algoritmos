@@ -11,6 +11,8 @@ La materia será dictada en 32 clases a lo largo de 16 semanas.
 Cada clase estará dividida en una parte teórica y una práctica, de 1:30 hs cada una.
 Las clases teóricas se dictarán los días lunes y viernes de 17:30 a 19:00 hs y las clases prácticas, los mismos días en el horario de 19:00 a 20:30 hs.
 
+Las fechas importantes pueden ser seguidas con [el calendario](https://calendar.google.com/calendar?cid=dHBzLjc1NDFyd0BnbWFpbC5jb20) de la lista de correos.
+
 Contamos con un [calendario detallado]({{site.data.cuatrimestre.calendario_detallado}}) de las clases para descargar.
 
 Fechas importantes:
