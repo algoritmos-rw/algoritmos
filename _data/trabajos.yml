@@ -1,87 +1,87 @@
 TP0:
   id: TP0
-  publicacion: 2018-08-27
-  entrega: 2018-09-03
+  publicacion: 08/27/2018
+  entrega: 09/03/2018
   zip: tp0.zip
   zip_link: https://drive.google.com/open?id=1yMiOLQiE2yrTBqoCirNAq5cG4-l3f0_n
   enunciado_link: /tps/tp0
 
 VD:
   id: VD
-  publicacion: 2018-09-03
-  entrega: 2018-09-07
+  publicacion: 09/03/2018
+  entrega: 09/07/2018
   zip: vd.zip
   zip_link: https://drive.google.com/open?id=1t6Uj8rUQUEZk7E5OpzxoKtlyFi5HGDxC
   enunciado_link: /tps/vd
 
 Pila:
   id: Pila
-  publicacion: 2018-09-07
-  entrega: 2018-09-14
+  publicacion: 09/07/2018
+  entrega: 09/14/2018
   zip: pila.zip
   zip_link: https://drive.google.com/open?id=1oPWpgKH4kePwSXDnkkAKeNRpabsV2SsI
   enunciado_link: /tps/pila
 
 Cola:
   id: Cola
-  publicacion: 2018-09-14
-  entrega: 2018-09-21
+  publicacion: 09/14/2018
+  entrega: 09/21/2018
   zip: cola.zip
   zip_link: https://drive.google.com/open?id=14FBBgw5aO4BgyhSit93M3YVhUqYAZYlR
   enunciado_link: /tps/cola
 
 Lista:
   id: Lista
-  publicacion: 2018-09-24
-  entrega: 2018-10-01
+  publicacion: 09/24/2018
+  entrega: 10/01/2018
   zip: lista.zip
   zip_link: https://drive.google.com/open?id=171IO3RKSbpuI8EsK9YFWrmNNvg-stjF1
   enunciado_link: /tps/lista
 
 TP1:
   id: TP1
-  publicacion: 2018-10-01
-  entrega: 2018-10-19
+  publicacion: 10/01/2018
+  entrega: 10/19/2018
   zip: strutil.h
   zip_link: https://drive.google.com/file/d/1tTT0YJbjpJeMqwlk8keAvJUXlBH6Y8xx/view
   enunciado_link: /tps/2018_1/tp1
 
 Hash:
   id: Hash
-  publicacion: 2018-10-05
-  entrega: 2018-10-22
+  publicacion: 10/05/2018
+  entrega: 10/22/2018
   zip: hash.zip
   zip_link: https://drive.google.com/open?id=1SiMNVEP6VhlDNl4YnBaewmgCJBNVHRhR
   enunciado_link: /tps/hash
 
 ABB:
   id: ABB
-  publicacion: 2018-10-12
-  entrega: 2018-10-29
+  publicacion: 10/12/2018
+  entrega: 10/29/2018
   zip: abb.zip
   zip_link: https://drive.google.com/open?id=1p8V7p5dNo5FxLCJcysBXSmP0kdrPSnHy
   enunciado_link: /tps/abb
 
 Heap:
   id: Heap
-  publicacion: 2018-10-26
-  entrega: 2018-11-05
+  publicacion: 10/26/2018
+  entrega: 11/05/2018
   zip: heap.zip
   zip_link: https://drive.google.com/open?id=1zfNPouzWN4HCnKvSTbY5HH9N_E-qPG2n
   enunciado_link: /tps/heap
 
 TP2:
   id: TP2
-  publicacion: 2018-10-29
-  entrega: 2018-11-16
+  publicacion: 10/29/2018
+  entrega: 11/16/2018
   zip:
   zip_link:
   enunciado_link: /tps/2018_1/tp2
 
 TP3:
   id: TP3
-  publicacion: 2018-11-16
-  entrega: 2018-12-07
+  publicacion: 11/16/2018
+  entrega: 12/07/2018
   zip:
   zip_link:
   enunciado_link: /tps/2018_1/tp3
