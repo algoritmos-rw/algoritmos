@@ -13,7 +13,7 @@ Las clases teóricas se dictarán los días lunes y viernes de 17:30 a 19:00 hs 
 
 Las fechas importantes pueden ser seguidas con [el calendario](https://calendar.google.com/calendar?cid=dHBzLjc1NDFyd0BnbWFpbC5jb20) de la lista de correos.
 
-Contamos con un [calendario detallado]({{site.data.cuatrimestre.calendario_detallado}}) de las clases para descargar.
+Además, contamos con un [calendario detallado]({{site.data.cuatrimestre.calendario_detallado}}) de las clases para descargar.
 
 Fechas importantes:
 
