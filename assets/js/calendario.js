@@ -36,7 +36,7 @@ function diadelasemana(fecha){
 }
 
 function prettyfecha(fecha){
-    return fecha.getDate()+1 + '/' + (fecha.getMonth()+1) + '/' + (fecha.getFullYear());
+    return fecha.getUTCDate() + '/' + (fecha.getUTCMonth()+1) + '/' + (fecha.getFullYear());
 }
 
 function byDate(a,b) {
