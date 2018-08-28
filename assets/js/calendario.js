@@ -31,12 +31,12 @@ function agregarTPsYParcialitosACalendario() {
 
 function diadelasemana(fecha){
     var numero = fecha.getDay();
-    if (numero == 1) return 'Lunes'
-    if (numero == 5) return 'Viernes'
+    if (numero == 0) return 'Lunes'
+    if (numero == 4) return 'Viernes'
 }
 
 function prettyfecha(fecha){
-    return fecha.getDate() + '/' + (fecha.getMonth()+1) + '/' + (fecha.getFullYear());
+    return fecha.getDate()+1 + '/' + (fecha.getMonth()+1) + '/' + (fecha.getFullYear());
 }
 
 function byDate(a,b) {
