@@ -16,9 +16,8 @@ function agregarTPsATabla() {
     
     {% for x in site.data.trabajos %}{% assign tp = x[1] %}
         var dtPublicacion = new Date("{{tp.publicacion}}");
-
         var dtEntrega = new Date("{{tp.entrega}}");
-
+        
         var tabla = document.getElementById("tabla-trabajos");
         var fila = document.createElement("tr")
         
@@ -27,8 +26,8 @@ function agregarTPsATabla() {
         
         if (dtHoy >= dtPublicacion && dtHoy <= dtFinCuatrimestre) fila.innerHTML += "<td> <a href='{{tp.zip_link}}'>{{tp.zip}}</a> </td>"
         else fila.innerHTML += "<td> {{tp.zip}} </td>"
-        var prettyPublicacion = dtPublicacion.getDate() + ' de ' + monthNames[dtPublicacion.getMonth()];
-        var prettyEntrega = dtEntrega.getDate() + ' de ' + monthNames[dtEntrega.getMonth()];
+        var prettyPublicacion = dtPublicacion.getUTCDate() + ' de ' + monthNames[dtPublicacion.getUTCMonth()];
+        var prettyEntrega = dtEntrega.getUTCDate() + ' de ' + monthNames[dtEntrega.getUTCMonth()];
 
         if (dtHoy <= dtFinCuatrimestre) fila.innerHTML += "<td>" + prettyPublicacion + "</td>"
         else fila.innerHTML += "<td> </td>"
