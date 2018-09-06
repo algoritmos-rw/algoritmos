@@ -19,14 +19,14 @@ Además, la opción `--track-origins=yes` sirve para llevar un registro del uso 
 
 ## ¿Qué significa Conditional jump or move depends on uninitialised value?
 
-Significa que una variable utilizada en un `if` no está inicializada. Puede ser que se trate de una variable local que no se asignó a nada, o de una variable que otra función debía guardar, y por algún motivo no la guardó.
+Significa que una variable utilizada en algún salto condicional (por ejemplo, `if`) no está inicializada. Puede ser que se trate de una variable local que no se asignó a nada, o de una variable que otra función debía guardar, y por algún motivo no la guardó.
 
 ## ¿Qué significa Invalid read of size X / Invalid write of size X?
 
 Este tipo de mensajes suele aparecer cuando se trata de leer o escribir más posiciones de las que fueron reservadar originalmente. Por ejemplo si se hizo:
 
 ``` cpp
-void** datos = malloc(10*sizeof(void*))
+void** datos = malloc(10 * sizeof(void*));
 ```
 
 Despues se podrá leer y escribir hasta `datos[9]`, al acceder a `datos[10]` o mayor, dará este error.
