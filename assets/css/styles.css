@@ -7,29 +7,10 @@
   }
 }
 
-@media (max-width: 1048px) { /* Maximo valor para mostrar el navbar cerrado */
-  .navbar-header {
-    float: none;
-  }
-  .navbar-toggle {
-    display: block;
-  }
-  .navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px;
-  }
-  .navbar-collapse.collapse {
-    display: none!important;
-  }
-  .navbar-nav {
-    float: none!important;
-    margin-top: 7.5px;
-  }
-  .collapse.in{
-    display:block !important;
-  }
-  .navbar-brand {
-    display: inline !important;
+@media (max-width: 1100px) {
+  .navbar-nav li a {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
