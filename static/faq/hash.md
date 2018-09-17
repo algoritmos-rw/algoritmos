@@ -59,7 +59,8 @@ Entonces, con la idea de que queremos generar la menor cantidad de colisiones po
 
 Claramente, si se hace un modulo de un multiplo de un número a otro, el resultado sera 0, ya que la división es perfecta, sin resto. 
 
-```4 mod 2 = 0
+```
+4 mod 2 = 0
 8 mod 2 = 0
 16 mod 2 = 0
 ...
