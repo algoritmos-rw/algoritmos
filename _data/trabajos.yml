@@ -25,7 +25,7 @@ Pila:
 Cola:
   id: Cola
   publicacion: 2018-09-14
-  entrega: 2018-09-21
+  entrega: 2018-09-24
   zip: cola.zip
   zip_link: https://drive.google.com/open?id=14FBBgw5aO4BgyhSit93M3YVhUqYAZYlR
   enunciado_link: /tps/cola
