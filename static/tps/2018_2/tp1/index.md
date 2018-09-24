@@ -1,0 +1,241 @@
+---
+layout: page
+title: TP1 – Manejo de archivos, cadenas y TDAs básicos
+permalink: '/tps/2018_2/tp1'
+math: true
+
+trabajo: TP1
+---
+{% assign TP = site.data.trabajos[page.trabajo] %}
+
+# Trabajo Práctico 1
+
+{:.no_toc}
+
+## Contenido
+
+{:.no_toc}
+
+* Contenido
+{:toc}
+
+El Trabajo Práctico número 1 tiene fecha de entrega para el **lunes 14/05**, y
+está divido en tres partes:
+* implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
+* implementación de aplicaciones similares a comandos Unix: [`tail`](#tail) y [`diff`](#diff). 
+* implementación de un programa [`syntax_val`](#syntax-validation). 
+
+
+## Manejo de cadenas
+
+Se pide implementar las funciones del archivo [{{TP.zip}}]({{TP.zip_link}}) que se describen a continuación. Se permite utilizar cualquier funcion de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
+
+### split()
+
+La función `split()` divide una cadena en subcadenas en cada ocurrencia de un
+caracter de separación determinado. Por ejemplo, separando por comas:
+
+``` cpp
+split("abc,def,ghi", ',')  →  ["abc", "def", "ghi"]
+```
+
+En C, devolveremos el resultado como un arreglo dinámico de cadenas dinámicas
+terminado en `NULL`. Esto es:
+
+``` cpp
+// Ejemplo de arreglo dinámico de cadenas
+char **strv = malloc(sizeof(char*) * 4);
+strv[0] = strdup("abc");
+strv[1] = strdup("def");
+strv[2] = strdup("ghi");
+strv[3] = NULL;
+```
+
+Considerar los siguientes casos borde:
+
+``` cpp
+split("abc,,def", ',')  →  ["abc", "", "def"]
+split("abc,def,", ',')  →  ["abc", "def", ""]
+split(",abc,def", ',')  →  ["", "abc", "def"]
+split("abc", '\0')      →  ["abc"]
+
+split("", ',')  →  [""]
+split(",", ',') →  ["", ""]
+```
+
+### join
+
+La función `join()` es la inversa de `split()`. Concatena un arreglo de cadenas terminado en NULL mediante un caracter de separación:
+
+``` cpp
+// Ejemplo de uso de join
+char **strv = split("abc,def,ghi", ',');
+char *resultado = join(strv, ';');  // "abc;def;ghi"
+
+char **palabras = split("Hola mundo", ' ');
+char *otro_resultado = join(palabras, ',');  // "Hola,mundo"
+```
+
+Casos borde:
+``` cpp
+join([""], ",")      →  ""
+join(["abc"], ",")   →  "abc"
+join(["", ""], ",")  →  ","
+join([NULL], ",")    →  ""
+```
+
+Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(n)$$ (Siendo $$n$$ la longitud de la cadena resultante).
+
+Las pruebas del corrector automático proveen una indicación. Este sería un test con comportamiento lineal:
+
+    [ RUN      ] test_join.test_cuadratico_10000
+    [       OK ] test_join.test_cuadratico_10000 (7 ms)
+    [ RUN      ] test_join.test_cuadratico_20000
+    [       OK ] test_join.test_cuadratico_20000 (14 ms)
+    [ RUN      ] test_join.test_cuadratico_30000
+    [       OK ] test_join.test_cuadratico_30000 (17 ms)
+    [ RUN      ] test_join.test_cuadratico_40000
+    [       OK ] test_join.test_cuadratico_40000 (27 ms)
+    [ RUN      ] test_join.test_cuadratico_50000
+    [       OK ] test_join.test_cuadratico_50000 (33 ms)
+    [ RUN      ] test_join.test_cuadratico_60000
+    [       OK ] test_join.test_cuadratico_60000 (40 ms)
+
+Y este con comportamiento cuadrático:
+
+    [ RUN      ] test_join.test_cuadratico_10000
+    [       OK ] test_join.test_cuadratico_10000 (48 ms)
+    [ RUN      ] test_join.test_cuadratico_20000
+    [       OK ] test_join.test_cuadratico_20000 (618 ms)
+    [ RUN      ] test_join.test_cuadratico_30000
+    [       OK ] test_join.test_cuadratico_30000 (1354 ms)
+    [ RUN      ] test_join.test_cuadratico_40000
+    [       OK ] test_join.test_cuadratico_40000 (2425 ms)
+    [ RUN      ] test_join.test_cuadratico_50000
+    [       OK ] test_join.test_cuadratico_50000 (4019 ms)
+    [ RUN      ] test_join.test_cuadratico_60000
+    [       OK ] test_join.test_cuadratico_60000 (5722 ms)
+
+
+### free_strv()
+
+`free_strv()` libera la memoria asociada con un arreglo dinámico de cadenas dinámicas:
+
+## Aplicaciones
+
+### Grep
+
+Se pide implementar una versión simplificada de la utilidad [grep](http://man7.org/linux/man-pages/man1/egrep.1.html) de Unix. 
+`grep` imprime las lineas de un archivo, o de entrada estándar que cumpla con la expresion regular pasada por parametro.
+
+En nuestro caso, el programa va a recibir una cadena simple y va a chequear si esa cadena está contenida en cada linea del archivo o de la entrada estandar.
+Nuestra implementacion recibirá:
+ - Una cadena, que va a ser la que se usará para  ver si esa cadena está contenida en cada linea de el archivo o entrada estandar,
+ - Un numero entero `N` que será la cantidad de lineas a mostrar por consola antes del "match" de la cadena y la linea leida
+ - Opcionalmente un nombre de archivo que va a ser el archivo que grep va a tener que leer, si no recibe este parametro, tiene que leer de entrada estandar. 
+Por ejemplo, usando el archivo `charla.txt`:
+```
+$ cat charla.txt
+Hola!
+Hola, como te va?
+Bien, y a vos?
+Esplendido, acá haciendo el tp1 de algo2
+Uuuu q diverr
+Se ...
+
+
+$ ./grep vos 0 charla.txt 
+Bien, y a vos?
+
+$ cat charla.txt | ./grep vos 0
+Bien, y a vos?
+
+$ cat charla.txt | ./grep vos 1
+Hola, como te va?
+Bien, y a vos?
+
+$ cat charla.txt | ./grep vos 5
+Hola!
+Hola, como te va?
+Bien, y a vos?
+
+$ cat charla.txt | ./grep ien 0
+Bien, y a vos?
+Esplendido, acá haciendo el tp1 de algo2
+
+$ cat charla.txt | ./grep ien 1
+Hola, como te va?
+Bien, y a vos?
+Esplendido, acá haciendo el tp1 de algo2
+
+$ cat charla.txt | ./grep umpalumpa! 1 
+```
+
+#### Observaciones
+
+- No se permite almacenar todo el archivo en memoria. Se puede almacenar, como máximo, `N + 1` líneas. Tampoco se permite el uso de archivos temporales.
+
+- Se debe validar tanto que la cantidad de parámetros sea la correcta, como que el parámetro sea efectivamente un número. En caso de no contar con la cantidad de parámetros correctos se debe imprimir por salida de error (`stderr`) "Cantidad de parametros erronea", y finalizar la ejecución. En caso que el parámetro no sea un número, se debe imprimir por salida de error (`stderr`) "Tipo de parametro incorrecto".
+
+- Cabe notar que, al tratarse de entrada estándar, en ningún caso puede ser leída dos veces para averiguar el número de líneas primero.
+
+- Todas las salidas deben hacerse por salida estándar (`stdout`) y en caso de que no haya ningún "match", no se debe imprimir nada.
+
+
+## Calculator_2000
+
+Se pide implementar un programa que permita realizar operaciones matematicas. El programa debe leer las líneas de entrada estándar, donde cada una de dichas líneas sean instrucciones a ejecutar, y ejecutar las mismas. 
+
+```
+$ cat scripts1.txt
+10 5 + +
+10 5 3 + *
+
+
+$ cat scripts1.txt | ./calculator_2000
+ERROR
+80
+
+
+TODO: poner más ejemplos
+```
+
+#### Observaciones
+
+- Todas las salidas deben hacerse por salida estándar (`stdout`).
+
+## Criterios de aprobación
+
+El código entregado debe ser claro y legible y ajustarse a las especificaciones
+de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
+
+La entrega incluye, obligatoriamente, los siguientes archivos de código:
+
+- `strutil.c` con las implementaciones de las funciones `split`, `join` y `free_strv`.
+- El código de la solución de `grep` y `calculator_2000`.
+- El código de los TDAs programados en la cursada que se requieran, con las
+modificaciones que sean necesarias.
+- Un archivo `deps.mk` con las dependencias del proyecto en formato make. Este
+deberá contener sólamente una línea por programa que indique qué _objetos_ necesita para
+compilar el ejecutable de cada uno de los archivos, por ejemplo:
+
+``` makefile
+grepl: grep.c 
+calculator_2000: calculator_2000.c
+```
+
+El corrector automático va a interpretar ese archivos de dependencias y va a
+compilar todos los `.o` especificados a partir de los `.h` y `.c` que deberán
+enviar, con los siguientes flags de `GCC`:
+
+```
+-g -std=c99 -Wall -Wtype-limits -pedantic -Wconversion -Wno-sign-conversion
+```
+
+La entrega se realiza:
+
+1. En forma digital a través del [sistema de entregas]({{site.entregas}}):
+todos los archivos mencionados en un único archivo ZIP.
+2. En papel durante la clase (si su ayudante lo requiere) el código del Trabajo
+en hoja A4 **abrochadas, sin folio, informe ni carátula**. No es necesario 
+reimprimir el código de los TDA.
