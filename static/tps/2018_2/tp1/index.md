@@ -22,8 +22,7 @@ trabajo: TP1
 El Trabajo Práctico número 1 tiene fecha de entrega para el **lunes 14/05**, y
 está divido en tres partes:
 * implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
-* implementación de aplicaciones similares a comandos Unix: [`tail`](#tail) y [`diff`](#diff). 
-* implementación de un programa [`syntax_val`](#syntax-validation). 
+* implementación de aplicaciones similares a comandos Unix: [`grep`](#grep), [`dc`](#dc) y [`fixcol`](#fixcol)
 
 
 ## Manejo de cadenas
@@ -150,6 +149,9 @@ Bien, y a vos?
 $ cat charla.txt | ./grep vos 0
 Bien, y a vos?
 
+$ ./grep vos 0 < charla.txt
+Bien, y a vos?
+
 $ cat charla.txt | ./grep vos 1
 Hola, como te va?
 Bien, y a vos?
@@ -169,13 +171,17 @@ Bien, y a vos?
 Esplendido, acá haciendo el tp1 de algo2
 
 $ cat charla.txt | ./grep umpalumpa! 1 
+
+$ ./grep "Hola, como te" 1 < charla.txt
+Hola!
+Hola, como te va?
 ```
 
 #### Observaciones
 
 - No se permite almacenar todo el archivo en memoria. Se puede almacenar, como máximo, `N + 1` líneas. Tampoco se permite el uso de archivos temporales.
 
-- Se debe validar tanto que la cantidad de parámetros sea la correcta, como que el parámetro sea efectivamente un número. En caso de no contar con la cantidad de parámetros correctos se debe imprimir por salida de error (`stderr`) "Cantidad de parametros erronea", y finalizar la ejecución. En caso que el parámetro no sea un número, se debe imprimir por salida de error (`stderr`) "Tipo de parametro incorrecto".
+- Se debe validar tanto que la cantidad de parámetros sea la correcta, como que el parámetro sea efectivamente un número. En caso de no contar con la cantidad de parámetros correctos se debe imprimir por salida de error (`stderr`) `"Cantidad de parametros erronea"`, y finalizar la ejecución. En caso que el parámetro no sea un número, se debe imprimir por salida de error (`stderr`) "Tipo de parametro incorrecto". En caso de estar presente el parámetro de la ruta del archivo, el mismo debe validarse que pueda abrirse para lectura. En caso contrario, debe imprimirse por salida de error `"No se pudo leer el archivo indicado"`, y finalizar la ejecución.
 
 - Cabe notar que, al tratarse de entrada estándar, en ningún caso puede ser leída dos veces para averiguar el número de líneas primero.
 
@@ -184,7 +190,7 @@ $ cat charla.txt | ./grep umpalumpa! 1
 
 ## Calculator_2000
 
-Se pide implementar un programa que permita realizar operaciones matematicas. El programa debe leer las líneas de entrada estándar, donde cada una de dichas líneas sean instrucciones a ejecutar, y ejecutar las mismas. 
+Se pide implementar un programa que permita realizar operaciones matematicas. Este programa procesará la entrada estándar y la interpretará como un cálculo en [notación polaca inversa](https://en.wikipedia.org/wiki/Reverse_Polish_notation), imprimiendo por salida estándar el resultado. 
 
 ```
 $ cat scripts1.txt
@@ -200,9 +206,23 @@ ERROR
 TODO: poner más ejemplos
 ```
 
-#### Observaciones
+### Operaciones
+- Todas las operaciones trabajarán con números enteros, y devolverán números enteros. 
+- Las operaciones pueden ser: suma (`+`), resta (`-`), multiplicación (`*`), división (`/`), obtener la raíz (`sqrt`), obtener la potencia (`^`), operador ternario (`?`). 
+- La operación de suma debe agarrar los dos últimos elementos y sumar el último con el anterior: `5 10 + -> 10 + 5 = 15`
+- La operación de resta debe agarrar los dos últimos elementos y restar el último con el anterior: `5 10 + -> 10 - 5 = 5`
+- La operación de multiplicación debe agarrar los dos últimos elementos y multiplicar el último con el anterior: `5 10 * -> 10 * 5 = 50`. 
+- La operación de división debe agarrar los dos últimos elementos y dividir (de forma entera) el último por el anterior: `5 10 / -> 10 / 5 = 2`, `3 10 / -> 10 / 3 = 3`. En caso de encontrarse con que el divisor es 0, se considerará como un error, y la ejecucición se terminará luego de emitir el mensaje. 
+- La operación de obtener la raíz agarra el último operador y obtiene la parte entera de la raíz de dicho operador. `5 10 sqrt -> sqrt(10) = 3` dejando en la pila de ejecución `5 2`. En caso que el argumento sea negativo, se considerará como un error, y la ejecucición se terminará luego de emitir el mensaje.
+- La operación para obtener la potencia debe agarrar los últimos dos elementos y elebar el último por el anterior: `5 10 ^ -> 10^5 = 100000`. En caso que el argumento del exponente sea negativo, se considerará como un error, y la ejecucición se terminará luego de emitir el mensaje.
+- La operación del operador ternario debe agarrar los últimos 3 elementos. En caso que el último operador sea distinto de 0, debe devolver el penúltimo, en caso de ser 0 debe devolver el antepenúltimo: `5 10 0 ? -> (0? 10 : 5) = 5`.
 
-- Todas las salidas deben hacerse por salida estándar (`stdout`).
+#### Observaciones
+- Los símbolos en la entrada pueden ser o bien números u operaciones. Todos ellos deben estar separados por espacios.
+- Todas las salidas deben hacerse por salida estándar (`stdout`). En caso de error (cantidad de operandos u operadores incorrecta, o un operador u operando inválido) debe imprimirse `"ERROR"`.
+- La operación para obtener la raíz debe ejecutar en $\mathcal{O}(\log n)$, siendo $n$ el valor del número al que se le calcula la raíz. 
+- La operación para obtener la potencia debe ejecutar en $\mathcal{O}(\log e)$, siendo $e$ el valor del exponente. 
+
 
 ## Criterios de aprobación
 
