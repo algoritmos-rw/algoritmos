@@ -133,6 +133,7 @@ Nuestra implementacion recibirá:
  - Un numero entero `N` que será la cantidad de lineas a mostrar por consola antes del "match" de la cadena y la linea leida
  - Opcionalmente un nombre de archivo que va a ser el archivo que grep va a tener que leer, si no recibe este parametro, tiene que leer de entrada estandar. 
 Por ejemplo, usando el archivo `charla.txt`:
+
 ```
 $ cat charla.txt
 Hola!
@@ -220,8 +221,8 @@ TODO: poner más ejemplos
 #### Observaciones
 - Los símbolos en la entrada pueden ser o bien números u operaciones. Todos ellos deben estar separados por espacios.
 - Todas las salidas deben hacerse por salida estándar (`stdout`). En caso de error (cantidad de operandos u operadores incorrecta, o un operador u operando inválido) debe imprimirse `"ERROR"`.
-- La operación para obtener la raíz debe ejecutar en $\mathcal{O}(\log n)$, siendo $n$ el valor del número al que se le calcula la raíz. 
-- La operación para obtener la potencia debe ejecutar en $\mathcal{O}(\log e)$, siendo $e$ el valor del exponente. 
+- La operación para obtener la raíz debe ejecutar en $$\mathcal{O}(\log n)$$, siendo $$n$$ el valor del número al que se le calcula la raíz. 
+- La operación para obtener la potencia debe ejecutar en $$\mathcal{O}(\log e)$$, siendo $$e$$ el valor del exponente. 
 
 
 ## Criterios de aprobación
