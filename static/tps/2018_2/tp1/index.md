@@ -223,8 +223,8 @@ ERROR
 - La operación de resta debe agarrar los dos últimos elementos y restar el último con el anterior: `5 10 + → 10 - 5 = 5`
 - La operación de multiplicación debe agarrar los dos últimos elementos y multiplicar el último con el anterior: `5 10 * → 10 * 5 = 50`. 
 - La operación de división debe agarrar los dos últimos elementos y dividir (de forma entera) el último por el anterior: `5 10 / → 10 / 5 = 2`, `3 10 / → 10 / 3 = 3`. En caso de encontrarse con que el divisor es 0, se considerará como un error.
-- La operación de obtener la raíz agarra el último operando y obtiene la parte entera de la raíz de dicho operando: `5 10 sqrt → sqrt(10) = 3` dejando en la pila de ejecución `5 2`. En caso que el argumento sea negativo, se considerará como un error.
-- La operación para obtener la potencia debe agarrar los últimos dos elementos y elebar el último por el anterior: `5 10 ^ → 10^5 = 100000`. En caso que el argumento del exponente sea negativo, se considerará como un error.
+- La operación de obtener la raíz agarra el último operando y obtiene la parte entera de la raíz de dicho operando: `5 10 sqrt → sqrt(10) = 3` dejando en la pila de ejecución `5 3`. En caso que el argumento sea negativo, se considerará como un error.
+- La operación para obtener la potencia debe agarrar los últimos dos elementos y elevar el último por el anterior: `5 10 ^ → 10^5 = 100000`. En caso que el argumento del exponente sea negativo, se considerará como un error.
 - La operación de obtener el logaritmo agarra los últimos dos operandos, y calcular la parte entera del logaritmo del último operando, en base del penúltimo: `5 10 log → log_5 (10) = 1`. En caso que la base sea un número menor o igual a 1, se considerará como un error. 
 - La operación del operador ternario debe agarrar los últimos 3 elementos. En caso que el último operando sea distinto de 0, debe devolver el penúltimo, en caso de ser 0 debe devolver el antepenúltimo: `5 10 0 ? → (0? 10 : 5) = 5`.
 - En cualquiera de las operaciones, el resultado pasa a estar al tope de la pila, para ser usado por otros operadores (siempre y cuando no haya habido algún error). 
