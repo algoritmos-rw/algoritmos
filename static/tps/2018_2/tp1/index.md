@@ -22,7 +22,7 @@ trabajo: TP1
 El Trabajo Práctico número 1 tiene fecha de entrega para el **lunes 14/05**, y
 está divido en tres partes:
 * implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
-* implementación de aplicaciones similares a comandos Unix: [`grep`](#grep), [`dc`](#dc) y [`fixcol`](#fixcol)
+* implementación de aplicaciones similares a comandos Unix: [`grep`](#grep) y [`dc`](#dc)
 
 
 ## Manejo de cadenas
@@ -189,40 +189,47 @@ Hola, como te va?
 - Todas las salidas deben hacerse por salida estándar (`stdout`) y en caso de que no haya ningún "match", no se debe imprimir nada.
 
 
-## Calculator_2000
+## dc
 
-Se pide implementar un programa que permita realizar operaciones matematicas. Este programa procesará la entrada estándar y la interpretará como un cálculo en [notación polaca inversa](https://en.wikipedia.org/wiki/Reverse_Polish_notation), imprimiendo por salida estándar el resultado. 
+Se pide implementar un programa que permita realizar operaciones matematicas. Este programa procesará la entrada estándar y la interpretará como un cálculo en [notación polaca inversa](https://en.wikipedia.org/wiki/Reverse_Polish_notation), imprimiendo por salida estándar el resultado.
 
 ```
 $ cat scripts1.txt
 10 5 + +
 10 5 3 + *
+10 sqrt 2 10 / 1 ?
+2 2 2 2 * ^ log
+?
 
-
-$ cat scripts1.txt | ./calculator_2000
+$ ./dc < scripts1.txt
 ERROR
 80
-
-
-TODO: poner más ejemplos
+5
+3
+ERROR
 ```
 
 ### Operaciones
 - Todas las operaciones trabajarán con números enteros, y devolverán números enteros. 
-- Las operaciones pueden ser: suma (`+`), resta (`-`), multiplicación (`*`), división (`/`), obtener la raíz (`sqrt`), obtener la potencia (`^`), operador ternario (`?`). 
+- Las operaciones pueden ser: suma (`+`), resta (`-`), multiplicación (`*`), división (`/`), obtener la raíz (`sqrt`), obtener la potencia (`^`), obtener el logaritmo (`log`) y operador ternario (`?`). 
 - La operación de suma debe agarrar los dos últimos elementos y sumar el último con el anterior: `5 10 + -> 10 + 5 = 15`
 - La operación de resta debe agarrar los dos últimos elementos y restar el último con el anterior: `5 10 + -> 10 - 5 = 5`
 - La operación de multiplicación debe agarrar los dos últimos elementos y multiplicar el último con el anterior: `5 10 * -> 10 * 5 = 50`. 
 - La operación de división debe agarrar los dos últimos elementos y dividir (de forma entera) el último por el anterior: `5 10 / -> 10 / 5 = 2`, `3 10 / -> 10 / 3 = 3`. En caso de encontrarse con que el divisor es 0, se considerará como un error, y la ejecucición se terminará luego de emitir el mensaje. 
-- La operación de obtener la raíz agarra el último operador y obtiene la parte entera de la raíz de dicho operador. `5 10 sqrt -> sqrt(10) = 3` dejando en la pila de ejecución `5 2`. En caso que el argumento sea negativo, se considerará como un error, y la ejecucición se terminará luego de emitir el mensaje.
+- La operación de obtener la raíz agarra el último operando y obtiene la parte entera de la raíz de dicho operando: `5 10 sqrt -> sqrt(10) = 3` dejando en la pila de ejecución `5 2`. En caso que el argumento sea negativo, se considerará como un error, y la ejecucición se terminará luego de emitir el mensaje.
 - La operación para obtener la potencia debe agarrar los últimos dos elementos y elebar el último por el anterior: `5 10 ^ -> 10^5 = 100000`. En caso que el argumento del exponente sea negativo, se considerará como un error, y la ejecucición se terminará luego de emitir el mensaje.
-- La operación del operador ternario debe agarrar los últimos 3 elementos. En caso que el último operador sea distinto de 0, debe devolver el penúltimo, en caso de ser 0 debe devolver el antepenúltimo: `5 10 0 ? -> (0? 10 : 5) = 5`.
+- La operación de obtener el logaritmo agarra los últimos dos operandos, y calcular la parte entera del logaritmo del último operando, en base del penúltimo: `5 10 log -> log_5 (10) = 1`.
+- La operación del operador ternario debe agarrar los últimos 3 elementos. En caso que el último operando sea distinto de 0, debe devolver el penúltimo, en caso de ser 0 debe devolver el antepenúltimo: `5 10 0 ? -> (0? 10 : 5) = 5`.
+- En cualquiera de las operaciones, el resultado pasa a estar al tope de la pila, para ser usado por otros operadores. 
+
 
 #### Observaciones
+- Cada línea de la entrada estándar debe tratase por separado. 
 - Los símbolos en la entrada pueden ser o bien números u operaciones. Todos ellos deben estar separados por espacios.
-- Todas las salidas deben hacerse por salida estándar (`stdout`). En caso de error (cantidad de operandos u operadores incorrecta, o un operador u operando inválido) debe imprimirse `"ERROR"`.
+- Todas las salidas deben hacerse por salida estándar (`stdout`). En caso de error (cantidad de operandos u operadores incorrecta, o un operador u operando inválido) debe imprimirse `"ERROR"`, sin ningún tipo de resultado parcial. El programa debe continuar procesando la siguiente línea de entrada estándar. 
 - La operación para obtener la raíz debe ejecutar en $$\mathcal{O}(\log n)$$, siendo $$n$$ el valor del número al que se le calcula la raíz. 
-- La operación para obtener la potencia debe ejecutar en $$\mathcal{O}(\log e)$$, siendo $$e$$ el valor del exponente. 
+- La operación para obtener la potencia debe ejecutar en $$\mathcal{O}(\log e)$$, siendo $$e$$ el valor del exponente.
+- La operación para obtner el logaritmo debe ejecutar en $$\mathcal{O}(\log n)$$, siendo $$n$$ el argumento del logaritmo.
 
 
 ## Criterios de aprobación
@@ -233,16 +240,15 @@ de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
 La entrega incluye, obligatoriamente, los siguientes archivos de código:
 
 - `strutil.c` con las implementaciones de las funciones `split`, `join` y `free_strv`.
-- El código de la solución de `grep` y `calculator_2000`.
-- El código de los TDAs programados en la cursada que se requieran, con las
-modificaciones que sean necesarias.
+- El código de la solución de `grep` y `dc`.
+- El código de los TDAs programados en la cursada que se requieran.
 - Un archivo `deps.mk` con las dependencias del proyecto en formato make. Este
 deberá contener sólamente una línea por programa que indique qué _objetos_ necesita para
 compilar el ejecutable de cada uno de los archivos, por ejemplo:
 
 ``` makefile
 grepl: grep.c 
-calculator_2000: calculator_2000.c
+dc: dc.c pila.c
 ```
 
 El corrector automático va a interpretar ese archivos de dependencias y va a
