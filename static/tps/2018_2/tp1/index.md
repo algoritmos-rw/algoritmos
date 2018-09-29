@@ -162,6 +162,11 @@ Hola!
 Hola, como te va?
 Bien, y a vos?
 
+$ cat charla.txt | ./grep Hola 1
+Hola!
+Hola!
+Hola, como te va?
+
 $ cat charla.txt | ./grep ien 0
 Bien, y a vos?
 Esplendido, acá haciendo el tp1 de algo2
@@ -187,6 +192,8 @@ Hola, como te va?
 - Cabe notar que, al tratarse de entrada estándar, en ningún caso puede ser leída dos veces para averiguar el número de líneas primero.
 
 - Todas las salidas deben hacerse por salida estándar (`stdout`) y en caso de que no haya ningún "match", no se debe imprimir nada.
+
+- Se puede implementar una solución por _fuerza bruta_, que lugar a lugar vaya realizando las comparaciones de la subcadena sobre cada línea. Igualmente, recomendamos implementar una mejor solución, como puede ser el [algoritmo de Karp-Rabin](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm), que utiliza funciones de hashing para mejorar la eficiencia temporal. 
 
 
 ### dc
@@ -248,7 +255,7 @@ compilar el ejecutable de cada uno de los archivos, por ejemplo:
 
 ``` makefile
 grepl: grep.c 
-dc: dc.c pila.c
+dc: dc.c tda.c
 ```
 
 El corrector automático va a interpretar ese archivos de dependencias y va a
