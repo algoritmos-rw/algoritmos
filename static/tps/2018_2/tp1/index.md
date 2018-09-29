@@ -189,7 +189,7 @@ Hola, como te va?
 - Todas las salidas deben hacerse por salida estándar (`stdout`) y en caso de que no haya ningún "match", no se debe imprimir nada.
 
 
-## dc
+### dc
 
 Se pide implementar un programa que permita realizar operaciones matematicas. Este programa procesará la entrada estándar y la interpretará como un cálculo en [notación polaca inversa](https://en.wikipedia.org/wiki/Reverse_Polish_notation), imprimiendo por salida estándar el resultado.
 
@@ -209,7 +209,7 @@ ERROR
 ERROR
 ```
 
-### Operaciones
+#### Operaciones
 - Todas las operaciones trabajarán con números enteros, y devolverán números enteros. 
 - Las operaciones pueden ser: suma (`+`), resta (`-`), multiplicación (`*`), división (`/`), obtener la raíz (`sqrt`), obtener la potencia (`^`), obtener el logaritmo (`log`) y operador ternario (`?`). 
 - La operación de suma debe agarrar los dos últimos elementos y sumar el último con el anterior: `5 10 + → 10 + 5 = 15`
