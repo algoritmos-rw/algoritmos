@@ -19,7 +19,7 @@ trabajo: TP1
 * Contenido
 {:toc}
 
-El Trabajo Práctico número 1 tiene fecha de entrega para el **lunes 14/05**, y
+El Trabajo Práctico número 1 tiene fecha de entrega para el **lunes 19/10**, y
 está divido en tres partes:
 * implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
 * implementación de aplicaciones similares a comandos Unix: [`grep`](#grep) y [`dc`](#dc)
@@ -163,7 +163,6 @@ Hola, como te va?
 Bien, y a vos?
 
 $ cat charla.txt | ./grep Hola 1
-Hola!
 Hola!
 Hola, como te va?
 
