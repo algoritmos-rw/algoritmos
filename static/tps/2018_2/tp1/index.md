@@ -27,7 +27,7 @@ está divido en tres partes:
 
 ## Manejo de cadenas
 
-Se pide implementar las funciones del archivo [{{TP.zip}}]({{TP.zip_link}}) que se describen a continuación. Se permite utilizar cualquier funcion de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
+Se pide implementar las funciones del archivo [{{TP.zip}}]({{TP.zip_link}}) que se describen a continuación. Se permite utilizar cualquier función de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
 
 ### split()
 
@@ -125,13 +125,13 @@ Y este con comportamiento cuadrático:
 ### Grep
 
 Se pide implementar una versión simplificada de la utilidad [grep](http://man7.org/linux/man-pages/man1/egrep.1.html) de Unix. 
-`grep` imprime las lineas de un archivo, o de entrada estándar que cumpla con la expresion regular pasada por parametro.
+`grep` imprime las líneas de un archivo, o de entrada estándar que cumpla con la expresión regular pasada por parámetro.
 
-En nuestro caso, el programa va a recibir una cadena simple y va a chequear si esa cadena está contenida en cada linea del archivo o de la entrada estandar.
-Nuestra implementacion recibirá:
- - Una cadena, que va a ser la que se usará para  ver si esa cadena está contenida en cada linea de el archivo o entrada estandar,
- - Un numero entero `N` que será la cantidad de lineas a mostrar por consola antes del "match" de la cadena y la linea leida
- - Opcionalmente un nombre de archivo que va a ser el archivo que grep va a tener que leer, si no recibe este parametro, tiene que leer de entrada estandar. 
+En nuestro caso, el programa va a recibir una cadena simple y va a chequear si esa cadena está contenida en cada línea del archivo o de la entrada estándar.
+Nuestra implementación recibirá:
+ - Una cadena, que va a ser la que se usará para  ver si esa cadena está contenida en cada línea del archivo o entrada estándar,
+ - Un numero entero `N` que será la cantidad de líneas a mostrar por consola antes del "match" de la cadena y la línea leída
+ - Opcionalmente un nombre de archivo que va a ser el archivo que grep va a tener que leer, si no recibe este parámetro, tiene que leer de entrada estándar. 
 Por ejemplo, usando el archivo `charla.txt`:
 
 ```
@@ -197,7 +197,7 @@ Hola, como te va?
 
 ### dc
 
-Se pide implementar un programa que permita realizar operaciones matematicas. Este programa procesará la entrada estándar y la interpretará como un cálculo en [notación polaca inversa](https://en.wikipedia.org/wiki/Reverse_Polish_notation), imprimiendo por salida estándar el resultado.
+Se pide implementar un programa que permita realizar operaciones matemáticas. Este programa procesará la entrada estándar y la interpretará como un cálculo en [notación polaca inversa](https://en.wikipedia.org/wiki/Reverse_Polish_notation), imprimiendo por salida estándar el resultado.
 
 ```
 $ cat scripts1.txt
@@ -257,7 +257,7 @@ grepl: grep.c
 dc: dc.c tda.c
 ```
 
-El corrector automático va a interpretar ese archivos de dependencias y va a
+El corrector automático va a interpretar ese archivo de dependencias y va a
 compilar todos los `.o` especificados a partir de los `.h` y `.c` que deberán
 enviar, con los siguientes flags de `GCC`:
 
