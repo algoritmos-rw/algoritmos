@@ -211,7 +211,7 @@ $ ./dc < scripts1.txt
 ERROR
 80
 5
-3
+4
 ERROR
 ```
 
