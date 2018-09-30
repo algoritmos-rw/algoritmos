@@ -235,7 +235,7 @@ ERROR
 - Todas las salidas deben hacerse por salida estándar (`stdout`). En caso de error (cantidad de operandos u operadores incorrecta, o un operador u operando inválido) debe imprimirse `"ERROR"`, sin ningún tipo de resultado parcial. El programa debe continuar procesando la siguiente línea de entrada estándar. 
 - La operación para obtener la raíz debe ejecutar en $$\mathcal{O}(\log n)$$, siendo $$n$$ el valor del número al que se le calcula la raíz. 
 - La operación para obtener la potencia debe ejecutar en $$\mathcal{O}(\log e)$$, siendo $$e$$ el valor del exponente.
-- La operación para obtner el logaritmo debe ejecutar en $$\mathcal{O}(\log n)$$, siendo $$n$$ el argumento del logaritmo.
+- La operación para obtener el logaritmo debe ejecutar en $$\mathcal{O}(\log n)$$, siendo $$n$$ el argumento del logaritmo.
 
 
 ## Criterios de aprobación
