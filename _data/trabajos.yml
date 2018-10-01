@@ -44,7 +44,7 @@ TP1:
   entrega: 2018-10-19
   zip: strutil.h
   zip_link: https://drive.google.com/file/d/1tTT0YJbjpJeMqwlk8keAvJUXlBH6Y8xx/view
-  enunciado_link: /tps/2018_1/tp1
+  enunciado_link: /tps/2018_2/tp1
 
 Hash:
   id: Hash
@@ -76,7 +76,7 @@ TP2:
   entrega: 2018-11-16
   zip:
   zip_link:
-  enunciado_link: /tps/2018_1/tp2
+  enunciado_link: /tps/2018_2/tp2
 
 TP3:
   id: TP3
@@ -84,4 +84,4 @@ TP3:
   entrega: 2018-12-07
   zip:
   zip_link:
-  enunciado_link: /tps/2018_1/tp3
+  enunciado_link: /tps/2018_2/tp3
