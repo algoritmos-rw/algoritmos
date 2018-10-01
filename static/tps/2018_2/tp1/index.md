@@ -139,7 +139,7 @@ $ cat charla.txt
 Hola!
 Hola, como te va?
 Bien, y a vos?
-Esplendido, acá haciendo el tp1 de algo2
+Espléndido, acá haciendo el tp1 de algo2
 Uuuu q diverr
 Se ...
 
@@ -168,12 +168,12 @@ Hola, como te va?
 
 $ cat charla.txt | ./grep ien 0
 Bien, y a vos?
-Esplendido, acá haciendo el tp1 de algo2
+Espléndido, acá haciendo el tp1 de algo2
 
 $ cat charla.txt | ./grep ien 1
 Hola, como te va?
 Bien, y a vos?
-Esplendido, acá haciendo el tp1 de algo2
+Espléndido, acá haciendo el tp1 de algo2
 
 $ cat charla.txt | ./grep umpalumpa! 1 
 
