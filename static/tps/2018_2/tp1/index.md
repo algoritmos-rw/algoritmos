@@ -19,7 +19,7 @@ trabajo: TP1
 * Contenido
 {:toc}
 
-El Trabajo Práctico número 1 tiene fecha de entrega para el **lunes 19/10**, y
+El Trabajo Práctico número 1 tiene fecha de entrega para el **viernes 19/10**, y
 está divido en tres partes:
 * implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
 * implementación de aplicaciones similares a comandos Unix: [`grep`](#grep) y [`dc`](#dc)
