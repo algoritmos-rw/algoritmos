@@ -232,7 +232,11 @@ ERROR
 #### Observaciones
 - Cada línea de la entrada estándar debe tratase por separado. 
 - Los símbolos en la entrada pueden ser o bien números u operaciones. Todos ellos deben estar separados por espacios.
-- Todas las salidas deben hacerse por salida estándar (`stdout`). En caso de error (cantidad de operandos u operadores incorrecta, o un operador u operando inválido) debe imprimirse `"ERROR"`, sin ningún tipo de resultado parcial. El programa debe continuar procesando la siguiente línea de entrada estándar. 
+- Todas las salidas deben hacerse por salida estándar (`stdout`). En caso de error debe imprimirse `"ERROR"`, sin ningún tipo de resultado parcial. El programa debe continuar procesando la siguiente línea de entrada estándar. 
+- Los casos posibles de error pueden ser: 
+    * Cantidad de operandos inválidos para un operador
+    * Al finalizar la ejecución queda más de un operando en la pila de ejecución.
+    * Errores propios de cada operación.
 - La operación para obtener la raíz debe ejecutar en $$\mathcal{O}(\log n)$$, siendo $$n$$ el valor del número al que se le calcula la raíz. 
 - La operación para obtener la potencia debe ejecutar en $$\mathcal{O}(\log e)$$, siendo $$e$$ el valor del exponente.
 - La operación para obtener el logaritmo debe ejecutar en $$\mathcal{O}(\log n)$$, siendo $$n$$ el argumento del logaritmo.
