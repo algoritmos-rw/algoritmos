@@ -76,11 +76,13 @@ Para más información y especificaciones de la función, se puede invocar al co
 
 #### ¿Qué es POSIX?
 
-Portable Operating System Interface (POSIX) es una familia de estándares especificados por el Instituto de Ingeniería Eléctrica y Electrónica (asociación sin fines de lucro dedicada a estandarización) para mantener la compatibilidad entre distintos sistemas operativos. Entre otras cosas, POSIX define y especifica las funciones que utilizamos en la librería estándar de C (`stdio`, `stdlib` y más conforman esta librería) ya definida por el estándar ANSI C.
+Portable Operating System Interface (POSIX) es una familia de estándares especificados por el Instituto de Ingeniería Eléctrica y Electrónica (IEEE), una asociación sin fines de lucro dedicada a estandarización, para mantener la compatibilidad entre distintos sistemas operativos. 
 
-Al hacer `#include <stdio.h>` lo que le decimos al pre-procesador es que en mi programa yo quiero poder utilizar lo definido por ANSI C en esa cabecera de la librería estándar.
+Al hacer `#include <stdio.h>` lo que le decimos al pre-procesador es que en mi programa yo quiero poder utilizar lo definido por C en esa cabecera de la biblioteca estándar.
 
-Por otro lado, al hacer `#define _POSIX_C_SOURCE 200809L` y luego `#include <stdio.h>` (respetar el orden), lo que le decimos al pre-procesador es que en mi programa yo quiero poder utilizar la especificación de POSIX de 2008 de la librería estándar (de ANSI C). Entre otras cosas, esta especificación incluye `getline()` y `getdelim()`.
+Por fuera de la existencia del estándar de C que define y especifica las funciones que utilizamos en la biblioteca estándar (`stdio.h`, `stdlib.h`, etc.), el estándar POSIX lo extiende con funciones y comportamientos nuevos.
+
+Por otro lado, al hacer `#define _POSIX_C_SOURCE 200809L` y luego `#include <stdio.h>` (respetar el orden), lo que le decimos al pre-procesador es que en mi programa yo quiero poder utilizar la especificación de POSIX de 2008 de la biblioteca estándar (de C). Entre otras cosas, esta especificación incluye `getline()` y `getdelim()`.
 
 ## ¿Qué es un puntero a función?
 
