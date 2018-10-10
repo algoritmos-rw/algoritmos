@@ -62,6 +62,8 @@ split("", ',')  →  [""]
 split(",", ',') →  ["", ""]
 ```
 
+Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(n)$$ (Siendo $$n$$ la longitud de la cadena resultante).
+
 ### join
 
 La función `join()` es la inversa de `split()`. Concatena un arreglo de cadenas terminado en NULL mediante un caracter de separación:
@@ -85,7 +87,9 @@ join([NULL], ",")    →  ""
 
 Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(n)$$ (Siendo $$n$$ la longitud de la cadena resultante).
 
-Las pruebas del corrector automático proveen una indicación. Este sería un test con comportamiento lineal:
+Las pruebas del corrector automático proveen una indicación del comportamiento de `join()` (si bien **ambas funciones deben correr en tiempo lineal**, `join()` provee una dificultad de implementación mayor a `split()`). 
+
+Este sería un test con comportamiento lineal:
 
     [ RUN      ] test_join.test_cuadratico_10000
     [       OK ] test_join.test_cuadratico_10000 (7 ms)
