@@ -257,7 +257,7 @@ deberá contener sólamente una línea por programa que indique qué _objetos_ n
 compilar el ejecutable de cada uno de los archivos, por ejemplo:
 
 ``` makefile
-grepl: grep.c 
+grep: grep.c 
 dc: dc.c tda.c
 ```
 
