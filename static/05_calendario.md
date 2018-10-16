@@ -40,7 +40,7 @@ Finales
 
 {: .table .table-striped}
 | **Día**       | **Fecha**      | **Detalle** |{%for f in site.data.finales%}{% assign final = f[1] %}
-| {{final.dia}} | {{final.fecha}}| {{final.detalle}}{% endfor %}
+| {{final.dia}} | {{final.fecha}}| [Notas]({{final.link}}){% endfor %}
 
 
  <script src="{{ '/assets/js/calendario.js' | relative_url }}"></script>
