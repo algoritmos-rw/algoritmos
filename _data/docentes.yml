@@ -1,79 +1,165 @@
+profesor:
+
+- nombre: Martín Buchwald
+  foto: /assets/img/docentes/martinb.jpg
+  mail: martine9111@gmail.com
+  github: mbuchwald
+  linkedin: martin-e-buchwald
+
 ayudantes:
 
 - nombre: Adeodato Simó
   foto: /assets/img/docentes/dato.jpg
+  mail: dato@fi.uba.ar
+  github: dato
+  linkedin: 
 
 - nombre: Agustina Méndez
   foto: /assets/img/docentes/agusm.png
+  mail: abmendez25@hotmail.com
+  github: abmendez
+  linkedin: abmendez25
 
 - nombre: Ana Secchi
   foto: /assets/img/docentes/anas.jpg
+  mail: anasec2001@gmail.com
+  github: anitasec
+  linkedin: ana-m-secchi-706a50135
 
 - nombre: Camila Bojman
   foto: /assets/img/docentes/camib.jpg
+  mail: camiboj@gmail.com
+  github: camiboj 
+  linkedin: 
 
 - nombre: Camila Dvorkin
   foto: /assets/img/docentes/camid.png
+  mail: camidvorkin@gmail.com
+  github: camidvorkin 
+  linkedin: 
 
 - nombre: Casimiro Pastine
   foto: /assets/img/docentes/casimirop.jpg
+  mail: casimiropastine@gmail.com
+  github: pastine
+  linkedin: casimiro-pastine-993916162
 
 - nombre: Cecilia Hortas
   foto: /assets/img/docentes/cecih.jpg
+  mail: ceci.hortas@gmail.com
+  github: chortas
+  linkedin: cecilia-hortas-90a7a111b
 
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
+  mail: egenender@gmail.com
+  github: egenender 
+  linkedin: ezequiel-genender-peña-8a6821125
 
 - nombre: Federico del Mazo
   foto: /assets/img/docentes/fededm.jpg
+  mail: delMazoFederico@gmail.com
+  github: FdelMazo
+  linkedin: FdelMazo
 
 - nombre: Fiona González Lisella
   foto: /assets/img/docentes/fionag.jpg
+  mail: fgonzalezlisella@gmail.com
+  github: Fgl
+  linkedin: fgonzalezlisella
 
 - nombre: Ignacio Raik
   foto: /assets/img/docentes/nachor.png
+  mail: ignacioraiksg@gmail.com
+  github: NachoRaik
+  linkedin: ignacio-raik
 
 - nombre: Jasmina Sella Faena
   foto: /assets/img/docentes/jasminasf.jpg
+  mail: jasminasf@gmail.com
+  github: jas-chu
+  linkedin: jasmina-sella-faena-a75752b1
 
 - nombre: Javier Di Santo
   foto: /assets/img/docentes/javids.png
+  mail: javidisanto@gmail.com
+  github:  JDSanto
+  linkedin: 
 
 - nombre: Joaquín Torré
   foto: /assets/img/docentes/joaquint.jpg
+  mail: joaquintorrezaffaroni@gmail.com
+  github: Roj
+  linkedin: joaquín-torré-zaffaroni-25589a90
 
 - nombre: Jorge Collinet
   foto: /assets/img/docentes/jorgec.jpg
+  mail: collinetjorge@gmail.com
+  github: jorgeCollinet
+  linkedin: jorge-collinet-311723b1
 
 - nombre: Julián Crespo
   foto: /assets/img/docentes/julic.jpg  
+  mail: juliancrespo15@gmail.com
+  github: komod0
+  linkedin: julian-crespo-957634b9
 
 - nombre: Lautaro Manzano
   foto: /assets/img/docentes/lautarom.jpg
+  mail: manzano.lautaro@gmail.com
+  github: ManzanoLautaro
+  linkedin: 
 
 - nombre: Matías Cano
   foto: /assets/img/docentes/matic.png
+  mail: tutecano1995@gmail.com
+  github: tutecano1995 
+  linkedin: matías-cano-1b1a57135
 
 - nombre: Miguel Alfaro
   foto: /assets/img/docentes/miguea.png
+  mail: miguel.alfaro.a95@gmail.com
+  github: AlfaroMiguel
+  linkedin: miguel-alfaro-b55329b0
 
 - nombre: Milena Marchese
   foto: /assets/img/docentes/milem.jpg
+  mail: mile.marchese@gmail.com
+  github: milenamarchese
+  linkedin: 
 
 - nombre: Nicolás Vázquez
   foto: /assets/img/docentes/nicolasv.png
+  mail: vazquez.nicolas.daniel@gmail.com
+  github: ndvazquez 
+  linkedin: nicolás-daniel-vazquez-714a00134
 
 - nombre: Olivia Fernández
   foto: /assets/img/docentes/olif.jpg
+  mail: olifer97@gmail.com
+  github: olifer97
+  linkedin: 
 
 - nombre: Rodrigo Souto
   foto: /assets/img/docentes/rodris.jpg
+  mail: rnsoutob@gmail.com
+  github: rodrisouto
+  linkedin: rodrigo-souto-b7a870116
 
 - nombre: Tomás Accini
   foto: /assets/img/docentes/tomasa.jpg
+  mail: tomasaccini@gmail.com
+  github: tomasaccini
+  linkedin: tomás-sebastián-accini-42a5bb113
 
 - nombre: Tomás Lofano
   foto: /assets/img/docentes/tomasl.png
+  mail: tomilofano@gmail.com
+  github: tlofano
+  linkedin: tomás-lofano-9bb984116
 
 - nombre: William Pinho
   foto: /assets/img/docentes/willp.png
+  mail: william.comp.ita@gmail.com
+  github: WilliamPinho
+  linkedin: williampinho
