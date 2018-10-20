@@ -48,7 +48,7 @@ ayudantes:
   foto: /assets/img/docentes/cecih.jpg
   mail: ceci.hortas@gmail.com
   github: chortas
-  linkedin: cecilia-hortas-90a7a111b
+  linkedin: 
 
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
@@ -82,7 +82,7 @@ ayudantes:
 
 - nombre: Javier Di Santo
   foto: /assets/img/docentes/javids.png
-  mail: javidisanto@gmail.com
+  mail: jdisanto@fi.uba.ar
   github:  JDSanto
   linkedin: 
 
