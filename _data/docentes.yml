@@ -11,7 +11,7 @@ ayudantes:
 - nombre: Adeodato Simó
   foto: /assets/img/docentes/dato.jpg
   mail: dato@fi.uba.ar
-  github: dato
+  github:
   linkedin: 
 
 - nombre: Agustina Méndez
