@@ -22,7 +22,7 @@ permalink: /material/
  
 ## Material y links disponibles de Estructuras de Datos
 
-* [Algoritmos y estructuras de datos](http://venus.ceride.gov.ar/twiki/bin/view/AED/WebHome#Bibliograf_a), apunte de la materia, Universidad del Litoral.
+* [Algoritmos y estructuras de datos](http://infofich.unl.edu.ar/upload/1fa23af675da8843347aec68bd6151b871472436.pdf), apunte de la materia, Universidad del Litoral.
 * [Árboles B, B+ y B*](https://drive.google.com/open?id=1Inanv7DGbHiF7dCBOD6jxuxhsNz0Uz7j), apunte del curso de Organización de Datos (66.06) de FIUBA.
 * [Visualizaciones de algoritmos y estructuras de datos](http://visualgo.net/)
 * [Algoritmos de pathfinding](http://qiao.github.io/PathFinding.js/visual/)
