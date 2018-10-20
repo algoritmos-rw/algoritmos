@@ -124,6 +124,8 @@ Y este con comportamiento cuadrático:
 
 `free_strv()` libera la memoria asociada con un arreglo dinámico de cadenas dinámicas:
 
+Si bien no es obligatorio probar la biblioteca, es muy recomendable hacer pruebas unitarias para comprobar el correcto funcionamiento, en particular para los casos borde.
+
 ## Aplicaciones
 
 ### Grep
