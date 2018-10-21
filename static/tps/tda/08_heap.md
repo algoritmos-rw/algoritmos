@@ -7,10 +7,10 @@ trabajo: Heap
 ---
 {% assign TP = site.data.trabajos[page.trabajo] %}
 
-Se incluye en [{{TP.zip}}]({{TP.zip_link}}) el archivo `heap.h` correspondiente al ejercicio de la cola de prioridad.
-
 Heap
 =============
+
+Se incluye en [{{TP.zip}}]({{TP.zip_link}}) el archivo `heap.h` correspondiente al ejercicio de la cola de prioridad.
 
 El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Cola de Prioridad, utilizando un Heap.
 
