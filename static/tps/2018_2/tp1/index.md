@@ -91,33 +91,33 @@ Las pruebas del corrector automático proveen una indicación del comportamiento
 
 Este sería un test con comportamiento lineal:
 
-    [ RUN      ] test_join.test_cuadratico_10000
-    [       OK ] test_join.test_cuadratico_10000 (7 ms)
-    [ RUN      ] test_join.test_cuadratico_20000
-    [       OK ] test_join.test_cuadratico_20000 (14 ms)
-    [ RUN      ] test_join.test_cuadratico_30000
-    [       OK ] test_join.test_cuadratico_30000 (17 ms)
-    [ RUN      ] test_join.test_cuadratico_40000
-    [       OK ] test_join.test_cuadratico_40000 (27 ms)
-    [ RUN      ] test_join.test_cuadratico_50000
-    [       OK ] test_join.test_cuadratico_50000 (33 ms)
-    [ RUN      ] test_join.test_cuadratico_60000
-    [       OK ] test_join.test_cuadratico_60000 (40 ms)
+    [ RUN      ] test_join.test_complejidad_10000
+    [       OK ] test_join.test_complejidad_10000 (7 ms)
+    [ RUN      ] test_join.test_complejidad_20000
+    [       OK ] test_join.test_complejidad_20000 (14 ms)
+    [ RUN      ] test_join.test_complejidad_30000
+    [       OK ] test_join.test_complejidad_30000 (17 ms)
+    [ RUN      ] test_join.test_complejidad_40000
+    [       OK ] test_join.test_complejidad_40000 (27 ms)
+    [ RUN      ] test_join.test_complejidad_50000
+    [       OK ] test_join.test_complejidad_50000 (33 ms)
+    [ RUN      ] test_join.test_complejidad_60000
+    [       OK ] test_join.test_complejidad_60000 (40 ms)
 
 Y este con comportamiento cuadrático:
 
-    [ RUN      ] test_join.test_cuadratico_10000
-    [       OK ] test_join.test_cuadratico_10000 (48 ms)
-    [ RUN      ] test_join.test_cuadratico_20000
-    [       OK ] test_join.test_cuadratico_20000 (618 ms)
-    [ RUN      ] test_join.test_cuadratico_30000
-    [       OK ] test_join.test_cuadratico_30000 (1354 ms)
-    [ RUN      ] test_join.test_cuadratico_40000
-    [       OK ] test_join.test_cuadratico_40000 (2425 ms)
-    [ RUN      ] test_join.test_cuadratico_50000
-    [       OK ] test_join.test_cuadratico_50000 (4019 ms)
-    [ RUN      ] test_join.test_cuadratico_60000
-    [       OK ] test_join.test_cuadratico_60000 (5722 ms)
+    [ RUN      ] test_join.test_complejidad_10000
+    [       OK ] test_join.test_complejidad_10000 (48 ms)
+    [ RUN      ] test_join.test_complejidad_20000
+    [       OK ] test_join.test_complejidad_20000 (618 ms)
+    [ RUN      ] test_join.test_complejidad_30000
+    [       OK ] test_join.test_complejidad_30000 (1354 ms)
+    [ RUN      ] test_join.test_complejidad_40000
+    [       OK ] test_join.test_complejidad_40000 (2425 ms)
+    [ RUN      ] test_join.test_complejidad_50000
+    [       OK ] test_join.test_complejidad_50000 (4019 ms)
+    [ RUN      ] test_join.test_complejidad_60000
+    [       OK ] test_join.test_complejidad_60000 (5722 ms)
 
 
 ### free_strv()
