@@ -10,7 +10,7 @@ trabajo: ABB
 Árbol Binario de Búsqueda
 =============
 
-El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Árbol Binario de Búsqueda (ABB). Se incluye en [{{TP.zip}}]({{TP.zip_link}}) el archivo de main correspondiente al ejercicio. Se debe implementar:
+El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Árbol Binario de Búsqueda (ABB). Se incluye en [el esqueleto]({{site.skel}}) el archivo de main correspondiente al ejercicio. Se debe implementar:
 
 ``` cpp
 typedef struct abb abb_t;
