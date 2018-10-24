@@ -10,7 +10,7 @@ TPs
 A continuación encontrarán las entregas que iremos planteando a lo largo de la
 materia.
 
-Las entregas estan acompañadas de archivos adjuntos, todos ubicados en [el esqueleto]({{site.skel}}).
+Las entregas estan acompañadas de archivos adjuntos, todos ubicados en [el repositorio de descargas]({{site.skel}}).
 
 <table class="table table-striped">
   <tbody id="tabla-trabajos">

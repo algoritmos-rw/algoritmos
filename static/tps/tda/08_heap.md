@@ -10,7 +10,7 @@ trabajo: Heap
 Heap
 =============
 
-Se incluye en [el esqueleto]({{site.skel}}) el archivo `heap.h` correspondiente al ejercicio de la cola de prioridad.
+Se incluye en [el repositorio de descargas]({{site.skel}}) el archivo `heap.h` correspondiente al ejercicio de la cola de prioridad.
 
 El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Cola de Prioridad, utilizando un Heap.
 

@@ -10,7 +10,7 @@ trabajo: Lista
 Lista enlazada
 ==============
 
-Se incluye en [el esqueleto]({{site.skel}}) un ejemplo de uso de iteradores externos.
+Se incluye en [el repositorio de descargas]({{site.skel}}) un ejemplo de uso de iteradores externos.
 
 Estas son las primitivas de listas que tienen que implementar.
 
