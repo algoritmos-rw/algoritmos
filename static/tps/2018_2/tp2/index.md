@@ -27,48 +27,50 @@ Introducción
     <img src="{{ 'assets/tps/2018_1/tp2/uma2.png' | relative_url }}" width="200">
 </p-->
 
-El aeropuerto de Algueiza opera la entrada y salida de aviones, los operarios 
+El aeropuerto de Alugeiza opera la entrada y salida de aviones, los operarios
 de dicho aeropuerto nos han pedido que implementemos un sistema de consulta 
-de vuelos para que ellos puedan ordenar, filtrar, analizar y obtener información de 
+de vuelos que les permita: ordenar, filtrar, analizar y obtener información de
 los distintos vuelos.
 
 
 ### Archivos
 
-El sistema que actualmente tiene Algeiza genera continuamente archivos formato `.csv` 
-que contienen la información de cada vuelo. Nuestro sistema tendrá que ser capaz
-de procesar estos archivo, y ser capaz de responder las consultas que los operarios 
-necesiten realizar.  
+El sistema que actualmente tiene Algueiza genera continuamente archivos en formato `.csv`
+que contienen la información de cada vuelo. Nuestro sistema deberá procesar estos archivos
+y responder a las consultas que los operarios necesiten realizar.
 El sistema tiene que ser capaz de recibir en cualquier momento un nuevo archivo
-conteniendo vuelos (nuevos o viejos) y actualizar sus datos.
+conteniendo el detalle de vuelos (nuevos o viejos) y actualizar sus datos.
 
 ### Tablero de despegues
 
-El primer requerimiento que mencionaron los operarios fue que nuestro sistema sea 
-capaz de ordenar los registros de despegues por fecha. Con la opción de pedir 
-de forma ascendente o descendete. Adicionalemente nos dijieron que no quieren ver
-todo el listado, por lo que tambíen hay que permitirles a ellos puedan ingresar un
-intervalo de fechas de despegue (min / max) de los vuelos que quieren ver.
+El primer requerimiento que mencionaron los operarios fue que nuestro sistema permita
+ordenar los registros de despegues por fecha. Esto debe realizarse de forma ascendente o
+descendente según el criterio del usuario. Adicionalmente nos mencionaron que no están
+interesados en visualizar todo el listado, por lo que también es necesario que puedan ingresar un
+intervalo de fechas de despegue (min / max) y una cantidad de vuelos a listar.
 
 ### Informacion de un vuelo
 
-Hay veces que los operarios necesitan ver información de un vuelo particular. Para 
-ello ellos quieren que ingresando el codigo de vuelo, el sistema les devuelva toda
-la información posible del mismo.
+Existen ocasiones en las cuales un operario necesita ver información detallada de un vuelo.
+Por este motivo es necesario que ingresando el código de vuelo, el sistema devuelva toda la
+información posible asociada al mismo.
 
 
 ### Prioridad de los vuelos
 
-Algueiza tiene un sistema de prioridades de los vuelos que necesitan atención especial,
-los operarios quieren saber cuales son esos vuelos. Nuestor sistema tendra que tener la 
-capaciad de devolver los K vuelos que tienen prioridad mas importante.
+Algueiza tiene un sistema de prioridades sobre los vuelos que necesitan atención especial,
+los operarios necesitan saber cuales son esos vuelos.
+Nuestro sistema deberá ser capaz de devolver los K vuelos que tienen prioridad más importante.
+
 
 ### Borrar datos de vuelos
 
-Finalmente nuestro sistema tiene que ser capaz de eliminar informacion que los
-operarios consideren que ya no es de importancia para ellos, por lo cual hay que 
-tener una funcionaliad que permir borrar la informacion de vuelos que estén entre 
-un rango de fechas de despegue (min / max).
+Finalmente los operarios nos mencionaron que la información que maneja el sistema pierde
+validez con el paso del tiempo. Esta información carece de importancia y debe ser eliminada
+del sistema.
+
+Con este fin se debe incorporar la posibilidad de eliminar información de vuelos que estén en un
+rango de fechas de despegue (min / max).
 
 Interfaz
 -------- 
@@ -83,14 +85,14 @@ estándar los siguientes comandos:
 vuelos ordenados por fecha de forma ascendente (asc) o descendente (desc), cuya 
 fecha de despegue esté dentro de el intervalo `<desde>` `<hasta>`.
 
-- `info_vuelo <codigo vuelo>`: muestra toda la informacion posible en sobre el vuelo que 
-tiene el codigo pasado por parametro.
+- `info_vuelo <codigo vuelo>`: muestra toda la información posible en sobre el vuelo que
+tiene el código pasado por parámetro.
 
-- `prioridad_vuelos <K cantidad vuelos>`: muestra los codigos de los K vuelos que tienen
+- `prioridad_vuelos <K cantidad vuelos>`: muestra los códigos de los K vuelos que tienen
 mayor prioridad.
 
 - `borrar <desde> <hasta>`: borra todos los vuelos cuya fecha de despegue 
-estén dentro de el intervalo `<desde>` `<hasta>` .
+estén dentro del intervalo `<desde>` `<hasta>` .
 
 Si un comando es válido deberá imprimir `OK` por salida estándar después de ser
 ejecutado.
@@ -160,8 +162,8 @@ Casos el los que el sistema tiene que devolver error (con el formato anteriormen
 
 ### Info_vuelo
 
-Este comando debe mostrar toda la informacion del vuelo cuyo codigo de vuelo coincida con el que fue pasado por 
-parametro, el formato que tiene que mostrar de la informacion es exactamente igual a la linea leida del archivo
+Este comando debe mostrar toda la informacion del vuelo cuyo código de vuelo coincida con el que fue pasado por
+parametro, el formato que tiene que mostrar de la información es exactamente igual a la linea leída del archivo
 original.
 
 *Ejemplo:* `info_vuelo 1234`
@@ -173,12 +175,12 @@ TODO: @jorge ACA PONER UNA LINEA DEL ARCHIVO
 OK
 ```
 
-En caso que se pase un codigo de vuelo que no exista dentro de los codigos procesados, se deberá devolver un mensaje de 
+En caso de ingresar un código de vuelo que no exista dentro de los códigos procesados, se deberá devolver un mensaje de
 error con el formato anteriormente mencionado.
 
 ### Prioridad_vuelos
 Este comando deberá mostrar de mayor a menor, los K vuelos con mayor prioridad que hayan sido cargados en el sistema, de 
-la forma < prioridad > - < codigo de vuelo >. Si dos vuelos tienen la misma prioridad, se desempatará por el codigo de 
+la forma < prioridad > - < codigo de vuelo >. Si dos vuelos tienen la misma prioridad, se desempatará por el código de
 vuelo mostrandolos de menor a mayor.
 
 *Ejemplo:* `prioridad_vuelos 3`
