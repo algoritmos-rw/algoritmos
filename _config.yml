@@ -7,6 +7,7 @@ description: >
 baseurl: "/algo2"
 entregas: "https://algoritmos-rw.turing.pink/entregas/"
 notas: "https://algoritmos-rw.turing.pink/notas/"
+skel: "https://algoritmos-rw.github.io/algo2_skel"
 # url: "https://algoritmos-rw.github.io"
 
 theme: minima

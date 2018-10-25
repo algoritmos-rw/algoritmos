@@ -27,7 +27,7 @@ está divido en tres partes:
 
 ## Manejo de cadenas
 
-Se pide implementar las funciones del archivo [{{TP.zip}}]({{TP.zip_link}}) que se describen a continuación. Se permite utilizar cualquier función de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
+Se pide implementar las funciones del archivo adjunto en [el sitio de descargas]({{site.skel}}) que se describen a continuación. Se permite utilizar cualquier función de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
 
 ### split()
 
