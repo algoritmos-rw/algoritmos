@@ -85,7 +85,7 @@ estándar los siguientes comandos:
 vuelos ordenados por fecha de forma ascendente (asc) o descendente (desc), cuya 
 fecha de despegue esté dentro de el intervalo `<desde>` `<hasta>`.
 
-- `info_vuelo <codigo vuelo>`: muestra toda la información posible en sobre el vuelo que
+- `info_vuelo <código vuelo>`: muestra toda la información posible en sobre el vuelo que
 tiene el código pasado por parámetro.
 
 - `prioridad_vuelos <K cantidad vuelos>`: muestra los códigos de los K vuelos que tienen
@@ -112,44 +112,44 @@ directorio donde se ejecuta el programa.
 *Ejemplo:* `agregar_archivo vuelos-alugeiza-parte-01.csv`
 
 
-Al ejecutarse, el programa deberá leer el archivo, parsear cada linea sabiendo que tiene el formato
-[csv](https://es.wikipedia.org/wiki/Valores_separados_por_comas) y guardar cada linea en la/las 
+Al ejecutarse, el programa deberá leer el archivo, parsear cada línea sabiendo que tiene el formato
+[csv](https://es.wikipedia.org/wiki/Valores_separados_por_comas) y guardar cada línea en la/las 
 estructuras auxiliares correspondientes para ser capaz de ejecutar los otros comandos. En caso que 
-dos lineas tengan el mismo codigo de vuelo, el sistema se deberá quedar solamente con la información
-de la ultima aparición.  
+dos líneas tengan el mismo código de vuelo, el sistema se deberá quedar solamente con la información
+de la última aparición.  
 Este comando se puede ejecutar más de una vez durante el ciclo de uso de nuestro programa, y por lo
-tanto puede recibir nuevos archivos. Si un nuevo archivo procesado contiene un codigo de vuelo que 
+tanto puede recibir nuevos archivos. Si un nuevo archivo procesado contiene un código de vuelo que 
 ya se encuentra en nuestro sistema, nuestro programa deberá quedarse solamente con la información
-de la ultima aparición.  
+de la última aparición.  
 
 
 ### Ver_tablero 
 
-El comando recibe varios parametros:
+El comando recibe varios parámetros:
 - K cantidad vuelos: Numero entero mayor a 0, que indica la cantidad K de vuelos a mostrar
-- modo: asc/desc : cadena con "asc" o "desc" como unicos posibles valores, indican el orden a elegir 
+- modo: asc/desc : cadena con "asc" o "desc" como únicos posibles valores, indican el orden a elegir 
   utilizando el campo `fecha de despegue` 
-- desde : cadena en formato YYYY-MM-DDTHH:MM que indica el tiempo desde que se tienen que mostrar 
+- desde: cadena en formato YYYY-MM-DDTHH:MM que indica el tiempo desde que se tienen que mostrar 
   los vuelos, los vuelos con una fecha de despegue anteriores al tiempo ingresado no se tienen que mostrar.
-- hasta : cadena en formato YYYY-MM-DDTHH:MM que indica el tiempo hasta que se tienen que mostrar 
+- hasta: cadena en formato YYYY-MM-DDTHH:MM que indica el tiempo hasta que se tienen que mostrar 
   los vuelos, los vuelos con una fecha de despegue posteriores al tiempo ingresado no se tienen que mostrar.
 
 
 *Ejemplo:* `ver_tablero 5 asc 2018-10-10T00:01 2018-10-18T00:12`
 
-Al ejecutarse deberán imprimir por salida estandar las fechas de despegue y los codigos de los vuelos que cumplan 
-con la logica anteriomente mencionada, cada vuelo se imprime en una nueva linea. El formato de cada linea tiene
-que ser YYYY-MM-DDTHH:MM - <codigo de vuelo>.
-En el caso que dos vuelos tengan la misma fecha de despegue, se deberá mostrar los vuelos comparando por en numero 
-de vuelvo.
+Al ejecutarse deberán imprimir por salida estandar las fechas de despegue y los códigos de los vuelos que cumplan 
+con la lógica anteriomente mencionada, cada vuelo se imprime en una nueva línea. El formato de cada línea tiene
+que ser `YYYY-MM-DDTHH:MM - <código de vuelo>`.
+En el caso que dos vuelos tengan la misma fecha de despegue, se deberá mostrar los vuelos comparando por número 
+de vuelo.
 
 
 *Ejemplo de salida:*
 
 ```
 2018-10-10T08:51 - 1234
-2018-10-11T10:20 - 1112
-2018-10-11T10:20 - 1113
+2018-10-11T10:20 - 11123
+2018-10-11T10:20 - 9113
 2018-10-12T17:20 - 991223
 2018-10-18T21:32 - 98123
 OK
@@ -163,7 +163,7 @@ Casos el los que el sistema tiene que devolver error (con el formato anteriormen
 ### Info_vuelo
 
 Este comando debe mostrar toda la informacion del vuelo cuyo código de vuelo coincida con el que fue pasado por
-parametro, el formato que tiene que mostrar de la información es exactamente igual a la linea leída del archivo
+parámetro, el formato que tiene que mostrar de la información es exactamente igual a la línea leída del archivo
 original.
 
 *Ejemplo:* `info_vuelo 1234`
@@ -180,8 +180,8 @@ error con el formato anteriormente mencionado.
 
 ### Prioridad_vuelos
 Este comando deberá mostrar de mayor a menor, los K vuelos con mayor prioridad que hayan sido cargados en el sistema, de 
-la forma < prioridad > - < codigo de vuelo >. Si dos vuelos tienen la misma prioridad, se desempatará por el código de
-vuelo mostrandolos de menor a mayor.
+la forma `<prioridad> - <código de vuelo>`. Si dos vuelos tienen la misma prioridad, se desempatará por el código de
+vuelo mostrándolos de menor a mayor.
 
 *Ejemplo:* `prioridad_vuelos 3`
 
@@ -196,11 +196,11 @@ OK
 
 ### Borrar
 El comando recibe dos argumentos:
-- desde : cadena en formato YYYY-MM-DDTHH:MM
-- hasta : cadena en formato YYYY-MM-DDTHH:MM
+- desde: cadena en formato YYYY-MM-DDTHH:MM
+- hasta: cadena en formato YYYY-MM-DDTHH:MM
 
 Al ejecutarse, todos los vuelos cuya fecha de despegue que sean mayores a < desde > y menores a < hasta > tienen que 
-ser borrados del sistema.  
+ser borrados del sistema.
 En caso de que se reciba una fecha < hasta > que sea menor a < dede >, se deberá devolver un mensaje de 
 error con el formato anteriormente mencionado.
 
@@ -265,22 +265,22 @@ time_t iso8601_to_time(const char* iso8601)
 }
 ```
 
-Esta variable de tipo `time_t` puede ser usada junto con la función `timediff`
+Esta variable de tipo `time_t` puede ser usada junto con la función `difftime`
 ([info](http://man7.org/linux/man-pages/man3/difftime.3.html)) 
 para calcular la diferencia en segundos entre dos fechas.
 
 ### Tiempos de ejecución
 
 - Agregar_archivo:
-  El mantenimiento para actualizar los vuelos debe ser  $$\mathcal{O}(n \log v)$$ siendo $$v$$ la cantidad de vuelos
+  El mantenimiento para actualizar los vuelos debe ser  $$\mathcal{O}(n \log{v})$$ siendo $$v$$ la cantidad de vuelos
   en el nuevo archivo y n la cantidad total de vuelos en el sistema.
 - Ver_tablero: debe ser  $$\mathcal{O}(v)$$ en el peor caso (en el que se tenga que mostrar todos los visitantes), 
-  $$\mathcal{O}(\log v)$$ en un caso promedio (en el caso en el que no se pidan mostrar demasiados visitantes). 
+  $$\mathcal{O}(\log{v})$$ en un caso promedio (en el caso en el que no se pidan mostrar demasiados visitantes). 
   $$v$$ es la cantidad de vuelos. 
 - Info_vuelo: debe ser  $$\mathcal{O}(1)$$.
-- Prioridad_vuelos:  debe ser  $$\mathcal{O}(K \ log n)$$. Siendo K la cantidad de vuelos a mostrar y n la cantidad de 
+- Prioridad_vuelos:  debe ser  $$\mathcal{O}(K \log{n})$$. Siendo K la cantidad de vuelos a mostrar y n la cantidad de 
   vuelos en el sistema.
-- Borrar: debe ser  $$\mathcal{O}(K \ log n)$$ . Siendo K la cantidad de vuelos que hay en el rango de fechas ingresado
+- Borrar: debe ser  $$\mathcal{O}(K \log{n})$$ . Siendo K la cantidad de vuelos que hay en el rango de fechas ingresado
   y n la cantidad de vuelos en todo el sistema.
 
 
