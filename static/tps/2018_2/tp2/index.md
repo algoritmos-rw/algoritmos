@@ -35,7 +35,7 @@ los distintos vuelos.
 
 ### Archivos
 
-El sistema que actualmente tiene Algueiza genera continuamente archivos en formato `.csv`
+El sistema que actualmente tiene Alugeiza genera continuamente archivos en formato `.csv`
 que contienen la información de cada vuelo. Nuestro sistema deberá procesar estos archivos
 y responder a las consultas que los operarios necesiten realizar.
 El sistema tiene que ser capaz de recibir en cualquier momento un nuevo archivo
@@ -58,7 +58,7 @@ información posible asociada al mismo.
 
 ### Prioridad de los vuelos
 
-Algueiza tiene un sistema de prioridades sobre los vuelos que necesitan atención especial,
+Alugeiza tiene un sistema de prioridades sobre los vuelos que necesitan atención especial,
 los operarios necesitan saber cuales son esos vuelos.
 Nuestro sistema deberá ser capaz de devolver los K vuelos que tienen prioridad más importante.
 
@@ -109,7 +109,7 @@ archivos procesados.
 El comando se acompaña del nombre de un archivo `csv`, accesible desde el mismo
 directorio donde se ejecuta el programa.
 
-*Ejemplo:* `agregar_archivo vuelos-algueiza-parte-01.csv`
+*Ejemplo:* `agregar_archivo vuelos-alugeiza-parte-01.csv`
 
 
 Al ejecutarse, el programa deberá leer el archivo, parsear cada linea sabiendo que tiene el formato
@@ -320,10 +320,10 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
 - el código de la solución del TP.
 - el código de los TDAs programados en la cursada que se requieran, con las modificaciones que sean necesarias.
 - un archivo `deps.mk` con las dependencias del proyecto en formato make. Este deberá contener sólamente una 
-línea que indique qué _objetos_ necesita para compilar el ejecutable `algueiza`, por ejemplo:
+línea que indique qué _objetos_ necesita para compilar el ejecutable `alugeiza`, por ejemplo:
 
 ``` makefile
-algueiza: tp2.c hash.o abb.o heap.o strutil.o timeutils.o
+alugeiza: tp2.c hash.o abb.o heap.o strutil.o timeutils.o
 ```
 
 El corrector automático va a interpretar ese archivo de dependencias y va a compilar todos los `.o` especificados a 
