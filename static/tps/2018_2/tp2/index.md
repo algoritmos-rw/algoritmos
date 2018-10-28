@@ -272,7 +272,7 @@ para calcular la diferencia en segundos entre dos fechas.
 ### Tiempos de ejecución
 
 - Agregar_archivo:
-  El mantenimiento para actualizar los vuelos debe ser  $$\mathcal{O}(n \log{v})$$ siendo $$v$$ la cantidad de vuelos
+  El mantenimiento para actualizar los vuelos debe ser  $$\mathcal{O}(V \log{n})$$ siendo $$V$$ la cantidad de vuelos
   en el nuevo archivo y n la cantidad total de vuelos en el sistema.
 - Ver_tablero: debe ser  $$\mathcal{O}(v)$$ en el peor caso (en el que se tenga que mostrar todos los visitantes), 
   $$\mathcal{O}(\log{v})$$ en un caso promedio (en el caso en el que no se pidan mostrar demasiados visitantes). 
