@@ -135,7 +135,7 @@ El comando recibe varios parámetros:
   los vuelos, los vuelos con una fecha de despegue posteriores al tiempo ingresado no se tienen que mostrar.
 
 
-*Ejemplo:* `ver_tablero 5 asc 2018-10-10T00:01 2018-10-18T00:12`
+*Ejemplo:* `ver_tablero 5 asc 2018-10-10T00:01:00 2018-10-18T00:12:00`
 
 Al ejecutarse deberán imprimir por salida estandar las fechas de despegue y los códigos de los vuelos que cumplan 
 con la lógica anteriomente mencionada, cada vuelo se imprime en una nueva línea. El formato de cada línea tiene
@@ -147,15 +147,15 @@ de vuelo.
 *Ejemplo de salida:*
 
 ```
-2018-10-10T08:51 - 1234
-2018-10-11T10:20 - 11123
-2018-10-11T10:20 - 9113
-2018-10-12T17:20 - 991223
-2018-10-18T21:32 - 98123
+2018-10-10T08:51:32 - 1234
+2018-10-11T10:20:12 - 11123
+2018-10-11T10:20:22 - 9113
+2018-10-12T17:20:12 - 991223
+2018-10-18T21:32:59 - 98123
 OK
 ```
 
-Casos el los que el sistema tiene que devolver error (con el formato anteriormente mencionado): 
+Casos en los que el sistema tiene que devolver error (con el formato anteriormente mencionado):
 - recibir un K igual o menor a 0
 - recibir un modo que no sea asc o desc
 - recibir una fecha `hasta` que sea anterior a la fecha `desde`
@@ -166,12 +166,12 @@ Este comando debe mostrar toda la informacion del vuelo cuyo código de vuelo co
 parámetro, el formato que tiene que mostrar de la información es exactamente igual a la línea leída del archivo
 original.
 
-*Ejemplo:* `info_vuelo 1234`
+*Ejemplo:* `info_vuelo 4608`
 
 *Ejemplo de salida:*
 
 ```
-TODO: @jorge ACA PONER UNA LINEA DEL ARCHIVO 
+4608 OO PDX SEA N812SK 08 2018-04-10T23:22:55 05 43
 OK
 ```
 
@@ -196,8 +196,8 @@ OK
 
 ### Borrar
 El comando recibe dos argumentos:
-- desde: cadena en formato YYYY-MM-DDTHH:MM
-- hasta: cadena en formato YYYY-MM-DDTHH:MM
+- desde: cadena en formato YYYY-MM-DDTHH:MM:SS
+- hasta: cadena en formato YYYY-MM-DDTHH:MM:SS
 
 Al ejecutarse, todos los vuelos cuya fecha de despegue que sean mayores a < desde > y menores a < hasta > tienen que 
 ser borrados del sistema.
@@ -212,17 +212,23 @@ Consideraciones adicionales
 
 Cada línea de los archivos entrantes `.csv` tienen la siguiente estructura:
 
-TODO: @jorge Poner estructura (y pequeña explicacion) de cada campo del archivo
-- Campo1: .
-- Campo2.
-- etc.
+- FLIGHT_NUMBER: 4608
+- AIRLINE: OO
+- ORIGIN_AIRPORT: PDX
+- DESTINATION_AIRPORT: SEA
+- TAIL_NUMBER: N812SK
+- PRIORITY: 08
+- DATE: 2018-04-10T23:22:55
+- DEPARTURE_DELAY: 05
+- AIR_TIME: 43
+- CANCELLED: 0
 
 Cada dato de una línea de log está separado por una coma.
 
 Ejemplo:
 
 ```
-TODO: @jorge PONER UN EJEMPLO DE UNA LINEA
+4608,OO,PDX,SEA,N812SK,08,2018-04-10T23:22:55,05,43,0
 ```
 
 
@@ -236,7 +242,7 @@ que consiste de año, mes, día, T mayúscula como separador, hora, minutos,
 segundos y zona horaria:
 
 - año = 4 dígitos
-- mes = 3 letras
+- mes = 2 dígitos
 - día = 2 dígitos
 - hora = 2 dígitos
 - minutos = 2 dígitos
@@ -291,23 +297,73 @@ Se proveen ejemplos completos para mostrar la salida esperada en cada instrucci�
 
 ### Agregar_archivo
 
-TODO: @fiona poner ejemplos
+*Ejemplo:* `agregar_archivo vuelos-alugeiza-parte-01.csv`
+
+*Salida esperada:* 
+
+`
+Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser
+ejecutado.
+Si se produce un error al procesar el archivo se imprime `Error en comando <comando>` por `stderr`f
+y se finaliza la ejecución.
+`
 
 ### Ver_tablero
 
-TODO: @fiona poner ejemplos
+*Ejemplo:* `ver_tablero 3 asc 2018-04-08T10:00:00 2018-04-21T00:12:00`
+
+*Salida esperada:*
+
+`6391   OO	EUG	DEN	N593ML	26	2018-04-08T11:15:29	-4	143	0`
+`4608   OO	PDX	SEA	N812SK	08	2018-04-10T23:22:55	05	43	0`
+`5460	OO	RDD	SFO	N583SW	00	2018-04-21T07:41:48	00	00	0`
+
+Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser
+ejecutado. Si se produce un error al procesar el comando se imprime `Error en comando <comando>`
+por `stderr`f y se finaliza la ejecución.
 
 ### Info_vuelo
 
-TODO: @fiona poner ejemplos
+*Ejemplo:* `info_vuelo 4608`
+
+*Salida esperada:*
+
+```
+4608 OO PDX SEA N812SK 08 2018-04-10T23:22:55 05 43 0
+OK
+```
+Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser
+ejecutado. 
+
+Si no existe información asociada al vuelo indicado se debe emitir un mensaje indicando
+el resultado. 
 
 ### Prioridad_vuelos
 
-TODO: @fiona poner ejemplos
+*Ejemplo:* `prioridad_vuelos 4`
+
+*Ejemplo de salida:*
+
+```
+26 - 6391
+15 - 1086
+12 - 4701
+
+OK
+```
 
 ### Borrar
 
-TODO: @fiona poner ejemplos
+*Ejemplo:* `borrar 2018-10-04T02:01:01 2018-11-01T03:00:00`
+
+*Ejemplo de salida:*
+
+```
+4701	EV	EWR	CMH	N11150	12	2018-10-04T04:19:24	-10	 55	0
+2807	MQ	SGF	DFW	N604MQ	00	2018-10-05T13:57:14	 00	107	0
+
+OK
+```
 
 Criterios de aprobación
 ------------------------
