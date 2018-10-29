@@ -129,9 +129,9 @@ El comando recibe varios parámetros:
 - K cantidad vuelos: Numero entero mayor a 0, que indica la cantidad K de vuelos a mostrar
 - modo: asc/desc : cadena con "asc" o "desc" como únicos posibles valores, indican el orden a elegir 
   utilizando el campo `fecha de despegue` 
-- desde: cadena en formato YYYY-MM-DDTHH:MM que indica el tiempo desde que se tienen que mostrar 
+- desde: cadena en formato YYYY-MM-DDTHH:MM:SS que indica el tiempo desde que se tienen que mostrar 
   los vuelos, los vuelos con una fecha de despegue anteriores al tiempo ingresado no se tienen que mostrar.
-- hasta: cadena en formato YYYY-MM-DDTHH:MM que indica el tiempo hasta que se tienen que mostrar 
+- hasta: cadena en formato YYYY-MM-DDTHH:MM:SS que indica el tiempo hasta que se tienen que mostrar 
   los vuelos, los vuelos con una fecha de despegue posteriores al tiempo ingresado no se tienen que mostrar.
 
 
@@ -139,7 +139,7 @@ El comando recibe varios parámetros:
 
 Al ejecutarse deberán imprimir por salida estandar las fechas de despegue y los códigos de los vuelos que cumplan 
 con la lógica anteriomente mencionada, cada vuelo se imprime en una nueva línea. El formato de cada línea tiene
-que ser `YYYY-MM-DDTHH:MM - <código de vuelo>`.
+que ser `YYYY-MM-DDTHH:MM:SS - <código de vuelo>`.
 En el caso que dos vuelos tengan la misma fecha de despegue, se deberá mostrar los vuelos comparando por número 
 de vuelo.
 
@@ -171,7 +171,7 @@ original.
 *Ejemplo de salida:*
 
 ```
-4608 OO PDX SEA N812SK 08 2018-04-10T23:22:55 05 43
+4608 OO PDX SEA N812SK 08 2018-04-10T23:22:55 05 43 0
 OK
 ```
 
