@@ -244,7 +244,7 @@ Se provee una [colección de archivos de ejemplo](../../assets/tps/2018_2/tp2/vu
   $$\mathcal{O}(\log{v})$$ en un caso promedio (en el caso en el que no se pidan mostrar demasiados visitantes). 
   $$v$$ es la cantidad de vuelos. 
 - Info_vuelo: debe ser  $$\mathcal{O}(1)$$.
-- Prioridad_vuelos:  debe ser  $$\mathcal{O}(K \log{n})$$. Siendo K la cantidad de vuelos a mostrar y n la cantidad de 
+- Prioridad_vuelos:  debe ser  $$\mathcal{O}(n \log{K})$$. Siendo K la cantidad de vuelos a mostrar y n la cantidad de 
   vuelos en el sistema.
 - Borrar: debe ser  $$\mathcal{O}(K \log{n})$$ . Siendo K la cantidad de vuelos que hay en el rango de fechas ingresado
   y n la cantidad de vuelos en todo el sistema.
@@ -274,6 +274,7 @@ Si se produce un error al procesar el archivo se imprime `Error en comando <coma
 6391  OO  EUG  DEN  N593ML  26  2018-04-08T11:15:29  -4  143  0
 4608  OO  PDX  SEA  N812SK  08  2018-04-10T23:22:55  05  43  0
 5460  OO  RDD  SFO  N583SW  00  2018-04-21T07:41:48  00  00  0
+OK
 ```
 
 Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser
