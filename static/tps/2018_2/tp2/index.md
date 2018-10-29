@@ -232,7 +232,7 @@ Ejemplo:
 ```
 
 
-Se provee una [colección de archivos de ejemplo]() TODO: @jorge armar ejemplos y subirlos al drive.
+Se provee una [colección de archivos de ejemplo](../../assets/tps/2018_2/tp2/vuelos-alugeiza.zip).
 
 ### Fecha y hora
 
