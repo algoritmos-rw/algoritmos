@@ -234,46 +234,6 @@ Ejemplo:
 
 Se provee una [colección de archivos de ejemplo](../../assets/tps/2018_2/tp2/vuelos-alugeiza.zip).
 
-### Fecha y hora
-
-La fecha y hora estarán brindadas en formato
-[ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html),<sup>[2](https://xkcd.com/1179/)</sup>
-que consiste de año, mes, día, T mayúscula como separador, hora, minutos,
-segundos y zona horaria:
-
-- año = 4 dígitos
-- mes = 2 dígitos
-- día = 2 dígitos
-- hora = 2 dígitos
-- minutos = 2 dígitos
-- segundos = 2 dígitos
-- zona = +/- 4 dígitos.
-
-Para interpretar la sección de la fecha en C pueden utilizar el siguiente fragmento de código, que devuelve un tipo 
-`time_t` dado una cadena con el formato indicado:
-
-``` c
-#define _XOPEN_SOURCE
-
-#include <time.h>
-
-#define TIME_FORMAT "%FT%T%z"
-
-/*
-    Dada una cadena en formato ISO-8601 devuelve una variable de tipo time_t
-    que representa un instante en el tiempo.
-*/
-time_t iso8601_to_time(const char* iso8601)
-{
-    struct tm bktime = { 0 };
-    strptime(iso8601, TIME_FORMAT, &bktime);
-    return mktime(&bktime);
-}
-```
-
-Esta variable de tipo `time_t` puede ser usada junto con la función `difftime`
-([info](http://man7.org/linux/man-pages/man3/difftime.3.html)) 
-para calcular la diferencia en segundos entre dos fechas.
 
 ### Tiempos de ejecución
 
