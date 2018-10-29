@@ -301,12 +301,8 @@ Se proveen ejemplos completos para mostrar la salida esperada en cada instrucci�
 
 *Salida esperada:* 
 
-`
-Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser
-ejecutado.
-Si se produce un error al procesar el archivo se imprime `Error en comando <comando>` por `stderr`f
-y se finaliza la ejecución.
-`
+Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser ejecutado.
+Si se produce un error al procesar el archivo se imprime `Error en comando <comando>` por `stderr` y se finaliza la ejecución.
 
 ### Ver_tablero
 
@@ -314,13 +310,15 @@ y se finaliza la ejecución.
 
 *Salida esperada:*
 
-`6391   OO	EUG	DEN	N593ML	26	2018-04-08T11:15:29	-4	143	0`
-`4608   OO	PDX	SEA	N812SK	08	2018-04-10T23:22:55	05	43	0`
-`5460	OO	RDD	SFO	N583SW	00	2018-04-21T07:41:48	00	00	0`
+```
+6391  OO  EUG  DEN  N593ML  26  2018-04-08T11:15:29  -4  143  0
+4608  OO  PDX  SEA  N812SK  08  2018-04-10T23:22:55  05  43  0
+5460  OO  RDD  SFO  N583SW  00  2018-04-21T07:41:48  00  00  0
+```
 
 Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser
 ejecutado. Si se produce un error al procesar el comando se imprime `Error en comando <comando>`
-por `stderr`f y se finaliza la ejecución.
+por `stderr` y se finaliza la ejecución.
 
 ### Info_vuelo
 
@@ -333,10 +331,10 @@ por `stderr`f y se finaliza la ejecución.
 OK
 ```
 Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser
-ejecutado. 
+ejecutado.
 
 Si no existe información asociada al vuelo indicado se debe emitir un mensaje indicando
-el resultado. 
+el resultado.
 
 ### Prioridad_vuelos
 
@@ -348,7 +346,6 @@ el resultado.
 26 - 6391
 15 - 1086
 12 - 4701
-
 OK
 ```
 
@@ -359,9 +356,8 @@ OK
 *Ejemplo de salida:*
 
 ```
-4701	EV	EWR	CMH	N11150	12	2018-10-04T04:19:24	-10	 55	0
-2807	MQ	SGF	DFW	N604MQ	00	2018-10-05T13:57:14	 00	107	0
-
+4701  EV  EWR  CMH  N11150  12  2018-10-04T04:19:24  -10  55  0
+2807  MQ  SGF  DFW  N604MQ  00  2018-10-05T13:57:14  00  107  0
 OK
 ```
 
@@ -379,7 +375,7 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
 línea que indique qué _objetos_ necesita para compilar el ejecutable `alugeiza`, por ejemplo:
 
 ``` makefile
-alugeiza: tp2.c hash.o abb.o heap.o strutil.o timeutils.o
+alugeiza: tp2.o hash.o abb.o heap.o strutil.o timeutils.o
 ```
 
 El corrector automático va a interpretar ese archivo de dependencias y va a compilar todos los `.o` especificados a 
