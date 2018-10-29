@@ -27,7 +27,7 @@ Introducción
     <img src="{{ 'assets/tps/2018_1/tp2/uma2.png' | relative_url }}" width="200">
 </p-->
 
-El aeropuerto de Alugeiza opera la entrada y salida de aviones, los operarios
+El aeropuerto de algueiza opera la entrada y salida de aviones, los operarios
 de dicho aeropuerto nos han pedido que implementemos un sistema de consulta 
 de vuelos que les permita: ordenar, filtrar, analizar y obtener información de
 los distintos vuelos.
@@ -35,7 +35,7 @@ los distintos vuelos.
 
 ### Archivos
 
-El sistema que actualmente tiene Alugeiza genera continuamente archivos en formato `.csv`
+El sistema que actualmente tiene algueiza genera continuamente archivos en formato `.csv`
 que contienen la información de cada vuelo. Nuestro sistema deberá procesar estos archivos
 y responder a las consultas que los operarios necesiten realizar.
 El sistema tiene que ser capaz de recibir en cualquier momento un nuevo archivo
@@ -58,7 +58,7 @@ información posible asociada al mismo.
 
 ### Prioridad de los vuelos
 
-Alugeiza tiene un sistema de prioridades sobre los vuelos que necesitan atención especial,
+algueiza tiene un sistema de prioridades sobre los vuelos que necesitan atención especial,
 los operarios necesitan saber cuales son esos vuelos.
 Nuestro sistema deberá ser capaz de devolver los K vuelos que tienen prioridad más importante.
 
@@ -109,7 +109,7 @@ archivos procesados.
 El comando se acompaña del nombre de un archivo `csv`, accesible desde el mismo
 directorio donde se ejecuta el programa.
 
-*Ejemplo:* `agregar_archivo vuelos-alugeiza-parte-01.csv`
+*Ejemplo:* `agregar_archivo vuelos-algueiza-parte-01.csv`
 
 
 Al ejecutarse, el programa deberá leer el archivo, parsear cada línea sabiendo que tiene el formato
@@ -232,7 +232,7 @@ Ejemplo:
 ```
 
 
-Se provee una [colección de archivos de ejemplo](../../assets/tps/2018_2/tp2/vuelos-alugeiza.zip).
+Se provee una [colección de archivos de ejemplo](../../assets/tps/2018_2/tp2/vuelos-algueiza.zip).
 
 
 ### Tiempos de ejecución
@@ -257,7 +257,7 @@ Se proveen ejemplos completos para mostrar la salida esperada en cada instrucci�
 
 ### Agregar_archivo
 
-*Ejemplo:* `agregar_archivo vuelos-alugeiza-parte-01.csv`
+*Ejemplo:* `agregar_archivo vuelos-algueiza-parte-01.csv`
 
 *Salida esperada:* 
 
@@ -333,10 +333,10 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
 - el código de la solución del TP.
 - el código de los TDAs programados en la cursada que se requieran, con las modificaciones que sean necesarias.
 - un archivo `deps.mk` con las dependencias del proyecto en formato make. Este deberá contener sólamente una 
-línea que indique qué _objetos_ necesita para compilar el ejecutable `alugeiza`, por ejemplo:
+línea que indique qué _objetos_ necesita para compilar el ejecutable `algueiza`, por ejemplo:
 
 ``` makefile
-alugeiza: tp2.o hash.o abb.o heap.o strutil.o timeutils.o
+algueiza: tp2.o hash.o abb.o heap.o strutil.o timeutils.o
 ```
 
 El corrector automático va a interpretar ese archivo de dependencias y va a compilar todos los `.o` especificados a 
