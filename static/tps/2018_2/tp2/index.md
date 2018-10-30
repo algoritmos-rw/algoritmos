@@ -140,8 +140,7 @@ El comando recibe varios parámetros:
 Al ejecutarse deberán imprimir por salida estandar las fechas de despegue y los códigos de los vuelos que cumplan 
 con la lógica anteriomente mencionada, cada vuelo se imprime en una nueva línea. El formato de cada línea tiene
 que ser `YYYY-MM-DDTHH:MM:SS - <código de vuelo>`.
-En el caso que dos vuelos tengan la misma fecha de despegue, se deberá mostrar los vuelos comparando por número 
-de vuelo.
+En el caso que dos vuelos tengan la misma fecha de despegue, se deberá mostrar los vuelos comparando por número de vuelo (tomado como cadena).
 
 
 *Ejemplo de salida:*
@@ -240,7 +239,8 @@ Se provee una [colección de archivos de ejemplo](../../assets/tps/2018_2/tp2/vu
 - Agregar_archivo:
   El mantenimiento para actualizar los vuelos debe ser  $$\mathcal{O}(V \log{n})$$ siendo $$V$$ la cantidad de vuelos
   en el nuevo archivo y n la cantidad total de vuelos en el sistema.
-- Ver_tablero: debe ser  $$\mathcal{O}(v)$$ en el peor caso (en el que se tenga que mostrar todos los visitantes), 
+- Ver_tablero: debe ser  $$\mathcal{O}(v)$$ en el peor caso (en el que se tenga
+  que mostrar todos los vuelos del sistema), 
   $$\mathcal{O}(\log{v})$$ en un caso promedio (en el caso en el que no se pidan mostrar demasiados visitantes). 
   $$v$$ es la cantidad de vuelos. 
 - Info_vuelo: debe ser  $$\mathcal{O}(1)$$.
