@@ -97,7 +97,7 @@ estén dentro del intervalo `<desde>` `<hasta>` .
 Si un comando es válido deberá imprimir `OK` por salida estándar después de ser
 ejecutado.
 Si un comando no pertenece a los listados previamente o tiene un error, se
-imprime `Error en comando <comando>` por `stderr` y se finaliza la ejecución.
+imprime `Error en comando <comando>` por `stderr` y continua la ejecución.
 
 El programa no tendrá un comando para terminar. Este finaliza cuando no quedan
 más líneas para procesar por entrada estándar. Al finalizar, es importante que
@@ -163,7 +163,7 @@ Casos en los que el sistema tiene que devolver error (con el formato anteriormen
 
 Este comando debe mostrar toda la informacion del vuelo cuyo código de vuelo coincida con el que fue pasado por
 parámetro, el formato que tiene que mostrar de la información es exactamente igual a la línea leída del archivo
-original.
+original, salvo que en vez de comas se tienen espacios.
 
 *Ejemplo:* `info_vuelo 4608`
 
@@ -262,7 +262,7 @@ Se proveen ejemplos completos para mostrar la salida esperada en cada instrucci�
 *Salida esperada:* 
 
 Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser ejecutado.
-Si se produce un error al procesar el archivo se imprime `Error en comando <comando>` por `stderr` y se finaliza la ejecución.
+Si se produce un error al procesar el archivo se imprime `Error en comando <comando>` por `stderr` y se continua la ejecución.
 
 ### Ver_tablero
 
@@ -277,10 +277,6 @@ Si se produce un error al procesar el archivo se imprime `Error en comando <coma
 OK
 ```
 
-Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser
-ejecutado. Si se produce un error al procesar el comando se imprime `Error en comando <comando>`
-por `stderr` y se finaliza la ejecución.
-
 ### Info_vuelo
 
 *Ejemplo:* `info_vuelo 4608`
@@ -291,11 +287,6 @@ por `stderr` y se finaliza la ejecución.
 4608 OO PDX SEA N812SK 08 2018-04-10T23:22:55 05 43 0
 OK
 ```
-Si el comando se ejecuta correctamente deberá imprimir `OK` por salida estándar después de ser
-ejecutado.
-
-Si no existe información asociada al vuelo indicado se debe emitir un mensaje indicando
-el resultado.
 
 ### Prioridad_vuelos
 
@@ -336,7 +327,7 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
 línea que indique qué _objetos_ necesita para compilar el ejecutable `algueiza`, por ejemplo:
 
 ``` makefile
-algueiza: tp2.o hash.o abb.o heap.o strutil.o timeutils.o
+algueiza: tp2.o hash.o abb.o heap.o strutil.o
 ```
 
 El corrector automático va a interpretar ese archivo de dependencias y va a compilar todos los `.o` especificados a 
