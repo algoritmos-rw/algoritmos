@@ -58,22 +58,31 @@ disfrutar más del viaje).
 
 ## Datos disponibles
 
-Se cuenta con los datos de los [aeropuertos](https://www.kaggle.com/usdot/flight-delays/version/1#airports.csv), así como de más de medio millón de [vuelos](https://www.kaggle.com/usdot/flight-delays/version/1#flights.csv) durante el año 2015. 
+Se cuenta con los datos de los [aeropuertos de Estados Unidos](https://www.kaggle.com/usdot/flight-delays/version/1#airports.csv), así como de más de medio millón de [vuelos](https://www.kaggle.com/usdot/flight-delays/version/1#flights.csv) durante el año 2015. 
 
-Para evitar tener que realizar el procesamiento, se incluye el archivo [aeropuertos.csv](sarasa)
-con el formato:
-```
-aeropuerto_i,ciudad,latitud,longitud
-```
-Y el archivo [conexiones](saralala) con el formato: 
-```
-aeropuerto_i,aeropuerto_j,distancia,precio,cant_vuelos_entre_aeropuertos
-```
-_Aclaración_: Si bien es más interesante el tiempo que la distancia entre aeropuertos, y no siempre
-la relación es necesariamente directa (por las rutas de vuelo), podemos considerar ésto como despreciable
-y que además los vuelos pueden variar en tiempo debido a distintos factores, como pueden ser climáticos. 
-Los precios han sido inventados completamente y no tienen ninguna relación con la realidad. El curso no
-se hace responsable por las recomendaciones que pueda hacer alguno de los programas implementados. 
+Una consultora uso un [innovador script](parser.py) para parsear dichos datos en los siguiente archivos: 
+* El archivo [aeropuertos.csv](aeropuertos.csv) con el formato:
+	```
+	ciudad,codigo_aeropuerto,latitud,longitud
+	```
+* El archivo [vuelos.csv](vuelos.csv) con el formato: 
+	```
+	ciudad_i,ciudad_j,tiempo_promedio,precio,cant_vuelos_entre_aeropuertos
+	```
+
+### Aclaraciones
+
+* Solo se toma uno de los aeropuertos de cada ciudad, por simplificación. Los vuelos que correspondan
+a otros aeropuertos fueron descartados.
+* El tiempo promedio es el promedio (redondeado) de todos los vuelos entre ese par de ciudades.
+* Los precios han sido inventados completamente (puede verse en el script generador) y no tienen 
+ninguna relación con la realidad. El curso no se hace responsable por las recomendaciones que pueda 
+hacer alguno de los programas implementados. 
+* Sería de mayor interés tener los datos disponibles de todo el mundo, o de diversos países. De todas
+formas, hay que considerar que se tratan de casi 6 millones de vuelos sólo considerando un país, en un
+año. 
+* Más allá de tener los datos de un país en especial, el programa debería funcionar para cualquier parte
+del mundo. 
 
 ## Implementación
 
@@ -81,7 +90,7 @@ El trabajo puede realizarse en lenguaje a elección, siendo aceptados Python y C
 
 El trabajo consiste de 3 partes:
 1. El TDA Grafo, con sus primitivas. 
-1. Una biblioteca de funciones de grafos, que permitan hacer distintas operaciones sobre un grafo de aeropuertos del mundo, sin importar cuál sea el aeropuerto ni ciudad al que pertence.
+1. Una biblioteca de funciones de grafos, que permitan hacer distintas operaciones sobre un grafo de aeropuertos del mundo, sin importar cuál sea el aeropuerto ni país al que pertence.
 1. El programa `FlyCombi` que utilice tanto el TDA como la biblioteca para poder implementar todo 
 lo requerido. 
 
@@ -126,16 +135,15 @@ Salida:
 #### Camino más barato y camino más rápido $$(\star)$$
 
 * Comando: `camino_mas`
-* Parámetros: `barato` ó `rapido`, `origen` y `destino`. Origen y destino son ciudades. 
-Tener en cuenta que existen más de un aeropuerto por ciudad. 
-* Utilidad: nos imprime una lista con los **aeropuertos** con los cuales vamos de la **ciudad**
+* Parámetros: `barato` ó `rapido`, `origen` y `destino`. Origen y destino son ciudades.
+* Utilidad: nos imprime una lista con los **aeropuertos** (código) con los cuales vamos de la **ciudad**
 `origen` a la **ciudad** `destino` de la forma más rápida o más barata, según corresponda. 
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F \log(A))$$, siendo $$A$$ la cantidad
-de aeropuertos, y $$F$$ la cantidad de conexiones entre aeropuertos.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F \log(C))$$, siendo $$C$$ la cantidad
+de ciudades, y $$F$$ la cantidad de vuelos entre aeropuertos (sin contar frecuencia).
 * Ejemplo: 
 Entrada:
 	```
-	camino_mas rapido "Buenos Aires" "Berlin"
+	camino_mas rapido "San Diego" "New York"
 	```
 Salida:
 	```
@@ -146,13 +154,13 @@ Salida:
 * Comando: `camino_escalas`
 * Parámetros: `origen` y `destino`. 
 * Utilidad: nos imprime una lista con los **aeropuertos** con los cuales vamos de la **ciudad**
-`origen` a la **ciudad** `destino` con la menor cantidad de escalas.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A + F)$$, siendo $$A$$ la cantidad
-de aeropuertos, y $$F$$ la cantidad de conexiones entre aeropuertos.
+`origen` a l **ciudad** `destino` con la menor cantidad de escalas.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F + C)$$, siendo $$C$$ la cantidad
+de ciudades, y $$F$$ la cantidad de vuelos entre aeropuertos (sin contar frecuencia).
 * Ejemplos:
 Entrada:
 	```
-	camino_escalas "Buenos Aires" "Berlin"
+	camino_escalas "San Diego" "New York"
 	```
 Salida:
 	```
@@ -162,7 +170,9 @@ Salida:
 
 Utlizaremos alguno (o algunos) de estos comandos para poder obtener cuáles son los aeropuertos
 más importantes. Esto lo podemos hacer obteniendo cuáles son los aeropuertos más centrales,
-o bien usando un algoritmo como el de PageRank. 
+o bien usando un algoritmo como el de PageRank. Es necesario tener en cuenta además la frecuencia 
+de vuelos: no es lo mismo un aeropuerto que se conecte contra todos con un vuelo al año, que uno que 
+se conecte al 80% con muchos vuelos al año. ¡Cuantos más vuelos, mejor!
 
 Dejamos un apunte para la explicación de qué es y cómo se calcula el [Betweeness Centrality](/algo2/material/betweeness_centrality) y otro sobre [PageRank](/algo2/material/pagerank).
 
@@ -172,7 +182,7 @@ Dejamos un apunte para la explicación de qué es y cómo se calcula el [Between
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
 * Utilidad: nos muestra los `n` aeropuertos más centrales/importantes del mundo, de mayor importancia a 
 menor importancia.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A \times F\log(A))$$.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A \times C\log(A))$$.
 * Ejemplo: 
 
 
@@ -194,21 +204,21 @@ pagerank, de mayor importancia a menor importancia.
 
 ### Optimización de rutas para nueva aerolínea $$(\star\star)$$
 
-* Comando: `nueva_aerolinea`
-* Parámetros: ninguno
+* Comando: `nueva_aerolinea`.
+* Parámetros: ninguno.
 * Utilidad: devolver una lista de las rutas que permitan implementar una nueva aerolínea tal que se
 pueda comunicar a todo el mundo con dicha aerolínea, pero que el costo total de la licitación de las 
 rutas aéreas sea mínima. Se considera que el costo de las rutas es proporcional al costo de los pasajes,
 por lo que se puede trabajar directamente con dicho costo.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F\log(A))$$
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C\log(A))$$.
 * Ejemplo:
 
 ### Recorrer el mundo, de forma óptima $$(\star\star)$$
 
-* Comando: `recorrer_mundo`
-* Parámetros: ninguno
-* Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas las
-**ciudades** del mundo, recorriendo la menor distancia posible.
+* Comando: `recorrer_mundo`.
+* Parámetros: ninguno.
+* Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todos los
+**países** del mundo, recorriendo la menor distancia posible.
 * Complejidad: que demore lo que deba demorar para obtener el resultado óptimo.
 * Ejemplo:
 
@@ -216,16 +226,16 @@ por lo que se puede trabajar directamente con dicho costo.
 ### Recorrer el mundo, de forma aproximada $$(\star)$$
 * Comando: `recorrer_mundo_aproximado`
 * Parámetros: ninguno
-* Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas las
-**ciudades** del mundo, recorriendo aproximadamente la menor distancia posible.
+* Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todos los
+**países** del mundo, recorriendo aproximadamente la menor distancia posible.
 * Complejidad: idealmente, que sea un algoritmo cuanto mucho cuadrático.
 * Ejemplo:
 
 ### Viaje de N lugares $$(\star\star\star)$$
 * Comando: `vacaciones`
 * Parámetros: `origen`, y `n`. 
-* Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No es necesario que se trate de ciudades diferentes.
-* Complejidad: El algoritmo debe ejecutar en $$\mathcal{O}(F \times A)$$.
+* Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No es necesario que se trate de países diferentes.
+* Complejidad: El algoritmo debe ejecutar en $$\mathcal{O}(C \times A)$$.
 * Ejemplo:
 
 ### Itinerario cultural $$(\star\star)$$
@@ -234,16 +244,16 @@ por lo que se puede trabajar directamente con dicho costo.
 * Parámetros: `ruta`, la ruta el archivo del itinerario. 
 * Utilidad: El archivo de `ruta` tiene el formato: 
 	```
-	ciudad_1,ciudad_2,ciudad_3, ...,ciudadN
-	ciudad_i,ciudad_j
+	pais_1,pais_2,pais_3, ...,pais_N
+	pais_i,pais_j
 	```
-	La primera línea indica las ciudades que se desean visitar. Las siguientes indican que la 
-	`ciudad_i` debe visitarse **si o si** antes que la `ciudad_j`. 
+	La primera línea indica los países que se desean visitar. Las siguientes indican que la 
+	`pais_i` debe visitarse **si o si** antes que el `pais_j`. 
 	Se debe: 
-		1. Imprimir el orden en el que deben visitarse dichas ciudades. 
+		1. Imprimir el orden en el que deben visitarse dichos países. 
 		1. Imprimir el camino mínimo en distancia o escalas (según lo que se haya
 		implementado en ese caso) a realizar.
-* Complejidad: El cálculo de la obtención del itinerario debe realizarse en $$\mathcal{O}(C + R)$$,
+* Complejidad: El cálculo de la obtención del itinerario debe realizarse en $$\mathcal{O}(P + R)$$,
 siendo $$C$$ la cantidad de ciudades a visitar, y $$R$$ la cantidad de restricciones impuestas. Luego, 
 el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(C\times F \log (A)\right)$$ o bien $$\mathcal{O}\left(C\times (A + F)\right)$$, dependiendo de si se trata de un caso u otro.
 * Ejemplo:
