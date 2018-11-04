@@ -35,13 +35,13 @@ por uno en particular, entonces es seguro que ese paper debe ser importante.
 ### Implementación Sencilla
 
 Un algoritmo trivial para tratar de calcular la centralidad podría ser:
-```
-Para cada vértice origen, para cada vértice destino, calculamos el camino mínimo entre estos dos, y vemos
-quienes aparecen en el medio del camino. El calculo del camino mínimo se podrá hacer usando el Algoritmo
-de Dijkstra, BFS (si el grafo es no pesado), según corresponda.
-```
+
+1. Para cada vértice origen, para cada vértice destino, calculamos el camino mínimo entre estos dos, 
+vemos quienes aparecen en el medio del camino. El calculo del camino mínimo se podrá hacer usando el
+Algoritmo de Dijkstra, BFS (si el grafo es no pesado), según corresponda.
+
 Este algoritmo es bastante sencillo de implementar:
-```Python
+```python
 def centralidad(grafo):
     cent = {}
     for v in grafo: cent[v] = 0
@@ -53,7 +53,8 @@ def centralidad(grafo):
             # salteamos si no hay camino de v a w
             if padre[w] is NULL: continue 
             actual = padre[w]
-            # le sumamos 1 a la centralidad de todos los vertices que se encuentren en el medio del camino
+            # le sumamos 1 a la centralidad de todos los vertices que se encuentren en 
+            # el medio del camino
             while actual != v:
                 cent[actual] += 1
                 actual = padre[actual]
@@ -86,19 +87,22 @@ pasan por este vértice en cuestión, que necesariamente también van a tener qu
 Estamos seguros de siempre pasar primero por un hijo antes del padre, por haber realizado el 
 ordenamiento de mayor a menor distancia.
 
-```Python
+```python
 def centralidad(grafo):
     cent = {}
     for v in grafo: cent[v] = 0
     for v in grafo:
-        #hacia todos los demas vertices
+        # hacia todos los demas vertices
         distancia, padre = grafo.camino_minimo(v) 
         cent_aux = {}
         for w in grafo: cent_aux[w] = 0
-        #Aca filtramos (de ser necesario) los vertices a distancia infinita, y ordenamos de mayor a menor
+        # Aca filtramos (de ser necesario) los vertices a distancia infinita, 
+        # y ordenamos de mayor a menor
         vertices_ordenados = ordenar_vertices(grafo, distancias) 
         for w in vertices_ordenados:
             cent_aux[padre[w]] += 1 + cent_aux[w]
+        # le sumamos 1 a la centralidad de todos los vertices que se encuentren en 
+        # el medio del camino
         for w in grafo:
             if w == v: continue
             cent[w] += cent_aux[w]
@@ -107,17 +111,20 @@ def centralidad(grafo):
 #### Complejidad
 
 De los puntos anteriores podemos ver que el orden de nuestra nueva implementación será:
-$$\mathcal{O}(\text{centralidad}) = V \times \left(\mathcal{O}(camino_minimo) + \mathcal{O}(crear arreglo/diccionario auxiliar) + \mathcal{O}(ordenamiento) + \mathcal{O}(iterar) + \mathcal{O}(sumar el arreglo auxiliar al global)\right) $$
 
-$$\mathcal{O}(\text{centralidad}) = V \times \left(\mathcal{O}(camino_minimo) + \mathcal{O}(V) + \mathcal{O}(ordenamiento) + \mathcal{O}(V) + \mathcal{O}(V)\right) $$
+$$\mathcal{O}(\text{centralidad}) = V \times \left(\mathcal{O}(\text{camino-minimo}) + \mathcal{O}(V) 
++ \mathcal{O}(\text{ordenamiento}) + \mathcal{O}(V) + \mathcal{O}(V)\right) $$
 
 Si suponemos que no tememos información sobre las posibles distancias (peor escenario) tendríamos un orden:
-$$\mathcal{O}(\text{centralidad}) = V \times \left(\mathcal{O}(camino_minimo) + \mathcal{O}(V \log V)$$
+
+$$\mathcal{O}(\text{centralidad}) = V \times \left(\mathcal{O}(\text{camino-minimo}) + 
+ \mathcal{O}(V \log V)\right)$$
 
 Por lo tanto, si se tratara de un grafo no pesado, el orden sería $$\mathcal{O}(V^2 \log V + V\times E)$$.
 En este caso seguramente podamos además usar un ordenamiento no comparativo, puesto que la distancia es a
 lo sumo $$|V|$$, pudiendo entonces utilizar algún algoritmo como Counting Sort, quedando en 
 $$\mathcal{O}(V\times E)$$. Si se tratar de un grafo pesado, sería $$\mathcal{O}(V\times E \log V)$$.
+
 
 
 ### Usando el algoritmo de Floyd-Warshall
