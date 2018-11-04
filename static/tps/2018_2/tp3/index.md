@@ -10,7 +10,7 @@ Trabajo Práctico 3
 {:.no_toc}
 
 El Trabajo Práctico número 3 es de elaboración grupal, y tiene fecha de entrega
-para el **bla bla bla**.
+para el **viernes 7 de diciembre**.
 
 Contenido
 ---------
@@ -174,7 +174,9 @@ o bien usando un algoritmo como el de PageRank. Es necesario tener en cuenta ade
 de vuelos: no es lo mismo un aeropuerto que se conecte contra todos con un vuelo al año, que uno que 
 se conecte al 80% con muchos vuelos al año. ¡Cuantos más vuelos, mejor!
 
-Dejamos un apunte para la explicación de qué es y cómo se calcula el [Betweeness Centrality](/algo2/material/betweeness_centrality) y otro sobre [PageRank](/algo2/material/pagerank).
+Dejamos un apunte para la explicación de qué es y cómo se calcula el 
+[Betweeness Centrality](/algo2/material/betweeness_centrality) y otro sobre 
+[PageRank](/algo2/material/pagerank).
 
 #### Betweeness Centrality $$(\star\star\star)$$
 
@@ -182,7 +184,7 @@ Dejamos un apunte para la explicación de qué es y cómo se calcula el [Between
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
 * Utilidad: nos muestra los `n` aeropuertos más centrales/importantes del mundo, de mayor importancia a 
 menor importancia.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A \times C\log(A))$$.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C \times F\log(C))$$.
 * Ejemplo: 
 
 
@@ -192,7 +194,7 @@ menor importancia.
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
 * Utilidad: nos muestra los `n` aeropuertos más centrales/importantes del mundo de forma aproximada, 
 de mayor importancia a menor importancia.
-* Complejidad: Revisar orden con Random Walks.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C + F)$$.
 
 #### Pagerank $$(\star\star)$$
 
@@ -200,25 +202,26 @@ de mayor importancia a menor importancia.
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
 * Utilidad: nos muestra los `n` aeropuertos más centrales/importantes del mundo según el algoritmo de
 pagerank, de mayor importancia a menor importancia.
-* Complejidad: Revisar complejidad de pagerank(!!).
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(K(C + F))$$, siendo $$K$$ la cantidad de
+iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(C + F)$$).
 
 ### Optimización de rutas para nueva aerolínea $$(\star\star)$$
 
 * Comando: `nueva_aerolinea`.
 * Parámetros: ninguno.
 * Utilidad: devolver una lista de las rutas que permitan implementar una nueva aerolínea tal que se
-pueda comunicar a todo el mundo con dicha aerolínea, pero que el costo total de la licitación de las 
-rutas aéreas sea mínima. Se considera que el costo de las rutas es proporcional al costo de los pasajes,
-por lo que se puede trabajar directamente con dicho costo.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C\log(A))$$.
+pueda comunicar a todo el mundo (o bueno, por ahora Estados Unidos) con dicha aerolínea, pero que el 
+costo total de la licitación de las rutas aéreas sea mínima. Se considera que el costo de las rutas es
+proporcional al costo de los pasajes, por lo que se puede trabajar directamente con dicho costo.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F\log(C))$$.
 * Ejemplo:
 
 ### Recorrer el mundo, de forma óptima $$(\star\star)$$
 
 * Comando: `recorrer_mundo`.
 * Parámetros: ninguno.
-* Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todos los
-**países** del mundo, recorriendo la menor distancia posible.
+* Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
+las ciudades del mundo (por ahora, Estados Unidos), demorando lo menos posible.
 * Complejidad: que demore lo que deba demorar para obtener el resultado óptimo.
 * Ejemplo:
 
@@ -226,16 +229,17 @@ por lo que se puede trabajar directamente con dicho costo.
 ### Recorrer el mundo, de forma aproximada $$(\star)$$
 * Comando: `recorrer_mundo_aproximado`
 * Parámetros: ninguno
-* Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todos los
-**países** del mundo, recorriendo aproximadamente la menor distancia posible.
+* Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
+las ciudades del mundo (por ahora, Estados Unidos), demorando aproximadamente lo menos posible.
 * Complejidad: idealmente, que sea un algoritmo cuanto mucho cuadrático.
 * Ejemplo:
 
 ### Viaje de N lugares $$(\star\star\star)$$
 * Comando: `vacaciones`
 * Parámetros: `origen`, y `n`. 
-* Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No es necesario que se trate de países diferentes.
-* Complejidad: El algoritmo debe ejecutar en $$\mathcal{O}(C \times A)$$.
+* Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No debe pasarse por una ciudad más de una vez (salvo el
+`origen`, cuando volvemos a éste).
+* Complejidad: El algoritmo debe ejecutar en $$\mathcal{O}(C \times F)$$.
 * Ejemplo:
 
 ### Itinerario cultural $$(\star\star)$$
@@ -244,18 +248,18 @@ por lo que se puede trabajar directamente con dicho costo.
 * Parámetros: `ruta`, la ruta el archivo del itinerario. 
 * Utilidad: El archivo de `ruta` tiene el formato: 
 	```
-	pais_1,pais_2,pais_3, ...,pais_N
-	pais_i,pais_j
+	ciudad_1,ciudad_2,ciudad_3, ...,ciudad_N
+	ciudad_i,ciudad_j
 	```
-	La primera línea indica los países que se desean visitar. Las siguientes indican que la 
-	`pais_i` debe visitarse **si o si** antes que el `pais_j`. 
+	La primera línea indica las ciudades que se desean visitar. Las siguientes indican que la 
+	`ciudad_i` debe visitarse **si o si** antes que la `ciudad_j`. 
 	Se debe: 
-		1. Imprimir el orden en el que deben visitarse dichos países. 
-		1. Imprimir el camino mínimo en distancia o escalas (según lo que se haya
+		1. Imprimir el orden en el que deben visitarse dichas ciudades. 
+		1. Imprimir el camino mínimo en tiempo o escalas (según lo que se haya
 		implementado en ese caso) a realizar.
-* Complejidad: El cálculo de la obtención del itinerario debe realizarse en $$\mathcal{O}(P + R)$$,
-siendo $$C$$ la cantidad de ciudades a visitar, y $$R$$ la cantidad de restricciones impuestas. Luego, 
-el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(C\times F \log (A)\right)$$ o bien $$\mathcal{O}\left(C\times (A + F)\right)$$, dependiendo de si se trata de un caso u otro.
+* Complejidad: El cálculo de la obtención del itinerario debe realizarse en $$\mathcal{O}(I + R)$$,
+siendo $$I$$ la cantidad de ciudades a visitar, y $$R$$ la cantidad de restricciones impuestas. Luego, 
+el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(I\times F \log (C)\right)$$ o bien $$\mathcal{O}\left(I\times (C + F)\right)$$, dependiendo de si se trata de un caso u otro.
 * Ejemplo:
 
 
@@ -268,7 +272,7 @@ el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(C\times F \log 
 	* Densidad? 
 	* Aeropuerto con mayor cantidad de Vuelos
 	* Alguna cosa más
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F + A)$$.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C + F)$$.
 * Ejemplo: 
 
 ### Exportar a archivo KML $$(\star)$$
@@ -278,7 +282,7 @@ el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(C\times F \log 
 * Utilidad: exporta el archivo KML con la ruta del último comando ejecutado (que incluya algún camino,
 o rutas áereas). Esto aplica para todos los comandos salvo el de estadísticas, u obtención de los
 aeropuertos más centrales.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F + A)$$.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C + F)$$.
 * Ejemplo: Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/kml).
 
 ## Criterios de aprobación
