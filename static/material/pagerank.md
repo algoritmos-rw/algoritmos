@@ -33,3 +33,6 @@ $$\text{PR}\left(p_j\right)$$).
 El valor del Pagerank puede verse intuitivamente como la probabilidad de aparecer en un articulo navegando
 a través de internet, ya sea yendo a través de los links (segundo término) o accediendo de forma aleatoria 
 (primer término).
+
+Es necesario realizar varias iteraciones de este algoritmo para que termine por converger y que la
+actualización sea asincrónica (todos tomando los valores de la iteración anterior).
