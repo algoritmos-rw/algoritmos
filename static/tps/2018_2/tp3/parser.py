@@ -47,7 +47,7 @@ with open("vuelos.csv", "w") as s:
     for v in vuelos:
         for w in vuelos[v]:
             tiempo_prom = round(sum(vuelos[v][w]) / len(vuelos[v][w]))
-            linea = ciudades[v] + "," + ciudades[w] + "," + str(tiempo_prom) + "," + \
+            linea = v + "," + w + "," + str(tiempo_prom) + "," + \
                     str(precio(tiempo_prom)) + "," + str(len(vuelos[v][w]))
             s.write(linea + "\n")
 
