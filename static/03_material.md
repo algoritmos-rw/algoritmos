@@ -16,6 +16,7 @@ permalink: /material/
   * [Apunte de Ordenamientos Externos](ordenamientos_externos)
   * [Apunte de Random Walks](random_walks)
   * [Apunte de Centralidad en un grafo](centralidad)
+  * [Apunte de PageRank](pagerank)
   * [Apunte sobre Label Propagation](label_propagation)
   * [Explicación sobre uso de archivos KML](kml)
 
