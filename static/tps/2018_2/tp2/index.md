@@ -135,7 +135,7 @@ El comando recibe varios parámetros:
   los vuelos, los vuelos con una fecha de despegue posteriores al tiempo ingresado no se tienen que mostrar.
 
 
-*Ejemplo:* `ver_tablero 5 asc 2018-10-10T00:01:00 2018-10-18T00:12:00`
+*Ejemplo:* `ver_tablero 5 asc 2018-10-10T00:01:00 2018-10-19T00:12:00`
 
 Al ejecutarse deberán imprimir por salida estandar las fechas de despegue y los códigos de los vuelos que cumplan 
 con la lógica anteriomente mencionada, cada vuelo se imprime en una nueva línea. El formato de cada línea tiene
@@ -271,9 +271,9 @@ Si se produce un error al procesar el archivo se imprime `Error en comando <coma
 *Salida esperada:*
 
 ```
-6391 OO EUG DEN N593ML 26 2018-04-08T11:15:29 -4 143 0
-4608 OO PDX SEA N812SK 08 2018-04-10T23:22:55 05 43 0
-5460 OO RDD SFO N583SW 00 2018-04-21T07:41:48 00 00 0
+2018-04-08T11:15:29 - 6391
+2018-04-10T23:22:55 - 4608
+2018-04-21T07:41:48 - 5460
 OK
 ```
 
