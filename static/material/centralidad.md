@@ -37,7 +37,7 @@ por uno en particular, entonces es seguro que ese paper debe ser importante.
 Un algoritmo trivial para tratar de calcular la centralidad podría ser:
 
 1. Para cada vértice origen, para cada vértice destino, calculamos el camino mínimo entre estos dos, 
-vemos quienes aparecen en el medio del camino. El calculo del camino mínimo se podrá hacer usando el
+vemos quienes aparecen en el medio del camino. El cálculo del camino mínimo se podrá hacer usando el
 Algoritmo de Dijkstra, BFS (si el grafo es no pesado), según corresponda.
 
 Este algoritmo es bastante sencillo de implementar:
