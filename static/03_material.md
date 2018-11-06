@@ -14,6 +14,10 @@ permalink: /material/
   * [Implementación de mergesort y quicksort en C](https://drive.google.com/open?id=1XPDf2z9J0v9dGlaTgqFj8pGL3RQUPMpb)
   * [Introducción al uso de Makefile](https://drive.google.com/open?id=1iMUDd8tPJ-uZrZWRlw7uTmfcM1CEAJva)
   * [Apunte de Ordenamientos Externos](ordenamientos_externos)
+  * [Apunte de Random Walks](random_walks)
+  * [Apunte de Centralidad en un grafo](centralidad)
+  * [Apunte de PageRank](pagerank)
+  * [Apunte sobre Label Propagation](label_propagation)
   * [Explicación sobre uso de archivos KML](kml)
 
 ## Guías de ejercicios
