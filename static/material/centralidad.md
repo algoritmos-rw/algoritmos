@@ -28,7 +28,7 @@ En el curso, nos centraremos especialmente en la tercera.
 Para obtener la centralidad de los vértices de un grafo, será necesario saber cuántas veces aparece un 
 vértice en cada camino mínimo posible dentro del grafo. Para ésto, será necesario calcular los caminos 
 mínimos entre todos los pares de vértices (sin ser uno de los extremos). Esto nos dirá cuan seguido
-es pasar por el vértice en cuestión para llegar a los demás. Para explicar la lógica de ésto: si 
+se pasa por el vértice en cuestión para llegar a los demás. Para explicar la lógica de ésto: si 
 en una red de citaciones de Papers, para llegar de un paper a otro es necesario pasar usualmente 
 por uno en particular, entonces es seguro que ese paper debe ser importante.
 
