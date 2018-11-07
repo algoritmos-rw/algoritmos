@@ -19,7 +19,7 @@ Dentro de [nuestra organización](https://github.com/algoritmos-rw/) en Github t
 
 El último sistema relevante mantenido en Github es el del [sistema de entregas]({{site.entregas}}). En su [repositorio](https://github.com/algoritmos-rw/algo2_sistema_entregas) se puede ver el código en Python que, resumidamente, permite que el alumno no tenga que enviar un mail a la casilla de correos que el corrector automático monitorea constantemente; simplemente se ingresa el padrón y el trabajo correspondiente, y alrededor de esto se arma el correo que se envía.
 
-También, se cuenta con un [equipo](http://bitbucket.org/fiuba7540) en [BitBucket](https://bitbucket.org/), otra plataforma analoga a Github donde se hostean repositorios de Git. Si bien de lo que respecta a Algoritmos II[^2] casi todo lo presente allí ya fue migrado a Github, por el momento [el sistema de consulta de notas]({{site.notas}}) sigue hosteado en un [repositorio](https://bitbucket.org/fiuba7540/consultar-notas/src/master/) de este sistema, también de codigo libre.
+También, se cuenta con un [equipo](http://bitbucket.org/fiuba7540) en [BitBucket](https://bitbucket.org/), otra plataforma análoga a Github donde se hostean repositorios de Git. Si bien de lo que respecta a Algoritmos II[^2] casi todo lo presente allí ya fue migrado a Github, por el momento [el sistema de consulta de notas]({{site.notas}}) sigue hosteado en un [repositorio](https://bitbucket.org/fiuba7540/consultar-notas/src/master/) de este sistema, también de codigo libre.
 
 
 [^1]: Un sitio web estático es aquel que no depende de bases de datos externas, por ejemplo un blog o cualquier sitio generado con Jekyll.
