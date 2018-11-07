@@ -15,7 +15,7 @@ En particular, este sitio utiliza un sistema llamado [Jekyll](https://jekyllrb.c
 
 Por último, Github provee la posibilidad de que si se tiene un repositorio de un sitio web estático[^1], este mismo te lo sirve en internet (es por eso que el dominio de este sitio es *github.io*).
 
-Dentro de el [equipo](https://github.com/algoritmos-rw/) en Github también se almacena, entre otras cosas, el [corrector automático](https://github.com/algoritmos-rw/corrector) (y control de copias).
+Dentro de [nuestra organización](https://github.com/algoritmos-rw/) en Github también se almacena, entre otras cosas, el [corrector automático](https://github.com/algoritmos-rw/corrector) (y control de copias).
 
 El último sistema relevante mantenido en Github es el del [sistema de entregas]({{site.entregas}}). En su [repositorio](https://github.com/algoritmos-rw/algo2_sistema_entregas) se puede ver el código en Python que, resumidamente, permite que el alumno no tenga que enviar un mail a la casilla de correos que el corrector automático monitorea constantemente; simplemente se ingresa el padrón y el trabajo correspondiente, y alrededor de esto se arma el correo que se envía.
 
