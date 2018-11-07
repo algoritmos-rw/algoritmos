@@ -9,7 +9,7 @@ Infraestructura del curso
 
 Obviando la lista de correos, la plataforma más utilizada por el curso es [Github](http://github.com/), un sitio dedicado al hosting de repositorios de código (de Git). Estos repositorios contienen tanto el código mismo como su historial de versiones y cambios, mostrando claramente quién modificó qué linea de código, y permitiendo la contribución tanto de gente interna del curso como de gente externa a este, de manera facíl y accesible.
 
-Por ejemplo, este mismo sitio tiene su código libre y abierto en un repositorio: https://github.com/algoritmos-rw/algo2. Se puede ver todo el código html/css/js (utilizados en diseño web), cuando fue cada archivo agregado y por quien. Que el código sea libre hace muy facil su contribución, ya que solo hace falta probar una idea nueva y proponerla, sin tener nada detrás de una caja negra. 
+Por ejemplo, este mismo sitio tiene su código libre y abierto en un repositorio: https://github.com/algoritmos-rw/algo2. Se puede ver todo el código html/css/js (utilizados en diseño web), cuándo fue cada archivo agregado y por quién. Que el código sea libre hace muy facil su contribución, ya que solo hace falta probar una idea nueva y proponerla, sin tener nada detrás de una caja negra. 
 
 En particular, este sitio utiliza un sistema llamado [Jekyll](https://jekyllrb.com/), un sistema especializado en convertir archivos de texto plano, como los escritos en Markdown en sitios web, permitiendo facilmente pasar de un conjunto de archivos escritos sin mucho conocimiento de diseño web a un sitio indexado y facil de navegar. 
 
