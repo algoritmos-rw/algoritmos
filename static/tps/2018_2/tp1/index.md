@@ -225,7 +225,7 @@ ERROR
 - Todas las operaciones trabajarán con números enteros, y devolverán números enteros. 
 - Las operaciones pueden ser: suma (`+`), resta (`-`), multiplicación (`*`), división (`/`), obtener la raíz (`sqrt`), obtener la potencia (`^`), obtener el logaritmo (`log`) y operador ternario (`?`). 
 - La operación de suma debe agarrar los dos últimos elementos y sumar el último con el anterior: `5 10 + → 10 + 5 = 15`
-- La operación de resta debe agarrar los dos últimos elementos y restar el último con el anterior: `5 10 + → 10 - 5 = 5`
+- La operación de resta debe agarrar los dos últimos elementos y restar el último con el anterior: `5 10 - → 10 - 5 = 5`
 - La operación de multiplicación debe agarrar los dos últimos elementos y multiplicar el último con el anterior: `5 10 * → 10 * 5 = 50`. 
 - La operación de división debe agarrar los dos últimos elementos y dividir (de forma entera) el último por el anterior: `5 10 / → 10 / 5 = 2`, `3 10 / → 10 / 3 = 3`. En caso de encontrarse con que el divisor es 0, se considerará como un error.
 - La operación de obtener la raíz agarra el último operando y obtiene la parte entera de la raíz de dicho operando: `5 10 sqrt → sqrt(10) = 3` dejando en la pila de ejecución `5 3`. En caso que el argumento sea negativo, se considerará como un error.
