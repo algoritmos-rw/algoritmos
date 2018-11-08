@@ -31,11 +31,11 @@ suficiente valor para poder dejar a todos medianamente contentos.
 
 ## Análisis de la situación 
 
-Las aerolíneas distintas partes del mundo, requieren distintos tipos de funcionalidades:
+Distintas aerolíneas partes del mundo, requieren distintos tipos de funcionalidades:
 * Todas las aerolíneas quieren que los clientes puedan buscar el camino más rápido, 
 el más barato, o el de menor cantidad de escalas, a gusto.
 * Para poder entender donde conviene invertir en mayor infraestructura, se quiere obtener 
-cuáles son los aeropuertos más importantes, teniendo en cuenta sobre cuáles es más frecuente
+cuáles son los aeropuertos más importantes, teniendo en cuenta en cuáles es más frecuente
 terminar haciendo escalas para poder ir entre cualquier parte del mundo a otra. 
 * Una nueva aerolínea (bAIRros Airlines, con sede principal en el aeropuerto de Lanús) 
 quiere poder conectar absolutamente todo el mundo, pero quiere utilizar las rutas más baratas 
@@ -53,8 +53,9 @@ haga un viaje por alguna cantidad de ciudades del mundo y vuelva luego a la ciud
 * Otras aerolíneas pidieron poder ofrecer un viaje cultural: que se pueda indicar qué ciudades se
 quieren conocer, y además si hay alguna ciudad que deba visitarse antes que otra (para poder
 disfrutar más del viaje). 
-* Poder obtener estadísticas de las rutas de vuelo. 
-* Poder exportar un mapa que nos permita visualizar las rutas de vuelo. 
+* En algunos casos, quisieran poder obtener estadísticas de las rutas de vuelo y aeropuertos, para
+así poder planificar nuevas rutas.
+* Muchas de las aerolíneas quisiera poder exportar un mapa que nos permita visualizar las rutas de vuelo. 
 
 ## Datos disponibles
 
@@ -67,7 +68,7 @@ Una consultora uso un [innovador script](parser.py) para parsear dichos datos en
 	```
 * El archivo [vuelos.csv](vuelos.csv) con el formato: 
 	```
-	ciudad_i,ciudad_j,tiempo_promedio,precio,cant_vuelos_entre_aeropuertos
+	aeropuerto_i,aeropuerto_j,tiempo_promedio,precio,cant_vuelos_entre_aeropuertos
 	```
 
 ### Aclaraciones
@@ -94,10 +95,10 @@ El trabajo consiste de 3 partes:
 1. El programa `FlyCombi` que utilice tanto el TDA como la biblioteca para poder implementar todo 
 lo requerido. 
 
-El programa debe recibir por parámetro y cargar en memoria el set de datos (`$./flycombi 
+El programa debe recibir por parámetro y cargar en memoria el set de datos (`~$./flycombi 
 aeropuertos.csv vuelos.csv`) y luego solicitar el ingreso de comandos por entrada estándar, 
-del estilo comando 'parametro'. Notar que esto permite tener un archivo de instrucciones a ser 
-ejecutadas (i.e. `$./flycombi aeropuertos.csv vuelos.csv < entrada.txt`).
+del estilo `<comando> 'parametro'`. Notar que esto permite tener un archivo de instrucciones a ser 
+ejecutadas (i.e. `~$./flycombi aeropuertos.csv vuelos.csv < entrada.txt`).
 
 De todas las funcionalidades, algunas son obligatorias, y las que lo son tienen más de una opción
 para ser implementadas. Algunas consideraciones: 
@@ -143,7 +144,7 @@ de ciudades, y $$F$$ la cantidad de vuelos entre aeropuertos (sin contar frecuen
 * Ejemplo: 
 Entrada:
 	```
-	camino_mas rapido "San Diego" "New York"
+	camino_mas rapido,San Diego,New York
 	```
 Salida:
 	```
@@ -160,7 +161,7 @@ de ciudades, y $$F$$ la cantidad de vuelos entre aeropuertos (sin contar frecuen
 * Ejemplos:
 Entrada:
 	```
-	camino_escalas "San Diego" "New York"
+	camino_escalas San Diego,New York
 	```
 Salida:
 	```
@@ -190,7 +191,7 @@ menor importancia.
 
 #### Betweeness Centrality aproximada ($$\star$$)
 
-* Comando: `centralidad`
+* Comando: `centralidad_aprox`
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
 * Utilidad: nos muestra los `n` aeropuertos más centrales/importantes del mundo de forma aproximada, 
 de mayor importancia a menor importancia.
@@ -227,7 +228,7 @@ las ciudades del mundo (por ahora, Estados Unidos), demorando lo menos posible.
 
 
 ### Recorrer el mundo, de forma aproximada $$(\star)$$
-* Comando: `recorrer_mundo_aproximado`
+* Comando: `recorrer_mundo_aprox`
 * Parámetros: ninguno
 * Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
 las ciudades del mundo (por ahora, Estados Unidos), demorando aproximadamente lo menos posible.
