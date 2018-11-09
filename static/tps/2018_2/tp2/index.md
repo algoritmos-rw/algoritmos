@@ -180,7 +180,7 @@ error con el formato anteriormente mencionado.
 ### Prioridad_vuelos
 Este comando deberá mostrar de mayor a menor, los K vuelos con mayor prioridad que hayan sido cargados en el sistema, de 
 la forma `<prioridad> - <código de vuelo>`. Si dos vuelos tienen la misma prioridad, se desempatará por el código de
-vuelo mostrándolos de menor a mayor.
+vuelo mostrándolos de menor a mayor (tomado como cadena).
 
 *Ejemplo:* `prioridad_vuelos 3`
 
@@ -188,7 +188,7 @@ vuelo mostrándolos de menor a mayor.
 
 ```
 10 - 1234
-3 - 324
+3 - 1624
 3 - 325
 OK
 ```
