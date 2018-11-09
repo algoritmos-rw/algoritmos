@@ -118,16 +118,16 @@ $$\mathcal{O}(\text{centralidad}) = V \times \left(\mathcal{O}(\text{camino-mini
 $$\mathcal{O}(\text{centralidad}) = V \times \left(\mathcal{O}(\text{camino-minimo}) + 
  \mathcal{O}(\text{ordenamiento})\right)$$
 
-* Si se trata de un grafo no pesado el camino mínimo nos costará $\mathcal{O}(V+E)$. En este caso,
-sabemos cuál es el rango de distancias posibles: irán de 0, a como mucho $V$, por lo que podríamos 
+* Si se trata de un grafo no pesado el camino mínimo nos costará $$\mathcal{O}(V+E)$$. En este caso,
+sabemos cuál es el rango de distancias posibles: irán de 0, a como mucho $$V$$, por lo que podríamos 
 utilizar un ordenamiento no comparativo como Counting Sort. De esta forma, el costo del ordenamiento
-será $\mathcal{O}(V)$, teniendo un orden final de $\mathcal{O}(V(V+E))$.
+será $$\mathcal{O}(V)$$, teniendo un orden final de $$\mathcal{O}(V(V+E))$$.
 
-* Si se trata de un grafo pesado, obtener los caminos mínimos nos costará $\mathcal{O(E\log V)}$. En
+* Si se trata de un grafo pesado, obtener los caminos mínimos nos costará $$\mathcal{O(E\log V)}$$. En
 este caso no tenemos forma de acotar las distancias (aún cuando las conociéramos todas, sumadas pueden
 dar mucho mayor a la cantidad de vértices que hay, haciendo que aplicar counting sort sea 
 contraproducente). Por lo tanto, deberemos usar un ordenamiento comparativo, costando
-$\mathcal{O}(V \log V)$, teniendo un orden final de $\mathcal{O}(V (V+E) \log V)$.
+$$\mathcal{O}(V \log V)$$, teniendo un orden final de $$\mathcal{O}(V (V+E) \log V)$$.
 
 
 ### Usando el algoritmo de Floyd-Warshall
