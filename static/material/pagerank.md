@@ -20,10 +20,12 @@ $$ \text{PR}\left(p_i\right) = \frac{1-d}{N} + d \sum_{p_j \in M\left(p_i\right)
 
 Donde:
 * $$\text{PR}\left(p_i\right)$$: Pagerank del artículo (vértice) $$p_i$$ que se está queriendo calcular.
-* $$d$$: coeficiente de amortiguación. 
-* $$N$$: cantidad de artículos (vértices). **Ciudado**: tanto en el paper original, como en el artículo de
-Wikipedia en español no aparece este término, que es muy importante para que el valor del pagerank se
-mantenga entre 0 y 1. 
+* $$d$$: coeficiente de amortiguación (valor entre 0 y 1). Representa la probabilidad de seguir yendo de
+página en página utilizando links, en vez de escribir una URL en el browser. 
+* $$N$$: cantidad de artículos (vértices). **Ciudado**: En el paper original no aparece este término, que 
+es muy importante para que el valor del pagerank se mantenga entre 0 y 1. La explicación de éste error se 
+encuentra en [el artículo de Wikipedia en inglés](https://en.wikipedia.org/wiki/PageRank) (en el artículo 
+en español mantiene el error).
 * $$\text{PR}\left(p_j\right)$$: pagerank del artículo $$p_j$$, donde $$p_j$$ sea un artículo que tenga un
 link hacia $$p_i$$. Se consideran todos los artículos que tengan un link hacia $$p_i$$.
 * $$L\left(p_j\right)$$: cantidad de links que tiene el artículo $$j$$ (mismo que 
