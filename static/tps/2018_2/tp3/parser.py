@@ -8,7 +8,6 @@ INDICE_ORG = 7
 INDICE_DST = 8
 INDICE_TIEMPO = 15
 
-ciudades = {}
 vuelos = {}
 
 def precio(tiempo):
@@ -21,9 +20,6 @@ with open("airports.csv") as f:
             campos = line.strip().split(",")
             ciudad, aeropuerto, lat, lng = campos[INDICE_CIUDAD], campos[INDICE_AEROPUERTO], \
                                            campos[INDICE_LAT], campos[INDICE_LONG]
-            # se podria hacer en O(1) con otro diccionario
-            if ciudad in ciudades.values(): continue
-            ciudades[aeropuerto] = ciudad
             vuelos[aeropuerto] = {}
             s.write(ciudad + "," + aeropuerto + "," + lat + "," + lng + "\n")
 
@@ -34,7 +30,7 @@ with open("flights.csv") as f:
         origen, destino, tiempo = campos[INDICE_ORG], campos[INDICE_DST], campos[INDICE_TIEMPO]
         if tiempo == "": continue
         tiempo = int(tiempo)
-        if origen not in ciudades or destino not in ciudades: 
+        if origen not in vuelos or destino not in vuelos:
             continue
         if destino in vuelos[origen]:
             vuelos[origen][destino].append(tiempo)

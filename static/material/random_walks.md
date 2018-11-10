@@ -32,3 +32,26 @@ entre todos los recorridos, deben ser los más similares al personaje de origen.
 bastante usado, por ejemplo en Twitter, para recomendar seguidores. Tener en cuenta que cuantos más 
 largos y más recorridos se hagan, debería ser más preciso el algoritmo (en ambos casos, y siempre que se
 utilicen Random Walks).
+
+## Utilizando los pesos de las aristas
+
+En caso que la aplicación implique moverse teniendo en cuenta los pesos de las aristas, tratando de moverse
+preferentemente a través de las aristas de más peso, podemos elegir el vértice con un algoritmo sencillo
+como el siguiente:
+
+```python
+def vertice_aleatorio(pesos):
+    #Pesos es un diccionario de pesos, clave vértice vecino, valor el peso.
+    total = sum(pesos.values())
+    rand = random.uniform(0, total)
+    acum = 0
+    for vertice, peso_arista in pesos.items():
+        if acum + peso_arista >= rand:
+            return vertice
+        acum += peso_arista
+```
+
+Dicho algoritmo trata a cada "unidad de peso" de forma equiprobable (sería como si en una rifa cada vértice
+tenga tantos números como peso tiene su unión con el origen). Si se quisiera implementar ésto con otro 
+tipo de distribución de probabilidad, habría que utilizar otros métodos de inversión de variables
+aleatorias.

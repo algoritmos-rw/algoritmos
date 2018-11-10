@@ -73,17 +73,17 @@ Una consultora uso un [innovador script](parser.py) para parsear dichos datos en
 
 ### Aclaraciones
 
-* Solo se toma uno de los aeropuertos de cada ciudad, por simplificación. Los vuelos que correspondan
-a otros aeropuertos fueron descartados.
-* El tiempo promedio es el promedio (redondeado) de todos los vuelos entre ese par de ciudades.
+* Una ciudad puede tener **uno o más aeropuertos** asociados.
+* El tiempo promedio es el promedio (redondeado) de todos los tiempos de los vuelos entre ese par de
+ciudades.
 * Los precios han sido inventados completamente (puede verse en el script generador) y no tienen 
 ninguna relación con la realidad. El curso no se hace responsable por las recomendaciones que pueda 
 hacer alguno de los programas implementados. 
 * Sería de mayor interés tener los datos disponibles de todo el mundo, o de diversos países. De todas
 formas, hay que considerar que se tratan de casi 6 millones de vuelos sólo considerando un país, en un
 año. 
-* Más allá de tener los datos de un país en especial, el programa debería funcionar para cualquier parte
-del mundo. 
+* Más allá de tener los datos de un país en especial, el programa debería funcionar para cualquier 
+parte del mundo. 
 
 ## Implementación
 
@@ -136,28 +136,37 @@ Salida:
 #### Camino más barato y camino más rápido $$(\star)$$
 
 * Comando: `camino_mas`
-* Parámetros: `barato` ó `rapido`, `origen` y `destino`. Origen y destino son ciudades.
-* Utilidad: nos imprime una lista con los **aeropuertos** (código) con los cuales vamos de la **ciudad**
-`origen` a la **ciudad** `destino` de la forma más rápida o más barata, según corresponda. 
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F \log(C))$$, siendo $$C$$ la cantidad
-de ciudades, y $$F$$ la cantidad de vuelos entre aeropuertos (sin contar frecuencia).
+* Parámetros: `barato` ó `rapido`, `origen` y `destino`. Origen y destino son **ciudades**.
+* Utilidad: nos imprime una lista con los **aeropuertos** (código) con los cuales vamos de la 
+**ciudad** `origen` a la **ciudad** `destino` de la forma más rápida o más barata, según corresponda. 
+Tener en cuenta que tanto la ciudad `origen` como la `destino` pueden tener más de un aeropuerto, y 
+nos interesa la mejor forma (rápida o barata) entre todas las combinaciones posibles.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F \log(A))$$, siendo $$A$$ la cantidad
+de aeropuertos, y $$F$$ la cantidad de vuelos entre aeropuertos (sin contar frecuencia). 
+Podemos considerar que la cantidad de aeropuertos que tenga cada ciudad es despreciable.
 * Ejemplo: 
 Entrada:
 	```
 	camino_mas rapido,San Diego,New York
+	camino_mas barato,San Diego,New York
 	```
 Salida:
 	```
+	SAN -> STL -> LGA
+	SAN -> PHX -> DAL -> LGA
 	```
 
 #### Camino con menor cantidad de escalas $$(\star)$$
 
 * Comando: `camino_escalas`
 * Parámetros: `origen` y `destino`. 
-* Utilidad: nos imprime una lista con los **aeropuertos** con los cuales vamos de la **ciudad**
-`origen` a l **ciudad** `destino` con la menor cantidad de escalas.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F + C)$$, siendo $$C$$ la cantidad
-de ciudades, y $$F$$ la cantidad de vuelos entre aeropuertos (sin contar frecuencia).
+* Utilidad: nos imprime una lista con los **aeropuertos** (código) con los cuales vamos de la 
+**ciudad** `origen` a la **ciudad** `destino` con la menor cantidad de escalas. Tener en cuenta 
+que tanto la ciudad `origen` como la `destino` pueden tener más de un aeropuerto, y 
+nos interesa la mejor forma (en cantidad de escalas) entre todas las combinaciones posibles.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F + A)$$, siendo $$A$$ la cantidad
+de aeropuertos, y $$F$$ la cantidad de vuelos entre aeropuertos (sin contar frecuencia). 
+Podemos considerar que la cantidad de aeropuertos que tenga cada ciudad es despreciable.
 * Ejemplos:
 Entrada:
 	```
@@ -165,6 +174,7 @@ Entrada:
 	```
 Salida:
 	```
+	CLD -> LAX -> JFK
 	``` 
 
 ### Aeropuertos más importantes (obligatorio implementar al menos uno)
@@ -176,17 +186,25 @@ de vuelos: no es lo mismo un aeropuerto que se conecte contra todos con un vuelo
 se conecte al 80% con muchos vuelos al año. ¡Cuantos más vuelos, mejor!
 
 Dejamos un apunte para la explicación de qué es y cómo se calcula el 
-[Betweeness Centrality](/algo2/material/betweeness_centrality) y otro sobre 
+[Betweeness Centrality](/algo2/material/centralidad) y otro sobre 
 [PageRank](/algo2/material/pagerank).
 
 #### Betweeness Centrality $$(\star\star\star)$$
 
 * Comando: `centralidad`
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
-* Utilidad: nos muestra los `n` aeropuertos más centrales/importantes del mundo, de mayor importancia a 
-menor importancia.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C \times F\log(C))$$.
+* Utilidad: nos muestra los `n` aeropuertos más centrales/importantes del mundo, 
+de mayor importancia a menor importancia.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A \times F\log(A))$$.
 * Ejemplo: 
+Entrada:
+	```
+	centralidad 3
+	```
+Salida:
+	```
+	SFO, TPA, MSN
+	``` 
 
 
 #### Betweeness Centrality aproximada ($$\star$$)
@@ -195,7 +213,16 @@ menor importancia.
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
 * Utilidad: nos muestra los `n` aeropuertos más centrales/importantes del mundo de forma aproximada, 
 de mayor importancia a menor importancia.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C + F)$$.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A + F)$$.
+* Ejemplo: 
+Entrada:
+	```
+	centralidad 3
+	```
+Salida:
+	```
+	ATL, ORD, DFW
+	``` 
 
 #### Pagerank $$(\star\star)$$
 
@@ -203,19 +230,39 @@ de mayor importancia a menor importancia.
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
 * Utilidad: nos muestra los `n` aeropuertos más centrales/importantes del mundo según el algoritmo de
 pagerank, de mayor importancia a menor importancia.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(K(C + F))$$, siendo $$K$$ la cantidad de
-iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(C + F)$$).
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(K(A + F))$$, siendo $$K$$ la cantidad de
+iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(A + F)$$).
+Entrada:
+	```
+	pagerank 5
+	```
+Salida:
+	```
+	ATL, DFW, ORD, DEN, MSP
+	``` 
 
 ### Optimización de rutas para nueva aerolínea $$(\star\star)$$
 
 * Comando: `nueva_aerolinea`.
-* Parámetros: ninguno.
+* Parámetros: `ruta`, ruta del archivo de salida.
 * Utilidad: devolver una lista de las rutas que permitan implementar una nueva aerolínea tal que se
-pueda comunicar a todo el mundo (o bueno, por ahora Estados Unidos) con dicha aerolínea, pero que el 
+pueda comunicar a todo el mundo (por ahora, solo los Estados Unidos) con dicha aerolínea, pero que el 
 costo total de la licitación de las rutas aéreas sea mínima. Se considera que el costo de las rutas es
-proporcional al costo de los pasajes, por lo que se puede trabajar directamente con dicho costo.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F\log(C))$$.
+proporcional al costo de los pasajes, por lo que se puede trabajar directamente con dicho costo. 
+Se buscaque la nueva aerolínea pueda llegar a todos los **aeropuertos** de alguna forma.
+La salida de este comando debe ser un archivo con el mismo formato del archivo `vuelos.csv`, pero
+únicamente con las rutas de vuelo a utilizar por ésta aerolínea.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F\log(A))$$.
 * Ejemplo:
+Entrada:
+	```
+	nueva_aerolinea bAIRos.csv
+	```
+Salida (aparte del archivo creado):
+	```
+	OK
+	``` 
+
 
 ### Recorrer el mundo, de forma óptima $$(\star\star)$$
 
@@ -238,7 +285,7 @@ las ciudades del mundo (por ahora, Estados Unidos), demorando aproximadamente lo
 ### Viaje de N lugares $$(\star\star\star)$$
 * Comando: `vacaciones`
 * Parámetros: `origen`, y `n`. 
-* Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No debe pasarse por una ciudad más de una vez (salvo el
+* Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No debe pasarse por un aeropuerto más de una vez (salvo el
 `origen`, cuando volvemos a éste).
 * Complejidad: El algoritmo debe ejecutar en $$\mathcal{O}(C \times F)$$.
 * Ejemplo:
