@@ -299,6 +299,7 @@ Salida:
 * Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No debe pasarse por un aeropuerto más de una vez (salvo el
 `origen`, cuando volvemos a éste).
 * Ejemplo:
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A^n)$$.
 Entrada:
 	```
 	vacaciones San Diego,6
@@ -327,7 +328,7 @@ Salida:
 		implementado en ese caso) a realizar.
 * Complejidad: El cálculo de la obtención del itinerario debe realizarse en $$\mathcal{O}(I + R)$$,
 siendo $$I$$ la cantidad de ciudades a visitar, y $$R$$ la cantidad de restricciones impuestas. Luego, 
-el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(I\times F \log (C)\right)$$ o bien $$\mathcal{O}\left(I\times (C + F)\right)$$, dependiendo de si se trata de un caso u otro.
+el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(I\times F \log (A)\right)$$ o bien $$\mathcal{O}\left(I\times (A + F)\right)$$, dependiendo de si se trata de un caso u otro.
 * Ejemplo, trabajando con [itinerario_ejemplo.csv](itinerario_ejemplo.csv),
 Entrada:
 	```
