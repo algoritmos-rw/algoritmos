@@ -152,8 +152,8 @@ Entrada:
 	```
 Salida:
 	```
-	SAN -> STL -> LGA
-	SAN -> PHX -> DAL -> LGA
+	SAN -> JFK
+	SAN -> DEN -> JFK
 	```
 
 #### Camino con menor cantidad de escalas $$(\star)$$
@@ -174,7 +174,7 @@ Entrada:
 	```
 Salida:
 	```
-	CLD -> LAX -> JFK
+	SAN -> JFK
 	``` 
 
 ### Aeropuertos más importantes (obligatorio implementar al menos uno)
@@ -217,7 +217,7 @@ de mayor importancia a menor importancia.
 * Ejemplo: 
 Entrada:
 	```
-	centralidad 3
+	centralidad_aprox 3
 	```
 Salida:
 	```
@@ -264,12 +264,14 @@ Salida (aparte del archivo creado):
 	``` 
 
 
-### Recorrer el mundo, de forma óptima $$(\star\star)$$
+### Recorrer el mundo, de forma óptima $$(\star\star\star)$$
 
 * Comando: `recorrer_mundo`.
 * Parámetros: ninguno.
 * Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
-las ciudades del mundo (por ahora, Estados Unidos), demorando lo menos posible.
+**las ciudades** del mundo (por ahora, Estados Unidos), demorando lo menos posible. Podemos volver 
+a usar un aeropuerto ya usado, u otro de alguna ciudad ya visitada, si eso mejora el costo de nuestro
+viaje.
 * Complejidad: que demore lo que deba demorar para obtener el resultado óptimo.
 * Ejemplo:
 
@@ -281,14 +283,32 @@ las ciudades del mundo (por ahora, Estados Unidos), demorando lo menos posible.
 las ciudades del mundo (por ahora, Estados Unidos), demorando aproximadamente lo menos posible.
 * Complejidad: idealmente, que sea un algoritmo cuanto mucho cuadrático.
 * Ejemplo:
+Entrada:
+	```
+	recorrer_mundo_aprox
+	```
+Salida:
+	```
+	MCI -> BNA -> PNS -> ATL -> VPS -> DFW -> ROW -> ORD -> EAU -> BNA -> JAX -> ORD -> DAY -> DFW -> LFT -> DEN -> SAF -> LAX -> MSP -> CWA -> LAS -> BUR -> CVG -> RIC -> DEN -> GJT -> DEN -> FAT -> IND -> JFK -> HYA -> ATL -> SAV -> DEN -> COD -> SFO -> CEC -> DFW -> GRI -> MSP -> ANC -> ATL -> GNV -> IAD -> UST -> ORD -> MKG -> MSP -> BIS -> DEN -> HDN -> FLL -> MCO -> BQN -> DAL -> MEM -> OAK -> ORD -> ROA -> DTW -> SWF -> ATL -> TYS -> DTW -> ACY -> ORD -> EVV -> ORD -> LAN -> MIA -> DEN -> PUB -> CLT -> DEN -> HNL -> GUM -> ATL -> FAY -> MDW -> ORF -> DFW -> JAN -> DFW -> TYR -> DEN -> SMF -> DFW -> FSM -> SLC -> VEL -> ORD -> TVC -> SLC -> CNY -> SFO -> ACV -> SEA -> BLI -> DEN -> BOI -> BOS -> MVY -> ATL -> TRI -> DTW -> ABE -> STL -> RDU -> PHF -> SLC -> MFR -> DFW -> MFE -> DTW -> BGM -> DFW -> MEI -> DTW -> SYR -> ATL -> MYR -> PBG -> DAL -> ELP -> BNA -> MOB -> MSP -> IMT -> SLC -> SUN -> DAL -> AUS -> DEN -> DVL -> MSP -> RHI -> ORD -> CMI -> STL -> TTN -> ORD -> CMX -> DEN -> HYS -> DEN -> ASE -> ORD -> TOL -> MKE -> MDW -> BDL -> DFW -> JLN -> LAS -> LGB -> LAX -> SBA -> DLH -> DFW -> TXK -> STL -> CMH -> MSP -> BRD -> SEA -> KTN -> WRG -> MSP -> INL -> PHX -> YUM -> STL -> PHL -> SLC -> EKO -> ORD -> DBQ -> DCA -> DEN -> MTJ -> DAL -> SAT -> STL -> GRR -> DFW -> SJT -> DFW -> SGF -> LAX -> CLD -> LAS -> ONT -> ORD -> STC -> MDW -> PIT -> DFW -> MHK -> LNK -> SLC -> BTM -> BWI -> ATL -> TLH -> DEN -> RAP -> SLC -> TWF -> ATL -> ABY -> ATL -> STT -> DFW -> LRD -> ATL -> STX -> ATL -> DHN -> MSP -> ANC -> CDV -> DEN -> OTH -> DAL -> LBB -> MSP -> ANC -> OTZ -> DEN -> GEG -> DEN -> JMS -> IAH -> HOB -> SLC -> LWS -> DFW -> GRK -> BWI -> ISP -> DTW -> AVP -> DEN -> LAR -> OAK -> OGG -> DEN -> RKS -> MSP -> MOT -> ATL -> MYR -> IAG -> ATL -> SRQ -> MSP -> ANC -> AKN -> ATL -> GTR -> LAX -> ITO -> ORD -> SUX -> MSP -> FSD -> DFW -> AEX -> DFW -> MLU -> DFW -> BTR -> CLT -> GSO -> ATL -> MGM -> MDW -> SDF -> ORD -> MQT -> BOS -> ACK -> DEN -> HNL -> PPG -> DEN -> PSC -> SLC -> EUG -> ORD -> ALO -> OAK -> KOA -> ATL -> EYW -> DAL -> LIT -> MSP -> ANC -> ADK -> DTW -> PLN -> MSP -> ATW -> DFW -> GPT -> DTW -> ELM -> MCO -> PSE -> DFW -> GGG -> ATL -> DAB -> MSP -> FAR -> TPA -> SJU -> SLC -> RDM -> MSP -> LSE -> MSY -> MSP -> ANC -> DLG -> DTW -> CAK -> DFW -> BPT -> MSP -> BJI -> PDX -> ORD -> PAH -> STL -> OMA -> ORD -> COU -> MSP -> CID -> DFW -> LAW -> SLC -> WYS -> MSP -> FAI -> BRW -> DEN -> CPR -> SFO -> RDD -> ATL -> BQK -> DEN -> COS -> MSP -> ANC -> SCC -> ATL -> PBI -> DEN -> FCA -> DEN -> BFL -> PHX -> PSP -> DEN -> IDA -> STL -> TUL -> DTW -> BGR -> DTW -> SCE -> DAL -> AMA -> SFO -> MRY -> DEN -> RNO -> SEA -> JNU -> YAK -> DEN -> SGU -> DEN -> HLN -> ATL -> BHM -> SLC -> CDC -> DEN -> MSO -> ORD -> MBS -> DEN -> MMH -> MSP -> GRB -> ORD -> BMI -> DFW -> BRO -> OAK -> LIH -> HOU -> CRP -> MSP -> RST -> DFW -> XNA -> PHX -> SBP -> ATL -> GSP -> MDW -> DSM -> MSP -> GFK -> DTW -> MDT -> ORD -> CHO -> DEN -> BIL -> DCA -> HPN -> DFW -> PIB -> MSP -> ANC -> OME -> DEN -> GUC -> MSP -> ANC -> BET -> ATL -> AGS -> PHX -> FLG -> STL -> ECP -> DTW -> ERI -> PHX -> TUS -> IAH -> LCH -> ABQ -> ORD -> LEX -> DFW -> GCK -> ORD -> FWA -> SEA -> KTN -> WRG -> PSG -> DEN -> GTF -> DTW -> CIU -> MDW -> CLE -> SEA -> JNU -> GST -> RSW -> MSP -> ABR -> ORD -> MLI -> ORD -> CRW -> MDW -> PVD -> DFW -> ABI -> ATL -> EWN -> DTW -> ESC -> ORD -> PIA -> DAL -> OKC -> MCO -> ILG -> MSP -> MSN -> DTW -> BTV -> SEA -> SIT -> DFW -> SPS -> DEN -> GCC -> ATL -> AVL -> MSP -> HIB -> MDW -> MHT -> ORD -> AZO -> DAL -> ICT -> ATL -> CHA -> MCO -> ORH -> MSP -> DIK -> ATL -> VLD -> LAX -> SMX -> DTW -> APN -> ORD -> FNT -> LAS -> SJC -> ORD -> SBN -> HOU -> HRL -> ATL -> HSV -> DAL -> MAF -> DTW -> ITH -> ORD -> LBE -> EWR -> DFW -> CLL -> MDW -> BUF -> SNA -> SLC -> PIH -> MSP -> ANC -> ADQ -> DEN -> EGE -> DEN -> DRO -> DEN -> BZN -> MSP -> ISN -> DFW -> ACT -> ATL -> MLB -> DFW -> SHV
+	Costo: 59337
+	``` 
 
 ### Viaje de N lugares $$(\star\star\star)$$
 * Comando: `vacaciones`
 * Parámetros: `origen`, y `n`. 
 * Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No debe pasarse por un aeropuerto más de una vez (salvo el
 `origen`, cuando volvemos a éste).
-* Complejidad: El algoritmo debe ejecutar en $$\mathcal{O}(C \times F)$$.
 * Ejemplo:
+Entrada:
+	```
+	vacaciones San Diego,6
+	vacaciones New York,15
+	```
+Salida:
+	```
+	SAN -> ABQ -> HOU -> AUS -> LAX -> BNA -> SAN
+	JFK -> AUS -> LAX -> ASE -> DEN -> AMA -> DAL -> ABQ -> HOU -> BHM -> MIA -> BDL -> IAD -> ALB -> MCO -> JFK
+	``` 
 
 ### Itinerario cultural $$(\star\star)$$
 
@@ -308,20 +328,30 @@ las ciudades del mundo (por ahora, Estados Unidos), demorando aproximadamente lo
 * Complejidad: El cálculo de la obtención del itinerario debe realizarse en $$\mathcal{O}(I + R)$$,
 siendo $$I$$ la cantidad de ciudades a visitar, y $$R$$ la cantidad de restricciones impuestas. Luego, 
 el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(I\times F \log (C)\right)$$ o bien $$\mathcal{O}\left(I\times (C + F)\right)$$, dependiendo de si se trata de un caso u otro.
-* Ejemplo:
-
-
-### Obtener estadísticas $$(\star)$$
-* Comando: `estadisticas`
-* Parámetros: ninguno. 
-* Utilidad: nos imprime las siguiente estadísticas: 
-	* Cantidad de Aeropuertos
-	* Cantidad de Vuelos posibles
-	* Densidad? 
-	* Aeropuerto con mayor cantidad de Vuelos
-	* Alguna cosa más
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C + F)$$.
-* Ejemplo: 
+* Ejemplo, trabajando con [itinerario_ejemplo.csv](itinerario_ejemplo.csv),
+Entrada:
+	```
+	itinerario itinerario_ejemplo.csv
+	```
+Salida:
+	```
+	Asheville, Newburgh, Oakland, Wilmington, Jackson, Garden City, Kalispell, Hobbs, Aberdeen, Traverse City, Rhinelander, San Diego, Waco, Dallas-Fort Worth, New York, West Yellowstone
+	AVL -> ATL -> DTW -> SWF
+	SWF -> FLL -> OAK
+	OAK -> ABQ -> MCO -> ILG
+	ILG -> MCO -> DEN -> JAC
+	JAC -> DFW -> GCK
+	GCK -> DFW -> DEN -> FCA
+	FCA -> ATL -> IAH -> HOB
+	HOB -> IAH -> MSP -> ABR
+	ABR -> MSP -> TVC
+	TVC -> MSP -> RHI
+	RHI -> MSP -> LAX -> CLD
+	CLD -> LAX -> DFW -> ACT
+	ACT -> DFW
+	DFW -> JFK
+	JFK -> SLC -> WYS
+	```  
 
 ### Exportar a archivo KML $$(\star)$$
 
@@ -329,9 +359,20 @@ el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(I\times F \log 
 * Parámetros: `archivo`. 
 * Utilidad: exporta el archivo KML con la ruta del último comando ejecutado (que incluya algún camino,
 o rutas áereas). Esto aplica para todos los comandos salvo el de estadísticas, u obtención de los
-aeropuertos más centrales.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C + F)$$.
-* Ejemplo: Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/kml).
+aeropuertos más centrales. Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/kml).
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A + F)$$.
+* Ejemplo: 
+Entrada:
+	```
+	vacaciones San Diego,6
+	exportar_kml kml-ejemplo.kml
+	```
+Salida:
+	```
+	SAN -> ABQ -> HOU -> AUS -> LAX -> BNA -> SAN
+	OK
+	```
+[Aquí](kml-ejemplo.kml) pueden encontrar el archivo KML exportado.
 
 ## Criterios de aprobación
 
