@@ -27,7 +27,7 @@ La primera línea de cada archivo KML debe ser el encabezado del estándar XML:
 
 Las siguientes líneas del archivo indica que se trata de un archivo KML y se anuncia su inicio:
 ```xml
-    <kml xmlns="http://earth.google.com/kml/2.1">
+    <kml xmlns="http://www.opengis.net/kml/2.2">
         <Document>
 ```
 ## Información del archivo KML
