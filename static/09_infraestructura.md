@@ -19,7 +19,7 @@ Como último comentario acerca de este sitio, Github provee la posibilidad de qu
 
 ### Corrector Automático
 
-Dentro de [nuestra organización](https://github.com/algoritmos-rw/) en Github también se almacena, entre otras cosas, el [corrector automático](https://github.com/algoritmos-rw/corrector) (y control de copias).
+Dentro de [nuestra organización](https://github.com/algoritmos-rw/) en Github también se almacena, entre otras cosas, el [corrector automático](https://github.com/algoritmos-rw/corrector/tree/fiuba) (y control de copias).
 
 El funcionamiento básico es:
 
