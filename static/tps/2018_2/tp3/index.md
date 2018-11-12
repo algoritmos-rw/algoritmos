@@ -31,7 +31,7 @@ suficiente valor para poder dejar a todos medianamente contentos.
 
 ## Análisis de la situación 
 
-Distintas aerolíneas partes del mundo, requieren distintos tipos de funcionalidades:
+Aerolíneas de distintas partes del mundo, requieren distintos tipos de funcionalidades:
 * Todas las aerolíneas quieren que los clientes puedan buscar el camino más rápido, 
 el más barato, o el de menor cantidad de escalas, a gusto.
 * Para poder entender donde conviene invertir en mayor infraestructura, se quiere obtener 
