@@ -274,6 +274,10 @@ a usar un aeropuerto ya usado, u otro de alguna ciudad ya visitada, si eso mejor
 viaje.
 * Complejidad: que demore lo que deba demorar para obtener el resultado óptimo.
 * Ejemplo:
+Entrada:
+	```
+	recorrer_mundo
+	```
 
 
 ### Recorrer el mundo, de forma aproximada $$(\star)$$
