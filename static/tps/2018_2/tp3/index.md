@@ -249,7 +249,7 @@ Salida:
 pueda comunicar a todo el mundo (por ahora, solo los Estados Unidos) con dicha aerolínea, pero que el 
 costo total de la licitación de las rutas aéreas sea mínima. Se considera que el costo de las rutas es
 proporcional al costo de los pasajes, por lo que se puede trabajar directamente con dicho costo. 
-Se buscaque la nueva aerolínea pueda llegar a todos los **aeropuertos** de alguna forma.
+Se busca que la nueva aerolínea pueda llegar a todos los **aeropuertos** de alguna forma.
 La salida de este comando debe ser un archivo con el mismo formato del archivo `vuelos.csv`, pero
 únicamente con las rutas de vuelo a utilizar por ésta aerolínea.
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(F\log(A))$$.
