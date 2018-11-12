@@ -49,7 +49,7 @@ def centralidad(grafo):
         for w in grafo:
             if v == w: continue
             # con el algoritmo que corresponda al grafo
-            distancia, padre = grafo.camino_minimo(v, w) 
+            distancia, padre = camino_minimo(grafo, v, w) 
             # salteamos si no hay camino de v a w
             if padre[w] is NULL: continue 
             actual = padre[w]
@@ -93,7 +93,7 @@ def centralidad(grafo):
     for v in grafo: cent[v] = 0
     for v in grafo:
         # hacia todos los demas vertices
-        distancia, padre = grafo.camino_minimo(v) 
+        distancia, padre = camino_minimo(grafo, v, w)
         cent_aux = {}
         for w in grafo: cent_aux[w] = 0
         # Aca filtramos (de ser necesario) los vertices a distancia infinita, 
