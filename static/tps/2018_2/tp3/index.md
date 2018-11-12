@@ -44,7 +44,7 @@ posibles para ello. Entre tantos datos que hay, no saben por dónde empezar!
 posibilidad de ofrecer un viaje alrededor del mundo: poder visitar todo el mundo, con el menor 
 costo o tiempo posible.
 * Sobre lo anterior, algunas aerolíneas quieren que sea la mejor solución posible, sin excepciones.
-Otras, entienden que la capacidad de computo de dicha solución puede llevar mucho tiempo para sus 
+Otras, entienden que la capacidad de cómputo de dicha solución puede llevar mucho tiempo para sus 
 _no tan capaces_ servidores (comparten capacidad junto con el sistema SIU Guaraní de la FIUBA). 
 Por ello, aceptarían una _buena solución_ que se calcule rápidamente. 
 * Algunas aerolíneas querrían ofrecer un viaje que empiece desde la ciudad del cliente, y
