@@ -106,7 +106,7 @@ el interés del curso en que implementen dicha funcionalidad o implementación d
 en cuenta los puntos de todas las partes implementadas. 
 1. Se deben conseguir al menos 10 puntos para poder aprobar el TP 
 1. En caso de obtener menos de 12 puntos, la nota máxima será 9. 
-1. En caso de obtener 16 puntos o más, se otorgará un punto extra en la nota del trabajo práctico. 
+1. En caso de obtener 16 puntos o más, se otorgará un punto extra en la nota del trabajo práctico, pudiendo llegar a tener hasta 11 de nota en el trabajo.  
 1. El total de puntos entre todas las funcionalidades es 20. 
 
 ### Listar operaciones (obligatorio, sin puntos)
@@ -270,7 +270,7 @@ Salida (aparte del archivo creado):
 * Parámetros: ninguno.
 * Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
 **las ciudades** del mundo (por ahora, Estados Unidos), demorando lo menos posible. Podemos volver 
-a usar un aeropuerto ya usado, u otro de alguna ciudad ya visitada, si eso mejora el costo de nuestro
+a usar un aeropuerto ya usado, u otro de alguna ciudad ya visitada, si eso mejora la duración de nuestro
 viaje.
 * Complejidad: que demore lo que deba demorar para obtener el resultado óptimo.
 * Ejemplo:
@@ -327,9 +327,9 @@ Salida:
 	La primera línea indica las ciudades que se desean visitar. Las siguientes indican que la 
 	`ciudad_i` debe visitarse **si o si** antes que la `ciudad_j`. 
 	Se debe: 
-		1. Imprimir el orden en el que deben visitarse dichas ciudades. 
-		1. Imprimir el camino mínimo en tiempo o escalas (según lo que se haya
-		implementado en ese caso) a realizar.
+1. Imprimir el orden en el que deben visitarse dichas ciudades. 
+1. Imprimir el camino mínimo en tiempo o escalas (según lo que se haya implementado en ese caso)
+a realizar.
 * Complejidad: El cálculo de la obtención del itinerario debe realizarse en $$\mathcal{O}(I + R)$$,
 siendo $$I$$ la cantidad de ciudades a visitar, y $$R$$ la cantidad de restricciones impuestas. Luego, 
 el cálculo de los caminos debe realizarse en $$\mathcal{O}\left(I\times F \log (A)\right)$$ o bien $$\mathcal{O}\left(I\times (A + F)\right)$$, dependiendo de si se trata de un caso u otro.
@@ -356,7 +356,9 @@ Salida:
 	ACT -> DFW
 	DFW -> JFK
 	JFK -> SLC -> WYS
-	```  
+	```
+Si bien en este ejemplo no llega a notarse, no tiene por qué ser el mismo aeropuerto el de llegada
+que el de salida (si deben ser aeropuertos de la ciudad en la cual se está parando). 
 
 ### Exportar a archivo KML $$(\star)$$
 
