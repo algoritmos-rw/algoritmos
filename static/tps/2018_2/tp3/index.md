@@ -34,7 +34,7 @@ suficiente valor para poder dejar a todos medianamente contentos.
 Aerolíneas de distintas partes del mundo, requieren distintos tipos de funcionalidades:
 * Todas las aerolíneas quieren que los clientes puedan buscar el camino más rápido, 
 el más barato, o el de menor cantidad de escalas, a gusto.
-* Para poder entender donde conviene invertir en mayor infraestructura, se quiere obtener 
+* Para poder entender dónde conviene invertir en mayor infraestructura, se quiere obtener 
 cuáles son los aeropuertos más importantes, teniendo en cuenta en cuáles es más frecuente
 terminar haciendo escalas para poder ir entre cualquier parte del mundo a otra. 
 * Una nueva aerolínea (bAIRros Airlines, con sede principal en el aeropuerto de Lanús) 
