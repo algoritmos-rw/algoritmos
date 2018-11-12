@@ -27,7 +27,7 @@ El funcionamiento básico es:
 
 * Una vez que recibe un mail, por ejemplo uno con el sujeto 'TP1 - 100000 - Alumno', ya sabe que el trabajo a corregir es el TP1 del alumno de padron 100000.
 
-* Con esos datos, se arma una máquina virtual en [Docker](https://docker.com), un sistema que tiene como fin el contener cada ejecución por separado en una maquina enteramente nueva y descartable. La idea principal del uso de Docker es que si, por ejemplo, se pudiese ver comprometido el trabajo práctico entregado, esto no vulnerabilizaría el servidor entero donde se tiene todo (sistema de entregas, consulta de notas, corrector), si no que solo se perjudica una maquina virtual externa.
+* Con esos datos, se arma una máquina virtual en [Docker](https://docker.com), un sistema que tiene como fin el contener cada ejecución por separado en una máquina enteramente nueva y descartable. La idea principal del uso de Docker es que si, por ejemplo, se pudiese ver comprometido el trabajo práctico entregado, esto no vulnerabilizaría el servidor entero donde se tiene todo (sistema de entregas, consulta de notas, corrector), si no que solo se perjudica una máquina virtual externa.
 
 * Allí se corren las pruebas del trabajo recibido y se devuelve el output del corrector
 
