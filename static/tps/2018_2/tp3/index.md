@@ -102,6 +102,8 @@ De todas las funcionalidades, algunas son obligatorias, y las que lo son tienen 
 para ser implementadas. Algunas consideraciones: 
 1. Cada funcionalidad e implementación otorga distinta cantidad de puntos, basado en dificultad y
 el interés del curso en que implementen dicha funcionalidad o implementación de la misma.
+1. Se pueden implementar todas las implementaciones posibles de una misma funcionalidad. Se tomarán
+en cuenta los puntos de todas las partes implementadas. 
 1. Se deben conseguir al menos 10 puntos para poder aprobar el TP 
 1. En caso de obtener menos de 12 puntos, la nota máxima será 9. 
 1. En caso de obtener 16 puntos o más, se otorgará un punto extra en la nota del trabajo práctico. 
