@@ -131,7 +131,7 @@ Salida:
 	vacaciones
 	```
 
-### Caminos mínimos (obligatorio implementar al menos 1)
+### Caminos mínimos (obligatorio implementar al menos uno)
 
 #### Camino más barato y camino más rápido $$(\star)$$
 
