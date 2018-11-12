@@ -55,7 +55,7 @@ quieren conocer, y además si hay alguna ciudad que deba visitarse antes que otr
 disfrutar más del viaje). 
 * En algunos casos, quisieran poder obtener estadísticas de las rutas de vuelo y aeropuertos, para
 así poder planificar nuevas rutas.
-* Muchas de las aerolíneas quisiera poder exportar un mapa que nos permita visualizar las rutas de vuelo. 
+* Muchas de las aerolíneas quisieran poder exportar un mapa que nos permita visualizar las rutas de vuelo. 
 
 ## Datos disponibles
 
