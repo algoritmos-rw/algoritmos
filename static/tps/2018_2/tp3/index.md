@@ -49,7 +49,7 @@ _no tan capaces_ servidores (comparten capacidad junto con el sistema SIU Guaran
 Por ello, aceptarían una _buena solución_ que se calcule rápidamente. 
 * Algunas aerolíneas querrían ofrecer un viaje que empiece desde la ciudad del cliente, y
 haga un viaje por alguna cantidad de ciudades del mundo y vuelva luego a la ciudad origen 
-(así pueden ofrecer descuentos para tentar a los cliente).
+(así pueden ofrecer descuentos para tentar a los clientes).
 * Otras aerolíneas pidieron poder ofrecer un viaje cultural: que se pueda indicar qué ciudades se
 quieren conocer, y además si hay alguna ciudad que deba visitarse antes que otra (para poder
 disfrutar más del viaje). 
