@@ -69,6 +69,10 @@ Una consultora uso un [innovador script](parser.py) para parsear dichos datos en
 	aeropuerto_i,aeropuerto_j,tiempo_promedio,precio,cant_vuelos_entre_aeropuertos
 	```
 
+Adicionalmente, para poder realizar algunas pruebas rápidas (especialmente en los algoritmos que 
+más tiempo puedan demorar) se crea este otro set con [aeropuertos](aeropuertos_inventados.csv) y
+[vuelos](vuelos_inventados.csv) inventados. 
+
 ### Aclaraciones
 
 * Una ciudad puede tener **uno o más aeropuertos** asociados.
@@ -267,7 +271,7 @@ Salida (aparte del archivo creado):
 ### Recorrer el mundo, de forma óptima $$(\star\star\star)$$
 
 * Comando: `recorrer_mundo`.
-* Parámetros: ninguno.
+* Parámetros: `origen`, ciudad desde la que se parte para comenzar el recorrido. 
 * Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
 **las ciudades** del mundo (por ahora, Estados Unidos), demorando lo menos posible. Podemos volver 
 a usar un aeropuerto ya usado, u otro de alguna ciudad ya visitada, si eso mejora la duración de nuestro
@@ -276,26 +280,53 @@ viaje.
 * Ejemplo:
 Entrada:
 	```
-	recorrer_mundo
+	recorrer_mundo San Diego
 	```
-
+Salida:
+	```
+	(Recorrido con el formato de caminos mínimos)
+	Costo: costo del recorrido
+	```
+Debido a que este comando puede demorar mucho tiempo, se recomienda realizar pruebas con el set
+de aeropuertos y vuelos inventados antes de hacer la prueba sobre el set de datos real. Ejemplo:
+Entrada:
+	```
+	recorrer_mundo Gotica
+	```
+Salida:
+	```
+	BAT -> LAN -> BAT -> WAC -> RIV -> SHE -> ATL -> JFK -> ATL -> NAR -> BH6 -> ASH
+	Costo: 2782
+	```
+_Aclaración_: pueden ser otros los caminos, siempre y cuando sean válidos y se trate de un costo 
+mínimo.
 
 ### Recorrer el mundo, de forma aproximada $$(\star)$$
 * Comando: `recorrer_mundo_aprox`
-* Parámetros: ninguno
+* Parámetros: `origen`, ciudad desde la que se parte para comenzar el recorrido. 
 * Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
 las ciudades del mundo (por ahora, Estados Unidos), demorando aproximadamente lo menos posible.
 * Complejidad: idealmente, que sea un algoritmo cuanto mucho cuadrático.
 * Ejemplo:
 Entrada:
 	```
-	recorrer_mundo_aprox
+	recorrer_mundo_aprox Kansas City
 	```
 Salida:
 	```
 	MCI -> BNA -> PNS -> ATL -> VPS -> DFW -> ROW -> ORD -> EAU -> BNA -> JAX -> ORD -> DAY -> DFW -> LFT -> DEN -> SAF -> LAX -> MSP -> CWA -> LAS -> BUR -> CVG -> RIC -> DEN -> GJT -> DEN -> FAT -> IND -> JFK -> HYA -> ATL -> SAV -> DEN -> COD -> SFO -> CEC -> DFW -> GRI -> MSP -> ANC -> ATL -> GNV -> IAD -> UST -> ORD -> MKG -> MSP -> BIS -> DEN -> HDN -> FLL -> MCO -> BQN -> DAL -> MEM -> OAK -> ORD -> ROA -> DTW -> SWF -> ATL -> TYS -> DTW -> ACY -> ORD -> EVV -> ORD -> LAN -> MIA -> DEN -> PUB -> CLT -> DEN -> HNL -> GUM -> ATL -> FAY -> MDW -> ORF -> DFW -> JAN -> DFW -> TYR -> DEN -> SMF -> DFW -> FSM -> SLC -> VEL -> ORD -> TVC -> SLC -> CNY -> SFO -> ACV -> SEA -> BLI -> DEN -> BOI -> BOS -> MVY -> ATL -> TRI -> DTW -> ABE -> STL -> RDU -> PHF -> SLC -> MFR -> DFW -> MFE -> DTW -> BGM -> DFW -> MEI -> DTW -> SYR -> ATL -> MYR -> PBG -> DAL -> ELP -> BNA -> MOB -> MSP -> IMT -> SLC -> SUN -> DAL -> AUS -> DEN -> DVL -> MSP -> RHI -> ORD -> CMI -> STL -> TTN -> ORD -> CMX -> DEN -> HYS -> DEN -> ASE -> ORD -> TOL -> MKE -> MDW -> BDL -> DFW -> JLN -> LAS -> LGB -> LAX -> SBA -> DLH -> DFW -> TXK -> STL -> CMH -> MSP -> BRD -> SEA -> KTN -> WRG -> MSP -> INL -> PHX -> YUM -> STL -> PHL -> SLC -> EKO -> ORD -> DBQ -> DCA -> DEN -> MTJ -> DAL -> SAT -> STL -> GRR -> DFW -> SJT -> DFW -> SGF -> LAX -> CLD -> LAS -> ONT -> ORD -> STC -> MDW -> PIT -> DFW -> MHK -> LNK -> SLC -> BTM -> BWI -> ATL -> TLH -> DEN -> RAP -> SLC -> TWF -> ATL -> ABY -> ATL -> STT -> DFW -> LRD -> ATL -> STX -> ATL -> DHN -> MSP -> ANC -> CDV -> DEN -> OTH -> DAL -> LBB -> MSP -> ANC -> OTZ -> DEN -> GEG -> DEN -> JMS -> IAH -> HOB -> SLC -> LWS -> DFW -> GRK -> BWI -> ISP -> DTW -> AVP -> DEN -> LAR -> OAK -> OGG -> DEN -> RKS -> MSP -> MOT -> ATL -> MYR -> IAG -> ATL -> SRQ -> MSP -> ANC -> AKN -> ATL -> GTR -> LAX -> ITO -> ORD -> SUX -> MSP -> FSD -> DFW -> AEX -> DFW -> MLU -> DFW -> BTR -> CLT -> GSO -> ATL -> MGM -> MDW -> SDF -> ORD -> MQT -> BOS -> ACK -> DEN -> HNL -> PPG -> DEN -> PSC -> SLC -> EUG -> ORD -> ALO -> OAK -> KOA -> ATL -> EYW -> DAL -> LIT -> MSP -> ANC -> ADK -> DTW -> PLN -> MSP -> ATW -> DFW -> GPT -> DTW -> ELM -> MCO -> PSE -> DFW -> GGG -> ATL -> DAB -> MSP -> FAR -> TPA -> SJU -> SLC -> RDM -> MSP -> LSE -> MSY -> MSP -> ANC -> DLG -> DTW -> CAK -> DFW -> BPT -> MSP -> BJI -> PDX -> ORD -> PAH -> STL -> OMA -> ORD -> COU -> MSP -> CID -> DFW -> LAW -> SLC -> WYS -> MSP -> FAI -> BRW -> DEN -> CPR -> SFO -> RDD -> ATL -> BQK -> DEN -> COS -> MSP -> ANC -> SCC -> ATL -> PBI -> DEN -> FCA -> DEN -> BFL -> PHX -> PSP -> DEN -> IDA -> STL -> TUL -> DTW -> BGR -> DTW -> SCE -> DAL -> AMA -> SFO -> MRY -> DEN -> RNO -> SEA -> JNU -> YAK -> DEN -> SGU -> DEN -> HLN -> ATL -> BHM -> SLC -> CDC -> DEN -> MSO -> ORD -> MBS -> DEN -> MMH -> MSP -> GRB -> ORD -> BMI -> DFW -> BRO -> OAK -> LIH -> HOU -> CRP -> MSP -> RST -> DFW -> XNA -> PHX -> SBP -> ATL -> GSP -> MDW -> DSM -> MSP -> GFK -> DTW -> MDT -> ORD -> CHO -> DEN -> BIL -> DCA -> HPN -> DFW -> PIB -> MSP -> ANC -> OME -> DEN -> GUC -> MSP -> ANC -> BET -> ATL -> AGS -> PHX -> FLG -> STL -> ECP -> DTW -> ERI -> PHX -> TUS -> IAH -> LCH -> ABQ -> ORD -> LEX -> DFW -> GCK -> ORD -> FWA -> SEA -> KTN -> WRG -> PSG -> DEN -> GTF -> DTW -> CIU -> MDW -> CLE -> SEA -> JNU -> GST -> RSW -> MSP -> ABR -> ORD -> MLI -> ORD -> CRW -> MDW -> PVD -> DFW -> ABI -> ATL -> EWN -> DTW -> ESC -> ORD -> PIA -> DAL -> OKC -> MCO -> ILG -> MSP -> MSN -> DTW -> BTV -> SEA -> SIT -> DFW -> SPS -> DEN -> GCC -> ATL -> AVL -> MSP -> HIB -> MDW -> MHT -> ORD -> AZO -> DAL -> ICT -> ATL -> CHA -> MCO -> ORH -> MSP -> DIK -> ATL -> VLD -> LAX -> SMX -> DTW -> APN -> ORD -> FNT -> LAS -> SJC -> ORD -> SBN -> HOU -> HRL -> ATL -> HSV -> DAL -> MAF -> DTW -> ITH -> ORD -> LBE -> EWR -> DFW -> CLL -> MDW -> BUF -> SNA -> SLC -> PIH -> MSP -> ANC -> ADQ -> DEN -> EGE -> DEN -> DRO -> DEN -> BZN -> MSP -> ISN -> DFW -> ACT -> ATL -> MLB -> DFW -> SHV
 	Costo: 59337
-	``` 
+	```
+Con el set de datos de pruebas:
+Entrada:
+	```
+	recorrer_mundo_aprox Gotica
+	```
+Salida:
+	```
+	BAT -> LAN -> JFK -> ATL -> WAC -> NAR -> ASH -> WAC -> RIV -> SHE -> ASH -> BH6
+	Costo: 3765
+	```
 
 ### Viaje de N lugares $$(\star\star\star)$$
 * Comando: `vacaciones`
