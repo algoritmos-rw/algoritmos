@@ -110,7 +110,7 @@ el interés del curso en que implementen dicha funcionalidad o implementación d
 en cuenta los puntos de todas las partes implementadas. 
 1. Se deben conseguir al menos 10 puntos para poder aprobar el TP 
 1. En caso de obtener menos de 12 puntos, la nota máxima será 9. 
-1. En caso de obtener 16 puntos o más, se otorgará un punto extra en la nota del trabajo práctico, pudiendo llegar a tener hasta 11 de nota en el trabajo.  
+1. En caso de obtener 16 puntos o más la nota máxima del trabajo práctico puede llegar a 11.
 1. El total de puntos entre todas las funcionalidades es 20. 
 
 ### Listar operaciones (obligatorio, sin puntos)
@@ -249,10 +249,11 @@ Salida:
 
 * Comando: `nueva_aerolinea`.
 * Parámetros: `ruta`, ruta del archivo de salida.
-* Utilidad: devolver una lista de las rutas que permitan implementar una nueva aerolínea tal que se
-pueda comunicar a todo el mundo (por ahora, solo los Estados Unidos) con dicha aerolínea, pero que el 
-costo total de la licitación de las rutas aéreas sea mínima. Se considera que el costo de las rutas es
-proporcional al costo de los pasajes, por lo que se puede trabajar directamente con dicho costo. 
+* Utilidad: exportar un archivo con las rutas que permitan implementar una nueva aerolínea tal que se
+pueda comunicar a todos los aeropuertos (en esta primera iteación, sólo de Estados Unidos) con dicha 
+aerolínea, pero que el costo total de la licitación de las rutas aéreas sea mínima. Se considera que
+el costo de las rutas es proporcional al costo de los pasajes, por lo que se puede trabajar 
+directamente con dicho costo. 
 Se busca que la nueva aerolínea pueda llegar a todos los **aeropuertos** de alguna forma.
 La salida de este comando debe ser un archivo con el mismo formato del archivo `vuelos.csv`, pero
 únicamente con las rutas de vuelo a utilizar por ésta aerolínea.
@@ -273,9 +274,8 @@ Salida (aparte del archivo creado):
 * Comando: `recorrer_mundo`.
 * Parámetros: `origen`, ciudad desde la que se parte para comenzar el recorrido. 
 * Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
-**las ciudades** del mundo (por ahora, Estados Unidos), demorando lo menos posible. Podemos volver 
-a usar un aeropuerto ya usado, u otro de alguna ciudad ya visitada, si eso mejora la duración de nuestro
-viaje.
+**las ciudades** del mundo, demorando lo menos posible. Podemos volver a usar un aeropuerto ya usado,
+u otro de alguna ciudad ya visitada, si eso mejora la duración de nuestro viaje.
 * Complejidad: que demore lo que deba demorar para obtener el resultado óptimo.
 * Ejemplo:
 Entrada:
@@ -305,7 +305,8 @@ mínimo.
 * Comando: `recorrer_mundo_aprox`
 * Parámetros: `origen`, ciudad desde la que se parte para comenzar el recorrido. 
 * Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
-las ciudades del mundo (por ahora, Estados Unidos), demorando aproximadamente lo menos posible.
+**las ciudades** del mundo, demorando **aproximadamente** lo menos posible. Podemos volver a usar un 
+aeropuerto ya usado, u otro de alguna ciudad ya visitada, si eso mejora la duración de nuestro viaje.
 * Complejidad: idealmente, que sea un algoritmo cuanto mucho cuadrático.
 * Ejemplo:
 Entrada:
