@@ -105,7 +105,7 @@ De todas las funcionalidades, algunas son obligatorias, y las que lo son tienen 
 para ser implementadas. Algunas consideraciones: 
 1. Cada funcionalidad e implementación otorga distinta cantidad de puntos, basado en dificultad y
 el interés del curso en que implementen dicha funcionalidad o implementación
-particular de la misma. (Cada estrella $$\star$$ corresponde a un punto.)
+particular de la misma. (Cada estrella ★ corresponde a un punto.)
 1. Se pueden implementar todas las implementaciones posibles de una misma funcionalidad. Se tomarán
 en cuenta los puntos de todas las partes implementadas. 
 1. Se deben conseguir al menos 10 puntos para poder aprobar el TP.
@@ -137,7 +137,7 @@ Salida:
 
 ### Caminos mínimos (obligatorio implementar al menos uno)
 
-#### Camino más barato y camino más rápido $$(\star)$$
+#### Camino más barato y camino más rápido (★)
 
 * Comando: `camino_mas`
 * Parámetros: `barato` ó `rapido`, `origen` y `destino`. Origen y destino son **ciudades**.
@@ -160,7 +160,7 @@ Salida:
 	SAN -> DEN -> JFK
 	```
 
-#### Camino con menor cantidad de escalas $$(\star)$$
+#### Camino con menor cantidad de escalas (★)
 
 * Comando: `camino_escalas`
 * Parámetros: `origen` y `destino`. 
@@ -193,7 +193,7 @@ Dejamos un apunte para la explicación de qué es y cómo se calcula el
 [Betweeness Centrality](/algo2/material/centralidad) y otro sobre 
 [PageRank](/algo2/material/pagerank).
 
-#### Betweeness Centrality $$(\star\star\star)$$
+#### Betweeness Centrality (★★★)
 
 * Comando: `centralidad`
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
@@ -211,7 +211,7 @@ Salida:
 	``` 
 
 
-#### Betweeness Centrality aproximada ($$\star$$)
+#### Betweeness Centrality aproximada (★)
 
 * Comando: `centralidad_aprox`
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
@@ -228,7 +228,7 @@ Salida:
 	ATL, ORD, DFW
 	``` 
 
-#### Pagerank $$(\star\star)$$
+#### Pagerank (★★)
 
 * Comando: `pagerank`
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
@@ -245,7 +245,7 @@ Salida:
 	ATL, DFW, ORD, DEN, MSP
 	``` 
 
-### Optimización de rutas para nueva aerolínea $$(\star\star)$$
+### Optimización de rutas para nueva aerolínea (★★)
 
 * Comando: `nueva_aerolinea`.
 * Parámetros: `ruta`, ruta del archivo de salida.
@@ -269,7 +269,7 @@ Salida (aparte del archivo creado):
 	``` 
 
 
-### Recorrer el mundo, de forma óptima $$(\star\star\star)$$
+### Recorrer el mundo, de forma óptima (★★★)
 
 * Comando: `recorrer_mundo`.
 * Parámetros: `origen`, ciudad desde la que se parte para comenzar el recorrido. 
@@ -301,7 +301,7 @@ Salida:
 _Aclaración_: pueden ser otros los caminos, siempre y cuando sean válidos y se trate de un costo 
 mínimo.
 
-### Recorrer el mundo, de forma aproximada $$(\star)$$
+### Recorrer el mundo, de forma aproximada (★)
 * Comando: `recorrer_mundo_aprox`
 * Parámetros: `origen`, ciudad desde la que se parte para comenzar el recorrido. 
 * Utilidad: nos devuelve una lista en orden de cómo debemos movernos por el mundo para visitar todas
@@ -329,7 +329,7 @@ Salida:
 	Costo: 3765
 	```
 
-### Viaje de N lugares $$(\star\star\star)$$
+### Viaje de N lugares (★★★)
 * Comando: `vacaciones`
 * Parámetros: `origen`, y `n`. 
 * Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No debe pasarse por un aeropuerto más de una vez (salvo el
@@ -348,7 +348,7 @@ Salida:
 	JFK -> AUS -> LAX -> ASE -> DEN -> AMA -> DAL -> ABQ -> HOU -> BHM -> MIA -> BDL -> IAD -> ALB -> MCO -> JFK
 	``` 
 
-### Itinerario cultural $$(\star\star)$$
+### Itinerario cultural (★★)
 
 * Comando: `itinerario`
 * Parámetros: `ruta`, la ruta el archivo del itinerario. 
@@ -393,7 +393,7 @@ Salida:
 Si bien en este ejemplo no llega a notarse, no tiene por qué ser el mismo aeropuerto el de llegada
 que el de salida (si deben ser aeropuertos de la ciudad en la cual se está parando). 
 
-### Exportar a archivo KML $$(\star)$$
+### Exportar a archivo KML (★)
 
 * Comando: `exportar_kml`. 
 * Parámetros: `archivo`. 
