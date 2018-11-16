@@ -42,8 +42,7 @@ quiere poder conectar absolutamente todo el mundo, pero quiere utilizar las ruta
 posibles para ello. Entre tantos datos que hay, no saben por dónde empezar!
 * Algunas aerolíneas querrían poder agregar (en sus sofisticados sistemas de recomendación) la
 posibilidad de ofrecer un viaje alrededor del mundo: poder visitar todo el mundo, con el menor 
-costo o tiempo posible.
-* Sobre lo anterior, algunas aerolíneas quieren que sea la mejor solución posible, sin excepciones.
+costo o tiempo posible. Algunas aerolíneas quieren que sea la mejor solución posible, sin excepciones.
 Otras, entienden que la capacidad de cómputo de dicha solución puede llevar mucho tiempo para sus 
 _no tan capaces_ servidores (comparten capacidad junto con el sistema SIU Guaraní de la FIUBA). 
 Por ello, aceptarían una _buena solución_ que se calcule rápidamente. 
