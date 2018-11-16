@@ -200,7 +200,7 @@ El comando recibe dos argumentos:
 
 Al ejecutarse, todos los vuelos cuya fecha de despegue que sean mayores a < desde > y menores a < hasta > tienen que 
 ser borrados del sistema y mostrados por salida estandar.
-En caso de que se reciba una fecha < hasta > que sea menor a < dede >, se deberá devolver un mensaje de 
+En caso de que se reciba una fecha < hasta > que sea menor a < desde >, se deberá devolver un mensaje de 
 error con el formato anteriormente mencionado.
 
 
