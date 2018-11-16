@@ -58,7 +58,7 @@ disfrutar más del viaje).
 
 Se cuenta con los datos de los [aeropuertos de Estados Unidos](https://www.kaggle.com/usdot/flight-delays/version/1#airports.csv), así como de más de medio millón de [vuelos](https://www.kaggle.com/usdot/flight-delays/version/1#flights.csv) durante el año 2015. 
 
-Una consultora uso un [innovador script](parser.py) para parsear dichos datos en los siguiente archivos: 
+Una consultora uso un [innovador script](parser.py) para parsear dichos datos en los siguientes archivos: 
 * El archivo [aeropuertos.csv](aeropuertos.csv) con el formato:
 	```
 	ciudad,codigo_aeropuerto,latitud,longitud
@@ -96,18 +96,19 @@ El trabajo consiste de 3 partes:
 1. El programa `FlyCombi` que utilice tanto el TDA como la biblioteca para poder implementar todo 
 lo requerido. 
 
-El programa debe recibir por parámetro y cargar en memoria el set de datos (`~$./flycombi 
+El programa debe recibir por parámetro y cargar en memoria el set de datos (`$ ./flycombi 
 aeropuertos.csv vuelos.csv`) y luego solicitar el ingreso de comandos por entrada estándar, 
 del estilo `<comando> 'parametro'`. Notar que esto permite tener un archivo de instrucciones a ser 
-ejecutadas (i.e. `~$./flycombi aeropuertos.csv vuelos.csv < entrada.txt`).
+ejecutadas (i.e. `$ ./flycombi aeropuertos.csv vuelos.csv < entrada.txt`).
 
 De todas las funcionalidades, algunas son obligatorias, y las que lo son tienen más de una opción
 para ser implementadas. Algunas consideraciones: 
 1. Cada funcionalidad e implementación otorga distinta cantidad de puntos, basado en dificultad y
-el interés del curso en que implementen dicha funcionalidad o implementación de la misma.
+el interés del curso en que implementen dicha funcionalidad o implementación
+particular de la misma. (Cada estrella $$\star$$ corresponde a un punto.)
 1. Se pueden implementar todas las implementaciones posibles de una misma funcionalidad. Se tomarán
 en cuenta los puntos de todas las partes implementadas. 
-1. Se deben conseguir al menos 10 puntos para poder aprobar el TP 
+1. Se deben conseguir al menos 10 puntos para poder aprobar el TP.
 1. En caso de obtener menos de 12 puntos, la nota máxima será 9. 
 1. En caso de obtener 16 puntos o más la nota máxima del trabajo práctico puede llegar a 11.
 1. El total de puntos entre todas las funcionalidades es 20. 
@@ -357,7 +358,7 @@ Salida:
 	ciudad_i,ciudad_j
 	```
 	La primera línea indica las ciudades que se desean visitar. Las siguientes indican que la 
-	`ciudad_i` debe visitarse **si o si** antes que la `ciudad_j`. 
+	`ciudad_i` debe visitarse **sí o sí** antes que la `ciudad_j`. 
 	Se debe: 
 1. Imprimir el orden en el que deben visitarse dichas ciudades. 
 1. Imprimir el camino mínimo en tiempo o escalas (según lo que se haya implementado en ese caso)
