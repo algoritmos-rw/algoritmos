@@ -333,7 +333,8 @@ Salida:
 * Comando: `vacaciones`
 * Parámetros: `origen`, y `n`. 
 * Utilidad: Obtener algún recorrido que comience en `origen` y que termine en `origen` también, de largo `n` (sin contar la última vuelta al `origen`). No debe pasarse por un aeropuerto más de una vez (salvo el
-`origen`, cuando volvemos a éste).
+`origen`, cuando volvemos a éste). En caso de no encontrar un recorrido de dicho largo que vuelva
+luego al origen, imprimir `"No se encontro recorrido"`.
 * Ejemplo:
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A^n)$$.
 Entrada:
