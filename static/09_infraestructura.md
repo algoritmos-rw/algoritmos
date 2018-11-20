@@ -11,7 +11,7 @@ Obviando la lista de correos, la plataforma más utilizada por el curso es [Gith
 
 ### Sitio Web
 
-Este mismo sitio tiene su código libre y abierto en un repositorio: https://github.com/algoritmos-rw/algo2. Se puede ver todo el código html/css/js (utilizados en diseño web), cuándo fue cada archivo agregado y por quién. Que el código sea libre hace muy facil su contribución, ya que solo hace falta probar una idea nueva y proponerla, sin tener nada detrás de una caja negra. 
+Este mismo sitio tiene su código libre y abierto en un repositorio: <https://github.com/algoritmos-rw/algo2>. Se puede ver todo el código html/css/js (utilizados en diseño web), cuándo fue cada archivo agregado y por quién. Que el código sea libre hace muy facil su contribución, ya que solo hace falta probar una idea nueva y proponerla, sin tener nada detrás de una caja negra. 
 
 En particular, este sitio utiliza un sistema llamado [Jekyll](https://jekyllrb.com/), un sistema especializado en convertir archivos de texto plano (por ejemplo, escritos en Markdown) a sitios web, permitiendo facilmente pasar de un conjunto de archivos escritos sin mucho conocimiento de diseño web a un sitio indexado y facil de navegar. 
 
