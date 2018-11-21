@@ -198,8 +198,9 @@ El comando recibe dos argumentos:
 - desde: cadena en formato YYYY-MM-DDTHH:MM:SS
 - hasta: cadena en formato YYYY-MM-DDTHH:MM:SS
 
-Al ejecutarse, todos los vuelos cuya fecha de despegue que sean mayores a < desde > y menores a < hasta > tienen que 
-ser borrados del sistema y mostrados por salida estandar.
+Al ejecutarse, todos los vuelos cuya fecha de despegue sea igual o mayor
+a < desde > e igual o menor a < hasta > tienen que 
+ser borrados del sistema y mostrados por salida estándar.
 En caso de que se reciba una fecha < hasta > que sea menor a < desde >, se deberá devolver un mensaje de 
 error con el formato anteriormente mencionado.
 
