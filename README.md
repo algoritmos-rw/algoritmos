@@ -1,3 +1,5 @@
+# Algo2
+
 Este es el repositorio del sitio web de Algoritmos y Programación II, publicado en:
 
 <https://algoritmos-rw.github.io/algo2/>
