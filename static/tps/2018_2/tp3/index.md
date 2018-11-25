@@ -417,6 +417,7 @@ Salida:
 ## Entrega
 
 Adicionalmente a los archivos propios del trabajo práctico debe agregarse un archivo `entrega.mk` que contenga la regla `flycombi` para generar el ejecutable de dicho programa (sea compilando o los comandos que fueren necesarios). Por ejemplo, teniendo un TP elaborado en Python, podría ser:
+
 ``` makefile
 flycombi: flycombi.py grafo.py biblioteca.py
 	cp flycombi.py flycombi
