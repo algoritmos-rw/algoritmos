@@ -203,11 +203,11 @@ de mayor importancia a menor importancia.
 * Ejemplo: 
 Entrada:
 	```
-	centralidad 3
+	centralidad 5
 	```
 Salida:
 	```
-	SFO, TPA, MSN
+	ATL, ORD, LAX, DFW, DEN
 	``` 
 
 
