@@ -295,8 +295,8 @@ Entrada:
 	```
 Salida:
 	```
-	BAT -> LAN -> BAT -> WAC -> RIV -> SHE -> ATL -> JFK -> ATL -> NAR -> BH6 -> ASH
-	Costo: 2782
+	BAT -> LAN -> ASH -> BH6 -> NAR -> ATL -> JFK -> ATL -> SHE -> RIV -> WAC
+	Costo: 2644
 	```
 _Aclaración_: pueden ser otros los caminos, siempre y cuando sean válidos y se trate de un costo 
 mínimo.
