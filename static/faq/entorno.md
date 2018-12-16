@@ -65,7 +65,7 @@ El último paso se explica a continuación.
 
 Abrir una terminal (CTRL+ALT+T) y escribir lo siguiente:
 
-`sudo apt-get install build-essential valgrind geany manpages-dev gdb`
+`sudo apt-get install build-essential valgrind manpages-dev gdb`
 
 Te va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas. ¡Ya está!
 
@@ -73,6 +73,7 @@ Estas herramientas son:
 
 * [build-essential](https://packages.ubuntu.com/bionic/build-essential): Herramientas esenciales de toda distribución de Linux. Lo que mas usaremos es gcc (compilador de C) y make (herramienta para automatización de compilaciones).
 * [Valgrind](http://valgrind.org/): Herramienta para verificar el uso de memoria del programa, como ver si hay perdidas de memoria.
-* [Geany](https://www.geany.org/): Editor de texto sencillo para codificar. Alternativas libres incluyen [atom](https://atom.io/) y [Visual Studio Code](https://code.visualstudio.com/).
 * [manpages-dev](http://man7.org/linux/man-pages/man1/intro.1.html): Manual de usuario de Linux. Extremadamente util para tener la documentación oficial de los comandos utilizados. Se invoca con el comando `man`. Por ejemplo, `man printf`
 * [gdb](https://www.gnu.org/software/gdb/): Herramienta para la depuración de programas. 
+
+Finalmente, se recomienda instalar un editor de texto más potente que los que vienen por defecto. Algunos ejemplos son [Geany](https://www.geany.org/) (`sudo apt-get install geany`), [Atom](https://atom.io/) y [Visual Studio Code](https://code.visualstudio.com/).
