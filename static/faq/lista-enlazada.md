@@ -11,16 +11,16 @@ FAQ - Lista Enlazada
 * Contenido
 {:toc}
 
-## ¿Cuándo se define que el iterador externo está al final?
+## ¿Cuándo se define que el iterador externo finalizó?
 
-Una pregunta usual a la hora de implementar el iterador externo, es cuál debe ser la condición para definir si el iterador se encuentra al final:
+Una pregunta usual a la hora de implementar el iterador externo, es cuál debe ser la condición para definir si el iterador ya finalizó la iteración:
 - Cuando el `actual` es igual a `NULL`.
 - Cuando el `actual` es igual al `último` de la lista. 
 
 La idea del iterador externo es que nos permita pasar por todos los elementos de la lista de forma cómoda. Una forma usual de utilizarlo es dentro de un ciclo, ya sea `while`, o `for`:
 ```cpp 
   lista_iter_t* iter = lista_iter_crear(lista);
-  while (!lista_iter_al_final(iter)) {
+  while (!lista_iter_finalizo(iter)) {
       void* dato = lista_iter_ver_actual(iter):
       // Realizamos alguna operación sobre el dato
       lista_iter_avanzar(iter);
@@ -30,7 +30,7 @@ La idea del iterador externo es que nos permita pasar por todos los elementos de
 
 ```cpp
   lista_iter_t* iter;
-  for (iter = lista_iter_crear(lista); !lista_iter_al_final(iter); lista_iter_avanzar(iter)) {
+  for (iter = lista_iter_crear(lista); !lista_iter_finalizo(iter); lista_iter_avanzar(iter)) {
       void* dato = lista_iter_ver_actual(iter):
       // Realizamos alguna operación sobre el dato
   }
