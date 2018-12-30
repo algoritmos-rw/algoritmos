@@ -93,7 +93,7 @@ def centralidad(grafo):
     for v in grafo: cent[v] = 0
     for v in grafo:
         # hacia todos los demas vertices
-        distancia, padre = camino_minimo(grafo, v, w)
+        distancia, padre = camino_minimo(grafo, v)
         cent_aux = {}
         for w in grafo: cent_aux[w] = 0
         # Aca filtramos (de ser necesario) los vertices a distancia infinita, 
