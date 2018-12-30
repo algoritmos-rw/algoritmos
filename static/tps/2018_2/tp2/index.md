@@ -188,8 +188,8 @@ vuelo mostrándolos de menor a mayor (tomado como cadena).
 
 ```
 10 - 1234
-3 - 1624
 3 - 325
+3 - 1624
 OK
 ```
 
