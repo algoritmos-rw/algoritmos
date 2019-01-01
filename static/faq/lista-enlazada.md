@@ -11,16 +11,16 @@ FAQ - Lista Enlazada
 * Contenido
 {:toc}
 
-## ¿Cuándo se define que el iterador externo está al final?
+## ¿Cuándo se define que el iterador externo está finalizó?
 
-Una pregunta usual a la hora de implementar el iterador externo, es cuál debe ser la condición para definir si el iterador se encuentra al final:
+Una pregunta usual a la hora de implementar el iterador externo, es cuál debe ser la condición para definir si el iterador se encuentra finalizó (por lo que, ya iteró por todos los elementos):
 - Cuando el `actual` es igual a `NULL`.
 - Cuando el `actual` es igual al `último` de la lista. 
 
 La idea del iterador externo es que nos permita pasar por todos los elementos de la lista de forma cómoda. Una forma usual de utilizarlo es dentro de un ciclo, ya sea `while`, o `for`:
 ```cpp 
   lista_iter_t* iter = lista_iter_crear(lista);
-  while (!lista_iter_al_final(iter)) {
+  while (!lista_iter_finalizo(iter)) {
       void* dato = lista_iter_ver_actual(iter):
       // Realizamos alguna operación sobre el dato
       lista_iter_avanzar(iter);
@@ -30,7 +30,7 @@ La idea del iterador externo es que nos permita pasar por todos los elementos de
 
 ```cpp
   lista_iter_t* iter;
-  for (iter = lista_iter_crear(lista); !lista_iter_al_final(iter); lista_iter_avanzar(iter)) {
+  for (iter = lista_iter_crear(lista); !lista_iter_finalizo(iter); lista_iter_avanzar(iter)) {
       void* dato = lista_iter_ver_actual(iter):
       // Realizamos alguna operación sobre el dato
   }
@@ -39,7 +39,7 @@ La idea del iterador externo es que nos permita pasar por todos los elementos de
 
 En cualquiera de los dos casos, que son equivalentes, es importante notar que el ciclo debe poder pasar por todos los elementos de la lista.
 
-Analizando las dos opciones que tenemos, podemos ver que la segunda va a dar por terminado el ciclo sin haber entrado para el último elemento (una forma fácil de corroborarlo, es revisar el caso de una lista con un sólo elemento y hacer el seguimiento). Por ésto, la solución correcta es la primera: el iterador se encontrará al final cuando ya haya pasado por todos los elementos, lo cual quiere decir que el puntero `actual` es `NULL`. 
+Analizando las dos opciones que tenemos, podemos ver que la segunda va a dar por terminado el ciclo sin haber entrado para el último elemento (una forma fácil de corroborarlo, es revisar el caso de una lista con un sólo elemento y hacer el seguimiento). Por ésto, la solución correcta es la primera: el iterador se encontrará habrá finalizado cuando ya haya pasado por todos los elementos, lo cual quiere decir que el puntero `actual` es `NULL`. 
 
 ## ¿Cómo se comporta el agregado y la eliminación en una lista enlazada con iteradores?
 
