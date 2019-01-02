@@ -94,7 +94,7 @@ Las operaciones básicas que puede tener un iterador son:
   - crear
   - ver_dato
   - avanzar
-  - ¿finalizo?
+  - ¿finalizó?
   - destruir
 
 ### ¿Cómo se usan los iteradores de una estructura?
