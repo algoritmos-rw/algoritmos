@@ -174,7 +174,7 @@ typedef struct persona persona_t;
 También podría haberse hecho todo en una sola instrucción:
 
 ```cpp
-typefed struct {
+typedef struct {
     edad_t edad;
     char *nombre;
 } persona_t;
@@ -187,12 +187,12 @@ Como ejemplo también podemos hacer uso de `typedef` para simplificar la declara
 // mi_funcion es una funcion que recibe void* y devuelve void
 
 // Versión A, sin typedef.
-void x(void mi_funcion(void*));
+void x(void (*mi_funcion)(void*));
 
 // Version B, con typedef
 // Hago un tipo de funciones, funcionvoid_t que se refiere a las funciones que reciben void* y devuelven void
 
-typedef void funcionvoid_t(void*);
+typedef void (*funcionvoid_t)(void*);
 
 void x(funcionvoid_t *mi_funcion);
 ```
