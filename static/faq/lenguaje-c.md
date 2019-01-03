@@ -293,7 +293,7 @@ const struct opcion opciones[] = {
     };
 
 char *opcion_letra_a_cadena(char letra) {
-    size_t cantidad = sizeof(opciones)/sizeof(opciones);
+    size_t cantidad = sizeof(opciones)/sizeof(opciones[0]);
     for(size_t i = 0; i < cantidad; i++)
         if(opciones.letra[i] == letra)
             return opciones.cadena[i];
