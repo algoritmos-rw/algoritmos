@@ -194,5 +194,5 @@ void x(void (*mi_funcion)(void*));
 
 typedef void (*funcionvoid_t)(void*);
 
-void x(funcionvoid_t *mi_funcion);
+void x(funcionvoid_t mi_funcion);
 ```
