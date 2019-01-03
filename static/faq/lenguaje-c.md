@@ -13,8 +13,6 @@ FAQ - Lenguaje C
 
 ## ¿Para qué se usa el tipo size_t?
 
-`size_t` es un tipo entero sin signo devuelto por el operador `sizeof` y es usado para representar el tamaño de construcciones en bytes. Este tipo está definido de manera tal de garantizar que siempre va a poder almacenar el tamaño del tipo más grande posible, por lo que también garantiza que va a poder almacenar cualquier índice de cu## ¿Para qué se usa el tipo size_t?
-
 `size_t` es un tipo entero sin signo devuelto por el operador `sizeof` y es usado para representar el tamaño de construcciones en bytes. Este tipo está definido de manera tal de garantizar que siempre va a poder almacenar el tamaño del tipo más grande posible, por lo que también garantiza que va a poder almacenar cualquier índice de cualquier arreglo.
 
 Estas características lo convierten en el tipo adecuado para manejar tamaños e índices.
