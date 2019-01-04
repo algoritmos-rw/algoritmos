@@ -192,7 +192,7 @@ void x(void (*mi_funcion)(void*));
 // Version B, con typedef
 // Hago un tipo de funciones, funcionvoid_t que se refiere a las funciones que reciben void* y devuelven void
 
-typedef void (*funcionvoid_t)(void*);
+typedef bool (*funcionvoidp_t)(void*);
 
 int recibe_puntero_a_funcion(funcionvoidp_t funcion_recibida);
 ```
