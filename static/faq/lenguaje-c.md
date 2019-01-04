@@ -186,13 +186,14 @@ Como ejemplo también podemos hacer uso de `typedef` para simplificar la declara
 
 ```cpp
 // X es una funcion que recibe un puntero
-// mi_funcion es una funcion que recibe void* y devuelve void
+// mi_funcion es una funcion que recibe void* y devuelve bool
 
 // Versión A, sin typedef.
-int recibe_puntero_a_función(bool (*funcion_recibida)(void*));
+int recibe_puntero_a_funcion(bool (*funcion_recibida)(void*));
 
 // Version B, con typedef
-// Hago un tipo de funciones, funcionvoid_t que se refiere a las funciones que reciben void* y devuelven void
+// Hago un tipo de funciones, funcionvoidp_t que se refiere a las funciones que
+// reciben void* y devuelven bool
 
 typedef bool (*funcionvoidp_t)(void*);
 
