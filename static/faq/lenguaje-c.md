@@ -187,7 +187,7 @@ Como ejemplo también podemos hacer uso de `typedef` para simplificar la declara
 // mi_funcion es una funcion que recibe void* y devuelve void
 
 // Versión A, sin typedef.
-void x(void (*mi_funcion)(void*));
+int recibe_puntero_a_función(bool (*funcion_recibida)(void*));
 
 // Version B, con typedef
 // Hago un tipo de funciones, funcionvoid_t que se refiere a las funciones que reciben void* y devuelven void
