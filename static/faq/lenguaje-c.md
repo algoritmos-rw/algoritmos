@@ -194,5 +194,5 @@ void x(void (*mi_funcion)(void*));
 
 typedef void (*funcionvoid_t)(void*);
 
-void x(funcionvoid_t mi_funcion);
+int recibe_puntero_a_funcion(funcionvoidp_t funcion_recibida);
 ```
