@@ -171,7 +171,9 @@ struct persona {
 typedef struct persona persona_t;
 ```
 
-También podría haberse hecho todo en una sola instrucción:
+Cuando se utilizan estructuras para encapsular tipos abstractos de datos suele mantenerse de forma privada la definición de la estructura. En estos casos la definición de la estructura queda en el archivo _.c_ mientras que la definición del tipo se publica en una cabecera _.h_ permitiendo que la interfaz pública del dato use el nombre del tipo.
+
+Si se trata de un `struct` donde se exponga la representación interna (por ejemplo, por estar limitado a un único _.c_ y declararse ahí), se puede combinar declaración y `typedef` en una sola instrucción:
 
 ```cpp
 typedef struct {
