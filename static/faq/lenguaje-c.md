@@ -139,46 +139,62 @@ De esta manera, la función `elemento_destruir_wrapper` es genérica y puede ser
 
 ## ¿Qué es typedef?
 
-Typedef es una característica de C que nos permite darle un alias a distintos tipos o estructuras de C. Por ejemplo, si quisiésemos 'crear' un tipo nuevo en C que se refiera a la edad de las personas, vamos a querer hacer uso del tipo 'unsigned int', que se refiere a números positivos. Pero a su vez queremos dejarle explícito al lector que éste es un tipo definido por el programador, además de ahorrarnos escribir 'unsigned int' cada vez que se quiera hacer uso de éste.
+Typedef es una característica de C que nos permite darle un alias a cualquier tipo de C. Por ejemplo, si quisiéramos representar la edad de una persona podríamos querer abstraernos de si representamos esa edad como un entero, un entero sin signo, un entero corto (`short`), etc. y además tener consistencia en todo nuestro código de usar siempre el mismo tipo para todas las variables que representen una edad. Para esto podemos 'crear' un tipo nuevo en C que se refiera a la edad de las personas, supongamos que como base quisiéramos hacer uso del tipo `unsigned int` para crear nuestro tipo `edad`, pero a su vez queremos dejarle explícito al lector que éste es un tipo definido por el programador, por lo que por convención le agregamos el sufijo `_t` (que se lee como "tipo") siendo nuestro nuevo tipo `edad_t`.
 
-
-Por lo tanto, siguiendo la sintaxis `typedef tipo mi_nuevo_tipo`, hacemos:
+Para esto la sintaxis correspondiente es:
 
 ```cpp
-typedef unsigned int edad_t```
+typedef unsigned int edad_t;
+```
 
-Y luego podemos, como si fuese cualquier otro tipo de datos de C, declarar variables, hacer uso de ellas y demas como:
+Siempre la sintaxis para definir un nuevo tipo en C _es como_ si se tratara de declarar una variable con determinado nombre, pero anteponiendo la palabra reservada `typedef`. Entonces, en vez de declarar una nueva variable lo que se "declara" es un nuevo tipo, es decir: `typedef tipo_existente mi_nuevo_tipo;`.
+
+Y luego podemos, como si fuese cualquier otro tipo de datos de C, declarar variables, hacer uso de ellas y demás como:
 
 ```cpp
 edad_t luis = 14;
 // Equivale a unsigned int luis = 14
 ```
 
-Por otro lado, esto nos puede servir para ahorrarnos la palabra `struct` cada vez que hacemos una estructura en C, más la explicitud de la que se hablo previamente.
+La **ventaja** de utilizar `typedef` es que se agrega una capa de abstracción sobre el tipo: en vez de preguntarme qué representa determinada variable de tipo `unsigned int`, el mismo tipo `edad_t` me aclara exactamente para qué sirve ese tipo. _Sintácticamente_ escribir `unsigned int` y `edad_t` en mi código van a ser exactamente lo mismo, pero _semánticamente_ son dos tipos totalmente diferentes y no son intercambiables. Además de la abstracción simplifica la mantenibilidad del código, por ejemplo, si el día de mañana hiciera la asunción de que la edad de las cosas no puede superar los 255 años, tranquilamente podría reemplazar la definición del `typedef` por un `unsigned char` y toda mi implementación se actualizaría consistentemente a esa nueva representación apenas modificando una línea en mi código.
+
+Por otro lado la **desventaja** de utilizar `typedef` es que se enmascaran los tipos básicos. Entonces cuando vemos una variable de tipo `edad_t` tal vez en vez de abstraernos tenemos que ir a buscar su definición para saber si es un tipo entero, una estructura, etc. y cómo definirla o utilizarla. A veces _menos es más_.
+
+`typedef` puede servirnos para otras cosas, como para omitir la palabra `struct` cada vez que hacemos una estructura en C, dándole ahora a nuestras estructuras el rango de tipo:
 
 ```cpp
 struct persona {
     edad_t edad;
-    char* nombre;
-}
+    char *nombre;
+};
 
 typedef struct persona persona_t;
 ```
 
+Cuando se utilizan estructuras para encapsular tipos abstractos de datos suele mantenerse de forma privada la definición de la estructura. En estos casos la definición de la estructura queda en el archivo _.c_ mientras que la definición del tipo se publica en una cabecera _.h_, permitiendo que la interfaz pública del dato use el nombre del tipo.
 
-Por último, también podemos hacer uso de typedef para lo que se refiere a punteros a función.
+Si se trata de un `struct` que no se expone públicamente (por ejemplo, por estar limitado a un único _.c_ y declararse ahí), se puede combinar declaración y `typedef` en una sola instrucción:
+
+```cpp
+typedef struct {
+    edad_t edad;
+    char *nombre;
+} persona_t;
+```
+
+Como ejemplo también podemos hacer uso de `typedef` para simplificar la declaración de punteros a función:
 
 ```cpp
 // X es una funcion que recibe un puntero
 // mi_funcion es una funcion que recibe void* y devuelve void
 
 // Versión A, sin typedef.
-void x(void mi_funcion(void*));
+int recibe_puntero_a_función(bool (*funcion_recibida)(void*));
 
 // Version B, con typedef
 // Hago un tipo de funciones, funcionvoid_t que se refiere a las funciones que reciben void* y devuelven void
 
-typedef void funcionvoid_t(void*);
+typedef bool (*funcionvoidp_t)(void*);
 
-void x(funcionvoid_t *mi_funcion);
+int recibe_puntero_a_funcion(funcionvoidp_t funcion_recibida);
 ```
