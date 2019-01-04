@@ -147,7 +147,7 @@ Para esto la sintaxis correspondiente es:
 typedef unsigned int edad_t;
 ```
 
-Siempre la sintaxis para definir un nuevo tipo en C _es como_ si se tratara de declarar una variable con determinado nombre, pero anteponiendo la palabra reservada `typedef`. Entonces, en vez de declarar una nueva variable lo que se "declara" es un nuevo tipo, es decir: `typedef tipo mi_nuevo_tipo;`.
+Siempre la sintaxis para definir un nuevo tipo en C _es como_ si se tratara de declarar una variable con determinado nombre, pero anteponiendo la palabra reservada `typedef`. Entonces, en vez de declarar una nueva variable lo que se "declara" es un nuevo tipo, es decir: `typedef tipo_existente mi_nuevo_tipo;`.
 
 Y luego podemos, como si fuese cualquier otro tipo de datos de C, declarar variables, hacer uso de ellas y demás como:
 
