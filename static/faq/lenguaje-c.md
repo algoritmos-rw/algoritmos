@@ -185,8 +185,8 @@ typedef struct {
 Como ejemplo también podemos hacer uso de `typedef` para simplificar la declaración de punteros a función:
 
 ```cpp
-// X es una funcion que recibe un puntero
-// mi_funcion es una funcion que recibe void* y devuelve bool
+// recibe_puntero_a_funcion es una funcion que recibe un puntero
+// funcion_recibida es un puntero a funcion que recibe void* y devuelve bool
 
 // Versión A, sin typedef.
 int recibe_puntero_a_funcion(bool (*funcion_recibida)(void*));
