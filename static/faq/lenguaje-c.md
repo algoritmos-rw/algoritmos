@@ -189,7 +189,7 @@ void x(funcionvoid_t *mi_funcion);
 
 Los tipos enumerativos en C permiten definir un valor _con nombre propio_ entre un conjunto cerrado de casos posibles. Cada vez que haya que modelar en qué estado está una variable entre un número finito de posibilidades donde esas posibilidades se identifican con un nombre usaremos tipos enumerativos. (Puede expresarse esto de otra manera: Cada vez que estés inventando valores arbitrarios para categorizar cosas estás haciendo mal las cosas y deberías haber definido un enumerativo.)
 
-La declaración de un tipo es simplemente una secuencia de valores:
+La declaración de un tipo enumerativo es simplemente una secuencia de valores:
 
 ```cpp
 enum reino {ANIMALIA, PLANTAE, FUNGI, BACTERIA, PROTISTA, ARCHAEA};
