@@ -12,8 +12,7 @@ permalink: /material/
   * [Apunte de Algoritmos y Programación I](https://drive.google.com/file/d/0B0KKEIBDHL7tdEQ3bFZ2M3VrZzA/view).
   * [Diapositivas de las clases](https://drive.google.com/drive/folders/1HCOatwNQiIC__CAEJa0u0Rb7DultMcmc?usp=sharing)
   * [Repositorio con los apuntes de la materia](https://github.com/algoritmos-rw/algo2_apuntes)
-  * [Implementación de mergesort y quicksort en C](https://drive.google.com/open?id=1XPDf2z9J0v9dGlaTgqFj8pGL3RQUPMpb)
-  * [Introducción al uso de Makefile](https://drive.google.com/open?id=1iMUDd8tPJ-uZrZWRlw7uTmfcM1CEAJva)
+  * [Introducción al lenguaje C](https://drive.google.com/open?id=17gyhdJwEcxxLVrD_X0AlPnZzQajXOFE5)
   * [Apunte de Ordenamientos Externos](ordenamientos_externos)
   * [Apunte de Random Walks](random_walks)
   * [Apunte de Centralidad en un grafo](centralidad)
@@ -48,12 +47,6 @@ permalink: /material/
   * [The C Library Reference Guide](http://www.acm.uiuc.edu/webmonkeys/book/c_guide/), referencia del lenguaje C, incluyendo las bibliotecas más comunes.
   * [C Language Reference Manual](http://techpubs.sgi.com/library/dynaweb_docs/0650/SGI_Developer/books/CLanguageRef/sgi_html/index.html), otra referencia del lenguaje C.
   * [Essential C](http://cslibrary.stanford.edu/101/), resumen del lenguaje C.
-  * [Introducción al lenguaje C](https://drive.google.com/open?id=17gyhdJwEcxxLVrD_X0AlPnZzQajXOFE5)
-  * [Manejo de memoria dinámica en C](https://drive.google.com/open?id=1rwD-wgSSW0sjPdowHOg_3Uv7_gplJtAq)
-  * [Vectores y punteros en C](https://drive.google.com/open?id=1J3uJd0SLZ1DHvPTf7H4ZaKPTwi2mRC0X)
-  * [Parámetros de línea de comandos en C](https://drive.google.com/open?id=18tXTY-zwSTGlbeFHhyxQ9MAG1XJlZwyu)
-  * [Diapositivas de archivos en C](https://drive.google.com/open?id=1ESqGw93lMLXCrtTl8rADlHSQV9BDpwWh)
-  * [Manejo de archivos en C](https://drive.google.com/open?id=1v9Pvi72JvhMJCgVHFreBpK5mqApS3b4c)
 
 ### Ejemplos de código
 
