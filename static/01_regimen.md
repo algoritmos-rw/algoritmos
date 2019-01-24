@@ -47,7 +47,7 @@ Régimen de cursada
 
 ### Calificación
 
-* La nota de la materia es un promedio de la nota del final y la nota de la cursada.
+* La nota de la materia es un promedio de la nota del final y la nota de la cursada, ponderando esta última.
 * La nota de la cursada surge del promedio entre: el promedio de la nota de los parcialitos y el promedio de la nota de los trabajos prácticos (con redondeo conceptual por parte del ayudante asignado).
 * En caso de promocionar la materia, la nota de la materia será igual a la nota de la cursada.
 
