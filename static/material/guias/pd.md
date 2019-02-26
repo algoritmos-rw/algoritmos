@@ -49,6 +49,7 @@ def minimos_terminos(n):
     mejor = n
     for i in range(1, n):
         mejor = min(mejor, minimos_terminos(n-i) + minimos_terminos(i))
+    return mejor
 ```
 
 Como vemos, se hacen muchísimos llamados resursivos (para 74 se hacen para 1 y 73, 2 y 72, etc.. y dentro de estos también se hacen muchos). Si ya tuviéramos calculados los términos para todos los valores anteriores, esto podría evitarse. Entonces, simplemente hacemos:
