@@ -4,11 +4,11 @@ TP0:
   entrega: 2019-03-22
   enunciado_link: /tps/tp0
 
-VD:
-  id: VD
+Vector:
+  id: Vector
   publicacion: 2019-03-22
   entrega: 2019-03-25
-  enunciado_link: /tps/vd
+  enunciado_link: /tps/vector
 
 Pila:
   id: Pila

@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Vector dinámico
-permalink: /tps/vd
+permalink: /tps/vector
 
-trabajo: VD
+trabajo: Vector
 ---
 {% assign TP = site.data.trabajos[page.trabajo] %}
 
@@ -12,8 +12,8 @@ Vector dinámico
 
 El adjunto en [el sitio de descargas]({{site.skel}}) contiene una definición del tipo de dato _vector dinámico_ que deberán completar.
 
-En particular, deberán leer el archivo `vector_dinamico.h` con la documentación, e implementar en
-`vector_dinamico.c` las cuatro primitivas que faltan:
+En particular, deberán leer el archivo `vector.h` con la documentación, e implementar en
+`vector.c` las cuatro primitivas que faltan:
 
 - `vector_destruir()`
 - `vector_obtener()`
@@ -27,8 +27,7 @@ Además, deberán estudiar la implementación propuesta de las siguientes dos pr
 
 (En entregas futuras, se pedirá la implementación completa del tipo abstracto, incluyendo la creación y redimensionado.)
 
-La implementación debe respetar los lineamientos de la documentación y tal como lo hicieron con el TP0 deben lograr
-pasar todas las pruebas con OK.
+La implementación debe respetar los lineamientos de la documentación y tal como lo hicieron con el TP0 deben lograr pasar todas las pruebas con OK.
 
 Deben entregar una hoja de papel, con su nombre y padrón,
 **imprimiendo únicamente las funciones que implementaron ustedes**.
