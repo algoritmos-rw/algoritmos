@@ -67,7 +67,7 @@ chmod +x tiempos_volumen.sh
 ./tiempos_volumen.sh ./main
 ```
 
-**No olvidar visitar las [preguntas frecuentes del hash](/algo2/faq/hash)**
+**No olviden revisar las [preguntas frecuentes del hash](/algo2/faq/hash)**
 
 ---
 ### Bibliografia recomendada

@@ -51,11 +51,11 @@ No. Las funciones de hashing son un tema muy extenso en la computación, y no se
 
 Para obtener el mejor rendimiento de nuestra tabla de hash, queremos que las claves esten lo mejor distribuidas posibles en la capacidad. Es decir, que reduzcamos al mínimo posible las colisiones que obtendremos. Recordemos que una colisión es cuando dos claves van a parar al mismo 'balde' de la tabla de hash, sin importar si es abierto o cerrado.
 
-A lo que nos referimos con esto es que si tenemos un hash con 5 baldes y tiene un elemento en cada uno de esos 5 baldes, la busqueda de un elemento será más rápida que si tenemos los 5 elementos sobre el mismo balde, lo cual necesita de más operaciones.
+A lo que nos referimos con esto es que si tenemos un hash con 5 baldes y tiene un elemento en cada uno de esos 5 baldes, la búsqueda de un elemento será más rápida que si tenemos los 5 elementos sobre el mismo balde, lo cual necesita de más operaciones.
 
 Por otro lado, el concepto básico de una función de hashing es el de tomar una cadena y convertirla en un número. Más alla de la implementación de la función, ese número puede ser cualquier número. Ahora, suponiendo que la cadena 'holamundo' se encripte al número '3310', pero mi tabla de hash tiene una capacidad de 30 bloques, de alguna forma tengo que reducir el 3310 a un número entre 0 y 30. ¿Cómo hago esto? Facil! Con el operador de módulo (en código, el `%`), que es el resto de la división entre dos números. En este caso, `3310 mod 30 = 10`. 
 
-Entonces, con la idea de que queremos generar la menor cantidad de colisiones posibles, y que una colisión nos sucedera cuando el aplicarle modulo a dos números distintos sobre la capacidad nos de el mismo resultado, estamos en busqueda de un número que distribuya lo mas variado posible los resultados al aplicarsele modulo.
+Entonces, con la idea de que queremos generar la menor cantidad de colisiones posibles, y que una colisión nos sucedera cuando el aplicarle modulo a dos números distintos sobre la capacidad nos de el mismo resultado, estamos en búsqueda de un número que distribuya lo mas variado posible los resultados al aplicarsele modulo.
 
 Claramente, si se hace un modulo de un multiplo de un número a otro, el resultado sera 0, ya que la división es perfecta, sin resto. 
 
@@ -78,7 +78,7 @@ Extendiendo un poco esto, con la notación `n mod d = r`, cualquier n que compar
 40 mod 16 = 8//40 es múltiplo de 20, haciendo que vaya a parar a donde ya paró el 72. Otra colisión! 
 ```
 
-Entonces, estamos en busqueda de un d que contenga la menor cantidad posible de factores, para que todo n que usemos comparta pocos factores con el, así logrando que la distribución sea variada. Y sabiendo que los números primos solo pueden dividirse por 1 o por si mismos, son un muy buen número para utilizar!
+Entonces, estamos en búsqueda de un d que contenga la menor cantidad posible de factores, para que todo n que usemos comparta pocos factores con el, así logrando que la distribución sea variada. Y sabiendo que los números primos solo pueden dividirse por 1 o por si mismos, son un muy buen número para utilizar!
 
 ```
 18 mod 7 = 4
