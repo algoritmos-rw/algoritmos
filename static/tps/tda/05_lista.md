@@ -72,7 +72,7 @@ Al igual que en los casos anteriores, deberán entregar el código en papel, con
 
 Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 
-**No olvidar visitar las [preguntas frecuentes de la lista enlazada](/algo2/faq/lista-enlazada)**
+**No olviden revisar las [preguntas frecuentes de la lista enlazada](/algo2/faq/lista-enlazada)**
 
 ---
 ### Bibliografia recomendada

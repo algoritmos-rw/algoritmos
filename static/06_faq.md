@@ -30,6 +30,6 @@ Preguntas frecuentes
 
 * [Heap](heap)
 
-* [Árbol Binario de Busqueda](abb)
+* [Árbol Binario de Búsqueda](abb)
 
 Si tenés alguna pregunta que consideras frecuente podes agregarla como un [issue](https://github.com/algoritmos-rw/algo2/issues) y la agregamos al sitio.

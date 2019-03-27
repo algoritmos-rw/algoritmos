@@ -40,4 +40,4 @@ Usar la misma linea provista para el tp0 para compilar. Para correr Valgrind, us
 
     valgrind --leak-check=full --track-origins=yes --show-reachable=yes ./pruebas
 
-**No olvidar visitar las [preguntas frecuentes de los TDA](/algo2/faq/tda)**
+**No olviden revisar las [preguntas frecuentes de los TDA](/algo2/faq/tda)**

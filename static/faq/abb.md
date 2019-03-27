@@ -1,10 +1,10 @@
 ---
 layout: page
-title: FAQ - Árbol Binario de Busqueda
+title: FAQ - Árbol Binario de Búsqueda
 permalink: /faq/abb
 ---
 
-FAQ - Árbol Binario de Busqueda
+FAQ - Árbol Binario de Búsqueda
 =========
 {:.no_toc}
 
