@@ -22,13 +22,38 @@ trabajo: TP1
 El Trabajo Práctico número 1 tiene fecha de entrega para el **10 de mayo**, y
 está divido en tres partes:
 * implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
-* implementación de verificador e interprete del lenguaje [Brainfuck](https://es.wikipedia.org/wiki/Brainfuck)
-* TODO: 3er parte
+* implementación de aplicación [fixcol](#fixcol)
+* implementación de interprete del lenguaje [Brainfuck](https://es.wikipedia.org/wiki/Brainfuck)
 
 ## Manejo de cadenas
 
 Se pide implementar las funciones del archivo adjunto en [el sitio de descargas]({{site.skel}}) que se describen a 
 continuación. Se permite utilizar cualquier función de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
+
+Se recomienda leer la documentación de las siguientes funciones del módulo de `string.h`: 
+- `strlen`
+- `strcpy`, `strncpy`
+- `strcat`, `strncat` 
+- `strcmp`
+-` memcpy`
+
+### substr()
+
+La función `substr()` permite obtener un prefijo de longitud $$k$$ de una cadena dada.
+
+Por ejemplo, la llamada `substr("Hola mundo", 6)` devolvería la cadena `"Hola m"`. El resultado debe ser una
+nueva cadena de memoria dinámica con dichos caracteres (y, por supuesto, el carácter de fin de cadena).
+Ejemplos de uso:
+``` cpp
+substr("Hola mundo", 6)         → "Hola m"
+const char* ejemplo = "Ejemplo"
+substr(ejemplo + 2, 2)          → "em"
+substr("", 2)                   → ""
+substr("Algoritmos", 30)        → "Algoritmos"
+```
+
+Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(k)$$.
+
 
 ### split()
 
@@ -66,7 +91,7 @@ split(",", ',') →  ["", ""]
 Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(n)$$ (Siendo $$n$$ la longitud de la 
 cadena resultante).
 
-### join
+### join()
 
 La función `join()` es la inversa de `split()`. Concatena un arreglo de cadenas terminado en NULL mediante un caracter 
 de separación:
@@ -91,8 +116,8 @@ join([NULL], ",")    →  ""
 Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(n)$$ (Siendo $$n$$ la longitud de la 
 cadena resultante).
 
-Las pruebas del corrector automático proveen una indicación del comportamiento de `join()` (si bien **ambas funciones 
-deben correr en tiempo lineal**, `join()` provee una dificultad de implementación mayor a `split()`). 
+Las pruebas del corrector automático proveen una indicación del comportamiento de `join()` (si bien **todas las funciones deben correr en tiempo lineal**, `join()` provee una dificultad de implementación mayor a `split()` o
+`substr()`). 
 
 Este sería un test con comportamiento lineal:
 
@@ -134,79 +159,68 @@ funcionamiento, en particular para los casos borde.
 
 ## Aplicaciones
 
-### Brainfuck
-Los amigos del instituto del cerebro nos pidieron que implementemos un interprete del famoso lenguaje llamado 
-[Brainfuck](https://es.wikipedia.org/wiki/Brainfuck), este lenguaje cuenta con las caracteristicas que tiene muy pocas 
-instrucciones posibles (solo 7) y tambien por tener un compilador/interprete muy pequeño y facil de implementar.
+### fixcol
 
-Un link util para probar este lenguaje es este [interprete online](https://copy.sh/brainfuck/).
+Se pide implementar una utilidad llamada `fixcol`, que dado el nombre de un archivo y un tamaño `n` en bytes, divida todas las líneas del archivo en columnas de hasta `n` columnas y las imprima por salida estándar. Por ejemplo:
 
-Su mision es implementar un interprete de Brainfuck en el lenguaje C.  
-Para ello se van a exponer dos posibles formas: `validate` y `run`, con el formato:
-```
-./bf < modo > <nombre de archivo> 
-```
-Donde `< modo >` puede ser `-v` o `-r` y `< nombre de archivo >` es el nombre del archivo (este parametro puede no 
-estar y entonces se leerá de entrada estandar). En el caso que se pase una cantidad de parametros incorrecta se 
-devolverá por salida estandar `ERROR`
+    $ cat lorem.txt
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-### Modo validate (-v)
-Cuando se llama al programa con validate (-v), este recibe el codigo a validar, puede ser pasandole un nombre de archivo 
-o por entrada estandar. 
-El programa entonces realizará una validación del codigo para verificar que este este correctamente escrito. En caso que
-el codigo este bien, devuelve `OK`, sino `ERROR`.
-Se considera que un codigo está correcto cuando todas los corchetes que se abren (`[`) tiene su respectivo corchete que 
-cierra (`]`).
+El programa deberá producir la siguiente salida al ser invocado:
 
-Ej de llamada con un archivo:  
-```
-./bf -v hellow_world.txt 
-OK
-```  
-Ej de llamada con un archivo invalido:  
-```
-./bf -v archivo_invalido.txt 
-ERROR
-```  
-Ej de llamada pasandole el codigo por entrada estandar:
-```
-cat hellow_world.txt | ./bf -v
-OK
-```
-
-### Modo run (-r)
-Cuando se llama al programa con run (-r), este recibe el codigo a correr, puede ser pasandole un nombre de archivo 
-o por entrada estandar. El programa primero valida si el codigo está correctamente escrito en el caso de que este 
-correctamente escrito, procederá a ejecutarlo y mostrará por salida estandar el resultado de el programa ejecutandose. 
-En el caso de que el codigo no esté correctamente escrito, o que no exista, se tiene que devolver `ERROR`
-
-
-Ej 1 - Ejecucion de un archivo correctamente, que escribe Hello World! por salida estandar:  
-```
-./bf -r hellow_world.txt
-Hello World!
-```
-
-Ej 2 - Ejecucion del mismo archivo del Ej 1, pero ahora pasado por entrada estandar :
-```
-cat hellow_world.txt | ./bf -r
-Hello World!
-``` 
- 
-Ej 3 - Ejecucion fallida de un archivo incorrectamente:
-```
-cat <nombre de archivo> | ./bf -r
-ERROR
-```
-Ej 4 - Ejecucion fallida con cantidad de argumentos incorrecto:
-```
-./bf hellow_world.txt
-ERROR
-```
+    $ ./fixcol lorem.txt 75
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod te
+    mpor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ali
+    quip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor
+    e eu fugiat nulla pariatur.
 
 #### Observaciones
 
-TODO
+  - Se deberá validar que la cantidad de parámetros en la invocación sea exactamente dos.
+  - No se podrá considerar que entra todo el archivo a dividir en memoria.
+
+### Brainfuck
+
+Los amigos del instituto del cerebro nos pidieron que implementemos un interprete del famoso lenguaje llamado 
+[Brainfuck](https://es.wikipedia.org/wiki/Brainfuck), este lenguaje cuenta con las caracteristicas que tiene muy pocas 
+instrucciones posibles (sólo 7) y tambien por tener un compilador o 
+[intérprete](https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)) muy pequeño y facil de implementar.
+
+Un link útil para probar este lenguaje es este [intérprete online](https://copy.sh/brainfuck/).
+
+Su tarea es implementar un intérprete de Brainfuck en el lenguaje C. El programa deberá ejecutarse de la siguiente forma: 
+```
+    $ ./bf <ruta al archivo> 
+```
+Donde `ruta al archivo` es la ruta al archivo a interpretar. Por ejemplo: `./bf ejemplo.bf`. En caso que no se
+indique ruta al archivo, deberá leerse de entrada estándar (similar a cómo hace el intérprete de Python).
+
+Se brinda en [el sitio de descargas]({{site.skel}}) un set (incompleto) de archivos de prueba de ejemplo. 
+La forma de ejecutar dichas pruebas es:
+```
+    $ ./pruebas.sh ruta/a/ejecutable/bc
+```
+
+Tener en cuenta que estas pruebas contemplan casos triviales, y algunos muy complejos. Para pruebas intermedias 
+recomendamos implementar las suyas, pudiendo utilizar el intérprete provisto para confirmar resultados. 
+Se pueden seguir agregando pruebas utilizando el mismo formato que las anteriores: tener un archivo "xx_in" que servirá
+de entrada, otro "xx_out" que corresponderá con la salida esperada, y otro de "xx.test" que deberá contener la 
+descripción de la prueba. 
+
+#### Observaciones
+
+  - Todos los caracteres diferentes a los definidos por el lenguaje deben ser ignorados. 
+  - Se puede considerar que el archivo fuente entra todo en memoria, aunque recomendamos sólo almacenar lo 
+  necesario. 
+  - Se debe validar la cantidad de argumentos pasados al programa, en caso de haber una cantidad inválida, escribir
+  por `salida de error` (`stderr`): `Error: Cantidad erronea de parametros` (sin tildes).
+  - Se debe validar (en caso de indicarse) que se pueda leer el archivo pasado por parámetro. En caso de no ser posible
+  escribir por `salida de error`: `Error: archivo fuente inaccesible`.
+  - Las impresiones realizadas por el programa deben realizarse a `salida estándar` (`stdout`).
 
 ## Criterios de aprobación
 
@@ -215,8 +229,8 @@ de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
 
 La entrega incluye, obligatoriamente, los siguientes archivos de código:
 
-- `strutil.c` con las implementaciones de las funciones `split`, `join` y `free_strv`.
-- El código de la solución de `bf` y `dc`.
+- `strutil.c` con las implementaciones de las funciones `substr`, `split`, `join` y `free_strv`.
+- El código de la solución de `bf` y `fixcol`.
 - El código de los TDAs programados en la cursada que se requieran.
 - Un archivo `deps.mk` con las dependencias del proyecto en formato make. Este
 deberá contener sólamente una línea por programa que indique qué _objetos_ necesita para
@@ -224,7 +238,7 @@ compilar el ejecutable de cada uno de los archivos, por ejemplo:
 
 ``` makefile
 bf: bf.c 
-dc: dc.c tda.c
+fixcol: cola.c pila.c fixcol.c
 ```
 
 El corrector automático va a interpretar ese archivo de dependencias y va a

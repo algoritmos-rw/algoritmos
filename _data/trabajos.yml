@@ -32,7 +32,7 @@ TP1:
   id: TP1
   publicacion: 2019-04-15
   entrega: 2019-05-10
-  enunciado_link: /tps/2019_2/tp1
+  enunciado_link: /tps/2019_1/tp1
 
 Hash:
   id: Hash
@@ -56,10 +56,10 @@ TP2:
   id: TP2
   publicacion: 2019-05-13
   entrega: 2019-06-07
-  enunciado_link: /tps/2019_2/tp2
+  enunciado_link: /tps/2019_1/tp2
 
 TP3:
   id: TP3
   publicacion: 2019-06-07
   entrega: 2019-06-28
-  enunciado_link: /tps/2019_2/tp3
+  enunciado_link: /tps/2019_1/tp3
