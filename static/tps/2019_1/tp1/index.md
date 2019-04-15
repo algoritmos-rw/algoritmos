@@ -109,7 +109,7 @@ join([""], ',')             →  ""
 join(["abc"], ',')          →  "abc"
 join(["", ""], ',')         →  ","
 join([], ',')               →  ""// Arreglo {NULL}
-join(["abc", "def"], '\0') →  "abcdef"
+join(["abc", "def"], '\0')  →  "abcdef"
 ```
 
 Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(n)$$ (Siendo $$n$$ la longitud de la 
