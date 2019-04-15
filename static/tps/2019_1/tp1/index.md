@@ -9,11 +9,9 @@ trabajo: TP1
 {% assign TP = site.data.trabajos[page.trabajo] %}
 
 # Trabajo Práctico 1
-
 {:.no_toc}
 
 ## Contenido
-
 {:.no_toc}
 
 * Contenido
@@ -35,7 +33,7 @@ Se recomienda leer la documentación de las siguientes funciones del módulo de 
 - `strcpy`, `strncpy`
 - `strcat`, `strncat` 
 - `strcmp`
--` memcpy`
+- `memcpy`
 
 ### substr()
 
@@ -157,9 +155,8 @@ Y este con comportamiento cuadrático:
 Si bien no es obligatorio probar la biblioteca, es muy recomendable hacer pruebas unitarias para comprobar el correcto 
 funcionamiento, en particular para los casos borde.
 
-## Aplicaciones
 
-### fixcol
+## fixcol
 
 Se pide implementar una utilidad llamada `fixcol`, que dado el nombre de un archivo y un tamaño `n` en bytes, divida todas las líneas del archivo en columnas de hasta `n` columnas y las imprima por salida estándar. Por ejemplo:
 
@@ -178,12 +175,13 @@ El programa deberá producir la siguiente salida al ser invocado:
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor
     e eu fugiat nulla pariatur.
 
-#### Observaciones
+### Observaciones
 
   - Se deberá validar que la cantidad de parámetros en la invocación sea exactamente dos.
   - No se podrá considerar que entra todo el archivo a dividir en memoria.
 
-### Brainfuck
+
+## Brainfuck
 
 Los amigos del instituto del cerebro nos pidieron que implementemos un interprete del famoso lenguaje llamado 
 [Brainfuck](https://es.wikipedia.org/wiki/Brainfuck), este lenguaje cuenta con las caracteristicas que tiene muy pocas 
@@ -211,7 +209,7 @@ Se pueden seguir agregando pruebas utilizando el mismo formato que las anteriore
 de entrada, otro "xx_out" que corresponderá con la salida esperada, y otro de "xx.test" que deberá contener la 
 descripción de la prueba. 
 
-#### Observaciones
+### Observaciones
 
   - Todos los caracteres diferentes a los definidos por el lenguaje deben ser ignorados. 
   - Se puede considerar que el archivo fuente entra todo en memoria, aunque recomendamos sólo almacenar lo 
