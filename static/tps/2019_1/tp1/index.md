@@ -108,7 +108,7 @@ Casos borde:
 join([""], ',')             →  ""
 join(["abc"], ',')          →  "abc"
 join(["", ""], ',')         →  ","
-join([], ',')               →  ""// Arreglo [NULL]
+join([], ',')               →  ""// Arreglo {NULL}
 join(["abc", "def"], '\0') →  "abcdef"
 ```
 
