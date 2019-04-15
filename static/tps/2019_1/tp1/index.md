@@ -207,8 +207,8 @@ La forma de ejecutar dichas pruebas es:
 Tener en cuenta que estas pruebas contemplan casos triviales, y algunos muy complejos. Para pruebas intermedias 
 recomendamos implementar las suyas, pudiendo utilizar el intérprete provisto para confirmar resultados. 
 Se pueden seguir agregando pruebas utilizando el mismo formato que las anteriores: tener un archivo "xx_in" que servirá
-de entrada, otro "xx_out" que corresponderá con la salida esperada, y otro de "xx.test" que deberá contener la 
-descripción de la prueba. 
+de entrada al programa (instrucción ','), otro "xx_script" que deberá tener el código a interpretar, otro "xx_out" que
+corresponderá con la salida esperada, y otro de "xx.test" que deberá contener la descripción de la prueba. 
 
 ### Observaciones
 
