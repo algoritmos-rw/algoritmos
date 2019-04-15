@@ -183,10 +183,10 @@ El programa deberá producir la siguiente salida al ser invocado:
 
 ## Brainfuck
 
-Los amigos del instituto del cerebro nos pidieron que implementemos un interprete del famoso lenguaje llamado 
-[Brainfuck](https://es.wikipedia.org/wiki/Brainfuck), este lenguaje cuenta con las caracteristicas que tiene muy pocas 
+Los amigos del instituto del cerebro nos pidieron que implementemos un intérprete del famoso lenguaje llamado
+[Brainfuck](https://es.wikipedia.org/wiki/Brainfuck), este lenguaje cuenta con la característica que tiene muy pocas
 instrucciones posibles (sólo 7) y tambien por tener un compilador o 
-[intérprete](https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)) muy pequeño y facil de implementar.
+[intérprete](https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)) muy pequeño y fácil de implementar.
 
 Un link útil para probar este lenguaje es este [intérprete online](https://copy.sh/brainfuck/).
 
@@ -195,12 +195,12 @@ Su tarea es implementar un intérprete de Brainfuck en el lenguaje C. El program
     $ ./bf <ruta al archivo> 
 ```
 Donde `ruta al archivo` es la ruta al archivo a interpretar. Por ejemplo: `./bf ejemplo.bf`. En caso que no se
-indique ruta al archivo, deberá leerse de entrada estándar (similar a cómo hace el intérprete de Python).
+indique ruta al archivo, deberá leerse de entrada estándar (similar a como hace el intérprete de Python).
 
-Se brinda en [el sitio de descargas]({{site.skel}}) un set (incompleto) de archivos de prueba de ejemplo. 
+Se brinda en [el sitio de descargas]({{site.skel}}) un set (reducido) de archivos de prueba de ejemplo. 
 La forma de ejecutar dichas pruebas es:
 ```
-    $ ./pruebas.sh ruta/a/ejecutable/bc
+    $ ./pruebas.sh ruta/a/ejecutable/bf
 ```
 
 Tener en cuenta que estas pruebas contemplan casos triviales, y algunos muy complejos. Para pruebas intermedias 
@@ -215,10 +215,10 @@ descripción de la prueba.
   - Se puede considerar que el archivo fuente entra todo en memoria, aunque recomendamos sólo almacenar lo 
   necesario. 
   - Se debe validar la cantidad de argumentos pasados al programa, en caso de haber una cantidad inválida, escribir
-  por `salida de error` (`stderr`): `Error: Cantidad erronea de parametros` (sin tildes).
+  por salida de error (`stderr`): `Error: Cantidad erronea de parametros` (sin tildes).
   - Se debe validar (en caso de indicarse) que se pueda leer el archivo pasado por parámetro. En caso de no ser posible
-  escribir por `salida de error`: `Error: archivo fuente inaccesible`.
-  - Las impresiones realizadas por el programa deben realizarse a `salida estándar` (`stdout`).
+  escribir por salida de error (`stderr`): `Error: archivo fuente inaccesible`.
+  - Las impresiones realizadas por el programa deben realizarse a salida estándar (`stdout`).
 
 ## Criterios de aprobación
 
@@ -228,15 +228,15 @@ de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
 La entrega incluye, obligatoriamente, los siguientes archivos de código:
 
 - `strutil.c` con las implementaciones de las funciones `substr`, `split`, `join` y `free_strv`.
-- El código de la solución de `bf` y `fixcol`.
+- El código de la solución de _bf_ en `bf.c` y _fixcol_ en `fixcol.c`.
 - El código de los TDAs programados en la cursada que se requieran.
 - Un archivo `deps.mk` con las dependencias del proyecto en formato make. Este
 deberá contener sólamente una línea por programa que indique qué _objetos_ necesita para
 compilar el ejecutable de cada uno de los archivos, por ejemplo:
 
 ``` makefile
-bf: bf.c 
-fixcol: cola.c pila.c fixcol.c
+bf: bf.o
+fixcol: cola.o pila.o fixcol.o
 ```
 
 El corrector automático va a interpretar ese archivo de dependencias y va a
