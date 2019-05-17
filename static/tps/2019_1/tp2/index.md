@@ -66,7 +66,8 @@ TTs, y que dicho archivo termina, consideramos que se puede almacenar en memoria
 	El programa deberá procesar la entrada y luego deberá escribir por *salida estándar* los usuarios y la cantidad de 
 	hashtags que utilizaron en tiempo lineal: _O(u + t)_ siendo _u_ la cantidad de usuarios encontrados y _t_ la 
 	cantidad de hashtags diferentes, ordenados según ocurrencias. Los usuarios que tienen la misma cantidad de 
-	hashtags tienen que ser impresos por orden alfabético.
+	hashtags tienen que ser impresos por orden alfabético (tener en cuenta que para ordenar alfabéticamente a los 
+	usuarios, los nombres de los mismos no superan más de 15 caracteres).
 
 	Ejemplo de invocación:
 		`~$ ./procesar_usuarios tweets.txt`
