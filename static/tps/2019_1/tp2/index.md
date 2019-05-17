@@ -120,7 +120,7 @@ compilar el ejecutable de cada uno de los archivos, por ejemplo:
 
 ``` makefile
 procesar_tweets: procesar_tweets.o count_min_sketch.o
-procesar_tweets: procesar_tweets.o hash.o
+procesar_usuarios: procesar_usuarios.o hash.o
 ```
 
 El corrector automático va a interpretar ese archivo de dependencias y va a
