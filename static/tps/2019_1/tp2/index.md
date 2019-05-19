@@ -77,9 +77,9 @@ TTs, y que dicho archivo termina, consideramos que se puede almacenar en memoria
 	Se debe escribir por salida estándar:
 
 		1: Anita, Gian
-		2: Matias, Cami
+		2: Cami, Matias
 		3: Ezequiel, Jorge, Martín
-		5: Mile, Ceci, Javier
+		5: Ceci, Javier, Mile
 		6: Dato
 		8: Nacho
 
