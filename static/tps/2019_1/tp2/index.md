@@ -59,6 +59,21 @@ Implementar dos programas en C:
 	Recomendamos crear un TDA CountMinSketch, para lograr que el código quede modularizado. La cantidad de funciones de 
 	hashing a utilizar (y por ende, contadores), así como el largo de éstos serán dejados a criterio del grupo. 
 
+    Asimismo, se pide que se imprima la frecuencia estimada para poder realizar
+    durante la corrección una comparación con la frecuencia exacta. La salida debe ser como se indica a continuación, con separadores numerados entre cada grupo de _TT_; por ejemplo, para una entrada de 9 líneas, con _n=4_ y _k=2_ la salida sería del estilo:
+
+    ```
+    --- 1
+    7 pesquisa
+    2 zombietalk
+    --- 2
+    14 niley
+    3 squarespace
+    --- 3
+    1 charlotte
+    ```
+
+
 - `procesar_usuarios`: este programa tendrá como objetivo contar la cantidad de hashtags que usa cada usuario, leyendo 
 cada línea del archivo pasado por parámetro. Como se sabe que la cantidad de usuarios es mucho menor a la cantidad de 
 TTs, y que dicho archivo termina, consideramos que se puede almacenar en memoria todo lo necesario para procesar la entrada.
