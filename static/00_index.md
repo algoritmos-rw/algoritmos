@@ -15,9 +15,16 @@ permalink: /
   </p>
 
   <h3 class="page-heading">Novedades</h3>
-  
+
   <ul class="post-list">
+  {% assign inicio_cuatrimestre = site.data.cuatrimestre.inicio_cuatrimestre | date: "%s" %}
+
 	{% for post in site.posts limit:15 %}
+
+    {% assign date = post.date | date: "%s" %}
+    {% if date < inicio_cuatrimestre %}
+      {% continue %}
+    {% endif %}
 	  <li>
       <a class="post-link" href="{{ post.url | relative_url }}">
         <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
@@ -28,6 +35,18 @@ permalink: /
 	{% endfor %}
   </ul>
 
-  <p>Suscribirse con <a href="{{ '/feed.xml' | relative_url }}" class="rss-subscribe">RSS</a>.</p>
+  <div id='calendario'>
+    <h3 class="page-heading">Próximas fechas importantes</h3>
+    <table class="table table-striped">
+      <tbody id="tabla-calendario">
+        <tr>
+          <td><strong>Día</strong></td>
+          <td><strong>Fecha</strong></td>
+          <td><strong>Detalle</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-
+  <script src="{{ '/assets/js/calendario.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
