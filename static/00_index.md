@@ -35,6 +35,14 @@ permalink: /
 	{% endfor %}
   </ul>
 
+  <div id="embedded-calendario">
+    <h3 class="page-heading">Información sobre próximas clases</h3>
+    <p>
+      Recomendamos revisar el <a href="{{site.data.cuatrimestre.calendario_detallado}}">calendario detallado</a> 
+      de la materia.
+    </p>
+  </div>
+
   <div id='calendario'>
     <h3 class="page-heading">Próximas fechas importantes</h3>
     <table class="table table-striped">
