@@ -7,7 +7,7 @@ const VIERNES_A_LUNES = 3;
 const COLUMNA_INICIAL = "D";
 const COLUMNA_FINAL = "J";
 const CANT_CLASES = 5;
-const CANT_CLASES_ANTERIORES = 1;
+const CANT_CLASES_ANTERIORES = 0;
 
 var desde = new Date();
 desde.setDate(new Date().getDate() - 15);
