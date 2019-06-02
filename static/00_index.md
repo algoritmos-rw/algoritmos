@@ -41,6 +41,7 @@ permalink: /
       Recomendamos revisar el <a href="{{site.data.cuatrimestre.calendario_detallado}}">calendario detallado</a> 
       de la materia.
     </p>
+    <iframe src="{{site.data.cuatrimestre.calendario_embebido}}" width="100%" height="100%"></iframe>
   </div>
 
   <div id='calendario'>
