@@ -21,23 +21,21 @@ Dicho algoritmo es utilizado, por ejemplo, en Facebook para realizar inferencias
 
 En label propagation lo que hacemos es:
 
-Para cada vértice $$V_i$$: $$Label[V_i] = i$$
+1. Para cada vértice $$V_i$$: $$Label[V_i] = i$$
 
-Determinar un orden aleatorio para los vértices.
+1. Determinar un orden aleatorio para los vértices.
 
-Por cada vértice, en el orden determinado en el punto anterior, definir:
-
-$$Label[V_i] = max_freq(Label[V_j], \dots, Label[V_k])$$
-
-Donde $$V_j, \dots, V_k$$ son los vértices adyacentes a $$V_i$$. Se tiene en cuenta la última actualización
+1. Por cada vértice, en el orden determinado en el punto anterior, definir: $$Label[V_i] = max\_freq(Label[V_j], ..., Label[V_k])$$.
+Donde $$V_j, ..., V_k$$ son los vértices adyacentes a $$V_i$$. Se tiene en cuenta la última actualización
 realizada, inclusive si ya fueron procesados en esta iteración (actualización ascincrónica). 
-$$max_freq$$ es una función que devuelve la Label que aparece más frecuentemente entre todos los 
-adyacentes a $$V_i$$.
+$$max\_freq$$ es una función que devuelve la $$Label$$ que aparece más frecuentemente entre todos los 
+adyacentes a $$V_i$$. En caso de empate, es igual cual de los máximos devolver. 
 
-Si no se llegó a la condición de corte, volver a 2. La condición de corte puede ser una vez que se llegó 
+1. Si no se llegó a la condición de corte, volver a 2. La condición de corte puede ser una vez que se llegó 
 a una cantidad determinada de comunidades, se cree que se llegó a la convergencia (la mayoría de los
 vecinos de cada vértice tiene la misma Label que dicho vértice), o simplemente por una cantidad de
 iteraciones prefijada.
+
 Como opción alternativa, brindamos otro algoritmo que utiliza [Random Walks](random_walks) para obtener 
 las posibles comunidades: 
 [Entropy Walker](https://drive.google.com/file/d/0B8rBD4QSqWnSLTdWTXdFaUtUNjQ/view).
