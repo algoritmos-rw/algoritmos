@@ -18,6 +18,7 @@ permalink: /material/
   * [Apunte de Centralidad en un grafo](centralidad)
   * [Apunte de PageRank](pagerank)
   * [Apunte sobre Label Propagation](label_propagation)
+  * [Apunte sobre Componentes Fuertemente Conexas](cfc)
   * [Explicación sobre uso de archivos KML](kml)
 
 ## Guías de ejercicios
