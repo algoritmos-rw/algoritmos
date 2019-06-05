@@ -73,6 +73,10 @@ id_vertice2	id_vertice3
 id_vertice3	id_vertice5
 ```
 
+Adicionalmente, se cuenta con el siguiente [set mínimo de pruebas inventado](minimo.zip), por lo que no 
+representa un escenario real donde valga la pena realizar todas las operaciones pedidas, pero puede servir 
+de prueba, y se utilizará este set de datos para los ejemplos. 
+
 <sup>1</sup>El set de datos corresponde a un set de Emails enviados entre investigadores de la Unión 
 Europea, obtenidos por la Universidad de Stanford.
 [Fuente real aquí](https://snap.stanford.edu/data/email-EuAll.html).
@@ -198,9 +202,7 @@ Salida:
 
 ### Componentes Fuertemente Conexas
 
-Una [componente fuertemente conexa](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm) 
-de un **grafo dirigido** es un conjunto de vértices dentro del grafo donde todos esos vértices se conectan todos 
-entre sí (existe un camino de cualquiera de esos vértices, a cualquier otro). 
+Se debe leer el apunte sobre [componentes fuertemente conexas](/algo2/material/cfc).
 
 * Comando: `cfc`
 * Parámetros: ninguno. 
