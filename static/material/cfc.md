@@ -50,6 +50,7 @@ def dfs_cfc(grafo, v, visitados, orden, p, s, cfcs, en_cfs):
 		while (z != v):
 			en_cfs.agregar(z)
 			nueva_cfc.append(z)
+			z = s.desapilar()
 		nueva_cfc.append(v)
 		en_cfs.agregar(v)
 		cfcs.append(nueva_cfc)
