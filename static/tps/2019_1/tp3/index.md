@@ -25,28 +25,28 @@ Contenido
 Luego de una ardua investigación por parte del FBI sobre una red de delicuentes, lograron encontrar 
 una serie de mensajes enviados que los pueden llegar a comprometer. Lograron obtener los datos de 
 más de 420.000 mensajes enviados por distintos medios: algunos son mensajes de texto, otros llamadas 
-telefónicas, otros mensajitos por diversas redes sociales, mails, etc... Todos estos conectan a 260.000 
+telefónicas, otros mensajitos por diversas redes sociales, mails, etc. Todos estos conectan a 260.000 
 sospechosos a nivel mundial. El problema que ahora enfrentan es que no saben bien cómo trabajar con 
 estos datos, por lo que le pidieron a alumnes de la FIUBA si pueden ayudar con esta tarea.
 
 ## Análisis de la situación
 
 Los agentes del FBI se contactaron pidieron que se implementen las siguientes funcionalidades (o 
-_features_):
+_features_). Cada uno de estos ítems se corresponde a una de las funcionalidades pedida en la segunda mitad de la consigna, y quizá sea conveniente una lectura a la par:
 1. Tienen a algunos de los delicuentes menores bien vigilados, y saben que se van a contactar con los 
 demás. Eventualmente, si siguen el rastro pueden acabar encontrando y atrapando a algún _pez gordo_ de 
 la lista de más buscados del mundo. Por esto, quieren poder obtener la mínima cantidad de seguimientos 
 de personas que debe realizar un agente para dar con dicho _pez gordo_. Por ejemplo, ese tal 
 _Toni, el Gordo_ es un delicuente muy buscado en una ciudad de Estados Unidos. 
 1. Con tantos datos obtenidos, no tienen forma de definir cuáles son los delicuentes más importantes, 
-para saber contra quienes conviene apuntar en esta operación. 
-1. En función de lo anterior, les intersa poder tener una lista de cuales pueden ser esos delicuentes.
+para saber contra quiénes conviene apuntar en esta operación. 
+1. En función de lo anterior, les interesa poder tener una lista de cuáles pueden ser esos delincuentes.
 El problema es que son tantos, que saben que un algoritmo exacto puede tomar demasiado tiempo en calcular
-esto, y temen que los delicuentes se enteren que el FBI ha obtenido todos estos datos, y escapen. 
+esto, y temen que los delincuentes se enteren que el FBI ha obtenido todos estos datos, y escapen. 
 Por lo tanto, aceptan una buena aproximación. 
-1. Otra cosa que desean es, dado una lista de delicuentes a los que están siguiendo en estos momentos, 
+1. Otra cosa que desean es, dada una lista de delincuentes a los que están siguiendo en estos momentos, 
 determinar cuál es el mínimo esfuerzo para encontrar a alguno de los delicuentes más importantes.
-1. Algo más que les permitiría entender como está conformada esta red de delicuentes sería poder determinar 
+1. Algo más que les permitiría entender como está conformada esta red de delincuentes sería poder determinar 
 comunidades dentro de esta red.
 1. Además de esto, cuentan con agentes infiltrados. Les interesa saber, si alguno de estos agentes comienza 
 una noticia/rumor, hasta dónde puede llegar!
@@ -59,9 +59,9 @@ Pueden ser más de uno estos conjuntos.
 ## Datos disponibles
 
 Se cuenta con un [set de datos](mensajes.zip)<sup>1</sup> de los 
-mensajes, comunicaciones, encuentros, etc... entre los mencionados delicuentes (y agentes encubiertos). 
+mensajes, comunicaciones, encuentros, etc. entre los mencionados delincuentes (y agentes encubiertos). 
 Por motivos tanto legales como de seguridad para les alumnes, solo se han dejado los números de 
-identificación de dichos delicuentes, sin nungún dato personal.
+identificación de dichos delincuentes, sin ningún dato personal.
 El formato del archivo es un tsv (los campos se separan por tabuladores): 
 ```
 id_vertice1	id_vertice2
@@ -85,15 +85,15 @@ Europea, obtenidos por la Universidad de Stanford.
 ### Aclaraciones
 
 * Que un delicuente se comunique con otro no implica que también suceda la recíproca.
-* Se ha visto también que hay delicuentes que se han enviado mensajes **a sí mismos**. Tener esto en cuenta 
+* Se ha visto también que hay delincuentes que se han enviado mensajes **a sí mismos**. Téngase esto en cuenta 
 a la hora de procesar los datos. 
-* Aunque un delicuente se comunique 1, 2 o _n_ veces, sólo aparece una vez esa conexión en el archivo (que 
+* Aunque dos delincuentes se comuniquen 1, 2 o _n_ veces, la comunicación sólo aparece una vez en el archivo (que 
 quiere decir que se hace esa comunicación _al menos una vez_). 
 
 ## Implementación
 
 El trabajo puede realizarse en lenguaje a elección, siendo aceptados Python y C, y cualquier otro a ser 
-discutido con le correctore asignado.
+discutido con le correctore asignade.
 
 El trabajo consiste de 3 partes:
 1. El TDA Grafo, con sus primitivas. 
@@ -103,9 +103,9 @@ luego se utilicen particularmente para el caso de la red de delicuentes.
 lo requerido. 
 
 El programa debe recibir por parámetro y cargar en memoria el set de datos (`$ ./algopoli 
-mensajes.tsv`) y luego solicitar el ingreso de comandos por entrada estándar, 
+mensajes.tsv`) y luego esperar la recepción de comandos por entrada estándar, 
 del estilo `<comando> parametro1,parametro2`. Notar que esto permite tener un archivo de instrucciones a ser 
-ejecutadas (i.e. `$ ./algopoli mensajes.tsv < entrada.txt`).
+ejecutadas (i.e. `$ ./algopoli mensajes.tsv < comandos.txt`).
 
 A continuación, se explica cada comando, con ejemplos de salida utilizando el set de datos reducido (para no
 adelantar los resultados para el set grande). 
@@ -114,9 +114,9 @@ adelantar los resultados para el set grande).
 
 * Comando: `min_seguimientos`.
 * Parámetros: `origen` y `destino`. 
-* Utilidad: nos imprime una lista con los **delicuentes** (código) con los cuales vamos del
+* Utilidad: nos imprime una lista con los **delicuentes** (su código identificador) con los cuáles vamos del
 **delicuente** `origen` al **delicuente** `destino` de la forma más rápida. En caso de no poder
-hacer el seguimiento (i.e. no existe camino), imprimir `"Seguimiento imposible"`. 
+hacer el seguimiento (i.e. no existe camino), imprimir `Seguimiento imposible`. 
 * Ejemplo: 
 Entrada:
 	```
@@ -142,7 +142,7 @@ Las formas posibles son:
 Por lo tanto, el comando pedido debe ser: 
 * Comando: `mas_imp`.
 * Parámetros: `cant`. 
-* Utildad: Imprime, de mayor a menor, los `cant` delicuentes más importantes.
+* Utildad: Imprime, de mayor a menor importancia, los `cant` delicuentes más importantes.
 Ejemplo:
 Entrada:
 ```
@@ -157,8 +157,8 @@ Salida:
 
 * Comando: `persecucion`.
 * Parámetros: `delicuente1,delincuente2,...,delicuenteN` y `K`.
-* Utilidad: Dado cada uno de los delicuentes pasados (agentes encubiertos), obtener cual es el camino más corto 
-para llegar desde alguno de los delicuentes pasados por parámetros, a alguno de los `K` delicuentes más importantes.
+* Utilidad: Dado cada uno de los delincuentes pasados (agentes encubiertos), obtener cuál es el camino más corto 
+para llegar desde alguno de los delincuentes pasados por parámetro, a alguno de los `K` delincuentes más importantes.
 En caso de tener caminos de igual largo, priorizar los que vayan a un delicuente más importante. 
 * Ejemplo:
 Entrada
