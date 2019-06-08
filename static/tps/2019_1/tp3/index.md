@@ -31,7 +31,7 @@ estos datos, por lo que le pidieron a alumnes de la FIUBA si pueden ayudar con e
 
 ## Análisis de la situación
 
-Los agentes del FBI se contactaron pidieron que se implementen las siguientes funcionalidades (o 
+Los agentes del FBI se contactaron pidiendo que se implementen las siguientes funcionalidades (o 
 _features_). Cada uno de estos ítems se corresponde a una de las funcionalidades pedida en la segunda mitad de la consigna, y quizá sea conveniente una lectura a la par:
 1. Tienen a algunos de los delincuentes menores bien vigilados, y saben que se van a contactar con los 
 demás. Eventualmente, si siguen el rastro pueden acabar encontrando y atrapando a algún _pez gordo_ de 
@@ -39,8 +39,8 @@ la lista de más buscados del mundo. Por esto, quieren poder obtener la mínima 
 de personas que debe realizar un agente para dar con dicho _pez gordo_. Por ejemplo, ese tal 
 _Toni, el Gordo_ es un delincuente muy buscado en una ciudad de Estados Unidos. 
 1. Con tantos datos obtenidos, no tienen forma de definir cuáles son los delincuentes más importantes, 
-para saber contra quiénes conviene apuntar en esta operación. 
-1. En función de lo anterior, les interesa poder tener una lista de cuáles pueden ser esos delincuentes.
+para saber contra quiénes conviene apuntar en esta operación. En función de ésto, les interesa poder tener 
+una lista de cuáles pueden ser esos delincuentes.
 El problema es que son tantos, que saben que un algoritmo exacto puede tomar demasiado tiempo en calcular
 esto, y temen que los delincuentes se enteren que el FBI ha obtenido todos estos datos, y escapen. 
 Por lo tanto, aceptan una buena aproximación. 
@@ -49,7 +49,7 @@ determinar cuál es el mínimo esfuerzo para encontrar a alguno de los delincuen
 1. Algo más que les permitiría entender como está conformada esta red de delincuentes sería poder determinar 
 comunidades dentro de esta red.
 1. Además de esto, cuentan con agentes infiltrados. Les interesa saber, si alguno de estos agentes comienza 
-una noticia/rumor, hasta dónde puede llegar!
+una noticia/rumor, hasta dónde pueda llegar.
 1. En conjunto con lo anterior, les interesa poder saber si existe algún camino de un determinado largo que 
 empiece en un delincuente en particular (que en realidad será un agente encubierto), y que termine en dicho 
 agente otra vez.
@@ -98,7 +98,8 @@ discutido con le correctore asignade.
 El trabajo consiste de 3 partes:
 1. El TDA Grafo, con sus primitivas. 
 1. Una biblioteca de funciones de grafos, que permitan hacer distintas operaciones sobre un grafo que 
-luego se utilicen particularmente para el caso de la red de delincuentes.
+luego se utilicen particularmente para el caso de la red de delincuentes. Esta biblioteca no debería tener
+referencias a delincuentes, sino simplemente aplicar algoritmos sobre grafos.
 1. El programa `AlgoPoli` que utilice tanto el TDA como la biblioteca para poder implementar todo 
 lo requerido. 
 
@@ -131,8 +132,8 @@ Salida:
 
 ### Delincuentes más importantes
 
-Usualmente nos gustaría determinar cuáles son los vértices en un grafo en función de su
-centralidad exacta. Teniendo en cuenta que se cuenta con demasiados delincuentes, el cálculo 
+Usualmente nos gustaría determinar cuáles son los vértices más importantes en un grafo en función 
+de su centralidad exacta. Teniendo en cuenta que se cuenta con demasiados delincuentes, el cálculo 
 exacto de la centralidad puede consumir una cantidad excesiva de tiempo. 
 Por lo tanto, se pide realizar una aproximación para determinar los delincuentes más importantes. 
 Las formas posibles son:
