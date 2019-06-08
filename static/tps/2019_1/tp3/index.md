@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "TP3 – Grafos y la red de delicuencia"
+title: "TP3 – Grafos y la red de delincuencia"
 permalink: '/tps/2019_1/tp3'
 math: true
 ---
@@ -22,7 +22,7 @@ Contenido
 
 ## Introducción
 
-Luego de una ardua investigación por parte del FBI sobre una red de delicuentes, lograron encontrar 
+Luego de una ardua investigación por parte del FBI sobre una red de delincuentes, lograron encontrar 
 una serie de mensajes enviados que los pueden llegar a comprometer. Lograron obtener los datos de 
 más de 420.000 mensajes enviados por distintos medios: algunos son mensajes de texto, otros llamadas 
 telefónicas, otros mensajitos por diversas redes sociales, mails, etc. Todos estos conectan a 260.000 
@@ -33,27 +33,27 @@ estos datos, por lo que le pidieron a alumnes de la FIUBA si pueden ayudar con e
 
 Los agentes del FBI se contactaron pidieron que se implementen las siguientes funcionalidades (o 
 _features_). Cada uno de estos ítems se corresponde a una de las funcionalidades pedida en la segunda mitad de la consigna, y quizá sea conveniente una lectura a la par:
-1. Tienen a algunos de los delicuentes menores bien vigilados, y saben que se van a contactar con los 
+1. Tienen a algunos de los delincuentes menores bien vigilados, y saben que se van a contactar con los 
 demás. Eventualmente, si siguen el rastro pueden acabar encontrando y atrapando a algún _pez gordo_ de 
 la lista de más buscados del mundo. Por esto, quieren poder obtener la mínima cantidad de seguimientos 
 de personas que debe realizar un agente para dar con dicho _pez gordo_. Por ejemplo, ese tal 
-_Toni, el Gordo_ es un delicuente muy buscado en una ciudad de Estados Unidos. 
-1. Con tantos datos obtenidos, no tienen forma de definir cuáles son los delicuentes más importantes, 
+_Toni, el Gordo_ es un delincuente muy buscado en una ciudad de Estados Unidos. 
+1. Con tantos datos obtenidos, no tienen forma de definir cuáles son los delincuentes más importantes, 
 para saber contra quiénes conviene apuntar en esta operación. 
 1. En función de lo anterior, les interesa poder tener una lista de cuáles pueden ser esos delincuentes.
 El problema es que son tantos, que saben que un algoritmo exacto puede tomar demasiado tiempo en calcular
 esto, y temen que los delincuentes se enteren que el FBI ha obtenido todos estos datos, y escapen. 
 Por lo tanto, aceptan una buena aproximación. 
 1. Otra cosa que desean es, dada una lista de delincuentes a los que están siguiendo en estos momentos, 
-determinar cuál es el mínimo esfuerzo para encontrar a alguno de los delicuentes más importantes.
+determinar cuál es el mínimo esfuerzo para encontrar a alguno de los delincuentes más importantes.
 1. Algo más que les permitiría entender como está conformada esta red de delincuentes sería poder determinar 
 comunidades dentro de esta red.
 1. Además de esto, cuentan con agentes infiltrados. Les interesa saber, si alguno de estos agentes comienza 
 una noticia/rumor, hasta dónde puede llegar!
 1. En conjunto con lo anterior, les interesa poder saber si existe algún camino de un determinado largo que 
-empiece en un delicuente en particular (que en realidad será un agente encubierto), y que termine en dicho 
+empiece en un delincuente en particular (que en realidad será un agente encubierto), y que termine en dicho 
 agente otra vez.
-1. Les interesaría poder obtener los conjuntos de delicuentes entre los cuales todos se conectan con todos. 
+1. Les interesaría poder obtener los conjuntos de delincuentes entre los cuales todos se conectan con todos. 
 Pueden ser más de uno estos conjuntos. 
 
 ## Datos disponibles
@@ -84,7 +84,7 @@ Europea, obtenidos por la Universidad de Stanford.
 
 ### Aclaraciones
 
-* Que un delicuente se comunique con otro no implica que también suceda la recíproca.
+* Que un delincuente se comunique con otro no implica que también suceda la recíproca.
 * Se ha visto también que hay delincuentes que se han enviado mensajes **a sí mismos**. Téngase esto en cuenta 
 a la hora de procesar los datos. 
 * Aunque dos delincuentes se comuniquen 1, 2 o _n_ veces, la comunicación sólo aparece una vez en el archivo (que 
@@ -98,7 +98,7 @@ discutido con le correctore asignade.
 El trabajo consiste de 3 partes:
 1. El TDA Grafo, con sus primitivas. 
 1. Una biblioteca de funciones de grafos, que permitan hacer distintas operaciones sobre un grafo que 
-luego se utilicen particularmente para el caso de la red de delicuentes.
+luego se utilicen particularmente para el caso de la red de delincuentes.
 1. El programa `AlgoPoli` que utilice tanto el TDA como la biblioteca para poder implementar todo 
 lo requerido. 
 
@@ -114,8 +114,8 @@ adelantar los resultados para el set grande).
 
 * Comando: `min_seguimientos`.
 * Parámetros: `origen` y `destino`. 
-* Utilidad: nos imprime una lista con los **delicuentes** (su código identificador) con los cuáles vamos del
-**delicuente** `origen` al **delicuente** `destino` de la forma más rápida. En caso de no poder
+* Utilidad: nos imprime una lista con los **delincuentes** (su código identificador) con los cuáles vamos del
+**delincuente** `origen` al **delincuente** `destino` de la forma más rápida. En caso de no poder
 hacer el seguimiento (i.e. no existe camino), imprimir `Seguimiento imposible`. 
 * Ejemplo: 
 Entrada:
@@ -129,12 +129,12 @@ Salida:
 	30 -> 36 -> 38 -> 20 -> 45 -> 12
 	```
 
-### Delicuentes más importantes
+### Delincuentes más importantes
 
 Usualmente nos gustaría determinar cuáles son los vértices en un grafo en función de su
-centralidad exacta. Teniendo en cuenta que se cuenta con demasiados delicuentes, el cálculo 
+centralidad exacta. Teniendo en cuenta que se cuenta con demasiados delincuentes, el cálculo 
 exacto de la centralidad puede consumir una cantidad excesiva de tiempo. 
-Por lo tanto, se pide realizar una aproximación para determinar los delicuentes más importantes. 
+Por lo tanto, se pide realizar una aproximación para determinar los delincuentes más importantes. 
 Las formas posibles son:
  * [Betweeness Centrality, aproximado](/algo2/material/centralidad).
  * [PageRank](/algo2/material/pagerank).
@@ -142,7 +142,7 @@ Las formas posibles son:
 Por lo tanto, el comando pedido debe ser: 
 * Comando: `mas_imp`.
 * Parámetros: `cant`. 
-* Utildad: Imprime, de mayor a menor importancia, los `cant` delicuentes más importantes.
+* Utildad: Imprime, de mayor a menor importancia, los `cant` delincuentes más importantes.
 Ejemplo:
 Entrada:
 ```
@@ -156,10 +156,10 @@ Salida:
 ### Persecución rápida
 
 * Comando: `persecucion`.
-* Parámetros: `delicuente1,delincuente2,...,delicuenteN` y `K`.
+* Parámetros: `delincuente1,delincuente2,...,delincuenteN` y `K`.
 * Utilidad: Dado cada uno de los delincuentes pasados (agentes encubiertos), obtener cuál es el camino más corto 
 para llegar desde alguno de los delincuentes pasados por parámetro, a alguno de los `K` delincuentes más importantes.
-En caso de tener caminos de igual largo, priorizar los que vayan a un delicuente más importante. 
+En caso de tener caminos de igual largo, priorizar los que vayan a un delincuente más importante. 
 * Ejemplo:
 Entrada
 ```
@@ -195,10 +195,10 @@ Tener en cuenta que siendo un archivo generado de forma aleatoria, los resultado
 ### Divulgación de rumor
 
 * Comando: `divulgar`.
-* Parámetros: `delicuente` y `n`. 
-* Utilidad: Imprime una lista con todos los delicuentes a los cuales les termina llegando un rumor que
-comienza en el delicuente pasado por parámetro, y a lo sumo realiza `n` saltos (luego, se empieza a tergiversar 
-el mensaje), teniendo en cuenta que _todos_ los delicuentes transmitirán
+* Parámetros: `delincuente` y `n`. 
+* Utilidad: Imprime una lista con todos los delincuentes a los cuales les termina llegando un rumor que
+comienza en el delincuente pasado por parámetro, y a lo sumo realiza `n` saltos (luego, se empieza a tergiversar 
+el mensaje), teniendo en cuenta que _todos_ los delincuentes transmitirán
 el rumor a sus allegados. 
 * Ejemplo:
 Entrada
@@ -218,8 +218,8 @@ Salida:
 ### Ciclo de largo n
 
 * Comando: `divulgar_ciclo`
-* Parámetros: `delicuente` y `n`. 
-* Utilidad: Permite encontrar un camino simple que empiece y termine en el delicuente pasado por parámetro, 
+* Parámetros: `delincuente` y `n`. 
+* Utilidad: Permite encontrar un camino simple que empiece y termine en el delincuente pasado por parámetro, 
 de largo `n`. 
 * Ejemplo: 
 Entrada:
