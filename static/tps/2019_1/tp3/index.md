@@ -250,3 +250,30 @@ Salida:
 CFC 1: 10
 CFC 2: 77, 18, 73, 47, 91, 57, 30, 64, 82, 60, 85, 58, 22, 87, 50, 89, 14, 70, 32, 96, 37, 3, 29, 7, 40, 17, 4, 35, 53, 24, 75, 94, 43, 31, 78, 2, 52, 44, 45, 99, 69, 8, 16, 25, 13, 79, 15, 97, 20, 38, 36, 41, 46, 95, 1, 92, 23, 51, 62, 11, 68, 80, 93, 67, 5, 65, 83, 27, 28, 54, 33, 12, 34, 19, 56, 76, 84, 63, 81, 21, 74, 6, 90, 55, 66, 86, 98, 88, 42, 9, 61, 48, 49, 59, 26, 72, 71, 39, 0
 ```
+
+## Entrega
+
+Adicionalmente a los archivos propios del trabajo práctico debe agregarse un archivo `entrega.mk` que contenga la regla `algopoli` para generar el ejecutable de dicho programa (sea compilando o los comandos que fueren necesarios). Por ejemplo, teniendo un TP elaborado en Python, podría ser:
+
+``` makefile
+algopoli: algopoli.py grafo.py biblioteca.py
+	cp algopoli.py algopoli
+	chmod +x algopoli
+```
+
+## Criterios de aprobación
+
+El código entregado debe ser claro y legible y ajustarse a las especificaciones
+de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
+
+La entrega incluye, obligatoriamente, los siguientes archivos de código:
+
+- el código del TDA Grafo programado, y cualquier otro TDA que fuere necesario.
+- el código de la solución del TP.
+
+La entrega se realiza:
+
+1. en forma digital a través del [sistema de entregas]({{site.entregas}}),
+con todos los archivos mencionados en un único archivo ZIP.
+2. en papel durante la clase (si su ayudante lo requiere) el código del Trabajo
+en hoja A4 **abrochadas, sin folio, informe ni carátula**. 
