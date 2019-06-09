@@ -121,8 +121,8 @@ hacer el seguimiento (i.e. no existe camino), imprimir `Seguimiento imposible`.
 * Ejemplo: 
 Entrada:
 	```
-	min_seguimientos 10,4
-	min_seguimientos 30,12
+	min_seguimientos 10 4
+	min_seguimientos 30 12
 	```
 Salida:
 	```
