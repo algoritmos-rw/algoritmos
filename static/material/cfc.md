@@ -19,8 +19,7 @@ Para resolver este problema, vamos a utilizar el [Algoritmo de Tarjan](https://e
 [Algoritmo de Kosaraju](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm), que no analizaremos en este apunte.
 
 La idea del algoritmo de Tarjan es realizar un recorrido en profundidad (DFS), contando con dos pilas, _S_ y _P_, 
-y el orden del recorrido en profundidad, respecto de la exploración en profundidad. Para cada vértice no visitado: 
-1. Ponemos su orden en 0 y llamamos a la función recursiva, que hará lo siguiente:
+y el orden del recorrido en profundidad, respecto de la exploración en profundidad. Para cada vértice no visitado ponemos su orden en 0 y: 
 1. Marcamos a _v_ como visitado, con su orden.
 1. Apilar al vértice en _S_ y _P_. 
 1. Para cada vértice _w_ adyacene a _v_:
