@@ -39,7 +39,7 @@ la lista de más buscados del mundo. Por esto, quieren poder obtener la mínima 
 de personas que debe realizar un agente para dar con dicho _pez gordo_. Por ejemplo, ese tal 
 _Toni, el Gordo_ es un delincuente muy buscado en una ciudad de Estados Unidos. 
 1. Con tantos datos obtenidos, no tienen forma de definir cuáles son los delincuentes más importantes, 
-para saber contra quiénes conviene apuntar en esta operación. En función de ésto, les interesa poder tener 
+para saber contra quiénes conviene apuntar en esta operación. En función de esto, les interesa poder tener 
 una lista de cuáles pueden ser esos delincuentes.
 El problema es que son tantos, que saben que un algoritmo exacto puede tomar demasiado tiempo en calcular
 esto, y temen que los delincuentes se enteren que el FBI ha obtenido todos estos datos, y escapen. 
