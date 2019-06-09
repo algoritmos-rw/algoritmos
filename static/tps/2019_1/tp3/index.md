@@ -204,9 +204,8 @@ el rumor a sus allegados.
 * Ejemplo:
 Entrada
 ```
-divulgar 30,4
-
-divulgar 30,1
+divulgar 30 4
+divulgar 30 1
 ```
 Salida:
 ```
@@ -225,8 +224,8 @@ de largo `n`.
 * Ejemplo: 
 Entrada:
 ```
-divulgar_ciclo 74,5
-divulgar_ciclo 19,11
+divulgar_ciclo 74 5
+divulgar_ciclo 19 11
 ```
 Salida:
 ```
