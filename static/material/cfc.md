@@ -44,14 +44,13 @@ def dfs_cfc(grafo, v, visitados, orden, p, s, cfcs, en_cfs):
 				p.desapilar()
 
 	if p.ver_tope() == v:
+		p.desapilar()
+		z = None
 		nueva_cfc = []
-		z = s.desapilar()
-		while (z != v):
+		while z != v:
+			z = s.desapilar()
 			en_cfs.agregar(z)
 			nueva_cfc.append(z)
-			z = s.desapilar()
-		nueva_cfc.append(v)
-		en_cfs.agregar(v)
 		cfcs.append(nueva_cfc)
 		p.desapilar()
 
