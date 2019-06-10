@@ -118,7 +118,7 @@ adelantar los resultados para el set grande).
 * Utilidad: nos imprime una lista con los **delincuentes** (su código identificador) con los cuáles vamos del
 **delincuente** `origen` al **delincuente** `destino` de la forma más rápida. En caso de no poder
 hacer el seguimiento (i.e. no existe camino), imprimir `Seguimiento imposible`. 
-* Ejemplo: 
+* Ejemplo: \\
 Entrada:
 	```
 	min_seguimientos 10 4
@@ -144,7 +144,7 @@ Por lo tanto, el comando pedido debe ser:
 * Comando: `mas_imp`.
 * Parámetros: `cant`. 
 * Utildad: Imprime, de mayor a menor importancia, los `cant` delincuentes más importantes.
-Ejemplo:
+* Ejemplo: \\
 Entrada:
 ```
 mas_imp 10
@@ -161,8 +161,8 @@ Salida:
 * Utilidad: Dado cada uno de los delincuentes pasados (agentes encubiertos), obtener cuál es el camino más corto 
 para llegar desde alguno de los delincuentes pasados por parámetro, a alguno de los `K` delincuentes más importantes.
 En caso de tener caminos de igual largo, priorizar los que vayan a un delincuente más importante. 
-* Ejemplo:
-Entrada
+* Ejemplo: \\
+Entrada:
 ```
 persecucion 10,14,17 5
 persecucion 19,11,7,12 3
@@ -181,7 +181,7 @@ para detectar comunidades.
 * Comando: `comunidades`. 
 * Parámetros: `n`.
 * Utilidad: Imprime un listado de comunidades de al menos `n` integrantes. 
-* Ejemplo:
+* Ejemplo: \\
 Entrada:
 ```
 comunidades 10
@@ -201,7 +201,7 @@ Tener en cuenta que siendo un archivo generado de forma aleatoria, los resultado
 comienza en el delincuente pasado por parámetro, y a lo sumo realiza `n` saltos (luego, se empieza a tergiversar 
 el mensaje), teniendo en cuenta que _todos_ los delincuentes transmitirán
 el rumor a sus allegados. 
-* Ejemplo:
+* Ejemplo: \\
 Entrada
 ```
 divulgar 30 4
@@ -210,7 +210,6 @@ divulgar 30 1
 Salida:
 ```
 36, 79, 84, 38, 71, 48, 13, 76, 77, 20, 64, 72, 57, 23, 7, 24, 85, 61, 47, 19, 25, 40, 37, 52, 56, 74, 66, 1, 18, 27, 26, 80, 62, 97, 86, 15, 53, 31, 78, 99, 81, 6, 29, 11, 33, 45, 51, 65, 87, 42, 50, 93, 41, 90, 4, 70, 92, 67, 95, 0, 82, 63, 60, 5, 9, 68, 59, 89, 34, 8, 14, 73, 28, 16, 49, 43, 83, 75, 39, 21, 32, 54, 55, 17, 91, 46
-
 36, 79, 84
 ```
 
@@ -221,7 +220,7 @@ Salida:
 * Parámetros: `delincuente` y `n`. 
 * Utilidad: Permite encontrar un camino simple que empiece y termine en el delincuente pasado por parámetro, 
 de largo `n`. 
-* Ejemplo: 
+* Ejemplo: \\
 Entrada:
 ```
 divulgar_ciclo 74 5
@@ -240,7 +239,7 @@ Se debe leer el apunte sobre [componentes fuertemente conexas](/algo2/material/c
 * Comando: `cfc`
 * Parámetros: ninguno. 
 * Utilidad: Imprime cada conjunto de vértices entre los cuales todos están conectados con todos.
-* Ejemplo:
+* Ejemplo: \\
 Entrada:
 ```
 cfc
