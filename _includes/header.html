@@ -16,16 +16,16 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="{{ '/' | relative_url }}">Inicio</a></li>
-            <li><a href="{{ '/regimen/' | relative_url }}">Régimen</a></li>
-            <li><a href="{{ '/bibliografia/' | relative_url }}">Bibliografía</a></li>
-            <li><a href="{{ '/material/' | relative_url }}">Material</a></li>
-            <li><a href="{{ '/tps/' | relative_url }}">TPs</a></li>
-            <li><a href="{{ '/calendario/' | relative_url }}">Calendario</a></li>
-            <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
-            <li><a href="{{ '/docentes/' | relative_url }}">Docentes</a></li>
-            <li><a href="{{ '/encuestas/' | relative_url }}">Encuestas</a></li>
-            <li><a href="{{ '/infraestructura/' | relative_url }}">Infraestructura</a></li>
+            <li class="{% if page.permalink == '/' %}active{% endif %}"><a href="{{ '/' | relative_url }}">Inicio</a></li>
+            <li class="{% if page.permalink == '/regimen/' %}active{% endif %}"><a href="{{ '/regimen/' | relative_url }}">Régimen</a></li>
+            <li class="{% if page.permalink == '/bibliografia/' %}active{% endif %}"><a href="{{ '/bibliografia/' | relative_url }}">Bibliografía</a></li>
+            <li class="{% if page.permalink == '/material/' %}active{% endif %}"><a href="{{ '/material/' | relative_url }}">Material</a></li>
+            <li class="{% if page.permalink == '/tps/' %}active{% endif %}"><a href="{{ '/tps/' | relative_url }}">TPs</a></li>
+            <li class="{% if page.permalink == '/calendario/' %}active{% endif %}"><a href="{{ '/calendario/' | relative_url }}">Calendario</a></li>
+            <li class="{% if page.permalink == '/faq/' %}active{% endif %}"><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+            <li class="{% if page.permalink == '/docentes/' %}active{% endif %}"><a href="{{ '/docentes/' | relative_url }}">Docentes</a></li>
+            <li class="{% if page.permalink == '/encuestas/' %}active{% endif %}"><a href="{{ '/encuestas/' | relative_url }}">Encuestas</a></li>
+            <li class="{% if page.permalink == '/infraestructura/' %}active{% endif %}"><a href="{{ '/infraestructura/' | relative_url }}">Infraestructura</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown">Alumno
                 <span class="caret"></span></a>
