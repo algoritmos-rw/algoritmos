@@ -27,7 +27,9 @@ es muy importante para que el valor del pagerank se mantenga entre 0 y 1. La exp
 encuentra en [el artículo de Wikipedia en inglés](https://en.wikipedia.org/wiki/PageRank) (en el artículo 
 en español mantiene el error).
 * $$\text{PR}\left(p_j\right)$$: pagerank del artículo $$p_j$$, donde $$p_j$$ sea un artículo que tenga un
-link hacia $$p_i$$. Se consideran todos los artículos que tengan un link hacia $$p_i$$.
+link hacia $$p_i$$. Se consideran todos los artículos que tengan un link hacia $$p_i$$. Es importante notar
+que cuando se trata de un grafo dirigido, estamos hablando de las aristas de entrada a $$p_i$$, no las de
+salida.
 * $$L\left(p_j\right)$$: cantidad de links que tiene el artículo $$j$$ (mismo que 
 $$\text{PR}\left(p_j\right)$$).
 
