@@ -219,7 +219,7 @@ Salida:
 * Comando: `divulgar_ciclo`
 * Parámetros: `delincuente` y `n`. 
 * Utilidad: Permite encontrar un camino simple que empiece y termine en el delincuente pasado por parámetro, 
-de largo `n`. 
+de largo `n`. En caso de no encontrarse un ciclo de ese largo y dicho comienzo, imprimir `No se encontro recorrido`.
 * Ejemplo: \\
 Entrada:
 ```
