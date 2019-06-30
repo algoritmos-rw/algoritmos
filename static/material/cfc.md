@@ -52,7 +52,6 @@ def dfs_cfc(grafo, v, visitados, orden, p, s, cfcs, en_cfs):
 			en_cfs.agregar(z)
 			nueva_cfc.append(z)
 		cfcs.append(nueva_cfc)
-		p.desapilar()
 
 def cfc(grafo):
 	visitados = set()
