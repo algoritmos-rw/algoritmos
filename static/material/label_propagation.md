@@ -26,8 +26,10 @@ En label propagation lo que hacemos es:
 1. Determinar un orden aleatorio para los vértices.
 
 1. Por cada vértice, en el orden determinado en el punto anterior, definir: $$Label[V_i] = max\_freq(Label[V_j], ..., Label[V_k])$$.
-Donde $$V_j, ..., V_k$$ son los vértices adyacentes a $$V_i$$. Se tiene en cuenta la última actualización
-realizada, inclusive si ya fueron procesados en esta iteración (actualización asincrónica). 
+Donde $$V_j, ..., V_k$$ son los vértices que tienen como adyacentes a $$V_i$$ (ya que las _Labels_ se están propagando). 
+Para el caso de un grafo no dirigido, son los mismos adyacentes a $$V_i$$, pero en caso de un grafo dirigido se 
+debe tener en cuenta las aristas de entrada. Se tiene en cuenta la última actualización realizada, inclusive si 
+ya fueron procesados en esta iteración (actualización asincrónica). 
 $$max\_freq$$ es una función que devuelve la $$Label$$ que aparece más frecuentemente entre todos los 
 adyacentes a $$V_i$$. En caso de empate, es igual cuál de los máximos devolver. 
 
