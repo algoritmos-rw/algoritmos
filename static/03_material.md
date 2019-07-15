@@ -6,9 +6,9 @@ permalink: /material/
 
 # Material del curso
 
-  * [Drive general de la materia](https://drive.google.com/drive/folders/0B0x0VPz_v-f_ekhhQUpkay13RnM?usp=sharing)
+  * [Drive general de la materia]({{site.data.sitios.drive}})
   * [Apuntes del curso](apuntes)
-  * [Canal de YouTube]()
+  * [Canal de YouTube]({{site.data.sitios.youtube}})
   * [Guías de ejerrcicios](guias) de la materia.
 
 # Otros materiales

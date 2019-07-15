@@ -15,10 +15,10 @@ o lo que fuere), por favor crear un issue en [la página de issues del repositor
 ## Links Principales
 
 * [Formulario de alta]({{site.data.cuatrimestre.formulario_alta}}) a la 
-  [lista de correos](https://groups.google.com/forum/#!forum/fiuba-7541rw-alu).
+  [lista de correos]({{site.data.sitios.lista}}).
 * [Formulaio de inscripción de grupos]({{site.data.cuatrimestre.formulario_grupos}}).
-* [Drive general de la materia](https://drive.google.com/drive/folders/0B0x0VPz_v-f_ekhhQUpkay13RnM?usp=sharing).
-* [Canal de YouTube](https://www.youtube.com/channel/UCnmq-CGB2lEiwxhpa_Q63qQ) del curso.
+* [Drive general de la materia]({{site.data.sitios.drive}}).
+* [Canal de YouTube]({{site.data.sitios.youtube}}) del curso.
 * [Página de visualizaciones recomendada](http://visualgo.net/).
 
 ## Información sobre próximas clases
