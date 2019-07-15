@@ -18,7 +18,7 @@ o lo que fuere), por favor crear un issue en [la página de issues del repositor
   [lista de correos](https://groups.google.com/forum/#!forum/fiuba-7541rw-alu).
 * [Formulaio de inscripción de grupos]({{site.data.cuatrimestre.formulario_grupos}}).
 * [Drive general de la materia](https://drive.google.com/drive/folders/0B0x0VPz_v-f_ekhhQUpkay13RnM?usp=sharing).
-* [Canal de YouTube](https://www.youtube.com) del curso.
+* [Canal de YouTube](https://www.youtube.com/channel/UCnmq-CGB2lEiwxhpa_Q63qQ) del curso.
 * [Página de visualizaciones recomendada](http://visualgo.net/).
 
 ## Información sobre próximas clases
