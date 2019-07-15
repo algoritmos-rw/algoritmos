@@ -1,7 +1,7 @@
 ---
 layout: default
 title: PageRank
-permalink: /material/pagerank
+permalink: /material/apuntes/pagerank
 math: true
 ---
 

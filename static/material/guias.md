@@ -7,7 +7,7 @@ permalink: material/guias/
 Guías de ejercicios
 =======
 
-### Estas son las guías de ejercicios para la segunda parte de la materia
+Todas las guías cuentan con un ejercicio resuelto. Recomendamos leerlo detenidamente y luego proceder a realizar los ejercicios propuestos. 
 
 * [División y Conquista](dyc)
 * [Grafos](grafos)
