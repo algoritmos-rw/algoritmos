@@ -9,7 +9,7 @@ Este es el sitio de la materia **Algoritmos y Programación II**, curso **Buchwa
 
 
 En caso de encontrar algún problema con la página (desde errores de fechas, links rotos, falta publicar algún trabajo, 
-o lo que fuere), por favor crear un issue en [la página de issues del repositorio]({{site.github.repository_url}}).
+o lo que fuere), por favor crear un issue en [la página de issues del repositorio]({{site.github.repository_url}}/issues).
 
 
 ## Links Principales
