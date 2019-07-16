@@ -16,28 +16,28 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="{% if page.permalink == '/' %}active{% endif %}"><a href="{{ '/' | relative_url }}">Inicio</a></li>
-            <li class="{% if page.permalink == '/regimen/' %}active{% endif %}"><a href="{{ '/regimen/' | relative_url }}">Régimen</a></li>
-            <li class="{% if page.permalink == '/bibliografia/' %}active{% endif %}"><a href="{{ '/bibliografia/' | relative_url }}">Bibliografía</a></li>
-            <li class="{% if page.permalink == '/material/' %}active{% endif %}"><a href="{{ '/material/' | relative_url }}">Material</a></li>
-            <li class="{% if page.permalink == '/tps/' %}active{% endif %}"><a href="{{ '/tps/' | relative_url }}">TPs</a></li>
-            <li class="{% if page.permalink == '/calendario/' %}active{% endif %}"><a href="{{ '/calendario/' | relative_url }}">Calendario</a></li>
-            <li class="{% if page.permalink == '/faq/' %}active{% endif %}"><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
-            <li class="{% if page.permalink == '/docentes/' %}active{% endif %}"><a href="{{ '/docentes/' | relative_url }}">Docentes</a></li>
-            <li class="{% if page.permalink == '/encuestas/' %}active{% endif %}"><a href="{{ '/encuestas/' | relative_url }}">Encuestas</a></li>
-            <li class="{% if page.permalink == '/infraestructura/' %}active{% endif %}"><a href="{{ '/infraestructura/' | relative_url }}">Infraestructura</a></li>
+            <li class="{% if page.permalink == '/' %}active{% endif %}"><a href="{{ '/' | relative_url }}"><i class="fa fa-home"></i></span> Inicio</a></li>
+            <li class="{% if page.permalink == '/regimen/' %}active{% endif %}"><a href="{{ '/regimen/' | relative_url }}"><i class="fa fa-tasks"></i></span> Régimen</a></li>
+            <li class="{% if page.permalink == '/bibliografia/' %}active{% endif %}"><a href="{{ '/bibliografia/' | relative_url }}"><i class="fa fa-book"></i></span> Bibliografía</a></li>
+            <li class="{% if page.permalink == '/material/' %}active{% endif %}"><a href="{{ '/material/' | relative_url }}"><i class="fa fa-paperclip"></i></span> Material</a></li>
+            <li class="{% if page.permalink == '/tps/' %}active{% endif %}"><a href="{{ '/tps/' | relative_url }}"><i class="fa fa-briefcase"></i></span> TPs</a></li>
+            <li class="{% if page.permalink == '/calendario/' %}active{% endif %}"><a href="{{ '/calendario/' | relative_url }}"><i class="fa fa-calendar-alt"></i></span> Calendario</a></li>
+            <li class="{% if page.permalink == '/faq/' %}active{% endif %}"><a href="{{ '/faq/' | relative_url }}"><i class="far fa-question-circle"></i></span> FAQ</a></li>
+            <li class="{% if page.permalink == '/docentes/' %}active{% endif %}"><a href="{{ '/docentes/' | relative_url }}"><i class="fa fa-chalkboard-teacher"></i></span> Docentes</a></li>
+            <li class="{% if page.permalink == '/encuestas/' %}active{% endif %}"><a href="{{ '/encuestas/' | relative_url }}"><i class="fa fa-poll"></i></span> Encuestas</a></li>
+            <li class="{% if page.permalink == '/infraestructura/' %}active{% endif %}"><a href="{{ '/infraestructura/' | relative_url }}"><i class="fa fa-network-wired"></i></span> Infraestructura</a></li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">Alumno
+              <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-friends"></i></span> Alumno
                 <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="{{site.entregas}}">Entregas</a></li>
-                <li><a href="{{site.notas}}">Notas</a></li>
-                <li><a href="{{site.skel}}">Descargas</a></li>
-                <li><a href="https://docs.google.com/spreadsheets/d/1E1yVqY2mcRildPgzFMoAcsHv-fpWzdUqHFDpb-25Yz4/edit?usp=sharing">Challenges</a></li>
+                <li><a href="{{site.entregas}}"><span><i class="fa fa-file-upload"></i></span> Entregas</a></li>
+                <li><a href="{{site.notas}}"><span><i class="fa fa-pencil-alt"></i></span> Notas</a></li>
+                <li><a href="{{site.skel}}"><span><i class="fa fa-file-download"></i></span> Descargas</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1E1yVqY2mcRildPgzFMoAcsHv-fpWzdUqHFDpb-25Yz4/edit?usp=sharing"><i class="fa fa-fist-raised"></i></span> Challenges</a></li>
               </ul>
             </li>
             <li>
-              <a href="{{site.github.repository_url}}/blob/master/{{page.path}}" class="header-icon" target="_blank"><span><i class="fab fa-fw fa-github"></i></span> Editar en GitHub</a>
+              <a href="{{site.github.repository_url}}/blob/master/{{page.path}}" class="header-icon" target="_blank"><span><i class="fab fa-github"></i></span> Editar en GitHub</a>
             </li>
           </ul>
         </div>
