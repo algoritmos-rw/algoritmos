@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Material Sobre el Lenguaje C
-permalink: /material/apuntes/c
+permalink: /material/c
 math: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Ejemplos de Código
-permalink: /material/apuntes/ejemplos
+permalink: /material/ejemplos
 math: true
 ---
 

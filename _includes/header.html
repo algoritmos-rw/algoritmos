@@ -26,29 +26,27 @@
                 <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="{% if page.permalink == '/bibliografia/' %}active{% endif %}"><a href="{{ '/bibliografia/' | relative_url }}"><i class="fa fa-book"></i></span> Bibliografía</a></li>
-                <li class="{% if page.permalink == '/material/apuntes' %}active{% endif %}"><a href="{{ '/material/apuntes/' | relative_url }}"><i class="fa fa-book-reader"></i></span> Apuntes del curso</a></li>
+                <li class="{% if page.permalink == '/material' %}active{% endif %}"><a href="{{ '/material/' | relative_url }}"><i class="fa fa-book-reader"></i></span> Apuntes y Guías del curso</a></li>
                 <li>
                   <a href="{{site.data.sitios.drive}}" class="header-icon" target="_blank"><span><i class="fab fa-google-drive"></i></span> Drive</a>
                 </li>
                 <li>
                   <a href="{{site.data.sitios.youtube}}" class="header-icon" target="_blank"><span><i class="fab fa-youtube"></i></span> Canal</a>
                 </li>
-                <li class="{% if page.permalink == '/material/' %}active{% endif %}"><a href="{{ '/material/' | relative_url }}"><i class="fa fa-paperclip"></i></span> Material Completo</a></li>
+                <li><a href="{{ '/faq/' | relative_url }}"><i class="far fa-question-circle"></i></span> FAQ</a></li>
               </ul>
             </li>
-            
-            <li class="{% if page.permalink == '/encuestas/' %}active{% endif %}"><a href="{{ '/encuestas/' | relative_url }}"><i class="fa fa-poll"></i></span> Encuestas</a></li>
-            <li class="{% if page.permalink == '/infraestructura/' %}active{% endif %}"><a href="{{ '/infraestructura/' | relative_url }}"><i class="fa fa-network-wired"></i></span> Infraestructura</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-friends"></i></span> Alumno
                 <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><a href="{{site.skel}}"><span><i class="fa fa-file-download"></i></span> Descargas</a></li>
                 <li><a href="{{site.entregas}}"><span><i class="fa fa-file-upload"></i></span> Entregas</a></li>
                 <li><a href="{{site.notas}}"><span><i class="fa fa-pencil-alt"></i></span> Notas</a></li>
-                <li><a href="{{site.skel}}"><span><i class="fa fa-file-download"></i></span> Descargas</a></li>
-                <li><a href="{{ '/faq/' | relative_url }}"><i class="far fa-question-circle"></i></span> FAQ</a></li>
               </ul>
             </li>
+            <li class="{% if page.permalink == '/encuestas/' %}active{% endif %}"><a href="{{ '/encuestas/' | relative_url }}"><i class="fa fa-poll"></i></span> Encuestas</a></li>
+            <li class="{% if page.permalink == '/infraestructura/' %}active{% endif %}"><a href="{{ '/infraestructura/' | relative_url }}"><i class="fa fa-network-wired"></i></span> Infraestructura</a></li>
             <li>
               <a href="{{site.github.repository_url}}/blob/master/{{page.path}}" class="header-icon" target="_blank"><span><i class="fab fa-github"></i></span> Editar en GitHub</a>
             </li>

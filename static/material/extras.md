@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Material Extra
-permalink: /material/apuntes/extras
+permalink: /material/extras
 math: true
 ---
 

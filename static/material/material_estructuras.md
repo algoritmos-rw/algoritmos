@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Material y visualizaciones sobre estructuras de datos
-permalink: /material/apuntes/estructuras
+permalink: /material/estructuras
 math: true
 ---
 
