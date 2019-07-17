@@ -21,7 +21,8 @@
             <li class="{% if page.permalink == '/regimen/' %}active{% endif %}"><a href="{{ '/regimen/' | relative_url }}"><i class="fa fa-tasks"></i></span> Régimen</a></li>
             <li class="{% if page.permalink == '/calendario/' %}active{% endif %}"><a href="{{ '/calendario/' | relative_url }}"><i class="fa fa-calendar-alt"></i></span> Calendario</a></li>
             <li class="{% if page.permalink == '/tps/' %}active{% endif %}"><a href="{{ '/tps/' | relative_url }}"><i class="fa fa-briefcase"></i></span> TPs</a></li>
-            <li class="dropdown">
+            {% assign menu_material = "/bibliografia/, /material, /faq/" | split: ", " %}
+            <li class="dropdown {% if page.permalink contains 'material' or menu_material contains page.permalink %}active{% endif %}">
               <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-paperclip"></i></span> Material
                 <span class="caret"></span></a>
               <ul class="dropdown-menu">
