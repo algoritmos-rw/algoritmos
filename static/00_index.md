@@ -5,57 +5,25 @@ permalink: /
 
 # Inicio
 
-  <p>
-    Este es el sitio de la materia <strong>Algoritmos y Programación II</strong>, 
-    curso <strong>Buchwald</strong> (ex <strong>Wachenchauzer</strong>), de FIUBA.
-  </p>
+Este es el sitio de la materia **Algoritmos y Programación II**, curso **Buchwald** (ex **Wachenchauzer**), de FIUBA.
 
-  <p>
-    En caso de encontrar algún problema con la página (desde errores de fechas, links rotos, falta publicar algún trabajo, o lo que fuere), por favor crear un issue en <a href="{{site.github.repository_url}}/issues">la página de issues del repositorio</a>.
-  </p>
 
-  <h3 class="page-heading">Novedades</h3>
+En caso de encontrar algún problema con la página (desde errores de fechas, links rotos, falta publicar algún trabajo, 
+o lo que fuere), por favor crear un issue en [la página de issues del repositorio]({{site.github.repository_url}}/issues).
 
-  <ul class="post-list">
-  {% assign inicio_cuatrimestre = site.data.cuatrimestre.inicio_cuatrimestre | date: "%s" %}
 
-	{% for post in site.posts limit:15 %}
+## Links Principales
 
-    {% assign date = post.date | date: "%s" %}
-    {% if date < inicio_cuatrimestre %}
-      {% continue %}
-    {% endif %}
-	  <li>
-      <a class="post-link" href="{{ post.url | relative_url }}">
-        <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
-      </a>
-      &ndash; 
-      <p class="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
-	  </li>
-	{% endfor %}
-  </ul>
+* [Formulario de alta]({{site.data.cuatrimestre.formulario_alta}}) a la 
+  [lista de correos]({{site.data.sitios.lista}})
+* [Formulario de inscripción de grupos]({{site.data.cuatrimestre.formulario_grupos}})
+* <a href="{{site.data.sitios.drive}}"><i class="fab fa-google-drive"/> Drive general de la materia</a>
+* <a href="{{site.data.sitios.youtube}}"><i class="fab fa-youtube"/> Canal de YouTube</a> del curso (<i class="fa fa-hourglass-start"/> En progreso)
+* [Página de visualizaciones recomendada](http://visualgo.net/)
 
-  <div id="embedded-calendario">
-    <h3 class="page-heading">Información sobre próximas clases</h3>
-    <p>
-      Recomendamos revisar el <a href="{{site.data.cuatrimestre.calendario_detallado}}">calendario detallado</a> 
-      de la materia.
-    </p>
+## Información sobre próximas clases
+
+Recomendamos revisar el [calendario detallado]({{site.data.cuatrimestre.calendario_detallado}}) de la materia.
+  <div>
     <iframe src="{{site.data.cuatrimestre.calendario_embebido}}" width="100%" height="100%"></iframe>
   </div>
-
-  <div id='calendario'>
-    <h3 class="page-heading">Próximas fechas importantes</h3>
-    <table class="table table-striped">
-      <tbody id="tabla-calendario">
-        <tr>
-          <td><strong>Día</strong></td>
-          <td><strong>Fecha</strong></td>
-          <td><strong>Detalle</strong></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <script src="{{ '/assets/js/calendario.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/index.js' | relative_url }}"></script>

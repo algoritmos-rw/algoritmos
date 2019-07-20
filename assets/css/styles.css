@@ -120,3 +120,7 @@ pre code {
 .header-icon:hover svg {
   opacity: 1.0;
 }
+
+.fa-youtube:hover {
+  color: red;
+}

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Centralidad en un Grafo
-permalink: /material/centralidad
+permalink: /material/apuntes/centralidad
 math: true
 ---
 

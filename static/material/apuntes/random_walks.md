@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Random Walks
-permalink: /material/random_walks
+permalink: /material/apuntes/random_walks
 math: true
 ---
 

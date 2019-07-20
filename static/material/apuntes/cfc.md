@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Componentes Fuertemente Conexas"
-permalink: /material/cfc
+permalink: /material/apuntes/cfc
 math: true
 ---
 
@@ -71,8 +71,8 @@ Siendo que es tan solo una aplicación de un algoritmo DFS, que utiliza pilas (l
 cada vértice aparece una vez en cada pila únicamente, el orden será $$\mathcal{O}(V + E)$$.
 Realizamos el seguimiento, paso a paso, sobre el siguiente grafo:
 
-<img src="../assets/img/material/cfc.png" alt="grafo con cfcs" width="80%"/>
-<img src="../assets/img/material/cfc_seguimiento.png" alt="grafo con cfcs" width="100%"/>
+<img src="../../assets/img/material/cfc.png" alt="grafo con cfcs" width="80%"/>
+<img src="../../assets/img/material/cfc_seguimiento.png" alt="grafo con cfcs" width="100%"/>
 
 ## Bibliografía y referencias
 

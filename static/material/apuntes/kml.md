@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Archivos KML
-permalink: /material/kml
+permalink: /material/apuntes/kml
 math: true
 ---
 

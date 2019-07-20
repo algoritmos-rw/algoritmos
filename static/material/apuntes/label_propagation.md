@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Comunidades y Label Propagation
-permalink: /material/label_propagation
+permalink: /material/apuntes/label_propagation
 math: true
 ---
 
