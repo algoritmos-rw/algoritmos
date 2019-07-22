@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Apuntes y Guías del Curso
-permalink: /material
+permalink: /material/
 math: true
 ---
 
