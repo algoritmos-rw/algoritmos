@@ -1,65 +1,65 @@
 TP0:
   id: TP0
-  publicacion: 2019-03-15
-  entrega: 2019-03-22
+  publicacion: 2019-08-26
+  entrega: 2019-09-02
   enunciado_link: /tps/tp0
 
 Vector:
   id: Vector
-  publicacion: 2019-03-22
-  entrega: 2019-03-25
+  publicacion: 2019-09-02
+  entrega: 2019-09-06
   enunciado_link: /tps/vector
 
 Pila:
   id: Pila
-  publicacion: 2019-03-25
-  entrega: 2019-04-01
+  publicacion: 2019-09-06
+  entrega: 2019-09-13
   enunciado_link: /tps/pila
 
 Cola:
   id: Cola
-  publicacion: 2019-04-01
-  entrega: 2019-04-08
+  publicacion: 2019-09-13
+  entrega: 2019-09-20
   enunciado_link: /tps/cola
 
 Lista:
   id: Lista
-  publicacion: 2019-04-08
-  entrega: 2019-04-15
+  publicacion: 2019-09-20
+  entrega: 2019-09-27
   enunciado_link: /tps/lista
 
 TP1:
   id: TP1
-  publicacion: 2019-04-15
-  entrega: 2019-05-10
+  publicacion: 2019-09-27
+  entrega: 2019-10-21
   enunciado_link: /tps/2019_1/tp1
 
 Hash:
   id: Hash
-  publicacion: 2019-04-22
-  entrega: 2019-05-03
+  publicacion: 2019-09-30
+  entrega: 2019-10-11
   enunciado_link: /tps/hash
 
 ABB:
   id: ABB
-  publicacion: 2019-04-29
-  entrega: 2019-05-17
+  publicacion: 2019-10-07
+  entrega: 2019-10-28
   enunciado_link: /tps/abb
 
 Heap:
   id: Heap
-  publicacion: 2019-05-10
-  entrega: 2019-05-24
+  publicacion: 2019-10-21
+  entrega: 2019-11-04
   enunciado_link: /tps/heap
 
 TP2:
   id: TP2
-  publicacion: 2019-05-13
-  entrega: 2019-06-07
+  publicacion: 2019-10-25
+  entrega: 2019-11-22
   enunciado_link: /tps/2019_1/tp2
 
 TP3:
   id: TP3
-  publicacion: 2019-06-07
-  entrega: 2019-06-28
+  publicacion: 2019-11-22
+  entrega: 2019-12-06
   enunciado_link: /tps/2019_1/tp3
