@@ -14,16 +14,10 @@ ayudantes:
   github:
   linkedin: 
 
-- nombre: Ana Secchi
-  foto: /assets/img/docentes/anas.jpg
-  mail: asecchi@fi.uba.ar
+- nombre: Agustín López Núñez
+  foto: /assets/img/docentes/unknown.png
+  mail: lopezn.agustin@gmail.com
   github: 
-  linkedin:
-
-- nombre: Camila Bojman
-  foto: /assets/img/docentes/camib.jpg
-  mail: camiboj@gmail.com
-  github: camiboj 
   linkedin: 
 
 - nombre: Camila Dvorkin
@@ -32,10 +26,22 @@ ayudantes:
   github: camidvorkin 
   linkedin: 
 
+- nombre: Casimiro Pastine
+  foto: /assets/img/docentes/casimirop.jpg
+  mail: casimiropastine@gmail.com
+  github: pastine
+  linkedin: casimiro-pastine-993916162
+
 - nombre: Cecilia Hortas
   foto: /assets/img/docentes/cecih.jpg
   mail: ceci.hortas@gmail.com
   github: chortas
+  linkedin: 
+
+- nombre: Daniela Genaro
+  foto: /assets/img/docentes/unknown.png
+  mail: danielagenaro98@gmail.com 
+  github: 
   linkedin: 
 
 - nombre: Ezequiel Genender
@@ -44,11 +50,29 @@ ayudantes:
   github: egenender 
   linkedin: ezequiel-genender-peña-8a6821125
 
+- nombre: Facundo Bravo
+  foto: /assets/img/docentes/unknown.png
+  mail: facu.343@gmail.com
+  github: facuub
+  linkedin: 
+
 - nombre: Fiona González Lisella
   foto: /assets/img/docentes/fionag.jpg
   mail: fgonzalezlisella@gmail.com
   github: Fgl
   linkedin: fgonzalezlisella
+
+- nombre: Federico Brasburg
+  foto: /assets/img/docentes/unknown.png
+  mail: federico.brasburg@gmail.com
+  github: fedebrasburg
+  linkedin: 
+
+- nombre: Francisco Bertoloto
+  foto: /assets/img/docentes/unknown.png
+  mail: franciscoibertolotto@gmail.com
+  github: 
+  linkedin: 
 
 - nombre: Gianmarco Cafferata
   foto: /assets/img/docentes/gianc.jpg
@@ -68,17 +92,17 @@ ayudantes:
   github: jas-chu
   linkedin: jasmina-sella-faena-a75752b1
 
-- nombre: Javier Di Santo
-  foto: /assets/img/docentes/javids.png
-  mail: jdisanto@fi.uba.ar
-  github:  JDSanto
-  linkedin: 
-
 - nombre: Jorge Collinet
   foto: /assets/img/docentes/jorgec.jpg
   mail: collinetjorge@gmail.com
   github: jorgeCollinet
   linkedin: jorge-collinet-311723b1
+
+- nombre: Julián Crespo
+  foto: /assets/img/docentes/julic.jpg  
+  mail: juliancrespo15@gmail.com
+  github: komod0
+  linkedin: julian-crespo-957634b9
 
 - nombre: Lautaro Manzano
   foto: /assets/img/docentes/lautarom.jpg
@@ -86,11 +110,11 @@ ayudantes:
   github: ManzanoLautaro
   linkedin: 
 
-- nombre: Matías Cano
-  foto: /assets/img/docentes/matic.png
-  mail: tutecano1995@gmail.com
-  github: tutecano1995 
-  linkedin: matías-cano-1b1a57135
+- nombre: Mauro Santoni
+  foto: /assets/img/docentes/unknown.png
+  mail: mausantoni@gmail.com
+  github: 
+  linkedin: 
 
 - nombre: Milena Marchese
   foto: /assets/img/docentes/milem.jpg
