@@ -15,7 +15,7 @@ ayudantes:
   linkedin: 
 
 - nombre: Agustín López Núñez
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/agusln.jpg
   mail: lopezn.agustin@gmail.com
   github: 
   linkedin: 
@@ -39,7 +39,7 @@ ayudantes:
   linkedin: 
 
 - nombre: Daniela Genaro
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/danig.jpg
   mail: danielagenaro98@gmail.com 
   github: 
   linkedin: 
@@ -51,8 +51,8 @@ ayudantes:
   linkedin: ezequiel-genender-peña-8a6821125
 
 - nombre: Facundo Bravo
-  foto: /assets/img/docentes/unknown.png
-  mail: facu.343@gmail.com
+  foto: /assets/img/docentes/facub.jpg
+  mail: fbravo@fi.uba.ar
   github: facuub
   linkedin: 
 
@@ -63,14 +63,20 @@ ayudantes:
   linkedin: fgonzalezlisella
 
 - nombre: Federico Brasburg
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/fedebra.png
   mail: federico.brasburg@gmail.com
   github: fedebrasburg
   linkedin: 
 
-- nombre: Francisco Bertoloto
-  foto: /assets/img/docentes/unknown.png
-  mail: franciscoibertolotto@gmail.com
+- nombre: Federico del Mazo
+  foto: /assets/img/docentes/fededm.jpg
+  mail: delMazoFederico@gmail.com
+  github: FdelMazo
+  linkedin: FdelMazo
+
+- nombre: Francisco Bertolotto
+  foto: /assets/img/docentes/franb.jpg
+  mail: fbertolotto@fi.uba.ar
   github: 
   linkedin: 
 
@@ -111,10 +117,16 @@ ayudantes:
   linkedin: 
 
 - nombre: Mauro Santoni
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/mauros.jpg
   mail: mausantoni@gmail.com
   github: 
   linkedin: 
+
+- nombre: Matías Cano
+  foto: /assets/img/docentes/matic.png
+  mail: tutecano1995@gmail.com
+  github: tutecano1995 
+  linkedin: matías-cano-1b1a57135
 
 - nombre: Milena Marchese
   foto: /assets/img/docentes/milem.jpg
