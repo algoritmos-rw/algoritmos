@@ -1,7 +1,7 @@
 ---
 layout: page
 title: TP1 - Parte 1– Manejo de archivos, cadenas
-permalink: '/tps/2019_1/tp1_1'
+permalink: '/tps/2019_2/tp1_1'
 math: true
 
 trabajo: TP1 (Parte 1)
@@ -17,11 +17,8 @@ trabajo: TP1 (Parte 1)
 * Contenido
 {:toc}
 
-El Trabajo Práctico número 1 tiene fecha de entrega para el **10 de mayo**, y
-está divido en tres partes:
-* implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
-* implementación de aplicación [fixcol](#fixcol)
-* implementación de interprete del lenguaje [Brainfuck](https://es.wikipedia.org/wiki/Brainfuck)
+El Trabajo Práctico número 1 parte 1 tiene fecha de entrega para el **21 de octubre** y 
+contempla la implementación de funciones auxiliares para cadenas ([`strutil`](#manejo-de-cadenas))
 
 ## Manejo de cadenas
 
