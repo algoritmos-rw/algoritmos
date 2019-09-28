@@ -112,7 +112,8 @@ join(["abc", "def"], '\0')  →  "abcdef"
 Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(n)$$ (Siendo $$n$$ la longitud de la 
 cadena resultante).
 
-Las pruebas del corrector automático proveen una indicación del comportamiento de `join()` (si bien **todas las funciones deben correr en tiempo lineal**, `join()` provee una dificultad de implementación mayor a `split()` o
+Las pruebas del corrector automático proveen una indicación del comportamiento de `join()` (si bien **todas las 
+funciones deben correr en tiempo lineal**, `join()` provee una dificultad de implementación mayor a `split()` o
 `substr()`). 
 
 Este sería un test con comportamiento lineal:
@@ -164,9 +165,7 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
 - `strutil.c` con las implementaciones de las funciones `substr`, `split`, `join` y `free_strv`.
 
 
-El corrector automático va a interpretar ese archivo de dependencias y va a
-compilar todos los `.o` especificados a partir de los `.h` y `.c` que deberán
-enviar, con los siguientes flags de `GCC`:
+El corrector va a compilar con los siguientes flags de `GCC`:
 
 ```
 -g -std=c99 -Wall -Wtype-limits -pedantic -Wconversion -Wno-sign-conversion
@@ -177,5 +176,4 @@ La entrega se realiza:
 1. En forma digital a través del [sistema de entregas]({{site.entregas}}):
 todos los archivos mencionados en un único archivo ZIP.
 2. En papel durante la clase (si su ayudante lo requiere) el código del Trabajo
-en hoja A4 **abrochadas, sin folio, sin informe ni carátula**. No es necesario 
-reimprimir el código de los TDA.
+en hoja A4 **abrochadas, sin folio, sin informe ni carátula**.
