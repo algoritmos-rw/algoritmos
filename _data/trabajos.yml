@@ -29,10 +29,10 @@ Lista:
   enunciado_link: /tps/lista
 
 TP1:
-  id: TP1
+  id: TP1 (Strutil)
   publicacion: 2019-09-27
   entrega: 2019-10-21
-  enunciado_link: /tps/2019_2/tp1
+  enunciado_link: /tps/2019_2/tp1_strutil
 
 Hash:
   id: Hash
