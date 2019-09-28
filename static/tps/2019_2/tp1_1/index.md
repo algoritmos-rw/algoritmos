@@ -1,7 +1,7 @@
 ---
 layout: page
 title: TP1 - Parte 1– Manejo de archivos, cadenas
-permalink: '/tps/2019_2/tp1_1'
+permalink: '/tps/2019_2/tp1_strutil'
 math: true
 
 trabajo: TP1 (Parte 1)
