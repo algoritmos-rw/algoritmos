@@ -23,7 +23,7 @@ contempla la implementación de funciones auxiliares para cadenas ([`strutil`](#
 ## Manejo de cadenas
 
 Se pide implementar las funciones del archivo adjunto en [el sitio de descargas]({{site.skel}}) que se describen a 
-continuación. Se permite utilizar cualquier función de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de strtok. Para la implementación de estas funciones no se puede hacer uso de TDAs.
+continuación. Se permite utilizar cualquier función de [string.h](http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html), aunque se desaconseja el uso de `strtok`. Para la implementación de estas funciones no se puede hacer uso de TDAs.
 
 Se recomienda leer la documentación de las siguientes funciones del módulo de `string.h`: 
 - `strlen`
