@@ -52,7 +52,7 @@ Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal
 
 ### split()
 
-La función `split()` divide una cadena en subcadenas en cada ocurrencia de un
+La función `split()` divide una cadena en subcadenas por cada ocurrencia de un
 caracter de separación determinado. Por ejemplo, separando por comas:
 
 ``` cpp
