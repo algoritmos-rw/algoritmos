@@ -162,7 +162,6 @@ de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
 La entrega incluye, obligatoriamente, los siguientes archivos de código:
 
 - `strutil.c` con las implementaciones de las funciones `substr`, `split`, `join` y `free_strv`.
-- El código de los TDAs programados en la cursada que se requieran.
 
 
 El corrector automático va a interpretar ese archivo de dependencias y va a
