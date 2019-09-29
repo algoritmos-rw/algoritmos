@@ -34,8 +34,13 @@ TP1:
   entrega: 2019-10-21
   enunciado_link: /tps/2019_2/tp1_strutil
 
-Hash:
-  id: Hash
+TP1_2:
+  id: TP1 (Parte 2)
+  publicacion: 2019-09-27
+  entrega: 2019-10-30
+  enunciado_link: /tps/2019_2/tp1_2
+
+id: Hash
   publicacion: 2019-09-30
   entrega: 2019-10-11
   enunciado_link: /tps/hash
