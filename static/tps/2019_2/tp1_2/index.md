@@ -27,7 +27,7 @@ de dos aplicaciones similares a comandos Unix: [`grep`](#grep) y [`dc`](#dc)
 ### Grep
 
 Se pide implementar una versión simplificada de la utilidad [grep](http://man7.org/linux/man-pages/man1/egrep.1.html) de Unix. 
-`grep` imprime las líneas de un archivo, o de entrada estándar que cumpla con la expresión regular pasada por parámetro.
+`grep` imprime las líneas de un archivo (o de entrada estándar si no se especifica ningún archivo) que cumplan con la expresión regular pasada como parámetro.
 
 En nuestro caso, el programa va a recibir una cadena simple y va a chequear si esa cadena está contenida en cada línea del archivo o de la entrada estándar.
 Nuestra implementación recibirá:
