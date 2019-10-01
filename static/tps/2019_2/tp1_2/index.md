@@ -20,7 +20,7 @@ trabajo: TP1 (Parte 2)
 {:toc}
 
 El Trabajo Práctico número 1 parte 2 tiene fecha de entrega para el **viernes 28/10**, consta de la implementación 
-de aplicaciones similares a comandos Unix: [`grep`](#grep) y [`dc`](#dc)
+de dos aplicaciones similares a comandos Unix: [`grep`](#grep) y [`dc`](#dc)
 
 ## Aplicaciones
 
