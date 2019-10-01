@@ -94,7 +94,7 @@ Hola, como te va?
 
 - Todas las salidas deben hacerse por salida estándar (`stdout`) y en caso de que no haya ningún "match", no se debe imprimir nada.
 
-- Se puede implementar una solución por _fuerza bruta_, que lugar a lugar vaya realizando las comparaciones de la subcadena sobre cada línea. Igualmente, recomendamos implementar una mejor solución, como puede ser el [algoritmo de Karp-Rabin](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm), que utiliza funciones de hashing para mejorar la eficiencia temporal. 
+- Se puede implementar una solución por _fuerza bruta_, que lugar a lugar vaya realizando las comparaciones de la subcadena sobre cada línea; o utilizar la función `strstr(3)`. Igualmente, recomendamos implementar una mejor solución, como puede ser el [algoritmo de Karp-Rabin](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm), que utiliza funciones de hashing para mejorar la eficiencia temporal. 
 
 
 ### dc
