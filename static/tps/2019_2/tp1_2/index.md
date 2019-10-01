@@ -31,7 +31,7 @@ Se pide implementar una versión simplificada de la utilidad [grep](http://man7.
 
 En nuestro caso, el programa va a recibir una cadena simple y va a chequear si esa cadena está contenida en cada línea del archivo o de la entrada estándar.
 Nuestra implementación recibirá:
- - Una cadena, que va a ser la que se usará para  ver si esa cadena está contenida en cada línea del archivo o entrada estándar,
+ - Una cadena, que va a ser la que se usará para  ver si esa cadena está contenida en cada línea del archivo o entrada estándar.
  - Un numero entero `N` que será la cantidad de líneas a mostrar por consola antes del "match" de la cadena y la línea leída
  - Opcionalmente un nombre de archivo que va a ser el archivo que grep va a tener que leer, si no recibe este parámetro, tiene que leer de entrada estándar. 
 Por ejemplo, usando el archivo `charla.txt`:
