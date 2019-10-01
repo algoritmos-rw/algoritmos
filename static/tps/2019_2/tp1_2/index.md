@@ -29,7 +29,7 @@ de dos aplicaciones similares a comandos Unix: [`grep`](#grep) y [`dc`](#dc)
 Se pide implementar una versión simplificada de la utilidad [grep](http://man7.org/linux/man-pages/man1/egrep.1.html) de Unix. 
 `grep` imprime las líneas de un archivo (o de entrada estándar si no se especifica ningún archivo) que cumplan con la expresión regular pasada como parámetro.
 
-En nuestro caso, el programa va a recibir una cadena simple y va a chequear si esa cadena está contenida en cada línea del archivo o de la entrada estándar.
+En nuestro caso, el programa va a recibir simplemente una cadena de texto (no una expresión regular) y comprobará si esa cadena está contenida en cada una de las líneas del archivo (o entrada estándar, según corresponda).
 Nuestra implementación recibirá:
  - Una cadena, que va a ser la que se usará para  ver si esa cadena está contenida en cada línea del archivo o entrada estándar.
  - Un numero entero `N` que será la cantidad de líneas a mostrar por consola antes del "match" de la cadena y la línea leída
