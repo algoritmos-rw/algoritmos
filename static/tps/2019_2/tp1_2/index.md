@@ -119,7 +119,7 @@ ERROR
 
 #### Operaciones
 - Todas las operaciones trabajarán con números enteros, y devolverán números enteros. 
-- Las operaciones pueden ser: suma (`+`), resta (`-`), multiplicación (`*`), división (`/`), obtener la raíz (`sqrt`), obtener la potencia (`^`), obtener el logaritmo (`log`) y operador ternario (`?`). 
+- Las operaciones pueden ser: suma (`+`), resta (`-`), multiplicación (`*`), división entera (`/`), obtener la raíz (`sqrt`), obtener la potencia (`^`), obtener el logaritmo (`log`) y operador ternario (`?`). 
 - La operación de suma debe agarrar los dos últimos elementos y sumar el último con el anterior: `5 10 + → 10 + 5 = 15`
 - La operación de resta debe agarrar los dos últimos elementos y restar el último con el anterior: `5 10 - → 10 - 5 = 5`
 - La operación de multiplicación debe agarrar los dos últimos elementos y multiplicar el último con el anterior: `5 10 * → 10 * 5 = 50`. 
