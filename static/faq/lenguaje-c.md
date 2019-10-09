@@ -84,10 +84,25 @@ Por otro lado, al hacer `#define _POSIX_C_SOURCE 200809L` y luego `#include <std
 
 ## ¿Qué es un puntero a función?
 
-Los punteros a funcion son variables que apuntan a funciones para que puedan ser invocadas sin conocer su nombre. En C, la sintaxis para declararlas es diferente al resto de los tipos. Por ejemplo, la sintaxis para declarar un puntero a función que recibe dos cadenas y devuelve un entero es la siguiente:
+Los punteros a función son variables que apuntan a funciones para que puedan ser invocadas sin conocer su nombre. En C, la sintaxis para declararlas es diferente al resto de los tipos. Por ejemplo, dada la siguiente función, que recibe dos cadenas y devuelve un entero:
+
+```c
+int mi_funcion(char *a, char *b) {
+    return a[0] == b[0];
+}
+```
+
+Es posible declarar una variable cuyo tipo sea "puntero a función que recibe dos cadenas y devuelve un entero", y asignar a esa variable la dirección de la función:
 
 ``` cpp
-int (*func)(char*, char*);
+int (*mi_puntero)(char*, char*);  // Declara la variable (puntero).
+mi_puntero = mi_funcion;          // Asigna un valor al puntero.
+```
+
+Una vez se ha inicializado la variable correctamente, se puede invocar como si el puntero mismo fuera una función:
+
+```c
+int ret = mi_puntero("hola", "adios");
 ```
 
 Estas funciones se usan típicamente para delegar la ejecución de un fragmento de código a otra función. Por ejemplo, para aplicarle una operación a todos los elementos de un arreglo de enteros podríamos tener la función:
@@ -106,7 +121,7 @@ int multiplicar_por_dos(int numero)
 }
 ```
 
-Podríamos multiplicar por dos a todos los elementos del arreglo usando un puntero a la función:
+Podríamos multiplicar por dos todos los elementos del arreglo usando un puntero a la función:
 
 ``` cpp
 int arreglo[3] = { 2, 5, 4 };
