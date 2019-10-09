@@ -24,7 +24,6 @@ permalink: /docentes/
           <div class="docente-social">
             {%if profesor.mail%}<a href="mailto:{{profesor.mail}}" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-envelope"></i></a>{%endif%}
             {%if profesor.github%}<a href="https://github.com/{{profesor.github}}" class="btn-social btn-outline social-link"><i class="fab fa-fw fa-github"></i></a>{%endif%}
-            {%if profesor.linkedin%}<a href="https://www.linkedin.com/in/{{profesor.linkedin}}" class="btn-social btn-outline social-link"><i class="fab fa-fw fa-linkedin"></i></a>{%endif%}
           </div>
         </div>
     </td>
@@ -50,7 +49,6 @@ permalink: /docentes/
         <div class="docente-social">
           {%if ayudante.mail%}<a href="mailto:{{ayudante.mail}}" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-envelope"></i></a>{%endif%}
           {%if ayudante.github%}<a href="https://github.com/{{ayudante.github}}" class="btn-social btn-outline social-link"><i class="fab fa-fw fa-github"></i></a>{%endif%}
-          {%if ayudante.linkedin%}<a href="https://www.linkedin.com/in/{{ayudante.linkedin}}" class="btn-social btn-outline social-link"><i class="fab fa-fw fa-linkedin"></i></a>{%endif%}
         </div>
       </div>
     </td>
