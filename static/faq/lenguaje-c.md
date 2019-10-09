@@ -94,13 +94,13 @@ Estas funciones se usan típicamente para delegar la ejecución de un fragmento 
 
 ``` cpp
 /* Aplica la operación pasada por parámetro a todos los elementos del arreglo. */
-void aplicar(int arreglo[], size_t cant, void (*operacion)(int));
+void aplicar(int arreglo[], size_t cant, int (*operacion)(int));
 ```
 
 Entonces si tuviéramos una función para multiplicar por dos:
 
 ``` cpp
-void multiplicar_por_dos(int numero)
+int multiplicar_por_dos(int numero)
 {
     return numero * 2;
 }
