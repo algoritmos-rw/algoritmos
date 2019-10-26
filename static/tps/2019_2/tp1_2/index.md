@@ -32,7 +32,7 @@ Se pide implementar una versión simplificada de la utilidad [grep-link1](http:/
 En nuestro caso, el programa va a recibir simplemente una cadena de texto (no una expresión regular) y comprobará si esa cadena está contenida en cada una de las líneas del archivo (o entrada estándar, según corresponda).
 Nuestra implementación recibirá:
  - Una cadena, que va a ser la que se usará para  ver si esa cadena está contenida en cada línea del archivo o entrada estándar.
- - Un número entero `N` que, de ser mayor que cero, indicará el número de líneas a imprimir como contexto (como en la opción -B de grep): si _n_ es 3, para cada línea que contenga la cadena buscada se deberá imprimir la línea que la contiene, precedida las 3 líneas anteriores a la misma en el archvo. (Ver ejemplos más adelante.)```
+ - Un número entero `N` que, de ser mayor que cero, indicará el número de líneas a imprimir como contexto (como en la opción -B de grep): si _n_ es 3, para cada línea que contenga la cadena buscada deberá quedar impresa la línea que la contiene, precedida las 3 líneas anteriores a la misma en el archivo. (_Aclaración:_ independientemente del contexto, ninguna línea debe imprimirse más de una vez. Si se pide contexto, entonces para cada línea con la cadena buscada debe verse en pantalla esa línea, precedida de tanto contexto como se haya pedido; pero si algunas de las líneas a imprimir ya lo habían sido antes, no se debe imprimirlas de nuevo. **Ver ejemplos más adelante.**)
  - Opcionalmente un nombre de archivo que va a ser el archivo que grep va a tener que leer, si no recibe este parámetro, tiene que leer de entrada estándar. 
 Por ejemplo, usando el archivo `charla.txt`:
 
@@ -45,6 +45,7 @@ Espléndido, acá haciendo el tp1 de algo2
 Uuuu q diverr
 Se ...
 
+### Formas de invocación (archivo, pipe, redirección)
 
 $ ./grep vos 0 charla.txt 
 Bien, y a vos?
@@ -55,6 +56,8 @@ Bien, y a vos?
 $ ./grep vos 0 < charla.txt
 Bien, y a vos?
 
+### Líneas de contexto (no se repiten)
+
 $ cat charla.txt | ./grep vos 1
 Hola, como te va?
 Bien, y a vos?
@@ -64,9 +67,16 @@ Hola!
 Hola, como te va?
 Bien, y a vos?
 
+### Líneas de contexto (se omite la repetición)
+
 $ cat charla.txt | ./grep Hola 1
 Hola!
 Hola, como te va?
+
+$ cat charla.txt | ./grep "?" 2
+Hola!
+Hola, como te va?
+Bien, y a vos?
 
 $ cat charla.txt | ./grep ien 0
 Bien, y a vos?
@@ -77,7 +87,10 @@ Hola, como te va?
 Bien, y a vos?
 Espléndido, acá haciendo el tp1 de algo2
 
-$ cat charla.txt | ./grep umpalumpa! 1 
+$ cat charla.txt | ./grep umpalumpa 1
+<no se imprime nada>
+
+### Cadenas con espacios
 
 $ ./grep "Hola, como te" 1 < charla.txt
 Hola!
