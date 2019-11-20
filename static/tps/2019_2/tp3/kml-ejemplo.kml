@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+		<name>KML TP3</name>
+		<Placemark>
+			<name>SAN</name>
+			<Point>
+				<coordinates>32.73356, -117.18966</coordinates>
+			</Point>
+		</Placemark>
+
+		<Placemark>
+			<name>ABQ</name>
+			<Point>
+				<coordinates>35.04022, -106.60919</coordinates>
+			</Point>
+		</Placemark>
+
+		<Placemark>
+			<name>HOU</name>
+			<Point>
+				<coordinates>29.64542, -95.27889</coordinates>
+			</Point>
+		</Placemark>
+
+		<Placemark>
+			<name>AUS</name>
+			<Point>
+				<coordinates>30.19453, -97.66987</coordinates>
+			</Point>
+		</Placemark>
+
+		<Placemark>
+			<name>LAX</name>
+			<Point>
+				<coordinates>33.94254, -118.40807</coordinates>
+			</Point>
+		</Placemark>
+
+		<Placemark>
+			<name>BNA</name>
+			<Point>
+				<coordinates>36.12448, -86.67818</coordinates>
+			</Point>
+		</Placemark>
+
+		<Placemark>
+			<LineString>
+				<coordinates>32.73356, -117.18966 35.04022, -106.60919</coordinates>
+			</LineString>
+		</Placemark>
+
+		<Placemark>
+			<LineString>
+				<coordinates>35.04022, -106.60919 29.64542, -95.27889</coordinates>
+			</LineString>
+		</Placemark>
+
+		<Placemark>
+			<LineString>
+				<coordinates>29.64542, -95.27889 30.19453, -97.66987</coordinates>
+			</LineString>
+		</Placemark>
+
+		<Placemark>
+			<LineString>
+				<coordinates>30.19453, -97.66987 33.94254, -118.40807</coordinates>
+			</LineString>
+		</Placemark>
+
+		<Placemark>
+			<LineString>
+				<coordinates>33.94254, -118.40807 36.12448, -86.67818</coordinates>
+			</LineString>
+		</Placemark>
+
+		<Placemark>
+			<LineString>
+				<coordinates>36.12448, -86.67818 32.73356, -117.18966</coordinates>
+			</LineString>
+		</Placemark>
+
+	</Document>
+</kml>
