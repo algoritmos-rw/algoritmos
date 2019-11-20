@@ -194,7 +194,7 @@ Dejamos un apunte para la explicación de qué es y cómo se calcula el
 [PageRank](/algo2/material/pagerank).
 
 _Nota_: PageRank en realidad realiza una aproxiación de otro tipo de centralidad (_Eigenvector Centrality_) que
-la que realmente buscamos en este ejercicio. De todas formas, consideramos como una implementación válida para 
+la que realmente buscamos en este ejercicio. De todas formas, la consideramos como una implementación válida para 
 este punto. 
 
 #### Betweeness Centrality (★★★)
