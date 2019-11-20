@@ -193,7 +193,7 @@ Dejamos un apunte para la explicación de qué es y cómo se calcula el
 [Betweeness Centrality](/algo2/material/centralidad) y otro sobre 
 [PageRank](/algo2/material/pagerank).
 
-_Nota_: PageRank en realidad realiza una aproxiación de otro tipo de centralidad (_Eigenvector Centrality_) que
+_Nota_: PageRank en realidad realiza una aproximación de otro tipo de centralidad (_Eigenvector Centrality_) que
 la que realmente buscamos en este ejercicio. De todas formas, la consideramos como una implementación válida para 
 este punto. 
 
