@@ -135,7 +135,7 @@ En la materia usamos los punteros a función para garantizar un comportamiento q
 void estructura_destruir(estructura_t* estructura, void (*f_dest)(void*));
 ```
 
-Que le aplique la función de destrucción a todos los elementos que están almacenados en ella. Si estos elementos también son genéricos y tienen su propia función de destrucción:
+que le aplique la función de destrucción a todos los elementos que están almacenados en ella. Si estos elementos también son genéricos y tienen su propia función de destrucción:
 
 ``` cpp
 void elemento_destruir(elemento_t* elem);
@@ -144,9 +144,8 @@ void elemento_destruir(elemento_t* elem);
 No se puede invocar directamente a la primitiva `estructura_destruir` con `elemento_destruir`, porque sus firmas son diferentes. Lo que se suele hacer es crear una función wrapper que enmascare el comportamiento:
 
 ``` cpp
-void elemento_destruir_wrapper(void* elem)
-{
-    elemento_destruir((elemento_t*) elem));
+void elemento_destruir_wrapper(void* elem) {
+    elemento_destruir(elem);
 }
 ```
 
