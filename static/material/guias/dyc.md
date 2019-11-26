@@ -131,6 +131,14 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 
     c. Dado lo obtenido en los puntos anteriores, ¿tiene sentido implementar MergeSort con $$k$$ separaciones, para $$k > 2$$?
 
+1.  Un algoritmo sencillo para multiplicar matrices de $$n \times n$$ demora $$\mathcal{O}(n^3)$$. 
+    El algoritmo de Strassen (que utiliza División y Conquista) lo hace en $$\mathcal{O}(n^{\log_2 7})$$. 
+    La profesora Manterola quiere implementar un algoritmo de División y Conquista que sea aún más veloz, 
+    donde divida al problema en `A` subproblemas de tamaño de $$\frac{n}{4}$$, y que juntar las soluciones 
+    parciales sea $$\mathcal{O}(n^2)$$. 
+    ¿Cuál es el máximo `A` para que el orden del algoritmo sea menor que el del algoritmo de Strassen? 
+    Justificar.
+
 ## Bibliografía y referencias
 
 - Weiss, Mark Allen: "Data Structures and Algorithms" (tercera edición), Pearson, 1999. Cap. 10.2: _Divide and Conquer_.
