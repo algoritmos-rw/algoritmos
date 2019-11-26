@@ -139,8 +139,3 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     ¿Cuál es el máximo `A` para que el orden del algoritmo sea menor que el del algoritmo de Strassen? 
     Justificar.
 
-## Bibliografía y referencias
-
-- Weiss, Mark Allen: "Data Structures and Algorithms" (tercera edición), Pearson, 1999. Cap. 10.2: _Divide and Conquer_.
-- Cormen, Thomas; Leiserson, Charles; Rivest, Ronald; Stein, Clifford: "Introduction to Algorithms" (tercera edición), MIT Press, 2009. Cap. 4: _Divide-and-Conquer_.
-
