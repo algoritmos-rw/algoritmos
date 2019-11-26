@@ -83,7 +83,7 @@ Sobre la complejidad, sea cual sea el caso, vamos a estar llenando siempre al ar
 
 	Indicar el orden de las primitivas.
 
-2. Dada una lista enlazada implementada con las siguientes estructuras:
+1. Dada una lista enlazada implementada con las siguientes estructuras:
 
 		typedef struct nodo_lista { 		typedef struct lista {
 			struct nodo_lista* prox; 			nodo_lista_t* prim;
@@ -97,36 +97,36 @@ Sobre la complejidad, sea cual sea el caso, vamos a estar llenando siempre al ar
 	Indicar el orden de complejidad de la primitiva.
 
 
-3. 	Dada una pila de enteros, escribir una función que determine si es piramidal. Una pila de enteros es
+1. 	Dada una pila de enteros, escribir una función que determine si es piramidal. Una pila de enteros es
 	piramidal si cada elemento es menor a su elemento inferior (en el sentido que va desde el tope de la 
 	pila hacia el otro extremo). La pila no debe ser modificada al terminar la función.
 	Indicar el orden del algoritmo propuesto. Justificar.
 
-4. 	Implementar la primitiva `void** cola_multiprimeros(const cola_t* cola, size_t k)` que dada una cola y un 
+1. 	Implementar la primitiva `void** cola_multiprimeros(const cola_t* cola, size_t k)` que dada una cola y un 
 	número $$k$$, devuelva los primeros $$k$$ elementos de la cola, en el mismo orden en el que habrían
 	salido de la cola. En caso que la cola tenga menos de $$k$$ elementos, rellenar con NULL.
 	La cola debe quedar en el mismo estado que al invocarse la primitiva.
 	Indicar el orden de ejecución del algoritmo. Justificar.
 
-5. 	Implementar la función `void** cola_multiprimeros(cola_t* cola, size_t k)` con el mismo comportamiento de la 
+1. 	Implementar la función `void** cola_multiprimeros(cola_t* cola, size_t k)` con el mismo comportamiento de la 
 	primitiva anterior.
 
-6. 	Implementar en C una primitiva void `lista_invertir(lista_t* lista)` que invierta la lista recibida
+1. 	Implementar en C una primitiva void `lista_invertir(lista_t* lista)` que invierta la lista recibida
 	por parámetro, sin utilizar estructuras auxiliares. Indicar y justificar el orden de la primitiva.
 
-7. 	Se quiere implementar un TDA ColaAcotada sobre un arreglo. Dicho TDA tiene un espacio para $$k$$ elementos 
+1. 	Se quiere implementar un TDA ColaAcotada sobre un arreglo. Dicho TDA tiene un espacio para $$k$$ elementos 
 	(que se recibe por parámetro al crear la estructura). Explicar cómo deberían implementarse las primitivas 
 	encolar y desencolar de tal manera que siempre sean operaciones de tiempo constante.
 
-8. 	Implementar una función que ordene de manera ascendente una pila de enteros sin conocer su estructura interna y 
+1. 	Implementar una función que ordene de manera ascendente una pila de enteros sin conocer su estructura interna y 
 	utilizando como estructura auxiliar sólo una pila auxiliar.
 	Por ejemplo, la pila `[ 4, 1, 5, 2, 3 ]` debe quedar como `[ 1, 2, 3, 4, 5 ]` (siendo el último elemento el tope de la pila, en ambos casos). Indicar y justificar el orden de la función.
 
-9. 	Implementar una función `void cola_filtrar(cola_t* cola, bool (*filtro)(void*))`, que elimine los elementos encolados
+1. 	Implementar una función `void cola_filtrar(cola_t* cola, bool (*filtro)(void*))`, que elimine los elementos encolados
 	para los cuales la función filtro devuelve `false`. Aquellos elementos que no son eliminados deben permanecer en el
 	mismo orden en el que estaban antes de invocar a la función. No es necesario destruir los elementos que sí fueron eliminados. Se pueden utilizar las estructuras auxiliares que se consideren necesarias y no está permitido acceder a la estructura interna de la cola (es una función). ¿Cuál es el orden del algoritmo implementado? 
 
-10. Sabiendo que la firma del iterador interno de la lista enlazada es:
+1. Sabiendo que la firma del iterador interno de la lista enlazada es:
 
 		void lista_iterar(lista_t* lista, bool (*visitar)(void* dato, void* extra), void* extra);
 

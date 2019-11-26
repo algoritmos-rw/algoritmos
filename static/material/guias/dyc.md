@@ -97,6 +97,8 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 
 1. Implementar, por división y conquista, una función que determine si un elemento se encuentra en un _arreglo desordenado_. Indicar el orden del algoritmo, justificando con el Teorema Maestro.
 
+1. Implementar, por división y conquista, una función que dado un arreglo y su largo, determine si el mismo se encuentra ordenado. 
+
 1. Se tiene un arreglo tal que `[1, 1, 1, ..., 0, 0, ...]` (es decir, _unos seguidos de ceros_). Se pide:
 
     a. una función de orden $$\mathcal{O}(\log n)$$ que encuentre el índice del primer 0. Si no hay ningún 0 (solo hay unos), debe devolver -1.
@@ -109,7 +111,25 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
         [0, 0, 0, 0, 0] →  0
         [1, 1, 1, 1, 1] → -1
 
-1. Implementar un algoritmo que, por división y conquista, permita obtener la parte entera de la raíz cuadrada de un número $$n$$, en tiempo $$\mathcal{O}(\log n)$$.
+1. Implementar un algoritmo que, por división y conquista, permita obtener la parte entera de la raíz cuadrada de un número $$n$$, en tiempo $$\mathcal{O}(\log n)$$. Por ejemplo, para $$n = 10$$ debe devolver 3, y para $$n = 25$$ debe devolver 5. 
+
+1. Se tiene un arreglo de $$N >= 3$$ elementos en forma de pico, esto es: estrictamente creciente hasta una determinada posición $$p$$, y estrictamente decreciente a partir de ella (con $$0 \gt p \lt N-1$$). Por ejemplo, en el arreglo 
+`[1, 2, 3, 1, 0, -2]` la posición del pico es $$p = 2$$. Se pide:
+
+    a. Implementar un algoritmo de división y conquista de orden $$\mathcal{O}(\log n)$$ que encuentre la posición 
+    $$p$$ del pico: `size_t posicion_pico(int v[], size_t ini, size_t fin);`. La función será invocará inicialmente como: 
+    `posicion_pico(v, 0, n-1)`, y tiene como pre-condición que el arreglo tenga forma de pico.
+    
+    b. Justificar el orden del algoritmo mediante el teorema del maestro.
+
+1.  Se quiere implementar MergeSort pero, en vez de dividir en dos partes el arreglo, dividirlo en tres, llamando 
+    recursivamente al algoritmo para cada una de las partes y luego uniéndolas. 
+
+    a. Suponiendo que el merge de las tres partes se realiza en tiempo lineal, calcular el orden del algoritmo. 
+
+    b. Si en vez de dividir en tres partes, se dividiera el arreglo en $$n$$, siendo $$n$$ la cantidad de elementos del arreglo, ¿a qué otro algoritmo de ordenamiento se asemeja esta implementación? ¿Cuál es el orden de dicho algoritmo? 
+
+    c. Dado lo obtenido en los puntos anteriores, ¿tiene sentido implementar MergeSort con $$k$$ separaciones, para $$k > 2$$?
 
 ## Bibliografía y referencias
 
