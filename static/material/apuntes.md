@@ -17,6 +17,7 @@ math: true
 
 Todas las guías cuentan con un ejercicio resuelto. Recomendamos leerlo detenidamente y luego proceder a realizar los ejercicios propuestos. 
 
+  * [Conceptos de TDAs, y TDAs Básicos (Pila, Cola y Lista)](guias/tdas_conceptos)
   * [División y Conquista](guias/dyc)
   * [Grafos](guias/grafos)
   * [Programación greedy](guias/greedy)
