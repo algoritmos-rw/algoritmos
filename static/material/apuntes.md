@@ -10,7 +10,7 @@ Todas las guías cuentan con un ejercicio resuelto. Recomendamos leerlo detenida
 
   * [Conceptos de TDAs, y TDAs Básicos (Pila, Cola y Lista)](guias/tdas_conceptos)
   * [División y Conquista](guias/dyc)
-  * [Ordenamientos](guias/ordenamientos)
+  * [Ordenamientos comparativos y no comparativos](guias/ordenamientos)
   * [Diccionarios, Hashing y Hashes](guias/hash)
   * [Árboles Binarios, ABB, AVL, Árbol B](guias/arboles)
   * [Colas de Prioridad y heaps](guias/heap)
