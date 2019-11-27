@@ -218,10 +218,10 @@ void ordenar_por_mes(char** fechas, size_t n) {
 
      y equivalen a $$[120; 3600000000; 330; 1,8; 4800000; 3400000000; 3200000; 10 ]$$.
 
-1. 	Implementar un algoritmo que, dado un arreglo de $$n$$ números enteros cuyos valores van de $$0$$ a $$K$$ 
-(constante conocida), procese dichos números en tiempo $$\mathcal{O}(n + K)$$, devuelva alguna estructura que 
-permita consultar cuántos valores ingresados están en el intervalo `(A, B)`, en tiempo $$\mathcal{O}(1)$$. 
-Explicar cómo se usaría dicha estructura para poder realizar tales consultas.
+1. 	**Ejercicio difícil**: Implementar un algoritmo que, dado un arreglo de $$n$$ números enteros cuyos valores van 
+	de $$0$$ a $$K$$ (constante conocida), procese dichos números en tiempo $$\mathcal{O}(n + K)$$, devuelva alguna
+	estructura que permita consultar cuántos valores ingresados están en el intervalo `(A, B)`, en tiempo
+	$$\mathcal{O}(1)$$. Explicar cómo se usaría dicha estructura para poder realizar tales consultas.
 
 
 

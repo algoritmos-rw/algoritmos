@@ -139,3 +139,17 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     ¿Cuál es el máximo `A` para que el orden del algoritmo sea menor que el del algoritmo de Strassen? 
     Justificar.
 
+1.  **Ejercicio difícil**: Implementar una función (que utilice división y conquista) de orden $$\mathcal{O}(n \log n)$$ 
+    que dado un arreglo de $$n$$ números enteros devuelva `true` o `false` según si existe algún elemento que aparezca 
+    más de la mitad de las veces. Justificar el orden de la solución. Ejemplos: 
+
+        [1, 2, 1, 2, 3] -> false
+        [1, 1, 2, 3] -> false 
+        [1, 2, 3, 1, 1, 1] -> true
+        [1] -> true
+
+    _Aclaración_: Para hacer interesante el ejercicio, resolver sin ordenar el arreglo, sino puramente división y 
+    conquista. 
+
+
+
