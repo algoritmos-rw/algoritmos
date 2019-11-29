@@ -24,8 +24,8 @@ Todas las guías cuentan con un ejercicio resuelto. Recomendamos leerlo detenida
   * [Backtracking](guias/backtracking)
   * [Programación dinámica](guias/pd)
 
-
 # Otros materiales y apuntes
+  * [Taller de Python](./taller_python/TallerPython.slides.html)
   * [Apunte de Algoritmos y Programación I](https://drive.google.com/file/d/0B0KKEIBDHL7tdEQ3bFZ2M3VrZzA/view).
   * [Introducción al lenguaje C](https://drive.google.com/open?id=17gyhdJwEcxxLVrD_X0AlPnZzQajXOFE5)
   * [Ejemplos de Código](ejemplos)
