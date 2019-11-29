@@ -8,3 +8,6 @@ Gemfile.lock
 
 .Gemfile.lock.swp
 .bundle/config
+
+.ipynb_checkpoints
+
