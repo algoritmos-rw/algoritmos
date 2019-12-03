@@ -163,6 +163,14 @@ void ordenar_por_mes(char** fechas, size_t n) {
 
 ## Ejercicios propuestos
 
+1. 	Se tiene un arreglo de estructuras de la forma `struct {long anio, char* evento}`, que indica el año y evento de un
+	hecho definido a lo largo de la historia de la Tierra. Indicar y justificar cuál sería un
+	algoritmo de ordenamiento apropiado para utilizar para ordenar dicho arreglo por año. Indicar también, si en vez
+	de ordenar por año se decide ordenar por evento (lexicográficamente). Si se quiere ordenar por año y dentro de cada
+	año, por evento: ¿Deben utilizarse para ambos campos el mismo algoritmo de ordenamiento? ¿Que característica/s deben
+	cumplir dicho o dichos algoritmos para que quede ordenado como se desea? ¿En qué orden deben aplicarse los 
+	ordenamientos?
+
 1. 	Hacer el seguimiento de counting sort para ordenar por año las
     siguientes obras:
 

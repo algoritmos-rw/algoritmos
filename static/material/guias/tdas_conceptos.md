@@ -66,6 +66,12 @@ Sobre la complejidad, sea cual sea el caso, vamos a estar llenando siempre al ar
 
 ## Ejercicios propuestos
 
+1. 	Implementar una función que reciba un arreglo de `void*` e invierta su orden, utilizando los TDAs vistos.
+	Indicar y justificar el orden de ejecución. 
+
+1. 	Mismo a lo anterior, pero que el arreglo sea de `int` (no de `int*`), utilizando los TDAs tal cual se los
+	implementa en clase.
+
 1. 	Implementar en C el TDA `ComposiciónFunciones` que emula la composición de funciones (i.e. `f(g(h(x))`). 
 	Se debe definir la estructura del TDA, y las siguientes primitivas:
 		

@@ -75,6 +75,9 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 
 ## Ejercicios propuestos
 
+1.  Dado un árbol binario, escriba una función recursiva que cuente la cantidad de nodos que 
+    tienen exactamente dos hijos directos. ¿Qué orden de complejidad tiene la función implementada?
+
 1.  Escribir una función recursiva con la firma `void arbol_invertir(arbol_t* arbol)` 
     que invierta el árbol binario pasado por parámetro, de manera tal que los hijos 
     izquierdos de cada nodo se conviertan en hijos derechos. 
@@ -94,14 +97,6 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     dichos valores de la forma tradicional). Su estado inicial puede reconstruirse a partir del 
     Preorder: `15 - 6 - 4 - 7 - 50 - 23`. Hacer el seguimiento de las siguientes inserciones, 
     incluyendo rotaciones intermedias: `71 - 27 - 38 - 19 - 11 - 21 - 24 - 25`.
-
-1.  Dado un árbol binario, escriba una función recursiva que cuente la cantidad de nodos que 
-    tienen exactamente dos hijos directos. ¿Qué orden de complejidad tiene la función implementada?
-
-1.  Implementar una primitiva para el ABB, que reciba el ABB y devuelva una lista con las claves 
-    del mismo, ordenadas tal que si insertáramos las claves en un ABB vacío (con la misma función 
-    de comparación), dicho ABB tendría la misma estructura que el árbol original. ¿Qué tipo de 
-    recorrido utilizaste? Indicar el orden de la primitiva. Justificar.
 
 1.  Mostrar como se modifica la estructura de un árbol B (incluyendo los pasos intermedios) con tamaño 
     para 3 claves por nodo que inicialmente se encuentra vacío, al aplicar las siguientes operaciones: 
@@ -126,7 +121,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     Indicar y justificar el orden de la primitiva, e indicar el tipo de
     recorrido implementado.
 
-1. Indicar si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas, 
+1.  Indicar si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas, 
     justificar, en caso de ser falsas poner un contraejemplo: 
 
     a. Si dos árboles binarios tienen el mismo recorrido inorder, entonces tienen la misma 
@@ -137,4 +132,14 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 
     c. Si dos árboles binarios de búsqueda (con misma función de comparación) tienen el mismo
     recorrido preorder, entonces tienen la misma estructura. 
+
+1.  Implementar una primitiva para el ABB, que reciba el ABB y devuelva una lista con las claves 
+    del mismo, ordenadas tal que si insertáramos las claves en un ABB vacío (con la misma función 
+    de comparación), dicho ABB tendría la misma estructura que el árbol original. ¿Qué tipo de 
+    recorrido utilizaste? Indicar el orden de la primitiva. Justificar.
+
+1.  Implementar una función que reciba un arreglo ordenado y devuelva un arreglo o lista con
+    los elementos en orden para ser insertados en un ABB, de tal forma que al insertarlos en
+    dicho orden se asegure que el ABB quede balanceado. ¿Cómo cambiarías tu resolución si en 
+    vez de querer guardarlos en un ABB se fueran a insertar en un AVL?
 
