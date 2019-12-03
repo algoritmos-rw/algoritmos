@@ -205,7 +205,7 @@ parámetro al invocarse el programa. [Se incluye un ejemplo para el camino míni
 
 ### Archivos KML
 
-Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/kml).
+Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/apuntes/kml).
 
 ## Criterios de aprobación
 

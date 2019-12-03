@@ -137,8 +137,8 @@ de su centralidad exacta. Teniendo en cuenta que se cuenta con demasiados delinc
 exacto de la centralidad puede consumir una cantidad excesiva de tiempo. 
 Por lo tanto, se pide realizar una aproximación para determinar los delincuentes más importantes. 
 Las formas posibles son:
- * [Betweeness Centrality, aproximado](/algo2/material/centralidad).
- * [PageRank](/algo2/material/pagerank).
+ * [Betweeness Centrality, aproximado](/algo2/material/apuntes/centralidad).
+ * [PageRank](/algo2/material/apuntes/pagerank).
 
 Por lo tanto, el comando pedido debe ser: 
 * Comando: `mas_imp`.
@@ -175,7 +175,7 @@ Salida:
 
 ### Comunidades
 
-Para implementar esto, utilizaremos el algoritmo de [Label Propagation](/algo2/material/label_propagation) 
+Para implementar esto, utilizaremos el algoritmo de [Label Propagation](/algo2/material/apuntes/label_propagation) 
 para detectar comunidades.
 
 * Comando: `comunidades`. 
@@ -234,7 +234,7 @@ Salida:
 
 ### Componentes Fuertemente Conexas
 
-Se debe leer el apunte sobre [componentes fuertemente conexas](/algo2/material/cfc).
+Se debe leer el apunte sobre [componentes fuertemente conexas](/algo2/material/apuntes/cfc).
 
 * Comando: `cfc`
 * Parámetros: ninguno. 
