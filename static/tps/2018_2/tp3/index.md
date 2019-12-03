@@ -190,8 +190,8 @@ de vuelos: no es lo mismo un aeropuerto que se conecte contra todos con un vuelo
 se conecte al 80% con muchos vuelos al año. ¡Cuantos más vuelos, mejor!
 
 Dejamos un apunte para la explicación de qué es y cómo se calcula el 
-[Betweeness Centrality](/algo2/material/centralidad) y otro sobre 
-[PageRank](/algo2/material/pagerank).
+[Betweeness Centrality](/algo2/material/apuntes/centralidad) y otro sobre 
+[PageRank](/algo2/material/apuntes/pagerank).
 
 #### Betweeness Centrality (★★★)
 
@@ -399,7 +399,7 @@ que el de salida (si deben ser aeropuertos de la ciudad en la cual se está para
 * Parámetros: `archivo`. 
 * Utilidad: exporta el archivo KML con la ruta del último comando ejecutado (que incluya algún camino,
 o rutas áereas). Esto aplica para todos los comandos salvo el de estadísticas, u obtención de los
-aeropuertos más centrales. Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/kml).
+aeropuertos más centrales. Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/apuntes/kml).
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A + F)$$.
 * Ejemplo: 
 Entrada:
