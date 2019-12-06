@@ -27,7 +27,8 @@
                 <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="{% if page.permalink == '/bibliografia/' %}active{% endif %}"><a href="{{ '/bibliografia/' | relative_url }}"><i class="fa fa-book"></i></span> Bibliografía</a></li>
-                <li class="{% if page.permalink == '/material/' %}active{% endif %}"><a href="{{ '/material/' | relative_url }}"><i class="fa fa-book-reader"></i></span> Apuntes y Guías del curso</a></li>
+                <li class="{% if page.permalink == '/material/' %}active{% endif %}"><a href="{{ '/material/' | relative_url }}"><i class="fa fa-book-reader"></i></span> Apuntes del curso</a></li>
+                <li class="{% if page.permalink == '/material/guias/' %}active{% endif %}"><a href="{{ '/material/guias/' | relative_url }}"><i class="fa fa-dumbbell"></i></span> Guías de ejercicios</a></li>
                 <li>
                   <a href="{{site.data.sitios.drive}}" class="header-icon" target="_blank"><span><i class="fab fa-google-drive"></i></span> Drive</a>
                 </li>
