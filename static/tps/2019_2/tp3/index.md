@@ -428,6 +428,8 @@ flycombi: flycombi.py grafo.py biblioteca.py
 	chmod +x flycombi
 ```
 
+**Importante**: En caso de recibir un error `FileNotFoundError: [Errno 2] No such file or directory: './flycombi': './flycombi'`, tener en cuenta que para el caso de enviar código escrito en Python es necesario además indicar la ruta del intérprete. Esto puede hacerse agregando como primera línea del archivo principal (en el ejemplo, sería `flycombi.py`) la línea: `#!/usr/bin/python3`. 
+
 ## Criterios de aprobación
 
 El código entregado debe ser claro y legible y ajustarse a las especificaciones
