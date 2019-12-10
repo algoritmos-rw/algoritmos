@@ -19,7 +19,7 @@ o lo que fuere), por favor crear un issue en [la página de issues del repositor
 * [Formulario de inscripción de grupos]({{site.data.cuatrimestre.formulario_grupos}})
 * <a href="{{site.data.sitios.drive}}"><i class="fab fa-google-drive"/> Drive general de la materia</a>
 * <a href="{{site.data.sitios.youtube}}"><i class="fab fa-youtube"/> Canal de YouTube</a> del curso (<i class="fa fa-hourglass-start"/> En progreso)
-* [Guias de ejercicios](materia/guias)
+* [Guias de ejercicios](material/guias)
 * [Página de visualizaciones recomendada](http://visualgo.net/)
 
 ## Información sobre próximas clases
