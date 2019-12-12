@@ -75,10 +75,49 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 
 ## Ejercicios propuestos
 
-1.  Dado un árbol binario, escriba una función recursiva que cuente la cantidad de nodos que 
+1.  (★) Dado un árbol binario, escribir una primitiva recursiva que determine la altura del mismo. Indicar
+    y justificar el orden de la primitiva.
+
+1.  (★) Implementar una primitiva que devuelva la suma de todos los datos (números) de un árbol binario. 
+    Indicar y justificar el orden de la primitiva.
+
+1.  (★) Se tiene un AB con datos números enteros, y se quiere multiplicar a cada nodo con los datos de los hijos.
+    Hacer un seguimiento de hacer dicho procesamiento con un preorder, inorder o postorder. A continuación se deja
+    la implementación de cada recorrido:
+
+    ```cpp
+    void multiplicar_con_hijos_pre(ab_t* arbol) {
+        if (!arbol) return;
+        int valor_izq = arbol->izq != NULL ? arbol->izq->dato : 1;
+        int valor_der = arbol->der != NULL ? arbol->der->dato : 1;
+        arbol->dato *= valor_izq * valor_der;
+        multiplicar_con_hijos_pre(arbol->izq);
+        multiplicar_con_hijos_pre(arbol->der);
+    }
+
+    void multiplicar_con_hijos_in(ab_t* arbol) {
+        if (!arbol) return;
+        multiplicar_con_hijos_pre(arbol->izq);
+        int valor_izq = arbol->izq != NULL ? arbol->izq->dato : 1;
+        int valor_der = arbol->der != NULL ? arbol->der->dato : 1;
+        arbol->dato *= valor_izq * valor_der;
+        multiplicar_con_hijos_pre(arbol->der);
+    }
+
+    void multiplicar_con_hijos_post(ab_t* arbol) {
+        if (!arbol) return;
+        multiplicar_con_hijos_pre(arbol->izq);
+        multiplicar_con_hijos_pre(arbol->der);
+        int valor_izq = arbol->izq != NULL ? arbol->izq->dato : 1;
+        int valor_der = arbol->der != NULL ? arbol->der->dato : 1;
+        arbol->dato *= valor_izq * valor_der;
+    }
+    ```
+
+1.  (★★) Dado un árbol binario, escriba una función recursiva que cuente la cantidad de nodos que 
     tienen exactamente dos hijos directos. ¿Qué orden de complejidad tiene la función implementada?
 
-1.  Escribir una función recursiva con la firma `void arbol_invertir(arbol_t* arbol)` 
+1.  (★★) Escribir una función recursiva con la firma `void arbol_invertir(arbol_t* arbol)` 
     que invierta el árbol binario pasado por parámetro, de manera tal que los hijos 
     izquierdos de cada nodo se conviertan en hijos derechos. 
     
@@ -93,17 +132,17 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     
     Indicar el orden de complejidad de la función implementada.
 
-1.  Se tiene un AVL de claves números enteros (su función de comparación simplemente compara 
+1.  (★★★) Se tiene un AVL de claves números enteros (su función de comparación simplemente compara 
     dichos valores de la forma tradicional). Su estado inicial puede reconstruirse a partir del 
     Preorder: `15 - 6 - 4 - 7 - 50 - 23`. Hacer el seguimiento de las siguientes inserciones, 
     incluyendo rotaciones intermedias: `71 - 27 - 38 - 19 - 11 - 21 - 24 - 25`.
 
-1.  Mostrar como se modifica la estructura de un árbol B (incluyendo los pasos intermedios) con tamaño 
+1.  (★★★) Mostrar como se modifica la estructura de un árbol B (incluyendo los pasos intermedios) con tamaño 
     para 3 claves por nodo que inicialmente se encuentra vacío, al aplicar las siguientes operaciones: 
     insertar 14, insertar 2, insertar 10, insertar 6, insertar 7, insertar 1, insertar 4, insertar 8, 
     insertar 11, insertar 19, insertar 9, insertar 5, insertar 15, insertar 3.
 
-1.  Definimos como _quiebre en un árbol binario_ cuando ocurre que un
+1.  (★★★) Definimos como _quiebre en un árbol binario_ cuando ocurre que un
     hijo derecho tiene un hijo izquierdo, o viceversa.
 
     Implementar una _primitiva_ para el árbol binario `size_t ab_quiebres(const ab_t*)`
@@ -115,13 +154,13 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
         typedef struct arbol {
             struct arbol* izq;
             struct arbol* der;
-        } arbol_t;
+        } ab_t;
     ```
 
     Indicar y justificar el orden de la primitiva, e indicar el tipo de
     recorrido implementado.
 
-1.  Indicar si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas, 
+1.  (★★) Indicar si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas, 
     justificar, en caso de ser falsas poner un contraejemplo: 
 
     a. Si dos árboles binarios tienen el mismo recorrido inorder, entonces tienen la misma 
@@ -133,12 +172,27 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     c. Si dos árboles binarios de búsqueda (con misma función de comparación) tienen el mismo
     recorrido preorder, entonces tienen la misma estructura. 
 
-1.  Implementar una primitiva para el ABB, que reciba el ABB y devuelva una lista con las claves 
+1.  (★★) Implementar una primitiva para el ABB, que reciba el ABB y devuelva una lista con las claves 
     del mismo, ordenadas tal que si insertáramos las claves en un ABB vacío (con la misma función 
     de comparación), dicho ABB tendría la misma estructura que el árbol original. ¿Qué tipo de 
     recorrido utilizaste? Indicar el orden de la primitiva. Justificar.
 
-1.  Implementar una función que reciba un arreglo ordenado y devuelva un arreglo o lista con
+1.  (★★★★) Implementar una primitiva para el AB que reciba dos arreglos (o listas) de cadenas. El primero 
+    corresponde al preorder de un árbol binario. El segundo al inorder del mismo árbol (ambos arreglos 
+    tienen los mismos elementos, sin repetidos). La función debe devolver un árbol binario que tenga dicho
+    preorder e inorder. Indicar y justificar el orden de la primitiva (tener cuidado con este punto).
+    Considerar que la estructura del árbol binario es:
+
+    ```cpp
+        typedef struct arbol {
+            struct arbol* izq;
+            struct arbol* der;
+            char* dato;
+        } ab_t;
+    ```
+
+
+1.  (★★★★) Implementar una función que reciba un arreglo ordenado y devuelva un arreglo o lista con
     los elementos en orden para ser insertados en un ABB, de tal forma que al insertarlos en
     dicho orden se asegure que el ABB quede balanceado. ¿Cómo cambiarías tu resolución si en 
     vez de querer guardarlos en un ABB se fueran a insertar en un AVL?
