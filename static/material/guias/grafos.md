@@ -1,10 +1,10 @@
 ---
-title: "Grafos: Usos, implementaciones, recorridos."
+title: "Grafos: Usos, implementaciones, recorridos"
 permalink: 'material/guias/grafos_1'
 math: true
 ---
 
-# Grafos
+# Grafos: Usos, implementaciones, recorridos
 {:.no_toc}
 
 ## Contenidos
