@@ -206,7 +206,8 @@ void ordenar_por_mes(char** fechas, size_t n) {
 
 1. 	(★★) Indicar Verdadero o Falso, justificando de forma concisa en cualquier caso.
 
-	a. Se puede mejorar el orden de complejidad de QuickSort contando con más información.
+	a. Podríamos mejorar el orden de complejidad de QuickSort si contaramos con más información sobre
+	cómo son los datos a ordenar.
 
 	b. No siempre conviene utilizar Counting Sort para ordenar un arreglo de números enteros.
 
