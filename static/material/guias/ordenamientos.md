@@ -131,12 +131,14 @@ int char_a_int(char v) {
 	return a - '0';
 }
 
-void ordenar_por_dos_digitos(char** fechas, size_t n, size_t digito_ini, size_t max) {
+void ordenar_por_dos_digitos(char** fechas, size_t n, size_t digito_ini, 
+							 size_t max) {
 	lista_t* dias[max];
  	for (size_t i = 0; i < max; i++) dias[i] = lista_crear();
 
  	for (size_t i = 0; i < n; i++) {
- 		int dia = char_a_int(fecha[i][digito_ini]) * 10 + char_a_int(fecha[i][digito_ini + 1]) - 1;
+ 		int dia = char_a_int(fecha[i][digito_ini]) * 10 
+ 				+ char_a_int(fecha[i][digito_ini + 1]) - 1;
  		lista_insertar_ultimo(dias[dia], fecha);
  	}
 
@@ -184,10 +186,14 @@ void ordenar_por_mes(char** fechas, size_t n) {
 1. 	(★★) Hacer el seguimiento de counting sort para ordenar por año las
     siguientes obras:
 
-            1988 - Crónicas del Ángel Gris           2000 - Los Días del Venado
-            1995 - Alta Fidelidad                    1987 - Tokio Blues
-            2005 - En Picada                         1995 - Crónica del Pájaro que Da Cuerda al Mundo
-            1995 - Ensayo Sobre la Ceguera           2005 - Los Hombres que No Amaban a las Mujeres
+            1988 - Crónicas del Ángel Gris
+            2000 - Los Días del Venado           
+            1995 - Alta Fidelidad
+            1987 - Tokio Blues                    
+            2005 - En Picada
+            1995 - Crónica del Pájaro que Da Cuerda al Mundo                         
+            1995 - Ensayo Sobre la Ceguera           
+            2005 - Los Hombres que No Amaban a las Mujeres
 
     ¿Cuál es el orden del algoritmo? ¿Qué sucede con el orden de los
     elementos de un mismo año, respecto al orden inicial, luego de
@@ -200,7 +206,8 @@ void ordenar_por_mes(char** fechas, size_t n) {
 	`1.1.3 < 1.1.20`,  `2.20.8` < `3.0.0`.
 
 	```
-	["4.3.2", "5.1.2", "10.1.4", "2.1.20", "2.2.1", "4.2.3", "2.1.5", "8.1.2", "5.30.1", "10.0.23"]
+	["4.3.2", "5.1.2", "10.1.4", "2.1.20", "2.2.1", "4.2.3", 
+	"2.1.5", "8.1.2", "5.30.1", "10.0.23"]
 	```
 
 

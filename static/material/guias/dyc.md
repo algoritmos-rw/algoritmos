@@ -15,7 +15,7 @@ math: true
 
 ## Ejercicio resuelto
 
-Implementar un algoritmo en C que reciba un arreglo de $$n$$ enteros sin repetir y ordenado ascendentemente, y determine en $$\mathcal{O}(\log n)$$ si es mágico. Un arreglo es mágico si existe algún valor `i` (entre `0` y `n − 1`) tal que `arr[i] = i`. Justificar el orden del algoritmo.
+Implementar un algoritmo en C que reciba un arreglo de $$n$$ enteros sin repetir y ordenado ascendentemente, y determine en $$\mathcal{O}(\log n)$$ si es mágico. Un arreglo es mágico si existe algún valor `i` (entre `0` y `n-1`) tal que `arr[i] = i`. Justificar el orden del algoritmo.
 
 Ejemplos:
 * `A = [ -3, 0, 1, 3, 7, 9 ]` es mágico porque `A[3] = 3`.
@@ -152,8 +152,12 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     bool elemento_esta(int* arreglo, size_t inicio, size_t fin, int elem) {
         if (inicio > fin) return false;
         size_t medio = (fin + inicio) / 2;
-        if (arreglo[medio] == elem) return true;
-        if (arreglo[medio] < elem) return elemento_esta(arreglo, medio + 1, fin, elem);
+        if (arreglo[medio] == elem) {
+            return true;  
+        } 
+        if (arreglo[medio] < elem) {
+            return elemento_esta(arreglo, medio + 1, fin, elem);
+        }
 
         for (size_t i = medio - 1; i > inicio - 1; i--) {
             if (arreglo[i] == elem) return true;
@@ -213,7 +217,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     debe devolver 5. 
 
 1.  (★★★) Se tiene un arreglo de $$N >= 3$$ elementos en forma de pico, esto es: estrictamente creciente hasta una 
-    determinada posición $$p$$, y estrictamente decreciente a partir de ella (con $$0 \gt p \lt N-1$$). Por ejemplo, 
+    determinada posición $$p$$, y estrictamente decreciente a partir de ella (con $$0 \lt p \lt N - 1$$). Por ejemplo, 
     en el arreglo `[1, 2, 3, 1, 0, -2]` la posición del pico es $$p = 2$$. Se pide:
 
     a. Implementar un algoritmo de división y conquista de orden $$\mathcal{O}(\log n)$$ que encuentre la posición 

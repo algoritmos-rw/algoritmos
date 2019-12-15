@@ -47,8 +47,10 @@ def bfs_ciclo(grafo, v, visitados):
     v = q.desencolar()
     for w in grafo.adyacentes(v):
       if w in visitados:
-        # Si w fue visitado y es padre de v, entonces es la arista de donde vengo (no es ciclo).
-        # Si no es su padre, esta arista (v, w) cierra un ciclo que empieza en w.
+        # Si w fue visitado y es padre de v, entonces es la arista 
+        # de donde vengo (no es ciclo).
+        # Si no es su padre, esta arista (v, w) cierra un ciclo que 
+        # empieza en w.
         if w != padre[v]:
           return reconstruir_ciclo(padre, w, v)
       else:
@@ -77,8 +79,10 @@ def dfs_ciclo(grafo, v, visitados, padre):
   visitados[v] = True
   for w in grafo.adyacentes(v):
     if w in visitados:
-      # Si w fue visitado y es padre de v, entonces es la arista de donde vengo (no es ciclo).
-      # Si no es su padre, esta arista (v, w) cierra un ciclo que empieza en w.
+      # Si w fue visitado y es padre de v, entonces es la arista de donde 
+      # vengo (no es ciclo).
+      # Si no es su padre, esta arista (v, w) cierra un ciclo que empieza 
+      # en w.
       if w != padre[v]:
         return reconstruir_ciclo(padre, w, v)
     else:

@@ -109,9 +109,9 @@ lista_t* hash_claves(const hash_t* hash) {
     no se tienen en cuenta los borrados para el factor de carga. Indicar cuál es el peor escenario posible para 
     esta implementación. 
 
-1.  (★) ¿Para qué casos la función hash_obtener tiene una complejidad peor que O(1)?
+1.  (★) ¿Para cuáles casos la función hash_obtener tiene una complejidad peor que $$\mathcal{O}(1)$$?
 
-1.  (★) Justificar si la siguiente función de hashing es correcta o no: 
+1.  (★) Justificar si la siguiente función de hashing es correcta o no: 
     ```cpp
     size_t calcular_hash(char *clave, size_t largo) {
         // rand() devuelve un numero entero positivo aleatorio
@@ -137,11 +137,11 @@ lista_t* hash_claves(const hash_t* hash) {
         [1, 2, 3, 1, 1, 1] -> true
         [1] -> true
 
-1.  (★★) Asumiendo que se tiene disponible una implementación completa de Hash, se desea implementar una función 
-    que decida, para un par de tablas de hash, si representan o no el mismo Diccionario. Considere para la solución que 
-    es de interés la mejor eficiencia temporal posible. Indique, para su solución, eficiencia en tiempo y espacio.
+1.  (★★) Asumiendo que se tiene disponible una implementación completa de Hash, se desea implementar una función 
+    que decida, para un par de tablas de hash, si representan o no el mismo Diccionario. Considere para la solución que 
+    es de interés la mejor eficiencia temporal posible. Indique, para su solución, eficiencia en tiempo y espacio.
     Nota: Dos tablas de hash representan el mismo diccionario si tienen la misma cantidad de elementos, todas las claves 
-    del primero están en el segundo y los datos asociados a cada una de esas claves son iguales (se pueden comparar los
+    del primero están en el segundo y los datos asociados a cada una de esas claves son iguales (se pueden comparar los
     valores con "==").
 
 1.  (★★) Implementar el TDA MultiConjunto. Este es un Conjunto que permite más de una aparición de un elemento, 
