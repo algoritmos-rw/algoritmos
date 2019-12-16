@@ -27,9 +27,11 @@ el enunciado especifique lo contrario.
 
 
 Dos cosas que son necesarias entender desde el inicio del ejercicio: 
+
 1. 	En esa primitiva no se puede modificar la pila. No sólo porque se reciba un `const pila_t*`, sino porque sería erroneo
 	modificar la pila si ya desde el vamos podemos acceder a los campos de la misma. 
-2.  Se pide devolver un arreglo, pero es muy importante entender que sería un error **muy grave** devolver un arreglo de 
+
+1.  Se pide devolver un arreglo, pero es muy importante entender que sería un error **muy grave** devolver un arreglo de 
 	memoria estática. Esto es, porque al terminar la ejecución de la función, el arreglo (la posición de memoria) pasaría
 	a ser inválida. Esta clase de errores anulan ejercicios por completo. 
 
@@ -58,9 +60,16 @@ void** pila_multitop(const pila_t* pila, size_t n) {
 
 También sería válido hacerlo en dos iteraciones: una para llenar con los datos, y otra para rellenar con `NULL`s.
 Así como también sería válido iterar hasta el más pequeño entre `n` y `pila->cantidad`, y haber inicializado de antes el
-arreglo con `NULL`s (sea iterando o usando `calloc`). Otras tantas variantes también serían aceptadas, no hay una única forma de resolver este ejercicio. 
+arreglo con `NULL`s (sea iterando o usando `calloc`). Otras tantas variantes también serían aceptadas, no hay una única
+forma de resolver este ejercicio. 
 
-Sobre la complejidad, sea cual sea el caso, vamos a estar llenando siempre al arreglo de $$n$$ elementos con algo (datos de la pila, o `NULL`). Acceder a los elementos de la pila, siendo que accedemos directamente, es $$\mathcal{O}(1)$$, y nunca vamos a ver más elementos de la pila si son más de $$n$$, por ende la primitiva es $$\mathcal{O}(n)$$. 
+Sobre la complejidad, sea cual sea el caso, vamos a estar llenando siempre al arreglo de $$n$$ elementos con algo (datos de
+la pila, o `NULL`). Acceder a los elementos de la pila, siendo que accedemos directamente, es $$\mathcal{O}(1)$$, y nunca
+vamos a ver más elementos de la pila si son más de $$n$$, por ende la primitiva es $$\mathcal{O}(n)$$. Es importante denotar
+que $$n$$ en este caso no es la cantidad de elementos de la pila, sino la cantidad de elementos pedidos. Si quisiéramos
+hacer más clara la distinción, podríamos haber llamado a dicho parámetro con otro nombre. Tener cuidado con esto, porque
+si el parámetro tuviera otro nombre no sería correcto decir que es $$\mathcal{O}(n)$$, salvo que se aclare qué signifique 
+$$n$$.
 
 
 

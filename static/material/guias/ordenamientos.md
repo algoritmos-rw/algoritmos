@@ -248,6 +248,15 @@ void ordenar_por_mes(char** fechas, size_t n) {
 
      y equivalen a $$[120; 3600000000; 330; 1,8; 4800000; 3400000000; 3200000; 10 ]$$.
 
+1.	(★★★★) Suponer que se tiene un arreglo de $$n$$ elementos ordenados, seguido de $$f(n)$$ 
+	elementos desordenados. Cómo ordenarías el arreglo según si $$f(n)$$ es:
+	
+	a. $$f(n) = \mathcal{O}(1)$$
+	
+	b. $$f(n) = \mathcal{O}(\log{n})$$
+	
+	c. $$f(n) = \mathcal{O}\left(\sqrt{n}\right)$$
+
 1. 	(★★★★★) Implementar un algoritmo que, dado un arreglo de $$n$$ números enteros cuyos valores van 
 	de $$0$$ a $$K$$ (constante conocida), procese dichos números en tiempo $$\mathcal{O}(n + K)$$, devuelva alguna
 	estructura que permita consultar cuántos valores ingresados están en el intervalo `(A, B)`, en tiempo

@@ -134,7 +134,7 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
 
 1.  (★★) Un árbol es un grafo no dirigido que cumple con las siguientes propiedades:
 
-    a. $$ \|E\| = \|V\| - 1 $$
+    a. $$\|E\| = \|V\| - 1$$
 
     b. Es acíclico
 

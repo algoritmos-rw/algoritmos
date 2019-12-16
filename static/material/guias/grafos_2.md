@@ -112,7 +112,7 @@ def caminos_minimos(grafo, origen)
 
     <img src="../../assets/img/material/bf.png" alt="grafo bf" width="60%"/>
 
-    b. Volver a realizar, suponiendo que la arista de `B`a `A` ahora tiene un peso de 1. 
+    b. Volver a realizar, suponiendo que la arista de `B` a `A` ahora tiene un peso de 1. 
 
 1.  (★★) Obtener el Árbol de Tendido Mínimo del siguiente grafo:
     
@@ -186,7 +186,7 @@ def caminos_minimos(grafo, origen)
     <img src="../../assets/img/material/ff.png" alt="grafo flujo" width="70%"/>
 
 1.  (★★★) Implementar por **backtracking** un algoritmo que, dado un grafo no dirigido y un número 
-    $$n \lt \left|V \right|$$, nos permita obtener un subconjunto de $$n$$ vértices tal que ningún par de dichos 
+    $$n \lt \left|\mathcal{V} \right|$$, nos permita obtener un subconjunto de $$n$$ vértices tal que ningún par de dichos 
     vértices sean adyacentes entre sí. Se puede suponer que los vértices están identificados con números de 
     0 a $$\left| \mathcal{V} \right|-1$$.
 

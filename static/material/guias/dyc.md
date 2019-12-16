@@ -97,7 +97,10 @@ _Nota_: El algoritmo puede, en vez de resolverse con una función auxiliar que h
 
 #### Demostración del orden 
 
-Vemos la ecuación de recurrencia: 
+Vemos la ecuación de recurrencia. Hay escritos dos llamados recursivos, cada uno se invoca con la mitad del problema (mitad
+izquierda o derecha), y todo lo que cuesta _partir y juntar_ no son más que algunas operaciones básicas de tiempo constante.
+Lo importante, es que si bien hay escritos dos llamados recursivos, nunca se llamaran a ambos. Siempre se llamará o bien
+para el lado izquierdo, o para el lado derecho. Por lo tanto, la ecuación de recurrencia quedará:
 
 $$
 \mathcal{T}(n) = \mathcal{T}\left(\frac{n}{2}\right) + \mathcal{O}(1)

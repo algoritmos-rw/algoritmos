@@ -40,7 +40,8 @@ lista_t* hash_claves(const hash_t* hash) {
         return NULL;
     }
     for (size_t i = 0; i < hash->tam; i++) {
-        if (hash->tabla[i].estado == OCUPADO) { // valor de un enum definido para el hash
+        // valor de un enum definido para el hash
+        if (hash->tabla[i].estado == OCUPADO) { 
             lista_insertar_ultimo(claves, hash->tabla[i].clave);
         }
     }
@@ -49,9 +50,12 @@ lista_t* hash_claves(const hash_t* hash) {
 ```
 
 Es importante notar que en este ejercicio se está evaluando que sabemos trabajar internamente con el hash cerrado. Los puntos importantes: 
-- Sabemos cuáles son los campos de la estructura. 
-- Sabemos que la tabla es de tipo `campo_t*`, y no `campo_t**`, puesto que es completamente innecesario un segundo grado de indirección (como se analiza en la respectiva clase práctica). 
-- Entendemos que el estado correcto a considerar es el de OCUPADO, que es un enumerativo. Cuanto mucho, una constante. Definitivamente no un `"ocupado"`.
+
+* Sabemos cuáles son los campos de la estructura. 
+
+* Sabemos que la tabla es de tipo `campo_t*`, y no `campo_t**`, puesto que es completamente innecesario un segundo grado de indirección (como se analiza en la respectiva clase práctica). 
+
+* Entendemos que el estado correcto a considerar es el de `OCUPADO`, que es un enumerativo. Cuanto mucho, una constante. Definitivamente no un `"ocupado"`.
 
 
 #### Hash Abierto
@@ -77,6 +81,10 @@ bool agregar_clave_lista(void* dato, void* extra) {
     return true;
 }
 ```
+
+_Aclaración_: Hay quienes deciden implementar el Hash Abierto de tal forma que no tenga listas vacías (si un lugar aún
+no ha sido utilizado, entonces tener `NULL` y crear la lista cuando sea necesaria). Esto es totalmente válido, y en todo
+caso con aclararlo en algún lado es suficiente (pero debe hacerse la validación contra `NULL` en ese caso).
 
 #### Función
 

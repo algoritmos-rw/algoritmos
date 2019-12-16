@@ -132,6 +132,13 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     
     Indicar el orden de complejidad de la función implementada.
 
+1.  (★★) Suponer que se tiene un ABB `A` con una función de comparación `cmp1` con $$n$$ claves. También, se 
+    tiene otro ABB vacío `B` con función de comparación `cmp2` (con `cmp1`y `cmp2` diferentes). 
+    ¿Es posible insertar en algún orden todas las claves de `A` en `B` de tal forma que ambos tengan 
+    exactamente la misma estructura? Explicar el algoritmo que permita lograr esto.  
+    (considerar que la lógica a emplear debe funcionar para cualquier valor de $$n$$ y cualquier estructura 
+    que tenga el ABB `A`).
+
 1.  (★★★) Se tiene un AVL de claves números enteros (su función de comparación simplemente compara 
     dichos valores de la forma tradicional). Su estado inicial puede reconstruirse a partir del 
     Preorder: `15 - 6 - 4 - 7 - 50 - 23`. Hacer el seguimiento de las siguientes inserciones, 
