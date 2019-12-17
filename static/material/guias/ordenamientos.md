@@ -15,7 +15,7 @@ math: true
 
 ## Ejercicio resuelto
 
-Se tiene un arreglo de cadenas que representan fechas de la forma `YYYYMMDD` (ej: `20160529` representa el 29/5/2016). Implementar un algoritmo lineal que las ordene de forma creciente.
+Se tiene un arreglo de cadenas que representan fechas de la forma `YYYYMMDD` (ej: `20110626` representa el 26/06/2011). Implementar un algoritmo lineal que las ordene de forma creciente.
 
 ### Solución
 
