@@ -168,12 +168,6 @@ lista_t* hash_claves(const hash_t* hash) {
     Dar la estructura del TDA y la implementación de las 4 primitivas marcadas, de forma tal que todas sean 
     $$\mathcal{O}(1)$$.
 
-1.  (★★) Una panadería de Avellaneda le pide a alumnos de Algoritmos y Programación II que le solucionen un problema: 
-    sus dos distribuidoras de pan le enviaron un hash cada una, dónde sus claves son los nombres de los productos, 
-    y sus valores asociados, sus precios. La panadería le pide a los alumnos que le implementen una función que 
-    le devuelva un nuevo hash con la unión de todos esos productos, y en caso de que un mismo pan se encuentre en 
-    ambos hashes, elegir el que tenga el precio más barato. Indicar y justificar el orden del algoritmo.
-
 1.  (★★★) Se tiene un hash que cuenta con una función de hashing, que recibida una clave 
     devuelve la posición de su inicial en el abecedario. La capacidad inicial del hash 
     es 26. Para los puntos B, C y D indicar y justificar si las afirmaciones son 
@@ -253,6 +247,18 @@ lista_t* hash_claves(const hash_t* hash) {
     a través de otra implementación de diccionario, o con un par de arreglos con las claves y valores).
     Explicar cómo harías para implementar esto de forma eficiente, considerando que su mayor utilidad 
     es realizar búsquedas lo más rápido posible. 
+
+1.  (★★★★) Dar una implementación en C de cómo podría ser la primitiva `hash_guardar` para el caso de un hash
+    cerrado con Cuckoo Hashing con dos funciones de hashing (suponer que se llaman `h1` y `h2`). Si la clave
+    ya se encontraba en el hash simplemente devolver `false` (no es necesario hacer un reemplazo del dato).
+    La estructura del Hash es:
+    ```cpp
+    typedef struct hash {                   typedef struct campo_hash {
+        campo_hash_t* tabla;                   char* clave;
+        size_t cantidad;                        void* dato;
+        size_t tam_tabla;                       int num_fhash;
+    } hash_t;                               } campo_hash_t;
+    ```
 
 1.  (★★★★★) Se quiere implementar un TDA Diccionario con las siguientes primitivas: 
     `obtener(x)` devuelve el valor de `x` en el diccionario; `insertar(x, y)` inserta en el diccionario 
