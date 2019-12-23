@@ -18,14 +18,18 @@ math: true
 Implementar un algoritmo en C que reciba un arreglo de $$n$$ enteros sin repetir y ordenado ascendentemente, y determine en $$\mathcal{O}(\log n)$$ si es mágico. Un arreglo es mágico si existe algún valor `i` (entre `0` y `n-1`) tal que `arr[i] = i`. Justificar el orden del algoritmo.
 
 Ejemplos:
+
 * `A = [ -3, 0, 1, 3, 7, 9 ]` es mágico porque `A[3] = 3`.
+
 * `B = [ 1, 2, 4, 6, 7, 9 ]` no es mágico porque `B[i] != i` para todo `i`.
 
 ### Solución
 
 Como mencionamos en clase, al ver que se nos pide: 
-- Un algoritmo de división y conquista,
-- Un orden $$\mathcal{O}(\log n)$$
+
+* Un algoritmo de división y conquista,
+
+* Un orden $$\mathcal{O}(\log n)$$
 
 Si no nos pidiera que sea de división y conquista, y más aún que su orden sea logarítimico, podríamos simplemente ir elemento por elemento chequeando si se cumple la condición:
 

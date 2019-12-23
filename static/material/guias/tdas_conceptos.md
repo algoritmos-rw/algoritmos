@@ -130,10 +130,14 @@ $$n$$.
 
 1. (★★★) Dada una lista enlazada implementada con las siguientes estructuras:
 
-		typedef struct nodo_lista { 		typedef struct lista {
-			struct nodo_lista* prox; 			nodo_lista_t* prim;
-			void* dato; 			} lista_t;
+		typedef struct nodo_lista { 		
+			struct nodo_lista* prox; 			
+			void* dato; 			
 		} nodo_lista_t;
+		
+		typedef struct lista {
+			nodo_lista_t* prim;
+		} lista_t;
 
 	Escribir una primitiva que reciba una lista y devuelva el elemento que esté a $$k$$ posiciones del final (el
 	ante-k-último), recorriendo la lista una sola vez y sin usar estructuras auxiliares. Considerar que

@@ -25,7 +25,9 @@ Dado que todos los elementos van a ser fechas en un formato fijo, de mismo largo
 2. Considerar que no es necesario trabajar en base 10. Sabemos que si o si los días están en el rango 1-31. Los meses en el rango 1-12. Luego, en los años podríamos no tener esto acotado, y no conviene trabajar con un rango 1-9999 porque puede ser más grande que la cantidad de elementos a ordenar. Pero cuanto menos, nos ahorramos dos pasadas. 
 
 Algunas preguntas: 
+
  - ¿Cuál es la mejor opción? La segunda, claramente. No sólo por hacerlo más rápido, sino por mostrar un entendimiento tanto del problema como del algoritmo. 
+ 
  - ¿La otra opción está mal? No. Pero considerar que si nos piden un seguimiento, si no consideramos estas cosas vamos a demorar más. Y es tiempo que se nos consume del parcialito. Conviene más pensar primero, y luego ponerse a aplicar, que aplicar de entrada. Se termina ganando más tiempo. Ahora bien, si además es una cuestión de implementación, podría restar un poco no haberlo pensado de la mejor forma (esta es una aclaración general que puede depender de lo evidente que sea la mejora según el caso particular). 
 
  _Aclaración_: en general este tipo de ejercicios pueden directamente implementarse en pseudo código, pero aquí proponemos una solución en C para que puedan ver una resolución completa en dicho lenguaje.

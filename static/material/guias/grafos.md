@@ -108,7 +108,9 @@ def reconstruir_ciclo(padre, inicio, fin):
   return camino.invertir()
 ```
 
-Ahora bien, para ver el orden, podemos ver que en el caso feliz, vamos a encontrar un ciclo muy rapido. Pero claramente eso no nos cambia mucho. Pensemos el caso de, a lo sumo, encontrar el ciclo muy tarde en el recorrido (también veremos el caso de no haber ciclo). En ese caso, en cualquiera de los dos recorridos vamos a pasar por cada vértice una vez, y solo una vez (a fin de cuentas, no volvemos a estar sobre un vértice ya visitado). Por cada vértice vemos _sus_ aristas. Recordar que es muy importante no caer en la tentación de decir que entonces el algoritmo es $$\mathcal{O}(V \times E)$$, porque si bien es cierto, es una muy mala cota. Por cada vértice pasamos por _sus_ arisas, que distan de ser las totales del grafo. Si por cada vértice vemos sus aristas (y no las de todo el grafo), en total estamos viendo todas las aristas del grafo, dos veces (una por cada extremo). Entonces, el orden será $$\mathcal{O}(V + 2 E) = \mathcal{O}(V + E)$$.
+Ahora bien, para ver el orden, podemos ver que en el caso feliz, vamos a encontrar un ciclo muy rapido. Pero claramente eso no nos cambia mucho. Pensemos el caso de, a lo sumo, encontrar el ciclo muy tarde en el recorrido (también veremos el caso de no haber ciclo). En ese caso, en cualquiera de los dos recorridos vamos a pasar por cada vértice una vez, y solo una vez (a fin de cuentas, no volvemos a estar sobre un vértice ya visitado). Por cada vértice vemos _sus_ aristas. Recordar que es muy importante no caer en la tentación de decir que entonces el algoritmo es $$\mathcal{O}(V \times E)$$, porque si bien es cierto, es una muy mala cota. Por cada vértice pasamos por _sus_ arisas, que distan de ser las totales del grafo. Si por cada vértice vemos sus aristas (y no las de todo el grafo), en total estamos viendo todas las aristas del grafo, dos veces (una por cada extremo). Entonces, el orden será $$\mathcal{O}(V + 2 E) = \mathcal{O}(V + E)$$. Todo esto, considerando que la implementación es con listas de adyacencias (implementadas con diccionarios, o bien
+siendo los vértices valores numéricos para indexar en un arreglo). Si fuera otra la implementación, obtener los adyacentes a un vértice dado nos costará más ($$\mathcal{O}(V)$$, en el caso de una matriz de adyacencia, u 
+$$\mathcal{O}(E)$$ en el caso de una matriz de incidencia).
 
 Haciendo un poco más de análisis: ¿es acaso el caso de no tener ciclos nuestro peor caso? Supongamos que el grafo es 
 conexo, por simplifcación. Si el grafo no tiene ciclos, y es conexo, necesariamente se trata de un árbol. Para este caso,
@@ -117,6 +119,27 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
 ¿Cuáles serían las diferencias si en vez de trabajar con un grafo no dirigido, lo hiciéramos sobre un grafo dirigido? Notar que la solución no debería ser demasiado distinta a estas propuestas, pero tienen sus pequeñas diferencias que dejamos para resolver en los ejercicios propuestos. 
 
 ## Ejercicios propuestos
+
+1.  (★) a. Dibujar un grafo no dirigido que:
+      * Tenga 6 vértices
+      * Tenga un ciclo que incluya 4 de dichos vértices
+      * Sea conexo
+      * Haya un vértice de grado 1
+      * Haya un vértice de grado 4
+
+    b. Escribir la representación de matriz de incidencia y matriz de adyacencia del grafo resultante
+    del punto anterior.
+
+1.  (★) a. Dibujar un grafo dirigido que:
+      * Tenga 7 vértices
+      * Tenga un ciclo que incluya 3 de dichos vértices
+      * Tenga un ciclo que incluya 2 de dichos vértices
+      * Haya un vértice de grado de entrada 0
+      * Haya un vértice de grado de salida 4
+
+    b. Escribir la representación de matriz de incidencia y matriz de adyacencia del grafo resultante
+    del punto anterior.
+
 
 1.  (★) Implementar una función que determine el:
 
