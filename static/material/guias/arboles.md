@@ -41,8 +41,8 @@ _Aclaración_: se debe realizar la menor cantidad posible de comparaciones.
 La aclaración hace mención a que utilicemos la propiedad de ABB: sabemos que los nodos
 a izquierda son menores al actual, y los que estén a derecha son mayores. 
 En particular, si estamos en un nodo cuya clave es menor (o igual) a la buscada, entonces es innecesario
-revisar a izquierda: todos esos nodos también serán menores. Si tendremos siempre que revisar a derecha,
-porque no es posible descartar. Esto es similar a una búsqueda por rango, solo que abierta _hacia arriba_.
+revisar a izquierda: todos esos nodos también serán menores. Sí tendremos siempre que revisar a derecha,
+porque no es posible descartar. Esto es similar a una búsqueda por rango, solo que sin un limite superior.
 
 ```cpp
 lista_t* abb_mayores(const abb_t* abb, const char* clave) {
@@ -81,7 +81,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 1.  (★) Implementar una primitiva que devuelva la suma de todos los datos (números) de un árbol binario. 
     Indicar y justificar el orden de la primitiva.
 
-1.  (★) Se tiene un AB con datos números enteros, y se quiere multiplicar a cada nodo con los datos de los hijos.
+1.  (★) Se tiene un AB con números enteros como datos, y se quiere reemplazar cada dato por el resultado de multiplicarlo con los datos de los hijos.
     Hacer un seguimiento de hacer dicho procesamiento con un preorder, inorder o postorder. A continuación se deja
     la implementación de cada recorrido:
 
@@ -97,17 +97,17 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 
     void multiplicar_con_hijos_in(ab_t* arbol) {
         if (!arbol) return;
-        multiplicar_con_hijos_pre(arbol->izq);
+        multiplicar_con_hijos_in(arbol->izq);
         int valor_izq = arbol->izq != NULL ? arbol->izq->dato : 1;
         int valor_der = arbol->der != NULL ? arbol->der->dato : 1;
         arbol->dato *= valor_izq * valor_der;
-        multiplicar_con_hijos_pre(arbol->der);
+        multiplicar_con_hijos_in(arbol->der);
     }
 
     void multiplicar_con_hijos_post(ab_t* arbol) {
         if (!arbol) return;
-        multiplicar_con_hijos_pre(arbol->izq);
-        multiplicar_con_hijos_pre(arbol->der);
+        multiplicar_con_hijos_post(arbol->izq);
+        multiplicar_con_hijos_post(arbol->der);
         int valor_izq = arbol->izq != NULL ? arbol->izq->dato : 1;
         int valor_der = arbol->der != NULL ? arbol->der->dato : 1;
         arbol->dato *= valor_izq * valor_der;
@@ -139,7 +139,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     (considerar que la lógica a emplear debe funcionar para cualquier valor de $$n$$ y cualquier estructura 
     que tenga el ABB `A`).
 
-1.  (★★★) Se tiene un AVL de claves números enteros (su función de comparación simplemente compara 
+1.  (★★★) Se tiene un AVL con números enteros como claves (su función de comparación simplemente compara 
     dichos valores de la forma tradicional). Su estado inicial puede reconstruirse a partir del 
     Preorder: `15 - 6 - 4 - 7 - 50 - 23`. Hacer el seguimiento de las siguientes inserciones, 
     incluyendo rotaciones intermedias: `71 - 27 - 38 - 19 - 11 - 21 - 24 - 25`.
@@ -203,4 +203,3 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     los elementos en orden para ser insertados en un ABB, de tal forma que al insertarlos en
     dicho orden se asegure que el ABB quede balanceado. ¿Cómo cambiarías tu resolución si en 
     vez de querer guardarlos en un ABB se fueran a insertar en un AVL?
-
