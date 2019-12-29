@@ -14,8 +14,10 @@ por el _engine_ de Google para rankear sus búsquedas de páginas webs.
 
 Éste algoritmo implica calcular: 
 
-$$ \text{PR}\left(p_i\right) = \frac{1-d}{N} + d \sum_{p_j \in M\left(p_i\right)} 
-\frac{\text{PR}\left(p_j\right)}{L\left(p_j\right)} $$
+$$
+\text{PR}\left(p_i\right) = \frac{1-d}{N} + d \sum_{p_j \in M\left(p_i\right)}
+\frac{\text{PR}\left(p_j\right)}{L\left(p_j\right)}
+$$
 
 Donde:
 * $$\text{PR}\left(p_i\right)$$: Pagerank del artículo (vértice) $$p_i$$ que se está queriendo calcular.
