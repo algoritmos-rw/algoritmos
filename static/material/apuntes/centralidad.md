@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Centralidad en un Grafo
 permalink: /material/apuntes/centralidad
 math: true

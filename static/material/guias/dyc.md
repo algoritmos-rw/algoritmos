@@ -1,6 +1,5 @@
 ---
 title: División y Conquista
-layout: default
 permalink: 'material/guias/dyc'
 math: true
 ---

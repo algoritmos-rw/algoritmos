@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Cola
 permalink: /tps/cola
 

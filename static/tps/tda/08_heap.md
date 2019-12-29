@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Heap
 permalink: /tps/heap
 

@@ -1,6 +1,5 @@
 ---
 title: Programación dinámica
-layout: default
 permalink: 'material/guias/pd'
 math: true
 ---

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "TP2 – Algueiza"
 permalink: '/tps/2019_2/tp2'
 math: true

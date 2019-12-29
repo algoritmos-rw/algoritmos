@@ -1,6 +1,5 @@
 ---
 title: "Grafos: Usos, implementaciones, recorridos."
-layout: default
 permalink: 'material/guias/grafos'
 math: true
 ---

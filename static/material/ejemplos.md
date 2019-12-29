@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Ejemplos de Código
 permalink: /material/ejemplos
 math: true

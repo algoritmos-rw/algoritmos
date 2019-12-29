@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Material Extra
 permalink: /material/extras
 math: true

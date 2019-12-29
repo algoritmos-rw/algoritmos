@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Comunidades y Label Propagation
 permalink: /material/apuntes/label_propagation
 math: true

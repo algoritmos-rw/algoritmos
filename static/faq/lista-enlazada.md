@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Lista Enlazada
 permalink: /faq/lista-enlazada
 ---

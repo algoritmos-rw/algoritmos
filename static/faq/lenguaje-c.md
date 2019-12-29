@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Lenguaje C
 permalink: /faq/lenguaje-c
 ---

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Random Walks
 permalink: /material/apuntes/random_walks
 math: true

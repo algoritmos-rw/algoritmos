@@ -1,6 +1,5 @@
 ---
 title: Greedy
-layout: default
 permalink: 'material/guias/greedy'
 math: true
 ---

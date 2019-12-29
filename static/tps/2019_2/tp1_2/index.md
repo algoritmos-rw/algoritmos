@@ -1,5 +1,4 @@
 ---
-layout: page
 title: TP1 – Parte 2
 permalink: '/tps/2019_2/tp1_2'
 math: true

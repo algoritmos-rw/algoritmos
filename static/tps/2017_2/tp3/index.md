@@ -1,5 +1,4 @@
 ---
-layout: page
 title: TP3 – Seis Grados de Kevin Bacon
 permalink: '/tps/2017_2/tp3'
 ---

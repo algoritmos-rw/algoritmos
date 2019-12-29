@@ -1,5 +1,4 @@
 ---
-layout: default
 title: PageRank
 permalink: /material/apuntes/pagerank
 math: true

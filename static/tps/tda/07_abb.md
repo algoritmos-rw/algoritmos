@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Árbol Binario de Búsqueda
 permalink: /tps/abb
 

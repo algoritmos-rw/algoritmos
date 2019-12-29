@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Primeros Pasos con Linux y C
 permalink: /faq/primeros-pasos
 math: true

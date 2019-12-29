@@ -2,7 +2,6 @@
 title: TP 3
 excerpt: |
   TP3 de Algoritmos II (2017/1): grafos. Fecha de entrega 23/06.
-layout: default
 permalink: '/tps/2017_1/tp3'
 math: true
 ---

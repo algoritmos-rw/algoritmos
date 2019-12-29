@@ -1,5 +1,4 @@
-﻿---
-layout: page
+---
 title: TP1 – Wachencoin
 permalink: '/tps/2017_2/tp1'
 ---

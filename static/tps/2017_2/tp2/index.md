@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "TP2 – analog: análisis de logs"
 permalink: '/tps/2017_2/tp2'
 ---

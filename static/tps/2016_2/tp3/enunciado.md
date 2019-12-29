@@ -1,7 +1,6 @@
 ---
 excerpt: |
   TP3 de Algoritmos II (2016/2): grafos. Fecha de entrega 2/12/16.
-layout: default
 permalink: '/tps/2016_2/tp3'
 math: true
 ---

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: TP1 – Manejo de archivos, cadenas y TDAs básicos
 permalink: '/tps/2019_1/tp1'
 math: true

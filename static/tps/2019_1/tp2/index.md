@@ -1,6 +1,5 @@
 ---
 title: TP 2
-layout: default
 permalink: '/tps/2019_1/tp2'
 ---
 

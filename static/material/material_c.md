@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Material Sobre el Lenguaje C
 permalink: /material/c
 math: true

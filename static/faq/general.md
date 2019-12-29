@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Preguntas Generales
 permalink: /faq/general
 math: true

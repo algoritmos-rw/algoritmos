@@ -1,6 +1,5 @@
 ---
 title: Backtracking
-layout: default
 permalink: 'material/guias/backtracking'
 math: true
 ---

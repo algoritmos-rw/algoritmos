@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Lenguaje C Compilación y Ejecución
 permalink: /faq/compilacion-ejecucion
 math: true

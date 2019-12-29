@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Heap
 permalink: /faq/heap
 ---

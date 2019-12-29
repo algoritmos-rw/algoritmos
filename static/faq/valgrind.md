@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Errores de Valgrind
 permalink: /faq/valgrind
 ---

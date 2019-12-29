@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Componentes Fuertemente Conexas"
 permalink: /material/apuntes/cfc
 math: true
