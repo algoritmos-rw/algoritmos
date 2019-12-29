@@ -81,9 +81,17 @@ En cualquiera de los casos, notar que siempre estaremos trabajando con un heap c
 
 Teniendo que $$k$$ valdrá $$\mathcal{O}(\frac{n}{C})$$ (con alguna constante dividiendo: 1, 2 o 3), tendrémos que nuestro algoritmo finalmente será: 
 
-$$ \text{SortExterno}(n) = \mathcal{O}(\text{particiones ordenadas}) + \mathcal{O}(\text{merge}) $$
-$$ \text{SortExterno}(n) = \mathcal{O}(n \log C) + \mathcal{O}(n \log \frac{n}{C}) $$
-$$ \text{SortExterno}(n) = \mathcal{O}(n \log C) + \mathcal{O}(n \log n) - \mathcal{O}(n \log C) = \mathcal{O}(n \log n) $$
+$$
+\begin{aligned}
+\text{SortExterno}(n) &= \mathcal{O}(\text{particiones ordenadas}) +
+\mathcal{O}(\text{merge}) \\
+
+\text{SortExterno}(n) &= \mathcal{O}(n \log C) + \mathcal{O}(n \log \frac{n}{C}) \\
+
+\text{SortExterno}(n) &= \mathcal{O}(n \log C) + \mathcal{O}(n \log n) -
+\mathcal{O}(n \log C) = \mathcal{O}(n \log n)
+\end{aligned}
+$$
 
 Con eso comprobamos que, lógicamente, nuestro algoritmo ordena en $$\mathcal{O}(n \log n)$$. Ahora bien: ¿por qué deberíamos darle importancia si generamos más o menos particiones, si a cuestiones del orden no nos importa? Primero, porque a grandes rasgos es una buena optimización, que se escapa del análisis del orden del algoritmo planteado por la notación _Big Oh_. Pero más importante: estamos hablando de operaciones de lectura y escritura sobre disco. Dichas operaciones toman más tiempo que muchas otras operaciones (si bien ese tiempo sigue siendo constante, es muy grande). Por esto, es que planteamos como posibles mejoras tanto Replacement Selection como Natural Selection. 
 
@@ -105,8 +113,12 @@ Esto podría resolverse haciendo más de una pasada del merge: En vez de mergear
 * Pero... ¿Y si la cantidad de particiones es tal que incluso haciendo lo anterior, no entran en memoria $$\sqrt{k}$$ registros (porque serían mayor a $$C$$)? 
 Vayamos a los números: En general se suele trabajar con computadoras de 8 o 16GB de memoria RAM. Supongamos que por diversas cuestiones, contamos con 512MB de memoria RAM a disposición de nuestro programa. No suena, hoy en día, un número tan grande (aunque puede serlo si el sistema debe realizar muchas tareas). Con lo que vimos anteriormente, podemos generar particiones de hasta tamaño (promedio) $$3C$$. Eso quiere decir que tendremos $$\frac{n}{3C}$$ particiones. Que no entren $$k$$ registros en memoria implicaría que $$\frac{n}{3C}$$ registros deberían ser mayor a $$C$$. Esto quiere decir que:
 
-	$$\frac{n}{3C} > C$$
+$$
+\frac{n}{3C} > C
+$$
 
-	$$n > 3C^2$$
+$$
+n > 3C^2
+$$
 	
-	Si nuestra memoria para el programa es de 512MB, donde supongamos que cada registro nos ocupe en promedio 128 Bytes (no solemos querer ordenar simples números). Eso querría decir que tenemos alrededor de $$C = 4.194.304$$ registros. Eso implicaría que nuestro $$n$$ debería ser mayor a $$5.28 \times 10^{13}$$ que, mantiendo que cada registro ocupe 128 bytes, implicaría que nuestro archivo original es de 6 Peta Bytes (ni siquiera Tera). Esas capacidades ni siquiera existen para fines remotamente cercanos a los de nuestra materia. Cuando llegamos a tales números, nos olvidaremos completamente de intentar implementar algoritmos de este estilo. Porque, a fin de cuentas... ¿Quién va a validar que esa gigantezca masa de datos está ordenada? El manejo de inmensos (o cuasi infinitos) volúmenes de datos es analizado en la materia _Organización de Datos_.
+Si nuestra memoria para el programa es de 512MB, donde supongamos que cada registro nos ocupe en promedio 128 Bytes (no solemos querer ordenar simples números). Eso querría decir que tenemos alrededor de $$C = 4.194.304$$ registros. Eso implicaría que nuestro $$n$$ debería ser mayor a $$5.28 \times 10^{13}$$ que, mantiendo que cada registro ocupe 128 bytes, implicaría que nuestro archivo original es de 6 Peta Bytes (ni siquiera Tera). Esas capacidades ni siquiera existen para fines remotamente cercanos a los de nuestra materia. Cuando llegamos a tales números, nos olvidaremos completamente de intentar implementar algoritmos de este estilo. Porque, a fin de cuentas... ¿Quién va a validar que esa gigantezca masa de datos está ordenada? El manejo de inmensos (o cuasi infinitos) volúmenes de datos es analizado en la materia _Organización de Datos_.

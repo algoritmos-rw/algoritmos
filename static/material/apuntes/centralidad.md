@@ -112,11 +112,15 @@ def centralidad(grafo):
 
 De los puntos anteriores podemos ver que el orden de nuestra nueva implementación será:
 
-$$\mathcal{O}(\text{centralidad}) = V \times \left(\mathcal{O}(\text{camino-minimo}) + \mathcal{O}(V) 
-+ \mathcal{O}(\text{ordenamiento}) + \mathcal{O}(V) + \mathcal{O}(V)\right) $$
+$$
+\begin{aligned}
+\mathcal{O}(\text{centralidad}) &= V \times \left(\mathcal{O}(\text{camino-minimo}) + \mathcal{O}(V)
++ \mathcal{O}(\text{ordenamiento}) + \mathcal{O}(V) + \mathcal{O}(V)\right) \\
 
-$$\mathcal{O}(\text{centralidad}) = V \times \left(\mathcal{O}(\text{camino-minimo}) + 
- \mathcal{O}(\text{ordenamiento})\right)$$
+\mathcal{O}(\text{centralidad}) &= V \times \left(\mathcal{O}(\text{camino-minimo}) +
+ \mathcal{O}(\text{ordenamiento})\right)
+\end{aligned}
+$$
 
 * Si se trata de un grafo no pesado el camino mínimo nos costará $$\mathcal{O}(V+E)$$. En este caso,
 sabemos cuál es el rango de distancias posibles: irán de 0, a como mucho $$V$$, por lo que podríamos 

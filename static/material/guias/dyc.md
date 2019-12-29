@@ -82,11 +82,15 @@ _Nota_: El algoritmo puede, en vez de resolverse con una función auxiliar que h
 
 Vemos la ecuación de recurrencia: 
 
-$$\mathcal{T}(n) = \mathcal{T}\left(\frac{n}{2}\right) + \mathcal{O}(1)$$
+$$
+\mathcal{T}(n) = \mathcal{T}\left(\frac{n}{2}\right) + \mathcal{O}(1)
+$$
 
 Es, evidentemente, igual a la de Búsqueda Binaria, por lo que tendrá el mismo orden, pero aplicamos el Teorema Maestro para corroborar: 
 
-$$A = 1; B = 2; C = 0 \rightarrow \log_B (A) = \log_2 (1) = 0 = C$$
+$$
+A = 1; B = 2; C = 0 \rightarrow \log_B (A) = \log_2 (1) = 0 = C
+$$
 
 Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será $$\mathcal{O}(n^C \log n) = \mathcal{O}(\log n)$$
 

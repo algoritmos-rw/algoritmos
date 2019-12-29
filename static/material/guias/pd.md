@@ -109,7 +109,9 @@ A su vez, también se puede ver que la solución greedy para el problema del cam
 
 1. La cantidad de posibles colocaciones de paréntesis para n operadores binarios está dada por la fórmula:
 
-   $$v[n] = \sum_{j=0}^{n-1} v[j] * v[(n-1)-j]$$, con $$v[0] = 1$$ y $$v[1] = 1$$.
+   $$
+   v[n] = \sum_{j=0}^{n-1} v[j] * v[(n-1)-j]$$, con $$v[0] = 1$$ y $$v[1] = 1
+   $$
 
    Escribir una función que obtenga la cantidad de agrupaciones para un valor N de operadores de forma eficiente.
 
