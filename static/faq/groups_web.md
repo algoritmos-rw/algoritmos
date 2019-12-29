@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Groups desde la interfaz web
 permalink: /faq/groups-ui
 ---

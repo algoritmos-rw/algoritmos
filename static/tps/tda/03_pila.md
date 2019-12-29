@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Pila
 permalink: /tps/pila
 

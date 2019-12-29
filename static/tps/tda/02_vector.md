@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Vector dinámico
 permalink: /tps/vector
 

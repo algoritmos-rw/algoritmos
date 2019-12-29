@@ -1,6 +1,5 @@
 ---
 title: TP 1
-layout: default
 permalink: '/tps/2017_1/tp1'
 ---
 

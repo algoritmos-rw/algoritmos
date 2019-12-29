@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Archivos KML
 permalink: /material/apuntes/kml
 math: true

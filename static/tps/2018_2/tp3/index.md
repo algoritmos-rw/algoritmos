@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "TP3 – Grafos y aeropuertos"
 permalink: '/tps/2018_2/tp3'
 math: true

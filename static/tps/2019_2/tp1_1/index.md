@@ -1,5 +1,4 @@
 ---
-layout: page
 title: TP1 - Parte 1 – Manejo cadenas
 permalink: '/tps/2019_2/tp1_strutil'
 math: true

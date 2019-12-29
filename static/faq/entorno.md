@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Entorno de Desarollo
 permalink: /faq/entorno
 ---

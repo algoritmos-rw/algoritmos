@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Tipos de Datos Abstractos
 permalink: /faq/tda
 math: true

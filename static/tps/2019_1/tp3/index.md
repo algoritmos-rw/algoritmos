@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "TP3 – Grafos y la red de delincuencia"
 permalink: '/tps/2019_1/tp3'
 math: true

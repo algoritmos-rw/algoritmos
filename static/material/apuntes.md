@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Apuntes y Guías del Curso
 permalink: /material/
 math: true

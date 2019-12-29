@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Lista
 permalink: /tps/lista
 

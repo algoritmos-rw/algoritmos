@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Algoritmos de Ordenamientos Externos
 permalink: /material/apuntes/ordenamientos_externos
 math: true

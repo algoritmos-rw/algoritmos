@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Hash
 permalink: /faq/hash
 ---

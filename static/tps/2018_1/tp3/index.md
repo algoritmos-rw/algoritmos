@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "TP3 – Grafos y agencias de viaje"
 permalink: '/tps/2018_1/tp3'
 math: true

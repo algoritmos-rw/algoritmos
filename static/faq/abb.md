@@ -1,5 +1,4 @@
 ---
-layout: page
 title: FAQ - Árbol Binario de Búsqueda
 permalink: /faq/abb
 ---
