@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Guías del Curso
 permalink: /material/guias
 math: true

@@ -1,6 +1,5 @@
 ---
 title: "Grafos: Aplicaciones y Algoritmos"
-layout: default
 permalink: 'material/guias/grafos_2'
 math: true
 ---

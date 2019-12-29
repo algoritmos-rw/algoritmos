@@ -1,6 +1,5 @@
 ---
 title: Ordenamientos comparativos y no comparativos
-layout: default
 permalink: 'material/guias/ordenamientos'
 math: true
 ---

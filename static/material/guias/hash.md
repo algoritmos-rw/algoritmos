@@ -1,6 +1,5 @@
 ---
 title: Diccionarios, Hashing y Hash
-layout: default
 permalink: 'material/guias/hash'
 math: true
 ---

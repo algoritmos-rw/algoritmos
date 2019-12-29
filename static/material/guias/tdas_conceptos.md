@@ -1,6 +1,5 @@
 ---
 title: Conceptos de TDAs, Pilas, Colas y Listas
-layout: default
 permalink: 'material/guias/tdas_conceptos'
 math: true
 ---

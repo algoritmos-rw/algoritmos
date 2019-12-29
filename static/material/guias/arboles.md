@@ -1,6 +1,5 @@
 ---
 title: Árboles Binarios, ABB, AVL, Árbol B
-layout: default
 permalink: 'material/guias/arboles'
 math: true
 ---
