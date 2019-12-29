@@ -25,13 +25,13 @@ Ejemplos:
 
 ### Solución
 
-Como mencionamos en clase, al ver que se nos pide: 
+Como es mencionado en clase, al ver que se nos pide: 
 
 * Un algoritmo de división y conquista,
 
 * Un orden $$\mathcal{O}(\log n)$$
 
-Si no nos pidiera que sea de división y conquista, y más aún que su orden sea logarítimico, podríamos simplemente ir elemento por elemento chequeando si se cumple la condición:
+Si no se nos pidiera que sea de división y conquista, y más aún que su orden sea logarítimico, podríamos simplemente ir elemento por elemento chequeando si se cumple la condición:
 
 ```cpp
 bool arreglo_es_magico(int arr[], size_t n) {
@@ -106,15 +106,11 @@ izquierda o derecha), y todo lo que cuesta _partir y juntar_ no son más que alg
 Lo importante, es que si bien hay escritos dos llamados recursivos, nunca se llamaran a ambos. Siempre se llamará o bien
 para el lado izquierdo, o para el lado derecho. Por lo tanto, la ecuación de recurrencia quedará:
 
-$$
-\mathcal{T}(n) = \mathcal{T}\left(\frac{n}{2}\right) + \mathcal{O}(1)
-$$
+$$\mathcal{T}(n) = \mathcal{T}\left(\frac{n}{2}\right) + \mathcal{O}(1)$$
 
 Es, evidentemente, igual a la de Búsqueda Binaria, por lo que tendrá el mismo orden, pero aplicamos el Teorema Maestro para corroborar: 
 
-$$
-A = 1; B = 2; C = 0 \rightarrow \log_B (A) = \log_2 (1) = 0 = C
-$$
+$$A = 1; B = 2; C = 0 \rightarrow \log_B (A) = \log_2 (1) = 0 = C$$
 
 Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será $$\mathcal{O}(n^C \log n) = \mathcal{O}(\log n)$$
 
