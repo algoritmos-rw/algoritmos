@@ -1,38 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'es' }}">
 
   {% include head.html %}
 
   <body>
-
     {% include header.html %}
 
-    <div class="container">
-
-      <main class="page-content" aria-label="Content">
-        <div class="wrapper">
+    <main class="container" role="main">
+      <div class="row justify-content-center">
+        <div class="col col-xl-8">
           {{ content }}
         </div>
-      </main>
+      </div>
+    </main>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
-      <script>
-        // Como usamos position: fixed para la barra de navegación, el
-        // cómputo de posiciones para scroll es incorrecto (ver #89). Se
-        // puede solucionar con padding/margin falsos que se autocancelan
-        // (similar a https://stackoverflow.com/a/17130459/848301).
-        $('a[href^="#"]').each(function() {
-            $($(this).attr("href"))
-              .css("padding-top",  $("nav.navbar").height())
-              .css("margin-top",  -$("nav.navbar").height());
-        });
-      </script>
-
-      {% include footer.html %}
-
-    </div>
-
+    {% include footer.html %}
   </body>
 
 </html>
