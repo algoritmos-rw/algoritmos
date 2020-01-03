@@ -270,6 +270,23 @@ opcion_t leer_opcion_letra(char opcion) {
 
 Nótese que el diccionario `letras_opciones` no define valor para `OPC_INDEFINIDA`, esto es porque esa no es una opción que se ingrese sino una condición de error. Nótese además que agregamos prefijos a las etiquetas de nuestro enumerativo; esto es importante porque, dado que las etiquetas se definen internamente _exactamente igual_ que si se hubiera escrito `#define OPC_AYUDA 0`, etc., no puede haber dos etiquetas con el mismo nombre en el programa. Para evitar esto es preferible usar prefijos únicos para las etiquetas de un mismo tipo.
 
+Finalmente, también es posible combinar el paso de validación con el de conversión, pero sin la necesidad de introducir un valor de error al enumerativo. Para ello, se separa el resultado en dos variables: un booleano indicando si la conversión tuvo éxito, y un valor enumerativo indicando el resultado. La semántica es que si el booleano es falso, el enumerativo no recibió conversión alguna:
+
+```cpp
+// Devuelve verdadero si se pudo convertir "s" a un reino.
+// En ese caso, el resultado queda en la variable "ret".
+bool parse_reino(const char *s, enum reino *ret) {
+    size_t cantidad = sizeof(nombres_reino)/sizeof(nombres_reino[0]);
+    for(size_t i = 0; i < cantidad; i++) {
+        if(strcmp(nombres_reino[i], s) == 0) {
+            *ret = (enum reino) i;
+            return true;
+        }
+    }
+    return false;
+}
+```
+
 
 ### Diccionarios para traducir cosas en cosas
 
