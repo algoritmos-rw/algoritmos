@@ -217,34 +217,39 @@ Si necesitáramos traducir entre la representación interna del enumerativo y ot
 Por ejemplo:
 
 ```cpp
+// Nombres como cadenas.
 const char *nombres_reino[] = {"animalia", "plantae", "fungi", "bacteria", "protista", "archaea"};
 
-char *reino_a_cadena(enum reino r) {
+// Función de conversión.
+const char *reino_a_cadena(enum reino r) {
     return nombres_reino[r];
 }
 ```
 
-Notar que la precondición implícita de la función es asumir que se cumple el invariante del enumerativo, es decir, que el mismo contiene una etiqueta válida de la definición del `enum`.
+Nótese que la precondición implícita de la función es asumir que se cumple el invariante del enumerativo, es decir, que el parámetro contiene una etiqueta (valor) existente en la definición del `enum`.
 
-Si quisiéramos realizar el proceso contrario, esto es, implementar una función `enum reino cadena_a_reino(const char *s);` podríamos iterar comparando los elementos de `nombre_reino` hasta que encontremos la cadena y sencillamente devolver el índice del vector (que es entero y en el rango del enumerativo, por lo que no hay inconveniente en castearlo a tipo `enum reino`). Ahora bien, van a surgir dos complicaciones: la primera es que no tenemos manera de preguntarle al enumerativo cuántas etiquetas posee (esto podría saltearse preguntándoselo al vector con `sizeof(nombres_reino)/sizeof(nombres_reino[0])`); y la segunda es que no sabríamos qué devolver en el caso de que la cadena `s` no coincidiera con ningún elemento de `nombres_reino`. Si bien ambos problemas pueden evadirse, probablemente convenga manejarlos de otra forma.
+Si quisiéramos realizar el proceso inverso, esto es, implementar una función `enum reino cadena_a_reino(const char *s);` podríamos iterar comparando los elementos de `nombre_reino` hasta que encontremos la cadena, y sencillamente devolver el índice del vector (que es entero y en el rango del enumerativo, por lo que no hay inconveniente en castearlo a tipo `enum reino`). Ahora bien, van a surgir dos complicaciones: la primera es que no tenemos manera de preguntarle al enumerativo cuántas etiquetas posee (esto podría saltearse preguntándoselo al vector con `sizeof(nombres_reino)/sizeof(nombres_reino[0])`), o terminando el arreglo en `NULL`; la segunda es que no sabríamos qué devolver en el caso de que la cadena `s` no coincidiera con ningún elemento de `nombres_reino`. Si bien ambos problemas pueden evadirse, probablemente convenga manejarlos de otra forma.
 
 ### Diccionarios para traducir a enumerativo
 
-En el caso de que supiéramos que lo que hay que traducir viene bien formado y ya pasó por un proceso previo de verificación que garantiza la correctitud de lo datos (suele ser una etapa recomendable en cualquier programa) bien podemos hacer el reverso que para traducir de enumerativo a otra cosa:
+En el caso de que supiéramos que lo que hay que traducir viene bien formado y ya pasó por un proceso previo de verificación que garantiza la correctitud de lo datos (suele ser una etapa recomendable en cualquier programa), bien podemos hacer el reverso que para traducir de enumerativo a otra cosa:
 
 ```cpp
 // Precondición: La cadena pertenece a nombre_reino
 enum reino cadena_a_reino(const char *s) {
-    size_t cantidad = sizeof(nombre_reino)/sizeof(nombre_reino[0]);
-    for(size_t i = 0; i < cantidad; i++)
-        if(!strcmp(nombre_reino[i], s))
-            return i;
+    size_t cantidad = sizeof(nombres_reino)/sizeof(nombres_reino[0]);
+    for(size_t i = 0; i < cantidad; i++) {
+        if(strcmp(nombres_reino[i], s) == 0) {
+            return (enum reino) i;
+        }
+    }
+    // ...
 }
 ```
 
-Notar que `i` es de tipo `size_t` y la función devuelve `enum reino`, no hay nada peligroso en este casteo porque por construcción estamos **asegurando** que `i` _entra_ en un `enum reino`. Notar además que no hay un `return` al final de la función, más allá de la precondición en una implementación real podríamos devolver un reino por omisión, por ejemplo `return ANIMALIA;`.
+Nótese que `i` es de tipo `size_t` y la función devuelve `enum reino`, pero no hay nada peligroso en este casteo porque por construcción estamos **asegurando** que `i` _entra_ en un `enum reino`. Nótese además que no hay un `return` al final de la función; más allá de la precondición, en una implementación real podríamos devolver un reino por omisión, por ejemplo `return ANIMALIA;`.
 
-En el caso de que pueda haber una categoría no definida dentro de mi enumerativo, y esto sea algo plausible de ocurrir a tal punto de que _tenga sentido_ incluir ese caso como un caso particular del enumerativo, podemos agregar una etiqueta más al enumerativo que represente el estado indefinido. (Preguntarse: ¿Necesito agregarla o debería resolver ese problema antes de asignar el enumerativo?)
+Por otra parte, en el caso de que pueda haber una categoría no definida dentro de mi enumerativo, y esto sea algo plausible de ocurrir a tal punto de que _tenga sentido_ incluir ese caso como un caso particular del enumerativo, podemos agregar una etiqueta más al enumerativo que represente el estado indefinido. (Preguntarse: ¿necesito agregarla o debería resolver ese problema antes de asignar el enumerativo?)
 
 Por ejemplo:
 
@@ -254,14 +259,17 @@ const char opciones_letras[] = {'h', 'v', 'r', 'a'};
 const char *opciones_cadenas[] = {"help", "version", "recursive", "all"};
 
 opcion_t leer_opcion_letra(char opcion) {
-    for(size_t i = 0; i < OPC_INDEFINIDA; i++)
-        if(opciones_letras[i] == opcion)
+    for(int i = 0; i < OPC_INDEFINIDA; i++) {
+        if(opciones_letras[i] == opcion) {
             return i;
+        }
+    }
     return OPC_INDEFINIDA;
 }
 ```
 
-Notar que el diccionario `letras_opciones` no define valor para `OPC_INDEFINIDA`, esto es porque esa no es una opción que se ingrese sino una condición de error. Notar que agregamos prefijos a las etiquetas de nuestro enumerativo, esto es importante porque dado que las etiquetas se definen internamente _exactamente igual_ que si se hubiera escrito `#define OPC_AYUDA 0`, etc. no puede haber dos etiquetas con el mismo nombre en el programa, para evitar esto es preferible usar prefijos únicos para las etiquetas de un tipo.
+Nótese que el diccionario `letras_opciones` no define valor para `OPC_INDEFINIDA`, esto es porque esa no es una opción que se ingrese sino una condición de error. Nótese además que agregamos prefijos a las etiquetas de nuestro enumerativo; esto es importante porque, dado que las etiquetas se definen internamente _exactamente igual_ que si se hubiera escrito `#define OPC_AYUDA 0`, etc., no puede haber dos etiquetas con el mismo nombre en el programa. Para evitar esto es preferible usar prefijos únicos para las etiquetas de un mismo tipo.
+
 
 ### Diccionarios para traducir cosas en cosas
 
