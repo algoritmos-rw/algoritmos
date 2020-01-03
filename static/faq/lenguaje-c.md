@@ -187,25 +187,28 @@ void x(funcionvoid_t *mi_funcion);
 
 ### ¿Cuándo se usan los tipos enumerativos?
 
-Los tipos enumerativos en C permiten definir un valor _con nombre propio_ entre un conjunto cerrado de casos posibles. Por ejemplo, para modelar los días de la semana, los enumerativos nos permiten crear variables a las que podremos asignarle la etiqueta `LUNES` en vez de convenir asignar `0` o `1` o la letra `'L'`. Cada vez que haya que modelar en qué estado está una variable entre un número finito de posibilidades donde esas posibilidades se identifican con un nombre usaremos tipos enumerativos. (Puede expresarse esto de otra manera: Cada vez que estés inventando valores arbitrarios para categorizar cosas estás haciendo mal las cosas y deberías haber definido un enumerativo.)
+Los tipos enumerativos en C permiten definir un _valor con nombre propio_ entre un conjunto cerrado de valores válidos. Por ejemplo, para modelar los días de la semana, los enumerativos nos permiten crear variables a las que podremos asignar la etiqueta `LUNES` en lugar de usar la convención de asignar `0`, `1`, o la letra `'L'`. Cada vez que se desee restringir el valor de una variable a un número finito de posibilidades, cada una con un nombre particular, usaremos tipos enumerativos. (O, expresado de otra manera: cada vez que se esté inventando valores arbitrarios para categorizar cosas, se debiera haber definido un enumerativo.)
 
 La declaración de un tipo enumerativo es simplemente una secuencia de valores:
 
 ```cpp
+// Definición del tipo.
 enum reino {ANIMALIA, PLANTAE, FUNGI, BACTERIA, PROTISTA, ARCHAEA};
 
+// Uso en una variable.
 enum reino especimen_a = ANIMALIA;
 ```
 
-(Al igual que con el tipo `struct` podríamos haber hecho un `typedef` para redefinir `enum reino` a algo más cómodo y sintético como `reino_t`.)
+(Al igual que con el tipo _struct_, se puede redefinir, mediante un `typedef`, el tipo `enum reino` a algo más cómodo y sintético como `reino_t`.)
 
-_Sólo_ porque va a utilizarse más adelante se menciona lo siguiente: Las etiquetas tienen valores numéricos, consecutivos y comienzan por el número cero.
+_Sólo_ porque va a utilizarse más adelante se menciona ahora lo siguiente: internamente, las etiquetas tienen valores numéricos, consecutivos, comenzando en cero.
 
-Si bien internamente el tipo `enum` se representa como un entero y los valores de las etiquetas son numéricos en _la mayor parte_ de las ocasiones **está mal** preocuparse por cuánto vale ese valor (sea forzándolo o asignándolo con un literal). También siendo enteros podría asignárseles cualquier valor numérico no incluido entre las etiquetas definidas, esto sería **muy grave** dado que representaría una violación al invariante del enumerativo. Ambas cosas debe evitarse a toda costa. (Y puede expresarse también de otra manera: Si es importante el valor numérico preguntate si no deberías haber elegido una cosa distinta a un enumerativo.)
+Pero aun si internamente el tipo `enum` se representa como un entero, y los valores de las etiquetas son numéricos, en _la mayor parte_ de las ocasiones **está mal** preocuparse por cuánto vale ese valor (sea forzándolo a _int_, o asignándolo con un literal). Siendo enteros, también podría asignárseles cualquier valor numérico no incluido entre las etiquetas definidas; esto sería **muy grave**, dado que esto significaría romper con el invariante del enumerativo. Ambas cosas debe evitarse a toda costa. (Y puede expresarse también de otra manera: si es importante el valor numérico, preguntate si no deberías haber elegido una cosa distinta a un enumerativo.)
 
-Cuando utilizamos enumerativos el compilador puede hacer chequeos sobre los valores de los mismos. Por ejemplo, si entráramos en un `switch` con un enumerativo (esto se puede porque `switch` funciona sobre enteros y un enumerativo **es** un entero) el compilador podría avisarnos si nos estamos olvidando de incluir un `case` para un valor puntual del mismo.
+Cuando utilizamos enumerativos el compilador puede hacer comprobaciones sobre los valores de los mismos. Por ejemplo, si entráramos en un `switch` con un enumerativo (esto se puede hacer porque `switch` funciona sobre enteros, y un enumerativo _es_ un entero), el compilador podría avisarnos si nos estamos olvidando de incluir un `case` para un valor puntual del mismo.
 
-Es importante destacar que los `enum` sirven para hacer más claro y legible el código y son una herramienta **para el programador**. Como tales no hay herramientas para convertir, por ejemplo, la etiqueta `ANIMALIA` en la cadena `"ANIMALIA"` ni hay herramientas para leer un enumerativo.
+Es importante destacar que los `enum` sirven para hacer más claro y legible el código y son una herramienta **para el programador**. Como tales, no hay herramientas para convertir, por ejemplo, la etiqueta `ANIMALIA` en la cadena `"ANIMALIA"`, ni hay herramientas para leer un enumerativo.
+
 
 ### Diccionarios para traducir enumerativos a cadenas (o a cualquier tipo)
 
