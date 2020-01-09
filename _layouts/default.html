@@ -18,10 +18,14 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
       <script>
-        $("#markdown-toc li a").click(function(e) {
-            e.preventDefault();
-            var aux = $(this).attr("href");
-            $('html,body').animate({scrollTop: $(aux).position().top-$("nav.navbar").height()},0);
+        // Como usamos position: fixed para la barra de navegación, el
+        // cómputo de posiciones para scroll es incorrecto (ver #89). Se
+        // puede solucionar con padding/margin falsos que se autocancelan
+        // (similar a https://stackoverflow.com/a/17130459/848301).
+        $('a[href^="#"]').each(function() {
+            $($(this).attr("href"))
+              .css("padding-top",  $("nav.navbar").height())
+              .css("margin-top",  -$("nav.navbar").height());
         });
       </script>
 
