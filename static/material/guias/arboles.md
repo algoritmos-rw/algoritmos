@@ -148,8 +148,9 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     insertar 14, insertar 2, insertar 10, insertar 6, insertar 7, insertar 1, insertar 4, insertar 8, 
     insertar 11, insertar 19, insertar 9, insertar 5, insertar 15, insertar 3.
 
-1.  (★★★) Definimos como _quiebre en un árbol binario_ cuando ocurre que un
-    hijo derecho tiene un hijo izquierdo, o viceversa.
+1.  (★★★) Definimos como _quiebre en un árbol binario_ cuando ocurre que:
+    - un hijo derecho tiene sólo un hijo izquierdo (y tiene este hijo).
+    - un hijo izquierdo tiene sólo un hijo derecho (y tiene este hijo).
 
     Implementar una _primitiva_ para el árbol binario `size_t ab_quiebres(const ab_t*)`
     que dado un árbol binario nos devuelva la cantidad de quiebres que
