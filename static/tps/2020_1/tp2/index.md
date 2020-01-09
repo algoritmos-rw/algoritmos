@@ -97,9 +97,13 @@ Garantías (pre-condiciones):
 
 ### Datos disponibles
 
-Se deja en [el sitio de descargas]({{site.skel}}) un archivo con casos de prueba que pueden utilizar
+Se deja en [aquí](tp2.zip) un archivo con casos de prueba que pueden utilizar
 tanto de archivos de entrada, como de comandos a ser ejecutados y pruebas automatizadas, además de los
 restantes archivos que se mencionan de aquí en adelante. 
+
+Para ejecutar las pruebas correr: 
+    
+    $ ./pruebas.sh PATH-A-EJECUTABLE-TP2
 
 ## Interacción
 
@@ -116,22 +120,24 @@ Como se ve, un comando puede tener más de un parámetro, separados por comas.
 
 Una vez procesada la operación, el sistema imprimirá el resultado, o bien un
 mensaje de error si no la pudo completar. **Tanto el resultado como los mensajes
-de error se imprimen siempre por salida estándar**.[^1]
+de error se imprimen siempre por salida estándar**. El programador puede por tanto utilizar 
+la salida de error estándar para mensajes de depurado o _debugging_. Estos mensajes, no obstante, 
+no deben quedar en el programa final.
 
 Mensajes de error:
 
   - Si una instrucción no sigue el formato `NOMBRE_COMANDO:PARAMETROS`, el
     sistema imprime el siguiente mensaje de error:
 
-        ERROR: formato de comando incorrecto
+        ERROR: formato de comando incorrecto ('LINEA_INGRESADA')
 
   - Si el formato es correcto pero no existe el comando, el sistema imprime:
 
-        ERROR: no existe el comando 'NOMBRE_CMD:PARAMETROS'
+        ERROR: no existe el comando 'NOMBRE_CMD'
 
-[^1]: El programador puede por tanto utilizar la salida de error estándar para
-mensajes de depurado o _debugging_. Estos mensajes, no obstante, no deben
-quedar en el programa final.
+  - Si no se tienen la cantidad de parámetros necesarios, el sistema imprime:
+
+        ERROR: cantidad de parametros invalidos para comando 'NOMBRE_CMD'
 
 
 ## Comandos
@@ -222,8 +228,6 @@ Salida ($N + 1$ líneas, donde $N$ es el número de doctores en el sistema que s
         ...
         N: NOMBRE, especialidad ESPECIALIDAD, Z paciente(s) atendido(s)
 
-Tener especial cuidado al realizar la implementación de esta funcionalidad para que sea lo más eficiente posible
-
 ### Mensajes de error
 
 Para facilitar los mensajes de la aplicación sean _exactamente_ los
@@ -245,7 +249,7 @@ Si hay alguna discrepancia entre esta consigna y el archivo `mensajes.h`, este
 último es la versión canónica.
 
 
-### Otras condiciones de error
+#### Otras condiciones de error
 
 
 El sistema aborta con código numérico 1 ante cualquiera de los siguientes
@@ -258,13 +262,17 @@ errores **durante la fase de inicialización**:
   - algún año no es un valor numérico.
 
 
-### Funciones auxiliares de la cátedra
+## Funciones auxiliares del curso
 
 Además del archivo `mensajes.h` ya mencionado, se proporcionan dos archivos
 auxiliares, `csv.h` y `csv.c`, para ayudar con la lectura tanto de los archivos
 CSV, como de los comandos. Su uso es opcional; el alumno puede emplear sus
 propias funciones de lectura, o las proporcionadas por el curso en TPs
 anteriores.
+
+Además, se añade un esqueleto del programa principal del Trabajo Práctico `tp2.c`.
+Pueden bien utilizarlo, en cuyo caso deberán modificarlo para adaptar su uso a
+la estructuras de datos que utilicen. No es obligatorio su uso. 
 
 
 ## Criterios de aprobación
@@ -300,6 +308,21 @@ El código entregado debe:
 
 - ajustarse a la especificación de la consigna y pasar todas las pruebas
   automáticas.
+
+### Complejidad
+
+Cada comando debería funcionar de forma acorde, pero además deberá cumplir con los siguientes requisitos de complejidad:
+
+1.  Comando Pedir Turno: Si se tratase de un caso urgente, deberá funcionar en $$\mathcal{O}(1)$$. Si, en cambio, se tratara
+    de un caso regular, se puede relajar a que funcione en $$\mathcal{O}(\log n)$$ siendo $$n$$ la cantidad de pacientes
+    encolados **en la especialidad** indicada (no el total de los pacientes existentes).
+
+2.  Comando Atender siguiente paciente: Siendo $$d$$ la cantidad de doctores en el sistema, debe funcionar en $$\mathcal{O}(\log d)$$ 
+    si el siguiente caso a tratar en la especialidad de dicho doctor es un caso urgente, o bien $$\mathcal{O}(\log d + \log n)$$ si
+    se tratara de un caso regular. 
+
+3.  Comando Informe doctores: debe ser $$\mathcal{O}(d)$$ en el peor caso (en el que se tenga que mostrar todos los doctores del 
+    sistema), $$\mathcal{O}(\log{d})$$ en un caso promedio (en el caso en el que no se pidan mostrar demasiados doctores).
 
 ### Informe
 
