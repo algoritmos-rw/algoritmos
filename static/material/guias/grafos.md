@@ -152,7 +152,7 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
 1.  (★) Implementar un algoritmo que determine si un grafo no dirigido es conexo o no. Indicar la complejidad
     del algoritmo si el grafo está implementado con una matriz de adyacencia. 
 
-1.  (★★) Implementar un algoritmo que, dado un grafo dirigido, nos devuelva un ciclo dentro del mismo, si es que los 
+1.  (★★) Implementar un algoritmo que, dado un grafo dirigido, nos devuelva un ciclo dentro del mismo, si es que lo 
     tiene. Indicar el orden del algoritmo.
 
 1.  (★★) Un árbol es un grafo no dirigido que cumple con las siguientes propiedades:
@@ -182,7 +182,7 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
 
     a. Implementar un algoritmo para comprobar si se cumple tal teoría para todo el conjunto de personas representadas en el grafo G. Indicar el orden del algoritmo. 
 
-    b. Suponiendo que en el grafo G no habrán altas ni bajas de vértices, pero podrían haberla de aristas (la gente se va conociendo), explicar ventajas y desventajas tendría implementar al grafo G con una matriz de adyacencia. 
+    b. Suponiendo que en el grafo G no habrán altas ni bajas de vértices, pero podrían haberla de aristas (la gente se va conociendo), explicar las ventajas y desventajas que tendría implementar al grafo G con una matriz de adyacencia. 
 
 1.  (★★★) Matías está en Barcelona y quiere recorrer un museo. Su idea es hacer un
     recorrido bastante lógico: empezar en una sala (al azar), luego ir a una adyacente
@@ -201,7 +201,7 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
     justificar el orden del algoritmo. ¿Qué tipo de recorrido utiliza?
 
 1.  (★★★) Implementar un algoritmo que reciba un grafo dirigido, un vértice V y un número N, y devuelva una lista 
-    con todos los vértices que se encuentren a exactamente N aristas de distancias del vértice V. Indicar el tipo 
+    con todos los vértices que se encuentren a exactamente N aristas de distancia del vértice V. Indicar el tipo 
     de recorrido utilizado y el orden del algoritmo. Justificar.
 
 1.  (★★) Implementar una función que permita determinar si un grafo _puede ser_ no dirigido. Determinar el orden
@@ -269,4 +269,3 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
     ```
     {"caa", "acbd", "acba", "bac", "bad"} --> ['c', 'd', 'a', 'b']
     ```
-
