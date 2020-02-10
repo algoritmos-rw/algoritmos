@@ -59,7 +59,7 @@ Es importante notar que en este ejercicio se está evaluando que sabemos trabaja
 
 #### Hash Abierto
 
-Para este caso, consideramos todas las listas, las cuales podemos ir iterando. Podemos iterar cada lista utilizando el iterador externo o interno. Aquí mostramos una implementación utilizando el iterador interno, no porque sea mejor implementación, sino para que tengan un ejemplo de uso. 
+Para este caso, consideramos todas las listas, las cuales podemos ir iterando utilizando el iterador externo o interno. Aquí mostramos una implementación utilizando el iterador interno, no porque sea mejor implementación, sino para que tengan un ejemplo de uso. 
 
 ```cpp
 lista_t* hash_claves(const hash_t* hash) {
@@ -116,7 +116,7 @@ lista_t* hash_claves(const hash_t* hash) {
     no se tienen en cuenta los borrados para el factor de carga. Indicar cuál es el peor escenario posible para 
     esta implementación. 
 
-1.  (★) ¿Para cuáles casos la función hash_obtener tiene una complejidad peor que $$\mathcal{O}(1)$$?
+1.  (★) ¿Para cuáles casos la función `hash_obtener` tiene una complejidad peor que $$\mathcal{O}(1)$$?
 
 1.  (★) Justificar si la siguiente función de hashing es correcta o no: 
     ```cpp
@@ -266,4 +266,3 @@ lista_t* hash_claves(const hash_t* hash) {
 
     Proponer una implementación donde **todas** las operaciones sean $$\mathcal{O}(1)$$. Justificar el 
     orden de las operaciones.
-

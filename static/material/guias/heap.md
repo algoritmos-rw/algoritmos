@@ -23,7 +23,7 @@ comparación y lo reordene de manera tal que se se comporte como max-heap para l
 
 ### Solución
 
-La única dificultad de este ejercicio radica en entender veraderamente qué es lo que se nos pide: darle a un arreglo
+La única dificultad de este ejercicio radica en entender verdaderamente qué es lo que se nos pide: darle a un arreglo
 ya existente (el interno del heap) forma de heap, dada por una función de comparación (la nueva función de comparación
 del heap). Entonces, esto no es más que invocar a `heapify`, y ya. Eso es todo. También, es la única forma de darle ese
 orden a la primitiva. 
@@ -62,7 +62,7 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
     arreglo: `[ 4, 7, 8, 14, 10, 9, 16, 2, 3, 1 ]`.
 
 1. 	(★★★) ¿Puede utilizarse un Heap para implementar un TDA cola (extraer los elementos en el orden 
-	en que fueron insertados)? ¿y pewsdra implementar un TDA pila?
+	en que fueron insertados)? ¿y para implementar un TDA pila?
 
 1.	(★★) Hacer el seguimiento de las siguientes operaciones sobre un heap (de mínimos),
   	mostrando el estado de la estructura después de cada modificación:
@@ -98,4 +98,3 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
 	ser $$\mathcal{O}(1)$$. Recordar que la mediana de una secuencia de números es el elemento que se encontraría
 	a la mitad si la secuencia se encontrara ordenada (en caso de ser una cantidad par, se puede definir como
 	el promedio entre ambos valores adyacentes del medio, o como alguno de los dos de ellos de forma arbitraria).
-
