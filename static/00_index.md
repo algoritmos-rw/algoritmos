@@ -8,8 +8,8 @@ permalink: /
 Este es el sitio de la materia **Algoritmos y Programación II**, curso **Buchwald** (ex **Wachenchauzer**), de FIUBA.
 
 
-En caso de encontrar algún problema con la página (desde errores de fechas, links rotos, falta publicar algún trabajo, 
-o lo que fuere), por favor crear un issue en [la página de issues del repositorio]({{site.github.repository_url}}/issues).
+En caso de encontrar algún problema con la página (desde errores de fechas, links rotos, errores en las guías, etc), por favor 
+crear un issue en [la página de issues del repositorio]({{site.github.repository_url}}/issues). 
 
 
 ## Links Principales

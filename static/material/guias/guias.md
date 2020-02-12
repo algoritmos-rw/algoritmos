@@ -24,7 +24,7 @@ Los ejercicios de 5 estrellas sólo serían tomados en exámenes finales.
   * [Grafos, primera parte: Usos, implementaciones y recorridos](grafos_1)
   * [Grafos, segunda parte: Algoritmos sobre grafos](grafos_2)
 
-También, pueden descargarse la [<i class="fa fa-file-pdf"/> versión en PDF de la guía](guias.pdf).
+También, pueden descargarse la <i class="fa fa-file-pdf"/> versión en PDF de la guía del [<i class="fab fa-google-drive"/> Drive de la materia]({{site.data.sitios.drive}}).
 
 Guías de temas anteriores:
 
