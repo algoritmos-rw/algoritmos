@@ -11,9 +11,10 @@ void simplificar(int* num, int* den) {
 	if (*num == 0) {
 		return;
 	}
-	// Si el denominador es negativo, entonces invierto. 
-	// Entonces si el numerador era negativo, ambos quedan positivos, y sino me queda el negativo en el numerador
-	if (*den < 0) { 
+	// Si el denominador es negativo, entonces invierto.
+	// Entonces si el numerador era negativo, ambos quedan positivos,
+  // y si no me queda el negativo en el numerador.
+	if (*den < 0) {
 		*num *= -1;
 		*den *= -1;
 	}
@@ -64,7 +65,7 @@ fraccion_t* fraccion_mul(fraccion_t* f1, fraccion_t* f2) {
 	}
 	fraccion_destruir(f1);
 	fraccion_destruir(f2);
-	return nueva;	
+	return nueva;
 }
 
 int fraccion_parte_entera(fraccion_t* fraccion) {
@@ -85,7 +86,7 @@ size_t largo_numero(int num) {
 
 char* fraccion_representacion(fraccion_t* fraccion) {
 	// Se puede suponer un tamaño maximo para esta cadena, como por ejemplo 10
-	// Pero solo por una cuestion de mostrar el "como se haria", lo mostramos:
+	// Pero solo por una cuestion de mostrar el "cómo se haría", lo mostramos:
 	size_t largo_num = largo_numero(fraccion->numerador);
 	if (fraccion->denominador == 1) {
 		int es_negativo = fraccion->numerador < 0 ? 1 : 0;
@@ -96,7 +97,7 @@ char* fraccion_representacion(fraccion_t* fraccion) {
 		sprintf(cadena, "%d", fraccion->numerador);
 		return cadena;
 	}
-	
+
 	size_t largo_den = largo_numero(fraccion->denominador);
 	int es_negativo = fraccion->numerador < 0 ? 1 : 0;
 	char* cadena = calloc(largo_num + largo_den + 2 + es_negativo, sizeof(char));
