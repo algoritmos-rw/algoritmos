@@ -17,7 +17,7 @@ math: true
 
 ## Ejercicio resuelto
 
-Implementar la _primitiva_ de la pila `void** pila_multitop(const pila_t* pila, size_t n)`, que devuelve un arreglo de tamaño $$n$$ con los $$n$$ topes de la pila (los primeros $$n$$ elementos si fueran desapilados) sin utilizar estructuras auxiliares. Completar el arreglo a devolver con NULL cuando el $$n$$ recibido por parámetro es mayor a la cantidad de elementos de la pila.
+Implementar la _primitiva_ de la pila `void** pila_multitop(const pila_t* pila, size_t n)`, que devuelve un arreglo de tamaño $$n$$ con los $$n$$ topes de la pila (los primeros $$n$$ elementos si estos fueran desapilados), sin utilizar estructuras auxiliares. Completar el arreglo a devolver con NULL cuando el $$n$$ recibido por parámetro sea mayor a la cantidad de elementos de la pila.
 
 Indicar el orden de complejidad de la primitiva.
 
@@ -30,16 +30,12 @@ el enunciado especifique lo contrario.
 
 Dos cosas que es necesario entender desde el inicio del ejercicio:
 
+1.  En este ejercicio _no se puede_ modificar la pila, pues el puntero recibido es de tipo _const_; ello quiere decir que la pila a la que apunta es de sólo lectura, y por tanto sería erróneo modificar cualquiera de sus campos. _Además, no se debe_ modificarla pues, al ser una primitiva y tener acceso a los miembros internos de la estructura, no es necesario desapilar para acceder a los datos.
 
-1. 	En esa primitiva no se puede modificar la pila. No sólo porque se reciba un `const pila_t*`, sino porque sería erroneo
-	modificar la pila si ya desde el vamos podemos acceder a los campos de la misma. 
+1.  Se pide devolver un arreglo, pero es muy importante entender que debe ser un arreglo dinámico (creado con _malloc_). Sería un error **muy grave** devolver un arreglo estático, pues al terminar la ejecución de la función, la memoria de ese arreglo pasaría a ser inválida. Un error de este tipo anula el ejercicio por completo.
 
-1.  Se pide devolver un arreglo, pero es muy importante entender que sería un error **muy grave** devolver un arreglo de 
-	memoria estática. Esto es, porque al terminar la ejecución de la función, el arreglo (la posición de memoria) pasaría
-	a ser inválida. Esta clase de errores anulan ejercicios por completo. 
-
-Una vez que esto quede claro, la solución es bastante directa: si queremos que los elementos sean aquellos que desapilaríamos, simplemente tendríamos que iterar el arreglo en ese orden. Dada la implementación de la pila, deberíamos
-hacerlo de atrás hacia delante. Si fuera una pila enlazada, simplemente sería iterar por los nodos. 
+Una vez esto quede claro, la solución es bastante directa: si queremos que los elementos sean aquellos que desapilaríamos, simplemente tendríamos que iterar el arreglo en ese orden. Dada la implementación de la pila, deberíamos
+hacerlo de atrás hacia delante. Si fuera una pila enlazada, simplemente sería iterar por los nodos.
 
 ```cpp
 void** pila_multitop(const pila_t* pila, size_t n) {
@@ -149,15 +145,13 @@ $$n$$.
 	Indicar el orden de complejidad de la primitiva.
 
 
-1. 	(★★★) Dada una pila de enteros, escribir una función que determine si es piramidal. Una pila de enteros es
-	piramidal si cada elemento es menor a su elemento inferior (en el sentido que va desde el tope de la
-	pila hacia el otro extremo). La pila no debe ser modificada al terminar la función.
+1. 	(★★★) Dada una pila de enteros, escribir una función que determine si sus elementos están ordenados de manera ascendente. Una pila de enteros está ordenada de manera ascendente si, en el sentido que va desde el tope de la pila hacia el resto de elementos, cada elemento es menor al elemento que le sigue.
+	La pila debe quedar en el mismo estado que al invocarse la función.
 	Indicar y justificar el orden del algoritmo propuesto.
 
 1. 	(★★) Implementar la primitiva `void** cola_multiprimeros(const cola_t* cola, size_t k)` que dada una cola y un
 	número $$k$$, devuelva los primeros $$k$$ elementos de la cola, en el mismo orden en el que habrían
 	salido de la cola. En caso que la cola tenga menos de $$k$$ elementos, rellenar con NULL.
-	La cola debe quedar en el mismo estado que al invocarse la primitiva.
 	Indicar y justificar el orden de ejecución del algoritmo.
 
 1. 	(★★) Implementar la función `void** cola_multiprimeros(cola_t* cola, size_t k)` con el mismo comportamiento de la
@@ -187,7 +181,7 @@ $$n$$.
 		                  bool (*visitar)(void* dato, void* extra),
 		                  void* extra);
 
-	Se tiene una lista en donde todos los elementos son punteros a números enteros. Implementar la función visitar para que calcule la suma de todos los números pares. Mostrar, además, la invocación a la función.
+	Se tiene una lista en donde todos los elementos son punteros a números enteros. Implementar la función _visitar_ para que calcule la suma de todos los números pares. Mostrar, además, una invocación completa a `lista_iterar()` que haga uso del _visitar_ implementado.
 
 1. 	(★★★★★) Diseñar un TDA `PilaConMáximo`, que tenga las mismas primitivas de la pila convencional
 	(en este caso, sólo para números), y además permita obtener el máximo de la pila. **Todas**
