@@ -121,7 +121,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     // Algoritmo por D&C para obtener el máximo de un arreglo
     int maximo(int* arreglo, size_t n) {
         if (n == 1) {
-            return arreglo[1];
+            return arreglo[0];
         }
         int max_restante = maximo(arreglo, n - 1);
         return arreglo[n - 1] > max_restante ? arreglo[n - 1] : max_restante;
@@ -280,4 +280,3 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     _Aclaración_: Este ejercicio puede resolverse, casi trivialmente, ordenando el arreglo con un algoritmo eficiente,
     o incluso se puede realizar más rápido utilizando una [tabla de hash](hash). Para hacer interesante el ejercicio, 
     resolver **sin ordenar el arreglo**, sino puramente división y conquista. 
-
