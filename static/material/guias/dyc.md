@@ -17,7 +17,7 @@ math: true
 
 ## Ejercicio resuelto
 
-Implementar un algoritmo en C que reciba un arreglo de $$n$$ enteros sin repetir y ordenado ascendentemente, y determine en $$\mathcal{O}(\log n)$$ si es mágico. Un arreglo es mágico si existe algún valor `i` (entre `0` y `n-1`) tal que `arr[i] = i`. Justificar el orden del algoritmo.
+Implementar un algoritmo en C que reciba un arreglo de enteros de tamaño $$n$$, ordenado ascendentemente y sin elementos repetidos, y determine en $$\mathcal{O}(\log n)$$ si es mágico. Un arreglo es mágico si existe algún valor $$i$$ tal que $$0 \le i \lt n$$ y `arr[i] = i`. Justificar el orden del algoritmo.
 
 Ejemplos:
 
