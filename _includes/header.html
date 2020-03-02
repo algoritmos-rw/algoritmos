@@ -1,61 +1,51 @@
+<header role="banner" class="sticky-top container-fluid px-1">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand d-lg-none" href="#">{{ site.title }}</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sitenav"
+            aria-controls="sitenav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-
-<svg viewBox="0 0 16 16" width="16px" height="16px"></svg><header class="site-header" role="banner">
-
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Navegación</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <span class="navbar-brand hidden-lg hidden-md">{{ site.title }}</span>
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="{% if page.permalink == '/' %}active{% endif %}"><a href="{{ '/' | relative_url }}"><i class="fa fa-home"></i></span> Inicio</a></li>
-            <li class="{% if page.permalink == '/docentes/' %}active{% endif %}"><a href="{{ '/docentes/' | relative_url }}"><i class="fa fa-chalkboard-teacher"></i></span> Docentes</a></li>
-            <li class="{% if page.permalink == '/regimen/' %}active{% endif %}"><a href="{{ '/regimen/' | relative_url }}"><i class="fa fa-tasks"></i></span> Régimen</a></li>
-            <li class="{% if page.permalink == '/calendario/' %}active{% endif %}"><a href="{{ '/calendario/' | relative_url }}"><i class="fa fa-calendar-alt"></i></span> Calendario</a></li>
-            <li class="{% if page.permalink == '/tps/' %}active{% endif %}"><a href="{{ '/tps/' | relative_url }}"><i class="fa fa-briefcase"></i></span> TPs</a></li>
-            {% assign menu_material = "/bibliografia/, /material, /faq/" | split: ", " %}
-            <li class="dropdown {% if page.permalink contains 'material' or menu_material contains page.permalink %}active{% endif %}">
-              <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-paperclip"></i></span> Material
-                <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="{% if page.permalink == '/bibliografia/' %}active{% endif %}"><a href="{{ '/bibliografia/' | relative_url }}"><i class="fa fa-book"></i></span> Bibliografía</a></li>
-                <li class="{% if page.permalink == '/material/' %}active{% endif %}"><a href="{{ '/material/' | relative_url }}"><i class="fa fa-book-reader"></i></span> Apuntes y Guías del curso</a></li>
-                <li>
-                  <a href="{{site.data.sitios.drive}}" class="header-icon" target="_blank"><span><i class="fab fa-google-drive"></i></span> Drive</a>
-                </li>
-                <li>
-                  <a href="{{site.data.sitios.youtube}}" class="header-icon" target="_blank"><span><i class="fab fa-youtube"></i></span> Canal</a>
-                </li>
-                <li><a href="{{ '/faq/' | relative_url }}"><i class="far fa-question-circle"></i></span> FAQ</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-friends"></i></span> Alumno
-                <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="{{site.skel}}"><span><i class="fa fa-file-download"></i></span> Descargas</a></li>
-                <li><a href="{{site.entregas}}"><span><i class="fa fa-file-upload"></i></span> Entregas</a></li>
-                <li><a href="{{site.notas}}"><span><i class="fa fa-pencil-alt"></i></span> Notas</a></li>
-              </ul>
-            </li>
-            <li class="{% if page.permalink == '/encuestas/' %}active{% endif %}"><a href="{{ '/encuestas/' | relative_url }}"><i class="fa fa-poll"></i></span> Encuestas</a></li>
-            <li class="{% if page.permalink == '/infraestructura/' %}active{% endif %}"><a href="{{ '/infraestructura/' | relative_url }}"><i class="fa fa-network-wired"></i></span> Infraestructura</a></li>
+    <div class="collapse navbar-collapse" id="sitenav">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0 small mx-auto">
+        <li class="nav-item {% if page.permalink == '/' %}active{% endif %}"><a class="nav-link" href="{{ '/' | relative_url }}"><span class="fa fa-home"></span> Inicio</a></li>
+        <li class="nav-item {% if page.permalink == '/docentes/' %}active{% endif %}"><a class="nav-link" href="{{ '/docentes/' | relative_url }}"><span class="fa fa-chalkboard-teacher"></span> Docentes</a></li>
+        <li class="nav-item {% if page.permalink == '/regimen/' %}active{% endif %}"><a class="nav-link" href="{{ '/regimen/' | relative_url }}"><span class="fa fa-tasks"></span> Régimen</a></li>
+        <li class="nav-item {% if page.permalink == '/calendario/' %}active{% endif %}"><a class="nav-link" href="{{ '/calendario/' | relative_url }}"><span class="fa fa-calendar-alt"></span> Calendario</a></li>
+        <li class="nav-item {% if page.permalink == '/tps/' %}active{% endif %}"><a class="nav-link" href="{{ '/tps/' | relative_url }}"><span class="fa fa-briefcase"></span> TPs</a></li>
+        {% assign menu_material = "/bibliografia/, /material, /faq/" | split: ", " %}
+        <li class="nav-item dropdown {% if page.permalink contains 'material' or menu_material contains page.permalink %}active{% endif %}">
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="matDropdown"
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fa fa-paperclip"></span> Material</a>
+          <ul class="dropdown-menu">
+            <li class="{% if page.permalink == '/bibliografia/' %}active{% endif %}"><a class="dropdown-item" href="{{ '/bibliografia/' | relative_url }}"><span class="fa fa-book"></span> Bibliografía</a></li>
+            <li class="{% if page.permalink == '/material/' %}active{% endif %}"><a class="dropdown-item" href="{{ '/material/' | relative_url }}"><span class="fa fa-book-reader"></span> Apuntes y Guías del curso</a></li>
             <li>
-              <a href="{{site.github.repository_url}}/blob/master/{{page.path}}" class="header-icon" target="_blank"><span><i class="fab fa-github"></i></span> Editar en GitHub</a>
+              <a class="dropdown-item" href="{{site.data.sitios.drive}}" target="_blank"><span class="fab fa-google-drive"></span> Drive</a>
             </li>
+            <li>
+              <a class="dropdown-item" href="{{site.data.sitios.youtube}}" target="_blank"><span class="fab fa-youtube"></span> Canal</a>
+            </li>
+            <li><a class="dropdown-item" href="{{ '/faq/' | relative_url }}"><span class="far fa-question-circle"></span> FAQ</a></li>
           </ul>
-        </div>
-      </div>
-    </nav>
-
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="aluDropdown"
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fa fa-user-friends"></span> Alumno</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{site.skel}}"><span class="fa fa-file-download"></span> Descargas</a></li>
+            <li><a class="dropdown-item" href="{{site.entregas}}"><span class="fa fa-file-upload"></span> Entregas</a></li>
+            <li><a class="dropdown-item" href="{{site.notas}}"><span class="fa fa-pencil-alt"></span> Notas</a></li>
+          </ul>
+        </li>
+        <li class="nav-item {% if page.permalink == '/encuestas/' %}active{% endif %}"><a class="nav-link" href="{{ '/encuestas/' | relative_url }}"><span class="fa fa-poll"></span> Encuestas</a></li>
+        <li class="nav-item {% if page.permalink == '/infraestructura/' %}active{% endif %}"><a class="nav-link" href="{{ '/infraestructura/' | relative_url }}"><span class="fa fa-network-wired"></span> Infraestructura</a></li>
+        <li class="nav-item">
+          <a href="{{site.github.repository_url}}/blob/master/{{page.path}}" class="nav-link" target="_blank"><span class="fab fa-github"></span> Editar en GitHub</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>
-<script>$(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" })</script> 
-
