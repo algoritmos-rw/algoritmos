@@ -15,17 +15,17 @@ math: true
 
 ## Ejercicio resuelto
 
-
-a) Para un hash cerrado, implementar una primitiva `lista_t* hash_claves(const hash_t*)`, que reciba
+1. Para un hash cerrado, implementar una primitiva `lista_t* hash_claves(const hash_t*)` que reciba
 un hash y devuelva una lista con sus claves.
 
-b) Repetir lo mismo para un hash abierto.
+1. Repetir lo mismo para un hash abierto.
 
-c) Repetir, en este caso como una función.
+1. Implementar de nuevo la operación, en este caso como una función.
+{:.lower_alpha}
 
 ### Solución
 
-Partiendo del punto a, es importante notar que no podemos utilizar el iterador externo, ya que se trata de una primitiva para
+Partiendo del punto _a)_, es importante notar que no podemos utilizar el iterador externo, ya que se trata de una primitiva para
 el hash (y es una mala práctica que, dado que el iterador dependa del hash, ahora hagamos que el hash dependa del iterador). 
 
 #### Hash Cerrado
@@ -35,7 +35,7 @@ Para este punto, sólo es necesario iterar campo por campo, considerando únicam
 ```cpp
 lista_t* hash_claves(const hash_t* hash) {
     lista_t* claves = lista_crear();
-    if (claves) {
+    if (!claves) {
         return NULL;
     }
     for (size_t i = 0; i < hash->tam; i++) {
@@ -64,16 +64,16 @@ Para este caso, consideramos todas las listas, las cuales podemos ir iterando ut
 ```cpp
 lista_t* hash_claves(const hash_t* hash) {
    lista_t* claves = lista_crear();
-    if (claves) {
+    if (!claves) {
         return NULL;
     }
     for (size_t i = 0; i < hash->tam; i++) {
-        lista_iterar(hash->tabla[i], agregar_clave_lista, claves);
+        lista_iterar(hash->tabla[i], insertar_clave, claves);
     }
     return claves;
 }
 
-bool agregar_clave_lista(void* dato, void* extra) {
+bool insertar_clave(void* dato, void* extra) {
     lista_t* claves = extra;
     par_clave_valor_t* par = dato;
     lista_insertar_ultimo(claves, par->clave);
@@ -81,20 +81,23 @@ bool agregar_clave_lista(void* dato, void* extra) {
 }
 ```
 
-_Aclaración_: Hay quienes deciden implementar el Hash Abierto de tal forma que no tenga listas vacías (si un lugar aún
-no ha sido utilizado, entonces tener `NULL` y crear la lista cuando sea necesaria). Esto es totalmente válido, y en todo
+_Aclaración_: Hay quienes deciden implementar el Hash Abierto de tal forma que
+no tenga listas vacías (esto es, si una posición aún
+no ha sido utilizada, entonces se guarda `NULL` y se crea la lista cuando sea necesaria). Esto es totalmente válido, y en todo
 caso con aclararlo en algún lado es suficiente (pero debe hacerse la validación contra `NULL` en ese caso).
 
 #### Función
 
-En este caso, no sólo podemos utilizar el iterador externo del hash, sino que **no nos queda otra opción**, dado que no es posible acceder a los campos internos de las estructuras. Además, en particular no nos dicen cuál es la implementación, cosa que no debe ser necesario conocer.
+En este caso, no sólo sí está permitido utilizar el iterador externo del hash,
+sino que **no nos queda otra opción**, dado que no es posible acceder a los
+campos internos de la estructura. Además, en particular no se nos dice cuál es la implementación, cosa que no es necesario conocer.
 
 Entonces, simplemente iteramos utilizando el iterador externo y guardamos en una lista. 
 
 ```cpp
 lista_t* hash_claves(const hash_t* hash) {
    lista_t* claves = lista_crear();
-    if (claves) {
+    if (!claves) {
         return NULL;
     }
     hash_iter_t* iter = hash_iter_crear(iter);
@@ -112,11 +115,11 @@ lista_t* hash_claves(const hash_t* hash) {
 
 ## Ejercicios propuestos
 
-1.  (★) Suponer que se tiene un hash cerrado que se redimensionar cuando el factor de carga llega a 0.75, y que
+1.  (★) Suponer que se tiene un hash cerrado que se redimensiona cuando el factor de carga llega a 0.75, y que
     no se tienen en cuenta los borrados para el factor de carga. Indicar cuál es el peor escenario posible para 
     esta implementación. 
 
-1.  (★) ¿Para cuáles casos la función `hash_obtener` tiene una complejidad peor que $$\mathcal{O}(1)$$?
+1.  (★) ¿Para qué casos la función `hash_obtener()` tiene una complejidad peor que $$\mathcal{O}(1)$$?
 
 1.  (★) Justificar si la siguiente función de hashing es correcta o no: 
     ```cpp
@@ -135,7 +138,7 @@ lista_t* hash_claves(const hash_t* hash) {
     c. Posteriormente se realizan más inserciones. ¿Cuándo redimensionaría cada hash? 
     ¿Qué pasos hay que seguir para hacerlo?
 
-1.  (★★) Implementar una función de orden $$\mathcal{O}(n)$$ que dado un arreglo de n números enteros devuelva `true` 
+1.  (★★) Implementar una función de orden $$\mathcal{O}(n)$$ que dado un arreglo de _n_ números enteros devuelva `true`
     o `false` según si existe algún elemento que aparezca más de la mitad de las veces. Justificar el orden de 
     la solución. Ejemplos: 
 
@@ -167,7 +170,7 @@ lista_t* hash_claves(const hash_t* hash) {
     Dar la estructura del TDA y la implementación de las 4 primitivas marcadas, de forma tal que todas sean 
     $$\mathcal{O}(1)$$.
 
-1.  (★★★) Se tiene un hash que cuenta con una función de hashing, que recibida una clave 
+1.  (★★★) Se tiene un hash que cuenta con una función de hashing que, recibida una clave,
     devuelve la posición de su inicial en el abecedario. La capacidad inicial del hash 
     es 26. Para los puntos B, C y D indicar y justificar si las afirmaciones son 
     verdaderas o falsas. Se puede considerar que todas las claves serán palabras 
