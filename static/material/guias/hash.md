@@ -105,8 +105,10 @@ lista_t* hash_claves(const hash_t* hash) {
         lista_destruir(claves);
         return NULL;
     }
-    for (; ! hash_iter_al_final(iter); hash_iter_avanzar(iter)) {
-        lista_insertar_ultimo(claves, hash_iter_ver_actual(iter));
+    while (!hash_iter_al_final(iter)) {
+        char *clave = hash_iter_ver_actual(iter);
+        lista_insertar_ultimo(claves, clave);
+        hash_iter_avanzar(iter);
     }
     hash_iter_destruir(iter);
     return claves;
@@ -119,7 +121,7 @@ lista_t* hash_claves(const hash_t* hash) {
     no se tienen en cuenta los borrados para el factor de carga. Indicar cuál es el peor escenario posible para 
     esta implementación. 
 
-1.  (★) ¿Para qué casos la función `hash_obtener()` tiene una complejidad peor que $$\mathcal{O}(1)$$?
+1.  (★) ¿Para qué casos la función `hash_obtener()` tiene una complejidad peor que $$\mathcal{O}(1)$$? Explicar tanto para el hash abierto, como el cerrado.
 
 1.  (★) Justificar si la siguiente función de hashing es correcta o no: 
     ```cpp
@@ -130,10 +132,10 @@ lista_t* hash_claves(const hash_t* hash) {
     ```
 
 1.  (★★) a. Mostrar el resultado de las siguientes operaciones tanto para un hash cerrado como para un hash abierto, 
-    ambos de largo 9 (los números son también el resultado de la función de hashing): insertar 17, insertar 22, 
+    ambos de capacidad 9 e inicialmente vacíos (los números son también el resultado de la función de hashing): insertar 17, insertar 22,
     insertar 35, borrar 17, insertar 52, insertar 54. 
 
-    b. ¿Qué pasos hay que seguir para verificar si el 70 pertenece al hash? 
+    b. Tras estas inserciones ¿qué pasos hay que seguir para verificar si el 70 pertenece al hash?
 
     c. Posteriormente se realizan más inserciones. ¿Cuándo redimensionaría cada hash? 
     ¿Qué pasos hay que seguir para hacerlo?
@@ -197,7 +199,7 @@ lista_t* hash_claves(const hash_t* hash) {
     inicial, y 1 con otra distinta, en el primer caso `obtener()` es $$\mathcal{O}(n)$$ y en el 
     segundo siempre $$\mathcal{O}(1)$$.
 
-1.  (★★★) El Ing. Musumeci quiere implementar un hash abierto, pero en el que cuyas listas 
+1.  (★★★) El Ing. Musumeci quiere implementar un hash abierto, pero en el que las listas de cada posición
     se encuentren ordenadas por clave (usando `strcmp`). Explicar cómo mejora o empeora respecto 
     a la versión que vemos en clase para el caso de inserciones, borrados, búsquedas con éxito 
     (el elemento se encuentra en el hash) y sin éxito (no se encuentra).
@@ -264,8 +266,8 @@ lista_t* hash_claves(const hash_t* hash) {
 
 1.  (★★★★★) Se quiere implementar un TDA Diccionario con las siguientes primitivas: 
     `obtener(x)` devuelve el valor de `x` en el diccionario; `insertar(x, y)` inserta en el diccionario 
-    la clave `x` con el valor `y` (entero); `borrar(x)` borra la entrada de `x`; `add(x, y)` le 
-    suma `y` al contenido de `x`; `add_all(y)` le suma `y` a **todos** los valores. 
+    la clave `x` con el valor `y` (entero); `borrar(x)` borra la entrada de `x`; `add(x, n)` le
+    suma `n` al contenido de `x`; `add_all(m)` le suma `m` a **todos** los valores.
 
     Proponer una implementación donde **todas** las operaciones sean $$\mathcal{O}(1)$$. Justificar el 
     orden de las operaciones.
