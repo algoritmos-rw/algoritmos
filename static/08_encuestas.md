@@ -11,6 +11,7 @@ Estos son los resultados de las encuestas de cuatrimestres anteriores:
 {: .table .table-striped}
 | Cuatrimestre  |  Enlace  |
 |---------------|----------|
+| 2do 2019      | [Ver](https://docs.google.com/forms/d/1-_3TzOioahf2PWiOUwKyEWmW7SC8dwHNvveGPlfb5j8/viewanalytics) |
 | 1ro 2019      | [Ver](../assets/encuestas/2019-1c.html) |
 | 2do 2018      | [Ver](../assets/encuestas/2018-2c.html) |
 | 1ro 2018      | [Ver](../assets/encuestas/2018-1c.html) |
