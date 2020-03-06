@@ -1,0 +1,56 @@
+/* Colores de <body> y <a> importados de nuestro Bootstrap3 custom. */
+body {
+  color: #333;
+}
+
+a {
+  color: #337ab7;
+}
+
+pre {
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  margin-top: 1rem;
+}
+
+header {
+  box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.1);
+}
+
+.page-content p {
+  font-size: 16px;
+  // TODO(dato): por legibilidad, pienso que no se debería justificar el texto.
+  text-align: justify;
+}
+
+.page-content li {
+  font-size: 16px;
+  text-align: justify;
+}
+
+pre code {
+  white-space: pre;
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+.fa-youtube:hover {
+  color: red;
+}
+
+// Este styling de h2 y h3 permite arreglar la navegación
+// interna sin necesidad de usar Javascript. (Equivalente a #334.)
+h2, h3 {
+  padding-top: 60px;
+  margin-top: -60px;
+}

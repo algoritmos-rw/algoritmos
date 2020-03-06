@@ -1,0 +1,29 @@
+<div class="row justify-content-center">
+  <div class="col-4 d-none d-sm-block">
+    <h2 class="text-center">{{ include.titulo }}</h2>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  {% for docente in include.docentes %}
+  <div class="col-4">
+    <figure class="figure text-center d-block">
+      <img class="figure-img rounded img-fluid" title="{{docente.nombre}}"
+           src="{{site.baseurl}}{{docente.foto}}" alt="{{docente.nombre}}">
+      <figcaption class="figure-caption">
+        <span>{{docente.nombre}}</span>
+        <div class="docente-social">
+          {% if docente.mail %}
+          <a href="mailto:{{docente.mail}}"
+             class="btn-social btn-outline social-link"><span class="fa fa-fw fa-envelope"></span></a>
+          {% endif %}
+          {% if docente.github %}
+          <a href="https://github.com/{{docente.github}}"
+             class="btn-social btn-outline social-link"><span class="fab fa-fw fa-github"></span></a>
+          {% endif %}
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+  {% endfor %}
+</div>
