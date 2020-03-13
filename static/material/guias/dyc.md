@@ -121,6 +121,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 ## Ejercicios propuestos
 
 1.  (★) Explicar por qué el siguiente siguiente código **no** es de división y conquista.
+
     ```cpp
     // Algoritmo ¿por D&C? para obtener el máximo de un arreglo
     int maximo(int* arreglo, size_t n) {
@@ -133,6 +134,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     ```
 
 1.  (★) Explicar por qué el siguiente siguiente código **no** es de división y conquista.
+
     ```cpp
     // Algoritmo ¿por D&C? para obtener el máximo de un arreglo
     int maximo(int* arreglo, size_t n) {
@@ -154,6 +156,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     ```
 
 1.  (★★) Indicar la complejidad del siguiente algoritmo, utilizando el teorema del maestro:
+
     ```cpp
     // Busca un elemento usando D&C. El arreglo se encuentra ordenado.
     bool elemento_esta(int* arreglo, size_t inicio, size_t fin, int elem) {
@@ -174,6 +177,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     ```
 
 1.  (★) Hacerle el seguimiento al siguiente algoritmo:
+
     ```cpp
     void imprimir_dyc(int m) {
         if (m == 0) return;
