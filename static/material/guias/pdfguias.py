@@ -10,6 +10,9 @@ os.mkdir(TEMP_DIR)
 for archivo in ARCHIVOS:
 	with open(archivo) as f:
 		with open(TEMP_DIR + "/" + archivo, "w") as s:
+			# Remove title, permalink and math:true + '---'
+			for i in range(5):
+				f.readline()
 			for line in f:
 				if "TOC" in line or "toc" in line or "## Contenidos" in line: continue
 				line = line.replace("$$", "$")
