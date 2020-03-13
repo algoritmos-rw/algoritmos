@@ -118,8 +118,12 @@ lista_t* hash_claves(const hash_t* hash) {
 ## Ejercicios propuestos
 
 1.  (★) Suponer que se tiene un hash cerrado que se redimensiona cuando el factor de carga llega a 0.75, y que
-    no se tienen en cuenta los borrados para el factor de carga. Indicar cuál es el peor escenario posible para 
-    esta implementación. 
+    no se tienen en cuenta los elementos borrados a la hora de calcular el factor de carga.
+
+    {:.lower_alpha}
+    1. Describir, en términos generales, el peor escenario posible para esta implementación.
+
+    1. Dado un hash de estas características, con capacidad inicial 100, calcular el número máximo de casillas que podría llegar a visitar `hash_obtener()` si la cantidad actual de elementos en el hash es 1, y no se realizó ningúna redimensión, pero sí se insertaron y borraron elementos. (En otras palabras, poner una cota superior al caso peor de este hash.)
 
 1.  (★) ¿Para qué casos la función `hash_obtener()` tiene una complejidad peor que $$\mathcal{O}(1)$$? Explicar tanto para el hash abierto, como el cerrado.
 
@@ -149,11 +153,11 @@ lista_t* hash_claves(const hash_t* hash) {
         [1, 2, 3, 1, 1, 1] -> true
         [1] -> true
 
-1.  (★★) Asumiendo que se tiene disponible una implementación completa de Hash, se desea implementar una función 
-    que decida, para un par de tablas de hash, si representan o no el mismo Diccionario. Considere para la solución que 
+1.  (★★) Asumiendo que se tiene disponible una implementación completa del TDA Hash, se desea implementar una función
+    que decida si dos Hash dados representan o no el mismo Diccionario. Considere para la solución que
     es de interés la mejor eficiencia temporal posible. Indique, para su solución, eficiencia en tiempo y espacio.
-    Nota: Dos tablas de hash representan el mismo diccionario si tienen la misma cantidad de elementos, todas las claves 
-    del primero están en el segundo y los datos asociados a cada una de esas claves son iguales (se pueden comparar los
+    Nota: Dos tablas de hash representan el mismo diccionario si tienen la misma cantidad de elementos; todas las claves
+    del primero están en el segundo; todas las del segundo, en el primero; y los datos asociados a cada una de esas claves son iguales (se pueden comparar los
     valores con "==").
 
 1.  (★★) Implementar el TDA MultiConjunto. Este es un Conjunto que permite más de una aparición de un elemento, 
