@@ -25,12 +25,9 @@ Fechas de examen:
 </table>
 
 Los temas a ser evaluados en cada parcialito son:
-- **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas. Listas. **Iteradores de listas.**
-- **2do parcialito**: Ordenamientos no comparativos. Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. Iteradores internos y externos de árboles binarios. AVL. **Árboles B.**
-- **3er parcialito**: Heap y heapsort. Grafos: Implementaciones y usos de grafos. Orden topológico. Recorridos DFS y BFS.
-- **4to parcialito**: Camino mínimo (algoritmos de Dijkstra y BFS). Árboles de tendido mínimo (algoritmos de Prim y Kruskal). Algoritmos Greedy. Backtracking. Programación dinámica.
-
-(En negrita los temas que no se evaluarán en la primera oportunidad pero sí en recuperatorios.)
+- **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas. Listas. Iteradores de listas. Ordenamientos comparativos y no comparativos.
+- **2do parcialito**: Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. Iteradores internos y externos de árboles binarios. árboles AVL. Árboles B. Heap y heapsort.
+- **3er parcialito**: Grafos: Implementaciones y usos de grafos. Recorridos DFS y BFS y aplicaciones de éstos. Camino mínimo (algoritmos de Dijkstra, BFS y Bellman-Ford). Árboles de tendido mínimo (algoritmos de Prim y Kruskal). Redes de Flujo (algoritmo de Bellman-Ford).
 
 Finales
 -------
