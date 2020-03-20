@@ -26,7 +26,7 @@ un hash y devuelva una lista con sus claves.
 ### Solución
 
 Partiendo del punto _a)_, es importante notar que no podemos utilizar el iterador externo, ya que se trata de una primitiva para
-el hash (y es una mala práctica que, dado que el iterador dependa del hash, ahora hagamos que el hash dependa del iterador). 
+el hash (y es una mala práctica que, dado que el iterador dependa del hash, ahora hagamos que el hash dependa del iterador).
 
 #### Hash Cerrado
 
@@ -40,7 +40,7 @@ lista_t* hash_claves(const hash_t* hash) {
     }
     for (size_t i = 0; i < hash->tam; i++) {
         // valor de un enum definido para el hash
-        if (hash->tabla[i].estado == OCUPADO) { 
+        if (hash->tabla[i].estado == OCUPADO) {
             lista_insertar_ultimo(claves, hash->tabla[i].clave);
         }
     }
@@ -48,18 +48,18 @@ lista_t* hash_claves(const hash_t* hash) {
 }
 ```
 
-Es importante notar que en este ejercicio se está evaluando que sabemos trabajar internamente con el hash cerrado. Los puntos importantes: 
+Es importante notar que en este ejercicio se está evaluando que sabemos trabajar internamente con el hash cerrado. Los puntos importantes:
 
-* Sabemos cuáles son los campos de la estructura. 
+* Sabemos cuáles son los campos de la estructura.
 
-* Sabemos que la tabla es de tipo `campo_t*`, y no `campo_t**`, puesto que es completamente innecesario un segundo grado de indirección (como se analiza en la respectiva clase práctica). 
+* Sabemos que la tabla es de tipo `campo_t*`, y no `campo_t**`, puesto que es completamente innecesario un segundo grado de indirección (como se analiza en la respectiva clase práctica).
 
 * Entendemos que el estado correcto a considerar es el de `OCUPADO`, que es un enumerativo. Cuanto mucho, una constante. Definitivamente no un `"ocupado"`.
 
 
 #### Hash Abierto
 
-Para este caso, consideramos todas las listas, las cuales podemos ir iterando utilizando el iterador externo o interno. Aquí mostramos una implementación utilizando el iterador interno, no porque sea mejor implementación, sino para que tengan un ejemplo de uso. 
+Para este caso, consideramos todas las listas, las cuales podemos ir iterando utilizando el iterador externo o interno. Aquí mostramos una implementación utilizando el iterador interno, no porque sea mejor implementación, sino para que tengan un ejemplo de uso.
 
 ```cpp
 lista_t* hash_claves(const hash_t* hash) {
@@ -92,7 +92,7 @@ En este caso, no sólo sí está permitido utilizar el iterador externo del hash
 sino que **no nos queda otra opción**, dado que no es posible acceder a los
 campos internos de la estructura. Además, en particular no se nos dice cuál es la implementación, cosa que no es necesario conocer.
 
-Entonces, simplemente iteramos utilizando el iterador externo y guardamos en una lista. 
+Entonces, simplemente iteramos utilizando el iterador externo y guardamos en una lista.
 
 ```cpp
 lista_t* hash_claves(const hash_t* hash) {
@@ -127,7 +127,7 @@ lista_t* hash_claves(const hash_t* hash) {
 
 1.  (★) ¿Para qué casos la función `hash_obtener()` tiene una complejidad peor que $$\mathcal{O}(1)$$? Explicar tanto para el hash abierto, como el cerrado.
 
-1.  (★) Justificar si la siguiente función de hashing es correcta o no: 
+1.  (★) Justificar si la siguiente función de hashing es correcta o no:
     ```cpp
     size_t calcular_hash(char *clave, size_t largo) {
         // rand() devuelve un numero entero positivo aleatorio
@@ -135,21 +135,21 @@ lista_t* hash_claves(const hash_t* hash) {
     }
     ```
 
-1.  (★★) a. Mostrar el resultado de las siguientes operaciones tanto para un hash cerrado como para un hash abierto, 
+1.  (★★) a. Mostrar el resultado de las siguientes operaciones tanto para un hash cerrado como para un hash abierto,
     ambos de capacidad 9 e inicialmente vacíos (los números son también el resultado de la función de hashing): insertar 17, insertar 22,
-    insertar 35, borrar 17, insertar 52, insertar 54. 
+    insertar 35, borrar 17, insertar 52, insertar 54.
 
     b. Tras estas inserciones ¿qué pasos hay que seguir para verificar si el 70 pertenece al hash?
 
-    c. Posteriormente se realizan más inserciones. ¿Cuándo redimensionaría cada hash? 
+    c. Posteriormente se realizan más inserciones. ¿Cuándo redimensionaría cada hash?
     ¿Qué pasos hay que seguir para hacerlo?
 
 1.  (★★) Implementar una función de orden $$\mathcal{O}(n)$$ que dado un arreglo de _n_ números enteros devuelva `true`
-    o `false` según si existe algún elemento que aparezca más de la mitad de las veces. Justificar el orden de 
-    la solución. Ejemplos: 
+    o `false` según si existe algún elemento que aparezca más de la mitad de las veces. Justificar el orden de
+    la solución. Ejemplos:
 
         [1, 2, 1, 2, 3] -> false
-        [1, 1, 2, 3] -> false 
+        [1, 1, 2, 3] -> false
         [1, 2, 3, 1, 1, 1] -> true
         [1] -> true
 
@@ -160,55 +160,55 @@ lista_t* hash_claves(const hash_t* hash) {
     del primero están en el segundo; todas las del segundo, en el primero; y los datos asociados a cada una de esas claves son iguales (se pueden comparar los
     valores con "==").
 
-1.  (★★) Implementar el TDA MultiConjunto. Este es un Conjunto que permite más de una aparición de un elemento, 
-    por lo que eliminando una aparición, el elemento puede seguir perteneciendo. Dicho TDA debe tener como 
+1.  (★★) Implementar el TDA MultiConjunto. Este es un Conjunto que permite más de una aparición de un elemento,
+    por lo que eliminando una aparición, el elemento puede seguir perteneciendo. Dicho TDA debe tener como
     primitivas:
     * `multiconj_t* multiconj_crear()`: crea un multiconjunto. A fines del parcialito, no es necesario
-    implementar la primitiva de destruir. 
-    * `bool multiconj_guardar(multiconj_t* multiconj, char* elem)`: guarda un elemento 
+    implementar la primitiva de destruir.
+    * `bool multiconj_guardar(multiconj_t* multiconj, char* elem)`: guarda un elemento
     en el multiconjunto. Devuelve `true` si se pudo guardar el elemento correctamente, `false` en caso
-    contrario. 
+    contrario.
     * `bool multiconj_pertenece(multiconj_t* multiconj, char* elem)`: devuelve `true` si el elemento aparece
-    al menos una vez en el conjunto. 
-    * `bool multiconj_borrar(multiconj_t* multiconj, char* elem)`: elimina *una aparición* del elemento 
+    al menos una vez en el conjunto.
+    * `bool multiconj_borrar(multiconj_t* multiconj, char* elem)`: elimina *una aparición* del elemento
     dentro del conjunto. Devuelve `true` si se eliminó una aparición del elemento.
 
-    Dar la estructura del TDA y la implementación de las 4 primitivas marcadas, de forma tal que todas sean 
+    Dar la estructura del TDA y la implementación de las 4 primitivas marcadas, de forma tal que todas sean
     $$\mathcal{O}(1)$$.
 
 1.  (★★★) Se tiene un hash que cuenta con una función de hashing que, recibida una clave,
-    devuelve la posición de su inicial en el abecedario. La capacidad inicial del hash 
-    es 26. Para los puntos B, C y D indicar y justificar si las afirmaciones son 
-    verdaderas o falsas. Se puede considerar que todas las claves serán palabras 
-    (sólo se usan letras para las claves). 
+    devuelve la posición de su inicial en el abecedario. La capacidad inicial del hash
+    es 26. Para los puntos B, C y D indicar y justificar si las afirmaciones son
+    verdaderas o falsas. Se puede considerar que todas las claves serán palabras
+    (sólo se usan letras para las claves).
 
-    a. Mostrar cómo quedan un hash abierto y un hash cerrado (sólo el resultado final) 
-    tras guardar las siguientes claves: Ambulancia (0), Gato (6), Manzana (12), Ananá (0), 
-    Girasol (6), Zapato (25), Zapallo (25), Manzana (12), Bolso (1).  
-    _Aclaración_: No es necesario hacer una tabla de 26 posiciones, lo importante es que 
-    quede claro en cuál posición está cada elemento. 
+    a. Mostrar cómo quedan un hash abierto y un hash cerrado (sólo el resultado final)
+    tras guardar las siguientes claves: Ambulancia (0), Gato (6), Manzana (12), Ananá (0),
+    Girasol (6), Zapato (25), Zapallo (25), Manzana (12), Bolso (1).
+    _Aclaración_: No es necesario hacer una tabla de 26 posiciones, lo importante es que
+    quede claro en cuál posición está cada elemento.
 
-    b. En un hash **abierto** con dicha función de hashing, se decide redimensionar cuando la 
-    cantidad alcanza la capacidad (factor de carga = 1). El rendimiento de 
-    `hash_obtener()` es mejor en este caso respecto a si se redimensionara al alcanzar 
-    un factor de carga 2. 
+    b. En un hash **abierto** con dicha función de hashing, se decide redimensionar cuando la
+    cantidad alcanza la capacidad (factor de carga = 1). El rendimiento de
+    `hash_obtener()` es mejor en este caso respecto a si se redimensionara al alcanzar
+    un factor de carga 2.
 
-    c. En un hash **cerrado** con dicha función de hashing, si se insertan `n + 1` claves diferentes 
-    (considerar que se haya redimensionado acordemente), `n` con la misma letra 
-    inicial, y 1 con otra distinta, en el primer caso `obtener()` es $$\mathcal{O}(n)$$ y en el 
+    c. En un hash **cerrado** con dicha función de hashing, si se insertan `n + 1` claves diferentes
+    (considerar que se haya redimensionado acordemente), `n` con la misma letra
+    inicial, y 1 con otra distinta, en el primer caso `obtener()` es $$\mathcal{O}(n)$$ y en el
     segundo siempre $$\mathcal{O}(1)$$.
 
-    d. En un hash **abierto** con dicha función de hashing, si se insertan `n + 1` claves diferentes 
-    (considerar que se haya redimensionado acordemente), `n` con la misma letra 
-    inicial, y 1 con otra distinta, en el primer caso `obtener()` es $$\mathcal{O}(n)$$ y en el 
+    d. En un hash **abierto** con dicha función de hashing, si se insertan `n + 1` claves diferentes
+    (considerar que se haya redimensionado acordemente), `n` con la misma letra
+    inicial, y 1 con otra distinta, en el primer caso `obtener()` es $$\mathcal{O}(n)$$ y en el
     segundo siempre $$\mathcal{O}(1)$$.
 
 1.  (★★★) El Ing. Musumeci quiere implementar un hash abierto, pero en el que las listas de cada posición
-    se encuentren ordenadas por clave (usando `strcmp`). Explicar cómo mejora o empeora respecto 
-    a la versión que vemos en clase para el caso de inserciones, borrados, búsquedas con éxito 
+    se encuentren ordenadas por clave (usando `strcmp`). Explicar cómo mejora o empeora respecto
+    a la versión que vemos en clase para el caso de inserciones, borrados, búsquedas con éxito
     (el elemento se encuentra en el hash) y sin éxito (no se encuentra).
 
-1.  (★★★) Hacer un seguimiento e indicar cómo queda un hash que aplica hashing perfecto (con Hash & Displace) 
+1.  (★★★) Hacer un seguimiento e indicar cómo queda un hash que aplica hashing perfecto (con Hash & Displace)
     con las siguientes claves (los valores de las funciones de hashing se encuentran a continuación de las claves).
 
     ```
@@ -222,15 +222,15 @@ lista_t* hash_claves(const hash_t* hash) {
     "pejelagarto": 6; 0; 7
     ```
 
-1.  (★★) Del ejercicio anterior, explicar qué sucedería si los resultados de aplicar las funciones de hashing sobre 
-    _"pejelagarto"_ fueran (6, 0, 3), y cómo debería resolverse. 
+1.  (★★) Del ejercicio anterior, explicar qué sucedería si los resultados de aplicar las funciones de hashing sobre
+    _"pejelagarto"_ fueran (6, 0, 3), y cómo debería resolverse.
 
-1.  (★★★) a. Realizar las siguientes operaciones sobre un hash con Hopscotch hashing, de largo 9 y $$K = 2$$ 
+1.  (★★★) a. Realizar las siguientes operaciones sobre un hash con Hopscotch hashing, de largo 9 y $$K = 2$$
     (los números son también el resultado de la función de hashing):
     Guardar 1, Guardar 0, Guardar 9, Borrar 1, Buscar 9, Guardar 5, Guardar 7, Guardar 17, Borrar 7, Guardar 16, Guardar 82
-    Guardar 81, Guardar 2. 
+    Guardar 81, Guardar 2.
 
-    b. Indicar qué sucede si guardamos el valor 89, y cómo se debe resolver. 
+    b. Indicar qué sucede si guardamos el valor 89, y cómo se debe resolver.
 
 1.  (★★★) a. Realizar el seguimiento de guardar las siguientes claves dentro de un hash con Cuckoo Hashing, con 2
     funciones de hashing (los valores de aplicar las funciones de hashing se indican a continuación de las claves),
@@ -248,13 +248,13 @@ lista_t* hash_claves(const hash_t* hash) {
     b. Explicar qué sucede al buscar la clave _"perro"_.
 
     c. Explicar cómo hacer para eliminar la clave _"perro"_ del hash, y cómo se debe modificar el hash para que
-    siga funcionando correctamente. 
+    siga funcionando correctamente.
 
-1.  (★★★) Supongamos que queremos crear una estructura _Diccionario inmutable_. Dicho TDA es un Diccionario que 
-    no será modificado. No tendrá altas, ni bajas. Los elementos se los pasan al crearlo (por ejemplo, 
+1.  (★★★) Supongamos que queremos crear una estructura _Diccionario inmutable_. Dicho TDA es un Diccionario que
+    no será modificado. No tendrá altas, ni bajas. Los elementos se los pasan al crearlo (por ejemplo,
     a través de otra implementación de diccionario, o con un par de arreglos con las claves y valores).
-    Explicar cómo harías para implementar esto de forma eficiente, considerando que su mayor utilidad 
-    es realizar búsquedas lo más rápido posible. 
+    Explicar cómo harías para implementar esto de forma eficiente, considerando que su mayor utilidad
+    es realizar búsquedas lo más rápido posible.
 
 1.  (★★★★) Dar una implementación en C de cómo podría ser la primitiva `hash_guardar` para el caso de un hash
     cerrado con Cuckoo Hashing con dos funciones de hashing (suponer que se llaman `h1` y `h2`). Si la clave
@@ -268,10 +268,10 @@ lista_t* hash_claves(const hash_t* hash) {
     } hash_t;                               } campo_hash_t;
     ```
 
-1.  (★★★★★) Se quiere implementar un TDA Diccionario con las siguientes primitivas: 
-    `obtener(x)` devuelve el valor de `x` en el diccionario; `insertar(x, y)` inserta en el diccionario 
+1.  (★★★★★) Se quiere implementar un TDA Diccionario con las siguientes primitivas:
+    `obtener(x)` devuelve el valor de `x` en el diccionario; `insertar(x, y)` inserta en el diccionario
     la clave `x` con el valor `y` (entero); `borrar(x)` borra la entrada de `x`; `add(x, n)` le
     suma `n` al contenido de `x`; `add_all(m)` le suma `m` a **todos** los valores.
 
-    Proponer una implementación donde **todas** las operaciones sean $$\mathcal{O}(1)$$. Justificar el 
+    Proponer una implementación donde **todas** las operaciones sean $$\mathcal{O}(1)$$. Justificar el
     orden de las operaciones.

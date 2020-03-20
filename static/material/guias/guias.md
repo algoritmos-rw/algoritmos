@@ -6,12 +6,12 @@ math: true
 
 # Guías de ejercicios
 
-A continuación pueden encontrarse las guías de ejercicios de los distintos temas del curso. Todas las guías cuentan con un ejercicio resuelto y con una tanda de ejercicios. Los ejercicios propuestos están puntuados del 1 a 5 estrellas (★) en dificultad (no de forma exacta, sino para que usen de guía). 
+A continuación pueden encontrarse las guías de ejercicios de los distintos temas del curso. Todas las guías cuentan con un ejercicio resuelto y con una tanda de ejercicios. Los ejercicios propuestos están puntuados del 1 a 5 estrellas (★) en dificultad (no de forma exacta, sino para que usen de guía).
 
 Los ejercicios de 1 estrellas son ejercicios muy básicos o introductorios que no entrarían en un examen, pero
-sirven para iniciarse en el tema. 
+sirven para iniciarse en el tema.
 
-La mayoría de los ejercicios de entre 2 y 4 estrellas han sido sacado de parcialitos de cuatrimestres anteriores. 
+La mayoría de los ejercicios de entre 2 y 4 estrellas han sido sacado de parcialitos de cuatrimestres anteriores.
 
 Los ejercicios de 5 estrellas sólo serían tomados en exámenes finales.
 
@@ -32,4 +32,4 @@ Guías de temas anteriores:
   * [Backtracking](backtracking)[^1]
   * [Programación dinámica](pd)
 
-[^1]: Este tema se continúa dando, pero de forma específica para grafos. Se pueden encontrar ejercicios en _Grafos, segunda parte_. 
+[^1]: Este tema se continúa dando, pero de forma específica para grafos. Se pueden encontrar ejercicios en _Grafos, segunda parte_.

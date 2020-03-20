@@ -38,7 +38,7 @@ _Aclaración_: se debe realizar la menor cantidad posible de comparaciones.
 ### Solución
 
 La aclaración hace mención a que utilicemos la propiedad de ABB: sabemos que los nodos
-a izquierda son menores al actual, y los que estén a derecha son mayores. 
+a izquierda son menores al actual, y los que estén a derecha son mayores.
 En particular, si estamos en un nodo cuya clave es menor (o igual) a la buscada, entonces es innecesario
 revisar a izquierda: todos esos nodos también serán menores. Sí tendremos siempre que revisar a derecha,
 porque no es posible descartar. Esto es similar a una búsqueda por rango, solo que sin un límite superior.
@@ -59,7 +59,7 @@ void _abb_mayores(const abb_t* abb, const char* clave, lista_t* claves) {
         return;
     }
     // si la actual es mayor, llamamos a la izquierda y guardamos la actual
-    if (strcmp(abb->clave, clave) > 0) { 
+    if (strcmp(abb->clave, clave) > 0) {
         _abb_mayores(abb->izq, clave, claves);
         lista_insertar_primero(claves, abb->clave);
     }
@@ -77,7 +77,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 1.  (★) Dado un árbol binario, escribir una primitiva recursiva que determine la altura del mismo. Indicar
     y justificar el orden de la primitiva.
 
-1.  (★) Implementar una primitiva que devuelva la suma de todos los datos (números) de un árbol binario. 
+1.  (★) Implementar una primitiva que devuelva la suma de todos los datos (números) de un árbol binario.
     Indicar y justificar el orden de la primitiva.
 
 1.  (★) Se tiene un AB con números enteros como datos, y se quiere reemplazar cada dato por el resultado de multiplicarlo con los datos de los hijos.
@@ -113,22 +113,22 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     }
     ```
 
-1.  (★★) Dado un árbol binario, escriba una función recursiva que cuente la cantidad de nodos que 
+1.  (★★) Dado un árbol binario, escriba una función recursiva que cuente la cantidad de nodos que
     tienen exactamente dos hijos directos. ¿Qué orden de complejidad tiene la función implementada?
 
-1.  (★★) Escribir una función recursiva con la firma `void arbol_invertir(arbol_t* arbol)` 
-    que invierta el árbol binario pasado por parámetro, de manera tal que los hijos 
-    izquierdos de cada nodo se conviertan en hijos derechos. 
-    
+1.  (★★) Escribir una función recursiva con la firma `void arbol_invertir(arbol_t* arbol)`
+    que invierta el árbol binario pasado por parámetro, de manera tal que los hijos
+    izquierdos de cada nodo se conviertan en hijos derechos.
+
     La estructura `arbol_t` respeta la siguiente definición:
-    
+
     ```cpp
         typedef struct arbol {
             struct arbol* izq;
             struct arbol* der;
         } arbol_t;
     ```
-    
+
     Indicar el orden de complejidad de la función implementada.
 
 1.  (★★) Suponer que se tiene un ABB _A_ con una función de comparación `cmp1` con $$n$$ claves. También, se
@@ -137,14 +137,14 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     exactamente la misma estructura? Si es posible, describir un algoritmo que permita lograr esto; si no lo es, razonar por qué. (Considerar que la lógica a emplear debe funcionar para cualquier valor de $$n$$ y cualquier estructura
     que tenga el ABB _A_.)
 
-1.  (★★★) Se tiene un AVL con números enteros como claves (su función de comparación simplemente compara 
-    dichos valores de la forma tradicional). Su estado inicial puede reconstruirse a partir del 
+1.  (★★★) Se tiene un AVL con números enteros como claves (su función de comparación simplemente compara
+    dichos valores de la forma tradicional). Su estado inicial puede reconstruirse a partir del
     preorder: `15 - 6 - 4 - 7 - 50 - 23`. Hacer el seguimiento de las siguientes inserciones,
     incluyendo rotaciones intermedias: `71 - 27 - 38 - 19 - 11 - 21 - 24 - 25`.
 
 1.  (★★★) Mostrar cómo se modifica la estructura de un árbol B (incluyendo los pasos intermedios) con tamaño
-    para 3 claves por nodo que inicialmente se encuentra vacío, al aplicar las siguientes operaciones: 
-    insertar 14, insertar 2, insertar 10, insertar 6, insertar 7, insertar 1, insertar 4, insertar 8, 
+    para 3 claves por nodo que inicialmente se encuentra vacío, al aplicar las siguientes operaciones:
+    insertar 14, insertar 2, insertar 10, insertar 6, insertar 7, insertar 1, insertar 4, insertar 8,
     insertar 11, insertar 19, insertar 9, insertar 5, insertar 15, insertar 3.
 
 1.  (★★★) Definimos como _quiebre en un árbol binario_ cuando ocurre que:
@@ -166,8 +166,8 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     Indicar y justificar el orden de la primitiva, e indicar el tipo de
     recorrido implementado.
 
-1.  (★★) Indicar si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas, 
-    justificar, en caso de ser falsas poner un contraejemplo: 
+1.  (★★) Indicar si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas,
+    justificar, en caso de ser falsas poner un contraejemplo:
 
     {:.lower_alpha}
     1. Si dos árboles binarios tienen el mismo recorrido inorder, entonces tienen la misma
@@ -177,15 +177,15 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     estructura.
 
     1. Si dos árboles binarios de búsqueda (e idéntica función de comparación) tienen el mismo
-    recorrido preorder, entonces tienen la misma estructura. 
+    recorrido preorder, entonces tienen la misma estructura.
 
-1.  (★★) Implementar una primitiva para el ABB, que reciba el ABB y devuelva una lista con las claves 
-    del mismo, ordenadas tal que si insertáramos las claves en un ABB vacío (con la misma función 
-    de comparación), dicho ABB tendría la misma estructura que el árbol original. ¿Qué tipo de 
+1.  (★★) Implementar una primitiva para el ABB, que reciba el ABB y devuelva una lista con las claves
+    del mismo, ordenadas tal que si insertáramos las claves en un ABB vacío (con la misma función
+    de comparación), dicho ABB tendría la misma estructura que el árbol original. ¿Qué tipo de
     recorrido utilizaste? Indicar y justificar el orden de la primitiva.
 
 1.  (★★★★) Implementar una primitiva para el AB que reciba dos arreglos (o listas) de cadenas. El primer arreglo
-    corresponde al preorder de un árbol binario. El segundo al inorder del mismo árbol (ambos arreglos 
+    corresponde al preorder de un árbol binario. El segundo al inorder del mismo árbol (ambos arreglos
     tienen los mismos elementos, sin repetidos). La función debe devolver un árbol binario que tenga dicho
     preorder e inorder. Indicar y justificar el orden de la primitiva (tener cuidado con este punto).
     Considerar que la estructura del árbol binario es:
@@ -201,5 +201,5 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 
 1.  (★★★★) Implementar una función que reciba un arreglo ordenado y devuelva un arreglo o lista con
     los elementos en orden para ser insertados en un ABB, de tal forma que al insertarlos en
-    dicho orden se asegure que el ABB quede balanceado. ¿Cómo cambiarías tu resolución si en 
+    dicho orden se asegure que el ABB quede balanceado. ¿Cómo cambiarías tu resolución si en
     vez de querer guardarlos en un ABB se fueran a insertar en un AVL?
