@@ -134,7 +134,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 1.  (★★) Suponer que se tiene un ABB _A_ con una función de comparación `cmp1` con $$n$$ claves. También, se
     tiene otro ABB vacío _B_ con función de comparación `cmp2` (con `cmp1` y `cmp2` diferentes).
     ¿Es posible insertar en algún orden todas las claves de _A_ en _B_ de tal forma que ambos tengan
-    exactamente la misma estructura? Explicar el algoritmo que permita lograr esto. (Considerar que la lógica a emplear debe funcionar para cualquier valor de $$n$$ y cualquier estructura
+    exactamente la misma estructura? Si es posible, describir un algoritmo que permita lograr esto; si no lo es, razonar por qué. (Considerar que la lógica a emplear debe funcionar para cualquier valor de $$n$$ y cualquier estructura
     que tenga el ABB _A_.)
 
 1.  (★★★) Se tiene un AVL con números enteros como claves (su función de comparación simplemente compara 
@@ -148,8 +148,8 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     insertar 11, insertar 19, insertar 9, insertar 5, insertar 15, insertar 3.
 
 1.  (★★★) Definimos como _quiebre en un árbol binario_ cuando ocurre que:
-    - un hijo derecho tiene sólo un hijo izquierdo (y tiene este hijo).
-    - un hijo izquierdo tiene sólo un hijo derecho (y tiene este hijo).
+    - un hijo derecho tiene un solo hijo, y es el izquierdo
+    - un hijo izquierdo tiene un solo hijo, y es el derecho
 
     Implementar una _primitiva_ para el árbol binario `size_t ab_quiebres(const ab_t*)`
     que, dado un árbol binario, nos devuelva la cantidad de quiebres que
