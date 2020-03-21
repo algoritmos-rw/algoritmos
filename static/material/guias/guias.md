@@ -15,14 +15,14 @@ La mayoría de los ejercicios de entre 2 y 4 estrellas han sido sacado de parcia
 
 Los ejercicios de 5 estrellas sólo serían tomados en exámenes finales.
 
-  * [Conceptos de TDAs, y TDAs Básicos (Pila, Cola y Lista)](tdas_conceptos)
-  * [División y Conquista](dyc)
-  * [Ordenamientos comparativos y no comparativos](ordenamientos)
-  * [Diccionarios, Hashing y Hashes](hash)
-  * [Árboles Binarios, ABB, AVL, Árbol B](arboles)
-  * [Colas de Prioridad y heaps](heap)
-  * [Grafos, primera parte: Usos, implementaciones y recorridos](grafos_1)
-  * [Grafos, segunda parte: Algoritmos sobre grafos](grafos_2)
+  * [Conceptos de TDAs, y TDAs Básicos (Pila, Cola y Lista)](guias/tdas_conceptos)
+  * [División y Conquista](guias/dyc)
+  * [Ordenamientos comparativos y no comparativos](guias/ordenamientos)
+  * [Diccionarios, Hashing y Hashes](guias/hash)
+  * [Árboles Binarios, ABB, AVL, Árbol B](guias/arboles)
+  * [Colas de Prioridad y heaps](guias/heap)
+  * [Grafos, primera parte: Usos, implementaciones y recorridos](guias/grafos_1)
+  * [Grafos, segunda parte: Algoritmos sobre grafos](guias/grafos_2)
 
 También, pueden descargarse la <i class="fa fa-file-pdf"/> versión en PDF de la guía del [<i class="fab fa-google-drive"/> Drive de la materia]({{site.data.sitios.drive}}).
 
