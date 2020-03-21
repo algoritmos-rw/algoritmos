@@ -1,6 +1,4 @@
 ---
-title: Diccionarios, Hashing y Hash
-permalink: 'material/guias/hash'
 math: true
 ---
 

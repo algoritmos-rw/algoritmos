@@ -1,6 +1,4 @@
 ---
-title: Árboles Binarios, ABB, AVL, Árbol B
-permalink: 'material/guias/arboles'
 math: true
 ---
 

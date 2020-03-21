@@ -1,6 +1,4 @@
 ---
-title: División y Conquista
-permalink: 'material/guias/dyc'
 math: true
 ---
 
@@ -283,7 +281,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
         [1] -> true
 
     _Aclaración_: Este ejercicio puede resolverse, casi trivialmente, ordenando el arreglo con un algoritmo eficiente,
-    o incluso se puede realizar más rápido utilizando una [tabla de hash](hash). Para hacer interesante el ejercicio,
+    o incluso se puede realizar más rápido utilizando una [tabla de hash](hash.md). Para hacer interesante el ejercicio,
     resolver **sin ordenar el arreglo**, sino puramente división y conquista.
 
 {::options toc_levels="2" /}

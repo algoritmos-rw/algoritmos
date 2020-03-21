@@ -1,9 +1,3 @@
----
-title: Ejemplos de Código
-permalink: /material/ejemplos
-math: true
----
-
 # Ejemplos de Código
 
   * [malloc y struct](https://drive.google.com/open?id=1L3-Hh9YWFa4_pZmsroA3frPClHcATsGf)
@@ -20,4 +14,3 @@ math: true
   * [Quick sort simple](https://drive.google.com/open?id=1AU4HaMJZpe6F4C7YFNnVoNkYwyKBF0wc)
   * [Quick sort alternativo](https://drive.google.com/open?id=1wId-_djgfYMQB62lfgV5C4czm--MkNm_)
   * [Ejemplos de programación dinámica](https://drive.google.com/open?id=1d74zabP5mQ7V71ujqqheWShTOWkVgvjb) (coeficientes, escalones, soga y teléfono).
-  

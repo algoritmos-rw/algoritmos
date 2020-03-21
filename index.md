@@ -22,7 +22,7 @@ Pueden leer [aquí](https://docs.google.com/presentation/d/1CoK6dhq9vM68Ugk67HaY
 * [Formulario de inscripción de grupos]({{site.data.cuatrimestre.formulario_grupos}})
 * <a href="{{site.data.sitios.drive}}"><i class="fab fa-google-drive"/> Drive general de la materia</a>
 * <a href="{{site.data.sitios.youtube}}"><i class="fab fa-youtube"/> Canal de YouTube</a> del curso
-* [Guías de ejercicios](material/guias)
+* [Guías de ejercicios](material/guias.md)
 * [Página de visualizaciones recomendada](http://visualgo.net/)
 
 ## Información sobre próximas clases

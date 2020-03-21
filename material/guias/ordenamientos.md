@@ -1,6 +1,4 @@
 ---
-title: Ordenamientos comparativos y no comparativos
-permalink: 'material/guias/ordenamientos'
 math: true
 ---
 

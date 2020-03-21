@@ -1,6 +1,4 @@
 ---
-title: Programación dinámica
-permalink: 'material/guias/pd'
 math: true
 ---
 

@@ -1,6 +1,4 @@
 ---
-title: Random Walks
-permalink: /material/apuntes/random_walks
 math: true
 ---
 
@@ -23,12 +21,12 @@ Todas estas caracterizaciones dependen de la aplicación del algoritmo.
 
 ## Ejemplo de aplicación
 
-Una aplicación usual (al menos en TPs de esta materia) es la de utilizar random walks para determinar 
+Una aplicación usual (al menos en TPs de esta materia) es la de utilizar random walks para determinar
 cuál es el (o los) vértices más _similares_ a uno en particular. ¿Cómo esto nos puede ayudar a determinar
 si un vértice es similar a otro? Si realizamos muchos de estos recorridos aleatorios, partiendo desde el
 vértice en cuestión, moviéndonos de forma completamente aleatoria, el/los vértices que más veces aparezcan
 entre todos los recorridos, deben ser los más similares al personaje de origen. Este es un algoritmo
-bastante usado, por ejemplo en Twitter, para recomendar seguidores. Tener en cuenta que cuantos más 
+bastante usado, por ejemplo en Twitter, para recomendar seguidores. Tener en cuenta que cuantos más
 largos y más recorridos se hagan, debería ser más preciso el algoritmo (en ambos casos, y siempre que se
 utilicen Random Walks).
 
@@ -51,6 +49,6 @@ def vertice_aleatorio(pesos):
 ```
 
 Dicho algoritmo trata a cada "unidad de peso" de forma equiprobable (sería como si en una rifa cada vértice
-tenga tantos números como peso tiene su unión con el origen). Si se quisiera implementar ésto con otro 
+tenga tantos números como peso tiene su unión con el origen). Si se quisiera implementar ésto con otro
 tipo de distribución de probabilidad, habría que utilizar otros métodos de inversión de variables
 aleatorias.

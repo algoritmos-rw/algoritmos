@@ -1,9 +1,3 @@
----
-title: Archivos KML
-permalink: /material/apuntes/kml
-math: true
----
-
 # Archivos KML
 
 Los archivos KML son archivos de texto plano utilizados por aplicaciones como Google Earth o Google Maps para mostrar información geográfica. Estos archivos deben cumplir un estándar con el que se pueden representar puntos, líneas y polígonos, entre otras cosas.
@@ -38,7 +32,7 @@ A continuación se puede agregar el nombre del archivo y una descripción.
 ```
 ## Contenido geográfico
 
-El lenguaje incluye muchos componentes para visualizar en mapas, especificando su estilo y muchos atributos. Por simplificación, explicaremos únicamente dos, con los cuales ya se puede tener una versión simplificada. En caso de querer aprender más sobre archivos KML, los referimos a la documentación antes mencionada. 
+El lenguaje incluye muchos componentes para visualizar en mapas, especificando su estilo y muchos atributos. Por simplificación, explicaremos únicamente dos, con los cuales ya se puede tener una versión simplificada. En caso de querer aprender más sobre archivos KML, los referimos a la documentación antes mencionada.
 
 Se pueden incluir muchos de estos componentes en un mismo archivo sin necesidad de ordenarlos ni especificar su cantidad previamente.
 

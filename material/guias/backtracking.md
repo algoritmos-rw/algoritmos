@@ -1,6 +1,4 @@
 ---
-title: Backtracking
-permalink: 'material/guias/backtracking'
 math: true
 ---
 

@@ -1,6 +1,4 @@
 ---
-title: Colas de Prioridad y Heaps
-permalink: 'material/guias/heap'
 math: true
 ---
 

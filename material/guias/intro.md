@@ -1,6 +1,6 @@
 ---
+published: false
 title: "Algoritmos y Programación II -- Curso Buchwald Guía de Ejercicios"
-math: true
 lang: es
 fontsize: 12pt
 classoption: a4paper

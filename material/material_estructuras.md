@@ -1,7 +1,5 @@
 ---
-title: Material y visualizaciones sobre estructuras de datos
-permalink: /material/estructuras
-math: true
+permalink: /material/estructuras/
 ---
 
 # Material y visualizaciones sobre estructuras de datos

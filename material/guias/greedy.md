@@ -1,6 +1,4 @@
 ---
-title: Greedy
-permalink: 'material/guias/greedy'
 math: true
 ---
 

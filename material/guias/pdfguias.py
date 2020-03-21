@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 import subprocess
 import shutil
@@ -22,7 +24,7 @@ for archivo in ARCHIVOS:
                 line = line.replace("{::options toc_levels=\"2\" /}", "")
                 if "<img src=" in line:
                     split_line = line.split("\"")
-                    line = "    ![](../" + split_line[1] + "){width=" + split_line[5] + "}\n"
+                    line = "    ![](" + split_line[1] + "){width=" + split_line[5] + "}\n"
                 s.write(line)
 
             s.write("\\newpage\n")

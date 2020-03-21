@@ -1,5 +1,4 @@
 ---
-title: "Grafos: Aplicaciones y Algoritmos"
 permalink: 'material/guias/grafos_2'
 math: true
 ---

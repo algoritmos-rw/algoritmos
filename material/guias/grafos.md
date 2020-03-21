@@ -1,6 +1,5 @@
 ---
-title: "Grafos: Usos, implementaciones, recorridos"
-permalink: 'material/guias/grafos_1'
+permalink: 'material/guias/grafos_1/'
 math: true
 ---
 
