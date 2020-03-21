@@ -16,7 +16,7 @@ math: true
 ## Ejercicio resuelto
 
 
-Implementar en C una primitiva para el heap (siendo un max-heap) que reciba un heap y una función de
+Implementar en C una primitiva para el heap (siendo este un max-heap) que reciba un heap y una función de
 comparación y lo reordene de manera tal que se se comporte como max-heap para la nueva función de comparación
 (se cambia la función de prioridad). El orden de dicha primitiva debe ser $$\mathcal{O}(n)$$.
 
@@ -37,14 +37,14 @@ void heap_cambiar_prioridad(heap_t* heap, heap_cmp_t nueva_cmp) {
 
 Obviamente, la primitiva es $$\mathcal{O}(n)$$ dado que `heapify` (bien implementado) tiene dicha complejidad.
 Por supuesto, este ejercicio involucra más pensar bien cuáles son las operaciones que se pueden hacer con el heap
-(y especialmente, cuál es la única con el orden pedido).
+(y, especialmente, cuál es la única con el orden pedido).
 
 
 ## Ejercicios propuestos
 
 
 1.  (★) Implementar en lenguaje C una función _recursiva_ con la firma
-    `bool es_heap(int arr[], size_t n)`. Esta debe devolver true o false de acuerdo
+    `bool es_heap(int arr[], size_t n)`. Esta función debe devolver true o false de acuerdo
     a si el arreglo que recibe como parámetro cumple la propiedad de heap (de mínimos).
 
     Hacer el seguimiento de la función para el arreglo `[ 1, 7, 2, 8, 7, 6, 3, 3, 9, 10 ]`.
@@ -52,28 +52,29 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
 1.	(★) Implementar una primitiva para el heap (de máximos) que obtenga los 3 elementos más grandes del heap en
     $$\mathcal{O}(1)$$.
 
-1.  (★★) Si en el ejerciico anterior vez de quererse los 3 elementos más grandes se quisieran los K elementos
-    más grandes, ¿cómo se debería proceder? ¿Cuál terminaría siendo la complejidad del algoritmo?
+1.  (★★) Si en el ejercicio anterior vez de quererse los 3 elementos más grandes se quisieran los _K_ elementos
+    más grandes ¿cómo se debería proceder? ¿Cuál terminaría siendo la complejidad del algoritmo?
 
-1.	(★★) En un heap de máximos, ¿entre qué posiciones del arreglo del heap puede encontrarse
-    el mínimo?
+1.	(★★) En un heap de máximos ¿cuáles son las posibles posiciones del arreglo
+    donde podría encontrarse el mínimo?
 
-1.  (★★) Realizar el seguimiento del algoritmo de heapsort para ordenar el siguiente
+1.  (★★) Realizar el seguimiento del algoritmo _heapsort_ para ordenar el siguiente
     arreglo: `[ 4, 7, 8, 14, 10, 9, 16, 2, 3, 1 ]`.
 
-1.  (★★★) ¿Puede utilizarse un Heap para implementar un TDA cola (extraer los elementos en el orden
-    en que fueron insertados)? ¿y para implementar un TDA pila?
+1.  (★★★) ¿Puede utilizarse un Heap para implementar el TDA cola (en el que se extraen los elementos en el orden
+    en que fueron insertados)? ¿Y para implementar el TDA pila?
 
 1.	(★★) Hacer el seguimiento de las siguientes operaciones sobre un heap (de mínimos),
     mostrando el estado de la estructura después de cada modificación:
 
-      a) Crear un heap de mínimos desde el arreglo `[8, 2, 1, 5, 10, 6, 14, 4]`.
+    {:.lower_alpha}
+    1. Crear un heap de mínimos desde el arreglo `[8, 2, 1, 5, 10, 6, 14, 4]`.
 
-      b) Sobre el heap resultante del punto anterior, realizar las siguientes
+    1. Sobre el heap resultante del punto anterior, realizar las siguientes
       operaciones: `encolar(6)`, `encolar(3)`, `encolar(17)`, `desencolar()`, `encolar(7)`,
       `desencolar()`.
 
-1.  (★★★) Escribir una función en C, que dado un arreglo de $$n$$ cadenas y un entero
+1.  (★★★) Escribir una función en C que, dado un arreglo de $$n$$ cadenas y un entero
     positivo $$k$$, devuelva una lista con las $$k$$ cadenas más largas. Se espera que el
     orden del algoritmo sea $$\mathcal{O}(n \log k)$$. Justificar el orden.
 
@@ -93,8 +94,8 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
     $$\mathcal{O}(n \log k)$$. Justificar el orden del algoritmo propuesto.
 
 1.	(★★★★★) Diseñar el TDA Mediana. Dicho TDA debe poder recibir un flujo de números y, en cualquier momento,
-    debe poder consultársele cuál es la mediana de **todos** los elementos. La operación de agregar un nuevo
+    debe poder consultársele cuál es la mediana de **todos** los elementos vistos hasta ese momento. La primitiva para agregar un nuevo
     número debe poder hacerse en $$\mathcal{O}(\log n)$$ mientras que la operación de consultar la mediana debe
     ser $$\mathcal{O}(1)$$. Recordar que la mediana de una secuencia de números es el elemento que se encontraría
     a la mitad si la secuencia se encontrara ordenada (en caso de ser una cantidad par, se puede definir como
-    el promedio entre ambos valores adyacentes del medio, o como alguno de los dos de ellos de forma arbitraria).
+    el promedio entre ambos valores adyacentes del medio, o como uno de los dos de ellos de forma arbitraria).
