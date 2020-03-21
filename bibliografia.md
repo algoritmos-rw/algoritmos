@@ -1,8 +1,3 @@
----
-title: Bibliografía
-permalink: /bibliografia/
----
-
 # Bibliografía
 
 ### Libros sugeridos por el curso

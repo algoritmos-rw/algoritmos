@@ -1,8 +1,3 @@
----
-title: Encuestas
-permalink: /encuestas/
----
-
 Encuestas
 =========
 

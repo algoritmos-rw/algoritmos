@@ -1,10 +1,5 @@
----
-title: Infraestructura
-permalink: /infraestructura/
----
-
 Infraestructura del curso
-=========
+=========================
 
 Obviando la lista de correos, la plataforma más utilizada por el curso es [Github](http://github.com/), un sitio dedicado al hosting de repositorios de código (de Git). Estos repositorios contienen tanto el código mismo como su historial de versiones y cambios, mostrando claramente quién modificó qué linea de código, y permitiendo la contribución tanto de gente interna del curso como de gente externa a este, de manera facíl y accesible.
 

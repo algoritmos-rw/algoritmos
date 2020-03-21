@@ -1,6 +1,5 @@
 ---
 title: Docentes
-permalink: /docentes/
 ---
 
 <div class="container-fluid">

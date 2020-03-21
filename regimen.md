@@ -1,10 +1,5 @@
----
-title: Régimen
-permalink: /regimen/
----
-
 Régimen de cursada
-=======
+==================
 
 ### Aprobación
 
