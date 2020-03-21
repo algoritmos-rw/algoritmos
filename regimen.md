@@ -40,9 +40,9 @@ Régimen de cursada
 * Copiarse en un parcialito implica desaprobar la cursada y por lo tanto la materia.
 
 ### Final
-* Una vez aprobada la cursada, es necesario rendir un final escrito, en el cuál entran todos los temas vistos en la materia. Tanto en las clases teóricas como en las clases prácticas. 
+* Una vez aprobada la cursada, es necesario rendir un final escrito, en el cuál entran todos los temas vistos en la materia. Tanto en las clases teóricas como en las clases prácticas.
 * Los finales se aprueban con nota 4 o superior, y constan de 5 ejercicios (se requieren 3 ejercicios bien para aprobar).
-* Aquellos alumnos que hayan cumplido con los requisitos del régimen de promoción, no deben rendir el examen final. 
+* Aquellos alumnos que hayan cumplido con los requisitos del régimen de promoción, no deben rendir el examen final.
 
 ### Calificación
 
