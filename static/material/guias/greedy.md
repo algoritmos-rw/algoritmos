@@ -15,7 +15,7 @@ math: true
 
 ## Ejercicio resuelto
 
-Un camión debe viajar desde una ciudad a otra deteniéndose a cargar combustible cuando sea necesario. El tanque de combustible le permite viajar hasta _K_ kilometros.  
+Un camión debe viajar desde una ciudad a otra deteniéndose a cargar combustible cuando sea necesario. El tanque de combustible le permite viajar hasta _K_ kilometros.
 Las estaciones se encuentran distribuidas a lo largo de la ruta siendo di la distancia desde la estación _i-1_ a la estación _i_.
 
 1. Implementar un algoritmo que decida en qué estaciones debe cargar combustible de manera que se detenga la menor cantidad de veces posible.
@@ -60,7 +60,7 @@ def carga_estaciones(L, K, total_km):
             restante = K
 
     return estaciones
-```    
+```
 Para la pregunta de la complejidad, se ve que pasamos una vez por cada estación para validar la condición, y una sola vez, y nada depende del valor de $$K$$. Por lo tanto, el algoritmo es $$\mathcal{O}(n)$$, con $$n = |L|$$.
 
 ## Ejercicios propuestos
