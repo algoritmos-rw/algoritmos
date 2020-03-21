@@ -1,11 +1,8 @@
 ---
-title: FAQ - Tipos de Datos Abstractos
-permalink: /faq/tda
 math: true
 ---
 
-FAQ - Tipos de Datos Abstractos
-=========
+# FAQ - Tipos de Datos Abstractos
 {:.no_toc}
 
 * Contenido
@@ -61,7 +58,7 @@ Estas respuestas son útiles tanto para la pila dinámica, como para la tabla de
 
 Hacer un realloc es una operación lenta: $$\mathcal{O}(n)$$ (siendo n la cantidad de bytes que se mantienen en el bloque de memoria).  De modo que es importante planificar cuánto se va a agrandar la estructura, para que el tiempo gastado en el redimensionamiento no influya en el comportamiento general de la estructura.
 
-Para ello, lo que se hace es que al agrandar, el espacio utilizado se multiplique -generalmente por 2, pero puede ser por otro factor, según las condiciones del problema a resolver-, de modo que la incidencia del realloc se distribuya siempre de forma pareja entre los elementos, lo que no sucede en el caso de que la estructura crezca una cantidad constante. Una demostración formal sobre cómo afecta esta redimensión en el costo total de las operaciones puede encontrarse en la [lista de mails](https://groups.google.com/d/msg/fiuba-7541rw-alu/t86CJcNv2UU/Irb7J899DgAJ). 
+Para ello, lo que se hace es que al agrandar, el espacio utilizado se multiplique -generalmente por 2, pero puede ser por otro factor, según las condiciones del problema a resolver-, de modo que la incidencia del realloc se distribuya siempre de forma pareja entre los elementos, lo que no sucede en el caso de que la estructura crezca una cantidad constante. Una demostración formal sobre cómo afecta esta redimensión en el costo total de las operaciones puede encontrarse en la [lista de mails](https://groups.google.com/d/msg/fiuba-7541rw-alu/t86CJcNv2UU/Irb7J899DgAJ).
 
 ### ¿Cuándo y cuánto conviene achicar una estructura dinámica?
 

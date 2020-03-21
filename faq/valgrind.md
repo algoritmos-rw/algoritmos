@@ -1,10 +1,4 @@
----
-title: FAQ - Errores de Valgrind
-permalink: /faq/valgrind
----
-
-FAQ - Errores de Valgrind
-=========
+# FAQ - Errores de Valgrind
 {:.no_toc}
 
 * Contenido

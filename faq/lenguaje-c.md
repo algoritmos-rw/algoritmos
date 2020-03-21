@@ -1,10 +1,4 @@
----
-title: FAQ - Lenguaje C
-permalink: /faq/lenguaje-c
----
-
-FAQ - Lenguaje C
-=========
+# FAQ - Lenguaje C
 {:.no_toc}
 
 * Contenido
@@ -56,9 +50,9 @@ Sí se necesita, no obstante, liberar memoria al terminar: getline() llama a mal
 La reserva de memoria dinámica se consigue cuando el puntero buffer apunta a NULL, y el puntero capacidad apunta a 0:
 
 ```cpp
-char* buffer = NULL; size_t capacidad = 0; 
+char* buffer = NULL; size_t capacidad = 0;
 ssize_t leidos = getline(&buffer, &capacidad, archivo);
-// Hago uso de la linea 
+// Hago uso de la linea
 free(buffer);
 ```
 
@@ -73,7 +67,7 @@ Para más información y especificaciones de la función, se puede invocar al co
 
 #### ¿Qué es POSIX?
 
-Portable Operating System Interface (POSIX) es una familia de estándares especificados por el Instituto de Ingeniería Eléctrica y Electrónica (IEEE), una asociación sin fines de lucro dedicada a estandarización, para mantener la compatibilidad entre distintos sistemas operativos. 
+Portable Operating System Interface (POSIX) es una familia de estándares especificados por el Instituto de Ingeniería Eléctrica y Electrónica (IEEE), una asociación sin fines de lucro dedicada a estandarización, para mantener la compatibilidad entre distintos sistemas operativos.
 
 Al hacer `#include <stdio.h>` lo que le decimos al pre-procesador es que en mi programa yo quiero poder utilizar lo definido por C en esa cabecera de la biblioteca estándar.
 
@@ -82,6 +76,7 @@ Por fuera de la existencia del estándar de C que define y especifica las funcio
 Por otro lado, al hacer `#define _POSIX_C_SOURCE 200809L` y luego `#include <stdio.h>` (respetar el orden), lo que le decimos al pre-procesador es que en mi programa yo quiero poder utilizar la especificación de POSIX de 2008 de la biblioteca estándar (de C). Entre otras cosas, esta especificación incluye `getline()` y `getdelim()`.
 
 ## ¿Qué es un puntero a función?
+{:#funptr}
 
 Los punteros a función son variables que apuntan a funciones para que puedan ser invocadas sin conocer su nombre. En C, la sintaxis para declararlas es diferente al resto de los tipos. Por ejemplo, dada la siguiente función, que recibe dos cadenas y devuelve un entero:
 

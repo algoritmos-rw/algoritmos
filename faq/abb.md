@@ -1,10 +1,4 @@
----
-title: FAQ - Árbol Binario de Búsqueda
-permalink: /faq/abb
----
-
-FAQ - Árbol Binario de Búsqueda
-=========
+# FAQ - Árbol Binario de Búsqueda
 {:.no_toc}
 
 * Contenido

@@ -1,10 +1,4 @@
----
-title: FAQ - Lista Enlazada
-permalink: /faq/lista-enlazada
----
-
-FAQ - Lista Enlazada
-=========
+# FAQ - Lista Enlazada
 {:.no_toc}
 
 * Contenido
@@ -14,10 +8,10 @@ FAQ - Lista Enlazada
 
 Una pregunta usual a la hora de implementar el iterador externo, es cuál debe ser la condición para definir si el iterador se encuentra al final:
 - Cuando el `actual` es igual a `NULL`.
-- Cuando el `actual` es igual al `último` de la lista. 
+- Cuando el `actual` es igual al `último` de la lista.
 
 La idea del iterador externo es que nos permita pasar por todos los elementos de la lista de forma cómoda. Una forma usual de utilizarlo es dentro de un ciclo, ya sea `while`, o `for`:
-```cpp 
+```cpp
   lista_iter_t* iter = lista_iter_crear(lista);
   while (!lista_iter_al_final(iter)) {
       void* dato = lista_iter_ver_actual(iter):
@@ -38,7 +32,7 @@ La idea del iterador externo es que nos permita pasar por todos los elementos de
 
 En cualquiera de los dos casos, que son equivalentes, es importante notar que el ciclo debe poder pasar por todos los elementos de la lista.
 
-Analizando las dos opciones que tenemos, podemos ver que la segunda va a dar por terminado el ciclo sin haber entrado para el último elemento (una forma fácil de corroborarlo, es revisar el caso de una lista con un sólo elemento y hacer el seguimiento). Por ésto, la solución correcta es la primera: el iterador se encontrará al final cuando ya haya pasado por todos los elementos, lo cual quiere decir que el puntero `actual` es `NULL`. 
+Analizando las dos opciones que tenemos, podemos ver que la segunda va a dar por terminado el ciclo sin haber entrado para el último elemento (una forma fácil de corroborarlo, es revisar el caso de una lista con un sólo elemento y hacer el seguimiento). Por ésto, la solución correcta es la primera: el iterador se encontrará al final cuando ya haya pasado por todos los elementos, lo cual quiere decir que el puntero `actual` es `NULL`.
 
 ## ¿Cómo se comporta el agregado y la eliminación en una lista enlazada con iteradores?
 

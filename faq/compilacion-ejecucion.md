@@ -1,11 +1,4 @@
----
-title: FAQ - Lenguaje C Compilación y Ejecución
-permalink: /faq/compilacion-ejecucion
-math: true
----
-
-FAQ - Lenguaje C Compilación y Ejecución
-=========
+# FAQ - Lenguaje C Compilación y Ejecución
 {:.no_toc}
 
 * Contenido
@@ -86,7 +79,7 @@ Hacemos una distinción del comando de inclusión:
 
 * `#include "archivo.h"`: Incluye cabeceras en nuestro mismo directorio.
 
-Estos archivos también funcionan como documentación del programa. ¿Qué puede usar el usuario de mi programa? ¿Qué tiene a su disposición? ¿Qué hace cada función? 
+Estos archivos también funcionan como documentación del programa. ¿Qué puede usar el usuario de mi programa? ¿Qué tiene a su disposición? ¿Qué hace cada función?
 
 Es decir, este archivo es la interfaz que se proporciona junto al programa. Por ejemplo, al hacer un juego tendremos varias funciones. Muchas de estas serán públicas (por ejemplo, `jugar`, con su respectiva documentación), ya que son las que le daremos al usuario, pero también algunas son privadas (por ejemplo, `calcular_puntaje`). Son las funciones públicas las que se declaran en el archivo header.
 
@@ -110,14 +103,14 @@ gcc -std=c99 -Wall -pedantic -Werror -o juego juego.c usuarios.o puntaje.o
 
 La primera y segunda linea se refieren a compilar los dos archivos .c a sus respectivos objetos. Luego, haciendo uso del archivo principal del juego (el que contiene main), en la tercera linea los enlacamos. Por último, lo ejecutamos normalmente.
 
-## ¿Por qué mis `printf` no se imprimen?  
+## ¿Por qué mis `printf` no se imprimen?
 
-La convención en Unix es que la entrada estándar y la salida estándar tengan un búfer asociado. Esto significa que al utilizar `printf` de la manera normal, no se imprime inmediatamente a la consola: sólo sucede cuando suficientes mensajes están esperando ser impresos. Por esto, si el programa se termina por algún error entre que llamamos a `printf` y que el búfer se vacía, nuestro mensaje no se muestra.   
-La solución es utilizar un canal específico para los errores, que no tiene un búfer asociado: `stderr`. Se puede utilizar como cualquier archivo llamando a `fprintf`:  
+La convención en Unix es que la entrada estándar y la salida estándar tengan un búfer asociado. Esto significa que al utilizar `printf` de la manera normal, no se imprime inmediatamente a la consola: sólo sucede cuando suficientes mensajes están esperando ser impresos. Por esto, si el programa se termina por algún error entre que llamamos a `printf` y que el búfer se vacía, nuestro mensaje no se muestra.
+La solución es utilizar un canal específico para los errores, que no tiene un búfer asociado: `stderr`. Se puede utilizar como cualquier archivo llamando a `fprintf`:
 
 ```c
 fprintf(stderr, ...);
-```   
+```
 
 ## ¿Cómo hago para que gcc escupa los mensajes de error en inglés?
 

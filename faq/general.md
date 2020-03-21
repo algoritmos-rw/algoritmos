@@ -1,11 +1,4 @@
----
-title: FAQ - Preguntas Generales
-permalink: /faq/general
-math: true
----
-
-FAQ - Preguntas Generales
-=========
+# FAQ - Preguntas Generales
 {:.no_toc}
 
 * Contenido
@@ -23,7 +16,7 @@ Para más información se puede ver la [ayuda de Google](https://support.google.
 
 ## ¿Puedo navegar en el grupo de Google a pesar de que la cuenta con la que me registré no es de Google?
 
-Sí, y contamos con un [instructivo](groups-ui) que explica paso a paso cómo hacerlo.
+Sí, y contamos con un [instructivo](groups-web.md) que explica paso a paso cómo hacerlo.
 
 ## ¿Cómo se determina la nota de mi parcialito o mi final?
 

@@ -1,11 +1,4 @@
----
-title: FAQ - Primeros Pasos con Linux y C
-permalink: /faq/primeros-pasos
-math: true
----
-
-FAQ - Primeros Pasos con Linux y C
-=========
+# FAQ - Primeros Pasos con Linux y C
 {:.no_toc}
 
 * Contenido
@@ -55,6 +48,6 @@ gcc -o programa hola.c
 ./programa
 ```
 
-La primera linea se refiere a la [compilación](/algo2/faq/compilacion-ejecucion), mientras que la segunda es la ejecución.
+La primera linea se refiere a la [compilación](compilacion-ejecucion.md), mientras que la segunda es la ejecución.
 
 Si gcc emite algún error, deberán volver al editor y corregirlo. Una vez guardadas las correcciones, deberán volver a compilar el programa, ya que si no estarían ejecutando una versión vieja de este.

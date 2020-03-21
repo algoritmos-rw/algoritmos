@@ -1,10 +1,4 @@
----
-title: FAQ - Cola
-permalink: /faq/cola
----
-
-FAQ - Cola
-=========
+# FAQ - Cola
 {:.no_toc}
 
 * Contenido
@@ -18,11 +12,11 @@ Es por esto que siempre se que codifica algo, hay que codificar en paralelo un s
 
 Las pruebas que hacemos en el curso son **unitarias**, es decir, prueban solo una cosa a la vez. Algunas propiedades que debe cumplir cada prueba:
 
-* **Unitarias**: Cada prueba verifica el funcionamiento de una sola cosa y tiene una sola responsabilidad. Tienen que tener un objetivo bien claro. Esto debe reflejarse en el nombre de la prueba. Cada prueba debe ser facil, corta y rápida. Una prueba donde haya que leer más de 20 lineas de código no es una prueba facil de entender ni rápida de depurar. 
+* **Unitarias**: Cada prueba verifica el funcionamiento de una sola cosa y tiene una sola responsabilidad. Tienen que tener un objetivo bien claro. Esto debe reflejarse en el nombre de la prueba. Cada prueba debe ser facil, corta y rápida. Una prueba donde haya que leer más de 20 lineas de código no es una prueba facil de entender ni rápida de depurar.
 
 * **Explicitas**: Las pruebas deben poder ser leidas en ejecución y confirmado que se pasen. Para esto, los mensajes deben ser lo más descriptivos posibles, para que cuando algo rompa, se tenga en claro donde fue. "Prueba 1 OK" no es descriptivo. "Insertar dos elementos iguales en una cola vacía OK" si lo es.
 
-* **Aisladas y sin orden**: Cada prueba debe poder ser corrida sin depender del resto. No deberían ser corridas en orden para un correcto funcionamiento. No hay que nombrar a las pruebas según su orden, porque no lo tienen. 
+* **Aisladas y sin orden**: Cada prueba debe poder ser corrida sin depender del resto. No deberían ser corridas en orden para un correcto funcionamiento. No hay que nombrar a las pruebas según su orden, porque no lo tienen.
 
 * **Deterministicas**: Mientras no se cambie el código, una prueba debe siempre devolver el mismo resultado, sea que paso (OK) o que no (ERROR). El resultado debe ser el mismo todas las veces. Si no, ¿qué esta probando?
 
@@ -48,7 +42,7 @@ Hasta ahora (hasta el TDA Pila), nuestro usuario siempre almacenó datos que exi
 
 En el TDA cola, si bien no somos los dueños de las regiones de memoria donde se encuentran almacenados los datos a encolar, si el usuario nos dice **cómo**, podemos tomar "propiedad transitoria" en `cola_destruir()` y encargarnos de liberar los datos a la vez que destruimos el TDA
 
-Es este "**cómo**" el segundo parametro de cola_destruir, en forma de [puntero a función de destrucción](/algo2/faq/lenguaje-c#qu%C3%A9-es-un-puntero-a-funci%C3%B3n). (Leer sí o sí antes de continuar).
+Es este "**cómo**" el segundo parametro de cola_destruir, en forma de [puntero a función de destrucción](lenguaje-c.md#funptr). (Leer sí o sí antes de continuar.)
 
 Si el usuario almacenó enteros, caracteres o cualquier cosa que 'viva' en la memoria estática, llamará a `cola_destruir(cola, NULL)` ya que no hay función de destrucción para datos estáticos.
 
