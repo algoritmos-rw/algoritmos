@@ -236,17 +236,18 @@ void ordenar_por_mes(char** fechas, size_t n) {
     en notación científica de la forma: $$a,b \cdot 10^c$$. Por ejemplo 123 representaría el número
     $$1,2 \cdot 10^3$$.
 
-     a) Diseñe un algoritmo para ordenar los números según su valor en notación científica. ¿De qué orden es?
+    {:.lower_alpha}
+    1.  Diseñe un algoritmo para ordenar los números según su valor en notación científica. ¿De qué orden es?
 
-     b) Muestre cómo se ordena la siguiente lista de números con el algoritmo que diseñó:
+     1.  Muestre cómo se ordena la siguiente lista de números con el algoritmo que diseñó:
 
-     $$[ 122, 369, 332, 180, 486, 349, 326, 101 ]$$
+         $$[ 122, 369, 332, 180, 486, 349, 326, 101 ]$$
 
-     que representan
+         que representan
 
-     $$[1,2 \cdot 10^2; 3,6 \cdot 10^9; 3,3 \cdot 10^2; 1,8 \cdot 10^0; 4,8 \cdot 10^6; 3,4 \cdot 10^9; 3,2 \cdot 10^6; 1,0 \cdot 10^1]$$,
+         $$[1,2 \cdot 10^2; 3,6 \cdot 10^9; 3,3 \cdot 10^2; 1,8 \cdot 10^0; 4,8 \cdot 10^6; 3,4 \cdot 10^9; 3,2 \cdot 10^6; 1,0 \cdot 10^1]$$,
 
-     y equivalen a $$[120; 3600000000; 330; 1,8; 4800000; 3400000000; 3200000; 10 ]$$.
+         y equivalen a $$[120; 3600000000; 330; 1,8; 4800000; 3400000000; 3200000; 10 ]$$.
 
 1.	(★★★★) Suponer que se tiene un arreglo de $$n$$ elementos ordenados, seguido de $$f(n)$$
     elementos desordenados. Cómo ordenarías el arreglo según si $$f(n)$$ es:
