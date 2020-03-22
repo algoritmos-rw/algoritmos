@@ -1,21 +1,17 @@
 ---
 title: TP 2
-permalink: '/tps/2016_1/tp2'
 ---
 
 TP2: utilidades con hashes, ABBs y heaps
 ========================================
+{:.no_toc}
 
 ## Contenido
-  1. [Ejercicios](#ejercicios)
-      1. [uniq](#uniq)
-      2. [join](#join)
-      3. [abb_iter_crear_desde](#abbitercreardesde)
-      4. [abb_rebalanceado](#abbrebalanceado)
-      5. [multi-merge](#multi-merge)
-      6. [TDA mediana](#tda-mediana)
-  2. [Condiciones de entrega](#condiciones-de-entrega)
-  3. [Criterios de aprobación](#criterios-de-aprobacin)
+{:.no_toc}
+
+1. TOC
+{:toc}
+
 
 ## Ejercicios
 

@@ -4,22 +4,15 @@ title: TP 1
 
 TP 1: complejidad computacional, manejo de archivos y cadenas
 =============================================================
+{:.no_toc}
 
 Este trabajo práctico es *individual* y consiste de cuatro partes separadas, a ser entregadas el lunes 8 de mayo.
 
 ## Contenido
-  1. [Complejidad computacional](#complejidad-computacional)
-  2. [Aplicaciones](#aplicaciones)
-      1. [filesplit](#filesplit)
-      2. [fixcol](#fixcol)
-  3. [Manejo de cadenas](#manejo-de-cadenas)
-      1. [split()](#split)
-      2. [join()](#join)
-      3. [free_strv()](#free_strv)
-  4. [Consideraciones adicionales](#consideraciones-adicionales)
-      1. [Lectura de archivos](#lectura-de-archivos)
-      2. [deps.mk](#depsmk)
-  5. [Criterios de aprobación](#criterios-de-aprobacin)
+{:.no_toc}
+
+1. TOC
+{:toc}
 
 
 # Complejidad computacional

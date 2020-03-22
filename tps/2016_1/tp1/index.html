@@ -351,7 +351,7 @@ usar:
 
 <div class="org-src-container">
 
-<pre class="src src-c" id="orgsrcblock1"><span style="color: #586e75; font-style: italic;">// </span><span style="color: #586e75;">Al principio de tail.c y tac.c (antes de otros include):</span>
+<a id="orgsrcblock1"></a><pre class="src src-c"><span style="color: #586e75; font-style: italic;">// </span><span style="color: #586e75;">Al principio de tail.c y tac.c (antes de otros include):</span>
 <span style="color: #268bd2;">#define</span> <span style="color: #268bd2;">_POSIX_C_SOURCE</span> 200809L
 <span style="color: #268bd2;">#include</span> <span style="color: #2aa198;">&lt;stdio.h&gt;</span>
 <span style="color: #268bd2;">#include</span> <span style="color: #2aa198;">&lt;string.h&gt;</span>
@@ -795,7 +795,7 @@ toman argumentos y leen y escriben de entrada y salida estándar.
 El paso de argumentos es trivial, se añaden a la línea de comandos al final:
 </p>
 
-<pre class="example">
+<a id="orgexampleblock1"></a><pre class="example">
 $ valgrind --leak-check=full --track-origins=yes ./tac nombres.txt
                                                        ^^^^^^^^^^^
 $ valgrind --leak-check=full --track-origins=yes ./tail 10

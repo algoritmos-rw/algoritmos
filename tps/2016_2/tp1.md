@@ -4,22 +4,15 @@ title: TP 1
 
 TP 1: manejo de archivos y cadenas
 ==================================
+{:.no_toc}
 
 Este trabajo práctico es *individual* y consiste de cuatro partes separadas, a ser entregadas el viernes 14 de octubre.
 
 ## Contenido
-  1. [Aplicaciones](#aplicaciones)
-      1. [paste](#paste)
-      2. [more](#more)
-      3. [dc](#dc)
-  2. [Manejo de cadenas](#manejo-de-cadenas)
-      1. [split()](#split)
-      2. [join()](#join)
-      3. [free_strv()](#free_strv)
-  3. [Consideraciones adicionales](#consideraciones-adicionales)
-      1. [Lectura de archivos](#lectura-de-archivos)
-      2. [deps.mk](#depsmk)
-  4. [Criterios de aprobación](#criterios-de-aprobacin)
+{:.no_toc}
+
+1. TOC
+{:toc}
 
 
 # Aplicaciones
