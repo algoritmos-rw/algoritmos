@@ -1,5 +1,4 @@
 ---
-permalink: 'material/guias/grafos_2'
 math: true
 ---
 
@@ -108,7 +107,7 @@ def caminos_minimos(grafo, origen)
     (representado con una matriz de adyacencias), hacia todos los demás vértices,
     utilizando el algoritmo de Bellman-Ford.
 
-    <img src="../../assets/img/material/bf.png" alt="grafo bf" width="60%"/>
+    ![grafo bf](../../assets/img/material/bf.png){:width="60%"}
 
     b. Volver a realizar, suponiendo que la arista de `B` a `A` ahora tiene un peso de 1.
 
@@ -118,8 +117,7 @@ def caminos_minimos(grafo, origen)
 
     b. Utilizando el Algoritmo de Prim.
 
-    <img src="../../assets/img/material/mst.png" alt="grafo mst" width="75%"/>
-
+    ![grafo mst](../../assets/img/material/mst.png){:width="75%"}
 
 1.  (★★★) Dadas las matrices de adyacencia `M1`, `M2` y `M3`, responder las siguientes preguntas
     (recomendamos pasar los grafos a una representación visual para mayor facilidad):
@@ -181,7 +179,7 @@ def caminos_minimos(grafo, origen)
 1.  (★★★) Realizar un seguimiento de aplicar el Algoritmo de Ford-Fulkerson para obtener el Flujo máximo a
     través de la red definida por el siguiente grafo.
 
-    <img src="../../assets/img/material/ff.png" alt="grafo flujo" width="70%"/>
+    ![grafo flujo](../../assets/img/material/ff.png){:width="70%"}
 
 1.  (★★★) Implementar por **backtracking** un algoritmo que, dado un grafo no dirigido y un número
     $$n \lt \left|\mathcal{V} \right|$$, nos permita obtener un subconjunto de $$n$$ vértices tal que ningún par de dichos
