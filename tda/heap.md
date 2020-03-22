@@ -1,13 +1,12 @@
 ---
 title: Heap
-permalink: /tps/heap
-
+permalink: /tps/heap/
 trabajo: Heap
 ---
 {% assign TP = site.data.trabajos[page.trabajo] %}
 
 Heap
-=============
+====
 
 Se incluye en [el sitio de descargas]({{site.skel}}) el archivo `heap.h` correspondiente al ejercicio de la cola de prioridad.
 
@@ -34,9 +33,9 @@ Además, deben implementar el ordenamiento heapsort, sobre un arreglo de puntero
 void heap_sort(void *elementos[], size_t cant, cmp_func_t cmp);
 ```
 La función de comparación (de tipo `cmp_func_t`) debe recibir dos punteros del tipo de dato utilizado en el heap, y debe devolver:
-*   menor a 0  si  a < b  
-*   0      si  a == b  
-*   mayor a 0  si  a > b  
+*   menor a 0  si  a < b
+*   0      si  a == b
+*   mayor a 0  si  a > b
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}) y también entregarlo impreso con nombre y padrón de ambos integrantes, si su corrector así lo requiere.
 
@@ -45,4 +44,4 @@ Como siempre, deben subir el código completo a la [página de entregas de la ma
 ---
 ### Bibliografia recomendada
 * Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *Chapter 6: Priority Queues (Heaps)*.
-* Cormen, Thomas H. "Introduction to Algorithms": *6.5. Priority queues*, *6.1. Heaps*, *6.2. Maintaining the heap property*. 
+* Cormen, Thomas H. "Introduction to Algorithms": *6.5. Priority queues*, *6.1. Heaps*, *6.2. Maintaining the heap property*.

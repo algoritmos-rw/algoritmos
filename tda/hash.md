@@ -1,7 +1,6 @@
 ---
 title: Hash
-permalink: /tps/hash
-
+permalink: /tps/hash/
 trabajo: Hash
 ---
 {% assign TP = site.data.trabajos[page.trabajo] %}
@@ -39,7 +38,7 @@ El iterador debe permitir recorrer todos los elementos almacenados en el hash, s
 
 Se adjunta, además, un [archivo de pruebas]({{site.skel}}) que pueden utilizar para verificar que la estructura funciona correctamente.  El corrector automático, igualmente, añade más pruebas. Para esta entrega no deben entregarse pruebas propias.
 
-Al igual que para las entregas anteriores, deberán entregar el código en papel, con el nombre y padrón de los integrantes del grupo, imprimiendo los archivos `hash.h` y `hash.c`.   
+Al igual que para las entregas anteriores, deberán entregar el código en papel, con el nombre y padrón de los integrantes del grupo, imprimiendo los archivos `hash.h` y `hash.c`.
 
 Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 

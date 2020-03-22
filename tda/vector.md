@@ -1,13 +1,12 @@
 ---
 title: Vector dinámico
-permalink: /tps/vector
-
+permalink: /tps/vector/
 trabajo: Vector
 ---
 {% assign TP = site.data.trabajos[page.trabajo] %}
 
 Vector dinámico
-=======
+===============
 
 El adjunto en [el sitio de descargas]({{site.skel}}) contiene una definición del tipo de dato _vector dinámico_ que deberán completar.
 

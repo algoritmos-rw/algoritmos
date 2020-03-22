@@ -1,13 +1,12 @@
 ---
 title: Árbol Binario de Búsqueda
-permalink: /tps/abb
-
+permalink: /tps/abb/
 trabajo: ABB
 ---
 {% assign TP = site.data.trabajos[page.trabajo] %}
 
 Árbol Binario de Búsqueda
-=============
+=========================
 
 El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Árbol Binario de Búsqueda (ABB). Se incluye en [el sitio de descargas]({{site.skel}}) el archivo de main correspondiente al ejercicio. Se debe implementar:
 
@@ -30,11 +29,11 @@ size_t abb_cantidad(abb_t *arbol);
 void abb_destruir(abb_t *arbol);
 ```
 La función de comparación (de tipo `abb_comparar_clave_t`), recibe dos cadenas y devuelve:
-* Un entero menor que 0 si la primera cadena es menor que la segunda. 
-* Un entero mayor que 0 si la primera cadena es mayor que la segunda. 
-* 0 si ambas claves son iguales. 
+* Un entero menor que 0 si la primera cadena es menor que la segunda.
+* Un entero mayor que 0 si la primera cadena es mayor que la segunda.
+* 0 si ambas claves son iguales.
 
-Qué implica que una cadena sea igual, mayor o menor que otra va a depender del usuario del TDA. 
+Qué implica que una cadena sea igual, mayor o menor que otra va a depender del usuario del TDA.
 Por ejemplo, `strcmp` cumple con esta especificación.
 
 La función `destruir_dato` se recibe en el constructor, para usarla en `abb_destruir` y en `abb_insertar` en el caso de que tenga que reemplazar el dato de una clave ya existente.
@@ -47,7 +46,7 @@ Un iterador interno, que funciona usando la función de callback "visitar" que r
 void abb_in_order(abb_t *arbol, bool visitar(const char *, void *, void *), void *extra);
 ```
 
-Y un iterador externo, con las siguientes definiciones y primitivas: 
+Y un iterador externo, con las siguientes definiciones y primitivas:
 
 ```cpp
 typedef struct abb_iter abb_iter_t;

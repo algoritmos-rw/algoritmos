@@ -1,7 +1,6 @@
 ---
 title: Lista
-permalink: /tps/lista
-
+permalink: /tps/lista/
 trabajo: Lista
 ---
 {% assign TP = site.data.trabajos[page.trabajo] %}
@@ -65,7 +64,7 @@ Las pruebas deben incluir los casos básicos de TDA similares a los contemplados
 1. Remover el último elemento con el iterador cambia el último de la lista.
 1. Verificar que al remover un elemento del medio, este no está.
 1. Otros casos borde que pueden encontrarse al utilizar el iterador externo.
-Y los casos con / sin corte del iterador interno. 
+Y los casos con / sin corte del iterador interno.
 
 Al igual que en los casos anteriores, deberán entregar el código en papel, con el nombre y padrón y el nombre del ayudante correspondiente, imprimiendo los archivos `lista.h`, `lista.c` y `pruebas_alumno.c`.
 

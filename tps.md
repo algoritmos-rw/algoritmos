@@ -1,10 +1,5 @@
----
-title: TPs
-permalink: /tps/
----
-
 TPs
-=======
+===
 
 A continuación encontrarán las entregas que iremos planteando a lo largo de la
 materia.
@@ -20,7 +15,7 @@ Las entregas están acompañadas de archivos adjuntos, todos ubicados en [el sit
     </tr>
   </tbody>
 </table>
- 
- <h4 id="trabajo"></h4>
- 
- <script src="{{ '/assets/js/publicacionTPs.js' | relative_url }}"></script> 
+
+<h4 id="trabajo"></h4>
+
+<script src="{{ '/assets/js/publicacionTPs.js' | relative_url }}"></script>
