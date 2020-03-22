@@ -231,7 +231,7 @@ Ejemplo:
 ```
 
 
-Se provee una [colección de archivos de ejemplo](../../assets/tps/2018_2/tp2/vuelos-algueiza.zip).
+Se provee una [colección de archivos de ejemplo](../../../assets/tps/2018_2/tp2/vuelos-algueiza.zip).
 
 
 ### Tiempos de ejecución

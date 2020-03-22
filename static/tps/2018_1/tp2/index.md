@@ -122,7 +122,7 @@ igualdad en este último, por recurso (comparación entre strings). Esto último
 para poder realizar comparaciones de forma sencilla en las pruebas automáticas. 
 
 El archivo puede no caber en memoria, por lo que deberán utilizar
-algún [algoritmo de ordenamiento externo](/algo2/material/ordenamientos_externos).
+algún [algoritmo de ordenamiento externo](/algo2/material/apuntes/ordenamientos_externos).
 Por simplicidad, el programa recibirá por parámetro la cantidad de memoria que puede utilizarse
 para esta tarea. Recordar que es importante eliminar los archivos temporales. En caso de no hacerlo **no
 se aprobará la entrega**. 
