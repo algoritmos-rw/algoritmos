@@ -35,13 +35,13 @@ el nuevo contenido tras escribir un archivo.)
 
 Al principio del cuatrimestre actualizar el archivo `_data/trabajos.yml` y `_data/cuatrimestre.yml` para reflejar las nuevas fechas de publicación y entrega y de fin de cuatrimestre.
 
-Para el caso de TPs, es necesario crear el enunciado agregando el directorio `static/tps/cuatrimestre/tpX` (`X` sea 1, 2 o 3), y que dentro de éste haya un archivo `index.md` con el enunciado correspondiente. Después, hacer también el post. Cualquier archivo adicional que quiera subirse para el tp (e.g. imágenes) debe hacerse dentro del directorio `assets/tps`. 
+Para el caso de TPs, es necesario crear el enunciado agregando el directorio `static/tps/cuatrimestre/tpX` (`X` sea 1, 2 o 3), y que dentro de éste haya un archivo `index.md` con el enunciado correspondiente. Después, hacer también el post. Cualquier archivo adicional que quiera subirse para el tp (e.g. imágenes) debe hacerse dentro del directorio `assets/tps`.
 
 Además, es necesario habilitar la entrega en el sistema de entregas (de esto se encargan algunas personas con permisos).
 
 ## Actualizar página de docentes
 
-Una vez que está por comenzar el cuatrimestre, es necesario actualizar la página de docentes con los que van a ser parte del curso. Para esto, lo único necesario es actualizar en el directorio `_data` el archivo `docentes.yml` con el nombre de cada docente, y el archivo de la foto. Mientras no se tenga una foto de algún corrector, se puede usar el archivo `assets/img/docentes/unknown.png`. 
+Una vez que está por comenzar el cuatrimestre, es necesario actualizar la página de docentes con los que van a ser parte del curso. Para esto, lo único necesario es actualizar en el directorio `_data` el archivo `docentes.yml` con el nombre de cada docente, y el archivo de la foto. Mientras no se tenga una foto de algún corrector, se puede usar el archivo `assets/img/docentes/unknown.png`.
 
 ## Subir nuevas encuestas
 
