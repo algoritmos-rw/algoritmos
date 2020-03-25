@@ -46,7 +46,7 @@ Virtualbox es el software de virtualización (es decir, que permite ejecutar una
 
 1.  [Instalar Virtualbox](http://www.virtualbox.org/wiki/Downloads) en Windows.
 1.  Utilizando Virtualbox, crear una máquina virtual. Recomendamos asignar al menos 4 GB de disco y 512 MB de memoria RAM.
-1.  [Bajar la ISO de Ubuntu](http://www.ubuntu.com/getubuntu/download) de 32 bits.
+1.  [Bajar la ISO de Ubuntu](http://www.ubuntu.com/getubuntu/download) de 32 o 64 bits, según corresponda.
 1.  Arrancar la máquina virtual con la ISO asignada a la lectora de CD.
 1.  Seguir los pasos de instalación de Ubuntu.
 1.  (Opcional) Instalar los _Guest Additions_ de Virtualbox dentro de Ubuntu ([explicado acá](http://reciclado100.blogspot.com.ar/2009/02/como-instalar-guest-additions.html) en español o [acá](http://helpdeskgeek.com/linux-tips/install-virtualbox-guest-additions-in-ubuntu/) en inglés).
