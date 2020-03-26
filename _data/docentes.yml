@@ -22,16 +22,6 @@ ayudantes:
   mail: camidvorkin@gmail.com
   github: camidvorkin 
 
-- nombre: Casimiro Pastine
-  foto: /assets/img/docentes/casimirop.jpg
-  mail: casimiropastine@gmail.com
-  github: pastine
-
-- nombre: Cecilia Hortas
-  foto: /assets/img/docentes/cecih.jpg
-  mail: ceci.hortas@gmail.com
-  github: chortas
-
 - nombre: Daniela Genaro
   foto: /assets/img/docentes/danig.jpg
   mail: genarodaniela98@gmail.com 
@@ -46,11 +36,6 @@ ayudantes:
   foto: /assets/img/docentes/ezeg.jpg
   mail: egenender@gmail.com
   github: egenender 
-
-- nombre: Facundo Bravo
-  foto: /assets/img/docentes/facub.jpg
-  mail: fbravo@fi.uba.ar
-  github: facuub
 
 - nombre: Fiona González Lisella
   foto: /assets/img/docentes/fionag.jpg
@@ -67,15 +52,10 @@ ayudantes:
   mail: delMazoFederico@gmail.com
   github: FdelMazo
 
-- nombre: Francisco Bertolotto
-  foto: /assets/img/docentes/franb.jpg
-  mail: fbertolotto@fi.uba.ar
-  github: 
-
-- nombre: Gianmarco Cafferata
-  foto: /assets/img/docentes/gianc.jpg
-  mail: giancafferata@hotmail.com
-  github: 
+- nombre: Franco Di María
+  foto: /assets/img/docentes/unknown.png
+  mail: franki.dimaria@gmail.com
+  github: dima1997
 
 - nombre: Ignacio Raik
   foto: /assets/img/docentes/nachor.png
@@ -92,20 +72,10 @@ ayudantes:
   mail: collinetjorge@gmail.com
   github: jorgeCollinet
 
-- nombre: Julián Crespo
-  foto: /assets/img/docentes/julic.jpg  
-  mail: juliancrespo15@gmail.com
-  github: komod0
-
 - nombre: Lautaro Manzano
   foto: /assets/img/docentes/lautarom.jpg
   mail: manzano.lautaro@gmail.com
   github: ManzanoLautaro
-
-- nombre: Mauro Santoni
-  foto: /assets/img/docentes/mauros.jpg
-  mail: mausantoni@gmail.com
-  github: 
 
 - nombre: Matías Cano
   foto: /assets/img/docentes/matic.png
@@ -117,22 +87,18 @@ ayudantes:
   mail: mile.marchese@gmail.com
   github: milenamarchese
 
-- nombre: Olivia Fernández
-  foto: /assets/img/docentes/olif.jpg
-  mail: olifer97@gmail.com
-  github: olifer97
-
 - nombre: Rodrigo Souto
   foto: /assets/img/docentes/rodris.jpg
   mail: rnsoutob@gmail.com
   github: rodrisouto
+
+- nombre: Sofía Morseletyo
+  foto: /assets/img/docentes/unknown.png
+  mail: sofimorseletto@gmail.com
+  github: 
 
 - nombre: Tomás Accini
   foto: /assets/img/docentes/tomasa.jpg
   mail: tomasaccini@gmail.com
   github: tomasaccini
 
-- nombre: Tomás Lofano
-  foto: /assets/img/docentes/tomasl.png
-  mail: tomilofano@gmail.com
-  github: tlofano
