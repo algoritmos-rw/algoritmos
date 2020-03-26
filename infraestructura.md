@@ -45,3 +45,5 @@ El código esta escrito en Python y nuevamente se usa Flask. La app esta diseña
 
 [^1]: Un sitio web estático es aquel que no depende de bases de datos externas, por ejemplo un blog o cualquier sitio generado con Jekyll.
 [^2]: El curso de [Algoritmos y Programación I]({{site.algo1}}) usa BitBucket como su plataforma principal.
+
+{% include footnotes.html %}

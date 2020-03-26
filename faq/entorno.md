@@ -72,3 +72,5 @@ Estas herramientas son:
 * [gdb](https://www.gnu.org/software/gdb/): Herramienta para la depuración de programas.
 
 Finalmente, se recomienda instalar un editor de texto más potente que los que vienen por defecto. Algunos ejemplos son [Geany](https://www.geany.org/) (`sudo apt install geany`), [Atom](https://atom.io/) y [Visual Studio Code](https://code.visualstudio.com/).
+
+{% include footnotes.html %}

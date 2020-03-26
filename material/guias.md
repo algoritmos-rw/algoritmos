@@ -27,3 +27,5 @@ Guías de temas anteriores:
   * [Programación dinámica](guias/pd.md)
 
 [^1]: Este tema se continúa dando, pero de forma específica para grafos. Se pueden encontrar ejercicios en _Grafos, segunda parte_.
+
+{% include footnotes.html %}
