@@ -40,7 +40,7 @@ Virtualbox es el software de virtualización (es decir, que permite ejecutar una
 
 1.  [Instalar Virtualbox](http://www.virtualbox.org/wiki/Downloads) en Windows.
 1.  Utilizando Virtualbox, crear una máquina virtual. Recomendamos asignar al menos 4 GB de disco y 512 MB de memoria RAM.
-1.  [Bajar la ISO de Ubuntu](http://www.ubuntu.com/getubuntu/download) de 32 o 64 bits, según corresponda.
+1.  [Bajar la ISO de Ubuntu Desktop](https://ubuntu.com/download/desktop) “LTS” de 64 bits.[^no32]
 1.  Arrancar la máquina virtual con la ISO asignada a la lectora de CD.
 1.  Seguir los pasos de instalación de Ubuntu.
 1.  (Opcional) Instalar los _Guest Additions_ de Virtualbox dentro de Ubuntu ([explicado acá](http://reciclado100.blogspot.com.ar/2009/02/como-instalar-guest-additions.html) en español o [acá](http://helpdeskgeek.com/linux-tips/install-virtualbox-guest-additions-in-ubuntu/) en inglés).
@@ -54,11 +54,13 @@ Los pasos 1 a 5 están explicados en detalle en cualquiera de las siguientes gu�
 
 El último paso se explica a continuación.
 
+[^no32]: Si la máquina o el sistema operativo Windows donde se realiza la instalación es de 32 bits, no se puede usar Ubuntu, pero sí [Xubuntu LTS 18.04](https://xubuntu.org/download/).
+
 ## Instalar las heramientas de desarrollo en Ubuntu
 
 Abrir una terminal (CTRL+ALT+T) y escribir lo siguiente:
 
-`sudo apt-get install build-essential valgrind manpages-dev gdb`
+`sudo apt install build-essential valgrind manpages-dev gdb`
 
 Te va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas. ¡Ya está!
 
@@ -69,4 +71,4 @@ Estas herramientas son:
 * [manpages-dev](http://man7.org/linux/man-pages/man1/intro.1.html): Manual de usuario de Linux. Extremadamente util para tener la documentación oficial de los comandos utilizados. Se invoca con el comando `man`. Por ejemplo, `man printf`
 * [gdb](https://www.gnu.org/software/gdb/): Herramienta para la depuración de programas.
 
-Finalmente, se recomienda instalar un editor de texto más potente que los que vienen por defecto. Algunos ejemplos son [Geany](https://www.geany.org/) (`sudo apt-get install geany`), [Atom](https://atom.io/) y [Visual Studio Code](https://code.visualstudio.com/).
+Finalmente, se recomienda instalar un editor de texto más potente que los que vienen por defecto. Algunos ejemplos son [Geany](https://www.geany.org/) (`sudo apt install geany`), [Atom](https://atom.io/) y [Visual Studio Code](https://code.visualstudio.com/).
