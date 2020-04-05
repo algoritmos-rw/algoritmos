@@ -1,23 +1,23 @@
 1er:
   label: 1er parcialito (en el horario de la teórica)
-  fecha: 2020-05-22
+  fecha: 2020-06-05
 
 2do:
   label: 2do parcialito (en el horario de la teórica)
-  fecha: 2020-06-22
+  fecha: 2020-07-03
 
 3ro:
   label: 3er parcialito (en el horario de la teórica)
-  fecha: 2020-07-24
+  fecha: 2020-08-07
   
 recu1y2:
   label: 1er recuperatorio (parcialitos 1 y 2)
-  fecha: 2020-07-27
+  fecha: 2020-08-10
 
 recu3:
   label: 1er recuperatorio (parcialito 3)
-  fecha: 2020-07-31
+  fecha: 2020-08-14
 
 recutodos:
     label: 2do recuperatorio (parcialitos 1, 2 y 3)
-    fecha: 2020-08-03
+    fecha: 2020-08-21
