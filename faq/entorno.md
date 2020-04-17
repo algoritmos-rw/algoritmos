@@ -32,7 +32,7 @@ Si actualmente tenés Windows, básicamente tenés tres opciones para instalar L
 1.  Linux **al lado de Windows** (esta opción se conoce como **_dual boot_**).
 1.  Linux **dentro de Windows**, corriendo dentro de una **máquina virtual**.
 
-Si no querés borrar Windows, la opción 3 suele ser la más fácil y es la que se explica a continuación. Igualmente, para usuarios de Windows recomendamos la opción 2 ya que funcionará mejor. Para esta materia puede que estén bien con una máquina virtual, pero para materias futuras igualmente necesitarán tenerlo instalado. 
+Si no querés borrar Windows, la opción 3 suele ser la más fácil y es la que se explica a continuación. Igualmente, para usuarios de Windows recomendamos la opción 2 ya que tendrá mejor rendimiento. Para esta materia puede que estén bien con una máquina virtual, pero para materias futuras igualmente necesitarán tenerlo instalado. 
 
 Dejamos [aquí un link a guías de instalación del LUGFi](https://cloud.disroot.org/s/Wc7oMSo4jHg9Wq9). También recomendamos consultarles a ellos en su [grupo de Facebook](https://www.facebook.com/groups/lugfi) ante cualquier duda (así como en la lista de consultas del curso).
 
