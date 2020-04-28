@@ -178,7 +178,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 
     ```cpp
     void imprimir_dyc(int m) {
-        if (m == 0) return;
+        if (m < 4) return;
         printf("%d\n", m);
         imprimir_dyc(m / 4);
         imprimir_dyc(m - (m / 4));
