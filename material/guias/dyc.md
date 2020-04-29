@@ -267,8 +267,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     $$n = 12$$, la cantidad máxima de pesos que se puede obtener es $13, ya que podemos dividir
     la moneda de 12 bytelandeses en monedas de 6, 4 y 3; y $6 + $4 + $3 = $13 (se podría seguir
     dividiendo, pero en este caso no conviene dividir ninguna de esas monedas resultantes).
-    La función debe ejecutar en $$\mathcal{O}(\log n)$$. Justificar el orden del algoritmo
-    implementado.
+    Justificar el orden del algoritmo implementado.
 
 
 1.  (★★★★★) Implementar una función (que utilice división y conquista) de orden $$\mathcal{O}(n \log n)$$
