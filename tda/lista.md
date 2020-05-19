@@ -26,7 +26,7 @@ void *lista_borrar_primero(lista_t *lista);
 void *lista_ver_primero(const lista_t *lista);
 void *lista_ver_ultimo(const lista_t* lista);
 size_t lista_largo(const lista_t *lista);
-void lista_destruir(lista_t *lista, void destruir_dato(void *));
+void lista_destruir(lista_t *lista, void (*destruir_dato)(void *));
 ```
 
 #### Primitiva del iterador interno
