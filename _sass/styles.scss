@@ -60,8 +60,3 @@ h2, h3 {
 button.littlefoot-footnote__button:focus {
   outline: 0.5px auto gray;
 }
-
-// Compensación por https://github.com/goblindegook/littlefoot/issues/187.
-div.littlefoot-footnote__content p:first-child {
-  margin-bottom: 0;
-}
