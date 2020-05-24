@@ -201,3 +201,6 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     los elementos en orden para ser insertados en un ABB, de tal forma que al insertarlos en
     dicho orden se asegure que el ABB quede balanceado. ¿Cómo cambiarías tu resolución si en
     vez de querer guardarlos en un ABB se fueran a insertar en un AVL?
+
+1.  (★★★) Determinar cómo es el Árbol cuyo pre order es EURMAONDVSZT, e in order es MRAUOZSVDNET, e 
+    indicar su recorrido post order.
