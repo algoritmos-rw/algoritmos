@@ -164,15 +164,15 @@ Ejemplo de varias operaciones, y su resultado:
 
 ```
 $ cat oper.txt
-3 5 +
-3 5 -
-3 5 /
+5 3 +
+5 3 -
+5 3 /
 3 5 8 + +
 3 5 8 + -
-3 5 8 - +
+3 5 - 8 +
 2 2 + +
 0 1 ?
-1 -1 2 ?
+1 -1 0 ?
 5 sqrt
 
 $ ./dc < oper.txt
@@ -180,7 +180,7 @@ $ ./dc < oper.txt
 2
 1
 16
-10
+-10
 6
 ERROR
 ERROR
@@ -192,33 +192,64 @@ ERROR
 [rpn-es]: https://es.wikipedia.org/wiki/Notaci%C3%B3n_polaca_inversa
 
 
-### Operaciones
+### Funcionamiento
 
-- Todas las operaciones trabajarán con números enteros, y devolverán números enteros.
-- Las operaciones pueden ser: suma (`+`), resta (`-`), multiplicación (`*`), división entera (`/`), obtener la raíz (`sqrt`), obtener la potencia (`^`), obtener el logaritmo (`log`) y operador ternario (`?`).
-- La operación de suma toma los dos últimos elementos y los suma: `5 10 + → 10 + 5 = 15`
-- La operación de resta toma los dos últimos elementos y substrae el último al penúltimo: `5 10 - → 10 - 5 = 5`
-- La operación de multiplicación toma los dos últimos elementos y los multiplica: `5 10 * → 10 * 5 = 50`.
-- La operación de división debe tomar los dos últimos elementos y dividir (de forma entera) el último por el anterior: `5 10 / → 10 / 5 = 2`, `3 10 / → 10 / 3 = 3`. En caso de encontrarse con que el divisor es 0, se considerará como un error.
-- La operación _sqrt_ toma un único operando (el último) y calcula la parte entera de su raíz cuadrada: `10 sqrt → sqrt(10) = 3`. En caso que el argumento sea negativo, se considerará como un error.
-- El operador potencia, `^`, toma los dos últimos operandos eleva el último al anterior: `5 10 ^ → 10^5 = 100000`. En caso que el exponente sea negativo, se considerará como un error.
-- El cálculo del logaritmo, `log`, devuelve la parte entera del logaritmo del último operando, usando el penúltimo operando como base para el cálculo de dicho logaritmo: `5 10 log → log₅(10) = 1`. En caso que la base sea un número menor o igual a 1, se considerará como un error.
-- El operador ternario `?` opera sobre los trés últimos elementos, de la siguiente manera: si el último operando no es 0, devuelve el penúltimo operando; en caso contrario, el antepenúltimo: `5 10 0 ? → (0 ? 10 : 5) = 5`.
-- En cualquiera de las operaciones, el resultado pasa a estar al tope de la pila, para ser usado por otros operadores (siempre y cuando no haya habido algún error).
+- Todas las operaciones trabajarán con números enteros, y devolverán números enteros. Se recomienda usar el tipo de C `long` para permitir operaciones de más de 32 bits (p.ej. $$3^{3^3}$$).
+
+- El conjunto de operadores posibles es: suma (`+`), resta (`-`), multiplicación (`*`), división entera (`/`), raíz cuadrada (`sqrt`), exponenciación (`^`), logaritmo (`log`) en base arbitraria, y operador ternario (`?`).
+
+  - <!-- https://github.com/gettalong/kramdown/issues/486 -->
+
+    Todos los operadores funcionan con dos operandos, excepto `sqrt` (toma un solo argumento) y el operador ternario (toma tres).
+
+- Tal y como se describe en la bibliografía enlazada, cualquier operación aritmética _a op b_ se escribe en postfijo como `a b op`{:.nowrap} (por ejemplo, $$3 - 2$$ se escribe en postfijo como `3 2 -`{:.nowrap}).
+
+  Es útil modelar la expresión como una pila cuyo tope es el extremo derecho de la misma (por ejemplo en `3 2 -`, el tope es `-`); entonces, se puede decir que lo primero que se desapila es el operador, y luego los operandos **en orden inverso**.
+
+  - <!-- gettalong/kramdown#486 -->
+
+    Para operaciones con un solo operando, el formato es obviamente `a op`{:.nowrap} (por ejemplo, `5 sqrt`{:.nowrap}). Por su parte, para el operador ternario, el ordenamiento de los argumentos seguiría el mismo principio, transformándose `a ? b : c`{:.nowrap} en `a b c ?`{:.nowrap}.
+
+- Ejemplos (nótese que toda la aritmética es entera, y el resultado siempre se trunca):
+
+  - `20 11 -` → `20-11 = 9`
+  - `20 -3 /` → `20/-3 = -6`
+  - `20 10 ^` → `20^10 = 10240000000000`
+  - `60 sqrt` → `√60 = 7`
+  - `256 4 ^ 2 log` → `log₂(256⁴) = 32`
+  - `1 -1 0 ?` → `1 ? -1 : 0 = -1` (funciona [como en C][ternref])
+
+[ternref]: https://syntaxdb.com/ref/c/ternary
 
 
-### Observaciones
+### Formato de entrada
 
-- Cada línea de la entrada estándar representa una operación en su totalidad (produce un único resultado). Cada operación (cada línea) es independiente de las demás.
+- Cada línea de la entrada estándar representa una operación en su totalidad (produce un único resultado); y cada una de estas operaciones operación es independiente de las demás.
+
 - Los símbolos en la expresión pueden ser números, u operadores. Todos ellos estarán siempre separados por uno o más espacios; la presencia de múltiples espacios debe tenerse en cuenta a la hora de realizar la separación en tokens.
-  - Nota adicional: puede también haber espacios al comienzo de la línea, antes del primer token, pero no necesariamente habrá un espacio entre el último token, y el caracter salto de línea que le sigue, `'\n'`.
+
+  - <!-- gettalong/kramdown#486 -->
+    Nota adicional: puede haber también múltiples espacios al comienzo de la línea, antes del primer token; por otra parte, no necesariamente habrá un espacio entre el último token y el caracter salto de línea que le sigue.
+
 - El resultado final de cada operación debe imprimirse en una sola línea por salida estándar (_stdout_). En caso de error, debe imprimirse —para esa operación— la cadena `ERROR`, _también_ por salida estándar, y sin ningún tipo de resultado parcial. Tras cualquier error en una operación, el programa continuará procesando el resto de líneas con normalidad.
-- Los posibles casos de error son:
-    - Cantidad de operandos inválidos para un operador (`1 +`)
-    - Al finalizar la ejecución queda más de un operando en la pila de ejecución (`1 2 3 +`).
-    - Errores propios de cada operación (descritos arriba).
+
 - Está permitido, para el cálculo de potencias, raíces y logaritmos, el uso de las funciónes de la biblioteca estándar `<math.h>`.
 
+
+### Condiciones de error
+
+El mensaje `ERROR` debe imprimirse como resultado en cualquiera de las siguientes situaciones:
+
+1.  cantidad de operandos insuficiente (`1 +`)
+
+1.  al finalizar la evaluación, queda más de un valor en la pila (por ejemplo `1 2 3 +`, o `+ 2 3 -`)
+
+1.  **errores propios de cada operación matemática**, descritos a continuación:
+
+    - división por 0
+    - raíz de un número negativo
+    - base del logaritmo menor a 2
+    - potencia con exponente negativo
 
 
 ## Conversor desde notación infija
@@ -238,18 +269,26 @@ No obstante, en lugar de modificar el código de `dc`, se pide escribir un segun
 $ cat arith.txt
 3 + 5
 5 - 3
-8 / 2 + 1
-3 + 4 * 5
-(3+4) * 5
+8 / 2 - 1
+9 - 2 * 4
+(9-2) * 4
 5 + 4 ^ 3 ^ 2
 
 $ ./infix < arith.txt
-5 3 +
-3 5 -
-1 2 8 / +
-5 4 * 3 +
-5 4 3 + *
-2 3 ^ 4 ^ 5 +
+3 5 +
+5 3 -
+8 2 / 1 +
+9 2 4 * -
+9 2 - 4 *
+5 4 3 2 ^ ^ +
+
+$ ./infix < arith.txt | ./dc
+8
+2
+5
+1
+28
+262149
 ```
 
 Como referencia bibliográfica, la conversión se puede realizar mediante el algoritmo _shunting yard_ (ver página de Wikipedia [en castellano][syard-es] o [en inglés][syard-en]).
