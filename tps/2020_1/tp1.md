@@ -2,10 +2,13 @@
 math: true
 ---
 
+{% assign tp = site.data.trabajos.TP1 %}
+{% capture fecha %}{{tp.entrega | date: "%e/%m"}}{% endcapture %}
+
 # TP1: Manejo de archivos y cadenas
 {:.no_toc}
 
-El trabajo práctico número 1 tiene fecha de entrega para el **29 de mayo**, y está divido en tres partes:
+El trabajo práctico número 1 tiene fecha de entrega para el día **{{fecha}}**, y está divido en tres partes:
 
 1.  una serie de funciones para manejo de cadenas _(strutil.c)_
 1.  una calculadora en notación posfija _(dc.c)_
