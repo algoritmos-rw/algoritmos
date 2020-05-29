@@ -35,6 +35,10 @@ pre code {
   white-space: pre;
 }
 
+code.nowrap {
+  white-space: nowrap ! important;
+}
+
 .table-borderless > tbody > tr > td,
 .table-borderless > tbody > tr > th,
 .table-borderless > tfoot > tr > td,
