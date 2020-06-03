@@ -53,7 +53,7 @@ substr("", 2)                   → ""
 
 const char* ejemplo = "Ejemplo";
 substr(ejemplo, 2)              → "Ej"
-substr(ejemplo + 4, 2)          → "plo"
+substr(ejemplo + 4, 2)          → "pl"
 ```
 
 Complejidad algorítmica: se espera que la función tenga complejidad $$\mathcal{O}(k)$$.
