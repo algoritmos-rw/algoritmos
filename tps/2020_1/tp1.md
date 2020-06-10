@@ -272,7 +272,7 @@ No obstante, en lugar de modificar el código de `dc`, se pide escribir un segun
 $ cat arith.txt
 3 + 5
 5 - 3
-8 / 2 - 1
+8 / 2 + 1
 9 - 2 * 4
 (9-2) * 4
 5 + 4 ^ 3 ^ 2
