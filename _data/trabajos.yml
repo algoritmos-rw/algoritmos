@@ -31,35 +31,35 @@ Lista:
 TP1:
   id: TP1
   publicacion: 2020-05-29
-  entrega: 2020-06-12
+  entrega: 2020-06-15
   enunciado_link: /tps/2020_1/tp1
 
 Hash:
   id: Hash
   publicacion: 2020-06-12
-  entrega: 2020-06-19
+  entrega: 2020-06-22
   enunciado_link: /tps/hash
 
 ABB:
   id: ABB
-  publicacion: 2020-06-19
-  entrega: 2020-06-29
+  publicacion: 2020-06-22
+  entrega: 2020-07-03
   enunciado_link: /tps/abb
 
 Heap:
   id: Heap
-  publicacion: 2020-06-29
-  entrega: 2020-07-06
+  publicacion: 2020-07-03
+  entrega: 2020-07-13
   enunciado_link: /tps/heap
 
 TP2:
   id: TP2
-  publicacion: 2020-07-06
-  entrega: 2020-07-24
+  publicacion: 2020-07-13
+  entrega: 2020-07-27
   enunciado_link: /tps/2020_1/tp2
 
 TP3:
   id: TP3
-  publicacion: 2020-07-24
+  publicacion: 2020-07-27
   entrega: 2020-08-14
   enunciado_link: /tps/2020_1/tp3
