@@ -96,7 +96,7 @@ Garantías (pre-condiciones):
 
 ### Datos disponibles
 
-Se deja en [aquí](tp2.zip) un archivo con casos de prueba que pueden utilizar
+Se deja en del sitio de descargas un archivo con casos de prueba que pueden utilizar
 tanto de archivos de entrada, como de comandos a ser ejecutados y pruebas automatizadas, además de los
 restantes archivos que se mencionan de aquí en adelante. 
 
@@ -265,11 +265,11 @@ errores **durante la fase de inicialización**:
 
 Además del archivo `mensajes.h` ya mencionado, se proporcionan dos archivos
 auxiliares, `csv.h` y `csv.c`, para ayudar con la lectura tanto de los archivos
-CSV, como de los comandos. Su uso es opcional; el alumno puede emplear sus
+CSV, como de los comandos. Su uso es opcional; los estudiantes puede emplear sus
 propias funciones de lectura, o las proporcionadas por el curso en TPs
 anteriores.
 
-Además, se añade un esqueleto del programa principal del Trabajo Práctico `tp2.c`.
+Además, se añade un esqueleto del programa principal del Trabajo Práctico `zyxcba.c`.
 Pueden bien utilizarlo, en cuyo caso deberán modificarlo para adaptar su uso a
 la estructuras de datos que utilicen. No es obligatorio su uso. 
 
@@ -312,16 +312,18 @@ El código entregado debe:
 
 Cada comando debería funcionar de forma acorde, pero además deberá cumplir con los siguientes requisitos de complejidad:
 
-1.  Comando Pedir Turno: Si se tratase de un caso urgente, deberá funcionar en $$\mathcal{O}(1)$$. Si, en cambio, se tratara
-    de un caso regular, se puede relajar a que funcione en $$\mathcal{O}(\log n)$$ siendo $$n$$ la cantidad de pacientes
-    encolados **en la especialidad** indicada (no el total de los pacientes existentes).
+1.  Comando Pedir Turno: Si se tratase de un caso urgente, deberá funcionar en $$\mathcal{O}(1)$$. 
+    Si, en cambio, se tratara de un caso regular, se puede relajar a que funcione en 
+    $$\mathcal{O}(\log n)$$ siendo $$n$$ la cantidad de pacientes encolados **en la especialidad** 
+    indicada (no el total de los pacientes existentes).
 
-2.  Comando Atender siguiente paciente: Siendo $$d$$ la cantidad de doctores en el sistema, debe funcionar en $$\mathcal{O}(\log d)$$ 
-    si el siguiente caso a tratar en la especialidad de dicho doctor es un caso urgente, o bien $$\mathcal{O}(\log d + \log n)$$ si
-    se tratara de un caso regular. 
+2.  Comando Atender siguiente paciente: Siendo $$d$$ la cantidad de doctores en el sistema, debe 
+    funcionar en $$\mathcal{O}(\log d)$$ si el siguiente caso a tratar en la especialidad de dicho 
+    doctor es un caso urgente, o bien $$\mathcal{O}(\log d + \log n)$$ si se tratara de un caso regular. 
 
-3.  Comando Informe doctores: debe ser $$\mathcal{O}(d)$$ en el peor caso (en el que se tenga que mostrar todos los doctores del 
-    sistema), $$\mathcal{O}(\log{d})$$ en un caso promedio (en el caso en el que no se pidan mostrar demasiados doctores).
+3.  Comando Informe doctores: debe ser $$\mathcal{O}(d)$$ en el peor caso (en el que se tenga que 
+    mostrar todos los doctores del sistema), $$\mathcal{O}(\log{d})$$ en un caso promedio (en el caso 
+    en el que no se pidan mostrar demasiados doctores).
 
 ### Informe
 
