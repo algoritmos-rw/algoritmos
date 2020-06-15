@@ -1,18 +1,17 @@
 ---
-title: "TP2 – Zyxcba Inc"
-permalink: '/tps/2020_1/tp2'
 math: true
 ---
+
+{% assign tp = site.data.trabajos.TP2 %}
+{% capture fecha %}{{tp.entrega | date: "%e/%m"}}{% endcapture %}
 
 Trabajo Práctico 2
 ================
 {:.no_toc}
 
-El Trabajo Práctico número 2 es de elaboración grupal, y tiene fecha de entrega
-para el **lunes 8 de junio**.
+El trabajo práctico número 2 tiene fecha de entrega para el día **{{fecha}}**, y está divido en tres partes:
 
-Contenido
----------
+## Contenido
 {:.no_toc}
 
 * Contenido
