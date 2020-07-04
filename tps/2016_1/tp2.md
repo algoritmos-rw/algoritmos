@@ -94,7 +94,7 @@ Para implementar esta primitiva será necesario modificar la estructura interna 
 
 Por ejemplo, dado el siguiente árbol:
 
-![ABB ejemplo](http://cramster-image.s3.amazonaws.com/definitions/computerscience-5-img-1.png)
+![ABB ejemplo](https://web.archive.org/web/20181129134807if_/http://cramster-image.s3.amazonaws.com/definitions/computerscience-5-img-1.png)
 
 Los valores de la iteración en cada una de las siguientes invocaciones deberán ser:
 
