@@ -111,10 +111,10 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     }
     ```
 
-1.  (★★) Dado un árbol binario, escriba una función recursiva que cuente la cantidad de nodos que
+1.  (★★) Dado un árbol binario, escriba una _primitiva_ recursiva que cuente la cantidad de nodos que
     tienen exactamente dos hijos directos. ¿Qué orden de complejidad tiene la función implementada?
 
-1.  (★★) Escribir una función recursiva con la firma `void arbol_invertir(arbol_t* arbol)`
+1.  (★★) Escribir una _primitiva_ con la firma `void arbol_invertir(arbol_t* arbol)`
     que invierta el árbol binario pasado por parámetro, de manera tal que los hijos
     izquierdos de cada nodo se conviertan en hijos derechos.
 
