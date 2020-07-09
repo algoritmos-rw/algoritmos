@@ -29,7 +29,7 @@ ha decidido remplazar la implementación actual del sistema de gestión en COB
 
 ## Funcionamiento de la clínica
 
-Existe un listado de todos les pacientes de la clínica en formato CSV; este
+Existe un listado de pacientes de la clínica en formato CSV; este
 listado incluye el año en el que fueron inscripto como pacientes.
 
 Asimismo, existe otro listado CSV de todes les doctores, y la especialidad de
@@ -51,7 +51,7 @@ la clínica.
 
 Cuando el sistema arranca, carga en memoria la lista de pacientes y la lista de
 doctores. A partir de ese momento, lee de entrada estándar las operaciones a
-realizar, tal y como se detalla a continuación.
+realizar (una por línea), tal y como se detalla a continuación.
 
 Tras cada operación, el sistema siempre imprime por salida estándar un mensaje,
 informando de los resultados, o cualquier error que haya ocurrido.
@@ -59,7 +59,7 @@ informando de los resultados, o cualquier error que haya ocurrido.
 
 ## Entradas al programa
 
-El programa recibe como argumentos (CLA) el nombre de **dos archivos en formato
+El programa recibe como argumentos el nombre de **dos archivos en formato
 CSV**:
 
 1.  Archivo CSV con la lista de doctores. Tiene dos columnas: el nombre y la
@@ -74,7 +74,7 @@ CSV**:
     puede tener varios doctores.
 
 2.  Archivo CSV con la lista de pacientes. Tiene también dos columnas: el
-    nombre y el monto de contribuciones. Así:
+    nombre y el año de su inscripción. Así:
 
         nombre_paciente1,año_inscripcion
         nombre_paciente2,año_inscripcion
@@ -117,13 +117,13 @@ es: nombre del comando, carácter dos puntos `':'` y parámetros del comando. As
 
 Como se ve, un comando puede tener más de un parámetro, separados por comas.
 
-Una vez procesada la operación, el sistema imprimirá el resultado, o bien un
+Una vez procesada la operación, el sistema imprimirá el resultado, o un
 mensaje de error si no la pudo completar. **Tanto el resultado como los mensajes
-de error se imprimen siempre por salida estándar**. El programador puede por tanto utilizar 
+de error se imprimen siempre por salida estándar**. El programa puede por tanto utilizar 
 la salida de error estándar para mensajes de depurado o _debugging_. Estos mensajes, no obstante, 
 no deben quedar en el programa final.
 
-Mensajes de error:
+Formato de los mensajes de error:
 
   - Si una instrucción no sigue el formato `NOMBRE_COMANDO:PARAMETROS`, el
     sistema imprime el siguiente mensaje de error:
@@ -139,22 +139,22 @@ Mensajes de error:
         ERROR: cantidad de parametros invalidos para comando 'NOMBRE_CMD'
 
 
-## Comandos
+## Comandos a implementar
 
 El sistema implementa los tres comandos que se detallan a continuación.
 
 
 ### 1. Pedir turno
 
-Se recibe el nombre de un paciente y el nombre de una especialidad, y el
-sistema añade al paciente a la lista de espera de la especialidad
+Se recibe un nombre de paciente y el nombre de una especialidad, y el
+sistema le añade a la lista de espera de la especialidad
 correspondiente.
 
 Formato:
 
         PEDIR_TURNO:NOMBRE_PACIENTE,NOMBRE_ESPECIALIDAD,URGENCIA
 
-Los valores de `URGENCIA` son: `URGENTE` o `REGULAR`. 
+Los valores válidos para `URGENCIA` son: `URGENTE` o `REGULAR`. 
 
 Salida (dos líneas):
 
@@ -177,7 +177,7 @@ Garantías (pre-condiciones):
 
 Se recibe el nombre del doctor que quedó libre, y este atiende al siguiente paciente urgente
 (por orden de llegada). Si no hubiera ningún paciente urgente, atiende al siguiente paciente
-con mayor cantidad de años inscripto como paciente en la clínica.
+con mayor antigüedad como paciente en la clínica.
 
 Formato:
 
@@ -227,7 +227,7 @@ Salida ($N + 1$ líneas, donde $N$ es el número de doctores en el sistema que s
         ...
         N: NOMBRE, especialidad ESPECIALIDAD, Z paciente(s) atendido(s)
 
-### Mensajes de error
+## Mensajes de error
 
 Para facilitar los mensajes de la aplicación sean _exactamente_ los
 especificados, se proporciona un archivo `mensajes.h` que contiene las
@@ -265,7 +265,7 @@ errores **durante la fase de inicialización**:
 
 Además del archivo `mensajes.h` ya mencionado, se proporcionan dos archivos
 auxiliares, `csv.h` y `csv.c`, para ayudar con la lectura tanto de los archivos
-CSV, como de los comandos. Su uso es opcional; los estudiantes puede emplear sus
+CSV, como de los comandos. Su uso es opcional; cada grupo puede emplear sus
 propias funciones de lectura, o las proporcionadas por el curso en TPs
 anteriores.
 
@@ -329,7 +329,7 @@ Cada comando debería funcionar de forma acorde, pero además deberá cumplir co
 
 El informe deberá consistir de las siguientes partes:
 
-- carátula con los datos personales del grupo y el ayudante asignado.
+- carátula con los datos personales del grupo, y ayudante asignado.
 
 - análisis y diseño de la solución, en particular: algoritmos y estructuras de
   datos utilizados, y por qué. Orden de ejecución de cada etapa del programa.
@@ -342,10 +342,5 @@ La entrega incluye, obligatoriamente, los siguientes archivos:
 - El código del TP. 
 - El informe (en formato `.pdf`). 
 
-La entrega se realiza:
-
-1. en forma digital a través del [sistema de entregas]({{site.entregas}}),
+La entrega se realiza exclusivamnete en forma digital a través del [sistema de entregas]({{site.entregas}}),
 con todos los archivos mencionados en un único archivo ZIP.
-2. en papel durante la clase (si su ayudante lo requiere) el código del Trabajo
-en hoja A4 **abrochadas, sin folio, informe ni carátula**. 
-
