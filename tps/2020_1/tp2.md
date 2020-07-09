@@ -23,7 +23,7 @@ El trabajo práctico número 2 tiene fecha de entrega para el día **{{fecha}}**
 En Islandia, la clínica <span style="font-variant:small-caps;">Zyxcba Inc.</span> organiza sus 
 listas de espera a partir del año de inscripción como paciente.
 Así, dentro de cada especialidad se da prioridad a aquellos pacientes que se hayan inscripto hace 
-más tiempo, también considerando la gravedad de la consulta.
+más tiempo, pero también considerando la urgencia de la consulta.
 Para celebrar el 75 aniversario de la clínica, <span style="font-variant:small-caps;">Zyxcba Inc.</span> 
 ha decidido remplazar la implementación actual del sistema de gestión en COBOL por una más moderna en C.
 
