@@ -330,7 +330,7 @@ Cada comando debería funcionar de forma acorde, pero además deberá cumplir co
 Este trabajo práctico tiene como principal foco en el diseño del mismo (modularización, creación de nuevas
 estructuras y TDAs específicos del TP) así como el uso apropiado de las estructuras de datos vistas en clase. 
 Por lo tanto, se les pide que escriban un informe de dicho diseño, puesto que además de ser capaces de
-escribir código correcto, también es necesario que aprendan a poder _transmitir_ el por qué de sus
+escribir código correcto, también es necesario que aprendan a poder _transmitir_ el porqué de sus
 decisiones, utilizando el lenguage técnico y justificaciones correspondientes. 
 
 El informe deberá consistir de las siguientes partes:
@@ -338,7 +338,7 @@ El informe deberá consistir de las siguientes partes:
 - carátula con los datos personales del grupo, y ayudante asignado.
 
 - análisis y diseño de la solución, en particular: algoritmos y estructuras de
-  datos utilizados justificando, considerando los requisitos pedidos en este TP. 
+  datos utilizados, justificando conforme a los requisitos pedidos en este TP. 
 
 
 ### Entrega
