@@ -35,14 +35,14 @@ listado incluye el año en el que fueron inscripto como pacientes.
 Asimismo, existe otro listado CSV de todes les doctores, y la especialidad de
 cada une.
 
-Los pacientes pueden pedir turno para una determinada especialidad, y el
-sistema los añade a la lista de espera correspondiente a esa especialidad.
-Los pacientes pueden venir de _urgencia_, o por un una revisión de rutina, guardia, etc.
-(se considera a todos los casos como _no urgentes_). Los pacientes _urgentes_ se atienden
+Les pacientes pueden pedir turno para una determinada especialidad, y el
+sistema les añade a la lista de espera correspondiente a esa especialidad.
+Les pacientes pueden venir de _urgencia_, o por un una revisión de rutina, guardia, etc.
+(se considera a todos los casos como _no urgentes_). Les pacientes _urgentes_ se atienden
 por orden de llegada.
 
-Cuando un doctor queda libre, atiende al siguiente paciente de urgencia, si es que los hubiera, 
-o el paciente con mayor antigüedad en la clínica.
+Cuando une profesional queda libre, atiende al siguiente paciente de urgencia, si es que los hubiera, 
+o al paciente con mayor antigüedad en la clínica.
 
 ## Consigna
 
@@ -50,7 +50,7 @@ Se pide implementar el sistema de gestión de turnos y generación de informes d
 la clínica.
 
 Cuando el sistema arranca, carga en memoria la lista de pacientes y la lista de
-doctores. A partir de ese momento, lee de entrada estándar las operaciones a
+profesionales. A partir de ese momento, lee de entrada estándar las operaciones a
 realizar (una por línea), tal y como se detalla a continuación.
 
 Tras cada operación, el sistema siempre imprime por salida estándar un mensaje,
@@ -62,7 +62,7 @@ informando de los resultados, o cualquier error que haya ocurrido.
 El programa recibe como argumentos el nombre de **dos archivos en formato
 CSV**:
 
-1.  Archivo CSV con la lista de doctores. Tiene dos columnas: el nombre y la
+1.  Archivo CSV con la lista de profesionales. Tiene dos columnas: el nombre y la
     especialidad. Así:
 
         nombre_doctor1,nombre_especialidad_A
@@ -70,8 +70,8 @@ CSV**:
         nombre_doctor3,nombre_especialidad_A
         ...
 
-    Como se ve, cada doctor tiene solo una especialidad, pero una especialidad
-    puede tener varios doctores.
+    Como se ve, cada doctore tiene solo una especialidad, pero una especialidad
+    puede tener varies doctores.
 
 2.  Archivo CSV con la lista de pacientes. Tiene también dos columnas: el
     nombre y el año de su inscripción. Así:
@@ -82,7 +82,7 @@ CSV**:
 
 Garantías (pre-condiciones):
 
-  - no hay nombres duplicados dentro de cada archivo (aunque un doctor y un
+  - no hay nombres duplicados dentro de cada archivo (aunque une doctore y une
     paciente sí podrían llamarse igual).
 
   - los nombres de doctor, nombre y especialidad no contienen ninguno de los
@@ -90,7 +90,7 @@ Garantías (pre-condiciones):
     carácter nulo `'\0'`.
 
   - los años de inscripción son números enteros positivos en base 10, y
-    ningún paciente se inscribió luego del presente año, ni antes del año 0
+    ningune paciente se inscribió luego del presente año, ni antes del año 0
     (si bien la clínica cumple 75 años, tienen registros de clínicas anteriores
     que se fusionaron para crear la actual).
 
@@ -169,13 +169,13 @@ Mensajes de error, cuando corresponda (imprimir cada mensaje por cada error enco
 
 Garantías (pre-condiciones):
 
-  - un paciente nunca solicitará turno para una especialidad si ya está en la
+  - une paciente nunca solicitará turno para una especialidad si ya está en la
     lista de espera de la misma. No obstante, puede estar simultáneamente en la
     lista de espera de dos o más especialidades distintas.
 
 ### 2. Atender siguiente paciente
 
-Se recibe el nombre del doctor que quedó libre, y este atiende al siguiente paciente urgente
+Se recibe el nombre del doctore que quedó libre, y este atiende al siguiente paciente urgente
 (por orden de llegada). Si no hubiera ningún paciente urgente, atiende al siguiente paciente
 con mayor antigüedad como paciente en la clínica.
 
@@ -183,7 +183,7 @@ Formato:
 
         ATENDER_SIGUIENTE:NOMBRE_DOCTOR
 
-Salida si se atendió a un paciente (dos líneas):
+Salida si se atendió a une paciente (dos líneas):
 
         Se atiende a NOMBRE_PACIENTE
         N paciente(s) en espera para NOMBRE_ESPECIALIDAD
@@ -202,7 +202,7 @@ Mensajes de error, cuando corresponda:
 
 ### 3. Informe doctores
 
-El sistema imprime la lista de doctores **en orden alfabético**, junto con su
+El sistema imprime la lista de les doctores **en orden alfabético**, junto con su
 especialidad y el número de pacientes que atendieron desde que arrancó el
 sistema. Opcionalmente, se puede especificar el rango (alfabético) de doctores
 sobre los que se desean informes.
