@@ -62,7 +62,7 @@ informando de los resultados, o cualquier error que haya ocurrido.
 El programa recibe como argumentos el nombre de **dos archivos en formato
 CSV**:
 
-1.  Archivo CSV con la lista de les doctores. Tiene dos columnas: el nombre y la
+1.  Archivo CSV con la lista de doctores. Tiene dos columnas: el nombre y la
     especialidad. Así:
 
         nombre_doctor1,nombre_especialidad_A
@@ -163,7 +163,7 @@ Salida (dos líneas):
 
 Mensajes de error, cuando corresponda (imprimir cada mensaje por cada error encontrado, no detenerse ante el primer error):
 
-        ERROR: no existe a le paciente 'NOMBRE_PACIENTE'
+        ERROR: no existe le paciente 'NOMBRE_PACIENTE'
         ERROR: no existe la especialidad 'NOMBRE_ESPECIALIDAD'
         ERROR: grado de urgencia no identificado ('URGENCIA')
 
@@ -175,7 +175,7 @@ Garantías (pre-condiciones):
 
 ### 2. Atender siguiente paciente
 
-Se recibe el nombre del doctore que quedó libre, y este atiende al siguiente paciente urgente
+Se recibe el nombre de le doctore que quedó libre, y este atiende al siguiente paciente urgente
 (por orden de llegada). Si no hubiera ningún paciente urgente, atiende al siguiente paciente
 con mayor antigüedad como paciente en la clínica.
 
@@ -202,7 +202,7 @@ Mensajes de error, cuando corresponda:
 
 ### 3. Informe doctores
 
-El sistema imprime la lista de les doctores **en orden alfabético**, junto con su
+El sistema imprime la lista de doctores **en orden alfabético**, junto con su
 especialidad y el número de pacientes que atendieron desde que arrancó el
 sistema. Opcionalmente, se puede especificar el rango (alfabético) de doctores
 sobre los que se desean informes.
