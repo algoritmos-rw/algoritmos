@@ -348,6 +348,14 @@ La entrega incluye, obligatoriamente, los siguientes archivos:
 - El código de los TDAs utilizados.
 - El código del TP.
 - El informe (en formato `.pdf`).
+- Un archivo _deps.mk_ que exprese las dependencias del proyecto en formato
+    makefile. Este archivo deberá contener solamente dos líneas que indiquen,
+    para cada programa, de qué _objetos_ depende su ejecutable; por ejemplo:
+
+    ```
+    # Ejemplo de archivo deps.mk para el TP2
+    zyxcba: zyxcba.o csv.o hash.o
+    ```
 
 La entrega se realiza exclusivamnete en forma digital a través del [sistema de entregas]({{site.entregas}}),
 con todos los archivos mencionados en un único archivo ZIP.
