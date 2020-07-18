@@ -20,8 +20,6 @@ El trabajo práctico número 3 tiene fecha de entrega para el día **{{fecha}}**
 
 ## Introducción
 
-(METER BARDO A AGUAD?)
-
 El objetivo de este trabajo práctico es el de modelar Internet: las páginas web y sus interacciones. 
 Nos interesa modelar cómo podemos navegar a través de Internet. Sobre esto, quieren poder realizarse varias
 consultas para poder entender distintos aspectos de la red. Particularmente, nosotros trabajaremos con porciones
@@ -54,7 +52,7 @@ Considerar que el archivo completo cuenta con más de 3 millones de artículos. 
 Dado este archivo parseado, se debe modelar Internet con una estructura Grafo, considerando únicamente los títulos de las páginas y las conexiones entre ellas. Esto implica determinar todas las características necesarias para el grafo. 
 Se pide implementar un programa que cargue inicialmente el grafo, y que reciba como parámetros la ruta del archivo parseado:
 ```
-    $ ./tp3 Wiki_parsed.txt
+    $ ./netstats Wiki_parsed.txt
 ```
 
 Una vez cargada la red, se deberán realizar acciones sobre la misma, a partir de comandos ingresados desde entrada estándar. 
@@ -78,8 +76,8 @@ De todas las funcionalidades, pueden optar por implementar distintas. Algunas co
 1. Cada funcionalidad e implementación otorga distinta cantidad de puntos, basado en dificultad y
 el interés del curso en que implementen dicha funcionalidad o implementación
 particular de la misma (Cada estrella ★ corresponde a un punto).
-1. Se deben conseguir al menos 8 puntos para poder aprobar el TP.
-1. En caso de obtener menos de 10 puntos, la nota máxima será 9.
+1. Se deben conseguir al menos 10 puntos para poder aprobar el TP.
+1. En caso de obtener menos de 12 puntos, la nota máxima será 9.
 1. En caso de obtener 14 puntos o más la nota máxima del trabajo práctico puede llegar a 11.
 1. El total de puntos entre todas las funcionalidades es 16.
 
@@ -108,11 +106,10 @@ Salida:
 ### Camino más corto (★)
 
 * Comando: `camino`
-* Parámetros: `origen` y `destino`. Origen y destino son **artículos**.
-* Utilidad: nos imprime una lista con los **artículos** con los cuales navegamos del
-artículo `origen` al artículos `destino`, navegando lo menos posible.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A + L)$$, siendo $$A$$ la cantidad
-de artículos, y $$L$$ la cantidad de Links en toda la red.
+* Parámetros: `origen` y `destino`. Origen y destino son **páginas**.
+* Utilidad: nos imprime una lista con las **páginas** con los cuales navegamos de la página `origen` a la página `destino`, navegando lo menos posible.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P + L)$$, siendo $$P$$ la cantidad
+de páginas, y $$L$$ la cantidad de Links en toda la red.
 * Ejemplo:
 Entrada:
     ```
@@ -131,12 +128,12 @@ Utlizaremos el algoritmo de [PageRank](/algo2/material/apuntes/pagerank) para im
 dado que además fue pensado primordialmente para este escenario.
 
 * Comando: `mas_importantes`
-* Parámetros: `n`, la cantidad de artículos más importantes a mostrar.
-* Utilidad: nos muestra los `n` artículos más centrales/importantes del mundo según el algoritmo de
+* Parámetros: `n`, la cantidad de páginas más importantes a mostrar.
+* Utilidad: nos muestra las `n` páginas más centrales/importantes del mundo según el algoritmo de
 pagerank, de mayor importancia a menor importancia.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(K(A + L) + A \log (n))$$, siendo $$K$$ la cantidad de
-iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(A \log n + L)$
-(El término $$\mathcal{O}(A \log n)$$ proviene de obtener los Top-n luego de haber aplicado el algoritmo).
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(K(P + L) + P \log (n))$$, siendo $$K$$ la cantidad de
+iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(P \log n + L)$
+(El término $$\mathcal{O}(P \log n)$$ proviene de obtener los Top-n luego de haber aplicado el algoritmo).
 Entrada:
     ```
     mas_importantes 5
@@ -151,56 +148,79 @@ a ser igual de importantes en cada ejecución.
 
 ### Conectividad (★★)
 
-CFC
+* Comando: `conectados`
+* Parámetros: `página`, la página al que se le quiere obtener la conectividad.
+* Utilidad: nos muestra todos las páginas a los que podemos llegar desde la `página` pasado por parámetro y que, a su vez, puedan también volver a dicha `página`.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P + L)$$. Considerar además que a todas las páginas a las que lleguemos también se conectan entre sí, y con el tamaño del set de datos puede convenir guardar los resultados. 
 
 
-### Viaje de N lugares (★★★)
+### Ciclo de n artículos (★★★)
 
-Ciclo largo n
+* Comando: `ciclo`
+* Parámetros: `página` y `n`.
+* Utilidad: permite obtener un ciclo de largo `n` que comience en la página indicada. 
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P^n)$$, pero realizando una buena poda puede reducirse
+sustancialmente el tiempo de ejecución.
 
 
 ### Lector a las 2 a.m. (★★)
 
-Orden topologico
+* Comando: `lector`
+* Parámetros: `página1`, `página2`, ..., `página_n`.
+* Utilidad: Permite obtener un orden en el que es válido leer las páginas indicados. Para que un orden sea válido, si `página_i` tiene un link a `página_j`, entonces es necesario **primero leer** `página_j`. Solo se debe tener en cuenta los artículos mencionados en los parámetros. Esto, por supuesto, puede implicar que no podamos cumplir con lo pedido por encontrarnos con un ciclo.   
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(n + L_n)$$, siendo $$n$$ la cantidad de páginas indicadas, y $$L_n$$ la cantidad de links entre estas. 
+
+**Importante**: considerar lo indicado en el enunciado. Si quiero saber un orden válido para leer `página1` y `página2`, y hay un link de `página1` a `página2`, un orden válido es `página2` y luego `página1`. 
 
 ### Diametro (★)
 
+* Comando: `diametro`
+* Parámetros: ninguno. 
+* Utilidad: permite obtener el diámetro de toda la red. Esto es, obtener el largo de camino mínimo más grande de toda la red. 
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P(P + L))$$.
+
 ### Todos en Rango (★)
+
+* Comando: `rango`
+* Parámetros: `página` y `n`. 
+* Utilidad: permite obtener todos las páginas que se encuenten a exactamente `n` links/saltos desde la `página` pasada por parámetro.  
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P + L)$$.
 
 ### Comunidades (★★)
 
+* Comando: `comunidades`. 
+* Parámetros: `página`. 
+* Utilidad: permite obtener la comunidad dentro de la red a la que pertenezca la página pasada por parámetro. Para esto, utilizaremos el sencillo algoritmo de [Label Propagation](/algo2/material/apuntes/label_propagation).
+
 ### Navegacion por primer link (★)
 
+* Comando: `navegación`. 
+* Parámetros: `origen`, `destino` y n. 
+* Utilidad: Se dice que si comenzamos en _cualquier_ artículo de wikipedia, y navegamos únicamente utilizando el primer link, eventualmente llegaremos al artículo de _Filosofía_. Por tanto, queremos implementar un comando que navegue usando el primer link (de los que tengamos reportados) desde la página `origen` y verificar si podemos llegar a la página `destino` en a lo sumo de `n` pasos.  
+* Complejidad: este comando debe ejecutar en $$\mathcal{O}(n)$$.
+
+
+## Entrega
+
+Adicionalmente a los archivos propios del trabajo práctico debe agregarse un archivo `entrega.mk` que contenga la regla `netstats` para generar el ejecutable de dicho programa (sea compilando o los comandos que fueren necesarios). Por ejemplo, teniendo un TP elaborado en Python, podría ser:
+
+``` makefile
+netstats: netstats.py grafo.py biblioteca.py
+    cp netstats.py netstats
+    chmod +x netstats
+```
+
+**Importante**: En caso de recibir un error `FileNotFoundError: [Errno 2] No such file or directory: './netstats': './netstats'`, tener en cuenta que para el caso de enviar código escrito en Python es necesario además indicar la ruta del intérprete. Esto puede hacerse agregando como primera línea del archivo principal (en el ejemplo, sería `netstats.py`) la línea: `#!/usr/bin/python3`.
 
 ## Criterios de aprobación
 
+El código entregado debe ser claro y legible y ajustarse a las especificaciones
+de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
 
-### Código del programa
+La entrega incluye, obligatoriamente, los siguientes archivos de código:
 
-El código entregado debe:
+- el código del TDA Grafo programado, y cualquier otro TDA que fuere necesario.
+- el código de la solución del TP.
 
-- ser claro y legible, y estar estructurado en funciones lo más genéricas
-  posible, adecuadamente documentadas.
-
-- compilar sin advertencias y correr sin errores de memoria.
-
-- ajustarse a la especificación de la consigna y pasar todas las pruebas
-  automáticas.
-
-### Entrega
-
-La entrega incluye, obligatoriamente, los siguientes archivos:
-
-- El código de los TDAs utilizados.
-- El código del TP.
-- Un archivo _deps.mk_ que exprese las dependencias del proyecto en formato
-    makefile. Este archivo deberá contener solamente dos líneas que indiquen,
-    para cada programa, de qué _objetos_ depende su ejecutable; por ejemplo:
-
-    ```
-    # Ejemplo de archivo deps.mk para el TP2
-    zyxcba: zyxcba.o csv.o hash.o
-    ```
-
-La entrega se realiza exclusivamnete en forma digital a través del [sistema de entregas]({{site.entregas}}),
+La entrega se realiza en forma digital a través del [sistema de entregas]({{site.entregas}}),
 con todos los archivos mencionados en un único archivo ZIP.
