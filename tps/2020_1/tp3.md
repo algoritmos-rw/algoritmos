@@ -81,7 +81,7 @@ particular de la misma (Cada estrella ★ corresponde a un punto).
 1. En caso de obtener 14 puntos o más la nota máxima del trabajo práctico puede llegar a 11.
 1. El total de puntos entre todas las funcionalidades es 16.
 
-### Listar operaciones (obligatorio, sin puntos)
+#### Listar operaciones (obligatorio, sin puntos)
 
 * Comando: `listar_operaciones`.
 * Parámetros: ninguno.
@@ -103,7 +103,7 @@ Salida:
     en_rango
     ```
 
-### Camino más corto (★)
+#### Camino más corto (★)
 
 * Comando: `camino`
 * Parámetros: `origen` y `destino`. Origen y destino son **páginas**.
@@ -122,7 +122,7 @@ Salida:
     (...)
     ```
 
-### Artículos más importantes (★★★)
+#### Artículos más importantes (★★★)
 
 Utlizaremos el algoritmo de [PageRank](/algo2/material/apuntes/pagerank) para implementar este comando,
 dado que además fue pensado primordialmente para este escenario.
@@ -146,7 +146,7 @@ Salida:
 **Importante**: Considerar que esto podría pedirse varias veces por ejecución, pero que los elementos van
 a ser igual de importantes en cada ejecución.
 
-### Conectividad (★★)
+#### Conectividad (★★)
 
 * Comando: `conectados`
 * Parámetros: `página`, la página al que se le quiere obtener la conectividad.
@@ -154,7 +154,7 @@ a ser igual de importantes en cada ejecución.
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P + L)$$. Considerar además que a todas las páginas a las que lleguemos también se conectan entre sí, y con el tamaño del set de datos puede convenir guardar los resultados. 
 
 
-### Ciclo de n artículos (★★★)
+#### Ciclo de n artículos (★★★)
 
 * Comando: `ciclo`
 * Parámetros: `página` y `n`.
@@ -163,7 +163,7 @@ a ser igual de importantes en cada ejecución.
 sustancialmente el tiempo de ejecución.
 
 
-### Lector a las 2 a.m. (★★)
+#### Lector a las 2 a.m. (★★)
 
 * Comando: `lector`
 * Parámetros: `página1`, `página2`, ..., `página_n`.
@@ -172,27 +172,27 @@ sustancialmente el tiempo de ejecución.
 
 **Importante**: considerar lo indicado en el enunciado. Si quiero saber un orden válido para leer `página1` y `página2`, y hay un link de `página1` a `página2`, un orden válido es `página2` y luego `página1`. 
 
-### Diametro (★)
+#### Diametro (★)
 
 * Comando: `diametro`
 * Parámetros: ninguno. 
 * Utilidad: permite obtener el diámetro de toda la red. Esto es, obtener el largo de camino mínimo más grande de toda la red. 
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P(P + L))$$.
 
-### Todos en Rango (★)
+#### Todos en Rango (★)
 
 * Comando: `rango`
 * Parámetros: `página` y `n`. 
 * Utilidad: permite obtener todos las páginas que se encuenten a exactamente `n` links/saltos desde la `página` pasada por parámetro.  
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P + L)$$.
 
-### Comunidades (★★)
+#### Comunidades (★★)
 
 * Comando: `comunidades`. 
 * Parámetros: `página`. 
 * Utilidad: permite obtener la comunidad dentro de la red a la que pertenezca la página pasada por parámetro. Para esto, utilizaremos el sencillo algoritmo de [Label Propagation](/algo2/material/apuntes/label_propagation).
 
-### Navegacion por primer link (★)
+#### Navegacion por primer link (★)
 
 * Comando: `navegación`. 
 * Parámetros: `origen`, `destino` y n. 
