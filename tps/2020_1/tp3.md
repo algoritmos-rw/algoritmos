@@ -120,7 +120,7 @@ Entrada:
     ```
     camino Argentina,Zinedine Zidane
     camino Jeremy Irons,pejerrey
-    camino Napoleon,Menem
+    camino handball,Napoleón Bonaparte
     ```
 Salida:
     ```
@@ -141,7 +141,7 @@ dado que además fue pensado primordialmente para este escenario.
 * Utilidad: nos muestra las `n` páginas más centrales/importantes del mundo según el algoritmo de
 pagerank, de mayor importancia a menor importancia.
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(K(P + L) + P \log (n))$$, siendo $$K$$ la cantidad de
-iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(P \log n + L)$
+iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(P \log n + L)$$
 (El término $$\mathcal{O}(P \log n)$$ proviene de obtener los Top-n luego de haber aplicado el algoritmo).
 * Ejemplo:
 Entrada:
