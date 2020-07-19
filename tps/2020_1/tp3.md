@@ -30,29 +30,29 @@ consultas para poder entender distintos aspectos de la red. Particularmente, nos
 
 Vamos a trabajar con una ínfima porción de Internet, del portal llamado "Wikipedia". Es posible descargarse el contenido completo de Wikipedia en cualquier idioma desde [aquí](https://dumps.wikimedia.org/backup-index.html). Nosotros nos enfocaremos en la versión en español, si bien el trabajo es completamente compatible con cualquier otro idioma, pero el dump en idioma inglés es mucho más pesado.
 
-Además, les brindamos a ustedes [un parser implementado en Python](https://drive.google.com/file/d/0B_oxuLrlET2hMmx3N0dGR2dNMWc/view?usp=sharing) para que no sea necesario que ustedes lo implementen. En caso de preferir implementar algún cambio sobre el mismo, o utilizar uno propio, no hay inconvenientes. Igualmente, para que no sea necesario consumir tiempo en esta tarea se brinda [un archivo de texto de salida ya parseado](https://drive.google.com/file/d/0B_oxuLrlET2heURHOFlKUFo1WXc/view?usp=sharing), que una vez descomprimido pesa 1.1GB. Dicho archivo proviene del dump de Wikipedia en español hasta el día 1/5/2016, pero ya es posible descargar versiones más actualizadas, o bien de otras wikis.
+Además, les brindamos a ustedes [un parser implementado en Python](https://drive.google.com/file/d/0B_oxuLrlET2hMmx3N0dGR2dNMWc/view?usp=sharing) para que no sea necesario que ustedes lo implementen. En caso de preferir implementar algún cambio sobre el mismo, o utilizar uno propio, no hay inconvenientes. Igualmente, para que no sea necesario consumir tiempo en esta tarea se brinda [un archivo de texto de salida ya parseado](https://drive.google.com/file/d/1JOxK7E0bqW3yfuj3niGpPOaWCX7vo_8Q/view?usp=sharing), que una vez descomprimido pesa 1.1GB. Dicho archivo proviene del dump de Wikipedia en español hasta el día 1/5/2016, pero ya es posible descargar versiones más actualizadas, o bien de otras wikis.
 En caso de no utilizar ese archivo, o simplemente para experimentar (con otro idioma, por ejemplo) pueden simplemente ejecutarlo haciendo:
 ```
     $ python wiki_parser.py <path_dump> <path_parsed>
 ```
 
-El archivo parseado tiene el formato:
+El archivo parseado tiene el formato TSV (cada campo es separado por un tab):
 ```
-TituloArticulo1>Link1<Link2<Link3<...<LinkN
-TituloArticulo2>Link1<Link2<Link3<...<LinkM
+TituloArticulo1 Link1   Link2   Link3   ... LinkN
+TituloArticulo2 Link1   Link2   Link3   ... LinkM
 ...
 ```
 
 Dichos links deben hacer referencia a otros Títulos de Artículos. Tener en cuenta que, por simpleza del parser, pueden haber links que referencien a artículos que no existan. Por ejemplo: se han filtrado las entradas de artículos referentes a años, para hacer más liviano el archivo y más interesantes los caminos a recorrer por nuestra "Pequeña Internet".
 
-Considerar que el archivo completo cuenta con más de 3 millones de artículos. Por lo tanto, para que puedan también realizar pruebas más rápidas, les brindamos un archivo de [una reducción de la primera red](LINK) que cuenta con 75.000 artículos, resultantes de los 75.000 primeros artículos visitados al realizar un recorrido BFS desde 'Argentina' en el set de datos completo de Wikipedia.  
+Considerar que el archivo completo cuenta con más de 3 millones de artículos. Por lo tanto, para que puedan también realizar pruebas más rápidas, les brindamos un archivo de [una reducción de la primera red](https://drive.google.com/file/d/1b0fZPVE2e1z4TGFL9n4ZiqAnEMAU25rs/view?usp=sharing) que cuenta con 75.000 artículos, resultantes de los 75.000 primeros artículos visitados al realizar un recorrido BFS desde 'Argentina' en el set de datos completo de Wikipedia.  
 
 ## Consigna
 
 Dado este archivo parseado, se debe modelar Internet con una estructura Grafo, considerando únicamente los títulos de las páginas y las conexiones entre ellas. Esto implica determinar todas las características necesarias para el grafo. 
 Se pide implementar un programa que cargue inicialmente el grafo, y que reciba como parámetros la ruta del archivo parseado:
 ```
-    $ ./netstats Wiki_parsed.txt
+    $ ./netstats wiki-reducido-75000.tsv
 ```
 
 Una vez cargada la red, se deberán realizar acciones sobre la misma, a partir de comandos ingresados desde entrada estándar. 
@@ -69,10 +69,9 @@ lo requerido.
 
 Es importante notar que las primeras dos partes deberían poder funcionar en cualquier contexto: El TDA Grafo para cualquier tipo de TP3 (o utilidad); la biblioteca de funciones debe funcionar para aplicar cualquiera de las funciones implementadas sobre cualquier grafo que tenga las características de las de este TP (particularmente, dirigido y no pesado). La tercara parte es la que se encuentra enteramente acoplada al TP en particular. 
 
-El programa debe recibir por parámetro y cargar en memoria el set de datos (`$ ./netstats
-Wiki_parsed.txt`) y luego solicitar el ingreso de comandos por entrada estándar,
+El programa debe recibir por parámetro y cargar en memoria el set de datos (`$ ./netstats wiki-reducido-75000.tsv`) y luego solicitar el ingreso de comandos por entrada estándar,
 del estilo `<comando> 'parametro'`. Notar que esto permite tener un archivo de instrucciones a ser
-ejecutadas (i.e. `$ ./netstats Wiki_parsed.txt < entrada.txt`).
+ejecutadas (i.e. `$ ./netstats wiki-reducido-75000.tsv < entrada.txt`).
 
 De todas las funcionalidades, pueden optar por implementar distintas. Algunas consideraciones:
 1. Cada funcionalidad e implementación otorga distinta cantidad de puntos, basado en dificultad y
@@ -151,7 +150,7 @@ Entrada:
     ```
 Salida:
     ```
-        
+    Argentina, Estados Unidos, Buenos Aires, España, Francia, Provincias de la Argentina, Magnoliophyta, Alemania, México, Reino Unido, Europa, Italia, Brasil, Chile, Perú, Segunda Guerra Mundial, Uruguay, Inglaterra, Venezuela, Colombia
     ```
 
 **Importante**: Considerar que esto podría pedirse varias veces por ejecución, pero que los elementos van
@@ -206,12 +205,13 @@ Salida:
 * Ejemplo:
 Entrada:
     ```
-    lector Boca Juniors,Argentina,Alemania,Joseph von Fraunhofer,Patagonia argentina
-    PONER CON CICLO
+    lector Buenos Aires,Roma
+    lector Hockey sobre hielo,Roma,Japón,árbol,Guerra,Dios,universo,Himalaya,otoño
     ```
 Salida:
     ```
-    Alemania, Joseph von Fraunhofer, Argentina, Patagonia argentina, Boca Juniors
+    No existe forma de leer las paginas en orden
+    otoño, Himalaya, universo, Dios, Guerra, árbol, Hockey sobre hielo, Japón, Roma
     ```
 
 **Importante**: considerar lo indicado en el enunciado. Si quiero saber un orden válido para leer `página1` y `página2`, y hay un link de `página1` a `página2`, un orden válido es `página2` y luego `página1`. 
@@ -220,12 +220,12 @@ Salida:
 
 * Comando: `diametro`.
 * Parámetros: ninguno. 
-* Utilidad: permite obtener el diámetro de toda la red. Esto es, obtener el largo de camino mínimo más grande de toda la red. 
+* Utilidad: permite obtener el diámetro de toda la red. Esto es, obtener el camino mínimo más grande de toda la red. _Nota_: Puede haber más de uno de estos, pero todos tendrán el mismo largo.
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P(P + L))$$.
 * Ejemplo:
 Entrada:
     ```
-    mas_importantes 20
+    diametro
     ```
 Salida:
     ```
@@ -236,16 +236,20 @@ Salida:
 
 * Comando: `rango`.
 * Parámetros: `página` y `n`. 
-* Utilidad: permite obtener todos las páginas que se encuenten a exactamente `n` links/saltos desde la `página` pasada por parámetro.  
+* Utilidad: permite obtener la cantidad de páginas que se encuenten a **exactamente** `n` links/saltos desde la `página` pasada por parámetro.  
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P + L)$$.
 * Ejemplo:
 Entrada:
     ```
-    mas_importantes 20
+    rango Tokio,8
+    rango Tokio,3
+    rango Perón,4
     ```
 Salida:
     ```
-    
+    0
+    39360
+    53385
     ```
 
 #### Comunidades (★★)
@@ -256,29 +260,36 @@ Salida:
 * Ejemplo:
 Entrada:
     ```
-    mas_importantes 20
+    comunidad Chile
     ```
-Salida:
-    ```
-    
-    ```
+Salida: Dado que la salida puede ser muy grande [adjuntamos una salida de ejemplo](https://drive.google.com/file/d/1LoDZhGYDdE0LkKN_QMM9Vo1hOZbvqm_y/view?usp=sharing). No es requisito que la salida sea tal cual está (ni en orden ni los artículos), y se tendrá consideración las diferencias que se puedan llegar a tener. La idea de implementar este comando es que tengan un primer acercamiento a un algoritmo muy sencillo para detectar comunidades. En este caso, pueden ver que muchas páginas relacionadas a Chile y ciudades de Chile han quedado en la misma comunidad, lo cual sería un resultado esperable. 
+
+A quién le interese este tema puede ver otro tipo de algoritmos, como por ejemplo el [Algoritmo de Louvain](https://es.wikipedia.org/wiki/M%C3%A9todo_de_Louvain).
+
 
 #### Navegacion por primer link (★)
 
 * Comando: `navegación`. 
-* Parámetros: `origen`, `destino` y n. 
-* Utilidad: Se dice que si comenzamos en _cualquier_ artículo de wikipedia, y navegamos únicamente utilizando el primer link, eventualmente llegaremos al artículo de _Filosofía_. Por tanto, queremos implementar un comando que navegue usando el primer link (de los que tengamos reportados) desde la página `origen` y verificar si podemos llegar a la página `destino` en a lo sumo de `n` pasos.  
+* Parámetros: `origen`. 
+* Utilidad: Se dice que si comenzamos en _cualquier_ artículo de wikipedia, y navegamos únicamente utilizando el primer link, eventualmente llegaremos al artículo de _Filosofía_. Por tanto, queremos implementar un comando que navegue usando el primer link (de los que tengamos reportados) desde la página `origen` y cómo es la navegación por el primer link. Debemos continuar accediendo al primer link hasta que la página ya no tenga links, o bien hasta que hayamos llegado a 20 páginas.  
 * Complejidad: este comando debe ejecutar en $$\mathcal{O}(n)$$.
 * Ejemplo:
 Entrada:
     ```
-    mas_importantes 20
+    navegacion Argentina
+    navegacion Alemania
+    navegacion queso
+    navegacion Bolivia
+    navegacion Brasil
     ```
 Salida:
     ```
-    
+    Argentina -> polacos
+    Alemania -> Derecho penal -> complicidad
+    queso
+    Bolivia -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis
+    Brasil -> Hermeto Pascoal -> Portugués brasileño -> caña de azúcar
     ```
-
 
 ## Entrega
 
