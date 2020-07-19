@@ -167,15 +167,8 @@ Entrada:
     ```
     conectados Boca Juniors
     conectados Argentina
-    conectados Campeonato del Mundo de Pelota Vasca
-    conectados Alemania 
     ```
-Salida:
-    ```
-    Boca Juniors
-    Plan Raíces, Triunfo (danza), Argentina, Vitoria, Campeonato del Mundo de Pelota Vasca, Federación Internacional de Pelota Vasca, Pamplona, Provincia de España, Provincias de España
-    Ezequiel Ávila, Daniel Fagiani, Pedro Camilo Franco, Claudio Rivadero, Rolando Escudero, Lautaro Montoya, Damián Timpani, Fernando Amadeo Baldrich, Tomás Conechny, Fernando Galetto, Rodrigo Tapia (futbolista argentino), Fernando Álvez, Diego Capria, Bruno Centeno, Pablo Michelini, José Fossa, Valentín Perales, Germán Berterame, Carlos Valdés (futbolista), Brian Mieres, Facundo Quignon, Marcos Senesi, Franco Mussis, Esteban Fernando González, Arturo Arrieta, Carlos Daniel Cordone, Bautista Merlini, José Devecchi, Brian Ferri, Ángel Berni, Leandro Álvarez, Mario Santana, Luis Gianella, Homosexualidad en Alemania, Partido Democrático Libre, Zugspitze, Inmigración en Alemania, Dieter Baumann, Joseph von Fraunhofer, Barón de Münchhausen, Símbolos de Alemania, Edmund Mezger, Ius puniendi, Psiquiatría forense, Penología, Derecho penitenciario, Hans Welzel, Cooperación en materia penal, Michael Levitt, Texas, IndyCar Series, Japón, Porifera, Animalia, Eukaryota, Ácido desoxirribonucleico, Frederick Sanger, Roald Hoffmann, Pueblo judío, Alemania nazi, Juez, Derecho procesal penal, Derecho penal, Alemania, Estadio Olímpico Luzhnikí, FC Spartak de Moscú, Selección de fútbol de los Países Bajos, Júlio César Soares Espíndola, Club Atlético San Lorenzo de Almagro, Gabriel Loeschbor, Gerardo Bedoya, Selección de fútbol de Colombia, Ladislao Kubala, Wankdorfstadion, Stade de Suisse
-    ```
+Salida: En ambos casos la CFC está compuesta por los mismos artículos. Dejamos acá [un archivo con la salida esperada](https://drive.google.com/file/d/1bRfZa4vLlN6olhrcPNHEt-FYvWGFNbuI/view?usp=sharing) (no necesariamente en ese orden, pero sí _esos_ artículos), dado que la misma consta de 43569 de los 75000 artículos. Es importante notar que la segunda consulta debería obtener un resultado en tiempo constante.  
 
 #### Ciclo de n artículos (★★★)
 
@@ -222,14 +215,15 @@ Salida:
 * Parámetros: ninguno. 
 * Utilidad: permite obtener el diámetro de toda la red. Esto es, obtener el camino mínimo más grande de toda la red. _Nota_: Puede haber más de uno de estos, pero todos tendrán el mismo largo.
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P(P + L))$$.
-* Ejemplo:
+* Ejemplo: Debido a la complejidad, aplicar sobre el grafo incluso reducido puede demorar muchas horas. Por lo tanto, les acercamos [un ejemplo con 5.000 artículos](https://drive.google.com/file/d/1aQXpMFlALkujRj74_bOdl18OtIR_8QBZ/view?usp=sharing). 
 Entrada:
     ```
     diametro
     ```
 Salida:
     ```
-    
+    Huésped (biología) -> Agente biológico patógeno -> Animalia -> Carlos Linneo -> Finlandia -> Unión Europea -> Robert Schuman -> Aristide Briand
+    Costo: 7
     ```
 
 #### Todos en Rango (★)
