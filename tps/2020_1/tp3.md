@@ -79,8 +79,8 @@ el interés del curso en que implementen dicha funcionalidad o implementación
 particular de la misma (Cada estrella ★ corresponde a un punto).
 1. Se deben conseguir al menos 10 puntos para poder aprobar el TP.
 1. En caso de obtener menos de 12 puntos, la nota máxima será 9.
-1. En caso de obtener 14 puntos o más la nota máxima del trabajo práctico puede llegar a 11.
-1. El total de puntos entre todas las funcionalidades es 16.
+1. En caso de obtener 16 puntos o más la nota máxima del trabajo práctico puede llegar a 11.
+1. El total de puntos entre todas las funcionalidades es 18.
 
 A continuación se listarán los comandos junto a ejemplos de entrada y salidas para el caso de la red reducida. 
 Recomendamos trabajar con este set de datos, puesto que el original cuenta con una enorme cantidad de datos, por lo que
@@ -283,6 +283,42 @@ Salida:
     queso
     Bolivia -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis -> Guerra del Acre -> Hevea brasiliensis
     Brasil -> Hermeto Pascoal -> Portugués brasileño -> caña de azúcar
+    ```
+
+#### Coeficiente de Clustering (★★)
+
+El [_Coeficiente de Clustering_](https://en.wikipedia.org/wiki/Clustering_coefficient) es una métrica que nos permite entender cuán agrupados se encuentran los vértices de un grafo. Para explicarla de manera simplificada, es similar a plantear la proporción en la que se cumple al regla de transitividad: _Cuántos de mis adyacentes son adyacentes entre sí_. 
+
+El coeficiente de clustering de un vértice $$i$$ en un grafo dirigido puede calcularse como: 
+
+$$ C_i = \frac{\left|e_{ij}: v_j, v_k \in \text{adyacentes}(v_i), e_{ij} \in \mathcal{E} \right|}{k_i(k_i - 1)} $$
+
+Lo cual quiere decir: por cada par de adyacentes al vértice en cuestión, si existe la arista yendo de uno al otro (si además está la recíproca, lo contamos otra vez). A esa cantidad de aristas lo dividimos por $$k_i(k_i - 1)$$ siendo $$k_i$$ el grado de salida del vértice $$i$$. En caso de tener menos de 2 adyacentes, se define que el coeficiente de clustering de dicho vértice es 0. Considerar que el coeficiente de clustering es siempre un número entre 0 y 1. 
+
+El clustering promedio de toda la red será: $$ C = \frac{1}{n} \sum_{\forall v \in grafo} C_i $$.
+
+* Comando: `clustering`
+* Parámetros: `pagina`, opcional. 
+* Utilidad: Permite obtener el coeficiente de clustering de la página indicada. En caso de no indicar página, se deberá informar el clustering promedio de la red. En ambos casos, informar con hasta 3 dígitos decimales. 
+* Complejidad: En caso que se indique una página en particular, debe ejecutar en $$ ~ \mathcal{O}(1) $$ (considerando que la red es _muy_ dispersa). En caso que no se indique ninguna página, deberá ejecutar en $$ \mathcal{O}((P + L)^2) $$.
+* Ejemplo:
+Entrada:
+    ```
+    clustering River Plate
+    clustering Club Atlético River Plate
+    clustering Juan Domingo Perón
+    clustering Ámsterdam
+    # Ejemplo con la red de 5.000 artículos:
+    clustering
+    ```
+Salida:
+    ```
+    0.000
+    0.030
+    0.020
+    0.065
+    # Ejemplo con la red de 5.000 artículos:
+    0.122
     ```
 
 ## Entrega
