@@ -295,7 +295,9 @@ $$ C_i = \frac{\left|e_{ij}: v_j, v_k \in \text{adyacentes}(v_i), e_{ij} \in \ma
 
 Lo cual quiere decir: por cada par de adyacentes al vértice en cuestión, si existe la arista yendo de uno al otro (si además está la recíproca, lo contamos otra vez). A esa cantidad de aristas lo dividimos por $$k_i(k_i - 1)$$ siendo $$k_i$$ el grado de salida del vértice $$i$$. En caso de tener menos de 2 adyacentes, se define que el coeficiente de clustering de dicho vértice es 0. Considerar que el coeficiente de clustering es siempre un número entre 0 y 1. 
 
-El clustering promedio de toda la red será: $$ C = \frac{1}{n} \sum_{\forall v \in grafo} C_i $$.
+El clustering promedio de toda la red será: 
+
+$$ C = \frac{1}{n} \sum_{\forall v \in grafo} C_i $$
 
 * Comando: `clustering`
 * Parámetros: `pagina`, opcional. 
