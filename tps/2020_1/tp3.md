@@ -297,7 +297,7 @@ Lo cual quiere decir: por cada par de adyacentes al vértice en cuestión, si ex
 
 El clustering promedio de toda la red será: 
 
-$$ C = \frac{1}{n} \sum_{\forall v \in grafo} C_i $$
+$$ C = \frac{1}{n} \sum_{\forall v \in \text{grafo}} C_i $$
 
 * Comando: `clustering`
 * Parámetros: `pagina`, opcional. 
