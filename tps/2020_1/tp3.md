@@ -189,17 +189,17 @@ Salida:
     Polonia -> Unión Europea Occidental -> Unión Europea -> Idioma italiano -> Florencia -> Cannes -> Festival de Cannes -> Biarritz -> Pirineos Atlánticos -> Pirineos -> Alpes -> Dolomitas -> Marmolada -> Italia -> Pier Paolo Pasolini -> Roma -> Alfabeto fonético internacional -> Alfabeto Fonético Internacional -> Idioma ruso -> Moscú
     ```
 
-#### Lector a las 2 a.m. (★★)
+#### Lectura a las 2 a.m. (★★)
 
-* Comando: `lector`.
+* Comando: `lectura`.
 * Parámetros: `página1`, `página2`, ..., `página_n`.
 * Utilidad: Permite obtener un orden en el que es válido leer las páginas indicados. Para que un orden sea válido, si `página_i` tiene un link a `página_j`, entonces es necesario **primero leer** `página_j`. Solo se debe tener en cuenta los artículos mencionados en los parámetros. Esto, por supuesto, puede implicar que no podamos cumplir con lo pedido por encontrarnos con un ciclo.   
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(n + L_n)$$, siendo $$n$$ la cantidad de páginas indicadas, y $$L_n$$ la cantidad de links entre estas. 
 * Ejemplo:
 Entrada:
     ```
-    lector Buenos Aires,Roma
-    lector Hockey sobre hielo,Roma,Japón,árbol,Guerra,Dios,universo,Himalaya,otoño
+    lectura Buenos Aires,Roma
+    lectura Hockey sobre hielo,Roma,Japón,árbol,Guerra,Dios,universo,Himalaya,otoño
     ```
 Salida:
     ```
