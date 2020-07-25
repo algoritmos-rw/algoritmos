@@ -62,14 +62,14 @@ Una vez cargada la red, se deberán realizar acciones sobre la misma a partir de
 El trabajo puede realizarse en lenguaje a elección, siendo aceptados Python y C, y cualquier otro a ser discutido con el corrector asignado.
 
 El trabajo consiste de 3 partes:
-1. El TDA Grafo, con sus primitivas, completamente agnósticas sobre su uso para modelar la red de Internet.  
+1. El TDA Grafo, con sus primitivas completamente agnósticas sobre su uso para modelar la red de Internet.  
 1. Una biblioteca de funciones de grafos, que permitan hacer distintas operaciones sobre un grafo que modela Internet, sin importar cuál es la red específica.
 1. El programa `NetStats` que utilice tanto el TDA como la biblioteca para poder implementar todo
 lo requerido.
 
 Es importante notar que las primeras dos partes deberían poder funcionar en cualquier contexto: El TDA Grafo para cualquier tipo de TP3 (o utilidad); la biblioteca de funciones debe funcionar para aplicar cualquiera de las funciones implementadas sobre cualquier grafo que tenga las características de las de este TP (particularmente, dirigido y no pesado). La tercera parte es la que se encuentra enteramente acoplada al TP en particular. 
 
-El programa debe recibir por parámetro y cargar en memoria el set de datos (`$ ./netstats wiki-reducido-75000.tsv`) y luego solicitar el ingreso de comandos por entrada estándar,
+El programa debe recibir por parámetro, cargar en memoria el set de datos (`$ ./netstats wiki-reducido-75000.tsv`) y luego solicitar el ingreso de comandos por entrada estándar,
 del estilo `<comando> 'parametro'`. Notar que esto permite tener un archivo de instrucciones a ser
 ejecutadas (i.e. `$ ./netstats wiki-reducido-75000.tsv < entrada.txt`).
 
@@ -84,7 +84,7 @@ particular de la misma (Cada estrella ★ corresponde a un punto).
 
 A continuación se listarán los comandos junto a ejemplos de entrada y salidas para el caso de la red reducida. 
 Recomendamos trabajar con este set de datos, puesto que el original cuenta con una enorme cantidad de datos, por lo que
-puede demorar cada una de las pruebas a realizar. 
+puede demorar mucho tiempo cada una de las pruebas a realizar. 
 
 #### Listar operaciones (obligatorio, sin puntos)
 
@@ -139,7 +139,7 @@ dado que además fue pensado primordialmente para este escenario.
 * Comando: `mas_importantes`.
 * Parámetros: `n`, la cantidad de páginas más importantes a mostrar.
 * Utilidad: nos muestra las `n` páginas más centrales/importantes del mundo según el algoritmo de
-pagerank, de mayor importancia a menor importancia.
+pagerank, ordenadas de mayor importancia a menor importancia.
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(K(P + L) + P \log (n))$$, siendo $$K$$ la cantidad de
 iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(P \log n + L)$$
 (El término $$\mathcal{O}(P \log n)$$ proviene de obtener los Top-n luego de haber aplicado el algoritmo).
@@ -159,9 +159,9 @@ a ser igual de importantes en cada pedido.
 #### Conectividad (★★)
 
 * Comando: `conectados`.
-* Parámetros: `página`, la página al que se le quiere obtener la conectividad.
+* Parámetros: `página`, la página que se le quiere obtener la conectividad.
 * Utilidad: nos muestra todos las páginas a los que podemos llegar desde la `página` pasado por parámetro y que, a su vez, puedan también volver a dicha `página`.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P + L)$$. Considerar además que a todas las páginas a las que lleguemos también se conectan entre sí, y con el tamaño del set de datos puede convenir guardar los resultados. 
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P + L)$$. Considerar que a todas las páginas a las que lleguemos también se conectan entre sí, y con el tamaño del set de datos puede convenir guardar los resultados. 
 * Ejemplo:
 Entrada:
     ```
@@ -265,7 +265,7 @@ A quién le interese este tema puede ver otro tipo de algoritmos, como por ejemp
 
 * Comando: `navegación`. 
 * Parámetros: `origen`. 
-* Utilidad: Se dice que si comenzamos en _cualquier_ artículo de wikipedia, y navegamos únicamente utilizando el primer link, eventualmente llegaremos al artículo de _Filosofía_. Por tanto, queremos implementar un comando que navegue usando el primer link (de los que tengamos reportados) desde la página `origen` y cómo es la navegación por el primer link. Debemos continuar accediendo al primer link hasta que la página ya no tenga links, o bien hasta que hayamos llegado a 20 páginas.  
+* Utilidad: Se dice que si comenzamos en _cualquier_ artículo de wikipedia, y navegamos únicamente utilizando el primer link, eventualmente llegaremos al artículo de _Filosofía_. Por lo tanto, queremos implementar un comando que navegue usando el primer link (de los que tengamos reportados) desde la página `origen` y navegando usando siempre el primer link. Debemos continuar accediendo al primer link hasta que la página ya no tenga links, o bien hasta que hayamos llegado a 20 páginas.  
 * Complejidad: este comando debe ejecutar en $$\mathcal{O}(n)$$.
 * Ejemplo:
 Entrada:
