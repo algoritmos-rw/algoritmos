@@ -21,14 +21,14 @@ El trabajo práctico número 3 tiene fecha de entrega para el día **{{fecha}}**
 ## Introducción
 
 El objetivo de este trabajo práctico es el de modelar Internet: las páginas web y sus interacciones. 
-Nos interesa modelar cómo podemos navegar a través de Internet. Sobre esto, quieren poder realizarse varias
-consultas para poder entender distintos aspectos de la red. Particularmente, nosotros trabajaremos con porciones
+Nos interesa modelar cómo podemos navegar a través de Internet. Se quiere poder realizarse varias
+consultas para poder entender distintos aspectos de la red. Se trabajará con porciones
 ínfimas de la red.
 
 
 ## Datos disponibles
 
-Vamos a trabajar con una ínfima porción de Internet, del portal llamado "Wikipedia". Es posible descargarse el contenido completo de Wikipedia en cualquier idioma desde [aquí](https://dumps.wikimedia.org/backup-index.html). Nosotros nos enfocaremos en la versión en español, si bien el trabajo es completamente compatible con cualquier otro idioma, pero el dump en idioma inglés es mucho más pesado.
+Vamos a trabajar con una ínfima porción de Internet, del portal llamado "Wikipedia". Es posible descargarse el contenido completo de Wikipedia en cualquier idioma desde [aquí](https://dumps.wikimedia.org/backup-index.html). Nosotros nos enfocaremos en la versión en español, si bien el trabajo es completamente compatible con cualquier otro idioma, hay idiomas con mucha mas carga que otros.
 
 Además, les brindamos a ustedes [un parser implementado en Python](https://drive.google.com/file/d/0B_oxuLrlET2hMmx3N0dGR2dNMWc/view?usp=sharing) para que no sea necesario que ustedes lo implementen. En caso de preferir implementar algún cambio sobre el mismo, o utilizar uno propio, no hay inconvenientes. Igualmente, para que no sea necesario consumir tiempo en esta tarea se brinda [un archivo de texto de salida ya parseado](https://drive.google.com/file/d/1JOxK7E0bqW3yfuj3niGpPOaWCX7vo_8Q/view?usp=sharing), que una vez descomprimido pesa 1.1GB. Dicho archivo proviene del dump de Wikipedia en español hasta el día 1/5/2016, pero ya es posible descargar versiones más actualizadas, o bien de otras wikis.
 En caso de no utilizar ese archivo, o simplemente para experimentar (con otro idioma, por ejemplo) pueden simplemente ejecutarlo haciendo:
@@ -43,19 +43,19 @@ TituloArticulo2 Link1   Link2   Link3   ... LinkM
 ...
 ```
 
-Dichos links deben hacer referencia a otros Títulos de Artículos. Tener en cuenta que, por simpleza del parser, pueden haber links que referencien a artículos que no existan. Por ejemplo: se han filtrado las entradas de artículos referentes a años, para hacer más liviano el archivo y más interesantes los caminos a recorrer por nuestra "Pequeña Internet".
+Dichos links deben hacer referencia a otros Títulos de Artículos. Tener en cuenta que, por simpleza del parser, pueden haber links que referencien a artículos que no existan. Por ejemplo: se han filtrado las entradas de artículos referentes a años para hacer más liviano el archivo y más interesantes los caminos a recorrer por nuestra "Pequeña Internet".
 
-Considerar que el archivo completo cuenta con más de 3 millones de artículos. Por lo tanto, para que puedan también realizar pruebas más rápidas, les brindamos un archivo de [una reducción de la primera red](https://drive.google.com/file/d/1b0fZPVE2e1z4TGFL9n4ZiqAnEMAU25rs/view?usp=sharing) que cuenta con 75.000 artículos, resultantes de los 75.000 primeros artículos visitados al realizar un recorrido BFS desde 'Argentina' en el set de datos completo de Wikipedia.  
+Considerar que el archivo completo cuenta con más de 3 millones de artículos. Por lo tanto, para que puedan también realizar pruebas más rápidas, les brindamos un archivo de [una reducción de la primera red](https://drive.google.com/file/d/1b0fZPVE2e1z4TGFL9n4ZiqAnEMAU25rs/view?usp=sharing) que cuenta con los primeros 75.000 artículos visitados resultantes al realizar un recorrido BFS desde 'Argentina' en el set de datos completo de Wikipedia.  
 
 ## Consigna
 
-Dado este archivo parseado, se debe modelar Internet con una estructura Grafo, considerando únicamente los títulos de las páginas y las conexiones entre ellas. Esto implica determinar todas las características necesarias para el grafo. 
-Se pide implementar un programa que cargue inicialmente el grafo, y que reciba como parámetros la ruta del archivo parseado:
+Dado este archivo parseado, se debe modelar Internet con una estructura Grafo considerando únicamente los títulos de las páginas y las conexiones entre ellas. Esto implica determinar todas las características necesarias para el grafo. 
+Se pide implementar un programa que cargue inicialmente el grafo recibiendo como parámetro la ruta del archivo parseado:
 ```
     $ ./netstats wiki-reducido-75000.tsv
 ```
 
-Una vez cargada la red, se deberán realizar acciones sobre la misma, a partir de comandos ingresados desde entrada estándar. 
+Una vez cargada la red, se deberán realizar acciones sobre la misma a partir de comandos ingresados desde entrada estándar. 
 
 ### Implementación
 
