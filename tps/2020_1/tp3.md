@@ -67,7 +67,7 @@ El trabajo consiste de 3 partes:
 1. El programa `NetStats` que utilice tanto el TDA como la biblioteca para poder implementar todo
 lo requerido.
 
-Es importante notar que las primeras dos partes deberían poder funcionar en cualquier contexto: El TDA Grafo para cualquier tipo de TP3 (o utilidad); la biblioteca de funciones debe funcionar para aplicar cualquiera de las funciones implementadas sobre cualquier grafo que tenga las características de las de este TP (particularmente, dirigido y no pesado). La tercara parte es la que se encuentra enteramente acoplada al TP en particular. 
+Es importante notar que las primeras dos partes deberían poder funcionar en cualquier contexto: El TDA Grafo para cualquier tipo de TP3 (o utilidad); la biblioteca de funciones debe funcionar para aplicar cualquiera de las funciones implementadas sobre cualquier grafo que tenga las características de las de este TP (particularmente, dirigido y no pesado). La tercera parte es la que se encuentra enteramente acoplada al TP en particular. 
 
 El programa debe recibir por parámetro y cargar en memoria el set de datos (`$ ./netstats wiki-reducido-75000.tsv`) y luego solicitar el ingreso de comandos por entrada estándar,
 del estilo `<comando> 'parametro'`. Notar que esto permite tener un archivo de instrucciones a ser
