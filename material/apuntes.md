@@ -9,7 +9,6 @@ permalink: /material/
   * [Apunte de Centralidad en un grafo](apuntes/centralidad.md)
   * [Apunte de PageRank](apuntes/pagerank.md)
   * [Apunte sobre Label Propagation](apuntes/label_propagation.md)
-  * [Apunte sobre Componentes Fuertemente Conexas](apuntes/cfc.md)
   * [Explicación sobre uso de archivos KML](apuntes/kml.md)
 
 # Otros materiales y apuntes
