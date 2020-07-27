@@ -153,8 +153,7 @@ Salida:
     Argentina, Estados Unidos, Buenos Aires, España, Francia, Provincias de la Argentina, Magnoliophyta, Alemania, México, Reino Unido, Europa, Italia, Brasil, Chile, Perú, Segunda Guerra Mundial, Uruguay, Inglaterra, Venezuela, Colombia
     ```
 
-**Importante**: Considerar que esto podría pedirse varias veces por ejecución, pero que los elementos van
-a ser igual de importantes en cada pedido.
+**Importante**: Considerar que esto podría pedirse varias veces por ejecución, y no se desea repetir el calculo (ya que no debería el valor de pagerank de cada artículo).
 
 #### Conectividad (★★)
 
