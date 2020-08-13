@@ -167,7 +167,7 @@ Entrada:
     conectados Boca Juniors
     conectados Argentina
     ```
-Salida: En ambos casos la CFC está compuesta por los mismos artículos. Dejamos acá [un archivo con la salida esperada](https://drive.google.com/file/d/1bRfZa4vLlN6olhrcPNHEt-FYvWGFNbuI/view?usp=sharing) (no necesariamente en ese orden, pero sí _esos_ artículos), dado que la misma consta de 43569 de los 75000 artículos. Es importante notar que la segunda consulta debería obtener un resultado en tiempo constante.  
+Salida: En ambos casos la CFC está compuesta por los mismos artículos. Dejamos acá [un archivo con la salida esperada](https://drive.google.com/file/d/1bRfZa4vLlN6olhrcPNHEt-FYvWGFNbuI/view?usp=sharing) (no necesariamente en ese orden, pero sí _esos_ artículos), dado que la misma consta de 44760 de los 75000 artículos. Es importante notar que la segunda consulta debería obtener un resultado en tiempo constante.  
 
 #### Ciclo de n artículos (★★★)
 
@@ -184,8 +184,8 @@ Entrada:
     ```
 Salida:
     ```
-    Jeremy Irons -> The Silence of the Lambs (película) -> Dances with Wolves -> Premios Óscar
-    Polonia -> Unión Europea Occidental -> Unión Europea -> Idioma italiano -> Florencia -> Cannes -> Festival de Cannes -> Biarritz -> Pirineos Atlánticos -> Pirineos -> Alpes -> Dolomitas -> Marmolada -> Italia -> Pier Paolo Pasolini -> Roma -> Alfabeto fonético internacional -> Alfabeto Fonético Internacional -> Idioma ruso -> Moscú
+    Jeremy Irons -> The Silence of the Lambs (película) -> Dances with Wolves -> Premios Óscar -> Jeremy Irons
+    Polonia -> Unión Europea Occidental -> Unión Europea -> Idioma italiano -> Florencia -> Cannes -> Festival de Cannes -> Biarritz -> Pirineos Atlánticos -> Pirineos -> Alpes -> Dolomitas -> Marmolada -> Italia -> Pier Paolo Pasolini -> Roma -> Alfabeto fonético internacional -> Alfabeto Fonético Internacional -> Idioma ruso -> Moscú -> Polonia
     ```
 
 #### Lectura a las 2 a.m. (★★)
@@ -241,8 +241,8 @@ Entrada:
 Salida:
     ```
     0
-    39360
-    53385
+    39347
+    53347
     ```
 
 #### Comunidades (★★)
