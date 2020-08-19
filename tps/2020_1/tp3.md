@@ -167,7 +167,7 @@ Entrada:
     conectados Boca Juniors
     conectados Argentina
     ```
-Salida: En ambos casos la CFC está compuesta por los mismos artículos. Dejamos acá [un archivo con la salida esperada](https://drive.google.com/file/d/1bRfZa4vLlN6olhrcPNHEt-FYvWGFNbuI/view?usp=sharing) (no necesariamente en ese orden, pero sí _esos_ artículos), dado que la misma consta de 44760 de los 75000 artículos. Es importante notar que la segunda consulta debería obtener un resultado en tiempo constante.  
+Salida: En ambos casos la CFC está compuesta por los mismos artículos. Dejamos acá [un archivo con la salida esperada](https://drive.google.com/file/d/1bRfZa4vLlN6olhrcPNHEt-FYvWGFNbuI/view?usp=sharing) (no necesariamente en ese orden, pero sí _esos_ artículos), dado que la misma consta de 44764 de los 75000 artículos. Es importante notar que la segunda consulta debería obtener un resultado en tiempo constante.  
 
 #### Ciclo de n artículos (★★★)
 
