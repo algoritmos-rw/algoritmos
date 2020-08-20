@@ -300,6 +300,8 @@ El clustering promedio de toda la red será:
 
 $$ C = \frac{1}{n} \sum_{\forall v \in \text{grafo}} C_i $$
 
+**Importante**: Es importante no contar los bucles que puedan existir al calcular el coeficiente.
+
 * Comando: `clustering`
 * Parámetros: `pagina`, opcional. 
 * Utilidad: Permite obtener el coeficiente de clustering de la página indicada. En caso de no indicar página, se deberá informar el clustering promedio de la red. En ambos casos, informar con hasta 3 dígitos decimales. 
@@ -318,10 +320,10 @@ Salida:
     ```
     0.000
     0.030
-    0.020
+    0.018
     0.065
     # Ejemplo con la red de 5.000 artículos:
-    0.122
+    0.115
     ```
 
 ## Entrega
