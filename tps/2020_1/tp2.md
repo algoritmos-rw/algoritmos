@@ -219,7 +219,7 @@ En caso de no quererse indicar un inicio o fin, simplemente se deja vacío, por 
         INFORME:Gonzalez,
         INFORME:,
 
-Salida ($N + 1$ líneas, donde $N$ es el número de doctores en el sistema que se encuentran en dicho rango):
+Salida ($$N + 1$$ líneas, donde $$N$$ es el número de doctores en el sistema que se encuentran en dicho rango):
 
         N doctor(es) en el sistema
         1: NOMBRE, especialidad ESPECIALIDAD, X paciente(s) atendido(s)
