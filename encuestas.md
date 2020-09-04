@@ -6,6 +6,7 @@ Estos son los resultados de las encuestas de cuatrimestres anteriores:
 {: .table .table-striped}
 | Cuatrimestre  |  Enlace  |
 |---------------|----------|
+| 1ro 2020      | [Ver](https://docs.google.com/forms/d/1-D8q9nCc1pXPV5g4nloteZuulss4dIgJXla4Og86_Jo/viewanalytics) |
 | 2do 2019      | [Ver](https://docs.google.com/forms/d/1-_3TzOioahf2PWiOUwKyEWmW7SC8dwHNvveGPlfb5j8/viewanalytics) |
 | 1ro 2019      | [Ver](../assets/encuestas/2019-1c.html) |
 | 2do 2018      | [Ver](../assets/encuestas/2018-2c.html) |
