@@ -66,7 +66,7 @@ Las pruebas deben incluir los casos básicos de TDA similares a los contemplados
 1. Otros casos borde que pueden encontrarse al utilizar el iterador externo.
 Y los casos con / sin corte del iterador interno.
 
-Al igual que en los casos anteriores, deberán entregar el código en papel, con el nombre y padrón y el nombre del ayudante correspondiente, imprimiendo los archivos `lista.h`, `lista.c` y `pruebas_alumno.c`.
+Al igual que en los casos anteriores, deberán entregar el código en papel, con el nombre y padrón y el nombre del ayudante correspondiente, imprimiendo los archivos `lista.h`, `lista.c` y `pruebas_lista.c`.
 
 Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 

@@ -14,9 +14,9 @@ La entrega es muy similar a la realizada para el TDA Pila.  Excepto que la funci
 
 La cola debe ser enlazada, es decir que en lugar de usar un arreglo, usa nodos enlazados, de los cuales se desencola el primero y se encola a continuación del último. Por tanto, se debe implementar solamente con punteros, y no se debe guardar en un campo el tamaño de la cola.
 
-Deben entregar un archivo `pruebas_alumno.c` que haga las correspondientes pruebas unitarias. Además de las pruebas obligatorias análogas a las pedidas para la [pila](pila.md), también tienen que incluir unas pruebas para probar la destrucción con y sin funciones de destrucción de los elementos.
+Deben entregar un archivo `pruebas_cola.c` que haga las correspondientes pruebas unitarias. Además de las pruebas obligatorias análogas a las pedidas para la [pila](pila.md), también tienen que incluir unas pruebas para probar la destrucción con y sin funciones de destrucción de los elementos.
 
-Deberán entregar el código en papel, con el nombre y padrón, imprimiendo el archivo `cola.c` y el archivo `pruebas_alumno.c`.
+Deberán entregar el código en papel, con el nombre y padrón, imprimiendo el archivo `cola.c` y el archivo `pruebas_cola.c`.
 
 Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 
