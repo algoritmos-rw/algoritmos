@@ -24,7 +24,7 @@ struct pila {
 };
 ```
 
-Además de `pila.c`, tienen que entregar otro archivo `pruebas_pila.c`, que contenga las pruebas unitarias para verificar que la pila funciona correctamente, y que al ejecutarlo puede verificarse que todo funciona bien y no se pierde memoria. El archivo `pruebas_pila.c` debe contener una función llamada `pruebas_pila_alumno()` que ejecute todas las pruebas. Se permite (y recomienda) usar funciones auxiliares.
+Además de `pila.c`, tienen que entregar otro archivo `pruebas_pila.c`, que contenga las pruebas unitarias para verificar que la pila funciona correctamente, y que al ejecutarlo puede verificarse que todo funciona bien y no se pierde memoria. El archivo `pruebas_pila.c` debe contener una función llamada `pruebas_pila_estudiante()` que ejecute todas las pruebas. Se permite (y recomienda) usar funciones auxiliares.
 
 Las pruebas deberán verificar que:
 1. Se pueda crear y destruir correctamente la estructura.

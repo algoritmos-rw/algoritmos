@@ -49,7 +49,7 @@ void *lista_iter_borrar(lista_iter_t *iter);
 
 #### Función de pruebas
 ``` cpp
-void pruebas_lista_alumno(void);
+void pruebas_lista_estudiante(void);
 ```
 
 _Aclaración_: mantener el nombre de la estructura como `struct lista` para la lista, y `struct lista_iter` para el iterador, puesto que el corrector automático tiene configurados dichos nombres en el `lista.h` de la cátedra.
