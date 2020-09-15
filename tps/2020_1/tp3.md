@@ -93,7 +93,7 @@ puede demorar mucho tiempo cada una de las pruebas a realizar.
 * Utilidad: Dado que no todas las funcionalidades o implementaciones son obligatorias, debe
 existir un comando que nos permita saber cuáles son las funcionalidades disponibles. Debe
 imprimirse una línea por cada **comando** que esté implementado.
-* Complejidad: Este comando debe ejecutar en $\mathcal{O}(1)$.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(1)$$.
 * Ejemplo:
 Entrada:
     ```
