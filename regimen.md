@@ -8,7 +8,7 @@ Régimen de cursada
 * Para aprobar cada **trabajo práctico** es necesario aprobar cada una de las **entregas parciales** anteriores al mismo.
 * Para rendir el **final** es necesario tener la **cursada** aprobada.
 * Las condiciones del régimen de promoción son las siguientes:
-  - Es necesario aprobar los **tres parcialitos** y los **tres trabajos prácticos**.
+  - Es necesario aprobar los **cuatro parcialitos** y los **tres trabajos prácticos**.
   - El **promedio** de notas de todos los **trabajos prácticos** debe ser al menos 8.
   - Todos los parcialitos deben estar aprobados en la **primera instancia** o el **primer recuperatorio**, con una nota **mayor o igual a 7**.
 
@@ -44,4 +44,3 @@ Régimen de cursada
 * La nota de la materia es un promedio de la nota del final y la nota de la cursada, ponderando esta última.
 * La nota de la cursada surge del promedio entre: el promedio de la nota de los parcialitos y el promedio de la nota de los trabajos prácticos (con redondeo conceptual por parte del ayudante asignado).
 * En caso de promocionar la materia, la nota de la materia será igual a la nota de la cursada.
-
