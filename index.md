@@ -14,6 +14,7 @@ crear un issue en [la página de issues del repositorio]({{site.github.repositor
 
 * [Formulario de inscripción]({{site.data.cuatrimestre.formulario_alta}}) a la
   [lista de correos]({{site.data.sitios.lista}}).
+* <a href="{{site.data.sitios.slack_inv}}"><i class="fab fa-slack"/> Inscripción al grupo de Slack</a> del curso
 * [Formulario de inscripción de grupos]({{site.data.cuatrimestre.formulario_grupos}})
 * <a href="{{site.data.sitios.calendario}}"><i class="far fa-calendar-times"/> Calendario de reuniones virtuales 2020</a>
 * <a href="{{site.data.sitios.drive}}"><i class="fab fa-google-drive"/> Drive general de la materia</a>

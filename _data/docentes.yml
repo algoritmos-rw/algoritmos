@@ -17,20 +17,20 @@ ayudantes:
   mail: lopezn.agustin@gmail.com
   github: 
 
+- nombre: Ana Secchi
+  foto: /assets/img/docentes/anas.jpg
+  mail: asecchi@fi.uba.ar
+  github: 
+
 - nombre: Camila Dvorkin
   foto: /assets/img/docentes/camid.png
   mail: camidvorkin@gmail.com
   github: camidvorkin 
 
-- nombre: Daniela Genaro
-  foto: /assets/img/docentes/danig.jpg
-  mail: genarodaniela98@gmail.com 
-  github: 
-
-- nombre: Diego Balestieri
-  foto: /assets/img/docentes/diegob.jpg
-  mail: jbalestieri@fi.uba.ar
-  github: diegobalestieri
+- nombre: Cecilia Hortas
+  foto: /assets/img/docentes/cecih.jpg
+  mail: ceci.hortas@gmail.com
+  github: chortas
 
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
@@ -47,16 +47,6 @@ ayudantes:
   mail: federico.brasburg@gmail.com
   github: fedebrasburg
 
-- nombre: Federico del Mazo
-  foto: /assets/img/docentes/fededm.jpg
-  mail: delMazoFederico@gmail.com
-  github: FdelMazo
-
-- nombre: Franco Di María
-  foto: /assets/img/docentes/francodm.png
-  mail: franki.dimaria@gmail.com
-  github: dima1997
-
 - nombre: Ignacio Raik
   foto: /assets/img/docentes/nachor.png
   mail: ignacioraiksg@gmail.com
@@ -72,6 +62,11 @@ ayudantes:
   mail: collinetjorge@gmail.com
   github: jorgeCollinet
 
+- nombre: Julián Crespo
+  foto: /assets/img/docentes/julic.jpg  
+  mail: juliancrespo15@gmail.com
+  github: komod0
+
 - nombre: Lautaro Manzano
   foto: /assets/img/docentes/lautarom.jpg
   mail: manzano.lautaro@gmail.com
@@ -82,19 +77,9 @@ ayudantes:
   mail: tutecano1995@gmail.com
   github: tutecano1995 
 
-- nombre: Milena Marchese
-  foto: /assets/img/docentes/milem.jpg
-  mail: mile.marchese@gmail.com
-  github: milenamarchese
-
-- nombre: Rodrigo Souto
-  foto: /assets/img/docentes/rodris.jpg
-  mail: rnsoutob@gmail.com
-  github: rodrisouto
-
-- nombre: Sofía Morseletto
-  foto: /assets/img/docentes/sofim.png
-  mail: sofimorseletto@gmail.com
+- nombre: Taiel Colavecchia
+  foto: /assets/img/docentes/taiel.jpg
+  mail: tcolavecchia@fi.uba.ar
   github: 
 
 - nombre: Tomás Accini

@@ -10,5 +10,4 @@
 * Sedgewick, Robert: **"Algorithms in C++"**, Addison-Wesley, 1992.
 * Tenenbaum, Aaron M.;  Langsam, Yedidyah;  Augenstein, Moshe J.: **"Estructuras de datos en C"**, Prentice-Hall Hispanoamericana, 1993.
 * Kernighan, Brian W.;  Ritchie, Dennis M.: **"El lenguaje de programación C"**, Prentice-Hall Hispanoamericana, 1991.
-* [Skiena, Steven S.: **The Algorithm Design Manual**, Springer, 2008](http://link.springer.com/openurl?genre=book&isbn=978-1-84800-070-4). 
 
