@@ -153,7 +153,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     }
     ```
 
-1.  (★★) Indicar la complejidad del siguiente algoritmo, utilizando el teorema del maestro:
+1.  (★★) Indicar la complejidad del siguiente algoritmo, utilizando el teorema maestro:
 
     ```cpp
     // Busca un elemento usando D&C. El arreglo se encuentra ordenado.
@@ -185,7 +185,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     }
     ```
 
-1.  (★) Indicar, utilizando el Teorema del Maestro, la complejidad del ejercicio anterior.
+1.  (★) Indicar, utilizando el Teorema Maestro, la complejidad del ejercicio anterior.
 
 1.  (★★) Indicar cuál es la complejidad de un algoritmo cuya ecuación de recurrencia es:
     $$\mathcal{T} = 2 \mathcal{T}\left(\frac{2}{3}n\right) + \mathcal{O}\left(\sqrt{n}\right)$$.
@@ -212,7 +212,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 
 1.  (★★★) Se tiene un arreglo tal que `[1, 1, 1, ..., 0, 0, ...]` (es decir, _unos seguidos de ceros_). Se pide:
     1. una función de orden $$\mathcal{O}(\log n)$$ que encuentre el índice del primer 0. Si no hay ningún 0 (solo hay unos), debe devolver -1.
-    1. demostrar con el Teorema del Maestro que la función es, en efecto, $$\mathcal{O}(\log n)$$.
+    1. demostrar con el Teorema Maestro que la función es, en efecto, $$\mathcal{O}(\log n)$$.
     {:.lower_alpha}
 
     Ejemplos:
@@ -231,7 +231,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     1. Implementar un algoritmo de división y conquista de orden $$\mathcal{O}(\log n)$$ que encuentre la posición
     $$p$$ del pico: `size_t posicion_pico(int v[], size_t ini, size_t fin);`. La función será invocará inicialmente como:
     `posicion_pico(v, 0, n-1)`, y tiene como pre-condición que el arreglo tenga forma de pico.
-    1. Justificar el orden del algoritmo mediante el teorema del maestro.
+    1. Justificar el orden del algoritmo mediante el teorema maestro.
     {:.lower_alpha}
 
 1.  (★★) Se quiere implementar MergeSort pero, en vez de dividir en dos partes el arreglo, dividirlo en tres, llamando
