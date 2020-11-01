@@ -19,6 +19,7 @@ crear un issue en [la página de issues del repositorio]({{site.github.repositor
 * <a href="{{site.data.sitios.calendario}}"><i class="far fa-calendar-times"/> Calendario de reuniones virtuales 2020</a>
 * <a href="{{site.data.sitios.drive}}"><i class="fab fa-google-drive"/> Drive general de la materia</a>
 * <a href="{{site.data.sitios.youtube}}"><i class="fab fa-youtube"/> Canal de YouTube</a> del curso
+* [Cuestionario sobre Árboles B]({{site.data.cuatrimestre.cuestionario_arboles_b}})
 * [Guías de ejercicios](material/guias.md)
 * [Página de visualizaciones recomendada](http://visualgo.net/)
 
