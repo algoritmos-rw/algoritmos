@@ -199,6 +199,11 @@ ERROR
 
 - Todas las operaciones trabajarán con números enteros, y devolverán números enteros. Se recomienda usar el tipo de C `long` para permitir operaciones de más de 32 bits (p.ej. $$3^{3^3}$$).
 
+  - <!-- https://github.com/gettalong/kramdown/issues/486 -->
+
+    Si se hace uso de la biblioteca [calc_helper](#calc_helper) mencionada más
+    abajo, el tipo será, simplemente, `calc_num`.
+
 - El conjunto de operadores posibles es: suma (`+`), resta (`-`), multiplicación (`*`), división entera (`/`), raíz cuadrada (`sqrt`), exponenciación (`^`), logaritmo (`log`) en base arbitraria, y operador ternario (`?`).
 
   - <!-- https://github.com/gettalong/kramdown/issues/486 -->
@@ -233,6 +238,10 @@ ERROR
 
   - <!-- gettalong/kramdown#486 -->
     Nota adicional: puede haber también múltiples espacios al comienzo de la línea, antes del primer token; por otra parte, no necesariamente habrá un espacio entre el último token y el caracter salto de línea que le sigue.
+
+  - <!-- kramdown#486 -->
+    Todo esto es tenido en cuenta en la función `dc_split` (ya implementada) de
+    la biblioteca [calc_helper](#calc_helper).
 
 - El resultado final de cada operación debe imprimirse en una sola línea por salida estándar (_stdout_). En caso de error, debe imprimirse —para esa operación— la cadena `ERROR`, _también_ por salida estándar, y sin ningún tipo de resultado parcial. Tras cualquier error en una operación, el programa continuará procesando el resto de líneas con normalidad.
 
@@ -318,6 +327,22 @@ Se debe aceptar espacios en blanco en cualquier punto de la expresión, excepto 
 Todos los operadores asocian por la izquierda, excepto la exponenciación, `^`, que asocia por la derecha.
 
 Por otra parte, `^` es el operador de mayor precedencia, seguido de `*` y `/` (ambos al mismo nivel); `+` y `-` son, ambos, los operadores de menor precedencia.
+
+
+### Biblioteca calc_helper
+{: #calc_helper}
+
+En el [sitio de descargas]({{site.skel}}) se puede obtener, para este TP, dos archivos (`calc_helper.h` y `calc_helper.c`) que conforman una biblioteca de tipos y funciones útiles para la implementación de ambos programas, _dc_ e _infix_.
+
+La biblioteca proporciona:
+
+  - funciones para procesar texto (`dc_split` e `infix_split`)
+  - funciones para reconocer elementos válidos en la entrada (`calc_parse`, y
+    sus tipos asociados)
+  - una pila de enteros, `pilaint_t`, implementada a partir del TDA Pila de
+    punteros genéricos (útil para la versión no recursiva de _dc)_
+
+Los archivos de la biblioteca están extensamente comentados, y en uno de los tipos se explica algunas ampliaciones que se pueden realizar para hacer aún más fácil la implementación de los programas. En particular, se sugiere agregar varios campos en el `struct calc_oper` para que, modificando la función `calc_parse()`, se informe de las distintas propiedades de cada operador.
 
 
 ## Criterios de aprobación
