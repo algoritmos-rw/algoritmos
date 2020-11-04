@@ -31,8 +31,8 @@ Para la implementación de estas funciones no se permite el usod uso de TDAs. S�
 
  - `strlen`
  - `strcpy`/`strncpy`
-  - `strdup`/`strndup`
-  - `snprintf`
+ - `strdup`/`strndup`
+ - `snprintf`
 
 [string.h]: http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html
 
@@ -340,7 +340,7 @@ La biblioteca proporciona:
   - funciones para reconocer elementos válidos en la entrada (`calc_parse`, y
     sus tipos asociados)
   - una pila de enteros, `pilaint_t`, implementada a partir del TDA Pila de
-    punteros genéricos (útil para la versión no recursiva de _dc)_
+    punteros genéricos (útil para la versión no recursiva de _dc_)
 
 Los archivos de la biblioteca están extensamente comentados, y en uno de los tipos se explica algunas ampliaciones que se pueden realizar para hacer aún más fácil la implementación de los programas. En particular, se sugiere agregar varios campos en el `struct calc_oper` para que, modificando la función `calc_parse()`, se informe de las distintas propiedades de cada operador.
 
