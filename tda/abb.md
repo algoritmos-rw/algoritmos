@@ -24,7 +24,7 @@ void *abb_borrar(abb_t *arbol, const char *clave);
 void *abb_obtener(const abb_t *arbol, const char *clave);
 bool abb_pertenece(const abb_t *arbol, const char *clave);
 
-size_t abb_cantidad(abb_t *arbol);
+size_t abb_cantidad(const abb_t *arbol);
 
 void abb_destruir(abb_t *arbol);
 ```
