@@ -287,7 +287,9 @@ es necesario utilizar dicha estructura de la forma más apropiada posible para
 optimizar de manera correcta el funcionamiento de la clínica.
 
 Se puede (y alentamos) implementar otros TDAs o estructuras que faciliten o mejoren la
-implementación de este Trabajo Práctico.
+implementación de este Trabajo Práctico. Les recordamos que un TDA no es un simple `struct`
+donde se guarda información, sino que debe tener comportamiento. Esto será un punto muy
+importante en la evaluación del Trabajo Práctico.
 
 Todas las estructuras deben estar implementadas de la forma más genérica
 posible y correctamente documentadas. En general, pueden emplear sin modificar
