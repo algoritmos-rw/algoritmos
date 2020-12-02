@@ -188,7 +188,7 @@ Salida si se atendió a une paciente (dos líneas):
         Se atiende a NOMBRE_PACIENTE
         N paciente(s) en espera para NOMBRE_ESPECIALIDAD
 
-donde $N$ es el número de pacientes que quedaron en espera tras atender al
+donde $$N$$ es el número de pacientes que quedaron en espera tras atender al
 paciente actual (que puede ser 0).
 
 Salida si no había previamente pacientes en la lista de espera (una línea):
