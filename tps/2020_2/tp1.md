@@ -27,12 +27,13 @@ El trabajo práctico número 1 tiene fecha de entrega para el día **{{fecha}}**
 
 Se pide implementar las funciones de manejo que cadenas que se describen a continuación. Adjunto en el [sitio de descargas]({{site.skel}}) se puede encontrar un archivo _strutil.h_ con todos sus prototipos.
 
-Para la implementación de estas funciones no se permite el uso de TDAs. Sí se permite, no obstante, el uso de las funciones de la biblioteca estándar de C [string.h] (excepto `strtok`). Se recomiendan, en particular:
+Para la implementación de estas funciones no se permite el uso de TDAs. Sí se permite, no obstante, el uso de las funciones de la biblioteca estándar de C [string.h] (excepto `strtok` y `strstr`). Se recomiendan, en particular:
 
- - `strlen`
+ - `strlen`, `strchr`
  - `strcpy`/`strncpy`
  - `strdup`/`strndup`
  - `snprintf`
+
 
 [string.h]: http://pubs.opengroup.org/onlinepubs/7908799/xsh/string.h.html
 
