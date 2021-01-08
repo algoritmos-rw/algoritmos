@@ -179,7 +179,7 @@ En este caso, la dirección de memoria de `x` es válida aún cuando termine la 
 
 Un archivo Makefile es un archivo creado para automatizar el proceso de compilación, ejecución y mantenimiento del código fuente. Al ejecutar el programa `make` se buscan estos archivos para ejecutar sus instrucciones y compilar el código fuente cuando sea necesario.
 
-Para más información se puede consultar este [apunte de la cátedra](https://drive.google.com/open?id=1iMUDd8tPJ-uZrZWRlw7uTmfcM1CEAJva) y el [Makefile de ejemplo](https://drive.google.com/open?id=15QDg5EmjCXVE_jrthNm-78TkG9fvG9K8).
+Para más información se puede consultar este [apunte de la cátedra](https://docs.google.com/presentation/d/1Ok1jAKLFOO4pzOQA6eK2yQgIEuFOzC_yjvFeFw_FCm8) y el [Makefile de ejemplo](https://drive.google.com/open?id=15QDg5EmjCXVE_jrthNm-78TkG9fvG9K8).
 
 
 ## ¿Cómo se le pasan parámetros por línea de comandos a un programa?
