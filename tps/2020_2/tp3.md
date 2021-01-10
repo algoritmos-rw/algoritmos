@@ -147,8 +147,8 @@ Entrada:
     ```
 Salida:
     ```
-    The Heart of Me - Miike Snow; Under The Bridge - Red Hot Chili Peppers; Sweet Dreams - Beyoncé; If U Seek Amy - Britney Spears; Pass This On - The Knife; Concrete - Crystal Castles; Ghetto Ass Witch (Feat. Gvcci Hvcci) - Ritualz; Ooh La La - Goldfrapp; Thinking Out Loud - Ed Sheeran; Dani California - Red Hot Chili Peppers
-    lorenafazion; livianatanna; hlovato906gmail; tamiresscarcell; sitevagalume
+    Poker Face - Lady Gaga; Desire - Meg Myers; 1998 (Feat. Banks) - Chet Faker; Glass & Patron - FKA Twigs; So High - Doja Cat; Bitch - Allie X; The Hills - The Weeknd; Telephone (feat. Beyoncé) - Lady Gaga; Circus - Britney Spears; You Need Me, I Don't Need You - Ed Sheeran
+    lorenafazion; hlovato906gmail; livianatanna; tamiresscarcell; flowerdkds99
     ```
 
 #### Ciclo de n canciones
