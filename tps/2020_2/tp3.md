@@ -47,7 +47,7 @@ ID	USER_ID	TRACK_NAME	ARTIST	PLAYLIST_ID	PLAYLIST_NAME	GENRES
 
 Algo a tener en cuenta es que dos artistas/grupos diferentes podrían tener canciones de mismo nombre. Por ejemplo, tanto _Ed Sheeran_ como _Nine Inch Nails_, o bien _Coheed and Cambria_, tienen una canción llamada _Eraser_.
 
-Como dicho archivo contiene una enorme cantidad de entradas, les dejamos también [un archivo más reducido](poner), para que puedan realizar pruebas más rápidamente.
+Como dicho archivo contiene una enorme cantidad de entradas, les dejamos también [un archivo más reducido](https://drive.google.com/file/d/1zW7y0XwlXFGOxjA0tgRJRrd4vZHrxzhO/view?usp=sharing), para que puedan realizar pruebas más rápidamente.
 
 
 Para la modelación, se recomienda el siguiente esquema: 
