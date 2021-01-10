@@ -39,3 +39,10 @@ a través de internet, ya sea yendo a través de los links (segundo término) o 
 
 Es necesario realizar varias iteraciones de este algoritmo para que termine por converger y que la
 actualización sea asincrónica (todos tomando los valores de la iteración anterior).
+
+## PageRank Personalizado
+
+Se puede ver a PageRank como un gigantezco [Random Walk](random_walks.md), de algún largo arbitrario y empezando desde cualquier vértice, contando la cantidad de apariciones.
+
+Otra utilidad de PageRank es la de poder encontrar qué vértices son más similares a otros. Esto es, hacer un Random Walk que comience en dichos vértices de interés (que puede ser uno sólo, si queremos ver los vértices similares a uno en particular), tomando un largo arbitrario. Siempre comenzando desde ese (o esos) vértices. En caso de ser más de uno, se elige de forma aleatoria desde cuál comenzar. Los vértices que más veces aparezcan, serán los más similares. 
+
