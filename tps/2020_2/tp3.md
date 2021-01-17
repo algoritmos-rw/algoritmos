@@ -5,7 +5,7 @@ math: true
 {% assign tp = site.data.trabajos.TP3 %}
 {% capture fecha %}{{tp.entrega | date: "%e/%m"}}{% endcapture %}
 
-Trabajo Práctico 3
+Trabajo Práctico 3: Recomendación de canciones en Spotify
 ================
 {:.no_toc}
 
@@ -54,7 +54,7 @@ Para la modelación, se recomienda el siguiente esquema:
 1. Tener un grafo no dirigido que relacione si a un usuario le gusta una canción (supongamos
 que a un usuario le gusta una canción si armó una playlist con ella). Esto formará un grafo bipartito
 en el cual en un grupo estarán los usuarios, y en el otro las canciones. 
-2. Tener un grafo no dirigido relacionando canciones si aparecen en una misma playlist (al menos una playlist lista a ambas canciones).
+2. Tener un grafo no dirigido relacionando canciones si aparecen en una misma playlist (al menos una playlist lista a ambas canciones). 
 
 ## Consigna
 
@@ -115,9 +115,6 @@ para determinar cuáles son la **canciones** más importantes.
 * Parámetros: `n`, la cantidad de canciones más importantes a mostrar.
 * Utilidad: nos muestra las `n` canciones más centrales/importantes del mundo según el algoritmo de
 pagerank, ordenadas de mayor importancia a menor importancia.
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(K(U + C + L) + n \log (C))$$, siendo $$K$$ la cantidad de
-iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(n \log C + L)$$
-(El término $$\mathcal{O}(n \log C)$$ proviene de obtener los Top-n luego de haber aplicado el algoritmo).
 * Ejemplo:
 Entrada:
     ```
@@ -154,20 +151,19 @@ Salida:
 #### Ciclo de n canciones
 
 * Comando: `ciclo`.
-* Parámetros: `página` y `n`.
-* Utilidad: permite obtener un ciclo de largo `n` que comience en la página indicada. 
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P^n)$$, pero realizando una buena poda puede reducirse
-sustancialmente el tiempo de ejecución.
+* Parámetros: `n` y `cancion`.
+* Utilidad: permite obtener un ciclo de largo `n` (dentro de la red de canciones) que comience en la canción indicada.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C^n)$$, pero realizando una buena poda puede reducirse sustancialmente el tiempo de ejecución.
 * Ejemplo:
 Entrada:
     ```
-    ciclo Jeremy Irons,4
-    ciclo Polonia,20
+    ciclo 7,By The Way - Red Hot Chili Peppers
+    ciclo 15,Love Me Like You Do - Ellie Goulding
     ```
 Salida:
     ```
-    Jeremy Irons -> The Silence of the Lambs (película) -> Dances with Wolves -> Premios Óscar -> Jeremy Irons
-    Polonia -> Unión Europea Occidental -> Unión Europea -> Idioma italiano -> Florencia -> Cannes -> Festival de Cannes -> Biarritz -> Pirineos Atlánticos -> Pirineos -> Alpes -> Dolomitas -> Marmolada -> Italia -> Pier Paolo Pasolini -> Roma -> Alfabeto fonético internacional -> Alfabeto Fonético Internacional -> Idioma ruso -> Moscú -> Polonia
+    By The Way - Red Hot Chili Peppers --> Fairy Tale - Shaman --> I Hate Everything About You - Three Days Grace --> Viva La Vida - Coldplay --> Under The Bridge - Red Hot Chili Peppers --> November Rain - Guns N' Roses --> Cryin' - Aerosmith --> By The Way - Red Hot Chili Peppers
+    Love Me Like You Do - Ellie Goulding --> Uptown Funk (Feat. Bruno Mars) - Mark Ronson --> Thinking Out Loud - Ed Sheeran --> Ship To Wreck - Florence And The Machine --> Fourfiveseconds (feat. Kanye West, Paul Mccartney) - Rihanna --> Feeling Myself (Feat. Beyoncé) - Nicki Minaj --> Cheerleader (Felix Jaehn Remix) - Omi --> Ayo (Feat. Tyga) - Chris Brown --> Um Leão - Pitty --> I Know What You Did Last Summer (feat. Camila Cabello) - Shawn Mendes --> Hello - Adele --> Confident - Demi Lovato --> Hotline Bling - Drake --> My House - Flo Rida --> Alive - Sia --> Love Me Like You Do - Ellie Goulding
     ```
     
 En caso de no haber un ciclo de dicho largo empezando desde la página mencionada, debe escribirse por salida estándar `No se encontro recorrido`.
@@ -176,21 +172,23 @@ En caso de no haber un ciclo de dicho largo empezando desde la página mencionad
 #### Todas en Rango
 
 * Comando: `rango`.
-* Parámetros: `página` y `n`. 
-* Utilidad: permite obtener la cantidad de páginas que se encuenten a **exactamente** `n` links/saltos desde la `página` pasada por parámetro.  
-* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(P + L)$$.
+* Parámetros: `n` y `cancion`. 
+* Utilidad: permite obtener la cantidad de canciones que se encuenten a **exactamente** `n` saltos desde la `cancion` pasada por parámetro.
+* Complejidad: Este comando debe ejecutar en $$\mathcal{O}(C + L)$$.
 * Ejemplo:
 Entrada:
     ```
-    rango Tokio,8
-    rango Tokio,3
-    rango Perón,4
+    rango 8,Shots - Imagine Dragons
+    rango 3,Shots - Imagine Dragons
+    rango 2,After Dark - Asian Kung-fu Generation
+    rango 4,I'm Yours - Jason Mraz
     ```
 Salida:
     ```
     0
-    39347
-    53346
+    10325
+    0
+    431
     ```
 
 
@@ -209,40 +207,42 @@ El clustering promedio de toda la red será:
 $$ C = \frac{1}{n} \sum_{\forall v \in \text{grafo}} C_i $$
 
 * Comando: `clustering`
-* Parámetros: `pagina`, opcional. 
-* Utilidad: Permite obtener el coeficiente de clustering de la página indicada. En caso de no indicar página, se deberá informar el clustering promedio de la red. En ambos casos, informar con hasta 3 dígitos decimales. 
-* Complejidad: En caso que se indique una página en particular, debe ejecutar en $$ ~ \mathcal{O}(1) $$ (considerando que la red es _muy_ dispersa). En caso que no se indique ninguna página, deberá ejecutar en $$ \mathcal{O}((P + L)^2) $$.
+* Parámetros: `cancion`, opcional. 
+* Utilidad: Permite obtener el coeficiente de clustering de la canción indicada. En caso de no indicar canción, se deberá informar el clustering promedio de la red. En ambos casos, informar con hasta 3 dígitos decimales. 
+* Complejidad: En caso que se indique una página en particular, debe ejecutar en $$ ~ \mathcal{O}(1) $$ (considerando que la red es _muy_ dispersa). En caso que no se indique ninguna página, deberá ejecutar en $$ \mathcal{O}((C + L)^2) $$.
 * Ejemplo:
 Entrada:
     ```
-    clustering River Plate
-    clustering Club Atlético River Plate
-    clustering Juan Domingo Perón
-    clustering Ámsterdam
-    # Ejemplo con la red de 5.000 artículos:
+    clustering Teenage Dream - Katy Perry
+    clustering Grow Old With Me - Tom Odell
+    clustering Drag Me Down - One Direction
+    clustering Heart Attack - Demi Lovato
+    # Ejemplo con red reducida de 5.000 entradas
     clustering
     ```
 Salida:
     ```
+    0.244
     0.000
-    0.030
-    0.018
-    0.065
-    # Ejemplo con la red de 5.000 artículos:
-    0.115
+    0.605
+    1.000
+    # Ejemplo con red reducida de 5.000 entradas
+    0.988
     ```
+
+La red reducida de 5000 entradas corresponde a las primeras 5000 líneas de estos archivos. Se obtiene de hacer `head -5000 spotify-mini.csv > spotify-5000.csv`.
 
 ## Entrega
 
-Adicionalmente a los archivos propios del trabajo práctico debe agregarse un archivo `entrega.mk` que contenga la regla `netstats` para generar el ejecutable de dicho programa (sea compilando o los comandos que fueren necesarios). Por ejemplo, teniendo un TP elaborado en Python, podría ser:
+Adicionalmente a los archivos propios del trabajo práctico debe agregarse un archivo `entrega.mk` que contenga la regla `recomendify` para generar el ejecutable de dicho programa (sea compilando o los comandos que fueren necesarios). Por ejemplo, teniendo un TP elaborado en Python, podría ser:
 
 ``` makefile
-netstats: netstats.py grafo.py biblioteca.py
-    cp netstats.py netstats
-    chmod +x netstats
+recomendify: recomendify.py grafo.py biblioteca.py
+    cp recomendify.py recomendify
+    chmod +x recomendify
 ```
 
-**Importante**: En caso de recibir un error `FileNotFoundError: [Errno 2] No such file or directory: './netstats': './netstats'`, tener en cuenta que para el caso de enviar código escrito en Python es necesario además indicar la ruta del intérprete. Esto puede hacerse agregando como primera línea del archivo principal (en el ejemplo, sería `netstats.py`) la línea: `#!/usr/bin/python3`.
+**Importante**: En caso de recibir un error `FileNotFoundError: [Errno 2] No such file or directory: './recomendify': './recomendify'`, tener en cuenta que para el caso de enviar código escrito en Python es necesario además indicar la ruta del intérprete. Esto puede hacerse agregando como primera línea del archivo principal (en el ejemplo, sería `recomendify.py`) la línea: `#!/usr/bin/python3`.
 
 ## Criterios de aprobación
 
