@@ -54,12 +54,12 @@ Para la modelación, se recomienda el siguiente esquema:
 1. Tener un grafo no dirigido que relacione si a un usuario le gusta una canción (supongamos
 que a un usuario le gusta una canción si armó una playlist con ella). Esto formará un grafo bipartito
 en el cual en un grupo estarán los usuarios, y en el otro las canciones. 
-2. Tener un grafo no dirigido relacionando canciones si comparten alguna playlist entre sí. 
+2. Tener un grafo no dirigido relacionando canciones si aparecen en una misma playlist (al menos una playlist lista a ambas canciones).
 
 ## Consigna
 
 Dado este archivo parseado, se debe modelar el sistema estructuras Grafo considerando los datos disponibles. Esto implica determinar todas las características necesarias para el o los grafos. 
-Se pide implementar un programa que como parámetro la ruta del archivo procesado:
+Se pide implementar un programa que reciba como parámetro la ruta del archivo procesado:
 ```
     $ ./recomendify spotify-procesado.tsv
 ```
@@ -69,15 +69,15 @@ Se pide implementar un programa que como parámetro la ruta del archivo procesad
 El trabajo puede realizarse en lenguaje a elección, siendo aceptados Python y C, y cualquier otro a ser discutido con el corrector asignado.
 
 El trabajo consiste de 3 partes:
-1. El TDA Grafo, con sus primitivas completamente agnósticas sobre su uso para modelar el sistema de redomendación de música.  
+1. El TDA Grafo, con sus primitivas completamente agnósticas sobre su uso para modelar el sistema de recomendación de música.  
 1. Una biblioteca de funciones de grafos, que permitan hacer distintas operaciones sobre un grafo que modela el sistema de música, sin importar cuál es la red específica.
-1. El programa `Recomendify` que utilice tanto el TDA como la biblioteca para poder implementar todo
+1. El programa `recomendify` que utilice tanto el TDA como la biblioteca para poder implementar todo
 lo requerido.
 
 Es importante notar que las primeras dos partes deberían poder funcionar en cualquier contexto: El TDA Grafo para cualquier tipo de TP3 (o utilidad); la biblioteca de funciones debe funcionar para aplicar cualquiera de las funciones implementadas sobre cualquier grafo que tenga las características de las de este TP. La tercera parte es la que se encuentra enteramente acoplada al TP en particular. 
 
-El programa debe recibir por parámetro, cargar en memoria el set de datos (`$ ./recomendify spotify-procesado.tsv`) y luego solicitar el ingreso de comandos por entrada estándar,
-del estilo `<comando> 'parametro'`. Notar que esto permite tener un archivo de instrucciones a ser
+El programa debe recibir el set de datos por parámetro (`$ ./recomendify spotify-procesado.tsv`), cargarlo en memoria y luego solicitar el ingreso de comandos por entrada estándar,
+del estilo `<comando> 'parametro'`. Nótese que esto permite tener en un archivo las instrucciones a ser
 ejecutadas (i.e. `$ ./recomendify spotify-procesado.tsv < entrada.txt`).
 
 A continuación se listarán los comandos junto a ejemplos de entrada y salidas para el caso de la red reducida. 
@@ -86,8 +86,8 @@ A continuación se listarán los comandos junto a ejemplos de entrada y salidas 
 #### Camino más corto
 
 * Comando: `camino`.
-* Parámetros: `origen` y `destino`. Origen y destino son **canciones**. Se indica el autor en cada caso. 
-* Utilidad: nos imprime una lista con el cual se conectan (en la menor cantidad de pasos posibles) una canción con otra, considerando los usuarios intermedios y las listas de reproducción en las que aparecen.
+* Parámetros: `origen` y `destino` (separados por `>>>>`). Origen y destino son **canciones**. Se indica el autor en cada caso. 
+* Utilidad: nos imprime una lista con la cual se conecta (en la menor cantidad de pasos posibles) una canción con otra, considerando los usuarios intermedios y las listas de reproducción en las que aparecen.
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(U + C + L)$$, siendo $$U$$ la cantidad
 de Usuarios, $$C$$ la cantidad de canciones, y $$L$$ la cantidad de apariciones totales de canciones en listas de reproducción (las aristas del grafo).
 * Ejemplos:
@@ -113,7 +113,7 @@ para determinar cuáles son la **canciones** más importantes.
 
 * Comando: `mas_importantes`.
 * Parámetros: `n`, la cantidad de canciones más importantes a mostrar.
-* Utilidad: nos muestra las `n` páginas más centrales/importantes del mundo según el algoritmo de
+* Utilidad: nos muestra las `n` canciones más centrales/importantes del mundo según el algoritmo de
 pagerank, ordenadas de mayor importancia a menor importancia.
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(K(U + C + L) + n \log (C))$$, siendo $$K$$ la cantidad de
 iteraciones a realizar para llegar a la convergencia (puede simplificarse a $$\mathcal{O}(n \log C + L)$$
@@ -128,7 +128,7 @@ Salida:
     Bad Romance - Lady Gaga; Poker Face - Lady Gaga; Telephone (feat. Beyoncé) - Lady Gaga; Paparazzi - Lady Gaga; Halo - Beyoncé; Viva La Vida - Coldplay; Single Ladies (Put a Ring on It) - Beyoncé; Decode - Paramore; In The End - Linkin Park; Levo Comigo - Restart; Leave Out All The Rest - Linkin Park; Broken-Hearted Girl - Beyoncé; Alejandro - Lady Gaga; If I Were A Boy - Beyoncé; I Gotta Feeling - Black Eyed Peas; Amo Noite E Dia - Jorge e Mateus; Sweet Dreams - Beyoncé; Smells Like Teen Spirit - Nirvana; Wonderwall - Oasis; Just Dance (feat. Colby O'Donis) - Lady Gaga
     ```
 
-**Importante**: Considerar que esto podría pedirse varias veces por ejecución; y no se desea repetir el calculo (ya que no debería cambiar el valor de pagerank de ningún artículo). Además; dado que hay un factor aleatorio, puede llegar a variar levemente la lista. En las pruebas del curso se tiene bien contemplado esto. 
+**Importante**: Considerar que esto podría pedirse varias veces por ejecución; y no se desea repetir el cálculo (ya que no debería cambiar el valor de pagerank de ningún ítem). Además, dado que hay un factor aleatorio, puede llegar a variar levemente la lista. En las pruebas del curso se tiene bien contemplado esto. 
 
 #### Recomendación (usuarios o canciones)
 
@@ -137,9 +137,9 @@ Usando la idea de [PageRank Personalizado](/algo2/material/apuntes/pagerank), y 
 La idea será aplicar un PageRank Personalizado en el grafo completo (bipartito) desde el listado de canciones pasadas. Las canciones que tengan mayor PageRank Personalizado serán canciones a recomendar para escuchar (considerar no recomendar una canción que ya esté en la lista pasada), los usuarios con mayor PageRank Personalizado serán usuarios para recomendar seguir.
 
 * Comando: `recomendacion`.
-* Parámetros: `usuarios/canciones`, si se espera una recomendación para seguir un usuario o para escuchar una cancion; `n`, la cantidad de usuarios o canciones a recomendar; `cancion1 >>>> cancion2 >>>> ... >>>> cancionK`, las canciones que ya sabemos que le gustan a la persona a recomendar (que podrías ser vos mismo ;-)).
+* Parámetros: `usuarios/canciones`, si se espera una recomendación para seguir un usuario o para escuchar una cancion; `n`, la cantidad de usuarios o canciones a recomendar; `cancion1 >>>> cancion2 >>>> ... >>>> cancionK`, las canciones que ya sabemos que le gustan a la persona a recomendar (que podrías ser vos misma ;-)).
 * Utilidad: Dar una lista de `n` usuarios o canciones para recomendar, dado el listado de canciones que ya sabemos que le gustan a la persona a la cual recomedar. 
-* EJemplo:
+* Ejemplo:
 Entrada:
     ```
     recomendacion canciones 10 Love Story - Taylor Swift >>>> Toxic - Britney Spears >>>> I Wanna Be Yours - Arctic Monkeys >>>> Hips Don't Lie (feat. Wyclef Jean) - Shakira >>>> Death Of A Martian - Red Hot Chili Peppers
