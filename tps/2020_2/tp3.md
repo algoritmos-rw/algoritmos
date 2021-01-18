@@ -108,7 +108,7 @@ Salida:
 
 #### Canciones más importantes
 
-Utlizaremos el algoritmo de [PageRank](/algo2/material/apuntes/pagerank) para implementar este comando,
+Utilizaremos el algoritmo de [PageRank](/algo2/material/apuntes/pagerank) para implementar este comando,
 para determinar cuáles son la **canciones** más importantes.
 
 * Comando: `mas_importantes`.
