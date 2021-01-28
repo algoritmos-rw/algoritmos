@@ -106,6 +106,9 @@ Salida:
     No se encontro recorrido
     ```
 
+En caso de que el `origen` o `destino` indicados no sean canciones válidas, se debe imprimir `Alguna de las canciones indicadas no es válida`. 
+
+
 #### Canciones más importantes
 
 Utilizaremos el algoritmo de [PageRank](/algo2/material/apuntes/pagerank) para implementar este comando,
