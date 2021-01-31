@@ -106,7 +106,7 @@ Salida:
     No se encontro recorrido
     ```
 
-En caso de que el `origen` o `destino` indicados no sean canciones válidas, se debe imprimir `Alguna de las canciones indicadas no es válida`. 
+En caso de que el `origen` o `destino` indicados no sean canciones válidas, se debe imprimir `Tanto el origen como el destino deben ser canciones`. 
 
 
 #### Canciones más importantes
@@ -116,8 +116,8 @@ para determinar cuáles son la **canciones** más importantes.
 
 * Comando: `mas_importantes`.
 * Parámetros: `n`, la cantidad de canciones más importantes a mostrar.
-* Utilidad: nos muestra las `n` canciones más centrales/importantes del mundo según el algoritmo de
-pagerank, ordenadas de mayor importancia a menor importancia.
+* Utilidad: nos muestra las `n` **canciones** más centrales/importantes del mundo según el algoritmo de
+pagerank, ordenadas de mayor importancia a menor importancia. También pueden utilizar otra métrica/algoritmo para detectar esto, como [Hubs and Authorities](https://es.wikipedia.org/wiki/Algoritmo_HITS) ([paper original aquí](https://www.cs.cornell.edu/home/kleinber/auth.pdf)).
 * Ejemplo:
 Entrada:
     ```
@@ -160,8 +160,8 @@ Salida:
 * Ejemplo:
 Entrada:
     ```
-    ciclo 7,By The Way - Red Hot Chili Peppers
-    ciclo 15,Love Me Like You Do - Ellie Goulding
+    ciclo 7 By The Way - Red Hot Chili Peppers
+    ciclo 15 Love Me Like You Do - Ellie Goulding
     ```
 Salida:
     ```
@@ -181,10 +181,10 @@ En caso de no haber un ciclo de dicho largo empezando desde la página mencionad
 * Ejemplo:
 Entrada:
     ```
-    rango 8,Shots - Imagine Dragons
-    rango 3,Shots - Imagine Dragons
-    rango 2,After Dark - Asian Kung-fu Generation
-    rango 4,I'm Yours - Jason Mraz
+    rango 8 Shots - Imagine Dragons
+    rango 3 Shots - Imagine Dragons
+    rango 2 After Dark - Asian Kung-fu Generation
+    rango 4 I'm Yours - Jason Mraz
     ```
 Salida:
     ```
