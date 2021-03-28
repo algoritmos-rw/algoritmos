@@ -7,11 +7,6 @@ profesor:
 
 ayudantes:
 
-- nombre: Adeodato Simó
-  foto: /assets/img/docentes/dato.jpg
-  mail: dato@fi.uba.ar
-  github: dato
-
 - nombre: Agustín López Núñez
   foto: /assets/img/docentes/agusln.jpg
   mail: lopezn.agustin@gmail.com
@@ -26,11 +21,6 @@ ayudantes:
   foto: /assets/img/docentes/camid.png
   mail: camidvorkin@gmail.com
   github: camidvorkin 
-
-- nombre: Cecilia Hortas
-  foto: /assets/img/docentes/cecih.jpg
-  mail: ceci.hortas@gmail.com
-  github: chortas
 
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
@@ -47,10 +37,20 @@ ayudantes:
   mail: federico.brasburg@gmail.com
   github: fedebrasburg
 
+- nombre: Florencia Sardella
+  foto: /assets/img/docentes/unknown.png
+  mail: 
+  github: 
+
 - nombre: Ignacio Raik
   foto: /assets/img/docentes/nachor.png
   mail: ignacioraiksg@gmail.com
   github: NachoRaik
+
+- nombre: Javier Di Santo
+  foto: /assets/img/docentes/unknown.png
+  mail: 
+  github: 
 
 - nombre: Jasmina Sella Faena
   foto: /assets/img/docentes/jasminasf.jpg
@@ -62,16 +62,6 @@ ayudantes:
   mail: collinetjorge@gmail.com
   github: jorgeCollinet
 
-- nombre: Julián Crespo
-  foto: /assets/img/docentes/julic.jpg  
-  mail: juliancrespo15@gmail.com
-  github: komod0
-
-- nombre: Lautaro Manzano
-  foto: /assets/img/docentes/lautarom.jpg
-  mail: manzano.lautaro@gmail.com
-  github: ManzanoLautaro
-
 - nombre: Matías Cano
   foto: /assets/img/docentes/matic.png
   mail: tutecano1995@gmail.com
@@ -82,8 +72,13 @@ ayudantes:
   mail: tcolavecchia@fi.uba.ar
   github: 
 
-- nombre: Tomás Accini
-  foto: /assets/img/docentes/tomasa.jpg
-  mail: tomasaccini@gmail.com
-  github: tomasaccini
+- nombre: Tomás Grüner
+  foto: /assets/img/docentes/unknown.png
+  mail: 
+  github: 
 
+- nombre: Tomás Szwartcberg
+  foto: /assets/img/docentes/unknown.png
+  mail: 
+  github: 
+    
