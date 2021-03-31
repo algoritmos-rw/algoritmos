@@ -70,7 +70,7 @@ ayudantes:
 - nombre: Milena Marchese
   foto: /assets/img/docentes/milem.jpg
   mail: mile.marchese@gmail.com
-  github: 
+  github: milenamarchese
 
 - nombre: Taiel Colavecchia
   foto: /assets/img/docentes/taiel.jpg
@@ -78,9 +78,9 @@ ayudantes:
   github: 
 
 - nombre: Tomás Grüner
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/tomig.jpg
   mail: tgruner@fi.uba.ar
-  github: 
+  github: MegaRedHand
 
 - nombre: Tomás Szwartcberg
   foto: /assets/img/docentes/tomis.jpeg
