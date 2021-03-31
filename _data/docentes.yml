@@ -32,15 +32,16 @@ ayudantes:
   mail: fgonzalezlisella@gmail.com
   github: Fgl
 
+- nombre: Federico Barrios
+  foto: /assets/img/docentes/unknown.png
+  mail: fede.47@gmail.com
+  github: 
+
+
 - nombre: Federico Brasburg
   foto: /assets/img/docentes/fedebra.png
   mail: federico.brasburg@gmail.com
   github: fedebrasburg
-
-- nombre: Florencia Sardella
-  foto: /assets/img/docentes/unknown.png
-  mail: 
-  github: 
 
 - nombre: Ignacio Raik
   foto: /assets/img/docentes/nachor.png
@@ -49,7 +50,7 @@ ayudantes:
 
 - nombre: Javier Di Santo
   foto: /assets/img/docentes/unknown.png
-  mail: 
+  mail: javidisanto@gmail.com
   github: 
 
 - nombre: Jasmina Sella Faena
@@ -67,6 +68,11 @@ ayudantes:
   mail: tutecano1995@gmail.com
   github: tutecano1995 
 
+- nombre: Milena Marchese
+  foto: /assets/img/docentes/milem.png
+  mail: mile.marchese@gmail.com
+  github: 
+
 - nombre: Taiel Colavecchia
   foto: /assets/img/docentes/taiel.jpg
   mail: tcolavecchia@fi.uba.ar
@@ -74,11 +80,11 @@ ayudantes:
 
 - nombre: Tomás Grüner
   foto: /assets/img/docentes/unknown.png
-  mail: 
+  mail: tgruner@fi.uba.ar
   github: 
 
 - nombre: Tomás Szwartcberg
   foto: /assets/img/docentes/unknown.png
-  mail: 
+  mail: tszwarcberg@fi.uba.ar
   github: 
     
