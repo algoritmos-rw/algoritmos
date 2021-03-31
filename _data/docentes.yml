@@ -33,10 +33,9 @@ ayudantes:
   github: Fgl
 
 - nombre: Federico Barrios
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/fedeb.png
   mail: fede.47@gmail.com
-  github: 
-
+  github: fbarrios
 
 - nombre: Federico Brasburg
   foto: /assets/img/docentes/fedebra.png
@@ -49,7 +48,7 @@ ayudantes:
   github: NachoRaik
 
 - nombre: Javier Di Santo
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/javids.png
   mail: javidisanto@gmail.com
   github: 
 
@@ -69,7 +68,7 @@ ayudantes:
   github: tutecano1995 
 
 - nombre: Milena Marchese
-  foto: /assets/img/docentes/milem.png
+  foto: /assets/img/docentes/milem.jpg
   mail: mile.marchese@gmail.com
   github: 
 
@@ -84,7 +83,7 @@ ayudantes:
   github: 
 
 - nombre: Tomás Szwartcberg
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/tomis.jpeg
   mail: tszwarcberg@fi.uba.ar
-  github: 
+  github: szwtomas
     
