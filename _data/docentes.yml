@@ -7,11 +7,6 @@ profesor:
 
 ayudantes:
 
-- nombre: Adeodato Simó
-  foto: /assets/img/docentes/dato.jpg
-  mail: dato@fi.uba.ar
-  github: dato
-
 - nombre: Agustín López Núñez
   foto: /assets/img/docentes/agusln.jpg
   mail: lopezn.agustin@gmail.com
@@ -27,11 +22,6 @@ ayudantes:
   mail: camidvorkin@gmail.com
   github: camidvorkin 
 
-- nombre: Cecilia Hortas
-  foto: /assets/img/docentes/cecih.jpg
-  mail: ceci.hortas@gmail.com
-  github: chortas
-
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
   mail: egenender@gmail.com
@@ -41,6 +31,11 @@ ayudantes:
   foto: /assets/img/docentes/fionag.jpg
   mail: fgonzalezlisella@gmail.com
   github: Fgl
+
+- nombre: Federico Barrios
+  foto: /assets/img/docentes/fedeb.png
+  mail: fede.47@gmail.com
+  github: fbarrios
 
 - nombre: Federico Brasburg
   foto: /assets/img/docentes/fedebra.png
@@ -52,6 +47,11 @@ ayudantes:
   mail: ignacioraiksg@gmail.com
   github: NachoRaik
 
+- nombre: Javier Di Santo
+  foto: /assets/img/docentes/javierds.jpg
+  mail: jdisanto@fi.uba.ar
+  github: 
+
 - nombre: Jasmina Sella Faena
   foto: /assets/img/docentes/jasminasf.jpg
   mail: jasminasf@gmail.com
@@ -62,28 +62,28 @@ ayudantes:
   mail: collinetjorge@gmail.com
   github: jorgeCollinet
 
-- nombre: Julián Crespo
-  foto: /assets/img/docentes/julic.jpg  
-  mail: juliancrespo15@gmail.com
-  github: komod0
-
-- nombre: Lautaro Manzano
-  foto: /assets/img/docentes/lautarom.jpg
-  mail: manzano.lautaro@gmail.com
-  github: ManzanoLautaro
-
 - nombre: Matías Cano
   foto: /assets/img/docentes/matic.png
   mail: tutecano1995@gmail.com
   github: tutecano1995 
+
+- nombre: Milena Marchese
+  foto: /assets/img/docentes/milem.jpg
+  mail: mile.marchese@gmail.com
+  github: milenamarchese
 
 - nombre: Taiel Colavecchia
   foto: /assets/img/docentes/taiel.jpg
   mail: tcolavecchia@fi.uba.ar
   github: 
 
-- nombre: Tomás Accini
-  foto: /assets/img/docentes/tomasa.jpg
-  mail: tomasaccini@gmail.com
-  github: tomasaccini
+- nombre: Tomás Grüner
+  foto: /assets/img/docentes/tomig.jpg
+  mail: tgruner@fi.uba.ar
+  github: MegaRedHand
 
+- nombre: Tomás Szwartcberg
+  foto: /assets/img/docentes/tomis.jpeg
+  mail: tszwarcberg@fi.uba.ar
+  github: szwtomas
+    
