@@ -93,6 +93,10 @@ bool _arreglo_es_magico(int arr[], size_t inicio, size_t fin) {
     if (arr[medio] < medio) {
         return _arreglo_es_magico(arr, medio + 1, fin);
     } else {
+        // considerando el caso de haber llegado hasta el extremo izquierdo, 
+        // y que esto puede dar underflow por el uso de size_t:
+        if (medio == 0) return false;
+        
         return _arreglo_es_magico(arr, inicio, medio - 1);
     }
 }
