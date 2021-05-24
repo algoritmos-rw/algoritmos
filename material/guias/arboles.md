@@ -204,3 +204,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 
 1.  (★★★) Determinar cómo es el Árbol cuyo pre order es EURMAONDVSZT, e in order es MRAUOZSVDNET, e 
     indicar su recorrido post order.
+    
+1.  (★★★) En un árbol binario, dado un nodo con dos hijos, explicar por qué su predecesor en el recorrido 
+    inorder no puede tener hijo derecho, y que su sucesor (también, en el recorrido inorder) no puede tener 
+    hijo izquierdo.
