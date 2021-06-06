@@ -268,3 +268,16 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
     ```
     {"caa", "acbd", "acba", "bac", "bad"} --> ['c', 'd', 'a', 'b']
     ```
+    
+1.  (★★) Implementar un algoritmo que reciba un grafo dirigido y nos devuelva la cantidad de componentes débilmente 
+    conexas de este. Indicar y justificar la complejidad del algoritmo implementado. 
+
+1.  (★★★) Contamos con un grafo **dirigido** que modela un ecosistema. En dicho grafo, cada vértice es una
+    especie, y cada arista `(v, w)` indica que `v` es _depredador natural_ de `w`. Considerando la
+    horrible tendencia del ser humano por llevar a la extinción especies, algo que nos puede interesar 
+    es saber si existe alguna especie que, si llegara a desaparecer, rompería todo el ecosistema: quienes la
+    depredan no tienen un sustituto (y, por ende, pueden desaparecer también) y/o quienes eran depredados
+    por esta ya no tienen amenazas, por lo que crecerán descontroladamente.
+    Implementar un algoritmo que reciba un grafo de dichas características y devuelva una lista de 
+    todas las especies que cumplan lo antes mencionado. Indicar y justificar la complejidad del 
+    algoritmo implementado. 
