@@ -45,15 +45,15 @@ Implementar dos programas en C:
 
 Este programa se utilizará para contar los trending topics en un conjunto de tweets, leyendo cada
 línea proveniente de la *entrada estándar* (`stdin`). Como se sabe que la cantidad de mensajes puede 
-ser muy grande, o bien infinitos, para usarlo se requieren dos parámetros enteros, llamados $n$ y $k$.
+ser muy grande, o bien infinitos, para usarlo se requieren dos parámetros enteros, llamados $$n$$ y $$k$$.
 
-El programa deberá imprimir por *salida estándar* (`stdout`) el **histórico** de los $k$ TTs aproximados cada
+El programa deberá imprimir por *salida estándar* (`stdout`) el **histórico** de los $$k$$ TTs aproximados cada
 $n$ lineas, ordenados por ocurrencias (en caso que dos TT tengan la misma cantidad de ocurrencias, se deberá
-mostrar por orden alfabético). Pueden suponer que $n$ y $k$ serán valores tales que se pueda almacenar
+mostrar por orden alfabético). Pueden suponer que $$n$$ y $$k$$ serán valores tales que se pueda almacenar
 en memoria esa cantidad de cadenas o estructuras auxiliares.
 
-El tiempo de procesamiento de cada tag debe ser $\mathcal{O}(1)$, mientras que la impresión de los $k$ TT 
-debe realizarse en $\mathcal{O}(n + k \log n)$.
+El tiempo de procesamiento de cada tag debe ser $$\mathcal{O}(1)$$, mientras que la impresión de los $$k$$ TT 
+debe realizarse en $$\mathcal{O}(n + k \log n)$$.
 
 Ejemplo de invocación:
 	```
@@ -89,7 +89,7 @@ menor a la cantidad de _TTs_, y que dicho archivo termina, consideramos que se p
 memoria todo lo necesario para procesar la entrada.
 
 El programa deberá procesar la entrada y luego deberá escribir por **salida estándar** los usuarios y la cantidad de
-hashtags que utilizaron en tiempo lineal: $\mathcal{O}(u + t)$ siendo $u$ la cantidad de usuarios encontrados y $t$ la
+hashtags que utilizaron en tiempo lineal: $$\mathcal{O}(u + t)$$ siendo $$u$$ la cantidad de usuarios encontrados y $$t$$ la
 cantidad de hashtags diferentes, ordenados según ocurrencias. Los usuarios que tienen la misma cantidad de
 hashtags tienen que ser impresos por orden alfabético (tener en cuenta que para ordenar alfabéticamente a los
 usuarios, los nombres de los mismos no superan más de 15 caracteres).
