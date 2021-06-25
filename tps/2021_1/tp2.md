@@ -48,7 +48,7 @@ línea proveniente de la *entrada estándar* (`stdin`). Como se sabe que la cant
 ser muy grande, o bien infinitos, para usarlo se requieren dos parámetros enteros, llamados $$n$$ y $$k$$.
 
 El programa deberá imprimir por *salida estándar* (`stdout`) el **histórico** de los $$k$$ TTs aproximados cada
-$n$ lineas, ordenados por ocurrencias (en caso que dos TT tengan la misma cantidad de ocurrencias, se deberá
+$$n$$ lineas, ordenados por ocurrencias (en caso que dos TT tengan la misma cantidad de ocurrencias, se deberá
 mostrar por orden alfabético). Pueden suponer que $$n$$ y $$k$$ serán valores tales que se pueda almacenar
 en memoria esa cantidad de cadenas o estructuras auxiliares.
 
@@ -68,7 +68,7 @@ largo de éstos serán dejados a criterio del grupo.
 Asimismo, se pide que se imprima la frecuencia estimada para poder realizar durante la corrección 
 una comparación con la frecuencia exacta. La salida debe ser como se indica a continuación, con 
 separadores numerados entre cada grupo de _TT_; por ejemplo, para una entrada de 9 líneas, con 
-$n=4$ y $k=2$ la salida sería del estilo:
+$$n=4$$ y $$k=2$$ la salida sería del estilo:
 
     ```
     --- 1
