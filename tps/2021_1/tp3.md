@@ -155,7 +155,8 @@ Salida:
 ```
 
 Considerar que el "score" de pagerank no va a cambiar por más que se ejecute muchas veces diferentes, por lo
-que lo mejor será tener guardado los scores, y calcular unicamente una vez estos. 
+que lo mejor será calcular únicamente la primera vez que se pidan, manteniendo guardado los scores para reutilizarlos
+si se vuelven a necesitar. 
 
 ### Persecución rápida
 
