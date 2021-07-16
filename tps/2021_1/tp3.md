@@ -3,7 +3,7 @@ title: "TP3 – Grafos y la red de delincuencia"
 math: true
 ---
 
-{% assign tp = site.data.trabajos.TP2 %}
+{% assign tp = site.data.trabajos.TP3 %}
 {% capture fecha %}{{tp.entrega | date: "%e/%m"}}{% endcapture %}
 
 
@@ -13,7 +13,7 @@ Trabajo Práctico 3
 {:.no_toc}
 
 El Trabajo Práctico número 3 es de elaboración grupal, y tiene fecha de entrega
-para el**{{fecha}}**.
+para el **{{fecha}}**.
 
 Contenido
 ---------
