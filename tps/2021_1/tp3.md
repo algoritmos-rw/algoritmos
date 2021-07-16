@@ -13,7 +13,7 @@ Trabajo Práctico 3
 {:.no_toc}
 
 El Trabajo Práctico número 3 es de elaboración grupal, y tiene fecha de entrega
-para el**{{fecha}}**.
+para el **{{fecha}}**.
 
 Contenido
 ---------
