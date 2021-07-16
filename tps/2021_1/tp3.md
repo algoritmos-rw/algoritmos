@@ -3,7 +3,7 @@ title: "TP3 – Grafos y la red de delincuencia"
 math: true
 ---
 
-{% assign tp = site.data.trabajos.TP2 %}
+{% assign tp = site.data.trabajos.TP3 %}
 {% capture fecha %}{{tp.entrega | date: "%e/%m"}}{% endcapture %}
 
 
