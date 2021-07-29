@@ -238,8 +238,6 @@ Salida:
 
 ### Componentes Fuertemente Conexas
 
-Se debe leer el apunte sobre [componentes fuertemente conexas](/algo2/material/apuntes/cfc).
-
 * Comando: `cfc`
 * Parámetros: ninguno.
 * Utilidad: Imprime cada conjunto de vértices entre los cuales todos están conectados con todos.
