@@ -74,7 +74,7 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
 
 1.  (★★★) Escribir una función en C que, dado un arreglo de $$n$$ cadenas y un entero
     positivo $$k$$, devuelva una lista con las $$k$$ cadenas más largas. Se espera que el
-    orden del algoritmo sea $$\mathcal{O}(n \log k)$$. Justificar el orden.
+    orden del algoritmo sea $$\mathcal{O}(n + k \log n)$$. Justificar el orden.
 
 1.  (★★★) Para implementar un TDA Cola de prioridad, nos proponen la siguiente solución: usar un arreglo
     desordenado (`arr`) para insertar los datos, y una variable (`maximo`) para poder obtener el
