@@ -48,14 +48,14 @@ ayudantes:
   github: komod0
 
 - nombre: Lucas Fiegl
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/lucasf.jpg
   mail: lfiegl@fi.uba.ar
   github: 
 
 - nombre: Lucía Capón
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/luciac.jpg
   mail: lcaponpaul@fi.uba.ar
-  github: 
+  github: luciacp
 
 - nombre: Matías Cano
   foto: /assets/img/docentes/matic.png
@@ -63,19 +63,19 @@ ayudantes:
   github: tutecano1995 
 
 - nombre: Santiago Bellido
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/santib.png
   mail: santiago.bellido@hotmail.com
-  github: 
+  github: saantim
 
 - nombre: Santiago Klein
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/santik.png
   mail: sklein@fi.uba.ar
-  github: 
+  github: sankle
 
 - nombre: Santiago Testa
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/santit.png
   mail: stesta@fi.uba.ar
-  github: 
+  github: stesta1
 
 - nombre: Taiel Colavecchia
   foto: /assets/img/docentes/taiel.jpg
