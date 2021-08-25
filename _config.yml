@@ -5,8 +5,8 @@ description: >
   Facultad de Ingeniería, Universidad de Buenos Aires.
 
 baseurl: "/algo2"
-entregas: "https://algoritmos-rw.turing.pink/entregas/"
-notas: "https://algoritmos-rw.turing.pink/notas/"
+entregas: "https://algoritmos-rw.dijkstra.ar/entregas/"
+notas: "https://algoritmos-rw.dijkstra.ar/notas/"
 skel: "https://algoritmos-rw.github.io/algo2_skel"
 algo1: "https://algoritmos1rw.ddns.net/"
 # url: "https://algoritmos-rw.github.io"
