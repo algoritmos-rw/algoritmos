@@ -1,7 +1,7 @@
 # Site settings
 title: Algoritmos y Programación II
 description: >
-  Página de la materia Algoritmos y Programación II, curso Buchwald (ex Wachenchauzer).
+  Página de la materia Algoritmos y Programación II, curso Buchwald.
   Facultad de Ingeniería, Universidad de Buenos Aires.
 
 baseurl: "/algo2"
