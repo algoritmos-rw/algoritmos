@@ -23,8 +23,6 @@ Las pruebas deben dar todas OK, y las pueden ejecutar con:
 
     ./pruebas
 
-En la entrega de ser impresa en una hoja de papel, con su nombre y padrón, imprimiendo únicamente el archivo `tp0.c`.
-
-Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
+La entrega se hará de forma digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}).
 
 **No olviden revisar los [primeros pasos en Linux](/algo2/faq/primeros-pasos) y las [preguntas frecuentes](/algo2/faq/).**
