@@ -16,9 +16,7 @@ La cola debe ser enlazada, es decir que en lugar de usar un arreglo, usa nodos e
 
 Deben entregar un archivo `pruebas_cola.c` que haga las correspondientes pruebas unitarias. Además de las pruebas obligatorias análogas a las pedidas para la [pila](pila.md), también tienen que incluir unas pruebas para probar la destrucción con y sin funciones de destrucción de los elementos.
 
-Deberán entregar el código en papel, con el nombre y padrón, imprimiendo el archivo `cola.c` y el archivo `pruebas_cola.c`.
-
-Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
+Deberán entregar el código en formato digital, subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 
 **No olviden revisar las [preguntas frecuentes de la cola](/algo2/faq/cola)**
 
