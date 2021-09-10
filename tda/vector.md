@@ -27,12 +27,9 @@ Además, deberán estudiar la implementación propuesta de las siguientes dos pr
 
 La implementación debe respetar los lineamientos de la documentación y tal como lo hicieron con el TP0 deben lograr pasar todas las pruebas con OK.
 
-Deben entregar una hoja de papel, con su nombre y padrón,
-**imprimiendo únicamente las funciones que implementaron ustedes**.
+La entrega se realizará de forma digital, subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 
-Además, deben subir el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
-
-Importante: No enviar el mail hasta tanto asegurarse que el programa compila sin warnings, todas las pruebas dan OK y valgrind no reporta errores.
+Importante: No enviar la entrega hasta tanto asegurarse que el programa compila sin warnings, todas las pruebas dan OK y valgrind no reporta errores.
 
 Usar la misma linea provista para el tp0 para compilar. Para correr Valgrind, usar:
 
