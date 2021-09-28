@@ -260,3 +260,14 @@ void ordenar_por_mes(char** fechas, size_t n) {
     de $$0$$ a $$K$$ (constante conocida), procese dichos números en tiempo $$\mathcal{O}(n + K)$$, devuelva alguna
     estructura que permita consultar cuántos valores ingresados están en el intervalo `(A, B)`, en tiempo
     $$\mathcal{O}(1)$$. Explicar cómo se usaría dicha estructura para poder realizar tales consultas.
+    
+1.  (★★) ¿Puede aplicarse counting sort a un arreglo de _floats_ cuyos valores se encuentran entre 0 y 1? 
+    En caso de poderse, explicar cómo lo harías. En caso de no poderse, explicar por qué y mencionar 
+    un algoritmo que resuelva el problema, en un orden semejante al de counting sort. ¿Necesitarías
+    más información para aplicar dicho algoritmo, o con saber que el rango es de 0 a 1 es suficiente?
+    
+1.  (★★★★★) Se tiene un conjunto de $n$ tuercas y otro conjunto de $n$ tornillos. No podemos comparar a los 
+    tornillos entre sí, ni a las tuercas entre sí, pero podemos comparar un tornillo con una tuerca 
+    (ver si un tornillo y una tuerca hacen pareja, si el tornillo es más grande o más chico de lo debido). 
+    Implementar un algoritmo que en $\mathcal{O}(n \log n)$ determine todas las parejas de 
+    tuercas-tornillos. 
