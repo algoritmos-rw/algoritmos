@@ -185,3 +185,33 @@ $$n$$.
     (en este caso, sólo para números), y además permita obtener el máximo de la pila. **Todas**
     las primitivas deben funcionar en $$\mathcal{O}(1)$$. Explicar cómo implementarías el TDA para
     que cumpla con todas las restricciones.
+
+1.  (★★★) Implementar el TDA Mamushka (matrioshka, o muñeca rusa), teniendo en cuenta que una Mamushka puede
+    tener otra Mamushka dentro de si misma. Las primitivas deben ser:
+        
+     - `mamushka_t* mamushka_crear(size_t tam, color_t color)`: Crea una mamushka con un tamaño y color
+        definido.
+     - `color_t mamushka_obtener_color(mamushka_t* mamushka)`: Obtiene el color de la Mamushka.
+     - `bool mamushka_guardar(mamushka_t* contenedora, mamushka_t* a_guardar)`: _Intenta_ guardar la segunda 
+        mamushka en la primera. Si la primera ya tiene una mamushka guardada, entonces debe
+        intentar guardar la mamushka `a_guardar` dentro de la mamushka que ya estaba guardada.
+        La operación falla (y devuelve `false`) si en algún momento se intenta guardar una mamushka
+        en otra de menor o igual tamaño. 
+        Por ejemplo: si tenemos una mamushka de tamaño 10 que dentro tiene una de tamaño 8, y se
+        intenta guardar una de tamaño 5, ésta debe guardarse dentro de la de tamaño 8.
+        Si, luego, se intentara guardar una de tamaño 6, la operación debe fallar dado
+        que no se puede guardar una mamushka de tamaño 6 dentro de una de tamaño 5.
+     - `mamushka_t* mamushka_obtener_guardada(mamushka_t*)`: Devuelve la mamushka guardada. 
+        `NULL` en caso de no tener ninguna guardada. En el ejemplo anterior, si utilizaremos esta primitiva
+        con la Mamushka de tamaño 10, nos devolvería la Mamushka de tamaño 8 que guardamos (y que dentro
+        tiene la de tamaño 5). 
+     - `void mamushka_destruir(mamushka_t*)`: Destruye la mamushka (y todas las que se encuentren dentro).
+
+    Definir la estructura (`struct`) del TDA, y escribir estas 5 primitivas. Indicar el orden de cada una de ellas.
+    
+    _Nota_: `color_t` corresponde a un `typedef enum color color_t`, que está definido en algún lugar.
+    
+1.  (★★★) Dadas dos pilas de enteros positivos (con posibles valores repetidos) cuyos elementos fueron ingresados de menor
+    a mayor, se pide implementar una **función** `int* merge_pilas(pila* pila_1, pila* pila_2)` que devuelva un array
+    ordenado de menor a mayor con todos los valores de ambas pilas sin repeticiones.
+    Detallar y justificar la complejidad del algoritmo considerando que el tamaño de las pilas es N y M respectivamente.
