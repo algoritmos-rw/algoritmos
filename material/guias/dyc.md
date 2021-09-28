@@ -297,5 +297,40 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 	_Pista_: Pensar primero cómo habría que hacer si el arreglo tuviera 4 elementos 
 	(`{C1, C2, D1, D2}`). Luego, pensar a partir de allí el caso de 8 elementos, etc...
 	para encontrar el patrón. 
+	
+1.	(★★★★) Debido a la trágica situación actual, es necesario realizar tests para detectar
+	si alguna persona está contagiada de COVID-19. El problema es que los insumos
+	tienden a ser bastante caros, y no vivimos en un país al que los recursos le sobren. 
+
+	Supongamos que por persona se toma más de una muestra (lo cual es cierto, pero a fines
+	del ejercicio supongamos que son muchas muestras), y que podemos realizar un testeo a más 
+	de una persona al mismo tiempo mezclando las muestras (lo cual también es cierto): 
+	determinamos un conjunto de personas a testear, obtenemos una muestra de cada una de ellas,
+	las "juntamos", y al conjunto le realizamos el test. Si el test resulta negativo, 
+	implica que todas las personas testeadas en conjunto resultaron negativas. Si resulta 
+	positivo, implica que al menos una de las personas testedas resulta positiva. 
+
+	Suponer que existe una función `pcr(grupo)`, que devuelve `true` si al menos una persona
+	del `grupo` es COVID-positivo, y `false` en caso contrario (los `grupos` pueden estar
+	formados por 1 o más personas). Suponer que la positividad es extremadamente baja, e inclusive
+	pueden suponer que va a haber una única persona contagiada (por simplicidad). 
+
+	Implementar un algoritmo que dado un conjunto de `n` personas, devuelva la o las personas
+	contagiadas, utilizando la menor cantidad de tests posibles (considerando la notación Big Oh).
+	En dicha notación, ¿cuántos tests se estarán utilizando?
+
+	Pueden considerar que habrá una única persona contagiada, pero esto no cambiará el análisis
+	a realizar. 
+	
+1. 	(★★★★) Se sabe, por el teorema de Bolsano, que si una función es continua en un intervalo `[a, b]`, 
+	y que en el punto `a` es positiva y en el punto `b` es negativa (o viceversa), necesariamente
+	debe haber (al menos) una raíz en dicho intervalo. Implementar una función 
+	`int raiz(int (*f)(int), int a, int b)` que reciba una función (univariable) y
+	los extremos mencionados y devuelva una raíz dentro de dicho intervalo (si hay más de una, 
+	simplemente quedarse con una). La complejidad de dicha función debe ser logarítmica del
+	largo del intervalo `[a, b]`. Asumir que por más que se esté trabajando con números enteros, 
+	hay raíz en dichos valores: Se puede trabajar con `floats`, y el algoritmo será equivalente, 
+	simplemente se plantea con `ints` para no generar confusiones con la complejidad.
+	Justificar la complejidad de la función implementada.
 
 {::options toc_levels="2" /}
