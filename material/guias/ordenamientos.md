@@ -266,8 +266,8 @@ void ordenar_por_mes(char** fechas, size_t n) {
     un algoritmo que resuelva el problema, en un orden semejante al de counting sort. ¿Necesitarías
     más información para aplicar dicho algoritmo, o con saber que el rango es de 0 a 1 es suficiente?
     
-1.  (★★★★★) Se tiene un conjunto de $n$ tuercas y otro conjunto de $n$ tornillos. No podemos comparar a los 
+1.  (★★★★★) Se tiene un conjunto de $$n$$ tuercas y otro conjunto de $$n$$ tornillos. No podemos comparar a los 
     tornillos entre sí, ni a las tuercas entre sí, pero podemos comparar un tornillo con una tuerca 
     (ver si un tornillo y una tuerca hacen pareja, si el tornillo es más grande o más chico de lo debido). 
-    Implementar un algoritmo que en $\mathcal{O}(n \log n)$ determine todas las parejas de 
+    Implementar un algoritmo que en $$\mathcal{O}(n \log n)$$ determine todas las parejas de 
     tuercas-tornillos. 
