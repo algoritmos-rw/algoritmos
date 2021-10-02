@@ -35,7 +35,7 @@ En caso que no se indique el parámetro del nombre del archivo, el archivo a sep
 por lo tanto, los resultados de las siguientes operaciones deben ser equivalentes: 
 
 	$ ./fixcol 75 lorem.txt > fixed.txt
-	$ ./fixcol 75 < cat lorem.txt > fixed2.txt
+	$ ./fixcol 75 < lorem.txt > fixed2.txt
 	# ambas salidas son iguales:
 	$ diff fixed.txt fixed2.txt | wc
 	       0       0       0
@@ -43,7 +43,13 @@ por lo tanto, los resultados de las siguientes operaciones deben ser equivalente
 Con las siguientes consideraciones:
 
   - Se deberá validar que la cantidad de parámetros en la invocación sea exactamente uno o dos.
+  - En caso de error en los parámetros (sea por cantidad de parámetros, o porque el primer
+    parámetro no es un número) se deberá imprimir por salida de error estándar `Error: Cantidad erronea de parametros`.
+  - En caso de contar con parámetro para el archivo, en caso que hubiera un error para usar el archivo
+    para lectura (no existe, no hay permisos, etc...), se deberá escribir por salida de error estándar
+    `Error: Error: archivo fuente inaccesible`.
   - No se podrá considerar que entra todo el archivo a dividir en memoria.
+  
 
 ## Criterios de aprobación
 
