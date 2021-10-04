@@ -26,7 +26,7 @@ TP1:
   id: TP1
   publicacion: 2021-10-04
   entrega: 2021-10-15
-  enunciado_link: /tps/2021_1/tp1
+  enunciado_link: /tps/2021_2/tp1
 
 Lista:
   id: Lista
@@ -56,10 +56,10 @@ TP2:
   id: TP2
   publicacion: 2021-11-15
   entrega: 2021-12-03
-  enunciado_link: /tps/2021_1/tp2
+  enunciado_link: /tps/2021_2/tp2
 
 TP3:
   id: TP3
   publicacion: 2021-12-03
   entrega: 2021-12-20
-  enunciado_link: /tps/2021_1/tp3
+  enunciado_link: /tps/2021_2/tp3
