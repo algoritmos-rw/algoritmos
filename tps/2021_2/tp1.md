@@ -47,7 +47,7 @@ Con las siguientes consideraciones:
     parámetro no es un número) se deberá imprimir por salida de error estándar `Error: Cantidad erronea de parametros`.
   - En caso de contar con parámetro para el archivo, en caso que hubiera un error para usar el archivo
     para lectura (no existe, no hay permisos, etc...), se deberá escribir por salida de error estándar
-    `Error: Error: archivo fuente inaccesible`.
+    `Error: archivo fuente inaccesible`.
   - No se podrá considerar que entra todo el archivo a dividir en memoria.
   
 
