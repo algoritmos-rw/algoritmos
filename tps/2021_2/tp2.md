@@ -99,7 +99,7 @@ El texto a publicar es el único comando del programa.
 Por ejemplo: 
 ```
 publicar
-Tiene todo el dinero del mundo, pero hay algo que no puede compra... un dinosaurio
+Tiene todo el dinero del mundo, pero hay algo que no puede comprar... un dinosaurio
 ```
 
 Si hay un usuario loggeado, se debe crear dicho post como es indicado antes, y todos los usuarios (salvo el loggeado actualmente) deben ahora tenerlo para ver en sus respectivos _feeds_. El post debe generarse con un `id`, comenzando en 0 y aumentando en 1 por cada post publicado (para simplificar las pruebas de este trabajo).
@@ -131,7 +131,7 @@ Al determinarse cuál es el siguiente post a revisar, se debe imprimir su inform
 login
 chicho1994
 publicar
-Tiene todo el dinero del mundo, pero hay algo que no puede compra... un dinosaurio
+Tiene todo el dinero del mundo, pero hay algo que no puede comprar... un dinosaurio
 logout
 login
 chorch
@@ -173,12 +173,12 @@ Post ID 2
 chorch dijo: es por el teorema de chuck norris
 Likes: 0
 Post ID 0
-chicho1994 dijo: Tiene todo el dinero del mundo, pero hay algo que no puede compra... un dinosaurio
+chicho1994 dijo: Tiene todo el dinero del mundo, pero hay algo que no puede comprar... un dinosaurio
 Likes: 0
 Adios
 Hola mondi
 Post ID 0
-chicho1994 dijo: Tiene todo el dinero del mundo, pero hay algo que no puede compra... un dinosaurio
+chicho1994 dijo: Tiene todo el dinero del mundo, pero hay algo que no puede comprar... un dinosaurio
 Likes: 0
 Post ID 1
 chorch dijo: te corto internet
@@ -224,18 +224,18 @@ chicho1994
 eldiego
 mondi
 ```
-Suponiendo, por supuesto, que dichos 4 usuarios le dieron like a esa publicación, y son los únicos que así lo hicieron. 
+Suponiendo que, por supuesto, dichos 4 usuarios le dieron like a esa publicación, y son los únicos que así lo hicieron. 
 
 ## Complejidad de los comandos
 
 Estudios de mercado han determinado que es muy probable que hayan muchos usuarios utilizando la red social social en muy poco tiempo ([fuente del estudio](https://imgsnotigram.s3.amazonaws.com/uploads/2020/05/arial.jpg)). Por esto, es necesario que el programa sea muy eficiente. Se impusieron las siguientes restricciones para los comandos: 
 
-* Login: debe funcionar en $\mathcal{O}(1)$.
-* Logout: debe funcionar en $\mathcal{O}(1)$.
-* Publicar Post: debe funcionar en $\mathcal{O}(u \log(p))$, siendo $u$ la cantidad de usuarios y $p$ la cantidad de posts que se hayan creado hasta ese momento. 
-* Ver próximo post en el feed: debe funcionar en $\mathcal{O}(\log(p))$.
-* Likear un post: debe funcionar en $\mathcal{O}(\log u)$.
-* Mostrar likes: debe funcionar en $\mathcal{O}(u)$.
+* Login: debe funcionar en $$\mathcal{O}(1)$$.
+* Logout: debe funcionar en $$\mathcal{O}(1)$$.
+* Publicar Post: debe funcionar en $$\mathcal{O}(u \log(p))$$, siendo $$u$$ la cantidad de usuarios y $$p$$ la cantidad de posts que se hayan creado hasta ese momento. 
+* Ver próximo post en el feed: debe funcionar en $$\mathcal{O}(\log(p))$$.
+* Likear un post: debe funcionar en $$\mathcal{O}(\log u)$$.
+* Mostrar likes: debe funcionar en $$\mathcal{O}(u)$$.
 
 
 ## Criterios de aprobación
