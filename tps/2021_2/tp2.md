@@ -226,17 +226,6 @@ mondi
 ```
 Suponiendo que, por supuesto, dichos 4 usuarios le dieron like a esa publicación, y son los únicos que así lo hicieron. 
 
-## Complejidad de los comandos
-
-Estudios de mercado han determinado que es muy probable que hayan muchos usuarios utilizando la red social social en muy poco tiempo ([fuente del estudio](https://imgsnotigram.s3.amazonaws.com/uploads/2020/05/arial.jpg)). Por esto, es necesario que el programa sea muy eficiente. Se impusieron las siguientes restricciones para los comandos: 
-
-* Login: debe funcionar en $$\mathcal{O}(1)$$.
-* Logout: debe funcionar en $$\mathcal{O}(1)$$.
-* Publicar Post: debe funcionar en $$\mathcal{O}(u \log(p))$$, siendo $$u$$ la cantidad de usuarios y $$p$$ la cantidad de posts que se hayan creado hasta ese momento. 
-* Ver próximo post en el feed: debe funcionar en $$\mathcal{O}(\log(p))$$.
-* Likear un post: debe funcionar en $$\mathcal{O}(\log u)$$.
-* Mostrar likes: debe funcionar en $$\mathcal{O}(u)$$.
-
 
 ## Criterios de aprobación
 
@@ -257,6 +246,18 @@ importante en la evaluación del Trabajo Práctico.
 
 Todas las estructuras deben estar implementadas de la forma más genérica
 posible y correctamente documentadas. No deben modificar los TDAs ya implementados hasta ahora. 
+
+
+### Complejidad de los comandos
+
+Estudios de mercado han determinado que es muy probable que hayan muchos usuarios utilizando la red social social en muy poco tiempo ([fuente del estudio](https://imgsnotigram.s3.amazonaws.com/uploads/2020/05/arial.jpg)). Por esto, es necesario que el programa sea muy eficiente. Se impusieron las siguientes restricciones para los comandos: 
+
+* Login: debe funcionar en $$\mathcal{O}(1)$$.
+* Logout: debe funcionar en $$\mathcal{O}(1)$$.
+* Publicar Post: debe funcionar en $$\mathcal{O}(u \log(p))$$, siendo $$u$$ la cantidad de usuarios y $$p$$ la cantidad de posts que se hayan creado hasta ese momento. 
+* Ver próximo post en el feed: debe funcionar en $$\mathcal{O}(\log(p))$$.
+* Likear un post: debe funcionar en $$\mathcal{O}(\log u)$$.
+* Mostrar likes: debe funcionar en $$\mathcal{O}(u)$$.
 
 ### Código del programa
 
