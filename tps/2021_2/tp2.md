@@ -214,7 +214,8 @@ Se recibe el id de un post, y se muestran los nombres de todos los usuarios que 
 
 Ejemplo: 
 ```
-mostrar_likes 0
+mostrar_likes
+0
 ```
 
 Una salida podría ser: 
@@ -225,6 +226,7 @@ eldiego
 mondi
 ```
 Suponiendo que, por supuesto, dichos 4 usuarios le dieron like a esa publicación, y son los únicos que así lo hicieron. 
+En caso que un post no tenga likes, o bien no exista el id, imprimir `Error: Post inexistente o sin likes`. 
 
 
 ## Criterios de aprobación
