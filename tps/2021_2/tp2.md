@@ -220,12 +220,13 @@ mostrar_likes
 
 Una salida podría ser: 
 ```
-chorch
-chicho1994
-eldiego
-mondi
+El post tiene 4 likes:
+  chorch
+  chicho1994
+  eldiego
+  mondi
 ```
-Suponiendo que, por supuesto, dichos 4 usuarios le dieron like a esa publicación, y son los únicos que así lo hicieron. 
+Suponiendo que, por supuesto, dichos 4 usuarios le dieron like a esa publicación, y son los únicos que así lo hicieron. Notar que la separación es con un caracter de tabulación. 
 En caso que un post no tenga likes, o bien no exista el id, imprimir `Error: Post inexistente o sin likes`. 
 
 
