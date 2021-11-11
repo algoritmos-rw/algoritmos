@@ -34,7 +34,7 @@ Se les garantiza que no habrán nombres duplicados dentro del sistema.
 
 ### Datos disponibles
 
-Se deja en del sitio de descargas un archivo con casos de prueba que pueden utilizar
+Se deja en el sitio de descargas un archivo con casos de prueba que pueden utilizar
 tanto de archivos de entrada, como de comandos a ser ejecutados y pruebas automatizadas, además de los
 restantes archivos que se mencionan de aquí en adelante.
 
@@ -123,9 +123,9 @@ eldiego
 
 Según la lógica planteada, `chicho1994` tiene más afinidad con `mondi` y `eldiego` que con `cacatua2030`, pero tiene más afinidad con este que con `chorch`. A su vez, tiene la misma afinidad con `mondi` que con `eldiego`. 
 
-En caso que dos posts tengan sendos usuarios con misma afindad al loggeado (sea como el caso entre `mondi` y `eldiego`, o porque se trata del mismo usuario), se debe visualizar el post que primero se haya creado. 
+En caso que dos posts tengan sendos usuarios con misma afinidad al loggeado (sea como el caso entre `mondi` y `eldiego`, o porque se trata del mismo usuario), se debe visualizar el post que primero se haya creado. 
 
-Al determinarse cuál es el siguiente post a revisar, se debe imprimir su información: si ID, su publicador, qué se dijo, y cuántos likes tiene. El formato exacto se muestra en el ejemplo a continuación:
+Al determinarse cuál es el siguiente post a revisar, se debe imprimir su información: su ID, su publicador, qué se dijo, y cuántos likes tiene. El formato exacto se muestra en el ejemplo a continuación:
 
 ```
 login
@@ -240,7 +240,7 @@ práctico.
 Es necesario emplear la estructura de datos más apropiada para cada función del
 programa, en particular **teniendo en cuenta la complejidad temporal**. También
 es necesario utilizar dicha estructura de la forma más apropiada posible para
-optimizar de manera correcta el funcionamiento de la clínica.
+optimizar de manera correcta su funcionamiento.
 
 Se puede (y alentamos fuertemente) implementar otros TDAs o estructuras que faciliten o mejoren la
 implementación de este Trabajo Práctico. Les recordamos que un TDA no es un simple `struct`
@@ -276,7 +276,7 @@ El código entregado debe:
 
 ### Informe
 
-Este trabajo práctico tiene como principal foco en el diseño del mismo (modularización, creación de nuevas
+Este trabajo práctico tiene como principal foco el diseño del mismo (modularización, creación de nuevas
 estructuras y TDAs específicos del TP) así como el uso apropiado de las estructuras de datos vistas en clase.
 Por lo tanto, se les pide que escriban un informe de dicho diseño, puesto que además de ser capaces de
 escribir código correcto, también es necesario que aprendan a poder _transmitir_ el porqué de sus
@@ -306,6 +306,6 @@ La entrega incluye, obligatoriamente, los siguientes archivos:
     algogram: tp2.o algogram.o hash.o
     ```
 
-La entrega se realiza exclusivamnete en forma digital a través del [sistema de entregas]({{site.entregas}}),
+La entrega se realiza exclusivamente en forma digital a través del [sistema de entregas]({{site.entregas}}),
 con todos los archivos mencionados en un único archivo ZIP.
 
