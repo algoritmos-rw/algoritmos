@@ -123,7 +123,7 @@ eldiego
 
 Según la lógica planteada, `chicho1994` tiene más afinidad con `mondi` y `eldiego` que con `cacatua2030`, pero tiene más afinidad con este que con `chorch`. A su vez, tiene la misma afinidad con `mondi` que con `eldiego`. 
 
-En caso que dos posts tengan sendos usuarios con misma afinidad al loggeado (sea como el caso entre `mondi` y `eldiego`, o porque se trata del mismo usuario), se debe visualizar el post que primero se haya creado. 
+En caso que dos posts sean de dos usuarios con misma afinidad al loggeado (sea como el caso entre `mondi` y `eldiego`, o porque se trata del mismo usuario), se debe visualizar el post que primero se haya creado. 
 
 Al determinarse cuál es el siguiente post a revisar, se debe imprimir su información: su ID, su publicador, qué se dijo, y cuántos likes tiene. El formato exacto se muestra en el ejemplo a continuación:
 
