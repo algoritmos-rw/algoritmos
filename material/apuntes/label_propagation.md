@@ -31,7 +31,7 @@ ya fueron procesados en esta iteración (actualización asincrónica).
 $$max\_freq$$ es una función que devuelve la $$Label$$ que aparece más frecuentemente entre todos los
 adyacentes a $$V_i$$. En caso de empate, es igual cuál de los máximos devolver.
 
-1. Si no se llegó a la condición de corte, volver a 2. La condición de corte puede ser una vez que se llegó
+1. Si no se llegó a la condición de corte, volver al paso anterior. La condición de corte puede ser una vez que se llegó
 a una cantidad determinada de comunidades, se cree que se llegó a la convergencia (la mayoría de los
 vecinos de cada vértice tiene la misma $$Label$$ que dicho vértice), o simplemente por una cantidad de
 iteraciones prefijada.
