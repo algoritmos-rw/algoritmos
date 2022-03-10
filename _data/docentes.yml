@@ -1,4 +1,8 @@
-#profesor:
+profesor:
+- nombre: Martín Buchwald
+  foto: /assets/img/docentes/martinb.jpg
+  mail: mbuchwald@fi.uba.ar
+  github: mbuchwald
 
 ayudantes:
 
@@ -51,11 +55,6 @@ ayudantes:
   foto: /assets/img/docentes/luciac.jpg
   mail: lcaponpaul@fi.uba.ar
   github: luciacp
-
-- nombre: Martín Buchwald
-  foto: /assets/img/docentes/martinb.jpg
-  mail: mbuchwald@fi.uba.ar
-  github: mbuchwald
 
 - nombre: Matías Cano
   foto: /assets/img/docentes/matic.png
