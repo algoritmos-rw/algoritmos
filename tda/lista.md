@@ -16,23 +16,25 @@ En esta entrega les agregamos el requerimiento de escribir la documentación com
 
 #### Primitivas de la lista
 ``` golang
-type Lista interface {
+type Lista[T any] interface {
 	EstaVacia() bool
-	InsertarPrimero(interface{})
-	InsertarUltimo(interface{})
-	BorrarPrimero() interface{}
-	VerPrimero() interface{}
-	VerUltimo() interface{}
+	InsertarPrimero(T)
+	InsertarUltimo(T)
+	BorrarPrimero() T
+	VerPrimero() T
+	VerUltimo() T
 	Largo() int
-	ForEach(visitar func(interface{}))
-	Iterador() IteradorLista
+	Iterar(visitar func(T) bool)
+	Iterador() IteradorLista[T]
 }
 ```
+
+En caso que se invoque a `BorrarPrimero`, `VerPrimero` o `VerUltimo` sobre una lista vacía, todas deben entrar en pánico con un mensaje `La lista esta vacia`. 
 
 Además, es necesario tener la primitiva de creación de la lista enlazada (en `lista_enlazada.go`):
 ``` golang
 
-func CrearListaEnlazada() *ListaEnlazada {
+func CrearListaEnlazada[T any]() Lista[T] {
 	//...
 }
 ```
@@ -42,20 +44,25 @@ func CrearListaEnlazada() *ListaEnlazada {
 Como está indicado entre las primtivas, se debe implementar el iterador interno cuya firma es:
 
 ```golang
-ForEach(visitar func(interface{}))
+Iterar(visitar func(T) bool)
 ```
+
+Dicha función debe aplicarse a cada uno de los datos de la lista (de primero a último), hasta que la lista
+se termine o la función `visitar` devuelva `false` (lo que ocurra primero).
 
 #### Primitivas del iterador externo
 
 ``` golang
-type IteradorLista interface {
-	VerActual() interface{}
+type IteradorLista[T any] interface {
+	VerActual() T
 	HaySiguiente() bool
-	Siguiente() interface{}
-	Insertar(interface{})
-	Borrar() interface{}
+	Siguiente() T
+	Insertar(T)
+	Borrar() T
 }
 ```
+
+En caso que se invoque a `VerActual`, `Siguiente` o `Borrar` sobre un iterador que ya haya iterador todos los elementos, debe entrar en pánico con un mensaje `El iterador termino de iterar`. 
 
 #### Pruebas
 
@@ -71,7 +78,7 @@ Las pruebas deben incluir los casos básicos de TDA similares a los contemplados
 1. Remover el último elemento con el iterador cambia el último de la lista.
 1. Verificar que al remover un elemento del medio, este no está.
 1. Otros casos borde que pueden encontrarse al utilizar el iterador externo.
-Y los casos del iterador interno.
+1. Casos del iterador interno, incluyendo casos con corte (la función `visitar` devuelve `false` eventualmente).
 
 Al igual que en los casos anteriores, deberán entregar en formato digital, subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 

@@ -13,7 +13,7 @@ Se incluye en [el sitio de descargas]({{site.skel}}) el archivo `cola.go` corres
 La entrega es muy similar a la realizada para el TDA Pila. La función para crear la cola debe ser: 
 
 ```golang
-func CrearColaEnlazada() *ColaEnlazada {
+func CrearColaEnlazada[T any]() Cola[T] {
 	// ...
 }
 ```
