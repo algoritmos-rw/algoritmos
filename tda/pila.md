@@ -19,7 +19,7 @@ func CrearPilaDinamica[T any]() Pila[T] {
 }
 ```
 
-Importante notar que la función debe devolver un elemento de tipo Pila, ya que la estructura no debería exportarse. 
+Importante notar que la función debe devolver un elemento de tipo Pila, ya que la estructura no debe exportarse. 
 
 Hay que escribir el archivo `pila_dinamica.go`, con la implementación de la estructura de la pila y de cada una de las primitivas incluidas en el encabezado.  Además de las primitivas, pueden tener funciones auxiliares, de uso interno, que no deben estar declaradas dentro de `pila.go`. En `pila.go` se encuentran únicamente las primitivas que el usuario de la pila tiene que conocer.
 

@@ -12,41 +12,40 @@ El trabajo que deben entregar de **forma grupal** es el tipo abstracto de datos 
 
 #### Primitivas del Diccionario
 ``` golang
-type Diccionario interface {
-	Guardar(clave interface{}, dato interface{})
-	Pertenece(clave interface{}) bool
-	Obtener(clave interface{}) interface{}
-	Borrar(clave interface{}) interface{}
+type Diccionario[K comparable, V any] interface {
+	Guardar(clave K, dato V)
+	Pertenece(clave K) bool
+	Obtener(clave K) V
+	Borrar(clave K) V
 	Cantidad() int
-	ForEach(func(clave interface{}, dato interface{}))
-	Iterador() IterDiccionario	
+	Iterar(func(clave K, dato V) bool)
+	Iterador() IterDiccionario[K, V]
 }
 ```
 
+Tanto `Borrar` como `Obtener` deben entrar en pánico con el mensaje `'La clave no pertenece al diccionario'` en caso que la clave no se encuentre en el diccionario. 
+
 Además, la primitiva de creación del Hash deberá ser: 
 ```golang
-func CrearHash(funcion_hash func(interface{}) int, comparacion func(interface{}, interface{}) int) HashAbierto o HashCerrado
+func CrearHash[K comparable, V any](funcion_hash func(K) int) Diccinario[K, V]
 ```
 
 La primer función pasada por parámetro será una función hashing, que recibirá una clave y devolverá un número. 
-La segunda función es una función de comparación, que tomará dos claves e indicará la relación entre estas. Debe devolver lo siguiente:
-* Un entero menor que 0 si la primera cadena es menor que la segunda.
-* Un entero mayor que 0 si la primera cadena es mayor que la segunda.
-* 0 si ambas claves son iguales.
 
-Nuevamente, el iterador interno (`ForEach`) debe iterar internamente el hash, aplicando la función pasada por parámetro a la clave y los datos. 
-
+Nuevamente, el iterador interno (`Iterar`) debe iterar internamente el hash, aplicando la función pasada por parámetro a la clave y los datos.
 
 #### Primitivas del iterador
 ``` golang
-type IterDiccionario interface {
+type IterDiccionario[K comparable, V any] interface {
 	HaySiguiente() bool
-	VerActual() (interface{}, interface{})
-	Siguiente() interface{}
+	VerActual() (K, V)
+	Siguiente() K
 }
 ```
 
 El iterador debe permitir recorrer todos los elementos almacenados en el hash, sin importar el orden en el que son devueltos.
+
+Tanto `VerActual` como `Siguiente` deben entrar en pánico con el mensaje `'El iterador termino de iterar'`.
 
 
 ### Pruebas
