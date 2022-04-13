@@ -14,7 +14,7 @@ math: true
 ## Ejercicio resuelto
 
 
-Implementar en C una primitiva para el heap (siendo este un max-heap) que reciba un heap y una función de
+Implementar en Go una primitiva para el heap (siendo este un max-heap) que reciba una función de
 comparación y lo reordene de manera tal que se se comporte como max-heap para la nueva función de comparación
 (se cambia la función de prioridad). El orden de dicha primitiva debe ser $$\mathcal{O}(n)$$.
 
@@ -26,10 +26,10 @@ ya existente (el interno del heap) forma de heap, dada por una función de compa
 del heap). Entonces, esto no es más que invocar a `heapify`, y ya. Eso es todo. También, es la única forma de darle ese
 orden a la primitiva.
 
-```cpp
-void heap_cambiar_prioridad(heap_t* heap, heap_cmp_t nueva_cmp) {
-    heap->cmp = nueva_cmp;
-    heapify(heap->datos, heap->cantidad, nueva_cmp);
+```golang
+func (heap *Heap[T]) CambiarPrioridad(func cmp(T, T) int) {
+    heap.cmp = cmp
+    heapify(heap.datos, heap.cantidad, cmp)
 }
 ```
 
@@ -41,8 +41,8 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
 ## Ejercicios propuestos
 
 
-1.  (★) Implementar en lenguaje C una función _recursiva_ con la firma
-    `bool es_heap(int arr[], size_t n)`. Esta función debe devolver true o false de acuerdo
+1.  (★) Implementar en lenguaje Go una función _recursiva_ con la firma
+    `func esHeap(arr []int)`. Esta función debe devolver `true` o `false` de acuerdo
     a si el arreglo que recibe como parámetro cumple la propiedad de heap (de mínimos).
 
     Hacer el seguimiento de la función para el arreglo `[ 1, 7, 2, 8, 7, 6, 3, 3, 9, 10 ]`.
@@ -72,7 +72,7 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
       operaciones: `encolar(6)`, `encolar(3)`, `encolar(17)`, `desencolar()`, `encolar(7)`,
       `desencolar()`.
 
-1.  (★★★) Escribir una función en C que, dado un arreglo de $$n$$ cadenas y un entero
+1.  (★★★) Escribir una función en Go que, dado un arreglo de $$n$$ cadenas y un entero
     positivo $$k$$, devuelva una lista con las $$k$$ cadenas más largas. Se espera que el
     orden del algoritmo sea $$\mathcal{O}(n + k \log n)$$. Justificar el orden.
 
@@ -87,7 +87,7 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
     tiene tamaño $$h$$, definimos como $$n$$ a la sumatoria de la cantidad de elementos de todos los arreglos,
     es decir, $$n = k \times h$$.
 
-    Escribir en C una función `int* k_merge(int** arr, size_t k, size_t h)` que reciba los $$k$$ arreglos y
+    Escribir en Go una función `func KMerge(arr [][]int)` que reciba los $$k$$ arreglos y
     devuelva uno nuevo con los $$n$$ elementos ordenados entre sí. La función debe ser de orden
     $$\mathcal{O}(n \log k)$$. Justificar el orden del algoritmo propuesto.
 

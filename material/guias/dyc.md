@@ -33,13 +33,14 @@ Como es mencionado en clase, al ver que se nos pide:
 
 Si no se nos pidiera que sea de división y conquista, y más aún que su orden sea logarítimico, podríamos simplemente ir elemento por elemento chequeando si se cumple la condición:
 
-```cpp
-bool arreglo_es_magico_lineal(int arr[], size_t n) {
-    for (size_t i = 0; i < n; i++) {
-        if (arr[i] == i)
-            return true;
+```golang
+func ArregloEsMagico(arr []int) bool {
+    for elem, i := range(arr) {
+        if elem == i {
+            return true
+        }
     }
-    return false;
+    return false
 }
 ```
 
@@ -54,19 +55,18 @@ Lo primero a pensar es el caso base: si se nos da vuelta el inicio y fin, signif
 
 Ahora, lo crucial: pensar la condición de éxito. Acá es donde analizamos qué resuelve nuestro algoritmo. Vamos al medio, y lo que tenemos que verificar es si `arr[medio] == medio`. Si eso sucede, ¡éxito! Entonces, por ahora tenemos:
 
-```cpp
-bool arreglo_es_magico(int arr[], size_t n) {
-    return _arreglo_es_magico(arr, 0, n - 1);
+```golang
+func ArregloEsMagico(arr []int) bool {
+    return arregloEsMagico(arr, 0, len(arr) - 1)
 }
 
-bool _arreglo_es_magico(int arr[], size_t inicio, size_t fin) {
-    if (inicio > fin) {
-        return false;
+func arregloEsMagico(arr []int, inicio int, fin int) {
+    if inicio > fin {
+        return false
     }
-
-    size_t medio = (inicio + fin) / 2;
-    if (arr[medio] == medio) {
-        return true;
+    medio := (inicio + fin) / 2
+    if arr[medio] == medio {
+        return true
     }
     // nos falta el caso sin exito
 }
@@ -76,33 +76,26 @@ Ahora, pensemos que eso no sucede. Necesitamos quedarnos con una sola de las mit
 
 Luego de este análisis, podemos escribir el código:
 
-```cpp
-bool arreglo_es_magico(int arr[], size_t n) {
-    return _arreglo_es_magico(arr, 0, n - 1);
+```golang
+func ArregloEsMagico(arr []int) bool {
+    return arregloEsMagico(arr, 0, len(arr) - 1)
 }
 
-bool _arreglo_es_magico(int arr[], size_t inicio, size_t fin) {
-    if (inicio > fin) {
-        return false;
+func arregloEsMagico(arr []int, inicio int, fin int) {
+    if inicio > fin {
+        return false
     }
-
-    size_t medio = (inicio + fin) / 2;
-    if (arr[medio] == medio) {
-        return true;
+    medio := (inicio + fin) / 2
+    if arr[medio] == medio {
+        return true
     }
     if (arr[medio] < medio) {
         return _arreglo_es_magico(arr, medio + 1, fin);
     } else {
-        // considerando el caso de haber llegado hasta el extremo izquierdo, 
-        // y que esto puede dar underflow por el uso de size_t:
-        if (medio == 0) return false;
-        
         return _arreglo_es_magico(arr, inicio, medio - 1);
     }
 }
 ```
-
-_Nota_: El algoritmo puede, en vez de resolverse con una función auxiliar que haga la recursión, usando directamente `arreglo_es_magico`, usando aritmética de punteros. Quien prefiera hacerlo así, bienvenido es, aunque nos parece más claro para la explicación (y más directo) el código propuesto.
 
 #### Demostración del orden
 
@@ -124,68 +117,81 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 
 1.  (★) Explicar por qué el siguiente siguiente código **no** es de división y conquista.
 
-    ```cpp
+    ```golang
     // Algoritmo ¿por D&C? para obtener el máximo de un arreglo
-    int maximo(int* arreglo, size_t n) {
-        if (n == 1) {
-            return arreglo[0];
+    func maximo(arreglo []int) int {
+        if len(arreglo) == 1 {
+            return arreglo[0]
         }
-        int max_restante = maximo(arreglo, n - 1);
-        return arreglo[n - 1] > max_restante ? arreglo[n - 1] : max_restante;
+        max_restante := maximo(arreglo[0:len(arreglo)-1])
+        if arreglo[len(arreglo) - 1] > max_restante {
+            return arreglo[len(arreglo) - 1]
+        } else {
+            return max_restante
+        }
     }
     ```
 
 1.  (★) Explicar por qué el siguiente siguiente código **no** es de división y conquista.
 
-    ```cpp
+    ```golang
     // Algoritmo ¿por D&C? para obtener el máximo de un arreglo
-    int maximo(int* arreglo, size_t n) {
-        size_t medio = n / 2;
-        int max_izquierda = _maximo(arreglo, 0, medio);
-        int max_derecha = _maximo(arreglo, medio + 1, n - 1);
-        return max_izquierda > max_derecha ? max_izquierda : max_derecha;
+    func maximo(arreglo []int) int {
+        medio = len(arreglo) / 2
+        max_izquierda := _maximo(arreglo, 0, medio)
+        max_derecha := _maximo(arreglo, medio + 1, len(arreglo) - 1)
+        if max_izquierda > max_derecha {
+            return max_izquierda
+        } else {
+            return max_derecha
+        }
     }
-
-    int _maximo(int* arreglo, size_t inicio, size_t fin) {
-        int max = arreglo[inicio];
-        for (size_t i = inicio + 1; i <= fin; i++) {
-            if (max < arreglo[i]) {
-                max = arreglo[i];
+    
+    func _maximo(arreglo []int, inicio int, fin int) int {
+        max := arreglo[inicio]
+        for i := inicio + 1; i <= fin; i++ {
+            if max < arreglo[i] {
+                max = arreglo[i]
             }
         }
-        return max;
+        return max
     }
     ```
 
 1.  (★★) Indicar la complejidad del siguiente algoritmo, utilizando el teorema maestro:
 
-    ```cpp
+    ```golang
     // Busca un elemento usando D&C. El arreglo se encuentra ordenado.
-    bool elemento_esta(int* arreglo, size_t inicio, size_t fin, int elem) {
-        if (inicio > fin) return false;
-        size_t medio = (fin + inicio) / 2;
-        if (arreglo[medio] == elem) {
-            return true;
+    func elementoEsta(arreglo []int, inicio int, fin int, elem int) bool {
+        if inicio > fin {
+            return false
         }
-        if (arreglo[medio] < elem) {
-            return elemento_esta(arreglo, medio + 1, fin, elem);
+        medio := (inicio + fin) / 2
+        if arreglo[medio] == medio {
+            return true
         }
-
-        for (size_t i = medio - 1; i > inicio - 1; i--) {
-            if (arreglo[i] == elem) return true;
+        if arreglo[medio] < elem {
+            return elementoEsta(arreglo, medio + 1, fin, elem)
         }
-        return false;
+        for i := medio - 1; i > inicio; i-- {
+            if arreglo[i] == elem {
+                return true
+            }
+        }
+        return false
     }
     ```
 
 1.  (★) Hacerle el seguimiento al siguiente algoritmo:
 
-    ```cpp
-    void imprimir_dyc(int m) {
-        if (m < 4) return;
-        printf("%d\n", m);
-        imprimir_dyc(m / 4);
-        imprimir_dyc(m - (m / 4));
+    ```golang
+    func imprimirDyC(m int) {
+        if m < 4 {
+            return
+        }
+        fmt.Println(m)
+        imprimirDyC(m / 4)
+        imprimirDyC(m - (m / 4))
     }
     ```
 
