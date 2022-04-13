@@ -1,29 +1,32 @@
-# FAQ - Primeros Pasos con Linux y C
+# FAQ - Primeros Pasos con Linux y Go
 {:.no_toc}
 
 * Contenido
 {:toc}
 
-### Escribir un hello world en C
+### Escribir un hello world en Go
 
-El primer paso es escribir el código del programa en el editor o IDE, y guardarlo en un archivo con extensión `.c`.
+El primer paso es escribir el código del programa en el editor o IDE, y guardarlo en un archivo con extensión `.go`.
 
 Lo mejor es que comiencen por un “Hola mundo”, escribiendo en el editor:
 
-```cpp
-#include <stdio.h>
+```golang
+package main
 
-int main(void) {
-    printf("Hola mundo");
-    return 0;
+import "fmt"
+
+func main() {
+    fmt.Println("Hola mundo!")
 }
 ```
 
-Lo guardan en un archivo llamado `hola.c`.
+Lo guardan en un archivo llamado `hola.go`.
 
-Es importante notar que todo programa de C debe contener una función que se llame `main`, que es la que ejecutará al comienzo de este (y luego puede llamar subsecuentemente a otras funciones).
+Es importante notar que todo programa de go debe contener una función que se llame `main`, que es la que ejecutará al comienzo de este (y luego puede llamar subsecuentemente a otras funciones).
 
 Como editor pueden usar [Geany](https://www.geany.org/) o un editor más sencillo que ya esté instalado en el sistema, por ejemplo Gedit. Seguramente lo puedan encontrar en Menu → Editores, y cualquier otro editor también sirve.
+
+Recordar que siempre pueden hacer sus pruebas en [El Playground de Go](https://go.dev/play/)!
 
 ### Acceder a la terminal
 
@@ -44,7 +47,7 @@ Si su nombre de usuario es “ana”, lo mejor es que guarden en una carpeta con
 Una vez hicieron eso, podrán compilar y ejecutar:
 
 ```cpp
-gcc -o programa hola.c
+go build -o programa hola.go
 ./programa
 ```
 

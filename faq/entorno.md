@@ -8,15 +8,16 @@
 
 Hay varias opciones, según tu sistema operativo y tus preferencias. Para poder hacer los ejercicios y TPs de este curso necesitás tener funcionando en tu PC los siguientes programas:
 
-*   compilador C: **GCC** (y opcionalmente **clang**)
+*   compilador Golang
 *   **GNU make**
-*   **Valgrind**
 *   **Python** (opcional, para el último TP)
 
 Además es altamente recomendado contar con un **editor de texto** o un **entorno de desarrollo (IDE)** que permita programar y compilar cómodamente. Algunas posibilidades son:
 
 *   [Geany](http://www.geany.org/), un entorno de desarrollo amigable, multi plataforma.
 *   [Codeblocks](http://www.codeblocks.org/), otro entorno integrado de desarrollo, para Windows, Mac OS y Linux.
+* 	[Visual Studio Code](https://code.visualstudio.com/), con la extensión para Go.	
+* 	[Goland](https://www.jetbrains.com/go/download/)
 
 ## Instalar Linux
 
@@ -63,12 +64,14 @@ El último paso se explica a continuación.
 Abrir una terminal (CTRL+ALT+T) y escribir lo siguiente:
 
 `sudo apt install build-essential valgrind manpages-dev gdb`
+`sudo apt-get install golang-go`
 
 Te va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas. ¡Ya está!
 
 Estas herramientas son:
 
 * [build-essential](https://packages.ubuntu.com/bionic/build-essential): Herramientas esenciales de toda distribución de Linux. Lo que mas usaremos es gcc (compilador de C) y make (herramienta para automatización de compilaciones).
+* [go](https://go.dev/doc/install)
 * [Valgrind](http://valgrind.org/): Herramienta para verificar el uso de memoria del programa, como ver si hay perdidas de memoria.
 * [manpages-dev](http://man7.org/linux/man-pages/man1/intro.1.html): Manual de usuario de Linux. Extremadamente util para tener la documentación oficial de los comandos utilizados. Se invoca con el comando `man`. Por ejemplo, `man printf`
 * [gdb](https://www.gnu.org/software/gdb/): Herramienta para la depuración de programas.

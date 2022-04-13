@@ -15,9 +15,8 @@ permalink: /material/
 
   * [Taller de Python](./taller_python/TallerPython.slides.html)
   * [Apunte de Algoritmos y Programación I](https://drive.google.com/file/d/0B0KKEIBDHL7tdEQ3bFZ2M3VrZzA/view).
-  * [Introducción al lenguaje C](https://drive.google.com/open?id=17gyhdJwEcxxLVrD_X0AlPnZzQajXOFE5)
   * [Ejemplos de Código](ejemplos.md)
   * [Material y visualizaciones sobre estructuras de datos](material_estructuras.md)
-  * [Material sobre el lenguaje C](material_c.md)
+  * [Material sobre el lenguaje Go](material_go.md)
   * [Material sobre `make`, `man` y `gcc`](extras.md)
 
