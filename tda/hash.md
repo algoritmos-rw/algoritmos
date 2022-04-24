@@ -27,12 +27,25 @@ Tanto `Borrar` como `Obtener` deben entrar en pánico con el mensaje `'La clave 
 
 Además, la primitiva de creación del Hash deberá ser: 
 ```golang
-func CrearHash[K comparable, V any](funcion_hash func(K) int) Diccinario[K, V]
+func CrearHash[K comparable, V any]() Diccinario[K, V]
 ```
 
-La primer función pasada por parámetro será una función hashing, que recibirá una clave y devolverá un número. 
-
 Nuevamente, el iterador interno (`Iterar`) debe iterar internamente el hash, aplicando la función pasada por parámetro a la clave y los datos.
+
+#### Funcion de hashing... ¿Genérica?
+
+Es de considerar que para implementar el hash será necesario definir una función de hashing internamente. Pueden definir la que más les guste (siempre poniendo referencia o nombre de la misma). Lamentablemente, no podemos trabajar de forma completamente genérica con una función de hashing directamente, por lo que deberemos realizar una transformación. 
+Si bien no es obligatorio pasar la clave a un arreglo de bytes (`[]byte`), es lo recomendado. Luego, la función de hashing puede siempre trabajar con la versión de arreglo de bytes correspondiente a la clave. El siguiente código (que pueden utilizar, modificar, o lo que gusten) transforma un tipo de dato genérico a un array de bytes:
+```golang
+func convertirABytes[K comparable](clave K) []byte {
+	var buf bytes.Buffer
+	enc := gob.NewEncoder(&buf)
+	enc.Encode(clave)
+	return buf.Bytes()
+}
+```
+Para utilizar, se debe importar tanto el módulo `bytes` como `"encoding/gob"`, ambos de la librería estándar de Go. 
+
 
 #### Primitivas del iterador
 ``` golang
