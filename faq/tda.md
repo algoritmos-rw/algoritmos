@@ -10,10 +10,6 @@ math: true
 
 ## Abstracción
 
-### ¿Qué son los Generics?
-
-Generics, en una forma simplista de explicarlo, es una forma de parametrizar una función, interfaz o estructura (`struct`) para que funcione con diferentes tipos de datos, sin necesidad de tener que definir el mismo TDA para que funcione con `string`, otro para `int` y así sucesivamente. A este generic se le pueden poner, eventualmente, restricciones.
-
 ### ¿Qué es una estructura en Go?
 
 Una estructura en Go es un tipo de variables que nos permite almacenar distintos elementos dentro de ellas. Sirven para encapsular lo que refiere a una variable que contendrá distintos atributos. Su uso es con la palabra reservada de Go `struct`. Por ejemplo, para una entidad de persona, con edad y nombre, se define la estructura:
@@ -30,6 +26,10 @@ Ahora, ya sabemos que el `struct persona` contiene una edad del tipo `uint` y un
 
 Para acceder a estos miembros de la estructura, se puede acceder tanto al atributo mismo, con el operador punto `juan.nombre`.
 
+### ¿Qué son los Generics?
+
+Generics, en una forma simplista de explicarlo, es una forma de parametrizar una función, interfaz o estructura (`struct`) para que funcione con diferentes tipos de datos, sin necesidad de tener que definir el mismo TDA para que funcione con `string`, otro para `int` y así sucesivamente. A este generic se le pueden poner, eventualmente, restricciones.
+
 
 ### ¿Por qué no puedo acceder a un miembro de una estructura de un TAD?
 
@@ -45,9 +45,9 @@ Estas respuestas son útiles tanto para la pila dinámica, como para la tabla de
 
 ### ¿Cuánto conviene agrandar una estructura dinámica?
 
-Hacer un realloc es una operación lenta: $$\mathcal{O}(n)$$ (siendo n la cantidad de bytes que se mantienen en el bloque de memoria).  De modo que es importante planificar cuánto se va a agrandar la estructura, para que el tiempo gastado en el redimensionamiento no influya en el comportamiento general de la estructura.
+Hacer `make`, y luego `copy` para copiar los elementos de un arreglo anterior a otro es una operación lenta: $$\mathcal{O}(n)$$ (siendo n la cantidad de bytes que se mantienen en el bloque de memoria).  De modo que es importante planificar cuánto se va a agrandar la estructura, para que el tiempo gastado en el redimensionamiento no influya en el comportamiento general de la estructura.
 
-Para ello, lo que se hace es que al agrandar, el espacio utilizado se multiplique -generalmente por 2, pero puede ser por otro factor, según las condiciones del problema a resolver-, de modo que la incidencia del realloc se distribuya siempre de forma pareja entre los elementos, lo que no sucede en el caso de que la estructura crezca una cantidad constante. Una demostración formal sobre cómo afecta esta redimensión en el costo total de las operaciones puede encontrarse en la [lista de mails](https://groups.google.com/d/msg/fiuba-7541rw-alu/t86CJcNv2UU/Irb7J899DgAJ).
+Para ello, lo que se hace es que al agrandar, el espacio utilizado se multiplique -generalmente por 2, pero puede ser por otro factor, según las condiciones del problema a resolver-, de modo que la incidencia del `make+copy` se distribuya siempre de forma pareja entre los elementos, lo que no sucede en el caso de que la estructura crezca una cantidad constante. Una demostración formal sobre cómo afecta esta redimensión en el costo total de las operaciones puede encontrarse en la [lista de mails](https://groups.google.com/d/msg/fiuba-7541rw-alu/t86CJcNv2UU/Irb7J899DgAJ).
 
 ### ¿Cuándo y cuánto conviene achicar una estructura dinámica?
 
@@ -88,8 +88,8 @@ En la materia adoptamos la siguiente convención para todos los iteradores:
   - Si la estructura tiene elementos, el iterador apunta al primer elemento.
   - Si la estructura no tiene elementos, el iterador se crea, pero apuntando al final.
   - Avanzar un iterador cuando no está al final siempre es una operación válida.
-  - Avanzar un iterador que está al final es una operacion inválida, por lo que devuelve false.
-  - Ver actual es siempre una operación válida. Cuando está al final devuelve siempre `NULL`.
+  - Avanzar un iterador que está al final es una operacion inválida.
+  - Ver actual es una operación válida si no se encuentra al final. Si se encuentra al final, es una operación inválida.
 
 Considerando esta convención, la forma canónica de iterar una estructura es la siguiente:
 
