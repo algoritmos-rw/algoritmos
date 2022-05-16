@@ -19,6 +19,8 @@ Preguntas frecuentes
 
 * [Lista Enlazada](faq/lista-enlazada.md)
 
+* [Enlaces simbólicos](faq/symlink.md)
+
 * [Hash](faq/hash.md)
 
 * [Heap](faq/heap.md)

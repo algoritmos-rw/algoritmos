@@ -39,7 +39,8 @@ Por ejemplo, `strings.strcmp` cumple con esta especificación (si las claves son
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}).
 
-**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**
+**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**, así como también el
+**[el FAQ sobre enlaces simbólicos](faq/symlink.md)** para reutilizar el TDA Pila para el Iterador externo. 
 
 ---
 ### Bibliografia recomendada

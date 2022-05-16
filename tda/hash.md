@@ -71,7 +71,7 @@ Para ejecutar las pruebas, incluyendo las pruebas de volumen (benchmarks, que to
 
 	go test -bench=. -benchmem
 
-**No olviden revisar las [preguntas frecuentes del hash](/algo2/faq/hash)**
+**No olviden revisar las [preguntas frecuentes del hash](/algo2/faq/hash)**, así como también el de **[enlaces simbólicos](faq/symlink.md)** en caso de implementar el hash abierto. 
 
 ---
 ### Bibliografia recomendada
