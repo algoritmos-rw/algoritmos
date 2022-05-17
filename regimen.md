@@ -8,7 +8,7 @@ Régimen de cursada
 * Para aprobar cada **trabajo práctico** es necesario aprobar cada una de las **entregas parciales** anteriores al mismo.
 * Para rendir el **final** es necesario tener la **cursada** aprobada.
 * Las condiciones del régimen de promoción son las siguientes:
-  - Es necesario aprobar los **cuatro parcialitos** y los **tres trabajos prácticos**.
+  - Es necesario aprobar los **tres parcialitos** y los **tres trabajos prácticos**.
   - El **promedio** de notas de todos los **trabajos prácticos** debe ser al menos 8.
   - Todos los parcialitos deben estar aprobados en la **primera instancia** o el **primer recuperatorio**, con una nota **mayor o igual a 7**.
 
@@ -16,13 +16,12 @@ Régimen de cursada
 ### Trabajos Prácticos
 
 * Hay **tres trabajos prácticos** que se complementan con un total de **ocho entregas parciales**.
-  Para el primer TP las entregas parciales son 5: TP0, vector dinámico, pila, cola y lista. Para el segundo TP son 3: hash, arbol binario y heap. El tercer TP no tiene entregas parciales.
+  Para el primer TP las entregas parciales son 5: TP0, Administración de Memoria, pila, cola. Para el segundo TP son 3: lista, hash, arbol binario y heap. El tercer TP no tiene entregas parciales.
 * Todas las entregas **hasta el primer TP** (inclusive) son individuales. Las entregas siguientes pueden opcionalmente ser realizadas en **grupos de dos integrantes**.
 * Desaprobar un trabajo práctico implica desaprobar la cursada y por lo tanto la materia.
 * Para aprobar un trabajo práctico se debe hacer la entrega correspondiente en tiempo y forma.
-* Omitir la entrega en la fecha estipulada implica la desaprobación del trabajo.
 * Plagiar, copiar o realizar un trabajo práctico junto con otros alumnos que no sean integrantes del grupo implica la desaprobación del trabajo.
-* Se contemplan eventuales reentregas tras la corrección incial que no deben extenderse más allá de la fecha de entrega del siguiente trabajo práctico. La fecha límite para entregar el tercer y último TP figura en el [calendario]({{'calendario'|relative_url}}) de la materia.
+* Cada entrega cuenta con una fecha de entrega, y una fecha final de aprobación, en la cual se consideran potenciales reentregas previas. Se pueden chequear las fechas de todo tipo en el [calendario]({{'calendario'|relative_url}}) de la materia.
 * Cada alumno/grupo tiene asignado un ayudante para la corrección y evaluación de los trabajos prácticos.
 
 
