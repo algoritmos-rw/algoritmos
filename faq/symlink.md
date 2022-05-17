@@ -69,7 +69,15 @@ Automáticamente ahora tendremos dentro de nuestro directorio un link simbólico
 de lista, y podemos acceder a este desde `hash/lista`. Esto permite no tener que copiar código,
 pero además permite lo siguiente: si armamos el zip (con el comando zip), automáticamente
 los enlaces simbólicos se _expandirán_ ya agregándonos los archivos que necesitamos para nuestra
-entrega. 
+entrega. Para armar el archivo zip, simplemente usamos el comando `zip`:
+
+```
+zip <salida>.zip <archivos o directorio>
+```
+Por ejemplo: 
+```
+zip hash.zip hash/*
+```
 
 ¿Esto resolvería el problema en cualquier caso? Es más que probable que no, pero al alcance de nuestra
 materia seguramente lo cubre, y no valga la pena hacernos con una solución más sofisticada. 
