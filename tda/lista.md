@@ -52,6 +52,8 @@ se termine o la función `visitar` devuelva `false` (lo que ocurra primero).
 
 #### Primitivas del iterador externo
 
+La primitiva `Iterador` de la lista debe devolver un `IteradorLista`, cuyas primitivas son: 
+
 ``` golang
 type IteradorLista[T any] interface {
 	VerActual() T
@@ -62,13 +64,13 @@ type IteradorLista[T any] interface {
 }
 ```
 
-En caso que se invoque a `VerActual`, `Siguiente` o `Borrar` sobre un iterador que ya haya iterador todos los elementos, debe entrar en pánico con un mensaje `El iterador termino de iterar`. 
+En caso que se invoque a `VerActual`, `Siguiente` o `Borrar` sobre un iterador que ya haya iterado todos los elementos, debe entrar en pánico con un mensaje `El iterador termino de iterar`. 
 
 #### Pruebas
 
 Recordar que el archivo de pruebas debe estar en el paquete `lista_test`, mientras que `lista_enlazada` debe estar en el paquete `lista`. 
 
-Considerar que todas las primitivas (exceptuando `ForEach`) deben funcionar en tiempo constante.
+Considerar que todas las primitivas (exceptuando `Iterar`) deben funcionar en tiempo constante.
 
 Las pruebas deben incluir los casos básicos de TDA similares a los contemplados para la pila y la cola, y adicionalmente debe verificar los siguientes casos del iterador externo:
 1. Al insertar un elemento en la posición en la que se crea el iterador, efectivamente se inserta al principio.

@@ -11,6 +11,11 @@ Pila
 El trabajo a realizar es el de una implementación de pila dinámica (es decir, una pila sobre un arreglo que pueda crecer o reducirse según la cantidad de elementos) que contenga datos genéricos.
 
 En el adjunto en [el sitio de descargas]({{site.skel}}) encontrarán el archivo `pila.go` que tienen que utilizar. En este archivo están definidas las primitivas que tendrán que implementar, con su correspondiente documentación. Todas las primitivas tienen que funcionar en _tiempo constante_.
+
+Importante notar que la función debe devolver un elemento de tipo Pila, ya que la estructura no debe exportarse. 
+
+Hay que escribir el archivo `pila_dinamica.go`, con la implementación de la estructura de la pila y de cada una de las primitivas incluidas en el encabezado.  Además de las primitivas, pueden tener funciones auxiliares, de uso interno, que no deben estar declaradas dentro de `pila.go`. En `pila.go` se encuentran únicamente las primitivas que el usuario de la pila tiene que conocer.
+
 Además, deben incluir la primitiva para crear la pila:
 
 ```golang
@@ -18,10 +23,6 @@ func CrearPilaDinamica[T any]() Pila[T] {
 	// ...
 }
 ```
-
-Importante notar que la función debe devolver un elemento de tipo Pila, ya que la estructura no debe exportarse. 
-
-Hay que escribir el archivo `pila_dinamica.go`, con la implementación de la estructura de la pila y de cada una de las primitivas incluidas en el encabezado.  Además de las primitivas, pueden tener funciones auxiliares, de uso interno, que no deben estar declaradas dentro de `pila.go`. En `pila.go` se encuentran únicamente las primitivas que el usuario de la pila tiene que conocer.
 
 Les sugerimos la siguiente implementación para la estructura interna de la pila:
 
@@ -45,7 +46,7 @@ Las pruebas deberán verificar que:
 1. Condición de borde: las acciones de desapilar y ver_tope en una pila recién creada son inválidas.
 1. Condición de borde: la acción de esta_vacía en una pila recién creada es verdadero.
 1. Condición de borde: las acciones de desapilar y ver_tope en una pila a la que se le apiló y desapiló hasta estar vacía son inválidas.
-1. Probar apilar cosas diferentes: probar con una pila de enteros, con una pila de cadenas, etc...
+1. Probar apilar diferentes tipos de datos: probar con una pila de enteros, con una pila de cadenas, etc...
 
 Además de todos los casos no descriptos que ustedes crean necesarios.
 

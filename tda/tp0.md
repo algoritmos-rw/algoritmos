@@ -10,7 +10,7 @@ Trabajo Práctico 0
 
 El adjunto en [el sitio de descargas]({{site.skel}}) contiene varios archivos.
 Deben editar el archivo `tp0.go`, completando las cuatro funciones que
-aparecen en el código fuente: `Swap()`,  `Maximo()`, `Comparar()`, `Seleccion()`, `Suma()` y `EsPalindromo`.
+aparecen en el código fuente: `Swap()`,  `Maximo()`, `Comparar()`, `Seleccion()`, `Suma()` y `EsPalindromo()`.
 Se puede ver en el archivo `tp0_interfaz.go` la documentación que indica lo que debe hacer cada función. 
 
 De todos los archivos que pueden encontrar en el sitio de descargas, sólo deben modificar `tp0.go`. 
