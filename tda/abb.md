@@ -10,7 +10,7 @@ trabajo: ABB
 
 El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Árbol Binario de Búsqueda (ABB), que es la implementación del tipo `DiccionarioOrdenado` (una extensión del `Diccionario` de la entrega anterior). 
 Tanto el DiccionarioOrdenado como el ABB deben estar también dentro del paquete `diccionario`
-Se incluye en [el sitio de descargas]({{site.skel}}) el archivo de main correspondiente al ejercicio. Se debe implementar:
+Se incluye en [el sitio de descargas]({{site.skel}}) el archivo `diccionario_ordenado.go` que se describe a continuación:
 
 ``` cpp
 type DiccionarioOrdenado[K comparable, V any] interface {
@@ -22,7 +22,7 @@ type DiccionarioOrdenado[K comparable, V any] interface {
 
 ```
 
-Todas las primitivas anteriores deben funcionar también, con el agregado que tanto el iterador interno (`Iterar`) como externo (`Iterador`) deben iterar en el orden que corresponda al ordenamiento del Diccionario. Se agregan las primitivas que permiten iterar por rangos dados (en caso que `desde` sea `nil`, se debe iterar desde la primera clave, y en caso de que `hasta` sea `nil` se debe iterar hasta la última). 
+Todas las primitivas anteriores deben funcionar también, con el agregado que tanto el iterador interno (`Iterar`) como externo (`Iterador`) deben iterar en el orden que corresponda al ordenamiento del Diccionario. Se agregan las primitivas que permiten iterar por rangos dados. En caso que `desde` sea `nil`, se debe iterar desde la primera clave, y en caso de que `hasta` sea `nil` se debe iterar hasta la última (por lo cual, si `desde == hasta == nil`, se debe comportar como el iterador sin rango). 
 
 Además, la primitiva de creación del ABB deberá ser: 
 ```golang
@@ -35,7 +35,7 @@ La función de comparación, recibe dos claves y devuelve:
 * 0 si ambas claves son iguales.
 
 Qué implica que una clave sea igual, mayor o menor que otra va a depender del usuario del TDA.
-Por ejemplo, `strings.strcmp` cumple con esta especificación (si las claves son cadenas).
+Por ejemplo, `strings.Compare` cumple con esta especificación (si las claves son cadenas).
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}).
 

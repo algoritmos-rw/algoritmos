@@ -58,7 +58,7 @@ type IterDiccionario[K comparable, V any] interface {
 
 El iterador debe permitir recorrer todos los elementos almacenados en el hash, sin importar el orden en el que son devueltos.
 
-Tanto `VerActual` como `Siguiente` deben entrar en pánico con el mensaje `'El iterador termino de iterar'`.
+Tanto `VerActual` como `Siguiente` deben entrar en pánico con el mensaje `'El iterador termino de iterar'` si ya no quedan elementos a iterar (i.e. `HaySiguiente() == false`.
 
 
 ### Pruebas
@@ -71,7 +71,7 @@ Para ejecutar las pruebas, incluyendo las pruebas de volumen (benchmarks, que to
 
 	go test -bench=. -benchmem
 
-**No olviden revisar las [preguntas frecuentes del hash](/algo2/faq/hash)**, así como también el de **[enlaces simbólicos](faq/symlink.md)** en caso de implementar el hash abierto. 
+**No olviden revisar las [preguntas frecuentes del hash](/algo2/faq/hash)**, así como también el de **[enlaces simbólicos](faq/symlink.md)**, especialmente en caso de implementar el hash abierto. 
 
 ---
 ### Bibliografia recomendada
