@@ -10,14 +10,18 @@
   label: 3er parcialito (en el horario de la teórica)
   fecha: 2022-06-24
   
-recu1y2:
-  label: 1er recuperatorio (parcialitos 1 y 2)
+recu1:
+  label: 1er recuperatorio (parcialito 1)
   fecha: 2022-06-27
+
+recu2:
+  label: 1er recuperatorio (parcialito 2)
+  fecha: 2022-07-01
 
 recu3:
   label: 1er recuperatorio (parcialito 3)
-  fecha: 2022-07-01
+  fecha: 2022-07-04
 
 recutodos:
   label: 2do recuperatorio (parcialitos 1, 2 y 3)
-  fecha: 2022-07-08
+  fecha: 2022-07-12
