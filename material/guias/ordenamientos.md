@@ -97,7 +97,7 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
 1.  (★) Se tiene un arreglo de números, como el del primer ejercicio (no necesariamente ese). Indicar cuál sería un
     algoritmo eficiente para ordenar dicho arreglo. [Aquí](soluciones/ordenamiento_nums.txt) la solución del ejercicio.
 
-1.  (★★) Se tiene un arreglo de estructuras de la forma `struct {long anio, char* evento}`, que indica el año y evento
+1.  (★★) Se tiene un arreglo de estructuras de la forma `type Evento struct {anio long, evento string}`, que indica el año y evento
     de un hecho definido a lo largo de la historia de la Tierra. Indicar y justificar cuál sería un
     algoritmo de ordenamiento apropiado para utilizar para ordenar dicho arreglo por año. Indicar también, si en vez
     de ordenar por año se decide ordenar por evento (lexicográficamente). Si se quiere ordenar por año y dentro de cada
@@ -131,7 +131,6 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
     ["4.3.2", "5.1.2", "10.1.4", "2.1.20", "2.2.1", "4.2.3",
     "2.1.5", "8.1.2", "5.30.1", "10.0.23"]
     ```
-
 
 1.  (★★) Indicar Verdadero o Falso, justificando de forma concisa en cualquier caso.
 
