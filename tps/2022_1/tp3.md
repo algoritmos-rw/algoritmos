@@ -54,7 +54,7 @@ Para la modelación, se recomienda el siguiente esquema:
 1. Tener un grafo no dirigido que relacione si a un usuario le gusta una canción (supongamos
 que a un usuario le gusta una canción si armó una playlist con ella). Esto formará un grafo bipartito
 en el cual en un grupo estarán los usuarios, y en el otro las canciones. 
-2. Tener un grafo no dirigido relacionando canciones si aparecen en playlists de un mismo usuario (no necesariamente ambas en la misma playlist; es decir, si una canción aparece en alguna playlist del usuario X, y otra canción aparece en alguna playlist del mismo usuario X, pudiendo ser la misma playlist, o no). 
+2. Tener un grafo no dirigido relacionando canciones si aparecen en playlists de un mismo usuario (no necesariamente ambas en la misma playlist; es decir, si una canción aparece en alguna playlist del usuario X, y otra canción aparece en alguna playlist del mismo usuario X, pudiendo ser la misma playlist, o no). Este es el grafo a tener en cuenta para los útimos 2 comandos (`rango` y `ciclo`).
 
 ## Consigna
 
