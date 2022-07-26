@@ -20,12 +20,4 @@ Los ejercicios de 5 estrellas sólo serían tomados en exámenes finales.
 
 También, pueden descargarse la <i class="fa fa-file-pdf"/> versión en PDF de la guía del [<i class="fab fa-google-drive"/> Drive de la materia]({{site.data.sitios.drive}}).
 
-Guías de temas anteriores:
-
-  * [Programación greedy](guias/greedy.md)
-  * [Backtracking](guias/backtracking.md)[^1]
-  * [Programación dinámica](guias/pd.md)
-
-[^1]: Este tema se continúa dando, pero de forma específica para grafos. Se pueden encontrar ejercicios en _Grafos, segunda parte_.
-
 {% include footnotes.html %}

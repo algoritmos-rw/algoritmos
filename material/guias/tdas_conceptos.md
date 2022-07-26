@@ -15,128 +15,98 @@ math: true
 
 ## Ejercicio resuelto
 
-Implementar la _primitiva_ de la pila `void** pila_multitop(const pila_t* pila, size_t n)`, que devuelve un arreglo de tamaño $$n$$ con los $$n$$ topes de la pila (los primeros $$n$$ elementos si estos fueran desapilados), sin utilizar estructuras auxiliares. Completar el arreglo a devolver con NULL cuando el $$n$$ recibido por parámetro sea mayor a la cantidad de elementos de la pila.
+Implementar la _primitiva_ de la pila `func (pila PilaDinamica[T]) Miltitop(n int) []T`, que devuelve un arreglo de 
+tamaño $$n$$ con los $$n$$ topes de la pila (los primeros $$n$$ elementos si estos fueran desapilados), sin utilizar estructuras auxiliares. Si la pila tiene menos de $$n$$ elementos, el arreglo/slice debe ser del tamaño de la pila. 
 
 Indicar el orden de complejidad de la primitiva.
 
 ### Solución
 {:.no_toc}
 
-Algo que está implícito en el ejercicio es que se asume que la implementación del TDA Pila es sobre un arreglo dinámico, tal
-cual fue visto en clase. Siempre es válido asumir que la implementación es la misma a la que debieron implementar, salvo que
-el enunciado especifique lo contrario.
-
 Dos cosas que es necesario entender desde el inicio del ejercicio:
 
-1.  En este ejercicio _no se puede_ modificar la pila, pues el puntero recibido es de tipo _const_; ello quiere decir que la pila a la que apunta es de sólo lectura, y por tanto sería erróneo modificar cualquiera de sus campos. _Además, no se debe_ modificarla pues, al ser una primitiva y tener acceso a los miembros internos de la estructura, no es necesario desapilar para acceder a los datos.
-
-1.  Se pide devolver un arreglo, pero es muy importante entender que debe ser un arreglo dinámico (creado con _malloc_). Sería un error **muy grave** devolver un arreglo estático, pues al terminar la ejecución de la función, la memoria de ese arreglo pasaría a ser inválida. Un error de este tipo anula el ejercicio por completo.
+1.  En este ejercicio _no se puede_ modificar la pila, pues el puntero recibido es de tipo constante (no tiene el asterisco de puntero); ello quiere decir que la pila a la que apunta es de sólo lectura, y por tanto sería erróneo modificar cualquiera de sus campos. 
+1. _Además, no se debe_ modificarla pues, al ser una primitiva y tener acceso a los miembros internos de la estructura, no es necesario desapilar para acceder a los datos.
 
 Una vez esto quede claro, la solución es bastante directa: si queremos que los elementos sean aquellos que desapilaríamos, simplemente tendríamos que iterar el arreglo en ese orden. Dada la implementación de la pila, deberíamos
 hacerlo de atrás hacia delante. Si fuera una pila enlazada, simplemente sería iterar por los nodos.
 
-```cpp
-void** pila_multitop(const pila_t* pila, size_t n) {
-    void** topes = malloc(sizeof(void*) * n);
-    if (!topes) {
-        return NULL;
+```golang
+func (pila PilaDinamica[T]) Miltitop(n int) []T {
+    cant := min(n, pila.cantidad)
+    topes := make([]T, cant)
+    for i := 0; i < cant; i++ {
+        topes[cant - i - 1] = pila.datos[i]
     }
-    // Se podria hacer que i comience en k o pila->cantidad - 1, pero hay que
-    // tener cuidado con esto, y con la condicion de corte: un size_t nunca
-    // va a ser menor a 0
-    for (size_t i = 0; i < n; i++) {
-        if (i < pila->cantidad) {
-            topes[i] = pila->datos[pila->cantidad - 1 - i];
-        } else {
-            topes[i] = NULL;
-        }
-    }
-    return topes;
+    return topes
 }
 ```
 
-También sería válido hacerlo en dos iteraciones: una para llenar con los topes, y otra para rellenar con `NULL`s el resto.
-Así como también lo sería iterar hasta el más pequeño entre `n` y `pila->cantidad`, habiendo inicializado antes el
-arreglo con `NULL`s (ya sea iterando, o usando `calloc`). Otras tantas variantes también serían aceptadas, no hay una única
-forma de resolver este ejercicio.
-
-Sobre la complejidad, sea cual sea el caso, vamos a estar llenando siempre el arreglo de $$n$$ elementos con algo (datos de
-la pila, o `NULL`). Acceder a cada elemento de la pila, siendo que accedemos directamente, es $$\mathcal{O}(1)$$, y nunca
-vamos a ver más elementos de la pila si son más de $$n$$, por ende la primitiva es $$\mathcal{O}(n)$$. Es importante denotar
+Sobre la complejidad: Acceder a cada elemento de la pila, siendo que accedemos directamente, es $$\mathcal{O}(1)$$, y nunca
+vamos a ver más elementos de la pila si son más de $$n$$, por ende la primitiva es $$\mathcal{O}(n)$$. Podríamos considerar que va a ser el mínimo con la cantidad de elementos de la pila, pero si la cantidad de elementos de la pila fuera mucho más grande que $$n$$, de todas formas no superaría $$n$$. Es importante denotar
 que $$n$$ en este caso no es la cantidad de elementos de la pila, sino la cantidad de elementos pedidos. Si quisiéramos
 hacer más clara la distinción, podríamos haber llamado a dicho parámetro con otro nombre. Tener cuidado con esto, porque
 si el parámetro tuviera otro nombre no sería correcto decir que es $$\mathcal{O}(n)$$, salvo que se aclare qué signifique
 $$n$$.
 
-
-
 ## Ejercicios propuestos
 
 1.  (★) Implementar el TDA Fracción. Dicho TDA debe tener las siguientes primitivas, cuya documentación
-    puede encontrarse [aquí](extra/fraccion.h):
+    puede encontrarse [aquí](extra/fraccion.go):
     ```
-    fraccion_t* fraccion_crear(int numerador, int denominador);
-    fraccion_t* fraccion_sumar(fraccion_t* f1, fraccion_t* f2);
-    fraccion_t* fraccion_mul(fraccion_t* f1, fraccion_t* f2);
-    char* fraccion_representacion(fraccion_t* fraccion);
-    int fraccion_parte_entera(fraccion_t* fraccion);
-    void fraccion_destruir(fraccion_t* fraccion);
+    CrearFraccion(numerador, denominador int) Fraccion
+    Sumar(otra Fraccion) Fraccion
+    Multiplicar(otra Fraccion) Fraccion
+    ParteEntera() int
+    Representacion() string
     ```
 
-    _Nota_: considerar que se puede utilizar la función `sprintf` para generar la representación de
-    la fracción. Por ejemplo: `sprintf(buffer, "%d/%d", num1, num2)`.
-    Puede encontrarse la resolución de este ejercicio [aquí](soluciones/fraccion.c).
+    Puede encontrarse la resolución de este ejercicio [aquí](soluciones/fraccion.go).
 
 1.  (★) Implementar el TDA NumeroComplejo. Dicho TDA debe tener las siguientes primitivas, cuya documentación
-    puede encontrarse [aquí](extra/complejo.h):
+    puede encontrarse [aquí](extra/complejo.go):
     ```
-    complejo_t* complejo_crear(double real, double img);
-    void complejo_multuplicar(complejo_t* c1, complejo_t* c2);
-    void complejo_sumar(complejo_t* c1, complejo_t* c2);
-    double complejo_obtener_imaginaria(const complejo_t* complejo);
-    double complejo_obtener_real(const complejo_t* complejo);
-    double complejo_obtener_modulo(const complejo_t* complejo);
-    double complejo_obtener_angulo(const complejo_t* complejo);
-    void complejo_destruir(complejo_t* complejo);
+    CrearComplejo(real float, img float) Complejo
+    Multiplicar(otro Complejo)
+    Sumar(otro Complejo)
+    ParteReal() float
+    ParteImaginaria() float
+    Modulo() float
+    Angulo() float
     ```
 
-    _Nota_: considerar que se puede utilizar la función `sprintf` para generar las representaciones.
-
-1.  (★)  Implementar una función que reciba un arreglo de `void*` e invierta su orden, utilizando los TDAs vistos.
+1.  (★)  Implementar una función que reciba un arreglo genérico e invierta su orden, utilizando los TDAs vistos.
     Indicar y justificar el orden de ejecución.
 
-1.  (★)  Mismo a lo anterior, pero que el arreglo sea de `int` (no de `int*`), utilizando los TDAs tal cual se los
-    implementa en clase.
-
-1.  (★★) Implementar en C el TDA `ComposiciónFunciones` que emula la composición de funciones (i.e. `f(g(h(x))`).
+1.  (★★) Implementar en Go el TDA `ComposiciónFunciones` que emula la composición de funciones (i.e. `f(g(h(x))`).
     Se debe definir la estructura del TDA, y las siguientes primitivas:
     ```
-    composicion_t* composicion_crear();
-    void composicion_destruir(composicion_t*);
-    bool composicion_agregar_funcion(composicion_t*, double (*f)(double));
-    double composicion_aplicar(composicion_t*, double);
+    CrearComposicion() ComposicionFunciones
+    AgregarFuncion(func (double) double)
+    Aplicar(double) double
     ```
     Considerar que primero se irán agregando las funciones como se leen, pero tener en cuenta el correcto orden
     de aplicación. Por ejemplo: para emular `f(g(x))`, se debe hacer:
 
-        composicion_agregar_funcion(composicion, f);
-        composicion_agregar_funcion(composicion, g);
-        composicion_aplicar(composicion, x);
+        composicion.AgregarFuncion(f)
+        composicion.AgregarFuncion(g)
+        composicion.Aplicar(x)
 
     Indicar el orden de las primitivas.
 
 1. (★★★) Dada una lista enlazada implementada con las siguientes estructuras:
 
-        typedef struct nodo_lista {
-            struct nodo_lista* prox;
-            void* dato;
-        } nodo_lista_t;
+    ```golang
+        type nodoLista[T any] struct {
+            prox *nodoLista[T]
+            dato T
+        }
+        type ListaEnlazada[T any] struct {
+            prim *nodoLista[T]
+        }
+    ```
 
-        typedef struct lista {
-            nodo_lista_t* prim;
-        } lista_t;
-
-    Escribir una primitiva que reciba una lista y devuelva el elemento que esté a $$k$$ posiciones del final (el
+    Escribir una primitiva de lista que devuelva el elemento que esté a $$k$$ posiciones del final (el
     ante-k-último), recorriendo la lista una sola vez y sin usar estructuras auxiliares. Considerar que
     $$k$$ es siempre menor al largo de la lista.
     Por ejemplo, si se recibe la lista `[ 1, 5, 10, 3, 6, 8 ]`, y `k = 4`, debe devolver 10.
@@ -147,16 +117,16 @@ $$n$$.
     La pila debe quedar en el mismo estado que al invocarse la función.
     Indicar y justificar el orden del algoritmo propuesto.
 
-1.  (★★) Implementar la primitiva `void** cola_multiprimeros(const cola_t* cola, size_t k)` que dada una cola y un
+1.  (★★) Implementar la primitiva `func (cola ColaEnlazada[T]) Multiprimeros(k int) [T]` que dada una cola y un
     número $$k$$, devuelva los primeros $$k$$ elementos de la cola, en el mismo orden en el que habrían
-    salido de la cola. En caso que la cola tenga menos de $$k$$ elementos, rellenar con NULL.
-    Indicar y justificar el orden de ejecución del algoritmo.
+    salido de la cola. En caso que la cola tenga menos de $$k$$ elementos. Si hay menos elementos que $$k$$ en
+    la cola, devolver un slice del tamaño de la cola. Indicar y justificar el orden de ejecución del algoritmo.
 
-1.  (★★) Implementar la función `void** cola_multiprimeros(cola_t* cola, size_t k)` con el mismo comportamiento de la
+1.  (★★) Implementar la **función** `func Multiprimeros[T any](cola Cola[T], k int) []T` con el mismo comportamiento de la
     primitiva anterior.
 
-1.  (★★) Implementar en C una primitiva `void lista_invertir(lista_t* lista)` que invierta la lista recibida
-    por parámetro, sin utilizar estructuras auxiliares. Indicar y justificar el orden de la primitiva.
+1.  (★★) Implementar en Go una primitiva `func (lista *ListaEnlazada) Invertir()` que invierta la lista, 
+    sin utilizar estructuras auxiliares. Indicar y justificar el orden de la primitiva.
 
 1.  (★★) Se quiere implementar un TDA ColaAcotada sobre un arreglo. Dicho TDA tiene un espacio para $$k$$ elementos
     (que se recibe por parámetro al crear la estructura). Explicar cómo deberían implementarse las primitivas
@@ -166,7 +136,7 @@ $$n$$.
     utilizando como estructura auxiliar sólo otra pila auxiliar.
     Por ejemplo, la pila `[ 4, 1, 5, 2, 3 ]` debe quedar como `[ 1, 2, 3, 4, 5 ]` (siendo el último elemento el tope de la pila, en ambos casos). Indicar y justificar el orden de la función.
 
-1.  (★★) Implementar una función `void cola_filtrar(cola_t* cola, bool (*filtro)(void*))`, que elimine los
+1.  (★★) Implementar una función `func FiltrarCola[K any](cola Cola[K], func filtro(K) bool)` , que elimine los
     elementos encolados para los cuales la función _filtro_ devuelve `false`. Aquellos elementos que no son eliminados
     deben permanecer en el mismo orden en el que estaban antes de invocar a la función. No es necesario destruir los
     elementos que sí fueron eliminados. Se pueden utilizar las estructuras auxiliares que se consideren necesarias y
@@ -175,24 +145,23 @@ $$n$$.
 
 1.  (★★★) Sabiendo que la firma del iterador interno de la lista enlazada es:
 
-        void lista_iterar(lista_t* lista,
-                          bool (*visitar)(void* dato, void* extra),
-                          void* extra);
+    ```golang
+        Iterar(func(K) bool)
+    ```
+    
+    Se tiene una lista en donde todos los elementos son punteros a números enteros. Implementar la función _visitar_ para que calcule la suma de todos los números pares. Mostrar, además, una invocación completa a `Iterar()` que haga uso del _visitar_ implementado.
 
-    Se tiene una lista en donde todos los elementos son punteros a números enteros. Implementar la función _visitar_ para que calcule la suma de todos los números pares. Mostrar, además, una invocación completa a `lista_iterar()` que haga uso del _visitar_ implementado.
-
-1.  (★★★★★) Diseñar un TDA `PilaConMáximo`, que tenga las mismas primitivas de la pila convencional
-    (en este caso, sólo para números), y además permita obtener el máximo de la pila. **Todas**
+1.  (★★★★★) Diseñar un TDA `PilaConMáximo`, que tenga las mismas primitivas de la pila convencional, 
+    y además permita obtener el máximo de la pila. **Todas**
     las primitivas deben funcionar en $$\mathcal{O}(1)$$. Explicar cómo implementarías el TDA para
     que cumpla con todas las restricciones.
 
 1.  (★★★) Implementar el TDA Mamushka (matrioshka, o muñeca rusa), teniendo en cuenta que una Mamushka puede
     tener otra Mamushka dentro de si misma. Las primitivas deben ser:
         
-     - `mamushka_t* mamushka_crear(size_t tam, color_t color)`: Crea una mamushka con un tamaño y color
-        definido.
-     - `color_t mamushka_obtener_color(mamushka_t* mamushka)`: Obtiene el color de la Mamushka.
-     - `bool mamushka_guardar(mamushka_t* contenedora, mamushka_t* a_guardar)`: _Intenta_ guardar la segunda 
+     - `CrearMamushka(tam int, color Color) Mamushka`: Crea una mamushka con un tamaño y color definido.
+     - `ObtenerColor() Color`: Obtiene el color de la Mamushka.
+     - `Guardar(Mamushka) bool`: _Intenta_ guardar la segunda 
         mamushka en la primera. Si la primera ya tiene una mamushka guardada, entonces debe
         intentar guardar la mamushka `a_guardar` dentro de la mamushka que ya estaba guardada.
         La operación falla (y devuelve `false`) si en algún momento se intenta guardar una mamushka
@@ -201,17 +170,16 @@ $$n$$.
         intenta guardar una de tamaño 5, ésta debe guardarse dentro de la de tamaño 8.
         Si, luego, se intentara guardar una de tamaño 6, la operación debe fallar dado
         que no se puede guardar una mamushka de tamaño 6 dentro de una de tamaño 5.
-     - `mamushka_t* mamushka_obtener_guardada(mamushka_t*)`: Devuelve la mamushka guardada. 
+     - `ObtenerGuardada() *Mamushka`: Devuelve un puntero a la mamushka guardada. 
         `NULL` en caso de no tener ninguna guardada. En el ejemplo anterior, si utilizaremos esta primitiva
         con la Mamushka de tamaño 10, nos devolvería la Mamushka de tamaño 8 que guardamos (y que dentro
         tiene la de tamaño 5). 
-     - `void mamushka_destruir(mamushka_t*)`: Destruye la mamushka (y todas las que se encuentren dentro).
 
     Definir la estructura (`struct`) del TDA, y escribir estas 5 primitivas. Indicar el orden de cada una de ellas.
     
     _Nota_: `color_t` corresponde a un `typedef enum color color_t`, que está definido en algún lugar.
     
 1.  (★★★) Dadas dos pilas de enteros positivos (con posibles valores repetidos) cuyos elementos fueron ingresados de menor
-    a mayor, se pide implementar una **función** `int* merge_pilas(pila* pila_1, pila* pila_2)` que devuelva un array
+    a mayor, se pide implementar una **función** `func MergePilas[T any](pila1, pila2 Pila[T]) []T` que devuelva un array
     ordenado de menor a mayor con todos los valores de ambas pilas sin repeticiones.
     Detallar y justificar la complejidad del algoritmo considerando que el tamaño de las pilas es N y M respectivamente.

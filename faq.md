@@ -9,7 +9,7 @@ Preguntas frecuentes
 
 * [Compilación y Ejecución](faq/compilacion-ejecucion.md)
 
-* [Lenguaje C](faq/lenguaje-c.md)
+* [Lenguaje go] TODO (a medida que vayan apareciendo consultas)
 
 * [Errores de Valgrind](faq/valgrind.md)
 
@@ -18,6 +18,8 @@ Preguntas frecuentes
 * [Cola](faq/cola.md)
 
 * [Lista Enlazada](faq/lista-enlazada.md)
+
+* [Enlaces simbólicos](faq/symlink.md)
 
 * [Hash](faq/hash.md)
 

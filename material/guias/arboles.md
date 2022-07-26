@@ -15,25 +15,26 @@ math: true
 
 Se tiene un árbol binario de búsqueda con cadenas como claves y
 función de comparación `strcmp`. Implementar una primitiva
-`lista_t* abb_mayores(const abb_t* abb, const char* cadena)`
-que, dados un ABB y una cadena, devuelva una
+`func (abb *abb[K, V]) Mayores(cadena K) Lista[K]`
+que, dados un ABB y una clave, devuelva una
 lista ordenada con las claves del árbol estrictamente mayores a la
-cadena recibida por parámetro (que no necesariamente está en el árbol).
+recibida por parámetro (que no necesariamente está en el árbol). 
 
 Suponer que la estructura del TDA es:
 
-```cpp
-typedef struct abb {
-    const char* clave;
-    struct abb* izq;
-    struct abb* der;
-} abb_t;
+```golang
+type abb struct {
+    clave string
+    izq *abb
+    der *abb
+}
 ```
 
 _Aclaración_: se debe realizar la menor cantidad posible de comparaciones.
 
-
 ### Solución
+
+[REVISAR, ESTO SE VA A RESOLVER CON EL ITER INTERNO POR RANGOS]
 
 La aclaración hace mención a que utilicemos la propiedad de ABB: sabemos que los nodos
 a izquierda son menores al actual, y los que estén a derecha son mayores.
@@ -82,49 +83,55 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     Hacer un seguimiento de hacer dicho procesamiento con un preorder, inorder o postorder. A continuación se deja
     la implementación mediante cada recorrido:
 
-    ```cpp
-    void multiplicar_con_hijos_pre(ab_t* arbol) {
-        if (!arbol) return;
-        int valor_izq = arbol->izq != NULL ? arbol->izq->dato : 1;
-        int valor_der = arbol->der != NULL ? arbol->der->dato : 1;
-        arbol->dato *= valor_izq * valor_der;
-        multiplicar_con_hijos_pre(arbol->izq);
-        multiplicar_con_hijos_pre(arbol->der);
+    ```golang
+    func (arbol *Arbol) MultiplicarConHijosPre() {
+        if arbol == nil {
+            return  
+        } 
+        valor_izq := arbol.izq != nil ? arbol.izq.dato : 1;
+        valor_der := arbol.der != nil ? arbol.der.dato : 1;
+        arbol.dato *= valor_izq * valor_der;
+        arbol.izq.MultiplicarConHijosPre()
+        arbol.der.MultiplicarConHijosPre()
     }
 
-    void multiplicar_con_hijos_in(ab_t* arbol) {
-        if (!arbol) return;
-        multiplicar_con_hijos_in(arbol->izq);
-        int valor_izq = arbol->izq != NULL ? arbol->izq->dato : 1;
-        int valor_der = arbol->der != NULL ? arbol->der->dato : 1;
-        arbol->dato *= valor_izq * valor_der;
-        multiplicar_con_hijos_in(arbol->der);
+    func (arbol *Arbol) MultiplicarConHijosIn() {
+        if arbol == nil {
+            return  
+        } 
+        arbol.izq.MultiplicarConHijosIn()
+        valor_izq := arbol.izq != nil ? arbol.izq.dato : 1;
+        valor_der := arbol.der != nil ? arbol.der.dato : 1;
+        arbol.dato *= valor_izq * valor_der;
+        arbol.der.MultiplicarConHijosIn()
     }
 
-    void multiplicar_con_hijos_post(ab_t* arbol) {
-        if (!arbol) return;
-        multiplicar_con_hijos_post(arbol->izq);
-        multiplicar_con_hijos_post(arbol->der);
-        int valor_izq = arbol->izq != NULL ? arbol->izq->dato : 1;
-        int valor_der = arbol->der != NULL ? arbol->der->dato : 1;
-        arbol->dato *= valor_izq * valor_der;
+    func (arbol *Arbol) MultiplicarConHijosPost() {
+        if arbol == nil {
+            return  
+        } 
+        arbol.izq.MultiplicarConHijosPost()
+        arbol.der.MultiplicarConHijosPost()
+        valor_izq := arbol.izq != nil ? arbol.izq.dato : 1;
+        valor_der := arbol.der != nil ? arbol.der.dato : 1;
+        arbol.dato *= valor_izq * valor_der;
     }
     ```
 
 1.  (★★) Dado un árbol binario, escriba una _primitiva_ recursiva que cuente la cantidad de nodos que
     tienen exactamente dos hijos directos. ¿Qué orden de complejidad tiene la función implementada?
 
-1.  (★★) Escribir una _primitiva_ con la firma `void arbol_invertir(arbol_t* arbol)`
+1.  (★★) Escribir una _primitiva_ con la firma `func (arbol *Arbol) Invertir()`
     que invierta el árbol binario pasado por parámetro, de manera tal que los hijos
     izquierdos de cada nodo se conviertan en hijos derechos.
 
-    La estructura `arbol_t` respeta la siguiente definición:
+    La estructura `Arbol` respeta la siguiente definición:
 
-    ```cpp
-        typedef struct arbol {
-            struct arbol* izq;
-            struct arbol* der;
-        } arbol_t;
+    ```golang
+        type Arbol struct {
+            izq *Arbol
+            der *Arbol
+        }
     ```
 
     Indicar el orden de complejidad de la función implementada.
@@ -149,16 +156,16 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     - un hijo derecho tiene un solo hijo, y es el izquierdo
     - un hijo izquierdo tiene un solo hijo, y es el derecho
 
-    Implementar una _primitiva_ para el árbol binario `size_t ab_quiebres(const ab_t*)`
+    Implementar una _primitiva_ para el árbol binario `func (arbol Arbol) Quiebres() int`
     que, dado un árbol binario, nos devuelva la cantidad de quiebres que
     tiene. La primitiva no debe modificar el árbol. La estructura del
-    tipo `ab_t` es:
+    tipo `Arbol` es:
 
-    ```cpp
-        typedef struct arbol {
-            struct arbol* izq;
-            struct arbol* der;
-        } ab_t;
+    ```golang
+        type Arbol struct {
+            izq *Arbol
+            der *Arbol
+        }
     ```
 
     Indicar y justificar el orden de la primitiva, e indicar el tipo de
@@ -188,12 +195,11 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     preorder e inorder. Indicar y justificar el orden de la primitiva (tener cuidado con este punto).
     Considerar que la estructura del árbol binario es:
 
-    ```cpp
-        typedef struct arbol {
-            struct arbol* izq;
-            struct arbol* der;
-            char* dato;
-        } ab_t;
+    ```golang
+        type Arbol struct {
+            izq *Arbol
+            der *Arbol
+        }
     ```
 
 
@@ -202,7 +208,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     dicho orden se asegure que el ABB quede balanceado. ¿Cómo cambiarías tu resolución si en
     vez de querer guardarlos en un ABB se fueran a insertar en un AVL?
 
-1.  (★★★) Determinar cómo es el Árbol cuyo pre order es EURMAONDVSZT, e in order es MRAUOZSVDNET, e 
+1.  (★★★) Determinar cómo es el Árbol cuyo pre order es `EURMAONDVSZT`, e in order es `MRAUOZSVDNET`, e 
     indicar su recorrido post order.
     
 1.  (★★★) En un árbol binario, dado un nodo con dos hijos, explicar por qué su predecesor en el recorrido 

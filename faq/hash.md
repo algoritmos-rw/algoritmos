@@ -6,19 +6,11 @@
 
 ## ¿Qué son las claves y los datos dentro del hash?
 
-La clave es la cadena mediante la cual se ubica el dato, tanto al guardarlo como al obtenerlo o borrarlo. Por ejemplo, si se guarda una estructura `alumno_t`, la clave podría ser el padrón (como cadena) o el apellido, según con qué criterio se quiere guardar y luego encontrar los datos.
+La clave es la cadena mediante la cual se ubica el dato, tanto al guardarlo como al obtenerlo o borrarlo. Por ejemplo, si se guarda una estructura `Alumno`, la clave podría ser el padrón (como cadena o número) o el apellido, según con qué criterio se quiere guardar y luego encontrar los datos.
 
-A esta clave será necesario aplicar la función de hashing, que debe devolver un número entre 0 y _m-1_, siendo _m_ el largo de la tabla de hash. La forma más usada de obtener un valor en este rango es aplicando la operación módulo _m_, que devuelve el resto de la división entera entre un número y _m_.
+A esta clave será necesario aplicar la función de hashing, que debe devolver un número, y luego debemos asegurar que quede entre 0 y _m-1_, siendo _m_ el largo de la tabla de hash. La forma más usada de obtener un valor en este rango es aplicando la operación módulo _m_, que devuelve el resto de la división entera entre un número y _m_.
 
-Las claves y los datos asociados se guardan en la tabla de hash como una pareja. Para esto usamos una estructura adicional (que se puede llamar, por ejemplo, `hash_campo_t` o `hash_elem_t`).  De esta forma es posible recuperar el dato asociado a la clave cuando así se lo solicite.
-
-## ¿Por qué se crean copias de las claves al guardar?
-
-Las claves en nuestra implementación del hash son cadenas, que en C son arreglos
-de caracteres. Si no se hicieran copias de las claves, el usuario podría
-modificar la cadena (sin cambiar el puntero). Tal cambio podría ocasionar que la
-función de hash devuelva un resultado diferente, haciendo que el par clave–valor
-fuera imposible de localizar nuevamente.
+Las claves y los datos asociados se guardan en la tabla de hash como una pareja. Para esto usamos una estructura adicional (que se puede llamar, por ejemplo, `hashCampo` o `hashElem`).  De esta forma es posible recuperar el dato asociado a la clave cuando así se lo solicite.
 
 ## ¿Cómo se itera un hash abierto?
 
@@ -30,13 +22,7 @@ Al avanzar el iterador de hash, debe avanzar el iterador de la lista actual, y e
 
 Debe indicar que llegó al final cuando ya no queden listas por recorrer.
 
-## ¿Cómo se destruye un hash abierto?
-
-La lista que está asociada a cada uno de los baldes de la tabla de hash debe contener parejas de clave-valor.  De modo que si al momento de destruir la lista se le pasara una función de destrucción del dato, esta función debería destruir estas parejas.  Pero el usuario almacena en el hash una función de destrucción del valor almacenado, a la que no se puede acceder desde la función de destrucción del dato de la lista.
-
-La forma más sencilla de resolver este problema es, entonces, ir llamando a la función `lista_borrar_primero` hasta que la lista se encuentre vacía y destruir apropiadamente cada uno de los elementos que se van sacando de la lista.
-
-## ¿Debo codificar una función de hashing?
+## ¿Debo codificar una función de hashing propia?
 
 No. Las funciones de hashing son un tema muy extenso en la computación, y no se pretende que se codifique una. Cabe destacar que estas pueden llegar a impactar sobre el rendimiento de la tabla de hash, así que de encontrarse con un hash que no rinde como uno esperaría, uno de las primeras cosas a probar es cambiar la función de hash.
 
@@ -81,3 +67,52 @@ Entonces, estamos en búsqueda de un d que contenga la menor cantidad posible de
 ```
 
 Cabe destacar que si las claves originales vienen distribuidas uniformemente, esto no soluciona el problema, porque nos dara resultados similares para cualquier capacidad utilizada. Pero, como en la mayoría de los casos las claves no vienen con distribución específica, terminamos concluyendo que lo mejor es usar un número primo como capacidad de la tabla de hash.
+
+## ¿Por qué al redimensionar no puedo crear un hash nuevo?
+
+Lo primero a entender es que no podemos redimensionar sobre la misma tabla que estábamos antes. De una forma u otra, necesitamos poder re-hashear los elementos sobre una tabla. 
+
+Algo que surge como primera opción es "me creo un hash nuevo al que le agrego los datos, y listo, que ese sea el hash de ahora en más". El problema que surge de esa solución va a ser que luego de guardar el elemento nuevo e irnos de la función,
+el hash "vuelve a como estaba antes", sin la clave reciéntemente guardada (en teoría) y sin la redimensión hecha. ¿Es acaso un bug en Go? No. El problema es conceptual de referencias (y punteros). 
+
+Veamos un ejemplo básico. Supongamos que tenemos: 
+```golang
+func cambio(a int) {
+	a = 10
+}
+// ...
+b := 7
+cambio(b)
+```
+
+La primera pregunta será: ¿Cuánto vale `b` luego de invocar `cambio`? Esperamos que no resulte difícil ver que sigue valiendo 7. Estamos modificando una variable local de la función `cambio` (que recibió su valor por copia, como todo en Go!) por ende cambiar la variable local no va a hacer que cambie el valor de quien poseía ese valor originalmente. El concepto para el caso del hash va a terminar siendo el mismo, pero nos vamos acercando. Modificamos un poco el ejemplo: 
+
+```golang
+func cambio(a *int) {
+	a = new(int) // suponer que luego de la invocación devuelve 0xCAFE
+	*a = 15
+}
+// ...
+b := 10 // Suponer que la variable vive en 0xFECA
+cambio(&b) 
+```
+
+¿Cuánto vale `b` luego de invocar `cambio`? Nuevamente, va a seguir valiendo lo mismo que antes (`0xFECA`). Lo que se modifica en `cambio` es una variable local. 
+
+Entonces, ahora lo llevamos a nuestro caso del hash: 
+```golang
+func (hash *hash[K, V]) Guardar(clave K, dato V) { // esto vale tanto para el hash abierto como cerrado
+	if hay que redimensionar {
+		hash = _crearHash(...)
+	}
+	// ...
+
+}
+```
+
+Lo que sucede es que al `Guardar` se le pasa un puntero al hash. Eso dentro de `guardar` lo tengo como una variable local. 
+Por lo tanto, si yo hago `hash = _hash_crear(...)`, lo que hago es pisar la referencia (esa variable local). 
+El hash "real" (el que me pasaron por parámetro) lo perdí (al menos para el scope de esta función), y todo lo que haga 
+de acá en adelante no afecta al original. Eso incluye guardar el dato. Pero también la redimensión no se hizo porque 
+lo que se hizo fue crear OTRO hash, por lo que el original no vio nada.
+

@@ -31,135 +31,59 @@ Algunas preguntas:
 
  Aplicamos la primer solución, que es más corta:
 
-```cpp
-void ordenar_fechas(char** fechas, size_t n) {
-    for (size_t i = 0; i < 8; i++) {
-        ordenar_por_digito(fechas, 7 - i, n);
+```golang
+func OrdenarFechas(fechas []string) {
+    for i := 0; i < 8; i++ {
+        ordenarPorDigito(fechas, 7 - i)
     }
 }
 
-void ordenar_por_digito(char** fechas, size_t digito, size_t n) {
-    lista_t* digito[10];
-    for (size_t i = 0; i < 10; i++) digito[i] = lista_crear();
-
-    for (size_t i = 0; i < n; i++) {
-        int valor = char_a_int(fecha[i][digito]);
-        lista_insertar_ultimo(digito[valor], fecha);
+func ordenarPorDigito(fechas []string, digito int) {
+    digitos := make([]Lista[string], 10)
+    for i := 0; i < 10; i++ {
+        digitos[i] = CrearListaEnlazada[string]()
     }
 
-    size_t indice = 0;
-    for (size_t i = 0; i < 31; i++) {
-        while(!lista_esta_vacia(digito[i])) {
-            fechas[indice++] = lista_borrar_primero(digito[i]);
+    for fecha := range fechas {
+        digitos[int(fecha[digito])],InsertarUltimo(fecha)
+    }
+
+    indice := 0
+    for lista := range digitos {
+        for iter := lista.Iterador(); iter.HaySiguiente(); indice++ {
+            fechas[indice] = iter.Siguiente()
         }
-        lista_destruir(digito[i], NULL);
     }
 }
-
 ```
 
 
-Aplicamos la segunda solución, que es un tanto más larga, pero más rápida:
+Aplicamos la segunda solución, que es más rápida, pero hay que rebuscarse un poco más para no repetir 3 veces lo mismo:
 
-```cpp
-void ordenar_fechas(char** fechas, size_t n) {
-    ordenar_por_dia(fechas, n);
-    ordenar_por_mes(fechas, n);
-    ordenar_por_anio(fechas, n);
+```golang
+func OrdenarFechas(fechas []string) {
+    ordenarPorTiempo(fechas, 31, 6, 8);
+    ordenarPorTiempo(fechas, 12, 4, 6);
+    ordenarPorTiempo(fechas, 10000, 0, 4);
 }
 
-int char_a_int(char v) {
-    return a - '0';
-}
-
-void ordenar_por_dia(char** fechas, size_t n) {
-    lista_t* dias[31];
-    for (size_t i = 0; i < 31; i++) dias[i] = lista_crear();
-
-    for (size_t i = 0; i < n; i++) {
-        int dia = char_a_int(fecha[i][6]) * 10 + char_a_int(fecha[i][7]) - 1;
-        lista_insertar_ultimo(dias[dia], fecha);
+func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) {
+    tiempos := make([]Lista[string], largo)
+    for i := 0; i < largo; i++ {
+        tiempos[i] = CrearListaEnlazada[string]()
     }
-
-    size_t indice = 0;
-    for (size_t i = 0; i < 31; i++) {
-        while(!lista_esta_vacia(dias[i])) {
-            fechas[indice++] = lista_borrar_primero(dias[i]);
+    for fecha := range fechas {
+        tiempo = int(fecha[indiceIni:indiceFin])
+        tiempos[tiempo].InsertarUltimo(fecha)
+    }
+    indice := 0
+    for lista := range dias {
+        for iter := lista.Iterador(); iter.HaySiguiente(); indice++ {
+            fechas[indice] = iter.Siguiente()
         }
-        lista_destruir(dias[i], NULL);
     }
 }
-
-void ordenar_por_mes(char** fechas, size_t n) {
-    lista_t* meses[12];
-    for (size_t i = 0; i < 12; i++) meses[i] = lista_crear();
-
-    for (size_t i = 0; i < n; i++) {
-        int mes = char_a_int(fecha[i][4]) * 10 + char_a_int(fecha[i][5]) - 1;
-        lista_insertar_ultimo(meses[mes], fecha);
-    }
-
-    size_t indice = 0;
-    for (size_t i = 0; i < 31; i++) {
-        while(!lista_esta_vacia(meses[i])) {
-            fechas[indice++] = lista_borrar_primero(meses[i]);
-        }
-        lista_destruir(meses[i], NULL);
-    }
-}
-
-void ordenar_por_anio(char** fechas, size_t n) {
-    for (size_t i = 0; i < 4; i++) {
-        ordenar_por_digito(fechas, 3 - i, n);
-    }
-}
-
 ```
-
-Ahora vemos de mejorar un poco el código:
-
-```cpp
-void ordenar_fechas(char** fechas, size_t n) {
-    ordenar_por_dia(fechas, n);
-    ordenar_por_mes(fechas, n);
-    ordenar_por_anio(fechas, n);
-}
-
-int char_a_int(char v) {
-    return a - '0';
-}
-
-void ordenar_por_dos_digitos(char** fechas, size_t n, size_t digito_ini,
-                             size_t max) {
-    lista_t* dias[max];
-    for (size_t i = 0; i < max; i++) dias[i] = lista_crear();
-
-    for (size_t i = 0; i < n; i++) {
-        int dia = char_a_int(fecha[i][digito_ini]) * 10
-                + char_a_int(fecha[i][digito_ini + 1]) - 1;
-        lista_insertar_ultimo(dias[dia], fecha);
-    }
-
-    size_t indice = 0;
-    for (size_t i = 0; i < max; i++) {
-        while(!lista_esta_vacia(dias[i])) {
-            fechas[indice++] = lista_borrar_primero(dias[i]);
-        }
-        lista_destruir(dias[i], NULL);
-    }
-}
-
-
-void ordenar_por_dia(char** fechas, size_t n) {
-    ordenar_por_dos_digitos(fechas, n, 6, 31);
-}
-
-void ordenar_por_mes(char** fechas, size_t n) {
-    ordenar_por_dos_digitos(fechas, n, 4, 12);
-}
-
-```
-
 
 ## Ejercicios propuestos
 
@@ -173,7 +97,7 @@ void ordenar_por_mes(char** fechas, size_t n) {
 1.  (★) Se tiene un arreglo de números, como el del primer ejercicio (no necesariamente ese). Indicar cuál sería un
     algoritmo eficiente para ordenar dicho arreglo. [Aquí](soluciones/ordenamiento_nums.txt) la solución del ejercicio.
 
-1.  (★★) Se tiene un arreglo de estructuras de la forma `struct {long anio, char* evento}`, que indica el año y evento
+1.  (★★) Se tiene un arreglo de estructuras de la forma `type Evento struct {anio long, evento string}`, que indica el año y evento
     de un hecho definido a lo largo de la historia de la Tierra. Indicar y justificar cuál sería un
     algoritmo de ordenamiento apropiado para utilizar para ordenar dicho arreglo por año. Indicar también, si en vez
     de ordenar por año se decide ordenar por evento (lexicográficamente). Si se quiere ordenar por año y dentro de cada
@@ -207,7 +131,6 @@ void ordenar_por_mes(char** fechas, size_t n) {
     ["4.3.2", "5.1.2", "10.1.4", "2.1.20", "2.2.1", "4.2.3",
     "2.1.5", "8.1.2", "5.30.1", "10.0.23"]
     ```
-
 
 1.  (★★) Indicar Verdadero o Falso, justificando de forma concisa en cualquier caso.
 

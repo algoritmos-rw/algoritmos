@@ -8,34 +8,47 @@ trabajo: Heap
 Heap
 ====
 
-Se incluye en [el sitio de descargas]({{site.skel}}) el archivo `heap.h` correspondiente al ejercicio de la cola de prioridad.
+Se incluye en [el sitio de descargas]({{site.skel}}) el archivo `cola_prioridad.go` correspondiente al ejercicio de la cola de prioridad.
 
 El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Cola de Prioridad, utilizando un Heap.
 
-#### Primitivas del heap
-``` cpp
-typedef struct heap heap_t;
-typedef int (*cmp_func_t) (const void *a, const void *b);
+#### Primitivas de la cola de prioridad
+``` golang
+type ColaPrioridad[T comparable] interface {
 
-heap_t *heap_crear(cmp_func_t cmp);
-heap_t *heap_crear_arr(void *arreglo[], size_t n, cmp_func_t cmp);
-void heap_destruir(heap_t *heap, void destruir_elemento(void *e));
+	// EstaVacia devuelve true si la cantidad de elementos en el heap es 0, 
+	// false en caso contrario.
+	EstaVacia() bool
 
-size_t heap_cantidad(const heap_t *heap);
-bool heap_esta_vacio(const heap_t *heap);
+	// Encolar Agrega un elemento al heap.
+	Encolar(T)
 
-bool heap_encolar(heap_t *heap, void *elem);
-void *heap_ver_max(const heap_t *heap);
-void *heap_desencolar(heap_t *heap);
+	// VerMax devuelve el elemento con máxima prioridad. Si está vacía, entra 
+	// en pánico con un mensaje "La cola está vacia".
+	VerMax() T
+
+	// Desencolar elimina el elemento con máxima prioridad, y lo devuelve. Si 
+	// está vacía, entra en pánico con un mensaje "El heap esta vacia"
+	Desencolar() T
+
+	// Cantidad devuelve la cantidad de elementos que hay en la cola de 
+	// prioridad.
+	Cantidad() int
+}
 ```
-Además, deben implementar el ordenamiento heapsort, sobre un arreglo de punteros genéricos; y las pruebas unitarias de todas las primitivas implementadas.
-``` cpp
-void heap_sort(void *elementos[], size_t cant, cmp_func_t cmp);
+
+Además, las primitivas de creación del Heap deberán ser: 
+```golang
+func CrearHeap[T comparable](funcion_cmp func(T, T) int) ColaPrioridad[K, V]
+func CrearHeapArr[T comparable](arreglo []T, funcion_cmp func(T, T) int) ColaPrioridad[K, V]
 ```
-La función de comparación (de tipo `cmp_func_t`) debe recibir dos punteros del tipo de dato utilizado en el heap, y debe devolver:
-*   menor a 0  si  a < b
-*   0      si  a == b
-*   mayor a 0  si  a > b
+
+La función de comparación funciona tal cual el caso del ABB. La segunda primitiva de creación debe ejecutar en tiempo lineal, permitiendo crear el heap con los elementos pasados por parámetro. 
+
+Además, deben implementar el ordenamiento heapsort, sobre un arreglo de genérico; y las pruebas unitarias de todas las primitivas implementadas.
+```golang
+func HeapSort[T comparable](elementos []T, funcion_cmp func(T, T) int)
+```
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}).
 

@@ -9,20 +9,26 @@ Trabajo Práctico 0
 ==================
 
 El adjunto en [el sitio de descargas]({{site.skel}}) contiene varios archivos.
-Deben editar el archivo `tp0.c`, completando las cuatro funciones que
-aparecen en el código fuente: `swap()`,  `maximo()`, `comparar()` y `seleccion()`.
-(Los comentarios en el archivo indican qué debe hacer cada función).
+Deben editar el archivo `tp0.go`, completando las cuatro funciones que
+aparecen en el código fuente: `Swap()`,  `Maximo()`, `Comparar()`, `Seleccion()`, `Suma()` y `EsPalindromo()`.
+Se puede ver en el archivo `tp0_interfaz.go` la documentación que indica lo que debe hacer cada función. 
 
-El resto de archivos del zip no los deben modificar. Sí pueden, no obstante, leer el archivo `tp0_pruebas.c` para entender qué verificaciones realizaremos sobre su código.
+De todos los archivos que pueden encontrar en el sitio de descargas, sólo deben modificar `tp0.go`. 
+El resto de archivos del zip no los deben modificar. Sí pueden, no obstante, leer el archivo `tp0_test.go` para entender qué verificaciones realizaremos sobre su código.
 
-La compilación se realiza en el estándar C99, con los siguientes flags:
+La compilación se realiza con el siguiente comando:
 
-    gcc -g -std=c99 -Wall -Wconversion -Wtype-limits -pedantic -Werror -o pruebas *.c
+    go build tp0
 
 Las pruebas deben dar todas OK, y las pueden ejecutar con:
 
-    ./pruebas
+    go test tp0_test.go
+
+O simplemente:
+	
+	go test
 
 La entrega se hará de forma digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}).
+Deben entregar un archivo `zip` con los entregables. No es necesario que entreguen ningún archivo aparte de `tp0.go`. 
 
 **No olviden revisar los [primeros pasos en Linux](/algo2/faq/primeros-pasos) y las [preguntas frecuentes](/algo2/faq/).**

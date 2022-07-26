@@ -8,60 +8,39 @@ trabajo: ABB
 Árbol Binario de Búsqueda
 =========================
 
-El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Árbol Binario de Búsqueda (ABB). Se incluye en [el sitio de descargas]({{site.skel}}) el archivo de main correspondiente al ejercicio. Se debe implementar:
+El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto Árbol Binario de Búsqueda (ABB), que es la implementación del tipo `DiccionarioOrdenado` (una extensión del `Diccionario` de la entrega anterior). 
+Tanto el DiccionarioOrdenado como el ABB deben estar también dentro del paquete `diccionario`
+Se incluye en [el sitio de descargas]({{site.skel}}) el archivo `diccionario_ordenado.go` que se describe a continuación:
 
 ``` cpp
-typedef struct abb abb_t;
+type DiccionarioOrdenado[K comparable, V any] interface {
+	Diccionario[K, V]
 
-typedef int (*abb_comparar_clave_t) (const char *, const char *);
-typedef void (*abb_destruir_dato_t) (void *);
+	IterarRango(desde *K, hasta *K, visitar func(clave K, dato V) bool)
+	IteradorRango(desde *K, hasta *K) IterDiccionario[K, V]
+}
 
-abb_t* abb_crear(abb_comparar_clave_t cmp, abb_destruir_dato_t destruir_dato);
-
-bool abb_guardar(abb_t *arbol, const char *clave, void *dato);
-void *abb_borrar(abb_t *arbol, const char *clave);
-
-void *abb_obtener(const abb_t *arbol, const char *clave);
-bool abb_pertenece(const abb_t *arbol, const char *clave);
-
-size_t abb_cantidad(const abb_t *arbol);
-
-void abb_destruir(abb_t *arbol);
 ```
-La función de comparación (de tipo `abb_comparar_clave_t`), recibe dos cadenas y devuelve:
+
+Todas las primitivas anteriores deben funcionar también, con el agregado que tanto el iterador interno (`Iterar`) como externo (`Iterador`) deben iterar en el orden que corresponda al ordenamiento del Diccionario. Se agregan las primitivas que permiten iterar por rangos dados. En caso que `desde` sea `nil`, se debe iterar desde la primera clave, y en caso de que `hasta` sea `nil` se debe iterar hasta la última (por lo cual, si `desde == hasta == nil`, se debe comportar como el iterador sin rango). 
+
+Además, la primitiva de creación del ABB deberá ser: 
+```golang
+func CrearABB[K comparable, V any](funcion_cmp func(K, K) int) DiccinarioOrdenado[K, V]
+```
+
+La función de comparación, recibe dos claves y devuelve:
 * Un entero menor que 0 si la primera cadena es menor que la segunda.
 * Un entero mayor que 0 si la primera cadena es mayor que la segunda.
 * 0 si ambas claves son iguales.
 
-Qué implica que una cadena sea igual, mayor o menor que otra va a depender del usuario del TDA.
-Por ejemplo, `strcmp` cumple con esta especificación.
-
-La función `destruir_dato` se recibe en el constructor, para usarla en `abb_destruir` y en `abb_insertar` en el caso de que tenga que reemplazar el dato de una clave ya existente.
-
-Por otro lado deben implementar dos iteradores inorder.
-
-Un iterador interno, que funciona usando la función de callback "visitar" que recibe la clave, el valor y un puntero extra, y devuelve true si se debe seguir iterando, false en caso contrario:
-
-```cpp
-void abb_in_order(abb_t *arbol, bool visitar(const char *, void *, void *), void *extra);
-```
-
-Y un iterador externo, con las siguientes definiciones y primitivas:
-
-```cpp
-typedef struct abb_iter abb_iter_t;
-
-abb_iter_t *abb_iter_in_crear(const abb_t *arbol);
-bool abb_iter_in_avanzar(abb_iter_t *iter);
-const char *abb_iter_in_ver_actual(const abb_iter_t *iter);
-bool abb_iter_in_al_final(const abb_iter_t *iter);
-void abb_iter_in_destruir(abb_iter_t* iter);
-```
-Contamos con un [script de pruebas](https://github.com/algoritmos-rw/algo2_abb_test/releases) que pueden ejecutar para verificar que la estructura que implementaron funciona correctamente. De todas formas, al igual que en entregas anteriores, deben realizar sus propias pruebas (pueden tomar las pruebas del hash como referencia, ya que el comportamiento de ambas estructuras es muy similar).
+Qué implica que una clave sea igual, mayor o menor que otra va a depender del usuario del TDA.
+Por ejemplo, `strings.Compare` cumple con esta especificación (si las claves son cadenas).
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}).
 
-**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**
+**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**, así como también el
+**[el FAQ sobre enlaces simbólicos](faq/symlink.md)** para reutilizar el TDA Pila para el Iterador externo. 
 
 ---
 ### Bibliografia recomendada

@@ -1,10 +1,10 @@
-# FAQ - Lenguaje C Compilación y Ejecución
+# FAQ - Lenguaje Go Compilación y Ejecución
 {:.no_toc}
 
 * Contenido
 {:toc}
 
-## ¿Qué signfica que un lenguaje sea, como C, compilado?
+## ¿Qué signfica que un lenguaje sea, como Go, compilado?
 
 Significa que para ejecutar nuestro programa se lo debe primero traducir a código binario que la CPU de la computadora pueda entender. Una vez traducido, el resultado (las instrucciones binarias) se pueden enviar a la CPU para su ejecución.
 
@@ -12,7 +12,7 @@ A ese paso de traducción le llamamos compilación .
 
 Es por esto que las instrucciones del TP0 consisten en dos pasos. Primero, la compilación:
 
-`gcc -std=c99 -Wall -pedantic -Werror -o pruebas *.c`
+`go build tp0`
 
 (El compilador que empleamos se llama GCC.)
 
@@ -20,7 +20,7 @@ Esto produce en nuestro directorio de trabajo un archivo nuevo llamado pruebas (
 
 A continuación, le podemos decir al sistema operativo que corra ese código binario que se encuentra en el archivo nuevo:
 
-`./pruebas`
+`go test tp0`
 
 Solo en este segundo paso veríamos si nuestro código compilado hace lo que se espera.
 

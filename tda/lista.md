@@ -8,53 +8,69 @@ trabajo: Lista
 Lista enlazada
 ==============
 
-Se incluye en [el sitio de descargas]({{site.skel}}) un ejemplo de uso de iteradores externos.
+Se incluye en [el sitio de descargas]({{site.skel}}) un ejemplo de uso de iteradores internos y externos.
 
 Estas son las primitivas de listas que tienen que implementar.
 
-En esta entrega les agregamos el requerimiento de escribir la documentación completa de las primitivas, con sus correspondientes pre y post condiciones, para esto pueden usar de muestra los archivos .h que ya utilizaron para la implementación de pilas y colas.
+En esta entrega les agregamos el requerimiento de escribir la documentación completa de las primitivas (`lista.go`), con sus correspondientes pre y post condiciones, para esto pueden usar de muestra los archivos de interfaces que ya utilizaron para la implementación de pilas y colas.
 
 #### Primitivas de la lista
-``` cpp
-typedef struct lista lista_t;
+``` golang
+type Lista[T any] interface {
+	EstaVacia() bool
+	InsertarPrimero(T)
+	InsertarUltimo(T)
+	BorrarPrimero() T
+	VerPrimero() T
+	VerUltimo() T
+	Largo() int
+	Iterar(visitar func(T) bool)
+	Iterador() IteradorLista[T]
+}
+```
 
-lista_t *lista_crear(void);
-bool lista_esta_vacia(const lista_t *lista);
-bool lista_insertar_primero(lista_t *lista, void *dato);
-bool lista_insertar_ultimo(lista_t *lista, void *dato);
-void *lista_borrar_primero(lista_t *lista);
-void *lista_ver_primero(const lista_t *lista);
-void *lista_ver_ultimo(const lista_t* lista);
-size_t lista_largo(const lista_t *lista);
-void lista_destruir(lista_t *lista, void (*destruir_dato)(void *));
+En caso que se invoque a `BorrarPrimero`, `VerPrimero` o `VerUltimo` sobre una lista vacía, todas deben entrar en pánico con un mensaje `La lista esta vacia`. 
+
+Además, es necesario tener la primitiva de creación de la lista enlazada (en `lista_enlazada.go`):
+``` golang
+
+func CrearListaEnlazada[T any]() Lista[T] {
+	//...
+}
 ```
 
 #### Primitiva del iterador interno
-``` cpp
-void lista_iterar(lista_t *lista, bool visitar(void *dato, void *extra), void *extra);
+
+Como está indicado entre las primtivas, se debe implementar el iterador interno cuya firma es:
+
+```golang
+Iterar(visitar func(T) bool)
 ```
+
+Dicha función debe aplicarse a cada uno de los datos de la lista (de primero a último), hasta que la lista
+se termine o la función `visitar` devuelva `false` (lo que ocurra primero).
 
 #### Primitivas del iterador externo
-``` cpp
-typedef struct lista_iter lista_iter_t;
 
-lista_iter_t *lista_iter_crear(lista_t *lista);
-bool lista_iter_avanzar(lista_iter_t *iter);
-void *lista_iter_ver_actual(const lista_iter_t *iter);
-bool lista_iter_al_final(const lista_iter_t *iter);
-void lista_iter_destruir(lista_iter_t *iter);
-bool lista_iter_insertar(lista_iter_t *iter, void *dato);
-void *lista_iter_borrar(lista_iter_t *iter);
+La primitiva `Iterador` de la lista debe devolver un `IteradorLista`, cuyas primitivas son: 
+
+``` golang
+type IteradorLista[T any] interface {
+	VerActual() T
+	HaySiguiente() bool
+	Siguiente() T
+	Insertar(T)
+	Borrar() T
+}
 ```
 
-#### Función de pruebas
-``` cpp
-void pruebas_lista_estudiante(void);
-```
+En caso que se invoque a `VerActual`, `Siguiente` o `Borrar` sobre un iterador que ya haya iterado todos los elementos, debe entrar en pánico con un mensaje `El iterador termino de iterar`. 
 
-_Aclaración_: mantener el nombre de la estructura como `struct lista` para la lista, y `struct lista_iter` para el iterador, puesto que el corrector automático tiene configurados dichos nombres en el `lista.h` de la cátedra.
+#### Pruebas
 
-Considerar que todas las primitivas (exceptuando `lista_destruir` y `lista_iterar`) deben funcionar en tiempo constante.
+Recordar que el archivo de pruebas debe estar en el paquete `lista_test`, mientras que `lista_enlazada` debe estar en el paquete `lista`. 
+
+Considerar que todas las primitivas (exceptuando `Iterar`) deben funcionar en tiempo constante.
 
 Las pruebas deben incluir los casos básicos de TDA similares a los contemplados para la pila y la cola, y adicionalmente debe verificar los siguientes casos del iterador externo:
 1. Al insertar un elemento en la posición en la que se crea el iterador, efectivamente se inserta al principio.
@@ -64,7 +80,7 @@ Las pruebas deben incluir los casos básicos de TDA similares a los contemplados
 1. Remover el último elemento con el iterador cambia el último de la lista.
 1. Verificar que al remover un elemento del medio, este no está.
 1. Otros casos borde que pueden encontrarse al utilizar el iterador externo.
-Y los casos con / sin corte del iterador interno.
+1. Casos del iterador interno, incluyendo casos con corte (la función `visitar` devuelve `false` eventualmente).
 
 Al igual que en los casos anteriores, deberán entregar en formato digital, subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 

@@ -4,11 +4,11 @@ TP0:
   entrega: 2022-04-01
   enunciado_link: /tps/tp0
 
-Vector:
-  id: Vector
+Administración de Memoria:
+  id: Administración de Memoria
   publicacion: 2022-04-01
   entrega: 2022-04-04
-  enunciado_link: /tps/vector
+  enunciado_link: /tps/adminmemoria
 
 Pila:
   id: Pila

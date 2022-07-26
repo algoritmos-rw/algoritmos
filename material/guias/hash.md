@@ -13,8 +13,8 @@ math: true
 
 ## Ejercicio resuelto
 
-1. Para un hash cerrado, implementar una primitiva `lista_t* hash_claves(const hash_t*)` que reciba
-un hash y devuelva una lista con sus claves.
+1. Para un hash cerrado, implementar una primitiva `func (hash hashCerrado[K, V]) Claves() Lista[K]` que reciba
+un hash y devuelva una lista con sus claves, sin utilizar el iterador interno. 
 
 1. Repetir lo mismo para un hash abierto.
 
@@ -30,19 +30,15 @@ el hash (y es una mala práctica que, dado que el iterador dependa del hash, aho
 
 Para este punto, sólo es necesario iterar campo por campo, considerando únicamente aquellos que están ocupados.
 
-```cpp
-lista_t* hash_claves(const hash_t* hash) {
-    lista_t* claves = lista_crear();
-    if (!claves) {
-        return NULL;
-    }
-    for (size_t i = 0; i < hash->tam; i++) {
-        // valor de un enum definido para el hash
-        if (hash->tabla[i].estado == OCUPADO) {
-            lista_insertar_ultimo(claves, hash->tabla[i].clave);
+```golang
+func (hash hashCerrado[K, V]) Claves() Lista[K] {
+    claves := CrearListaEnlazada[K]()
+    for celda := range hash.tabla {
+        if celda.estado == OCUPADO {
+            claves.InsertarUltimo(celda.clave)
         }
     }
-    return claves;
+    return claves
 }
 ```
 
@@ -50,39 +46,32 @@ Es importante notar que en este ejercicio se está evaluando que sabemos trabaja
 
 * Sabemos cuáles son los campos de la estructura.
 
-* Sabemos que la tabla es de tipo `campo_t*`, y no `campo_t**`, puesto que es completamente innecesario un segundo grado de indirección (como se analiza en la respectiva clase práctica).
+* Sabemos que la tabla es de tipo `[]campo[K, V]` o bien `[]celda[K, V]`, y no `[]*celda[K, V[`, puesto que es completamente innecesario otro grado de indirección (como se analiza en la respectiva clase práctica).
 
 * Entendemos que el estado correcto a considerar es el de `OCUPADO`, que es un enumerativo. Cuanto mucho, una constante. Definitivamente no un `"ocupado"`.
 
 
 #### Hash Abierto
 
-Para este caso, consideramos todas las listas, las cuales podemos ir iterando utilizando el iterador externo o interno. Aquí mostramos una implementación utilizando el iterador interno, no porque sea mejor implementación, sino para que tengan un ejemplo de uso.
+Para este caso, consideramos todas las listas, las cuales podemos ir iterando utilizando el iterador externo o interno. Aquí mostramos una implementación utilizando el iterador interno, no porque sea mejor implementación, sino para que tengan un ejemplo de uso (ya que probablemente la primera idea que tengan ustedes será con el externo).
 
-```cpp
-lista_t* hash_claves(const hash_t* hash) {
-   lista_t* claves = lista_crear();
-    if (!claves) {
-        return NULL;
+```golang
+func (hash hashAbierto[K, V]) Claves() Lista[K] {
+    claves := CrearListaEnlazada[K]()
+    for lista := range hash.tabla {
+        lista.Iterar(func (par parClaveValor[K, V]) bool {
+            lista.InsertarUltimo(par.clave)
+            return true
+        })
     }
-    for (size_t i = 0; i < hash->tam; i++) {
-        lista_iterar(hash->tabla[i], insertar_clave, claves);
-    }
-    return claves;
-}
-
-bool insertar_clave(void* dato, void* extra) {
-    lista_t* claves = extra;
-    par_clave_valor_t* par = dato;
-    lista_insertar_ultimo(claves, par->clave);
-    return true;
+    return claves
 }
 ```
 
 _Aclaración_: Hay quienes deciden implementar el Hash Abierto de tal forma que
 no tenga listas vacías (esto es, si una posición aún
-no ha sido utilizada, entonces se guarda `NULL` y se crea la lista cuando sea necesaria). Esto es totalmente válido, y en todo
-caso con aclararlo en algún lado es suficiente (pero debe hacerse la validación contra `NULL` en ese caso).
+no ha sido utilizada, entonces se guarda `nil` y se crea la lista cuando sea necesaria). Esto es totalmente válido, y en todo
+caso con aclararlo en algún lado es suficiente (pero debe hacerse la validación contra `nil` en ese caso).
 
 #### Función
 
@@ -92,24 +81,28 @@ campos internos de la estructura. Además, en particular no se nos dice cuál es
 
 Entonces, simplemente iteramos utilizando el iterador externo y guardamos en una lista.
 
-```cpp
-lista_t* hash_claves(const hash_t* hash) {
-   lista_t* claves = lista_crear();
-    if (!claves) {
-        return NULL;
+```golang
+func ClavesDiccionario(dic Diccionario) Lista[K] {
+    claves := CrearListaEnlazada[K]()
+    for iter := dic.Iterador(); iter.HaySiguiente(); {
+        claves.InsertarUltimo(iter.Siguiente())
     }
-    hash_iter_t* iter = hash_iter_crear(iter);
-    if (!iter) {
-        lista_destruir(claves);
-        return NULL;
-    }
-    while (!hash_iter_al_final(iter)) {
-        char *clave = hash_iter_ver_actual(iter);
-        lista_insertar_ultimo(claves, clave);
-        hash_iter_avanzar(iter);
-    }
-    hash_iter_destruir(iter);
-    return claves;
+    return claves
+}
+```
+
+#### Utilizando el iterador interno
+
+Ahora implementamos también (ya sea como función o primitiva) utilizando el iterador interno exclusivamente: 
+
+```golang
+func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerrado y como función
+    claves := CrearListaEnlazada[K]()
+    hash.Iterar(func (clave K, valor V) bool {
+        claves.InsertarUltimo(clave)
+        return true
+    })
+    return claves
 }
 ```
 
@@ -126,10 +119,10 @@ lista_t* hash_claves(const hash_t* hash) {
 1.  (★) ¿Para qué casos la función `hash_obtener()` tiene una complejidad peor que $$\mathcal{O}(1)$$? Explicar tanto para el hash abierto, como el cerrado.
 
 1.  (★) Justificar si la siguiente función de hashing es correcta o no:
-    ```cpp
-    size_t calcular_hash(char *clave, size_t largo) {
-        // rand() devuelve un numero entero positivo aleatorio
-        return rand() % largo;
+    ```golang
+    func calcularHash(string clave) int {
+        // rand.Intn(x) devuelve un numero entero entre 0 y x
+        return rand.Intn(10000)
     }
     ```
 
@@ -161,15 +154,11 @@ lista_t* hash_claves(const hash_t* hash) {
 1.  (★★) Implementar el TDA MultiConjunto. Este es un Conjunto que permite más de una aparición de un elemento,
     por lo que eliminando una aparición, el elemento puede seguir perteneciendo. Dicho TDA debe tener como
     primitivas:
-    * `multiconj_t* multiconj_crear()`: crea un multiconjunto. A fines del parcialito, no es necesario
-    implementar la primitiva de destruir.
-    * `bool multiconj_guardar(multiconj_t* multiconj, char* elem)`: guarda un elemento
-    en el multiconjunto. Devuelve `true` si se pudo guardar el elemento correctamente, `false` en caso
-    contrario.
-    * `bool multiconj_pertenece(multiconj_t* multiconj, char* elem)`: devuelve `true` si el elemento aparece
-    al menos una vez en el conjunto.
-    * `bool multiconj_borrar(multiconj_t* multiconj, char* elem)`: elimina *una aparición* del elemento
-    dentro del conjunto. Devuelve `true` si se eliminó una aparición del elemento.
+    * `CrearMulticonj[K](func(K) int)`: crea un multiconjunto.
+    * `Guardar(elem K)`: guarda un elemento en el multiconjunto. 
+    * `Pertence(elem K) bool`: devuelve `true` si el elemento aparece al menos una vez en el conjunto.
+    * `Borrar(elem K) bool`: elimina *una aparición* del elemento dentro del conjunto. Devuelve `true` 
+    si se eliminó una aparición del elemento.
 
     Dar la estructura del TDA y la implementación de las 4 primitivas marcadas, de forma tal que todas sean
     $$\mathcal{O}(1)$$.
@@ -193,18 +182,18 @@ lista_t* hash_claves(const hash_t* hash) {
 
     c. En un hash **cerrado** con dicha función de hashing, si se insertan `n + 1` claves diferentes
     (considerar que se haya redimensionado acordemente), `n` con la misma letra
-    inicial, y 1 con otra distinta, en el primer caso `obtener()` es $$\mathcal{O}(n)$$ y en el
+    inicial, y 1 con otra distinta, en el primer caso `Obtener()` es $$\mathcal{O}(n)$$ y en el
     segundo siempre $$\mathcal{O}(1)$$.
 
     d. En un hash **abierto** con dicha función de hashing, si se insertan `n + 1` claves diferentes
     (considerar que se haya redimensionado acordemente), `n` con la misma letra
-    inicial, y 1 con otra distinta, en el primer caso `obtener()` es $$\mathcal{O}(n)$$ y en el
+    inicial, y 1 con otra distinta, en el primer caso `Obtener()` es $$\mathcal{O}(n)$$ y en el
     segundo siempre $$\mathcal{O}(1)$$.
 
 1.  (★★★) El Ing. Musumeci quiere implementar un hash abierto, pero en el que las listas de cada posición
-    se encuentren ordenadas por clave (usando `strcmp`). Explicar cómo mejora o empeora respecto
-    a la versión que vemos en clase para el caso de inserciones, borrados, búsquedas con éxito
-    (el elemento se encuentra en el hash) y sin éxito (no se encuentra).
+    se encuentren ordenadas por clave (se le pasa por parmámetro la función de comparación, por ejemplo 
+    `strcmp`). Explicar cómo mejora o empeora respecto a la versión que vemos en clase para el caso de 
+    inserciones, borrados, búsquedas con éxito (el elemento se encuentra en el hash) y sin éxito (no se encuentra).
 
 1.  (★★★) Hacer un seguimiento e indicar cómo queda un hash que aplica hashing perfecto (con Hash & Displace)
     con las siguientes claves (los valores de las funciones de hashing se encuentran a continuación de las claves).
@@ -254,22 +243,10 @@ lista_t* hash_claves(const hash_t* hash) {
     Explicar cómo harías para implementar esto de forma eficiente, considerando que su mayor utilidad
     es realizar búsquedas lo más rápido posible.
 
-1.  (★★★★) Dar una implementación en C de cómo podría ser la primitiva `hash_guardar` para el caso de un hash
-    cerrado con Cuckoo Hashing con dos funciones de hashing (suponer que se llaman `h1` y `h2`). Si la clave
-    ya se encontraba en el hash simplemente devolver `false` (no es necesario hacer un reemplazo del dato).
-    La estructura del Hash es:
-    ```cpp
-    typedef struct hash {                   typedef struct campo_hash {
-        campo_hash_t* tabla;                   char* clave;
-        size_t cantidad;                        void* dato;
-        size_t tam_tabla;                       int num_fhash;
-    } hash_t;                               } campo_hash_t;
-    ```
-
 1.  (★★★★★) Se quiere implementar un TDA Diccionario con las siguientes primitivas:
-    `obtener(x)` devuelve el valor de `x` en el diccionario; `insertar(x, y)` inserta en el diccionario
-    la clave `x` con el valor `y` (entero); `borrar(x)` borra la entrada de `x`; `add(x, n)` le
-    suma `n` al contenido de `x`; `add_all(m)` le suma `m` a **todos** los valores.
+    `Obtener(x)` devuelve el valor de `x` en el diccionario; `Insertar(x, y)` inserta en el diccionario
+    la clave `x` con el valor `y` (entero); `Borrar(x)` borra la entrada de `x`; `Add(x, n)` le
+    suma `n` al contenido de `x`; `AddAll(m)` le suma `m` a **todos** los valores.
 
     Proponer una implementación donde **todas** las operaciones sean $$\mathcal{O}(1)$$. Justificar el
     orden de las operaciones.
