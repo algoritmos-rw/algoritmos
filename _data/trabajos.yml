@@ -1,65 +1,65 @@
 TP0:
   id: TP0
-  publicacion: 2022-03-25
-  entrega: 2022-04-01
+  publicacion: 2022-08-26
+  entrega: 2022-09-02
   enunciado_link: /tps/tp0
 
 Administración de Memoria:
   id: Administración de Memoria
-  publicacion: 2022-04-01
-  entrega: 2022-04-04
+  publicacion: 2022-09-02
+  entrega: 2022-09-05
   enunciado_link: /tps/adminmemoria
 
 Pila:
   id: Pila
-  publicacion: 2022-04-04
-  entrega: 2022-04-11
+  publicacion: 2022-09-05
+  entrega: 2022-09-12
   enunciado_link: /tps/pila
 
 Cola:
   id: Cola
-  publicacion: 2022-04-11
-  entrega: 2022-04-18
+  publicacion: 2022-09-12
+  entrega: 2022-09-19
   enunciado_link: /tps/cola
 
 TP1:
   id: TP1
-  publicacion: 2022-04-18
-  entrega: 2022-04-25
-  enunciado_link: /tps/2022_1/tp1
+  publicacion: 2022-09-19
+  entrega: 2022-09-26
+  enunciado_link: /tps/2022_2/tp1
 
 Lista:
   id: Lista
-  publicacion: 2022-04-25
-  entrega: 2022-05-02
+  publicacion: 2022-09-26
+  entrega: 2022-10-03
   enunciado_link: /tps/lista
 
 Hash:
   id: Hash
-  publicacion: 2022-05-02
-  entrega: 2022-05-09
+  publicacion: 2022-10-03
+  entrega: 2022-10-14
   enunciado_link: /tps/hash
 
 ABB:
   id: ABB
-  publicacion: 2022-05-09
-  entrega: 2022-05-20
+  publicacion: 2022-10-14
+  entrega: 2022-10-21
   enunciado_link: /tps/abb
 
 Heap:
   id: Heap
-  publicacion: 2022-05-20
-  entrega: 2022-05-30
+  publicacion: 2022-10-21
+  entrega: 2022-10-31
   enunciado_link: /tps/heap
 
 TP2:
   id: TP2
-  publicacion: 2022-05-30
-  entrega: 2022-06-17
-  enunciado_link: /tps/2022_1/tp2
+  publicacion: 2022-10-31
+  entrega: 2022-11-18
+  enunciado_link: /tps/2022_2/tp2
 
 TP3:
   id: TP3
-  publicacion: 2022-06-17
-  entrega: 2022-07-08
-  enunciado_link: /tps/2022_1/tp3
+  publicacion: 2022-11-18
+  entrega: 2022-12-09
+  enunciado_link: /tps/2022_2/tp3
