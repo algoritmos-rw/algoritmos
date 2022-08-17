@@ -8,20 +8,20 @@
 
 Hay varias opciones, según tu sistema operativo y tus preferencias. Para poder hacer los ejercicios y TPs de este curso necesitás tener funcionando en tu PC los siguientes programas:
 
-*   compilador Golang
+*   **Compilador Golang**
 *   **GNU make**
 *   **Python** (opcional, para el último TP)
 
 Además es altamente recomendado contar con un **editor de texto** o un **entorno de desarrollo (IDE)** que permita programar y compilar cómodamente. Algunas posibilidades son:
 
 *   [Geany](http://www.geany.org/), un entorno de desarrollo amigable, multi plataforma.
-*   [Codeblocks](http://www.codeblocks.org/), otro entorno integrado de desarrollo, para Windows, Mac OS y Linux.
+*   [Sublime Text](https://www.sublimetext.com/), otro entorno de desarrollo. 
 * 	[Visual Studio Code](https://code.visualstudio.com/), con la extensión para Go.	
 * 	[Goland](https://www.jetbrains.com/go/download/)
 
 ## Instalar Linux
 
-Todas las herramientas mencionadas son multiplataforma, lo que significa que pueden ser utilizadas en cualquier sistema operativo. Todas... salvo una: Valgrind. Lamentablemente **Valgrind no funciona sobre Windows** (existen algunos sustitutos, pero como en este curso utilizamos Valgrind para corregir los trabajos prácticos, es recomendable que también uses Valgrind). Para Mac OS X existe una versión pero aún no es estable. Esto significa que nuestra única opción es **Linux**.
+Para la cursada es **obligatorio** el uso de un entorno UNIX durante todo el cuatrimestre. Puede utilizarse cualquier distribución de Linux. 
 
 Existen muchas distribuciones de Linux, y cada una se configura de manera diferente. Una de las distribuciones más populares hoy en día es **Ubuntu**, y es la que explicamos en esta guía. Si ya tenés Ubuntu instalado, podés saltear al paso de instalación de las herramientas.
 
@@ -33,7 +33,7 @@ Si actualmente tenés Windows, básicamente tenés tres opciones para instalar L
 1.  Linux **al lado de Windows** (esta opción se conoce como **_dual boot_**).
 1.  Linux **dentro de Windows**, corriendo dentro de una **máquina virtual**.
 
-Si no querés borrar Windows, la opción 3 suele ser la más fácil y es la que se explica a continuación. Igualmente, para usuarios de Windows recomendamos la opción 2 ya que tendrá mejor rendimiento. Para esta materia puede que estén bien con una máquina virtual, pero para materias futuras igualmente necesitarán tenerlo instalado. 
+Si no querés borrar Windows, la opción 3 suele ser la más fácil y es la que se explica a continuación. Igualmente, para usuarios de Windows recomendamos la opción 2 ya que tendrá mejor rendimiento. Para esta materia puede que estén bien con una máquina virtual, pero para materias futuras igualmente necesitarán tenerlo instalado de todas formas. 
 
 Dejamos [aquí un link a guías de instalación del LUGFi](https://cloud.disroot.org/s/Wc7oMSo4jHg9Wq9) ([link alternativo en caso de fallas](https://drive.google.com/file/d/1Nj4NdHQSJGzq5sNexKBBSN--1Qni_lYQ/view?usp=sharing)). También recomendamos consultarles a ellos en su [grupo de Facebook](https://www.facebook.com/groups/lugfi) ante cualquier duda (así como en la lista de consultas del curso).
 
@@ -66,13 +66,12 @@ Abrir una terminal (CTRL+ALT+T) y escribir lo siguiente:
 `sudo apt install build-essential valgrind manpages-dev gdb`
 `sudo apt-get install golang-go`
 
-Te va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas. ¡Ya está!
+Les va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas. ¡Ya está!
 
 Estas herramientas son:
 
-* [build-essential](https://packages.ubuntu.com/bionic/build-essential): Herramientas esenciales de toda distribución de Linux. Lo que mas usaremos es gcc (compilador de C) y make (herramienta para automatización de compilaciones).
+* [build-essential](https://packages.ubuntu.com/bionic/build-essential): Herramientas esenciales de toda distribución de Linux. 
 * [go](https://go.dev/doc/install)
-* [Valgrind](http://valgrind.org/): Herramienta para verificar el uso de memoria del programa, como ver si hay perdidas de memoria.
 * [manpages-dev](http://man7.org/linux/man-pages/man1/intro.1.html): Manual de usuario de Linux. Extremadamente util para tener la documentación oficial de los comandos utilizados. Se invoca con el comando `man`. Por ejemplo, `man printf`
 * [gdb](https://www.gnu.org/software/gdb/): Herramienta para la depuración de programas.
 
