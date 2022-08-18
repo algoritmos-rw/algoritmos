@@ -6,25 +6,30 @@ profesor:
 
 ayudantes:
 
-- nombre: Ezequiel Genender
-  foto: /assets/img/docentes/ezeg.jpg
-  mail: egenender@gmail.com
-  github: egenender 
-
 - nombre: Eliana Harriet
   foto: /assets/img/docentes/elianah.jpg
   mail: eharriet@fi.uba.ar
   github: elianaharriet
+
+- nombre: Ezequiel García
+  foto: /assets/img/docentes/unknown.png
+  mail: ezgarcia@fi.uba.com
+  github: 
+
+- nombre: Ezequiel Genender
+  foto: /assets/img/docentes/ezeg.jpg
+  mail: egenender@gmail.com
+  github: egenender
 
 - nombre: Federico Brasburg
   foto: /assets/img/docentes/fedebra.png
   mail: federico.brasburg@gmail.com
   github: fedebrasburg
 
-- nombre: Federico del Mazo
-  foto: /assets/img/docentes/fededm.jpg
-  mail: delmazofederico@gmail.com
-  github: FdelMazo
+- nombre: Federico Esteban
+  foto: /assets/img/docentes/fedee.jpg
+  mail: fede.est@gmail.com
+  github: fmesteban
 
 - nombre: Federico Forte
   foto: /assets/img/docentes/fedef.jpg
@@ -36,20 +41,25 @@ ayudantes:
   mail: fgonzalezlisella@gmail.com
   github: Fgl
 
-- nombre: Ian Shih
-  foto: /assets/img/docentes/ians.png
-  mail: ishih@fi.uba.ar
-  github: ianshih2003
+- nombre: Francisco Juárez
+  foto: /assets/img/docentes/unknown.png
+  mail: fjuarez@fi.uba.ar
+  github: franjuarez
 
-- nombre: Ignacio Raik
-  foto: /assets/img/docentes/nachor.png
-  mail: ignacioraiksg@gmail.com
-  github: NachoRaik
+- nombre: Ignacio Demarchi
+  foto: /assets/img/docentes/unknown.png
+  mail: idemarchi@fi.uba.ar
+  github: ignaciodemarchi
 
-- nombre: Jasmina Sella Faena
-  foto: /assets/img/docentes/jasminasf.jpg
-  mail: jasminasf@gmail.com
-  github: jas-chu
+- nombre: José Ignacio Castro
+  foto: /assets/img/docentes/unknown.png
+  mail: jcastrom@fi.uba.ar
+  github: jignacio14
+
+- nombre: Lara Scazzola
+  foto: /assets/img/docentes/unknown.png
+  mail: lscazzola@fi.uba.ar
+  github: lara-scazzola1
 
 - nombre: Lucas Fiegl
   foto: /assets/img/docentes/lucasf.jpg
@@ -61,11 +71,6 @@ ayudantes:
   mail: lcaponpaul@fi.uba.ar
   github: luciacp
 
-- nombre: Matías Cano
-  foto: /assets/img/docentes/matic.png
-  mail: tutecano1995@gmail.com
-  github: tutecano1995 
-
 - nombre: Mateo Cabrera
   foto: /assets/img/docentes/mateoc.jpg
   mail: mcabrerar@fi.uba.ar
@@ -76,20 +81,10 @@ ayudantes:
   mail: santiago.bellido@hotmail.com
   github: saantim
 
-- nombre: Taiel Colavecchia
-  foto: /assets/img/docentes/taiel.jpg
-  mail: tcolavecchia@fi.uba.ar
-  github: 
-
 - nombre: Tomás Baldi Morales
   foto: /assets/img/docentes/tomasb.jpg
   mail: tbaldi@fi.uba.ar
   github: ovr4ulin
-
-- nombre: Tomás Danko
-  foto: /assets/img/docentes/unknown.png
-  mail: tomasdanko01@gmail.com
-  github: tidanko
 
 - nombre: Tomás Grüner
   foto: /assets/img/docentes/tomig.jpg
