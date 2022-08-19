@@ -14,13 +14,13 @@ aparecen en el código fuente: `Swap()`,  `Maximo()`, `Comparar()`, `Seleccion()
 Se puede ver en el archivo `tp0.go` la documentación que indica lo que debe hacer cada función. 
 
 De todos los archivos que pueden encontrar en el sitio de descargas, sólo deben modificar `tp0.go`. 
-El resto de archivos del zip no los deben modificar. Sí pueden, no obstante, leer el archivo `tp0_test.go` para entender qué verificaciones realizaremos sobre su código.
+El resto de archivos del zip no los deben modificar. Sí pueden, no obstante, leer el archivo `tp0_test.go` para entender qué verificaciones realizaremos sobre su código. Además deben de tener el archivo `go.mod` que es el árchivo del módulo del tp. Los 3 archivos deben encontrarse en el mismo directorio para poder ejecutar correctamente. 
 
-La compilación se realiza con el siguiente comando:
+La compilación (estando ubicados en el directorio donde se encuentren los archivos) se realiza con el siguiente comando:
 
     go build tp0
 
-Las pruebas deben dar todas OK, y las pueden ejecutar (estando ubicados en el directorio donde se encuentren los archivos) con:
+Las pruebas deben dar todas OK, y las pueden ejecutar con:
 
     go test tp0_test.go
 

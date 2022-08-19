@@ -16,7 +16,11 @@ estos pedidos sin que nos demos cuenta (tal como lo hace Go al hacer `new` o `ma
 **No** es necesario estudiar ni comprender el archivo del administrador.
 
 El adjunto en [el sitio de descargas]({{site.skel}}) contiene el archivo con dicha librería, una definición
-de los tipos `Vector` y `Persona`, y sus correspondientes pruebas. 
+de los tipos `Vector` y `Persona`, y sus correspondientes pruebas. Para ejecutar todo correctamente, deben
+tener un directorio en el que se encuentren los archivos `vector.go`, `persona.go`, ambos archivos de prueba, 
+`go.mod`, y además un directorio llamado `administrador` que dentro contenga el archivo de la librearía 
+(`administrador_memoria.go`).
+Los únicos archivos que deben de enviar son `persona.go` y `vector.go`.
 
 ## Vector dinámico
 
