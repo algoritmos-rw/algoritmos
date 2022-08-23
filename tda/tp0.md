@@ -9,7 +9,7 @@ Trabajo Práctico 0
 ==================
 
 El adjunto en [el sitio de descargas]({{site.skel}}) contiene varios archivos.
-Deben editar el archivo `tp0.go`, completando las cuatro funciones que
+Deben editar el archivo `tp0.go`, completando las seis funciones que
 aparecen en el código fuente: `Swap()`,  `Maximo()`, `Comparar()`, `Seleccion()`, `Suma()` y `EsPalindromo()`.
 Se puede ver en el archivo `tp0.go` la documentación que indica lo que debe hacer cada función. 
 
