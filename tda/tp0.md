@@ -27,6 +27,12 @@ Las pruebas deben dar todas OK, y las pueden ejecutar con:
 O simplemente:
 	
 	go test
+	
+Antes de realizar la entrega, es importante que cualquier archivo entregado cumpla con el formato de Go (en este caso particular, `tp0.go`, pero aplicar para cualquier entrega de aquí en más). Para lograr esto, simplemente deben correr el comando: 
+
+	go fmt <nombre del archivo>
+
+En este caso, `<nombre del archivo>` vendría a ser `tp0.go`.
 
 La entrega se hará de forma digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}).
 Deben entregar un archivo `zip` con los entregables. No es necesario que entreguen ningún archivo aparte de `tp0.go`. 
