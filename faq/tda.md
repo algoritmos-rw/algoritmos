@@ -12,13 +12,13 @@ math: true
 
 ### ¿Qué es una estructura en Go?
 
-Una estructura en Go es un tipo de variables que nos permite almacenar distintos elementos dentro de ellas. Sirven para encapsular lo que refiere a una variable que contendrá distintos atributos. Su uso es con la palabra reservada de Go `struct`. Por ejemplo, para una entidad de persona, con edad y nombre, se define la estructura:
+Una estructura en Go es un tipo de variables que nos permite almacenar distintos elementos dentro de ellas. Sirven para encapsular lo que refiere a una variable que contendrá distintos atributos. Su uso es con la palabra reservada de Go `struct`. Por ejemplo, para una entidad de persona, con edad, dni y nombre, se define la estructura:
 
 ```golang
 type persona struct {
     edad uint
     nombre string
-    dni *int
+    dni int
 }
 ```
 
