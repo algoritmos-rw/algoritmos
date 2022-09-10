@@ -9,15 +9,24 @@ math: true
 {:.no_toc}
 
 El trabajo práctico número 1 tiene fecha de entrega para el día **{{fecha}}**.
-El objetivo de este trabajo práctico es ...
+El objetivo de este trabajo práctico es el desarrollo que implique la utilización de los TDAs antes impleentados,
+el diseño de nuevos TDAs necesarios para este desarrollo, y el uso de archivos y f flujo de entrada, salida y error. 
 
 
 ## Introducción
 
-Se acercan las elecciones y no hay tiempo que perder. A pesar de las denuncias en su contra, el gobernador Pólez se postulará para su re-re-re-reelección. 
-Como el actual sistema de votación está siendo cuestionado por denuncias de fraude, el gobernador Pólez ha coordinado la implementación del sistema de boleta única electrónica para darle credibilidad a los comicios venideros. También ha dispuesto otros cambios: en primer lugar, el transporte de las urnas se hará por *Empresa de correos Pólez e hijos*, la impresión de las nuevas boletas únicas la hará *Pólez calcográfica* y el sistema informático para el escrutinio lo desarrollará *Pólez Consulting*. 
+Se acercan las elecciones y no hay tiempo que perder. A pesar de las denuncias en su contra, el gobernador Pólez se 
+postulará para su re-re-re-reelección. Como el actual sistema de votación está siendo cuestionado por denuncias de 
+fraude, el gobernador Pólez ha coordinado la implementación del sistema de boleta única electrónica para darle 
+credibilidad a los comicios venideros. También ha dispuesto otros cambios: en primer lugar, el transporte de las urnas 
+se hará por *Empresa de correos Pólez e hijos*, la impresión de las nuevas boletas únicas la hará *Pólez calcográfica* 
+y el sistema informático para el escrutinio lo desarrollará *Pólez Consulting*. 
 
-En este contexto, nos han encargado la implantación de un componente del nuevo sistema de boleta única electrónica: la máquina de impresión de la boleta. Lamentablemente el gobernador Pólez se nos adelantó y ha encargado la fabricación de las máquinas (por licitación directa) al fabricante *Pólez hardware y asociados*, dejándonos el software que se ejecutará sobre la plataforma. Por esta razón, el programa respetará un protocolo de órdenes por entrada estándar (`stdin`).
+En este contexto, nos han encargado la implantación de un componente del nuevo sistema de boleta única electrónica: 
+la máquina de impresión de la boleta. Lamentablemente el gobernador Pólez se nos adelantó y ha encargado la fabricación 
+de las máquinas (por licitación directa) al fabricante *Pólez hardware y asociados*, dejándonos el software que se 
+ejecutará sobre la plataforma. Por esta razón, el programa respetará un protocolo de órdenes por entrada estándar 
+(`stdin`).
 
 
 ## Consigna
@@ -26,10 +35,13 @@ Implementar en Go el sistema de gestión de votos que debe cumplir el siguiente 
 
 ## Protocolo
 
-Este programa formará parte de un sistema automatizado. En lugar de presentar un menú con opciones en la pantalla, se esperará que el programa respete un protocolo de comunicación, en el cual se reciben comandos por la entrada estándar (`stdin`). Cada comando recibido debe ser procesado y su resultado debe ser escrito en la salida estándar (`stdout`).
+Este programa formará parte de un sistema automatizado. En lugar de presentar un menú con opciones en la pantalla, se 
+esperará que el programa respete un protocolo de comunicación, en el cual se reciben comandos por la entrada estándar
+(`stdin`). Cada comando recibido debe ser procesado y su resultado debe ser escrito en la salida estándar (`stdout`).
+**Esto incluye mensajes de error**. Todo debe escribirse por la salida estándar. 
 
-Cada línea de la entrada corresponde a un comando, y todos los comandos respetan un determinado formato. El formato estará compuesto del nombre del comando y sus parámetros, separados por espacios, en caso de requerirlos.
-
+Cada línea de la entrada corresponde a un comando, y todos los comandos respetan un determinado formato. El formato 
+estará compuesto del nombre del comando y sus parámetros, separados por espacios, en caso de requerirlos.
 
 ### Ejecución del programa
 
@@ -39,11 +51,15 @@ El programa debe ejecutarse de la siguiente forma:
 
 Donde: 
 
-* ARCHIVO_LISTA: Un archivo .csv donde están las respectivas boletas a votar. Cada línea representa un partido político, que tiene nombre de dicho partido, nombre de el/la candidata a presidente, nombre de el/la candidata a gobernador, y luego el del candidato a intendente. 
-* ARCHIVO_PADRON: Un archivo .txt con los documentos habilitados a votar en la mesa. Este archivo tiene un documento por línea. Cada documento escrito en formato numérico, sin puntos. 
+* `ARCHIVO_LISTA`: Un archivo .csv donde están las respectivas boletas a votar. Cada línea representa un partido 
+* político, que tiene nombre de dicho partido, nombre de el/la candidata a presidente, nombre de el/la candidata a 
+* gobernador, y luego el del candidato a intendente. 
+* `ARCHIVO_PADRON`: Un archivo .txt con los documentos habilitados a votar en la mesa. Este archivo tiene un documento 
+* por línea. Cada documento escrito en formato numérico, sin puntos. 
 
 Al empezar a ejecutar, el programa debe empezar a levantar los archivos y prepara la mesa electoral. 
-Al terminar de preparar todo, debe imprimir por salida estándar (`stdout`) lo que corresponda a la salida según el estado.
+Al terminar de preparar todo, debe imprimir por salida estándar (`stdout`) lo que corresponda a la salida según el 
+estado.
 
 #### Salida
 
@@ -65,11 +81,11 @@ OK
 
 En caso de errores, el programa debe terminar su ejecución. 
 
-### Comando: ingresar
+### Comando: `ingresar`
 
 #### Formato
 
-```ingresar numero-dni```
+```ingresar <NumeroDNI>```
 
 #### Descripción: 
 
@@ -77,7 +93,7 @@ El votante ingresa este comando al momento de entrar en la fila de personas espe
 
 #### Parámetros
 
-- numero-dni: Un número entero positivo mayor a 0 que representa el número de documento del votante.
+- NumeroDNI: Un número entero positivo mayor a 0 que representa el número de documento del votante.
 
 #### Salida
 
@@ -102,7 +118,7 @@ OK
 
 Si por el caso el DNI 123 no se encontrara en el padrón, igualmente se imprime OK y se agrega a la fila.
 
-### Comando: votar
+### Comando: `votar`
 
 #### Formato
 
@@ -110,36 +126,70 @@ Si por el caso el DNI 123 no se encontrara en el padrón, igualmente se imprime 
 
 #### Descripción
 
-Este comando se utiliza para votar por alguna alternativa. Para simplicidad y evitar que alguien escriba mal el nombre de un partido político, se decidió que los votantes ingresen su número de lista. El número de lista es directamente el número de línea dentro del archivo de partidos que ocupa cada partido.
+Este comando se utiliza para votar por alguna alternativa. Para simplicidad y evitar que alguien escriba mal el nombre 
+de un partido político, se decidió que los votantes ingresen su número de lista. El número de lista es directamente el 
+número de línea dentro del archivo de partidos que ocupa cada partido.
 
 #### Parámetros
 
 Puede llevar 2 tipos de parámetros:
 
-* El número de lista, explicado anteriormente. 
 * El `TIPO-VOTO`, que puede ser `Presidente`, `Gobernador` o `Intendente`.
+* El número de lista, explicado anteriormente. 
 
 Una persona puede votar por diferentes partidos políticos para Gobernador y Presidente, por ejemplo. 
-Al mismo tiempo, si alguien decidiera votar primero para Presidente por un partido, y luego decide cambiar de opinión y votar nuevo para Presidente para otro partido, se sobreescribirá el voto por la nueva alternativa. A cambio, considerar el siguiente comando. 
+Al mismo tiempo, si alguien decidiera votar primero para Presidente por un partido, y luego decide cambiar de opinión y 
+votar nuevo para Presidente para otro partido, se sobreescribirá el voto por la nueva alternativa. A cambio, considerar 
+el siguiente comando (`deshacer`). 
 
-El número de lista 0 está reservado para impugnar el voto (equivalente a dejar una feta de salame en un sobre). En caso de impugnarse el voto, se impugna completo, no para un partido en particular. 
+El número de lista 0 está reservado para impugnar el voto (equivalente a dejar una feta de salame en el sobre). En caso 
+de impugnarse el voto, se impugna completo, no para un partido en particular. El votante puede seguir efectuando votos 
+(sería meter boletas en el mismo sobre), pero ninguno de estos contará. Para des-impugnar el voto, se debe haber 
+deshecho esa operación (nuevamente, ver comando `deshacer`, más adelante).
 
 #### Salida
 
 - `OK`: si no se produjeron errores. 
-- `ERROR4`: si el DNI de la persona votando no se encuentra en el padrón de la mesa actual. Este error también se produce si no hay nadie esperando para votar. 
+- `ERROR4`: si el DNI de la persona votando no se encuentra en el padrón de la mesa actual. Este error también se 
+   produce si no hay nadie esperando para votar. 
 - `ERROR5`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). 
 - `ERROR6`: si el número de lista es incorrecto (no es una opción válida).
 - `ERROR7`: si el tipo de voto no es uno de los enunciados anteriormente.
 
-En caso de producirse el error 4, se descarta el padrón de la fila. 
+En caso de producirse el Error 4, se descarta el padrón de la fila. 
 En caso de los demás errores, simplemente se espera por otro ingreso que sea correcto. 
 
 #### Ejemplo: 
 
-// Agregar ejemplo
+```
+ingresar 30000000
+OK
+ingresar 16000000
+OK
+ingresar 123
+OK
+votar 1 Presidente
+OK
+votar 5 Intendente
+OK
+votar 8 Gobernador
+ERROR6
+votar 5 Presi
+ERROR7
+votar 4 Gobernador
+OK
+votar 2 Presidente
+```
 
-### Comando: dehacer
+El estado del voto del votante con DNI 30.000.000 hasta aquí sería: 
+```
+Presidente: Lista 2
+Gobernador: Lista 4
+Intentente: Lista 5
+```
+
+
+### Comando: `deshacer`
 
 #### Formato 
 
@@ -147,7 +197,7 @@ En caso de los demás errores, simplemente se espera por otro ingreso que sea co
 
 #### Descripción 
 
-Deshace la última operación de voto del votante actual. Es decir, ningún voto ya finalizado (ver siguiente comando) no puede verse alterado por la aplicación de este comando. 
+Deshace la última operación de voto del votante actual. Es decir, ningún voto ya finalizado (ver siguiente comando) puede verse alterado por la aplicación de este comando. 
 El voto completo del votante actual queda en el estado exactamente anterior a la última utilización del comando `votar`. 
 
 #### Parámetros
@@ -161,9 +211,20 @@ Ninguno.
 
 #### Ejemplo:
 
-// Agregar ejemplo
+Siguiendo con el ejemplo anterior: 
+```
+deshacer
+```
 
-### Comando: fin-votar
+El estado actual del voto del votante con DNI 30.000.000 será:
+```
+Presidente: Lista 1
+Gobernador: Lista 4
+Intentente: Lista 5
+```
+La operación que se deshizo fue la de haber votado para presidente a lista 2. 
+
+### Comando: `fin-votar`
 
 #### Formato
 
@@ -171,9 +232,13 @@ Ninguno.
 
 #### Descripción
 
-Termina el proceso de votación para el votante actual en la fila. Se emite su voto completo, considerando su alternativa elegida para Presidente, Gobernador e Intendente. Si no eligió alguna alternativa para uno o más tipos, se contarán como votos en blanco. 
+Termina el proceso de votación para el votante actual en la fila. Se emite su voto completo, considerando su 
+alternativa elegida para Presidente, Gobernador e Intendente. Si no eligió alguna alternativa para uno o más tipos, se 
+contarán como votos en blanco. 
 
-Al finalizar el voto, se añadirán al conteo de las alternativas electas para Presidente, Gobernador e Intendente correspondientes, incluyendo el voto en blanco. En caso de haberse impugnado el voto, no se contará para ninguna, y simplemente se irá a un conteo de votos impugnados.
+Al finalizar el voto, se añadirán al conteo de las alternativas electas para Presidente, Gobernador e Intendente 
+correspondientes, incluyendo el voto en blanco. En caso de haberse impugnado el voto, no se contará para ninguna, y 
+simplemente se irá a un conteo de votos impugnados.
 
 #### Parámetros
 
@@ -186,30 +251,47 @@ Ninguno.
 
 #### Ejemplo: 
 
-// Agregar ejemplo
+Continuando el ejemplo anterior: 
+```
+deshacer 
+fin-votar
+```
+
+El voto finalmente emitido será:
+```
+Presidente: Lista 1
+Gobernador: Voto en Blanco
+Intentente: Lista 5
+```
 
 
 ### Fin de ejecución del programa
 
-Una vez que se hubiera terminado el ingreso por entrada estándar (es decir, `stdin` finalizó), se debe imprimir el resultado de los comisiones para esta mesa con el formato mostrado a continuación. En caso de haber alguien "a medio votar", así como otros votantes en la fila esperando, se deberá imprimir `ERROR10` y se descartarán sus votos, considerando que no cumplieron con su deber civil yendo a votar los últimos 15 minutos. De ser posible, se les cobrará la correspondiente multa allí mismo, pero esto queda fuera del alcance del trabajo práctico. 
+Una vez que se hubiera terminado el ingreso por entrada estándar (es decir, `stdin` finalizó), se debe imprimir el 
+resultado de los comisiones para esta mesa con el formato mostrado a continuación. En caso de haber alguien 
+"a medio votar", así como otros votantes en la fila esperando, se deberá imprimir `ERROR10` y se descartarán sus votos, 
+considerando que no cumplieron con su deber civil yendo a votar los últimos 15 minutos. De ser posible, se les cobrará 
+la correspondiente multa allí mismo, pero esto queda fuera del alcance del trabajo práctico. Esto será llevado a cabo
+por *Pólez Cobraciones SRL*.
 
 ### Salida
 
 ```
 Presidente: 
-<nombre del partido 1>: X votos
-<nombre del partido 2>: Y votos
+<nombre del partido 1> - Postulante: X votos
+<nombre del partido 2> - Postulante: Y votos
 ...
 Votos en Blanco: Z votos
 
 Gobernador: 
-<nombre del partido 1>: X2 votos
-<nombre del partido 2>: Y2 votos
+<nombre del partido 1> - Postulante: X2 votos
+<nombre del partido 2> - Postulante: Y2 votos
 ...
 Votos en Blanco: Z2 votos
+
 Intendente:
-<nombre del partido 1>: X3 votos
-<nombre del partido 2>: Y3 votos
+<nombre del partido 1> - Postulante: X3 votos
+<nombre del partido 2> - Postulante: Y3 votos
 ...
 Votos en Blanco: Z3 votos
 
@@ -219,41 +301,96 @@ Votos impugnados: W votos
 
 ## Ejemplo integrador:
 
-Modificar 
-
+Para este ejemplo integrador, que el archivo de boletas es: 
 ```
->>> votar inicio
-Cargo: Presidente
-1: Frente para la Derrota: Alan Información
-2: Pre: Jesus de Nazaret
-3: ++A (Mas-Mas-sa): Ignacio Gundersen
+Frente para la Derrota,Alan Información,Ignacio Líneas,Esteban Federico
+Pre,Jesús Sintasi,Javier Colisión,Yennifer Woolite
+++A,Ignacio Gundersen,Emisor Bello,Daniela Peligro
+```
+Y el Padrón electoral es el siguiente:
+```
+12345678
+98765432
+10000000
+99999999
+```
 
->>> votar 1
+El ejemplo:
+```
+ingresar 12345678
 OK
-Cargo: Gobernador
-1: Frente para la Derrota: Ignacio Lineas
-2: Pre: Javier Colision
-3: ++A (Mas-Mas-sa): Emisor Bello
+ingresar  123
+OK
+ingresar 123a
+ERROR3
+ingresar 12345678
+OK
+ingresar 98765432
+OK
+ingresar 10000000
+OK
+votar 1 Presidente
+OK
+votar 4 Presidente
+ERROR6
+votar 3 Gobernador
+OK
+votar 1 Intendente
+OK
+votar 3 Intendente
+deshacer
+OK
+votar 1 RectorDeLaUBA
+ERROR7
+fin-votar
+OK
+votar 1 Presidente
+ERROR4
+votar 1 Presidente
+ERROR5
+deshacer
+ERROR8
+votar 0 Presidente
+OK
+deshacer
+OK
+votar 3 Presidente
+OK
+votar 3 Gobernador
+OK
+votar 3 Intendente
+OK
+fin-votar
+OK
+fin-votar
+OK
+votar 1 Presidente
+ERROR4
+fin-votar
+ERROR9
+```
 
->>> votar 2
-OK
-Cargo: Intendente
-1: Frente para la derrota: Federico Besante
-2: Pre: Yenifer Woolite
-3: ++A (Mas-Mas-sa): Daniela Peligro
->>> votar 2
-OK
->>> votar deshacer
-OK
-Cargo: Intendente
-1: Frente para la derrota: Federico Besante
-2: Pre: Yenifer Woolite
-3: ++A (Mas-Mas-sa): Daniela Peligro
+Al terminar el programa, la salida final sería la siguiente: 
+```
+Presidente: 
+Frente para la Derrota - Alan Informaión: 1 voto
+Pre - Jesús Sintasi: 0 votos
+++A - Ignacio Gundersen: 1 voto
+Votos en Blanco: 1 voto
 
->>> votar 1
-OK
->>> votar fin
-OK
+Gobernador:
+Frente para la Derrota - Ignacio Líneas: 0 votos
+Pre - Javier Colsión: 0 votos
+++A - Emisor Bello: 2 votos
+Votos en Blanco: 1 voto
+
+Intendente:
+Frente para la Derrota - Esteban Federico: 1 voto
+Pre - Yennifer Woolite: 0 votos
+++A - Daniela Peligro: 1 voto
+Votos en Blanco: 1 voto
+
+Votos impugnados: 0 votos
 ```
 
 ## Archivos provistos por el curso
