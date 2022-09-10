@@ -11,9 +11,9 @@ Preguntas frecuentes
 
 * [Lenguaje go] TODO (a medida que vayan apareciendo consultas)
 
-* [Errores de Valgrind](faq/valgrind.md)
-
 * [Tipos de Datos Abstractos](faq/tda.md)
+
+* [Pila](faq/pila.md)
 
 * [Cola](faq/cola.md)
 

@@ -63,6 +63,8 @@ Adicionalmente, pueden utilizar el flag `-v` para que se muestre la salida de ca
 
 Al igual que en los casos anteriores, deberán entregar el código en formato digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo. Se debe entregar un archivo `zip` con todos los archivos (sin subcarpetas). No es necesario enviar el archivo `pila.go`. Incluso, este será ignorado para evitar cualquier modificación sobre las primitivas.
 
+**No olviden revisar las [preguntas frecuentes de la pila](/algo2/faq/pila)**
+
 ---
 ### Bibliografia recomendada
 * Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *3.3. The Stack ADT*.
