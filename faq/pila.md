@@ -6,7 +6,7 @@
 
 ## Problemas con la función de creación:
 
-> No entendí bien cómo es lo de la función de creación...
+#### No entendí bien cómo es lo de la función de creación...
 
 La firma de la función de creación es: 
 ```golang
@@ -17,17 +17,9 @@ Es decir, la función es para crear nuestro tipo específico (siempre va a haber
 * Conceptual: no queremos exponer en absoluto a la implementación, así que devolvemos una `Pila` (el tipo de la interfaz, el TDA propiamente dicho). De esta forma _Bárbara_ no necesita saber de la existencia siquiera del struct de la implementación. Por otro lado, nos permite (didácticamente) poder separar aún más la interfaz de la implementación, y que quede claro que _Bárbara_ trabaja contra la interfaz. 
 * Técnico: por lo anterior, y al no querer exportar los tipos específicos, la implementación no se exportar (es decir, se llama `pilaDinamica`, no `PilaDinamica`). Si la firma fuera `CrearPilaDinamica[T any]() pilaDinamica[T]`, _Bárbara_ no podría usarla porque como el tipo no se exporta, no va a poder trabajar con ella. Incluso, es posible que directamente esto no compile por esta razón: la función se exporta, pero el tipo que devuelve no. 
 
-> ¿Cómo se va a redimensionar si el tipo `Pila` no tiene primitiva de redimensionar, como sí lo tenía el vector?
-
-La redimensión es algo completamente interno a esta implementación, porque hay un arreglo/slice. Si la implementación fuera diferente, podría no ser necesaria, por lo que no tiene sentido que `Pila` tenga una primitiva de redimensión. 
-
-> ¿Cuál es el tamaño inicial de la pila, si no lo recibimos en el Crear?
-
-Similar a la respuesta anterior: que haya un tamaño inicial es puramente un detalle de implementación, porque aquí hay un arreglo. Si fuera otra la implementación, no tendría sentido ese número que se pase por parámetro, si lo agregáramos. 
-
 Este tamaño inicial debe ser definido por _Alan_ y, esperamos, sea una _constante_. 
 
-> La función de creación no me compila y no me queda del todo claro con el mensaje del compilador. 
+#### La función de creación no me compila y no me queda del todo claro con el mensaje del compilador. 
 
 Acá pueden suceder diferentes cosas. Supongamos que tenemos el siguiente código: 
 
@@ -57,10 +49,20 @@ func CrearPilaDinamica[T any]() T[] {
 }
 ```
 
-> Eso no resolvió mi problema, me sigue sin compilar esa función!
+#### Eso no resolvió mi problema, me sigue sin compilar esa función!
 
 Lo anterior funcionaría en tanto y en cuanto nuestro tipo de dato efectivamente se trate de una pila. Que se llame `pilaSarasa` no lo vuelve una `Pila`. Lo que lo vuelve `Pila` es justamente cumplir con su interfaz. Es decir, tener sus primitivas. 
 Entonces, lo que hay que hacer es tener las primitivas definidas para el tipo de dato. Con eso, y asegurándose de no tener los errores marcados arriba, la función de creación ya no debería presentar más problemas de compilación. 
+
+## Detalles de Implementación: ¿dónde está la redimensión?
+
+#### ¿Cómo se va a redimensionar si el tipo `Pila` no tiene primitiva de redimensionar, como sí lo tenía el vector?
+
+La redimensión es algo completamente interno a esta implementación, porque hay un arreglo/slice. Si la implementación fuera diferente, podría no ser necesaria, por lo que no tiene sentido que `Pila` tenga una primitiva de redimensión. 
+
+#### ¿Cuál es el tamaño inicial de la pila, si no lo recibimos en el Crear?
+
+Similar a la respuesta anterior: que haya un tamaño inicial es puramente un detalle de implementación, porque aquí hay un arreglo. Si fuera otra la implementación, no tendría sentido ese número que se pase por parámetro, si lo agregáramos. 
 
 ## ¿Cómo es el formato de las pruebas?
 
