@@ -24,7 +24,7 @@ Este tamaño inicial debe ser definido por _Alan_ y, esperamos, sea una _constan
 Acá pueden suceder diferentes cosas. Supongamos que tenemos el siguiente código: 
 
 ```golang
-func CrearPilaDinamica[T any]() T[] {
+func CrearPilaDinamica[T any]() Pila[T] {
     pila := pilaDinamica{}
     // hago lo que deba hacer
     return pila
@@ -33,7 +33,7 @@ func CrearPilaDinamica[T any]() T[] {
 
 Esto va a fallar porque necesitamos devolver si o si un puntero. La explicación completa de por qué es eso se ve en clase. Entonces:
 ```golang
-func CrearPilaDinamica[T any]() T[] {
+func CrearPilaDinamica[T any]() Pila[T] {
     pila := new(pilaDinamica)
     // hago lo que deba hacer
     return pila
@@ -42,7 +42,7 @@ func CrearPilaDinamica[T any]() T[] {
 
 Esto nuevamente fallará. Y aquí si el error del compilador puede no ser del todo claro. Lo que sucede es que `pila` es un `pilaDinamica`, y no así una `pilaDinamica[T]`, que es lo que _matchea_ con el tipo `Pila[T]`. Es decir, falta el generic. Y el mensaje es literalmente que no matchea el tipo nada más (lo cual puede ser cierto, como veremos en el siguiente caso). Entonces:
 ```golang
-func CrearPilaDinamica[T any]() T[] {
+func CrearPilaDinamica[T any]() Pila[T] {
     pila := new(pilaDinamica[T]) // se agrega el generic
     // hago lo que deba hacer
     return pila
