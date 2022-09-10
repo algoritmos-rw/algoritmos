@@ -395,16 +395,26 @@ Votos impugnados: 0 votos
 
 ## Archivos provistos por el curso
 
-Como se menciona anteriormente, este trabajo práctico tiene como objetivo tanto la utilización de TDAs previamente implementados, así como diseñar nuevos. En este caso, como primera incursión, les proveemos nosotros de un diseño sugerido par implementar, con un TDA `Votante`, un `struct Voto` (que no es un TDA), y un TDA `Partido`. Proveemos también la firma de las primitivas/métodos, pero sin una implementación. Esta deberían completarla ustedes. El objetivo de esto es guiarlos a implementar un buen diseño. En futuros TPs no se les dará diseño alguno, y esperaremos que diseñen correctamente, implementando los TDAs que les parezca correctos según la necesidad. 
+Como se menciona anteriormente, este trabajo práctico tiene como objetivo tanto la utilización de TDAs previamente 
+implementados, así como diseñar nuevos. En este caso, como primera incursión, les proveemos nosotros de un diseño s
+ugerido par implementar, con un TDA `Votante`, un `struct Voto` (que no es un TDA), y un TDA `Partido`. Proveemos 
+también la firma de las primitivas/métodos, pero sin una implementación. Esta deberían completarla ustedes. El objetivo 
+de esto es guiarlos a implementar un buen diseño. Pueden modificar el diseño propuesto como a ustedes mejor les parezca.
+En futuros TPs no se les dará diseño alguno, y esperaremos que diseñen correctamente, implementando los TDAs que les 
+parezca correctos según la necesidad. 
 
 
-Aparte de esto, les brindaremos unos archivos que funcionarán de prueba. Estos **no** son como las pruebas anteriores que vinieron ejecutando, sino que serán pruebas de Input/Output (IO, o entrada/salida). Para ejecutar dichas pruebas, deben descomprimir el archivo de pruebas y, previa compilación del código del TP mediante, ejecutar (estando parados en el directorio donde se encuentren las pruebas):
+Aparte de esto, les brindaremos unos archivos que funcionarán de prueba. Estos **no** son como las pruebas anteriores 
+que vinieron ejecutando, sino que serán pruebas de Input/Output (IO, o entrada/salida). Para ejecutar dichas pruebas, 
+deben descomprimir el archivo de pruebas y, previa compilación del código del TP mediante, ejecutar (estando parados en 
+el directorio donde se encuentren las pruebas):
 
 ```
 $ ./pruebas.sh <RUTA_AL_EJECUTABLE_TP>
 ```
 
-Donde `RUTA_AL_EJECUTABLE_TP` es la ruta del ejecutable que hayan conseguido tras la compilación de su código. La ruta puede ser relativa al directorio actual, o absoluta. 
+Donde `RUTA_AL_EJECUTABLE_TP` es la ruta del ejecutable que hayan conseguido tras la compilación de su código. La ruta 
+puede ser relativa al directorio actual, o absoluta. 
 
 ## Criterios de aprobación
 
