@@ -6,7 +6,7 @@
 
 ## Problemas con la función de creación:
 
-> No entendí bien cómo es lo de la función de creación...
+>> No entendí bien cómo es lo de la función de creación...
 
 La firma de la función de creación es: 
 ```golang
