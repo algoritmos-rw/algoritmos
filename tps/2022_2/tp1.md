@@ -52,21 +52,24 @@ El programa debe ejecutarse de la siguiente forma:
 Donde: 
 
 * `ARCHIVO_LISTA`: Un archivo .csv donde están las respectivas boletas a votar. Cada línea representa un partido 
-* político, que tiene nombre de dicho partido, nombre de el/la candidata a presidente, nombre de el/la candidata a 
-* gobernador, y luego el del candidato a intendente. 
+  político, que tiene nombre de dicho partido, nombre de el/la candidata a presidente, nombre de el/la candidata a 
+  gobernador, y luego el del candidato a intendente. 
 * `ARCHIVO_PADRON`: Un archivo .txt con los documentos habilitados a votar en la mesa. Este archivo tiene un documento 
-* por línea. Cada documento escrito en formato numérico, sin puntos. 
+  por línea. Cada documento escrito en formato numérico, sin puntos. 
 
 Al empezar a ejecutar, el programa debe empezar a levantar los archivos y prepara la mesa electoral. 
 Al terminar de preparar todo, debe imprimir por salida estándar (`stdout`) lo que corresponda a la salida según el 
 estado.
+
+Más allá de los ejemplos particulares que mostramos en el enunciado, aseguramos que, tanto en un escenario real como en
+las pruebas, los números de DNI (válidos) serán en general similares a los reales, y puede usarse esa información a 
+conveniencia.
 
 #### Salida
 
 - `OK`: si no se produjeron errores.
 - `ERROR1`: si hubo un error en la lectura de los archivos (o archivos inexistentes, o sin permisos)
 - `ERROR2`: si faltó alguno de los parámetros
-
 
 #### Ejemplo:
 
@@ -99,8 +102,8 @@ El votante ingresa este comando al momento de entrar en la fila de personas espe
 
 - `OK`: si no se produjeron errores.
 - `ERROR3`: si el número de DNI es menor o igual a 0.
+- `ERROR4`: si el DNI de la persona votando no se encuentra en el padrón de la mesa actual. 
 
-En este comando **no** se valida si el dni se encuentra en el padrón electoral (eso sucederá en el siguiente comando).
 En caso de error, simplemente esperar por un nuevo ingresa de un comando. 
 
 #### Ejemplo:
@@ -113,10 +116,8 @@ OK
 ingresar -12345678
 ERROR3
 ingresar 123
-OK
+ERROR4
 ```
-
-Si por el caso el DNI 123 no se encontrara en el padrón, igualmente se imprime OK y se agrega a la fila.
 
 ### Comando: `votar`
 
@@ -126,9 +127,10 @@ Si por el caso el DNI 123 no se encontrara en el padrón, igualmente se imprime 
 
 #### Descripción
 
-Este comando se utiliza para votar por alguna alternativa. Para simplicidad y evitar que alguien escriba mal el nombre 
+Este comando se utiliza para votar por alguna alternativa. Por simplicidad y evitar que alguien escriba mal el nombre 
 de un partido político, se decidió que los votantes ingresen su número de lista. El número de lista es directamente el 
 número de línea dentro del archivo de partidos que ocupa cada partido.
+El votante que votará será el que se encuentre primero en la fila (quien haya llegado antes).
 
 #### Parámetros
 
@@ -150,13 +152,12 @@ deshecho esa operación (nuevamente, ver comando `deshacer`, más adelante).
 #### Salida
 
 - `OK`: si no se produjeron errores. 
-- `ERROR4`: si el DNI de la persona votando no se encuentra en el padrón de la mesa actual. Este error también se 
-   produce si no hay nadie esperando para votar. 
+- `ERROR9`: si no hay nadie esperando para votar. 
 - `ERROR5`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). 
 - `ERROR6`: si el número de lista es incorrecto (no es una opción válida).
 - `ERROR7`: si el tipo de voto no es uno de los enunciados anteriormente.
 
-En caso de producirse el Error 4, se descarta el padrón de la fila. 
+En caso de producirse el Error 5, se descarta el padrón de la fila. 
 En caso de los demás errores, simplemente se espera por otro ingreso que sea correcto. 
 
 #### Ejemplo: 
@@ -168,17 +169,18 @@ ingresar 16000000
 OK
 ingresar 123
 OK
-votar 1 Presidente
+votar Presidente 1
 OK
-votar 5 Intendente
+votar Intendente 5
 OK
-votar 8 Gobernador
+votar Gobernador 8
 ERROR6
-votar 5 Presi
+votar Presi 5
 ERROR7
-votar 4 Gobernador
+votar Gobernador 4
 OK
-votar 2 Presidente
+votar Presidente 2
+OK
 ```
 
 El estado del voto del votante con DNI 30.000.000 hasta aquí sería: 
@@ -208,6 +210,9 @@ Ninguno.
 
 - `OK`: si no se produjo ningún error. 
 - `ERROR8`: si no hay nadie esperando votar, o no hay nada que deshacer (el votante actual aún no realizó votaciones, o todas sus votaciones fueron ya deshechas).
+- `ERROR5`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`).
+
+En caso de producirse el Error 5, se descarta el padrón de la fila.
 
 #### Ejemplo:
 
@@ -238,7 +243,8 @@ contarán como votos en blanco.
 
 Al finalizar el voto, se añadirán al conteo de las alternativas electas para Presidente, Gobernador e Intendente 
 correspondientes, incluyendo el voto en blanco. En caso de haberse impugnado el voto, no se contará para ninguna, y 
-simplemente se irá a un conteo de votos impugnados.
+simplemente se irá a un conteo de votos impugnados. En cuaquier caso, el votante dejará de estar en la fila, para que
+pueda votar el siguiente de la misma. 
 
 #### Parámetros
 
@@ -246,8 +252,11 @@ Ninguno.
 
 #### Salida
 
-- `OK`: si no se produjo ningún error. 
+- `OK`: si no se produjo ningún error.
 - `ERROR9`: si no había nadie en la fila para votar.
+- `ERROR5`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`).
+
+En caso de producirse el Error 5, se descarta el padrón de la fila.
 
 #### Ejemplo: 
 
@@ -277,23 +286,23 @@ por *Pólez Cobraciones SRL*.
 ### Salida
 
 ```
-Presidente: 
+Presidente:
+Votos en Blanco: Z votos 
 <nombre del partido 1> - Postulante: X votos
 <nombre del partido 2> - Postulante: Y votos
 ...
-Votos en Blanco: Z votos
 
-Gobernador: 
+Gobernador:
+Votos en Blanco: Z2 votos 
 <nombre del partido 1> - Postulante: X2 votos
 <nombre del partido 2> - Postulante: Y2 votos
 ...
-Votos en Blanco: Z2 votos
 
 Intendente:
+Votos en Blanco: Z3 votos
 <nombre del partido 1> - Postulante: X3 votos
 <nombre del partido 2> - Postulante: Y3 votos
 ...
-Votos en Blanco: Z3 votos
 
 Votos impugnados: W votos
 ```
@@ -319,8 +328,8 @@ El ejemplo:
 ```
 ingresar 12345678
 OK
-ingresar  123
-OK
+ingresar 123
+ERROR4
 ingresar 123a
 ERROR3
 ingresar 12345678
@@ -329,43 +338,42 @@ ingresar 98765432
 OK
 ingresar 10000000
 OK
-votar 1 Presidente
+votar Presidente 1
 OK
-votar 4 Presidente
+votar Presidente 4
 ERROR6
-votar 3 Gobernador
+votar Gobernador 3
 OK
-votar 1 Intendente
+votar Intendente 1
 OK
-votar 3 Intendente
+votar Intendente 3
+OK
 deshacer
 OK
-votar 1 RectorDeLaUBA
+votar RectorDeLaUBA 1
 ERROR7
 fin-votar
 OK
-votar 1 Presidente
-ERROR4
-votar 1 Presidente
+votar Presidente 1
 ERROR5
 deshacer
 ERROR8
-votar 0 Presidente
+votar Presidente 0
 OK
 deshacer
 OK
-votar 3 Presidente
+votar Presidente 3
 OK
-votar 3 Gobernador
+votar Gobernador 3
 OK
-votar 3 Intendente
-OK
-fin-votar
+votar Intendente 3
 OK
 fin-votar
 OK
-votar 1 Presidente
-ERROR4
+fin-votar
+OK
+votar Presidente 1
+ERROR9
 fin-votar
 ERROR9
 ```
@@ -373,24 +381,24 @@ ERROR9
 Al terminar el programa, la salida final sería la siguiente: 
 ```
 Presidente: 
+Votos en Blanco: 1 voto
 Frente para la Derrota - Alan Informaión: 1 voto
 Pre - Jesús Sintasi: 0 votos
 ++A - Ignacio Gundersen: 1 voto
-Votos en Blanco: 1 voto
 
 Gobernador:
+Votos en Blanco: 1 voto
 Frente para la Derrota - Ignacio Líneas: 0 votos
 Pre - Javier Colsión: 0 votos
 ++A - Emisor Bello: 2 votos
-Votos en Blanco: 1 voto
 
 Intendente:
+Votos en Blanco: 1 voto
 Frente para la Derrota - Esteban Federico: 1 voto
 Pre - Yennifer Woolite: 0 votos
 ++A - Daniela Peligro: 1 voto
-Votos en Blanco: 1 voto
 
-Votos impugnados: 0 votos
+Votos Impugnados: 0 votos
 ```
 
 ## Archivos provistos por el curso
