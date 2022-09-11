@@ -68,14 +68,14 @@ conveniencia.
 #### Salida
 
 - `OK`: si no se produjeron errores.
-- `ERROR1`: si hubo un error en la lectura de los archivos (o archivos inexistentes, o sin permisos)
-- `ERROR2`: si faltó alguno de los parámetros
+- `ERROR: Lectura de archivos`: si hubo un error en la lectura de los archivos (o archivos inexistentes, o sin permisos)
+- `ERROR: Faltan parámetros`: si faltó alguno de los parámetros
 
 #### Ejemplo:
 
 ```
 ./polez-soft lista_candidatos.csv padron-que-no-existe.csv
-ERROR1
+ERROR: Lectura de archivos
 ./polez-soft lista_candidatos.csv -->le falta el otro archivo
 ERROR2
 ./polez-soft lista_candidatos.csv padron.csv
@@ -101,8 +101,8 @@ El votante ingresa este comando al momento de entrar en la fila de personas espe
 #### Salida
 
 - `OK`: si no se produjeron errores.
-- `ERROR3`: si el número de DNI es menor o igual a 0.
-- `ERROR4`: si el DNI de la persona votando no se encuentra en el padrón de la mesa actual. 
+- `ERROR: DNI incorrecto`: si el número de DNI no es correcto (es menor o igual a 0, o no es un número).
+- `ERROR: DNI fuera del padrón`: si el DNI de la persona votando no se encuentra en el padrón de la mesa actual. 
 
 En caso de error, simplemente esperar por un nuevo ingresa de un comando. 
 
@@ -114,9 +114,9 @@ OK
 ingresar 40100900
 OK
 ingresar -12345678
-ERROR3
+ERROR: DNI incorrecto
 ingresar 123
-ERROR4
+ERROR: DNI fuera del padrón
 ```
 
 ### Comando: `votar`
@@ -152,13 +152,14 @@ deshecho esa operación (nuevamente, ver comando `deshacer`, más adelante).
 #### Salida
 
 - `OK`: si no se produjeron errores. 
-- `ERROR9`: si no hay nadie esperando para votar. 
-- `ERROR5`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). 
-- `ERROR6`: si el número de lista es incorrecto (no es una opción válida).
-- `ERROR7`: si el tipo de voto no es uno de los enunciados anteriormente.
+- `ERROR: Fila vacía`: si no hay nadie esperando para votar. 
+- `ERROR: Votante FRAUDULENTO`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). 
+- `ERROR: Tipo de voto inválido`: si el tipo de voto no es uno de los enunciados anteriormente.
+- `ERROR: Alternativa inválida`: si el número de lista es incorrecto (no es una opción válida).
 
-En caso de producirse el Error 5, se descarta el padrón de la fila. 
+En caso de producirse el Error de votante fraudulento, se descarta el padrón de la fila. 
 En caso de los demás errores, simplemente se espera por otro ingreso que sea correcto. 
+En caso que se produzca más de un error a la vez, el error que se debe priorizar al que esté antes en este listado. Es decir, se debe validar en tal orden.
 
 #### Ejemplo: 
 
@@ -174,13 +175,15 @@ OK
 votar Intendente 5
 OK
 votar Gobernador 8
-ERROR6
+ERROR: Alternativa inválida
 votar Presi 5
-ERROR7
+ERROR: Tipo de voto inválido
 votar Gobernador 4
 OK
 votar Presidente 2
 OK
+votar DT_de_la_selession -10
+ERROR: Tipo de voto inválido
 ```
 
 El estado del voto del votante con DNI 30.000.000 hasta aquí sería: 
@@ -199,7 +202,8 @@ Intentente: Lista 5
 
 #### Descripción 
 
-Deshace la última operación de voto del votante actual. Es decir, ningún voto ya finalizado (ver siguiente comando) puede verse alterado por la aplicación de este comando. 
+Deshace la última operación de voto del votante actual. Es decir, ningún voto ya finalizado (ver siguiente comando) 
+puede verse alterado por la aplicación de este comando. 
 El voto completo del votante actual queda en el estado exactamente anterior a la última utilización del comando `votar`. 
 
 #### Parámetros
@@ -209,10 +213,15 @@ Ninguno.
 #### Salida
 
 - `OK`: si no se produjo ningún error. 
-- `ERROR8`: si no hay nadie esperando votar, o no hay nada que deshacer (el votante actual aún no realizó votaciones, o todas sus votaciones fueron ya deshechas).
-- `ERROR5`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`).
+- `ERROR: Fila vacía`: si no hay nadie esperando votar
+- `ERROR: Votante FRAUDULENTO`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). 
+- `ERROR: Sin voto a deshacer` si no hay nada que deshacer (el votante actual aún no realizó votaciones, o todas sus 
+- votaciones fueron ya deshechas).
 
-En caso de producirse el Error 5, se descarta el padrón de la fila.
+En caso de producirse el Error de votante fraudulento, se descarta el padrón de la fila. 
+En caso de los demás errores, simplemente se espera por otro ingreso que sea correcto. 
+En caso que se produzca más de un error a la vez, el error que se debe priorizar al que esté antes en este listado. 
+Es decir, se debe validar en tal orden.
 
 #### Ejemplo:
 
@@ -253,10 +262,11 @@ Ninguno.
 #### Salida
 
 - `OK`: si no se produjo ningún error.
-- `ERROR9`: si no había nadie en la fila para votar.
-- `ERROR5`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`).
+- `ERROR: Fila vacía`: si no hay nadie esperando para votar. 
+- `ERROR: Votante FRAUDULENTO`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). 
 
-En caso de producirse el Error 5, se descarta el padrón de la fila.
+En caso de producirse el Error de votante fraudulento, se descarta el padrón de la fila. 
+En caso de los demás errores, simplemente se espera por otro ingreso que sea correcto. 
 
 #### Ejemplo: 
 
@@ -277,8 +287,9 @@ Intentente: Lista 5
 ### Fin de ejecución del programa
 
 Una vez que se hubiera terminado el ingreso por entrada estándar (es decir, `stdin` finalizó), se debe imprimir el 
-resultado de los comisiones para esta mesa con el formato mostrado a continuación. En caso de haber alguien 
-"a medio votar", así como otros votantes en la fila esperando, se deberá imprimir `ERROR10` y se descartarán sus votos, 
+resultado de los comicios para esta mesa con el formato mostrado a continuación. En caso de haber alguien 
+"a medio votar", así como otros votantes en la fila esperando, se deberá imprimir 
+`ERROR: Ciudadanos sin terminar de votar` y se descartarán sus votos, 
 considerando que no cumplieron con su deber civil yendo a votar los últimos 15 minutos. De ser posible, se les cobrará 
 la correspondiente multa allí mismo, pero esto queda fuera del alcance del trabajo práctico. Esto será llevado a cabo
 por *Pólez Cobraciones SRL*.
@@ -329,9 +340,9 @@ El ejemplo:
 ingresar 12345678
 OK
 ingresar 123
-ERROR4
+ERROR: DNI fuera del padrón
 ingresar 123a
-ERROR3
+ERROR: DNI incorrecto
 ingresar 12345678
 OK
 ingresar 98765432
@@ -341,7 +352,7 @@ OK
 votar Presidente 1
 OK
 votar Presidente 4
-ERROR6
+ERROR: Alternativa inválida
 votar Gobernador 3
 OK
 votar Intendente 1
@@ -351,13 +362,13 @@ OK
 deshacer
 OK
 votar RectorDeLaUBA 1
-ERROR7
+ERROR: Tipo de voto inválido
 fin-votar
 OK
 votar Presidente 1
-ERROR5
+ERROR: Votante FRAUDULENTO
 deshacer
-ERROR8
+ERROR: Sin voto a deshacer
 votar Presidente 0
 OK
 deshacer
@@ -373,9 +384,9 @@ OK
 fin-votar
 OK
 votar Presidente 1
-ERROR9
+ERROR: Fila vacía
 fin-votar
-ERROR9
+ERROR: Fila vacía
 ```
 
 Al terminar el programa, la salida final sería la siguiente: 
@@ -404,13 +415,17 @@ Votos Impugnados: 0 votos
 ## Archivos provistos por el curso
 
 Como se menciona anteriormente, este trabajo práctico tiene como objetivo tanto la utilización de TDAs previamente 
-implementados, así como diseñar nuevos. En este caso, como primera incursión, les proveemos nosotros de un diseño s
-ugerido par implementar, con un TDA `Votante`, un `struct Voto` (que no es un TDA), y un TDA `Partido`. Proveemos 
-también la firma de las primitivas/métodos, pero sin una implementación. Esta deberían completarla ustedes. El objetivo 
-de esto es guiarlos a implementar un buen diseño. Pueden modificar el diseño propuesto como a ustedes mejor les parezca.
-En futuros TPs no se les dará diseño alguno, y esperaremos que diseñen correctamente, implementando los TDAs que les 
-parezca correctos según la necesidad. 
+implementados, así como diseñar nuevos. En este caso, como primera incursión, les proveemos nosotros de un diseño
+sugerido para implementar, con un TDA `Votante`, un `struct Voto` (que no es un TDA), y un TDA `Partido. Proveemos 
+también la firma de las primitivas/métodos, y la estructura de sus respectivas implementaciones, pero sin la
+implementación de las primitivas. Esta deberían completarla ustedes. El objetivo de esto es guiarlos a implementar un 
+buen diseño. Pueden modificar el diseño propuesto como a ustedes mejor les parezca. En futuros TPs no se les dará 
+diseño alguno, y esperaremos que diseñen correctamente, implementando los TDAs que les parezca correctos según la 
+necesidad.
 
+También se les otorgará un archivo con la definición de los errores antes mencionados (como errores de Go). En caso de
+haber alguna discrepancia entre el enunciado y dicho archivo (respecto a alguna mayúscula o lo que fuere), será válido
+lo indicado en el archivo, salvo que se indique lo contrario. 
 
 Aparte de esto, les brindaremos unos archivos que funcionarán de prueba. Estos **no** son como las pruebas anteriores 
 que vinieron ejecutando, sino que serán pruebas de Input/Output (IO, o entrada/salida). Para ejecutar dichas pruebas, 
