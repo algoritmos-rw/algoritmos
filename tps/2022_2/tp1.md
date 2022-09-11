@@ -68,8 +68,8 @@ conveniencia.
 #### Salida
 
 - `OK`: si no se produjeron errores.
-- `ERROR: Lectura de archivos`: si hubo un error en la lectura de los archivos (o archivos inexistentes, o sin permisos)
 - `ERROR: Faltan parámetros`: si faltó alguno de los parámetros
+- `ERROR: Lectura de archivos`: si hubo un error en la lectura de los archivos (o archivos inexistentes, o sin permisos)
 
 #### Ejemplo:
 
@@ -77,7 +77,7 @@ conveniencia.
 ./polez-soft lista_candidatos.csv padron-que-no-existe.csv
 ERROR: Lectura de archivos
 ./polez-soft lista_candidatos.csv -->le falta el otro archivo
-ERROR2
+ERROR: Faltan parámetros
 ./polez-soft lista_candidatos.csv padron.csv
 OK 
 ```
@@ -416,7 +416,7 @@ Votos Impugnados: 0 votos
 
 Como se menciona anteriormente, este trabajo práctico tiene como objetivo tanto la utilización de TDAs previamente 
 implementados, así como diseñar nuevos. En este caso, como primera incursión, les proveemos nosotros de un diseño
-sugerido para implementar, con un TDA `Votante`, un `struct Voto` (que no es un TDA), y un TDA `Partido. Proveemos 
+sugerido para implementar, con un TDA `Votante`, un `struct Voto` (que no es un TDA), y un TDA `Partido`. Proveemos 
 también la firma de las primitivas/métodos, y la estructura de sus respectivas implementaciones, pero sin la
 implementación de las primitivas. Esta deberían completarla ustedes. El objetivo de esto es guiarlos a implementar un 
 buen diseño. Pueden modificar el diseño propuesto como a ustedes mejor les parezca. En futuros TPs no se les dará 
