@@ -152,10 +152,10 @@ deshecho esa operación (nuevamente, ver comando `deshacer`, más adelante).
 #### Salida
 
 - `OK`: si no se produjeron errores. 
-- `ERROR: Fila vacía`: si no hay nadie esperando para votar. 
-- `ERROR: Votante FRAUDULENTO`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). 
+- `ERROR: Fila vacía`: si no hay nadie esperando para votar.  
 - `ERROR: Tipo de voto inválido`: si el tipo de voto no es uno de los enunciados anteriormente.
 - `ERROR: Alternativa inválida`: si el número de lista es incorrecto (no es una opción válida).
+- `ERROR: Votante FRAUDULENTO`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`).
 
 En caso de producirse el Error de votante fraudulento, se descarta el padrón de la fila. 
 En caso de los demás errores, simplemente se espera por otro ingreso que sea correcto. 
