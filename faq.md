@@ -5,11 +5,13 @@ Preguntas frecuentes
 
 * [Entorno de desarollo](faq/entorno.md)
 
-* [Primeros Pasos con Linux y C](faq/primeros-pasos.md)
+* [Primeros Pasos con Linux y Go](faq/primeros-pasos.md)
 
 * [Compilación y Ejecución](faq/compilacion-ejecucion.md)
 
 * [Lenguaje go] TODO (a medida que vayan apareciendo consultas)
+
+* [Corrección por Pull Requests (PRs)](faq/correccion-pr.md)
 
 * [Tipos de Datos Abstractos](faq/tda.md)
 
