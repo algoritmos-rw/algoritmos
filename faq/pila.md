@@ -60,6 +60,21 @@ Entonces, lo que hay que hacer es tener las primitivas definidas para el tipo de
 
 La redimensión es algo completamente interno a esta implementación, porque hay un arreglo/slice. Si la implementación fuera diferente, podría no ser necesaria, por lo que no tiene sentido que `Pila` tenga una primitiva de redimensión. 
 
+#### ¿Cuánto conviene agrandar una estructura dinámica?
+
+Hacer `make`, y luego `copy` para copiar los elementos de un arreglo anterior a otro es una operación lenta: $$\mathcal{O}(n)$$ (siendo n la cantidad de bytes que se mantienen en el bloque de memoria).  De modo que es importante planificar cuánto se va a agrandar la estructura, para que el tiempo gastado en el redimensionamiento no influya en el comportamiento general de la estructura.
+
+Para ello, lo que se hace es que al agrandar, el espacio utilizado se multiplique -generalmente por 2, pero puede ser por otro factor, según las condiciones del problema a resolver-, de modo que la incidencia del `make+copy` se distribuya siempre de forma pareja entre los elementos, lo que no sucede en el caso de que la estructura crezca una cantidad constante. Una demostración formal sobre cómo afecta esta redimensión en el costo total de las operaciones puede encontrarse en la [lista de mails](https://groups.google.com/d/msg/fiuba-7541rw-alu/t86CJcNv2UU/Irb7J899DgAJ).
+
+#### ¿Cuándo y cuánto conviene achicar una estructura dinámica?
+
+Si para agrandar la estructura multiplicamos su tamaño por 2, no es una buena idea reducirla a la mitad ni bien llega a la mitad de espacio utilizado, ya que en el caso de que se quisiera agregar un nuevo elemento, sería necesario agrandarla y si se lo quita, otra vez achicarla, por lo que en definitiva, habría una cantidad de elementos para la que las operaciones de agregar o sacar de la estructura serían particularmente lentas.
+
+Es por eso que lo que se puede hacer es reducir la estructura a la mitad, pero sólo cuando la cantidad de espacio ocupada llega a 1/4 de la deseada.  De este modo, se libera la memoria fuera de uso, pero sin el riesgo de caer en un caso patológicamente lento.
+
+Tanto en el caso de agrandar como el de achicar, se pueden tomar criterios distintos para buscar mayor eficiencia en tiempo o en memoria, según el problema a resolver.
+
+
 #### ¿Cuál es el tamaño inicial de la pila, si no lo recibimos en el Crear?
 
 Similar a la respuesta anterior: que haya un tamaño inicial es puramente un detalle de implementación, porque aquí hay un arreglo. Si fuera otra la implementación, no tendría sentido ese número que se pase por parámetro, si lo agregáramos. 
@@ -93,21 +108,3 @@ Las pruebas que hacemos en el curso son **unitarias**, es decir, prueban solo un
 * **Prueban resultados**: Las pruebas no deben dependender de la implementación del programa. Como si fuesen una caja negra que no sabe nada de adentro, solamente deben probar que dado unos parametros, se devuelva un resultado. Nunca debo tener que cambiar una prueba para que la nueva implementación la pase. Las pruebas son fijas, el programa no.
 
 Estas pruebas deben cubrir tanto el funcionamiento básico de un programa que haría el usuario tipo (hay que probar todo el programa, codificar una función sin pruebas subsecuentes es equivalente a no haberla codificado en una primera instancia) como los casos borde y los casos triviales. El fin es siempre tener el programa lo más robusto posible. Un buen set de pruebas inicial siempre ahorra errores en el futuro.
-
-## Redimensionamiento automático
-
-Estas respuestas son útiles tanto para la pila dinámica, como para la tabla de hash, o cualquier otra estructura que deba agrandarse y achicarse automáticamente.
-
-### ¿Cuánto conviene agrandar una estructura dinámica?
-
-Hacer `make`, y luego `copy` para copiar los elementos de un arreglo anterior a otro es una operación lenta: $$\mathcal{O}(n)$$ (siendo n la cantidad de bytes que se mantienen en el bloque de memoria).  De modo que es importante planificar cuánto se va a agrandar la estructura, para que el tiempo gastado en el redimensionamiento no influya en el comportamiento general de la estructura.
-
-Para ello, lo que se hace es que al agrandar, el espacio utilizado se multiplique -generalmente por 2, pero puede ser por otro factor, según las condiciones del problema a resolver-, de modo que la incidencia del `make+copy` se distribuya siempre de forma pareja entre los elementos, lo que no sucede en el caso de que la estructura crezca una cantidad constante. Una demostración formal sobre cómo afecta esta redimensión en el costo total de las operaciones puede encontrarse en la [lista de mails](https://groups.google.com/d/msg/fiuba-7541rw-alu/t86CJcNv2UU/Irb7J899DgAJ).
-
-### ¿Cuándo y cuánto conviene achicar una estructura dinámica?
-
-Si para agrandar la estructura multiplicamos su tamaño por 2, no es una buena idea reducirla a la mitad ni bien llega a la mitad de espacio utilizado, ya que en el caso de que se quisiera agregar un nuevo elemento, sería necesario agrandarla y si se lo quita, otra vez achicarla, por lo que en definitiva, habría una cantidad de elementos para la que las operaciones de agregar o sacar de la estructura serían particularmente lentas.
-
-Es por eso que lo que se puede hacer es reducir la estructura a la mitad, pero sólo cuando la cantidad de espacio ocupada llega a 1/4 de la deseada.  De este modo, se libera la memoria fuera de uso, pero sin el riesgo de caer en un caso patológicamente lento.
-
-Tanto en el caso de agrandar como el de achicar, se pueden tomar criterios distintos para buscar mayor eficiencia en tiempo o en memoria, según el problema a resolver.
