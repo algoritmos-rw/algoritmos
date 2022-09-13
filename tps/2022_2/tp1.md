@@ -155,7 +155,7 @@ deshecho esa operación (nuevamente, ver comando `deshacer`, más adelante).
 - `ERROR: Fila vacía`: si no hay nadie esperando para votar.  
 - `ERROR: Tipo de voto inválido`: si el tipo de voto no es uno de los enunciados anteriormente.
 - `ERROR: Alternativa inválida`: si el número de lista es incorrecto (no es una opción válida).
-- `ERROR: Votante FRAUDULENTO`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`).
+- `ERROR: Votante FRAUDULENTO: <NRO DNI>`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). Se debe indicar también el número de DNI de la persona que está incurriendo en este delito contra la democracia. 
 
 En caso de producirse el Error de votante fraudulento, se descarta el padrón de la fila. 
 En caso de los demás errores, simplemente se espera por otro ingreso que sea correcto. 
@@ -214,7 +214,7 @@ Ninguno.
 
 - `OK`: si no se produjo ningún error. 
 - `ERROR: Fila vacía`: si no hay nadie esperando votar
-- `ERROR: Votante FRAUDULENTO`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). 
+- `ERROR: Votante FRAUDULENTO: <NRO DNI>`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). Nuevamente, se indica el número de DNI de quien incurre en el delito. 
 - `ERROR: Sin voto a deshacer` si no hay nada que deshacer (el votante actual aún no realizó votaciones, o todas sus 
 - votaciones fueron ya deshechas).
 
@@ -263,7 +263,7 @@ Ninguno.
 
 - `OK`: si no se produjo ningún error.
 - `ERROR: Fila vacía`: si no hay nadie esperando para votar. 
-- `ERROR: Votante FRAUDULENTO`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). 
+- `ERROR: Votante FRAUDULENTO: <NRO DNI>`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). Mismo a lo mencionado anteriormente respecto al número de DNI. 
 
 En caso de producirse el Error de votante fraudulento, se descarta el padrón de la fila. 
 En caso de los demás errores, simplemente se espera por otro ingreso que sea correcto. 
@@ -366,7 +366,7 @@ ERROR: Tipo de voto inválido
 fin-votar
 OK
 votar Presidente 1
-ERROR: Votante FRAUDULENTO
+ERROR: Votante FRAUDULENTO: 12345678
 deshacer
 ERROR: Sin voto a deshacer
 votar Presidente 0
