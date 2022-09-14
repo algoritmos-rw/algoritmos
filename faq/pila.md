@@ -108,3 +108,14 @@ Las pruebas que hacemos en el curso son **unitarias**, es decir, prueban solo un
 * **Prueban resultados**: Las pruebas no deben dependender de la implementación del programa. Como si fuesen una caja negra que no sabe nada de adentro, solamente deben probar que dado unos parametros, se devuelva un resultado. Nunca debo tener que cambiar una prueba para que la nueva implementación la pase. Las pruebas son fijas, el programa no.
 
 Estas pruebas deben cubrir tanto el funcionamiento básico de un programa que haría el usuario tipo (hay que probar todo el programa, codificar una función sin pruebas subsecuentes es equivalente a no haberla codificado en una primera instancia) como los casos borde y los casos triviales. El fin es siempre tener el programa lo más robusto posible. Un buen set de pruebas inicial siempre ahorra errores en el futuro.
+
+## Ya implementé todo pero no me compila al hacer `go build` ni funciona hacer `go test`
+
+Entendemos que al ser esta la primera entrega en la que deben plantear el módulo ustedes mismos, esto pueda generar problemas. Hagamos un resumen de los pasos a hacer: 
+
+1. Crear un nuevo directorio, donde vamos a tener el código de nuestro TDA. 
+2. En dicho directorio, hacemos `go mod init pila`. No olvidar el nombre del módulo, porque sino luego no va a poder encontrar el código! Si hacen simplemente `go mod init`, dentro del archivo `go.mod` van a tener la línea `module ...`, cuando debería ser `module pila`. 
+3. Agregar los archivos provistos (`pila.go`, `pila_dinamica.go`, `pila_test.go`). Estos archivos deben estar el directorio del módulo, no en un subdirectorio. Es decir, deben estar junto al `go.mod`. 
+4. Escribir el código (si ya lo tienen porque llegaron a este apartado luego de tener fallas, simplemente pasarlo aquí).
+5. Hacer `go mod tidy`.
+
