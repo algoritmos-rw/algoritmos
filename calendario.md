@@ -20,7 +20,7 @@ Fechas de examen:
 </table>
 
 Los temas a ser evaluados en cada parcialito son:
-- **1er parcialito**: Punteros. Memoria estática y dinámica. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas y Listas. Ordenamientos comparativos y no comparativos.  
+- **1er parcialito**: Punteros. Recursividad. Algoritmos de división y conquista. Cálculo de eficiencia. Teorema Maestro. TDAs. Pilas. Colas y Listas. Ordenamientos comparativos y no comparativos.
 - **2do parcialito**: Diccionarios. Hash abierto y cerrado. Árboles binarios. ABB. Iteradores internos y externos de árboles binarios. árboles AVL.  Heap y Heapsort.
 - **3er parcialito**: Grafos.
 
