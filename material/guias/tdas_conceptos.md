@@ -177,7 +177,7 @@ $$n$$.
 
     Definir la estructura (`struct`) del TDA, y escribir estas 5 primitivas. Indicar el orden de cada una de ellas.
     
-    _Nota_: `color_t` corresponde a un `typedef enum color color_t`, que está definido en algún lugar.
+    _Nota_: `Color` corresponde a un enumerado, que está definido en algún lugar.
     
 1.  (★★★) Dadas dos pilas de enteros positivos (con posibles valores repetidos) cuyos elementos fueron ingresados de menor
     a mayor, se pide implementar una **función** `func MergePilas[T any](pila1, pila2 Pila[T]) []T` que devuelva un array
