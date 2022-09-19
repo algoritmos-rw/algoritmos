@@ -82,8 +82,8 @@ $$n$$.
     Se debe definir la estructura del TDA, y las siguientes primitivas:
     ```
     CrearComposicion() ComposicionFunciones
-    AgregarFuncion(func (double) double)
-    Aplicar(double) double
+    AgregarFuncion(func (float64) float64)
+    Aplicar(float64) float64
     ```
     Considerar que primero se irán agregando las funciones como se leen, pero tener en cuenta el correcto orden
     de aplicación. Por ejemplo: para emular `f(g(x))`, se debe hacer:
