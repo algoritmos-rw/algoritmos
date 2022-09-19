@@ -170,7 +170,7 @@ $$n$$.
         intenta guardar una de tamaño 5, ésta debe guardarse dentro de la de tamaño 8.
         Si, luego, se intentara guardar una de tamaño 6, la operación debe fallar dado
         que no se puede guardar una mamushka de tamaño 6 dentro de una de tamaño 5.
-     - `ObtenerGuardada() *Mamushka`: Devuelve un puntero a la mamushka guardada. 
+     - `ObtenerGuardada() Mamushka`: Devuelve un puntero a la mamushka guardada. 
         `NULL` en caso de no tener ninguna guardada. En el ejemplo anterior, si utilizaremos esta primitiva
         con la Mamushka de tamaño 10, nos devolvería la Mamushka de tamaño 8 que guardamos (y que dentro
         tiene la de tamaño 5). 
