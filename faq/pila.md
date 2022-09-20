@@ -119,3 +119,12 @@ Entendemos que al ser esta la primera entrega en la que deben plantear el módul
 4. Escribir el código (si ya lo tienen porque llegaron a este apartado luego de tener fallas, simplemente pasarlo aquí).
 5. Hacer `go mod tidy`.
 
+## Ya tengo todo implementado, me corre localmente pero tengo error en las pruebas del corrector automático. 
+
+En primera instancia, recordar que si fallan las pruebas del corrector automática (es decir, las de la cátedra) implica que hay algún error en el código de ustedes. Lo primero a hacer sería leer qué prueba está fallando. Las pruebas intentan ser descriptivas en los mensajes, por lo que deberían ser capaces de crear una prueba local que reproduzca el error, para poder encontrar por qué falla. 
+
+#### Tengo un problema que dice que se espera un panic, que yo efectivamente hago!
+
+CUIDADO! si se fijan bien, es probable que se trate de un error casi imperceptible. Posiblemente ustedes hagan un panic con la palabra "vacía" (con tilde), en vez de "vacia" (sin tilde). Si bien lo más correcto sería hacerlo con tilde, decidimos hacerlo sin por cuestiones de no generar problemas de compatibilidad con otros sistemas. En cualquier caso, lo que vale es justamente lo que dice la interfaz, que si lo copian y pegan tal cual, no debería haber problemas. 
+
+
