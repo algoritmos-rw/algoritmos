@@ -239,7 +239,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     determinada posición $$p$$, y estrictamente decreciente a partir de ella (con $$0 \lt p \lt N - 1$$). Por ejemplo,
     en el arreglo `[1, 2, 3, 1, 0, -2]` la posición del pico es $$p = 2$$. Se pide:
     1. Implementar un algoritmo de división y conquista de orden $$\mathcal{O}(\log n)$$ que encuentre la posición
-    $$p$$ del pico: `size_t posicion_pico(int v[], size_t ini, size_t fin);`. La función será invocará inicialmente como:
+    $$p$$ del pico: `size_t posicion_pico(int v[], size_t ini, size_t fin);`. La función será invocada inicialmente como:
     `posicion_pico(v, 0, n-1)`, y tiene como pre-condición que el arreglo tenga forma de pico.
     1. Justificar el orden del algoritmo mediante el teorema maestro.
     {:.lower_alpha}
