@@ -90,9 +90,9 @@ func arregloEsMagico(arr []int, inicio int, fin int) {
         return true
     }
     if (arr[medio] < medio) {
-        return _arreglo_es_magico(arr, medio + 1, fin);
+        return arregloEsMagico(arr, medio + 1, fin);
     } else {
-        return _arreglo_es_magico(arr, inicio, medio - 1);
+        return arregloEsMagico(arr, inicio, medio - 1);
     }
 }
 ```
