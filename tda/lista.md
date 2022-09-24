@@ -8,11 +8,10 @@ trabajo: Lista
 Lista enlazada
 ==============
 
-Se incluye en [el sitio de descargas]({{site.skel}}) un ejemplo de uso de iteradores internos y externos.
-
-Estas son las primitivas de listas que tienen que implementar.
 
 En esta entrega les agregamos el requerimiento de escribir la documentación completa de las primitivas (`lista.go`), con sus correspondientes pre y post condiciones, para esto pueden usar de muestra los archivos de interfaces que ya utilizaron para la implementación de pilas y colas.
+
+Estas son las primitivas de listas que tienen que implementar.
 
 #### Primitivas de la lista
 ``` golang
