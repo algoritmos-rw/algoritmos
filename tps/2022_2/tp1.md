@@ -78,7 +78,7 @@ ERROR: Lectura de archivos
 ./rerepolez lista_candidatos.csv -->le falta el otro archivo
 ERROR: Faltan parámetros
 ./rerepolez lista_candidatos.csv padron.csv
-OK 
+<Se queda esperando por comandos>
 ```
 
 En caso de errores, el programa debe terminar su ejecución. 
