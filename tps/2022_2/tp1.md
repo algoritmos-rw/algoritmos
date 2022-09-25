@@ -47,7 +47,7 @@ estará compuesto del nombre del comando y sus parámetros, separados por espaci
 
 El programa debe ejecutarse de la siguiente forma:
 
-  ```$ ./polez-soft ARCHIVO_LISTA ARCHIVO_PADRON```
+  ```$ ./rerepolez ARCHIVO_LISTA ARCHIVO_PADRON```
 
 Donde: 
 
@@ -67,18 +67,17 @@ conveniencia.
 
 #### Salida
 
-- `OK`: si no se produjeron errores.
 - `ERROR: Faltan parámetros`: si faltó alguno de los parámetros
 - `ERROR: Lectura de archivos`: si hubo un error en la lectura de los archivos (o archivos inexistentes, o sin permisos)
 
 #### Ejemplo:
 
 ```
-./polez-soft lista_candidatos.csv padron-que-no-existe.csv
+./rerepolez lista_candidatos.csv padron-que-no-existe.csv
 ERROR: Lectura de archivos
-./polez-soft lista_candidatos.csv -->le falta el otro archivo
+./rerepolez lista_candidatos.csv -->le falta el otro archivo
 ERROR: Faltan parámetros
-./polez-soft lista_candidatos.csv padron.csv
+./rerepolez lista_candidatos.csv padron.csv
 OK 
 ```
 
@@ -123,7 +122,7 @@ ERROR: DNI fuera del padrón
 
 #### Formato
 
-```votar <NumeroLista> <TIPO-VOTO>```
+```votar <TIPO-VOTO> <NumeroLista>```
 
 #### Descripción
 
@@ -198,7 +197,9 @@ Intentente: Lista 5
 
 #### Formato 
 
-```deshacer```
+```
+deshacer
+```
 
 #### Descripción 
 
