@@ -5,7 +5,7 @@ math: true
 {% assign tp = site.data.trabajos.TP1 %}
 {% capture fecha %}{{tp.entrega | date: "%e/%m"}}{% endcapture %}
 
-# TP1: Manejo de archivos
+# TP1: Introducción a Diseño de una Solución y Manejo de archivos
 {:.no_toc}
 
 El trabajo práctico número 1 tiene fecha de entrega para el día **{{fecha}}**.
