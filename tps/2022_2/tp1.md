@@ -197,9 +197,7 @@ Intentente: Lista 5
 
 #### Formato 
 
-```
-deshacer
-```
+`deshacer`
 
 #### Descripción 
 
@@ -216,8 +214,7 @@ Ninguno.
 - `OK`: si no se produjo ningún error. 
 - `ERROR: Fila vacía`: si no hay nadie esperando votar
 - `ERROR: Votante FRAUDULENTO: <NRO DNI>`: si el DNI de la persona votando **ya emitió y finalizó su voto** (ver `fin-votar`). Nuevamente, se indica el número de DNI de quien incurre en el delito. 
-- `ERROR: Sin voto a deshacer` si no hay nada que deshacer (el votante actual aún no realizó votaciones, o todas sus 
-- votaciones fueron ya deshechas).
+- `ERROR: Sin voto a deshacer` si no hay nada que deshacer (el votante actual aún no realizó votaciones, o todas sus votaciones fueron ya deshechas).
 
 En caso de producirse el Error de votante fraudulento, se descarta el padrón de la fila. 
 En caso de los demás errores, simplemente se espera por otro ingreso que sea correcto. 
@@ -227,9 +224,7 @@ Es decir, se debe validar en tal orden.
 #### Ejemplo:
 
 Siguiendo con el ejemplo anterior: 
-```
-deshacer
-```
+`deshacer`
 
 El estado actual del voto del votante con DNI 30.000.000 será:
 ```
@@ -243,7 +238,7 @@ La operación que se deshizo fue la de haber votado para presidente a lista 2.
 
 #### Formato
 
-```fin-votar```
+`fin-votar`
 
 #### Descripción
 
