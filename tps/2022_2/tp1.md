@@ -9,7 +9,7 @@ math: true
 {:.no_toc}
 
 El trabajo práctico número 1 tiene fecha de entrega para el día **{{fecha}}**.
-El objetivo de este trabajo práctico es el desarrollo que implique la utilización de los TDAs antes impleentados,
+El objetivo de este trabajo práctico es el desarrollo que implique la utilización de los TDAs antes implementados,
 el diseño de nuevos TDAs necesarios para este desarrollo, y el uso de archivos y f flujo de entrada, salida y error. 
 
 
