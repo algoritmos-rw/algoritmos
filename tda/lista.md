@@ -40,7 +40,7 @@ func CrearListaEnlazada[T any]() Lista[T] {
 
 #### Primitiva del iterador interno
 
-Como está indicado entre las primtivas, se debe implementar el iterador interno cuya firma es:
+Como está indicado entre las primitivas, se debe implementar el iterador interno cuya firma es:
 
 ```golang
 Iterar(visitar func(T) bool)
