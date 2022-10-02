@@ -417,7 +417,7 @@ también la firma de las primitivas/métodos, y la estructura de sus respectivas
 implementación de las primitivas. Esta deberían completarla ustedes. El objetivo de esto es guiarlos a implementar un 
 buen diseño. Pueden modificar el diseño propuesto como a ustedes mejor les parezca. En futuros TPs no se les dará 
 diseño alguno, y esperaremos que diseñen correctamente, implementando los TDAs que les parezca correctos según la 
-necesidad.
+necesidad. El adjunto en [el sitio de descargas]({{site.skel}}) contiene las carpetas `diseno_alumnos.zip` y `pruebas.zip`.
 
 También se les otorgará un archivo con la definición de los errores antes mencionados (como errores de Go). En caso de
 haber alguna discrepancia entre el enunciado y dicho archivo (respecto a alguna mayúscula o lo que fuere), será válido
