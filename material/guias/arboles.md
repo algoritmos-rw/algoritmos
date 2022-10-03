@@ -18,7 +18,7 @@ función de comparación `strcmp`. Implementar una primitiva
 `func (abb *abb[K, V]) Mayores(cadena K) Lista[K]`
 que, dados un ABB y una clave, devuelva una
 lista ordenada con las claves del árbol estrictamente mayores a la
-recibida por parámetro (que no necesariamente está en el árbol). 
+recibida por parámetro (que no necesariamente está en el árbol). Implementar sin utilizar el iterador Interno del ABB. 
 
 Suponer que la estructura del TDA es:
 
@@ -33,8 +33,6 @@ type abb struct {
 _Aclaración_: se debe realizar la menor cantidad posible de comparaciones.
 
 ### Solución
-
-[REVISAR, ESTO SE VA A RESOLVER CON EL ITER INTERNO POR RANGOS]
 
 La aclaración hace mención a que utilicemos la propiedad de ABB: sabemos que los nodos
 a izquierda son menores al actual, y los que estén a derecha son mayores.
