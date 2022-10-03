@@ -82,37 +82,45 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     la implementación mediante cada recorrido:
 
     ```golang
-    func (arbol *Arbol) MultiplicarConHijosPre() {
+    func datoONeutro(ab *arbol[int]) int {
+        if ab == nil {
+            return 1
+        } else {
+            return ab.dato
+        }
+    }
+    
+    func MultiplicarConHijosPre(arbol *Arbol[int]) {
         if arbol == nil {
             return  
         } 
-        valor_izq := arbol.izq != nil ? arbol.izq.dato : 1;
-        valor_der := arbol.der != nil ? arbol.der.dato : 1;
-        arbol.dato *= valor_izq * valor_der;
-        arbol.izq.MultiplicarConHijosPre()
-        arbol.der.MultiplicarConHijosPre()
+        valor_izq := datoONeutro(arbol.izq)
+        valor_der := datoONeutro(arbol.der)
+        arbol.dato *= valor_izq * valor_der
+        MultiplicarConHijosPre(arbol.izq)
+        MultiplicarConHijosPre(arbol.der)
     }
 
-    func (arbol *Arbol) MultiplicarConHijosIn() {
+    func MultiplicarConHijosIn(arbol *Arbol[int]) {
         if arbol == nil {
             return  
         } 
-        arbol.izq.MultiplicarConHijosIn()
-        valor_izq := arbol.izq != nil ? arbol.izq.dato : 1;
-        valor_der := arbol.der != nil ? arbol.der.dato : 1;
-        arbol.dato *= valor_izq * valor_der;
-        arbol.der.MultiplicarConHijosIn()
+        MultiplicarConHijosIn(arbol.izq)
+        valor_izq := datoONeutro(arbol.izq)
+        valor_der := datoONeutro(arbol.der)
+        arbol.dato *= valor_izq * valor_der
+        MultiplicarConHijosIn(arbol.der)
     }
 
-    func (arbol *Arbol) MultiplicarConHijosPost() {
+    func MultiplicarConHijosPos(arbol *Arbol[int]) {
         if arbol == nil {
-            return  
+            return
         } 
-        arbol.izq.MultiplicarConHijosPost()
-        arbol.der.MultiplicarConHijosPost()
-        valor_izq := arbol.izq != nil ? arbol.izq.dato : 1;
-        valor_der := arbol.der != nil ? arbol.der.dato : 1;
-        arbol.dato *= valor_izq * valor_der;
+        MultiplicarConHijosPos(arbol.izq)
+        MultiplicarConHijosPos(arbol.der)
+        valor_izq := datoONeutro(arbol.izq)
+        valor_der := datoONeutro(arbol.der)
+        arbol.dato *= valor_izq * valor_der
     }
     ```
 
