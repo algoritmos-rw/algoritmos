@@ -447,7 +447,7 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
   - Cualquier otro código que fuera necesario. Aclaración: en caso de utilizar 
   código de TDAs implementados, y evitar tener que copiar y pegar dicho código
   dentro de la carpeta para que ejecute correctamente, se recomienda fuertemente
-  leer [el FAQ sobre enlaces simbólicos](faq/symlink.md).
+  leer [el FAQ sobre enlaces simbólicos](/algo2/faq/symlink).
 
   - un archivo _go.mod_ que permita compilar y ejecutar el módulo en cuestión. 
   El nombre del módulo debería ser _rerepolez_. 
