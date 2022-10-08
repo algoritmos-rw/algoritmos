@@ -408,6 +408,8 @@ Pre - Yennifer Woolite: 0 votos
 Votos Impugnados: 0 votos
 ```
 
+Notar que en todos los casos, si la cantidad de votos es 1, se debe emitir "1 voto", en singular. 
+
 ## Archivos provistos por el curso
 
 Como se menciona anteriormente, este trabajo práctico tiene como objetivo tanto la utilización de TDAs previamente 
