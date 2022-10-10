@@ -41,7 +41,7 @@ func convertirABytes[K comparable](clave K) []byte {
 	return []byte(fmt.Sprintf("%v", clave))
 }
 ```
-Para utilizar, se debe importar tanto el módulo `bytes` como `"encoding/gob"`, ambos de la librería estándar de Go. 
+Para utilizar, se debe importar `fmt`. 
 
 
 #### Primitivas del iterador
