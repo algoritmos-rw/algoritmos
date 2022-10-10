@@ -37,7 +37,7 @@ Nuevamente, el iterador interno (`Iterar`) debe iterar internamente el hash, apl
 Es de considerar que para implementar el hash será necesario definir una función de hashing internamente. Pueden definir la que más les guste (siempre poniendo referencia o nombre de la misma). Lamentablemente, no podemos trabajar de forma completamente genérica con una función de hashing directamente, por lo que deberemos realizar una transformación. 
 Si bien no es obligatorio pasar la clave a un arreglo de bytes (`[]byte`), es lo recomendado. Luego, la función de hashing puede siempre trabajar con la versión de arreglo de bytes correspondiente a la clave. El siguiente código (que pueden utilizar, modificar, o lo que gusten) transforma un tipo de dato genérico a un array de bytes:
 ```golang
-func ConvertirABytes[K comparable](clave K) []byte {
+func convertirABytes[K comparable](clave K) []byte {
 	return []byte(fmt.Sprintf("%v", clave))
 }
 ```
