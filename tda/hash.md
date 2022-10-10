@@ -38,10 +38,7 @@ Es de considerar que para implementar el hash será necesario definir una funci�
 Si bien no es obligatorio pasar la clave a un arreglo de bytes (`[]byte`), es lo recomendado. Luego, la función de hashing puede siempre trabajar con la versión de arreglo de bytes correspondiente a la clave. El siguiente código (que pueden utilizar, modificar, o lo que gusten) transforma un tipo de dato genérico a un array de bytes:
 ```golang
 func convertirABytes[K comparable](clave K) []byte {
-	var buf bytes.Buffer
-	enc := gob.NewEncoder(&buf)
-	enc.Encode(clave)
-	return buf.Bytes()
+	return []byte(fmt.Sprintf("%v", clave))
 }
 ```
 Para utilizar, se debe importar tanto el módulo `bytes` como `"encoding/gob"`, ambos de la librería estándar de Go. 
