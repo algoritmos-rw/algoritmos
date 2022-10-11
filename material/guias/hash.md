@@ -60,7 +60,7 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] {
     claves := CrearListaEnlazada[K]()
     for lista := range hash.tabla {
         lista.Iterar(func (par parClaveValor[K, V]) bool {
-            lista.InsertarUltimo(par.clave)
+            claves.InsertarUltimo(par.clave)
             return true
         })
     }
