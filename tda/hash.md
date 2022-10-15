@@ -27,7 +27,7 @@ Tanto `Borrar` como `Obtener` deben entrar en pánico con el mensaje `'La clave 
 
 Además, la primitiva de creación del Hash deberá ser: 
 ```golang
-func CrearHash[K comparable, V any]() Diccinario[K, V]
+func CrearHash[K comparable, V any]() Diccionario[K, V]
 ```
 
 Nuevamente, el iterador interno (`Iterar`) debe iterar internamente el hash, aplicando la función pasada por parámetro a la clave y los datos.
