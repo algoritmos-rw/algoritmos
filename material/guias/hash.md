@@ -154,7 +154,7 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerra
 1.  (★★) Implementar el TDA MultiConjunto. Este es un Conjunto que permite más de una aparición de un elemento,
     por lo que eliminando una aparición, el elemento puede seguir perteneciendo. Dicho TDA debe tener como
     primitivas:
-    * `CrearMulticonj[K](func(K) int)`: crea un multiconjunto.
+    * `CrearMulticonj[K]()`: crea un multiconjunto.
     * `Guardar(elem K)`: guarda un elemento en el multiconjunto. 
     * `Pertence(elem K) bool`: devuelve `true` si el elemento aparece al menos una vez en el conjunto.
     * `Borrar(elem K) bool`: elimina *una aparición* del elemento dentro del conjunto. Devuelve `true` 
