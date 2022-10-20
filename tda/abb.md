@@ -39,8 +39,8 @@ Por ejemplo, `strings.Compare` cumple con esta especificación (si las claves so
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}).
 
-**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**, así como también el
-**[el FAQ sobre enlaces simbólicos](faq/symlink.md)** para reutilizar el TDA Pila para el Iterador externo. 
+**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**, así como también 
+**[el FAQ sobre enlaces simbólicos](/algo2/faq/symlink)** para reutilizar el TDA Pila para el Iterador externo.
 
 ---
 ### Bibliografia recomendada
