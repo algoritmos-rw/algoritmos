@@ -30,8 +30,8 @@ func CrearABB[K comparable, V any](funcion_cmp func(K, K) int) DiccinarioOrdenad
 ```
 
 La función de comparación, recibe dos claves y devuelve:
-* Un entero menor que 0 si la primera cadena es menor que la segunda.
-* Un entero mayor que 0 si la primera cadena es mayor que la segunda.
+* Un entero menor que 0 si la primera clave es menor que la segunda.
+* Un entero mayor que 0 si la primera clave es mayor que la segunda.
 * 0 si ambas claves son iguales.
 
 Qué implica que una clave sea igual, mayor o menor que otra va a depender del usuario del TDA.
