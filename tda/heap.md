@@ -39,8 +39,8 @@ type ColaPrioridad[T comparable] interface {
 
 Además, las primitivas de creación del Heap deberán ser: 
 ```golang
-func CrearHeap[T comparable](funcion_cmp func(T, T) int) ColaPrioridad[K, V]
-func CrearHeapArr[T comparable](arreglo []T, funcion_cmp func(T, T) int) ColaPrioridad[K, V]
+func CrearHeap[T comparable](funcion_cmp func(T, T) int) ColaPrioridad[T]
+func CrearHeapArr[T comparable](arreglo []T, funcion_cmp func(T, T) int) ColaPrioridad[T]
 ```
 
 La función de comparación funciona tal cual el caso del ABB. La segunda primitiva de creación debe ejecutar en tiempo lineal, permitiendo crear el heap con los elementos pasados por parámetro. 
