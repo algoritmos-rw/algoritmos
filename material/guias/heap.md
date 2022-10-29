@@ -50,7 +50,7 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
 1.	(★) Implementar una primitiva para el heap (de máximos) que obtenga los 3 elementos más grandes del heap en
     $$\mathcal{O}(1)$$.
 
-1.  (★★) Si en el ejercicio anterior vez de quererse los 3 elementos más grandes se quisieran los _K_ elementos
+1.  (★★) Si en el ejercicio anterior en vez de quererse los 3 elementos más grandes, se quisieran los _K_ elementos
     más grandes ¿cómo se debería proceder? ¿Cuál terminaría siendo la complejidad del algoritmo?
 
 1.	(★★) En un heap de máximos ¿cuáles son las posibles posiciones del arreglo
