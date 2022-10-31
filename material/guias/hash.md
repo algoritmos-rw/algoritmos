@@ -46,7 +46,7 @@ Es importante notar que en este ejercicio se está evaluando que sabemos trabaja
 
 * Sabemos cuáles son los campos de la estructura.
 
-* Sabemos que la tabla es de tipo `[]campo[K, V]` o bien `[]celda[K, V]`, y no `[]*celda[K, V[`, puesto que es completamente innecesario otro grado de indirección (como se analiza en la respectiva clase práctica).
+* Sabemos que la tabla es de tipo `[]campo[K, V]` o bien `[]celda[K, V]`, y no `[]*celda[K, V]`, puesto que es completamente innecesario otro grado de indirección (como se analiza en la respectiva clase práctica).
 
 * Entendemos que el estado correcto a considerar es el de `OCUPADO`, que es un enumerativo. Cuanto mucho, una constante. Definitivamente no un `"ocupado"`.
 
