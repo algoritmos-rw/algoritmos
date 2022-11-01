@@ -282,8 +282,8 @@ necesario que el programa sea muy eficiente. Se impusieron las siguientes restri
 * Publicar Post: debe funcionar en $$\mathcal{O}(u \log(p))$$, siendo $$u$$ la cantidad de usuarios y $$p$$ la cantidad 
   de posts que se hayan creado hasta ese momento. 
 * Ver próximo post en el feed: debe funcionar en $$\mathcal{O}(\log(p))$$.
-* Likear un post: debe funcionar en $$\mathcal{O}(\log u)$$.
-* Mostrar likes: debe funcionar en $$\mathcal{O}(u)$$.
+* Likear un post: debe funcionar en $$\mathcal{O}(\log u_p)$$, siendo $$u_p$$ la cantidad de posts del post en cuestión. Potencialmente $$u_p$$ podría valer lo mismo que $$u$$.
+* Mostrar likes: debe funcionar en $$\mathcal{O}(u_p)$$.
 
 ### Código del programa
 
