@@ -113,7 +113,7 @@ a que la agencia de viajes decidió hacer este negocio casi en el comienzo del c
 de transporte estaban habilitados a la hora de buscar los datos, por lo que se obtuvo lo mejor a nuestra
 disposición. En [el sitio de descargas]({{site.skel}}) pueden encontrar un archivo completo con las sedes de este caso particular. 
 
-Las pruebas del curso considerarán el mapa de este presente mundial de Esquí, el mapa [del último mundial de tejo de playa](/algo2/tps/2018_1/tp3), así como un mapa generado al azar para un escenario de volumen. 
+Las pruebas del curso considerarán el mapa de este presente mundial de Esquí, el mapa [del último mundial de tejo de playa (Rusia 2018)](/algo2/tps/2018_1/tp3), así como un mapa generado al azar para un escenario de volumen. 
 
 ### Comandos
 
@@ -169,6 +169,25 @@ parámetro al invocarse el programa. Se incluye, entre los archivos disponibles 
 ### Archivos KML
 
 Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/apuntes/kml).
+
+## Entrega
+
+Adicionalmente a los archivos propios del trabajo práctico debe agregarse un archivo `entrega.mk` que contenga la regla `vamosmoshi` para generar el ejecutable de dicho programa (sea compilando o los comandos que fueren necesarios). Por ejemplo, teniendo un TP elaborado en Python, podría ser:
+
+``` makefile
+vamosmoshi:
+    cp vamosmoshi.py vamosmoshi
+    chmod +x vamosmoshi
+```
+
+**Importante**: En caso de recibir un error `FileNotFoundError: [Errno 2] No such file or directory: './vamosmoshi': './vamosmoshi'`, tener en cuenta que para el caso de enviar código escrito en Python es necesario además indicar la ruta del intérprete. Esto puede hacerse agregando como primera línea del archivo principal (en el ejemplo, sería `netstats.py`) la línea: `#!/usr/bin/python3`.
+
+Si el Tp fuera realizado en Go, un posible ejemplo del archivo podría ser:
+
+``` makefile
+vamosmoshi:
+    cd mi_implementacion_tp3; go build -o ../vamosmoshi
+```
 
 ## Criterios de aprobación
 
