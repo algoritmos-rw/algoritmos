@@ -23,7 +23,7 @@ Contenido
 
 ## Introducción
 
-En medio del revuelo producido por la inminente **Copa Mundial de Tejo de Esquí** que está por comenzar
+En medio del revuelo producido por la inminente **Copa Mundial de Esquí** que está por comenzar
 en Qatar, una reconocida agencia de viajes tiene dos preocupaciones:
 
 1. ¿Cómo deberá ser la vestimenta oficial de los participantes?
