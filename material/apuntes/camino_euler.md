@@ -39,5 +39,5 @@ Este algoritmo también permite obtener ciclos de Euler, pero no conviene utiliz
 Una arista es puente, si en caso de no existir el grafo deja de ser conexo. El algoritmo se basa en no utilizar los puentes hasta que sea necesario. 
 
 El problema de este algoritmo radica en que para cada punto del recorrido tengo que determinar si una arista no utilizada es puente (si considero a las ya utilizadas como eliminadas). Esto se realiza eliminando la arista en cuestión y haciendo un simple recorrido para ver si el grafo sigue siendo conexo. Si es conexo, la arista no es puente, y podemos utilizar esta arista. Pero aquí vamos a chequear potencialmente por cada arista si la misma es puente, haciédose un recorrido por cada arista, terminando en un algoritmo cuadrático. 
-Hay habido mejoras en el algoritmo para que tenga complejidad $$\mathcal{O}(E \log E \log \log E)$$, pero sigue siendo peor que el algoritmo de Hierholzer.
+Han habido mejoras en el algoritmo para que tenga complejidad $$\mathcal{O}(E \log E \log \log E)$$, pero sigue siendo peor que el algoritmo de Hierholzer, cuando este se puede utilizar.
 
