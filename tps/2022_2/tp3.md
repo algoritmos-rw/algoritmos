@@ -39,17 +39,20 @@ Conoceremos a distintos personajes que nos ayudarán a entender qué nos puede l
 a su madre". Quiere seguir a la selección de su país por todas las sedes a las que vaya. No le interesa
 conocer nada más, salvo lo que sea estrictamente necesario para hacer un camino más corto, porque no
 quiere perder ni un segundo de poder estar cerca del equipo.
-* Roberto: dado que no confía en que la selección tenga buenos resultados en el mundial desde que tuvo que
-jugarse la clasificación con el seleccionado de República Dominicana, cree que lo mejor
-es aprovechar el viaje para conocer el lugar.  Si bien su principal objetivo es ver partidos de la selección,
+* Claudia: cree que Paulo de Rodrick sólo va al mundial por ser amigo de Moshi. 
+Pero cuando empiecen las carreras, lo único que importa es que todos tiren para el mismo lado
+(que bueno... es el único lado al que se pueden tirar). A ella además le interesa
+conocer todas las sedes del mundial. Y no sólo eso, también le interesa recorrer **cada ruta** que conecte cada par de ciudades. 
+No le importa volver varias veces a la misma ciudad pero, como es aficionada a la fotografía, decidió sacarle fotos a cada ruta 
+que haya (además de a las ciudades). No le importa cuánto le tome. Total, ¿cuándo en su vida va a volver a viajar a Qatar?
+* Adam: No confía en que su selección tenga buenos resultados en el mundial desde que tuvo que
+jugarse la clasificación con el seleccionado de Suecia, y menos aún porque en el sorteo le salió que su selección
+debe jugar contra la de Moshi. Sin muchas esperanzas, cree que lo mejor
+es aprovechar el viaje para conocer el lugar. Si bien su principal objetivo es ver partidos de su selección,
 también tiene una particular afición por la historia, y más si se trata de la de Qatar. Por eso, quiere
 aprovechar y visitar varias ciudades, pero no quiere hacerlo en cualquier orden. Quiere conocer ciertas
 ciudades antes que otras, porque eso le ayudará a entender mejor los tours y visitas a museos, según un
 artículo que vio en Trip Advisor.
-* Claudia: cree que Paulo de Rodrick sólo va al mundial por ser amigo de Moshi. 
-Pero cuando empiecen las carreras, lo único que importa es que todos tiren para el mismo lado
-(que bueno... es el único lado al que se pueden tirar). A ella además le interesa
-conocer todas las sedes del mundial. Y no sólo eso, también le interesa recorrer **cada ruta** que conecte cada par de ciudades. No le importa volver varias veces a la misma ciudad, pero como es aficionada a la fotografía, decidió sacarle fotos a cada ruta que haya (además de a las ciudades). No le importa cuánto le tome. Total, ¿cuándo en su vida va a volver a viajar a Qatar?
 * Lorena: no le gusta mucho andar por lugares desconocidos, por lo que prefiere conocer la menor cantidad
 de rutas posibles que la conecten a todas las sedes, pero que al mismo tiempo impliquen el menor costo
 posible. No le molesta recorrer varias veces la misma ruta, si fuera necesario.
@@ -65,7 +68,7 @@ El programa debe permitir:
 1. Obtener el camino mínimo desde y hacia distintas sedes del mundial (Sergio dijo que compraría pasajes para
 toda la familia, inclusive para su mamá). También, exportar algún tipo de archivo que permita visualizar
 el recorrido a hacer.
-1. Obtener un itinerario de viaje para optimizar la experiencia del mismo (como quiere Roberto), donde no nosimporte la distancia entre sedes.
+1. Obtener un itinerario de viaje para optimizar la experiencia del mismo (como quiere Adam), donde no nos importe la distancia entre sedes.
 1. Obtener un recorrido que recorra todas las rutas entre sedes, exactamente una vez. No utilizar más de una vez la misma ruta, para brindarle el mejor servicio a Claudia. Debido a que la mayoría de los clientes van a querer luego volverse a sus casas desde el lugar de inicio, este recorrido debe terminar donde comenzó.
 1. Obtener un Árbol de Tendido Mínimo para calcular la ruta deseada para Lorena.
 
@@ -74,7 +77,7 @@ el recorrido a hacer.
 El tercer punto hace referencia al problema que originó la existencia de los grafos: [el Camino de Euler, o camino de Königsberg](https://en.wikipedia.org/wiki/Eulerian_path). Literalmente se trata de un camino que recorre todas las aristas de un grafo exactamente una vez.
 En el problema planteado es necesario terminar y comenzar en el mismo lugar, por lo que buscaremos un ciclo de Euler. 
 
-Para resolver esto en tiempo lineal, vamos a implementar el algoritmo de Hierholzer, que [explicamos aquí](/algo2/material/apuntes/camino_euler). 
+Para resolver esto en tiempo lineal, vamos a implementar el algoritmo de Hierholzer, que [explicamos aquí](/algo2/material/apuntes/camino_euler). En caso que no exista un ciclo Euleriano, no se puede cumplir con lo pedido en la consigna (ver más abajo el error que debe mostrarse en ese caso). 
 
 
 ## Implementación
@@ -109,6 +112,8 @@ Es necesario tener en cuenta que los tiempos encontrados corresponden a distinto
 a que la agencia de viajes decidió hacer este negocio casi en el comienzo del certamen, no todos los medios
 de transporte estaban habilitados a la hora de buscar los datos, por lo que se obtuvo lo mejor a nuestra
 disposición. En [el sitio de descargas]({{site.skel}}) pueden encontrar un archivo completo con las sedes de este caso particular. 
+
+Las pruebas del curso considerarán el mapa de este presente mundial de Esquí, el mapa [del último mundial de tejo de playa](/algo2/tps/2018_1/tp3), así como un mapa generado al azar para un escenario de volumen. 
 
 ### Comandos
 
