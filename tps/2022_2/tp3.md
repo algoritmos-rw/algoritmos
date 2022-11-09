@@ -100,7 +100,7 @@ El archivo contará con el siguiente formato (formato Pajek):
 ```
 # Cantidad de ciudades (n)
 Ciudad1,lat1,long1
-Ciudad1,lat1,long1
+Ciudad2,lat2,long2
 ...
 Ciudad_n,lat_n,long_n
 # Cantidad de conexiones
@@ -180,9 +180,9 @@ vamosmoshi:
     chmod +x vamosmoshi
 ```
 
-**Importante**: En caso de recibir un error `FileNotFoundError: [Errno 2] No such file or directory: './vamosmoshi': './vamosmoshi'`, tener en cuenta que para el caso de enviar código escrito en Python es necesario además indicar la ruta del intérprete. Esto puede hacerse agregando como primera línea del archivo principal (en el ejemplo, sería `netstats.py`) la línea: `#!/usr/bin/python3`.
+**Importante**: En caso de recibir un error `FileNotFoundError: [Errno 2] No such file or directory: './vamosmoshi': './vamosmoshi'`, tener en cuenta que para el caso de enviar código escrito en Python es necesario además indicar la ruta del intérprete. Esto puede hacerse agregando como primera línea del archivo principal (en el ejemplo, sería `vamosmoshi.py`) la línea: `#!/usr/bin/python3`.
 
-Si el Tp fuera realizado en Go, un posible ejemplo del archivo podría ser:
+Si el TP fuera realizado en Go, un posible ejemplo del archivo podría ser:
 
 ``` makefile
 vamosmoshi:
