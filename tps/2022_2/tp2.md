@@ -39,7 +39,7 @@ les garantiza que no habrán nombres duplicados dentro del sistema.
 
 ### Datos disponibles
 
-Se deja en el [sitio de descargas]({{site.skel}}) un archivo con casos de prueba que pueden utilizar tanto de archivos de entrada, como 
+Se deja en [el sitio de descargas]({{site.skel}}) un archivo con casos de prueba que pueden utilizar tanto de archivos de entrada, como 
 de comandos a ser ejecutados y pruebas automatizadas, además de los restantes archivos que se mencionan de aquí en 
 adelante.
 

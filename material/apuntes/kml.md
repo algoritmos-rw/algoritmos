@@ -4,9 +4,13 @@ Los archivos KML son archivos de texto plano utilizados por aplicaciones como Go
 
 La referencia completa de esta sintaxis está disponible en [Internet](https://developers.google.com/kml/documentation/?hl=en). Sin embargo, aquí se definen un subconjunto mínimo de instrucciones para generar archivos KML con la información necesaria para visualizar las rutas.
 
-Para visualizar estos archivos generados se puede usar [Google Maps](https://support.google.com/mymaps/answer/3024836?hl=en) o alguna aplicación externa que no requiere haber iniciado sesión con una cuenta de Google (por ejemplo [display-kml.appspot.com](http://display-kml.appspot.com)).
+Para visualizar estos archivos generados se puede usar [Google Maps](https://support.google.com/mymaps/answer/3024836?hl=en) o alguna aplicación externa que no requiere haber iniciado sesión con una cuenta de Google).
 
-Se incluye junto a este apunte [un archivo KML de ejemplo](https://drive.google.com/file/d/1Q688kilDIoubp4lQH7Se9YWigbYcyxW3/view?usp=sharing).
+Se incluye junto a este apunte [un archivo KML de ejemplo](https://drive.google.com/file/d/1Q688kilDIoubp4lQH7Se9YWigbYcyxW3/view?usp=sharing). Dicho ejemplo, luego de importarse siguiendo los pasos explicados en el artículo linkeado antes, da como resultado el siguiente mapa: 
+
+<div>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1qRs9FTzW1QmHd-64ou9aK8ymtPn4B-A&ehbc=2E312F" width="640" height="480"></iframe>
+</div>
 
 ## Encabezado XML
 
@@ -71,6 +75,4 @@ Se indica el fin del archivo.
         </Document>
     </kml>
 ```
-
-Se puede ver [un ejemplo de visualización de este archivo de ejemplo aquí](https://www.doogal.co.uk/KmlViewer.php?url=https://www.doogal.co.uk/UploadedKml/01f198d7-2ddc-4b07-8a73-eb84f3bb2c97.kml).
 
