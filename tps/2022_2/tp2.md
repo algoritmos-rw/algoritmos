@@ -273,7 +273,7 @@ No deben modificar los TDAs ya implementados hasta ahora.
 
 ### Complejidad de los comandos
 
-Estudios de mercado han determinado que es muy probable que hayan muchos usuarios utilizando la red social social en 
+Estudios de mercado han determinado que es muy probable que hayan muchos usuarios utilizando la red social en 
 muy poco tiempo ([fuente del estudio](https://imgsnotigram.s3.amazonaws.com/uploads/2020/05/arial.jpg)). Por esto, es 
 necesario que el programa sea muy eficiente. Se impusieron las siguientes restricciones para los comandos: 
 
