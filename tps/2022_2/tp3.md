@@ -90,7 +90,7 @@ El trabajo consiste de tres partes:
 * La interfaz del programa `vamosmoshi` que utilice tanto el TDA como la biblioteca para poder implementar todo
 lo requerido.
 
-Es importante notar que el TDA Grafo debe ser agnótico al TP completamente, la biblioteca de funciones debe implementar las funcionalidades específicas del TP, pero no deben hacer referencia a este (es decir, si quisiéramos utilizar dicha funcionalidad para otro TP, deberíamos poder). La interaz, en cambio, estaría completamente acoplada al TP. 
+Es importante notar que el TDA Grafo debe ser agnóstico al TP completamente, la biblioteca de funciones debe implementar las funcionalidades específicas del TP, pero no deben hacer referencia a este (es decir, si quisiéramos utilizar dicha funcionalidad para otro TP, deberíamos poder). La interfaz, en cambio, estaría completamente acoplada al TP. 
 
 El programa a realizar debe recibir por parámetro y cargar en memoria el set de datos (`$ ./vamosmoshi
 ciudades.pj`) y luego solicitar el ingreso de comandos por entrada estándar, del estilo
