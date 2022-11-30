@@ -138,8 +138,8 @@ Los comandos a implementar serán:
 	Donde indica que la `ciudad_1` debe visitarse antes que la `ciudad_2`.
 	Notar que todas las ciudades a tener en cuenta son
 	las del mapa original, pero podría tranquilamente suceder que alguna ciudad no aparezca en el archivo
-	`recomendaciones.csv `, e igualmente es necesario visitarla. 
-	Luego de cargar el archivo, se deberá devolver un orden válido para ir a las ciudades. No es necesario poner los caminos mínimos para luego ir desde cada par de puntos. Para eso se puede utilizar el comando anterior posteriormente. En caso que no se puedo resolver el problema con las restricciones dadas, imprimir `No se encontro recorrido`.
+	`recomendaciones.csv`, e igualmente es necesario visitarla. 
+	Luego de cargar el archivo, se deberá devolver un orden válido para ir a las ciudades. No es necesario poner los caminos mínimos para luego ir desde cada par de puntos. Para eso se puede utilizar el comando anterior posteriormente. En caso que no se pueda resolver el problema con las restricciones dadas, imprimir `No se encontro recorrido`.
 	Dejamos un ejemplo de un posible archivo de recomendaciones entre los archivos disponibles a descargar. En este caso, una posible salida será:
 	```
 	Al Ruwais -> Fuwayrit -> Al Wakrah -> Doha -> Dukhan -> Mesaleed -> Zekreet -> Rayan -> Uum Bab -> Jor
