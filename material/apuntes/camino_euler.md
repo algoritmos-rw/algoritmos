@@ -12,7 +12,7 @@ Curioso es, que el problema que originó todo esto (Los 7 puentes de Köningberg
 
 ## Resolución
 
-Lo primero a hacer es determinar si el grafo tiene o no un ciclo o camino Euleriano. Esto es simplemente chequeando si es conexo (en caso de necesitar validarlo) y si tiene 0 o 2 vértices de grado impar (por teorema, en un grafo no dirigido, la cantidad de vértices de grafo impar, es par). Si tiene más, no tiene ninguna de estas dos opciones. 
+Lo primero a hacer es determinar si el grafo tiene o no un ciclo o camino Euleriano. Esto es simplemente chequeando si es conexo (en caso de necesitar validarlo) y si tiene 0 o 2 vértices de grado impar (por teorema, en un grafo no dirigido, la cantidad de vértices de grado impar, es par). Si tiene más, no tiene ninguna de estas dos opciones. 
 
 Si tiene 0, presenta un ciclo Euleriano. Si tiene 2, presenta un camino Euleriano. 
 
