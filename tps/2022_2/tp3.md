@@ -160,7 +160,7 @@ visitar para ver todas las rutas una vez y volver al origen. Además guardará u
 	Los resultados podrían ser otros, pero siempre tienen que aparecer la totalidad de aristas (y, por lo tanto, el tiempo total siempre debería ser el mismo)
 
 * `reducir_caminos destino.pj`: nos crea un archivo pajek (formáto idéntico al archivo de ciudades
-inicial, pero únicamente con los caminos estrictamente necesarios. Al finalizar, debe imprimir por salida
+inicial, pero únicamente con los caminos estrictamente necesarios). Al finalizar, debe imprimir por salida
 estándar la suma de los pesos de las aristas del árbol, en formato `"Peso total: ..."`. Para el archivo de ejemplo, el peso del árbol de tendido mínimo debe ser 26.
 
 Como se indica antes, para los comandos `ir` y `viaje`, será necesario además exportar un archivo KML a la ruta indicada por
