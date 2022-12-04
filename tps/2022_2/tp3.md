@@ -176,8 +176,8 @@ Adicionalmente a los archivos propios del trabajo práctico debe agregarse un ar
 
 ``` makefile
 vamosmoshi:
-    cp vamosmoshi.py vamosmoshi
-    chmod +x vamosmoshi
+	cp vamosmoshi.py vamosmoshi
+	chmod +x vamosmoshi
 ```
 
 **Importante**: En caso de recibir un error `FileNotFoundError: [Errno 2] No such file or directory: './vamosmoshi': './vamosmoshi'`, tener en cuenta que para el caso de enviar código escrito en Python es necesario además indicar la ruta del intérprete. Esto puede hacerse agregando como primera línea del archivo principal (en el ejemplo, sería `vamosmoshi.py`) la línea: `#!/usr/bin/python3`.
