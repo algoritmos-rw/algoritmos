@@ -23,45 +23,7 @@ Antes que nada, debemos entender que el ejercicio en sí es el mismo, se trate d
 Para resolver este problema, podemos pensar en simplemente recorrer el grafo no dirigido, sea con un recorrido _BFS_ o _DFS_. Una vez que nos topemos con un vértice ya visitado, ahí tenemos un posible ciclo. Esto es, si estoy viendo los adyacentes a un vértice dado, y dicho vértice está visitado, uno se apresuraría a decir que ahí se cierra un ciclo. Esto es cierto, salvo un caso: que dicho vértice visitado sea el antecesor a nuestro vértice en el recorrido (BFS o DFS). Recordar que se trata de un grafo no dirigido, por ende si _v_ tiene de adyacente a _w_, entonces también vale la recíproca, y no por ello se crea un ciclo. El problema se da con la arista de la que vengo. Básicamente, deberíamos obviar al vértice del que vengo en el recorrido, que justamente es el padre. Si nosotros ya tenemos que `padre[W] = V`, entonces simplemente tenemos que saltearnos a V cuando veamos a los adyacentes ya visitados.
 
 
-Lo resolvemos con ambos recorridos. Por _BFS_:
-
-``` python
-def obtener_ciclo_bfs(grafo):
-  visitados = {}
-  for v in grafo:
-    if v not in visitados:
-      ciclo = bfs_ciclo(grafo, v, visitados)
-      if ciclo is not None:
-        return ciclo
-  return None
-
-def bfs_ciclo(grafo, v, visitados):
-  q = Cola()
-  q.encolar(v)
-  visitados[v] = True
-  padre = {}  # Para poder reconstruir el ciclo
-  padre[v] = None
-
-  while not q.esta_vacia():
-    v = q.desencolar()
-    for w in grafo.adyacentes(v):
-      if w in visitados:
-        # Si w fue visitado y es padre de v, entonces es la arista
-        # de donde vengo (no es ciclo).
-        # Si no es su padre, esta arista (v, w) cierra un ciclo que
-        # empieza en w.
-        if w != padre[v]:
-          return reconstruir_ciclo(padre, w, v)
-      else:
-        q.encolar(w)
-        visitados[v] = True
-        padre[w] = v
-
-  # Si llegamos hasta acá es porque no encontramos ningún ciclo.
-  return None
-```
-
-La solución por _DFS_ sería:
+Lo resolvemos con ambos recorridos. Por _DFS_:
 
 ``` python
 def obtener_ciclo_dfs(grafo):
@@ -92,11 +54,7 @@ def dfs_ciclo(grafo, v, visitados, padre):
 
   # Si llegamos hasta acá es porque no encontramos ningún ciclo.
   return None
-```
 
-Ambas técnicas usan la función para reconstruir el ciclo:
-
-```python
 def reconstruir_ciclo(padre, inicio, fin):
   v = fin
   camino = []
@@ -105,6 +63,65 @@ def reconstruir_ciclo(padre, inicio, fin):
     v = padre[v]
   camino.append(inicio)
   return camino.invertir()
+```
+
+Por _BFS_, la solución sería similar, pero tenemos que tener noción de la distancia/orden. Esto es porque podríamos terminar sin encontrar un ciclo correctamente. Por ejemplo, si tenemos un grafo con 4 vértices en forma de cuadrado (aristas `A-B`, `B-C`, `C-D`, `D-A`), y empezamos a hacer el recorrido desde `A`, eventualmente en el _BFS_ vamos a encontrar el ciclo (ej, al ver desde `C` para ir a `D`), pero al reconstruir el camino probablemente falle. Es necesario modificar el algoritmo para reconstruir el camino: 
+
+
+``` python
+def obtener_ciclo_bfs(grafo):
+  visitados = {}
+  for v in grafo:
+    if v not in visitados:
+      ciclo = bfs_ciclo(grafo, v, visitados)
+      if ciclo is not None:
+        return ciclo
+  return None
+
+def bfs_ciclo(grafo, v, visitados):
+  q = Cola()
+  q.encolar(v)
+  visitados[v] = True
+  padre = {}  # Para poder reconstruir el ciclo
+  orden = {}
+  padre[v] = None
+  orden[v] = 0
+
+  while not q.esta_vacia():
+    v = q.desencolar()
+    for w in grafo.adyacentes(v):
+      if w in visitados:
+        # Si w fue visitado y es padre de v, entonces es la arista
+        # de donde vengo (no es ciclo).
+        # Si no es su padre, esta arista (v, w) cierra un ciclo que
+        # empieza en w.
+        if w != padre[v]:
+          return reconstruir_ciclo(padre, orden, w, v)
+      else:
+        q.encolar(w)
+        visitados[v] = True
+        padre[w] = v
+        orden[w] = orden[v] + 1
+
+  # Si llegamos hasta acá es porque no encontramos ningún ciclo.
+  return None
+  
+def reconstruir_camino(padre, orden, v1, v2):
+    ciclo = []
+    if orden[v1] != orden[v2]: # no puede haber más que 1 de diferencia
+        if orden[v1] > orden[v2]:
+             ciclo.append(v1)
+             v1 = padre[v1]
+        else:
+             ciclo.append(v2)
+             v2 = padre[v2]
+    while v1 != v2:
+        ciclo.append(v1)
+        ciclo.append(v2)
+        v1 = padre[v1]
+        v2 = padre[v2]
+    ciclo.append(v1)
+    return ciclo
 ```
 
 Ahora bien, para ver el orden, podemos ver que en el caso feliz, vamos a encontrar un ciclo muy rapido. Pero claramente eso no nos cambia mucho. Pensemos el caso de, a lo sumo, encontrar el ciclo muy tarde en el recorrido (también veremos el caso de no haber ciclo). En ese caso, en cualquiera de los dos recorridos vamos a pasar por cada vértice una vez, y solo una vez (a fin de cuentas, no volvemos a estar sobre un vértice ya visitado). Por cada vértice vemos _sus_ aristas. Recordar que es muy importante no caer en la tentación de decir que entonces el algoritmo es $$\mathcal{O}(V \times E)$$, porque si bien es cierto, es una muy mala cota. Por cada vértice pasamos por _sus_ aristas, que distan de ser las totales del grafo. Si por cada vértice vemos sus aristas (y no las de todo el grafo), en total estamos viendo todas las aristas del grafo, dos veces (una por cada extremo). Entonces, el orden será $$\mathcal{O}(V + 2 E) = \mathcal{O}(V + E)$$. Todo esto, considerando que la implementación es con listas de adyacencias (implementadas con diccionarios, o bien
