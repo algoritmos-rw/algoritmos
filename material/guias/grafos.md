@@ -298,3 +298,7 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
     Implementar un algoritmo que reciba un grafo de dichas características y devuelva una lista de 
     todas las especies que cumplan lo antes mencionado. Indicar y justificar la complejidad del 
     algoritmo implementado. 
+
+1. (★★★) Implementar una función que reciba un grafo no dirigido y determine si el mismo
+   *no tiene* ciclos de una cantidad impar de vértices. Indicar y justificar la
+   complejidad de la función. 

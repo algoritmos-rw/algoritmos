@@ -176,10 +176,17 @@ def caminos_minimos(grafo, origen)
     c. Si un grafo es no pesado, ¿Se puede utilizar el Algoritmo de Dijkstra para obtener los caminos mínimos
     en dicho grafo?
 
-1.  (★★★) Realizar un seguimiento de aplicar el Algoritmo de Ford-Fulkerson para obtener el Flujo máximo a
-    través de la red definida por el siguiente grafo.
+1.  (★★★★) Se cuenta con un grafo en el que sus aristas tiene peso 1 o 2, únicamente. 
+    Implementar un algoritmo que permita obtener el camino mínimo de un vértice hacia 
+    todos los demás, en tiempo $$\mathcal{O}(V + E)$$.
 
-    ![grafo flujo](../../assets/img/material/ff.png){:width="70%"}
+
+1.  (★★★★★) Implementar un algoritmo que, dado un grafo dirigido, un vértice $$s$$ y otro $$t$$ determine la cantidad
+    mínima de aristas que deberían cambiar de sentido en el grafo para que exista un camino de $$s$$ a $$t$$.
+    
+
+**Los Siguiente ejercicios son del tema Backtracking. Si durante el actual cuatrimestre no se da dicho tema, obviar los ejercicios.**
+
 
 1.  (★★★) Implementar por **backtracking** un algoritmo que, dado un grafo no dirigido y un número
     $$n \lt \left|\mathcal{V} \right|$$, nos permita obtener un subconjunto de $$n$$ vértices tal que ningún par de dichos
@@ -194,16 +201,3 @@ def caminos_minimos(grafo, origen)
     es la ruta más corta posible que visita cada ciudad exactamente una vez y al finalizar regresa a la ciudad de
     origen?
 
-1.  (★★★) Implementar un algoritmo que reciba un grafo, un vértice $$v$$ y otro $$w$$ y, utilizando **backtracking**,
-    obtenga **todos** los caminos simples de $$v$$ a $$w$$ en el grafo.
-
-1.  (★★★★) Se cuenta con un grafo en el que sus aristas tiene peso 1 o 2, únicamente. Implementar un algoritmo
-    que permita obtener el camino mínimo de un vértice hacia todos los demás, en tiempo $$\mathcal{O}(V + E)$$.
-
-1.  (★★★★★) Implementar un algoritmo que, dado un grafo dirigido, un vértice $$s$$ y otro $$t$$ determine la cantidad
-    mínima de aristas que deberían cambiar de sentido en el grafo para que exista un camino de $$s$$ a $$t$$.
-
-1.  (★★★★★) Supongamos que tenemos un sistema de una facultad en el que cada alumno puede pedir hasta 10 libros de
-    la biblioteca.
-    La biblioteca tiene 3 copias de cada libro. Cada alumno desea pedir libros diferentes. Implementar un algoritmo que
-    nos permita obtener la forma de asignar libros a alumnos de tal forma que la cantidad de préstamos sea máxima.

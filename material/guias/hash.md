@@ -195,53 +195,43 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerra
     `strcmp`). Explicar cómo mejora o empeora respecto a la versión que vemos en clase para el caso de 
     inserciones, borrados, búsquedas con éxito (el elemento se encuentra en el hash) y sin éxito (no se encuentra).
 
-1.  (★★★) Hacer un seguimiento e indicar cómo queda un hash que aplica hashing perfecto (con Hash & Displace)
-    con las siguientes claves (los valores de las funciones de hashing se encuentran a continuación de las claves).
+
+1.  (★★) En un diccionario todas las claves tienen que ser diferentes, no así sus valores.
+    Escribir en Go una primitiva para el hash cerrado `func (dicc *hashCerrado[K, V]) CantidadValoresDistintos() int` que, 
+    sin usar el iterador interno, dado un hash devuelva la cantidad de **valores** diferentes que almacena. Se puede suponer que el tipo `V` (el genérico de los valores) en este caso también es `comparable`, como
+    lo son las claves. Indicar y justificar el orden del algoritmo.
+
+
+1.  (★★★) La diferencia simétrica entre dos conjuntos A y B es un conjunto que
+    contiene todos los elementos que se encuentran en A y no en B, y
+    viceversa.
+
+    Implementar una _función_ 
+    `DiferenciaSimetricaDict[K comparable, V any](d1, d2 Diccionario[K, V]) Diccionario[K, V]`
+    que devuelva un nuevo Diccionario (puede ser el hash que hayas implementado) 
+    con la diferencia simétrica entre los dos
+    recibidos por parámetro. La diferencia tiene que ser calculada
+    teniendo en cuenta las claves, y los datos asociados a las claves
+    deben ser los mismos que estaban en cada uno de los hashes
+    originales. 
+    Ejemplo:
 
     ```
-    "casa": 1; 3; 2
-    "perro": 3; 3; 3
-    "cobayo": 6; 2; 6
-    "conejo": 3; 2; 1
-    "hamster": 2; 0; 1
-    "gato": 3; 0; 5
-    "hurón": 2; 3; 5
-    "pejelagarto": 6; 0; 7
+    d1 = { "perro": "guau", "gato": "miau", "vaca": "mu" }
+    d2 = { "perro": "woof", "zorro": "ding-ding" }
+    DiferenciaSimetricaDict(d1, d2) => { "gato": "miau", "vaca": "mu", "zorro": "ding-ding" }
     ```
 
-1.  (★★) Del ejercicio anterior, explicar qué sucedería si los resultados de aplicar las funciones de hashing sobre
-    _"pejelagarto"_ fueran (6, 0, 3), y cómo debería resolverse.
+    Indicar y justificar el orden de la función implementada.
 
-1.  (★★★) a. Realizar las siguientes operaciones sobre un hash con Hopscotch hashing, de largo 9 y $$K = 2$$
-    (los números son también el resultado de la función de hashing):
-    Guardar 1, Guardar 0, Guardar 9, Borrar 1, Buscar 9, Guardar 5, Guardar 7, Guardar 17, Borrar 7, Guardar 16, Guardar 82
-    Guardar 81, Guardar 2.
-
-    b. Indicar qué sucede si guardamos el valor 89, y cómo se debe resolver.
-
-1.  (★★★) a. Realizar el seguimiento de guardar las siguientes claves dentro de un hash con Cuckoo Hashing, con 2
-    funciones de hashing (los valores de aplicar las funciones de hashing se indican a continuación de las claves),
-    y tamaño 10:
-
-    ```
-    gato: 2; 3
-    perro: 6; 9
-    ornitorrinco: 2, 5
-    oso: 8; 3
-    delfín: 8; 4
-    canario: 6; 3
-    ```
-
-    b. Explicar qué sucede al buscar la clave _"perro"_.
-
-    c. Explicar cómo hacer para eliminar la clave _"perro"_ del hash, y cómo se debe modificar el hash para que
-    siga funcionando correctamente.
-
-1.  (★★★) Supongamos que queremos crear una estructura _Diccionario inmutable_. Dicho TDA es un Diccionario que
-    no será modificado. No tendrá altas, ni bajas. Los elementos se los pasan al crearlo (por ejemplo,
-    a través de otra implementación de diccionario, o con un par de arreglos con las claves y valores).
-    Explicar cómo harías para implementar esto de forma eficiente, considerando que su mayor utilidad
-    es realizar búsquedas lo más rápido posible.
+1.  (★★) Una fábrica de pastas de Lanús le pide a alumnos de Algoritmos y Programación II que 
+    le solucionen un problema: sus dos distribuidoras de materias primas le enviaron un 
+    hash cada una, dónde sus claves son los nombres de los productos, y sus valores 
+    asociados, sus precios. La fábrica de pastas le pide a los alumnos que le implementen 
+    una **función** que le devuelva un nuevo hash con la unión de todos esos productos, 
+    y en caso de que una misma materia prima se encuentre en ambos hashes, elegir la que tenga 
+    el precio más barato. 
+    Indicar y justificar el orden del algoritmo.
 
 1.  (★★★★★) Se quiere implementar un TDA Diccionario con las siguientes primitivas:
     `Obtener(x)` devuelve el valor de `x` en el diccionario; `Insertar(x, y)` inserta en el diccionario

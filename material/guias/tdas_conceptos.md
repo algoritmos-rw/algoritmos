@@ -183,3 +183,37 @@ $$n$$.
     a mayor, se pide implementar una **función** `func MergePilas[T any](pila1, pila2 Pila[T]) []T` que devuelva un array
     ordenado de menor a mayor con todos los valores de ambas pilas sin repeticiones.
     Detallar y justificar la complejidad del algoritmo considerando que el tamaño de las pilas es N y M respectivamente.
+
+1.  (★★) Escribir una primitiva para la pila (dinámica) cuya firma es `func (pila pilaDinamica[T]) Transformar(aplicar func(T) T) Pila[T]` que la función `aplicar`, 
+    devuelva una **nueva** pila cuyos elementos sean los resultantes de aplicarle la función transformar a cada elemento de la pila original. Los elementos en la nueva pila deben tener el orden que tenían 
+    en la pila original, y la pila original debe quedar en el mismo estado al inicial. Indicar y justificar
+    la complejidad de la primitiva. 
+
+    Por ejemplo, para la pila de enteros`[ 1, 2, 3, 6, 2 ]` (tope es el número 2), y la función `sumar_uno` 
+    (que devuelve la suma entre el número 1 y el número recibido), la pila resultante 
+    debe ser `[ 2, 3, 4, 7, 3 ]` (el tope es el número 3).
+
+1.  (★★) Implementar una función recursiva que reciba una pila y devuelva la cantidad de elementos de la misma. Al terminar la ejecución de la función la pila debe quedar en el mismo estado al original. 
+
+1.  (★★★) Implementar una función `func balanceado(texto string) boolean`,
+    que retorne si `texto` esta balanceado o no. `texto` sólo puede contener los siguientes caracteres: `[,],{,}(,)`. Indicar y justificar la complejidad de la función implementada.
+    Un texto esta balanceado si cada agrupador abre y cierra en un orden correcto. Por ejemplo:
+    - `balanceado("[{([])}]") => true`
+    - `balanceado("[{}") => false`
+    - `balanceado("[(])") => false`
+    - `balanceado("()[{}]") => true`
+    - `balanceado("()()(())") => true`
+
+1.  (★★) Carlos es nuevo en la empresa en la que trabajan Alan y Bárbara. Alan va a ser el mentor 
+    de Carlos, quien debe implementar un nuevo `TDA Gatito`. Alan, revisando el trabajo que 
+    hizo Carlos, nota que este agregó una primitiva `Redimensionar`, pública en la interfaz 
+    `Gatito`, para que la use Bárbara. Alan lo increpa a Carlos, preguntando para qué es dicha
+    primitiva, y este le contesta "Tal como dice la documentación, es para que Bárbara me diga 
+    cómo redimensionar el arreglo de pelos que tiene el gatito". Alan, que conoce bien el 
+    temperamento de Bárbara, decide evitar que echen a Carlos en su segunda semana de trabajo. 
+    En este ejercicio, te toca hacer de Alan. 
+
+    Escribir una explicación de por qué esto que está haciendo Carlos está mal. Considerá que 
+    Carlos es muy testarudo (incluso, a pesar de su propio bien), así que tu argumentación
+    deberá ser muy clara y contundente.
+
