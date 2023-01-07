@@ -259,26 +259,6 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     ¿Cuál es el máximo `A` para que el orden del algoritmo sea menor que el del algoritmo de Strassen?
     Justificar.
 
-1.  (★★★★) En Bytelandia tienen un sistema monetario extraño: su divisa es el
-    bytelandés, y existen denominaciones en moneda física… ¡para todos
-    los valores enteros! (Esto es, se emiten monedas de 1, 2, 3, …, 14, 15, …,
-    28, 29, 30, … bytelandeses). No solo eso, _cualquier_ moneda de valor
-    $$n$$ puede cambiarse en el banco por 3 monedas de menor denominación,
-    de valores $$\lfloor\frac{n}{2}\rfloor$$, $$\lfloor\frac{n}{3}\rfloor$$
-    y $$\lfloor\frac{n}{4}\rfloor$$ respectivamente (no existe denominación de 0 pesos,
-    por lo cual es posible recibir menos de 3 monedas en el cambio); una vez hecho
-    el cambio, sin embargo, no pueden cambiarse de vuelta por la moneda
-    mayor (e.g., no pueden cambiase una moneda de 2 y otra de 3 por una
-    de 5). Finalmente, también es posible intercambiar bytelandeses por
-    pesos argentinos, a una tasa de 1 a 1.
-    Se pide implementar un algoritmo que, utilizando **división y conquista**, reciba el valor
-    $$n$$ de una moneda en bytelandés y devuelva la cantidad máxima de pesos argentinos que
-    se podría obtener realizando los intercambios arriba mencionados. Por ejemplo, si
-    $$n = 12$$, la cantidad máxima de pesos que se puede obtener es $13, ya que podemos dividir
-    la moneda de 12 bytelandeses en monedas de 6, 4 y 3; y $6 + $4 + $3 = $13 (se podría seguir
-    dividiendo, pero en este caso no conviene dividir ninguna de esas monedas resultantes).
-    Justificar el orden del algoritmo implementado.
-
 
 1.  (★★★★★) Implementar una función (que utilice división y conquista) de orden $$\mathcal{O}(n \log n)$$
     que dado un arreglo de $$n$$ números enteros devuelva `true` o `false` según si existe algún elemento que aparezca
