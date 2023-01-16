@@ -1,10 +1,18 @@
 package fraccion
 
-import "strconv"
+import "fmt"
 
 type Fraccion struct {
 	numerador int
 	denominador int
+}
+
+func abs(a int) int {
+	if a >= 0 {
+		return a
+	} else {
+		return -a 
+	}
 }
 
 func simplificar(num *int, den *int) {
@@ -20,12 +28,12 @@ func simplificar(num *int, den *int) {
   	}
 
   	var maxPosibleDivisor int
-  	if *num < *den {
-  		maxPosibleDivisor = *num
+  	if abs(*num) < abs(*den) {
+  		maxPosibleDivisor = abs(*num)
   	} else {
-  		maxPosibleDivisor = *den
+  		maxPosibleDivisor = abs(*den)
   	}
-  	for i := 0; i < maxPosibleDivisor; i++ {
+  	for i := 2; i <= maxPosibleDivisor; i++ {
   		for *num % i == 0 && *den % i == 0 {
   			*num /= i
   			*den /= i
@@ -33,7 +41,7 @@ func simplificar(num *int, den *int) {
   	}
 }
 
-func largoNumero(n int) int {
+func largoNumero(num int) int {
 	if num == 0 {
 		return 1
 	}
@@ -77,5 +85,9 @@ func (f Fraccion) ParteEntera() int {
 // "10/8" sino que debe ser "5/4"). Considerar que si se trata de un número entero, debe mostrarse como tal.
 // Considerar tambien el caso que se trate de un número negativo. 
 func (f Fraccion) Representacion() string {
-	return strconv.Itoa(f.numerador) + "/" + strconv.Itoa(f.denominador)
+	if f.denominador == 1 {
+		return fmt.Sprintf("%d", f.numerador)
+	} else {
+		return fmt.Sprintf("%d/%d", f.numerador, f.denominador)
+	}
 }
