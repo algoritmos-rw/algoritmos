@@ -146,10 +146,10 @@ $$n$$.
 1.  (★★★) Sabiendo que la firma del iterador interno de la lista enlazada es:
 
     ```golang
-        Iterar(func(K) bool)
+        Iterar(visitar func(K) bool)
     ```
     
-    Se tiene una lista en donde todos los elementos son punteros a números enteros. Implementar la función _visitar_ para que calcule la suma de todos los números pares. Mostrar, además, una invocación completa a `Iterar()` que haga uso del _visitar_ implementado.
+    Se tiene una lista en donde todos los elementos son punteros a números enteros. Implementar una función `SumaPares` que reciba una lista y, utilizando el iterador interno (**no el externo**), calcule la suma de todos los números pares. 
 
 1.  (★★★★★) Diseñar un TDA `PilaConMáximo`, que tenga las mismas primitivas de la pila convencional, 
     y además permita obtener el máximo de la pila. **Todas**
