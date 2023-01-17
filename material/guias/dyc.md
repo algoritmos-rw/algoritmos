@@ -217,7 +217,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 1.  (★★) Implementar, por división y conquista, una función que dado un arreglo y su largo, determine si el mismo
     se encuentra ordenado. Indicar y justificar el orden.
 
-1.  (★★) Implementar, por división y conquista, una función que dado un arreglo sin elementos repetidos y _casi ordenado_ (todos los elementos se
+1.  (★★★) Implementar, por división y conquista, una función que dado un arreglo sin elementos repetidos y _casi ordenado_ (todos los elementos se
     encuentran ordenados, salvo uno), obtenga el elemento fuera de lugar. Indicar y justificar el orden.
 
 1.  (★★★) Se tiene un arreglo tal que `[1, 1, 1, ..., 0, 0, ...]` (es decir, _unos seguidos de ceros_). Se pide:
