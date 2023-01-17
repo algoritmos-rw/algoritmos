@@ -184,12 +184,9 @@ $$n$$.
     ordenado de menor a mayor con todos los valores de ambas pilas sin repeticiones.
     Detallar y justificar la complejidad del algoritmo considerando que el tamaño de las pilas es N y M respectivamente.
 
-1.  (★★) Escribir una primitiva para la pila (dinámica) cuya firma es `func (pila pilaDinamica[T]) Transformar(aplicar func(T) T) Pila[T]` que la función `aplicar`, 
-    devuelva una **nueva** pila cuyos elementos sean los resultantes de aplicarle la función transformar a cada elemento de la pila original. Los elementos en la nueva pila deben tener el orden que tenían 
-    en la pila original, y la pila original debe quedar en el mismo estado al inicial. Indicar y justificar
-    la complejidad de la primitiva. 
+1.  (★★) Escribir una primitiva para la pila (dinámica) cuya firma es `func (pila pilaDinamica[T]) Transformar(aplicar func(T) T) Pila[T]` que devuelva una nueva pila cuyos elementos sean los resultantes de aplicarle la función `aplicar` a cada elemento de la pila original. Los elementos en la nueva pila deben tener el orden que tenían en la pila original, y la pila original debe quedar en el mismo estado al inicial. Indicar y justificar la complejidad de la primitiva.
 
-    Por ejemplo, para la pila de enteros`[ 1, 2, 3, 6, 2 ]` (tope es el número 2), y la función `sumar_uno` 
+    Por ejemplo, para la pila de enteros `[ 1, 2, 3, 6, 2 ]` (tope es el número 2), y la función `sumarUno` 
     (que devuelve la suma entre el número 1 y el número recibido), la pila resultante 
     debe ser `[ 2, 3, 4, 7, 3 ]` (el tope es el número 3).
 
