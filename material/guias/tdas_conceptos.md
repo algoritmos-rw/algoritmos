@@ -180,7 +180,7 @@ $$n$$.
     _Nota_: `Color` corresponde a un enumerado, que está definido en algún lugar.
     
 1.  (★★★) Dadas dos pilas de enteros positivos (con posibles valores repetidos) cuyos elementos fueron ingresados de menor
-    a mayor, se pide implementar una **función** `func MergePilas[T any](pila1, pila2 Pila[T]) []T` que devuelva un array
+    a mayor, se pide implementar una **función** `func MergePilas(pila1, pila2 Pila[int]) []int` que devuelva un array
     ordenado de menor a mayor con todos los valores de ambas pilas sin repeticiones.
     Detallar y justificar la complejidad del algoritmo considerando que el tamaño de las pilas es N y M respectivamente.
 
