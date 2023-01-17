@@ -136,7 +136,7 @@ $$n$$.
     utilizando como estructura auxiliar sólo otra pila auxiliar.
     Por ejemplo, la pila `[ 4, 1, 5, 2, 3 ]` debe quedar como `[ 1, 2, 3, 4, 5 ]` (siendo el último elemento el tope de la pila, en ambos casos). Indicar y justificar el orden de la función.
 
-1.  (★★) Implementar una función `func FiltrarCola[K any](cola Cola[K], func filtro(K) bool)` , que elimine los
+1.  (★★) Implementar una función `func FiltrarCola[K any](cola Cola[K], filtro func(K) bool)` , que elimine los
     elementos encolados para los cuales la función _filtro_ devuelve `false`. Aquellos elementos que no son eliminados
     deben permanecer en el mismo orden en el que estaban antes de invocar a la función. No es necesario destruir los
     elementos que sí fueron eliminados. Se pueden utilizar las estructuras auxiliares que se consideren necesarias y
@@ -203,6 +203,7 @@ $$n$$.
     - `balanceado("[(])") => false`
     - `balanceado("()[{}]") => true`
     - `balanceado("()()(())") => true`
+
 
 1.  (★★) Carlos es nuevo en la empresa en la que trabajan Alan y Bárbara. Alan va a ser el mentor 
     de Carlos, quien debe implementar un nuevo `TDA Gatito`. Alan, revisando el trabajo que 
