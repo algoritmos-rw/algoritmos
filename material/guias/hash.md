@@ -240,3 +240,7 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerra
 
     Proponer una implementación donde **todas** las operaciones sean $$\mathcal{O}(1)$$. Justificar el
     orden de las operaciones.
+    
+1.  (★★★) Implementar un algoritmo que reciba un arreglo desordenado de enteros, su largo ($n$) y un 
+	número $K$ y determinar en $\mathcal{O}(n)$ si existe un par de elementos en el arreglo que 
+	sumen exactamente $K$.
