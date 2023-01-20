@@ -104,7 +104,7 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
 1.  (★★★) Implementar un algoritmo que reciba un arreglo de `n` números, y un número `k`, y
     devuelva los `k` números dentro del arreglo cuya suma sería la máxima (entre todos
     los posibles subconjuntos de `k` elementos de dicho arreglo). La solución **debe
-    ser mejor** que $\mathcal{O}(n \log n)$ si `k << n`. Indicar y justificar la complejidad
+    ser mejor** que $$\mathcal{O}(n \log n)$$ si `k << n`. Indicar y justificar la complejidad
     de la función implementada.
 
 1.  (★★★★) Dado un arreglo de enteros y un número `K`, se desea que todos los elementos 
