@@ -4,7 +4,7 @@ import os
 import subprocess
 import shutil
 
-ARCHIVOS = ["tdas_conceptos.md", "dyc.md", "ordenamientos.md", "hash.md", "arboles.md", "heap.md", "grafos.md", "grafos_2.md"]
+ARCHIVOS = ["tdas_conceptos.md", "dyc.md", "ordenamientos.md", "hash.md", "arboles.md", "heap.md", "grafos.md"]
 TEMP_DIR = "pdfguias-temp"
 
 os.mkdir(TEMP_DIR)
