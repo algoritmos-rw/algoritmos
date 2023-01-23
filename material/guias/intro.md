@@ -28,8 +28,7 @@ Resumen de temas vistos en la materia:
   * [\textcolor{blue}{Diccionarios, Hashing y Hashes}](https://algoritmos-rw.github.io/algo2/material/guias/hash)
   * [\textcolor{blue}{Árboles Binarios, ABB, AVL, Árbol B}](https://algoritmos-rw.github.io/algo2/material/guias/arboles)
   * [\textcolor{blue}{Colas de Prioridad y heaps}](https://algoritmos-rw.github.io/algo2/material/guias/heap)
-  * [\textcolor{blue}{Grafos, primera parte: Usos, implementaciones y recorridos}](https://algoritmos-rw.github.io/algo2/material/guias/grafos_1)
-  * [\textcolor{blue}{Grafos, segunda parte: Algoritmos sobre grafos}](https://algoritmos-rw.github.io/algo2/material/guias/grafos_2)
+  * [\textcolor{blue}{Grafos, primera parte: Usos, implementaciones y recorridos}](https://algoritmos-rw.github.io/algo2/material/guias/grafos)
 
 
 \newpage
