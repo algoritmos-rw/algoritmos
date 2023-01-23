@@ -168,7 +168,7 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
 1.  (★) Implementar un algoritmo que determine si un grafo no dirigido es conexo o no. Indicar la complejidad
     del algoritmo si el grafo está implementado con una matriz de adyacencia.
 
-1.  (★★) Implementar un algoritmo que, dado un grafo dirigido, nos devuelva un ciclo dentro del mismo, si es que lo
+1.  (★★★) Implementar un algoritmo que, dado un grafo dirigido, nos devuelva un ciclo dentro del mismo, si es que lo
     tiene. Indicar el orden del algoritmo.
 
 1.  (★★) Un árbol es un grafo no dirigido que cumple con las siguientes propiedades:
