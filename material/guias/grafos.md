@@ -1,5 +1,5 @@
 ---
-permalink: 'material/guias/grafos_1/'
+permalink: 'material/guias/grafos/'
 math: true
 ---
 
