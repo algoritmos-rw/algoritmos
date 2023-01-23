@@ -15,8 +15,7 @@ Los ejercicios de 5 estrellas sólo serían tomados en exámenes finales.
   * [Diccionarios, Hashing y Hashes](guias/hash.md)
   * [Árboles Binarios, ABB, AVL, Árbol B](guias/arboles.md)
   * [Colas de Prioridad y heaps](guias/heap.md)
-  * [Grafos, primera parte: Usos, implementaciones y recorridos](guias/grafos.md)
-  * [Grafos, segunda parte: Algoritmos sobre grafos](guias/grafos_2.md)
+  * [Grafos](guias/grafos.md)
 
 También, pueden descargarse la <i class="fa fa-file-pdf"/> versión en PDF de la guía del [<i class="fab fa-google-drive"/> Drive de la materia]({{site.data.sitios.drive}}).
 

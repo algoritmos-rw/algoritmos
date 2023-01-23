@@ -3,7 +3,7 @@ permalink: 'material/guias/grafos/'
 math: true
 ---
 
-# Grafos: Usos, implementaciones, recorridos
+# Grafos: Usos, implementaciones, recorridos, aplicaciones
 {:.no_toc}
 
 ## Contenidos
