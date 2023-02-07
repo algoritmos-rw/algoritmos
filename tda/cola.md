@@ -21,7 +21,21 @@ La cola debe ser enlazada, es decir que en lugar de usar un arreglo, usa nodos e
 
 Deben entregar también un archivo `cola_test.go` (que esté dentro del paquete `cola_test`) que haga las correspondientes pruebas unitarias, análogas a las pedidas para Pila, obviamente considerando que el invariante cambia a su opuesto (FIFO).
 
-Deberán entregar el código en formato digital, subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
+Este nuevo paquete debería estar en el módulo de TDAs, como en el caso de la pila: 
+```
+tdas
+   |--> pila
+   	|---> pila.go
+   	|---> pila_dinamica.go
+   	|---> pila_test.go
+   |--> cola
+   		|---> cola.go
+   		|---> cola_enlazada.go
+   		|---> cola_test.go
+   |--> go.mod
+```
+
+Deberán entregar el código en formato digital, subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo. Nuevamente, el `zip` deberá contener el directorio `cola`, y dentro de este deberán estar los archivos `cola_enlazada.go` y `cola_test.go`. Opcionalmente puede estar `cola.go` sin problema; dicho archivo será ignorado. 
 
 **No olviden revisar las [preguntas frecuentes de la cola](/algo2/faq/cola)**
 

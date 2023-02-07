@@ -39,6 +39,26 @@ Por ejemplo, `strings.Compare` cumple con esta especificación (si las claves so
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}).
 
+### Estructura del módulo
+
+Dado que el ABB es otra implementación de diccionario, simplemente deberán agregar los archivos al mismo paquete. Es decir: 
+```
+```
+tdas
+   |--> pila
+   |--> cola
+   |--> lista
+   |--> diccionario
+   		|--> hash.go
+   		|--> diccionario.go
+   		|--> diccionario_test.go
+   		|--> abb.go
+   		|--> diccionario_ordenado.go
+   		|--> diccionario_ordenado_test.go
+   |--> go.mod
+```
+``` 
+
 **No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**, así como también 
 **[el FAQ sobre enlaces simbólicos](/algo2/faq/symlink)** para reutilizar el TDA Pila para el Iterador externo.
 

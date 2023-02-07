@@ -50,6 +50,16 @@ Las pruebas deberán verificar que:
 
 Además de todos los casos no descriptos que ustedes crean necesarios.
 
+La estructura de directorios del módulo/proyecto en el que se deberá trabajar es: 
+```
+tdas
+   |--> pila
+   	|---> pila.go
+   	|---> pila_dinamica.go
+   	|---> pila_test.go
+   |--> go.mod
+```
+
 Para compilar y verificar las pruebas:
 1. Compilar todo el código:
 
@@ -57,11 +67,11 @@ Para compilar y verificar las pruebas:
 
 1. Ejecutar las pruebas: 
 
-		go test pila_test.go
+	go test pila_test.go
 
 Adicionalmente, pueden utilizar el flag `-v` para que se muestre la salida de cada prueba, incluyendo logs (esto es lo que se hace en el corrector automático).
 
-Al igual que en los casos anteriores, deberán entregar el código en formato digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo. Se debe entregar un archivo `zip` con todos los archivos (sin subcarpetas). No es necesario enviar el archivo `pila.go`. Incluso, este será ignorado para evitar cualquier modificación sobre las primitivas.
+Al igual que en los casos anteriores, deberán entregar el código en formato digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo. Se debe entregar un archivo `zip` con la carpeta `pila` (que dentro debe tener `pila_dinamica.go` y `pila_test.go`, y opcionalmente `pila.go`). No es necesario enviar el archivo `pila.go`. Incluso, este será ignorado para evitar cualquier modificación sobre las primitivas.
 
 **No olviden revisar las [preguntas frecuentes de la pila](/algo2/faq/pila)**
 
