@@ -8,7 +8,7 @@ trabajo: Hash
 Tabla de Hash
 =============
 
-El trabajo que deben entregar de **forma grupal** es el tipo abstracto de datos Diccionario, con una implementación de Tabla de Hash, que se puede implementar mediante un hash abierto o cerrado, a elección.
+El trabajo que deben entregar de **forma grupal** es el tipo abstracto de datos Diccionario, con una implementación de Tabla de Hash, que se puede implementar mediante un hash abierto o cerrado, a elección. En caso de tratarse de un Hash abierto, pueden simplemente importar la lista por estar en el mismo módulo. En ese caso, en el archivo zip a entregar, además de encontrarse el directorio `diccionario`, debe estar el directorio `pila` con los archivos correspondientes. 
 
 #### Primitivas del Diccionario
 ``` golang
@@ -68,7 +68,8 @@ Para ejecutar las pruebas, incluyendo las pruebas de volumen (benchmarks, que to
 
 	go test -bench=. -benchmem
 
-**No olviden revisar las [preguntas frecuentes del hash](/algo2/faq/hash)**, así como también el de **[enlaces simbólicos](/algo2/faq/symlink)**, especialmente en caso de implementar el hash abierto.
+
+**No olviden revisar las [preguntas frecuentes del hash](/algo2/faq/hash)**.
 
 ---
 ### Bibliografia recomendada
