@@ -134,3 +134,8 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
     Notar que si el 9 no estuviera en el arreglo, no se podría resolver
     el problema (debemos devolver `nil`), ya que el 11 no podría combinarse con ningún 
     otro número.
+    
+1.  (★★) En clase vimos que se puede implementar un heap con un árbol izquierdista,
+	o su representación equivalente en arreglo. Esta última, siendo mucho más sencilla de
+	implementar. ¿Por qué no implementamos también el Árbol Binario de Búsqueda con una
+	representación en arreglo, en vez de implementarlo con, valga la redundancia, árboles?
