@@ -63,8 +63,10 @@ El último paso se explica a continuación.
 
 Abrir una terminal (CTRL+ALT+T) y escribir lo siguiente:
 
-`sudo apt install build-essential valgrind manpages-dev gdb`
-`sudo apt-get install golang-go`
+```
+	sudo apt install build-essential valgrind manpages-dev gdb
+	sudo apt-get install golang-go
+```
 
 Les va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas. ¡Ya está!
 
