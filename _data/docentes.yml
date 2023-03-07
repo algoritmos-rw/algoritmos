@@ -22,12 +22,12 @@ ayudantes:
   github: egenender
 
 - nombre: Facundo Aguirre
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/facuaa.png
   mail: facu_nixerito@hotmail.com
   github: bonshot
 
 - nombre: Facundo Xu
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/facuxu.jpg
   mail: fxu@fi.uba.ar
   github: facundoxu
 
@@ -62,9 +62,14 @@ ayudantes:
   github: ignaciodemarchi
 
 - nombre: Juan Ignacio Kristal
-  foto: /assets/img/docentes/unknown.png
-  mail: ask
-  github: ask
+  foto: /assets/img/docentes/juanik.jpg
+  mail: kristaljuanignacio@gmail.com
+  github: juankristal
+
+- nombre: Juan Martín de la Cruz
+  foto: /assets/img/docentes/jumas.jpg
+  mail: jdelacruz@fi.uba.ar
+  github: juandelahd
 
 - nombre: Lara Scazzola
   foto: /assets/img/docentes/laras.jpeg
@@ -82,7 +87,7 @@ ayudantes:
   github: luciacp
 
 - nombre: Martina Lozano
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/martinal.png
   mail: mlozano@fi.uba.ar
   github: mlozano01
 
@@ -92,12 +97,12 @@ ayudantes:
   github: habus0
 
 - nombre: Santiago Fassio
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/santif.jpg
   mail: fassiosantiago@gmail.com
   github: santiagofassio
 
 - nombre: Taiel Molina
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/taielm.png
   mail: tamolina@fi.uba.ar
   github: taielmolina01
 
