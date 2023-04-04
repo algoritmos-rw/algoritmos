@@ -36,7 +36,7 @@ func (pila PilaDinamica[T]) Miltitop(n int) []T {
     cant := min(n, pila.cantidad)
     topes := make([]T, cant)
     for i := 0; i < cant; i++ {
-        topes[cant - i - 1] = pila.datos[i]
+        topes[i] = pila.datos[pila.cantidad - i - 1]
     }
     return topes
 }
