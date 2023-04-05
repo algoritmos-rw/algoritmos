@@ -60,7 +60,7 @@ func ArregloEsMagico(arr []int) bool {
     return arregloEsMagico(arr, 0, len(arr) - 1)
 }
 
-func arregloEsMagico(arr []int, inicio int, fin int) {
+func arregloEsMagico(arr []int, inicio int, fin int) bool {
     if inicio > fin {
         return false
     }
