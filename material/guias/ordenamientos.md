@@ -124,7 +124,8 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
 1.  (★★) Realizar el seguimiento de ordenar por Radix Sort el siguiente arreglo de cadenas que representan
     versiones. Cada versión tiene el formato `a.b.c`, donde cada valor `a`, `b` y `c` puede tener un
     valor entre 0 y 99. Considerar que se quiere que quede ordenado primero por la primera componente
-    (`a`), luego por la segunda (`b`) y finalmente por la tercera (`c`). Tener en cuenta que, por ejemplo
+    (`a`), luego por la segunda (`b`) y finalmente por la tercera (`c`). Se puede asumir que `a` nunca
+    será 0 salvo que el número sea efectivamente 0. Es decir, la notación es _correcta_. Tener en cuenta que, por ejemplo
     `1.1.3 < 1.1.20`,  `2.20.8` < `3.0.0`.
 
     ```
