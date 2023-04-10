@@ -1,3 +1,7 @@
+---
+math: true
+---
+
 # FAQ - Pila
 {:.no_toc}
 
