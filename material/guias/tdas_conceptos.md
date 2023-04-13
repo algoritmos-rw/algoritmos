@@ -64,7 +64,7 @@ $$n$$.
     Puede encontrarse la resolución de este ejercicio [aquí](soluciones/fraccion.go).
 
 1.  (★) Implementar el TDA NumeroComplejo. Dicho TDA debe tener las siguientes primitivas, cuya documentación
-    puede encontrarse [aquí](extra/complejo.go):
+    puede encontrarse [aquí](../extra/complejo.go):
     ```
     CrearComplejo(real float, img float) Complejo
     Multiplicar(otro Complejo)
