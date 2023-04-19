@@ -57,7 +57,7 @@ La primitiva `Iterador` de la lista debe devolver un `IteradorLista`, cuyas prim
 type IteradorLista[T any] interface {
 	VerActual() T
 	HaySiguiente() bool
-	Siguiente() T
+	Siguiente()
 	Insertar(T)
 	Borrar() T
 }
