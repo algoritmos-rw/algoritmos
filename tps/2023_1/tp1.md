@@ -448,8 +448,9 @@ La entrega incluye, obligatoriamente, los siguientes archivos de código:
 
   - Cualquier otro código que fuera necesario. Aclaración: en caso de utilizar 
   código de TDAs implementados, y evitar tener que copiar y pegar dicho código
-  dentro de la carpeta para que ejecute correctamente, se recomienda fuertemente
-  leer [el FAQ sobre enlaces simbólicos](/algo2/faq/symlink).
+  dentro de la carpeta para que ejecute correctamente, recomendamos tener el módulo
+  de TDAs y el del TP1 tal ([como se explica en el video de cómo armar módulos para las
+  diferentes entregas](https://www.youtube.com/watch?v=IZrQt-vR3E4&list=PLLfC2vEod54Kpu2rPyjCO6r0agujzZnH_&index=14&t=1065s)).
 
   - un archivo _go.mod_ que permita compilar y ejecutar el módulo en cuestión. 
   El nombre del módulo debería ser _rerepolez_. 
