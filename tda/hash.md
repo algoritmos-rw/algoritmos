@@ -8,7 +8,7 @@ trabajo: Hash
 Tabla de Hash
 =============
 
-El trabajo que deben entregar de **forma grupal** es el tipo abstracto de datos Diccionario, con una implementación de Tabla de Hash, que se puede implementar mediante un hash abierto o cerrado, a elección. En caso de tratarse de un Hash abierto, pueden simplemente importar la lista por estar en el mismo módulo. En ese caso, en el archivo zip a entregar, además de encontrarse el directorio `diccionario`, debe estar el directorio `pila` con los archivos correspondientes. 
+El trabajo que deben entregar de **forma grupal** es el tipo abstracto de datos Diccionario, con una implementación de Tabla de Hash, que se puede implementar mediante un hash abierto o cerrado, a elección. En caso de tratarse de un Hash abierto, pueden simplemente importar la lista por estar en el mismo módulo. En ese caso, en el archivo zip a entregar, además de encontrarse el directorio `diccionario`, debe estar el directorio `lista` con los archivos correspondientes. Estos deben estar en un mismo módulo `tdas`. 
 
 #### Primitivas del Diccionario
 ``` golang
