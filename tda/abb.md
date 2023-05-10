@@ -57,8 +57,7 @@ tdas
    |--> go.mod
 ```
 
-**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**, así como también 
-**[el FAQ sobre enlaces simbólicos](/algo2/faq/symlink)** para reutilizar el TDA Pila para el Iterador externo.
+**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**.
 
 ---
 ### Bibliografia recomendada
