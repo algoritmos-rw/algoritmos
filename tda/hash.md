@@ -49,7 +49,7 @@ Para utilizar, se debe importar `fmt`.
 type IterDiccionario[K comparable, V any] interface {
 	HaySiguiente() bool
 	VerActual() (K, V)
-	Siguiente() K
+	Siguiente()
 }
 ```
 
