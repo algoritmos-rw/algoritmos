@@ -9,7 +9,7 @@ Preguntas frecuentes
 
 * [Compilación y Ejecución](faq/compilacion-ejecucion.md)
 
-* [Lenguaje go] TODO (a medida que vayan apareciendo consultas)
+* [Lenguaje go](faq/lenguaje-go.md)
 
 * [Corrección por Pull Requests (PRs)](faq/correccion-pr.md)
 
