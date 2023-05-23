@@ -111,8 +111,7 @@ imprime `Error en comando <comando>` por `stderr` y continua la ejecución.
 
 El programa no tendrá un comando para terminar. Este finaliza cuando no quedan
 más líneas para procesar por entrada estándar. Al finalizar, es importante que
-se libere toda la memoria dinámica utilizada, y se cierren correctamente todos
-los archivos procesados.
+se cierren correctamente todos los archivos procesados.
 
 ### Agregar_archivo
 
