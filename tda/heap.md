@@ -14,7 +14,7 @@ El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto C
 
 #### Primitivas de la cola de prioridad
 ``` golang
-type ColaPrioridad[T comparable] interface {
+type ColaPrioridad[T any] interface {
 
 	// EstaVacia devuelve true si la cantidad de elementos en el heap es 0, 
 	// false en caso contrario.
@@ -39,15 +39,15 @@ type ColaPrioridad[T comparable] interface {
 
 Además, las primitivas de creación del Heap deberán ser: 
 ```golang
-func CrearHeap[T comparable](funcion_cmp func(T, T) int) ColaPrioridad[T]
-func CrearHeapArr[T comparable](arreglo []T, funcion_cmp func(T, T) int) ColaPrioridad[T]
+func CrearHeap[T any](funcion_cmp func(T, T) int) ColaPrioridad[T]
+func CrearHeapArr[T any](arreglo []T, funcion_cmp func(T, T) int) ColaPrioridad[T]
 ```
 
 La función de comparación funciona tal cual el caso del ABB. La segunda primitiva de creación debe ejecutar en tiempo lineal, permitiendo crear el heap con los elementos pasados por parámetro. 
 
 Además, deben implementar el ordenamiento heapsort, sobre un arreglo de genérico; y las pruebas unitarias de todas las primitivas implementadas.
 ```golang
-func HeapSort[T comparable](elementos []T, funcion_cmp func(T, T) int)
+func HeapSort[T any](elementos []T, funcion_cmp func(T, T) int)
 ```
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}).
