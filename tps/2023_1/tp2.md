@@ -355,6 +355,15 @@ OK
 OK
 ```
 
+## Set de Pruebas
+
+En el [sitio de descargas](..) pueden encontrar un archivo zip con las pruebas que necesitan pasar. Allí se encuentran los diferentes archivos que se usan para agregar al programa, así como las entradas y salidas esperadas (incluyendo salidas de error). 
+Para ejecutar las pruebas: 
+
+1. Compilar el programa del tp2 para generar el ejecutable. 
+2. Ir al directorio de las pruebas.
+3. Ejecutar el comando `./pruebas.sh <PATH AL EJECUTABLE DEL TP2>`, indicando justamente el path al ejecutable en cuestión (pudiendo ser una ruta relativa o absoluta). 
+
 ## Criterios de aprobación
 
 Los siguientes aspectos son condición necesaria para la aprobación del trabajo práctico.
