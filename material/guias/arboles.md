@@ -220,3 +220,12 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
 1.  (★★★) En un árbol binario, dado un nodo con dos hijos, explicar por qué su predecesor en el recorrido 
     inorder no puede tener hijo derecho, y que su sucesor (también, en el recorrido inorder) no puede tener 
     hijo izquierdo.
+    
+1.  (★★) Implementar en Go una **primitiva** de ABB (DiccionarioOrdenado) que funcione 
+    como un iterador interno que haga un recorrido por niveles inverso. Es decir, que visite 
+    los elementos del nivel más inferior hasta la raiz. Para el ABB cuyo preorder es
+    `5, 2, 1, 3, 4, 7, 9` (comparación numérica habitual), el recorrido debe ser: 
+    `4, 9, 3, 1, 7, 2, 5`. En el 4to nivel está sólo el `4`. En el 3er nivel están el `1, 3 y 9` pero hay 
+    que leerlos de derecha a izquierda.
+    Luego en el 2do el `2 y 7` con la misma lógica, y finalmente la raíz `5` al final.
+    Indicar y justificar la complejidad de la primitiva implementada.
