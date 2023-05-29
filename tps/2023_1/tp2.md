@@ -271,7 +271,7 @@ Se provee una [colección de archivos de ejemplo](../../../assets/tps/2018_2/tp2
 - Info_vuelo: debe ser  $$\mathcal{O}(1)$$.
 - Prioridad_vuelos:  debe ser  $$\mathcal{O}(n + K \log{n})$$. Siendo K la cantidad de vuelos a mostrar y n la cantidad de vuelos en el sistema.
 - Siguiente_vuelo: debe ser $$\mathcal{O}(\log{F_{conexion}})$$, siendo $$F_{conexion}$$ la cantidad de fechas diferentes en las que se puede hacer dicho viaje (si todos los vuelos de esa conexión son en fechas diferentes, sería lo mismo que la cantidad de vuelos que hacen dicha conexión). Considerar que $$F_{conexion}$$ es mucho menor a la cantidad de vuelos totales y cantidad de fechas totales.
-- Borrar: debe ser  $$\mathcal{O}(nK \log{n})$$ . Siendo K la cantidad de vuelos que hay en el rango de fechas ingresado
+- Borrar: debe ser  $$\mathcal{O}(K \log{n})$$ . Siendo $$K$$ la cantidad de vuelos que hay en el rango de fechas ingresado
   y n la cantidad de vuelos en todo el sistema.
 
 
