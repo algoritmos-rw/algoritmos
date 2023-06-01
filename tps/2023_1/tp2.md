@@ -178,7 +178,7 @@ original, salvo que en vez de comas se tienen espacios.
 *Ejemplo de salida:*
 
 ```
-4608 OO PDX SEA N812SK 08 2018-04-10T23:22:55 05 43 0
+4608 OO PDX SEA N812SK 8 2018-04-10T23:22:55 05 43 0
 OK
 ```
 
@@ -241,7 +241,7 @@ Cada línea de los archivos entrantes `.csv` tienen la siguiente estructura:
 - ORIGIN_AIRPORT: PDX
 - DESTINATION_AIRPORT: SEA
 - TAIL_NUMBER: N812SK
-- PRIORITY: 08
+- PRIORITY: 8
 - DATE: 2018-04-10T23:22:55
 - DEPARTURE_DELAY: 05
 - AIR_TIME: 43
@@ -252,7 +252,7 @@ Cada dato de una línea de log está separado por una coma.
 Ejemplo:
 
 ```
-4608,OO,PDX,SEA,N812SK,08,2018-04-10T23:22:55,05,43,0
+4608,OO,PDX,SEA,N812SK,8,2018-04-10T23:22:55,05,43,0
 ```
 
 
@@ -309,7 +309,7 @@ OK
 *Salida esperada:*
 
 ```
-4608 OO PDX SEA N812SK 08 2018-04-10T23:22:55 05 43 0
+4608 OO PDX SEA N812SK 8 2018-04-10T23:22:55 05 43 0
 OK
 ```
 
