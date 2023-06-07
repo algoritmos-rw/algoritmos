@@ -357,7 +357,7 @@ OK
 
 ## Set de Pruebas
 
-En el [sitio de descargas](..) pueden encontrar un archivo zip con las pruebas que necesitan pasar. Allí se encuentran los diferentes archivos que se usan para agregar al programa, así como las entradas y salidas esperadas (incluyendo salidas de error). 
+En el [el sitio de descargas]({{site.skel}}) pueden encontrar un archivo zip con las pruebas que necesitan pasar. Allí se encuentran los diferentes archivos que se usan para agregar al programa, así como las entradas y salidas esperadas (incluyendo salidas de error). 
 Para ejecutar las pruebas: 
 
 1. Compilar el programa del tp2 para generar el ejecutable. 
