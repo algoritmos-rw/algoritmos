@@ -291,7 +291,7 @@ Si se produce un error al procesar el archivo se imprime `Error en comando <coma
 
 ### Ver_tablero
 
-*Ejemplo:* `ver_tablero 3 asc 2018-04-08T10:00:00 2018-04-21T00:12:00`
+*Ejemplo:* `ver_tablero 3 asc 2018-04-08T10:00:00 2018-04-21T10:12:00`
 
 *Salida esperada:*
 
