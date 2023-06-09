@@ -146,16 +146,13 @@ Salida:
 
 ### Aeropuertos más importantes
 
-Utlizaremos alguno (o algunos) de estos comandos para poder obtener cuáles son los aeropuertos
-más importantes. Esto lo podemos hacer obteniendo cuáles son los aeropuertos más centrales,
-o bien usando un algoritmo como el de PageRank. Es necesario tener en cuenta además la frecuencia
+Utlizaremos este comando para poder obtener cuáles son los aeropuertos
+más importantes. Esto lo podemos hacer obteniendo cuáles son los aeropuertos más centrales. Es necesario tener en cuenta además la frecuencia
 de vuelos: no es lo mismo un aeropuerto que se conecte contra todos con un vuelo al año, que uno que
 se conecte al 80% con muchos vuelos al año. ¡Cuantos más vuelos, mejor!
 
 Dejamos un apunte para la explicación de qué es y cómo se calcula el
 [Betweeness Centrality](/algo2/material/apuntes/centralidad).
-
-#### Betweeness Centrality
 
 * Comando: `centralidad`
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
@@ -246,21 +243,20 @@ que el de salida (si deben ser aeropuertos de la ciudad en la cual se está para
 * Comando: `exportar_kml`.
 * Parámetros: `archivo`.
 * Utilidad: exporta el archivo KML con la ruta del último comando ejecutado (que incluya algún camino,
-o rutas áereas). Esto aplica para todos los comandos salvo el de estadísticas, u obtención de los
-aeropuertos más centrales. Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/apuntes/kml).
+o rutas áereas). Esto aplica para los comandos de caminos mínimos. Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/apuntes/kml).
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A + F)$$.
 * Ejemplo:
 Entrada:
 	```
-	vacaciones San Diego,6
+	camino_mas rapido,San Diego,New York
 	exportar_kml kml-ejemplo.kml
 	```
 Salida:
 	```
-	SAN -> ABQ -> HOU -> AUS -> LAX -> BNA -> SAN
+	SAN -> JFK
 	OK
 	```
-[Aquí](kml-ejemplo.kml) pueden encontrar el archivo KML exportado.
+
 
 ## Entrega
 
