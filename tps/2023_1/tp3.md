@@ -42,9 +42,6 @@ terminar haciendo escalas para poder ir entre cualquier parte del mundo a otra.
 * Una nueva aerolínea (RositAIR Airlines, con sede principal en el aeropuerto de Lanús)
 quiere poder conectar absolutamente todo el mundo, pero quiere utilizar las rutas más baratas
 posibles para ello. Entre tantos datos que hay, no saben por dónde empezar!
-* Algunas aerolíneas querrían ofrecer un viaje que empiece desde la ciudad del cliente, y
-haga un viaje por alguna cantidad de ciudades del mundo y vuelva luego a la ciudad origen
-(así pueden ofrecer paquetes con descuentos para tentar a los clientes).
 * Otras aerolíneas pidieron poder ofrecer un viaje cultural: que se pueda indicar qué ciudades se
 quieren conocer, y además si hay alguna ciudad que deba visitarse antes que otra (para poder
 disfrutar más del viaje).
