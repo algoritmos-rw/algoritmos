@@ -84,8 +84,9 @@ Entonces, simplemente iteramos utilizando el iterador externo y guardamos en una
 ```golang
 func ClavesDiccionario(dic Diccionario) Lista[K] {
     claves := CrearListaEnlazada[K]()
-    for iter := dic.Iterador(); iter.HaySiguiente(); {
-        claves.InsertarUltimo(iter.Siguiente())
+    for iter := dic.Iterador(); iter.HaySiguiente(); iter.Siguiente() {
+	clave, _ := iter.VerActual()
+        claves.InsertarUltimo(clave)
     }
     return claves
 }
