@@ -404,20 +404,3 @@ el caso de un grafo no dirigido y no pesado. Indicar el orden del algoritmo prop
 
 1.  (★★★★★) Implementar un algoritmo que, dado un grafo dirigido, un vértice $$s$$ y otro $$t$$ determine la cantidad
     mínima de aristas que deberían cambiar de sentido en el grafo para que exista un camino de $$s$$ a $$t$$.
-    
-
-**Los Siguiente ejercicios son del tema Backtracking. Si durante el actual cuatrimestre no se da dicho tema, obviar los ejercicios.**
-
-
-1.  (★★★) Implementar por **backtracking** un algoritmo que, dado un grafo no dirigido y un número
-    $$n \lt \left|\mathcal{V} \right|$$, nos permita obtener un subconjunto de $$n$$ vértices tal que ningún par de dichos
-    vértices sean adyacentes entre sí. Se puede suponer que los vértices están identificados con números de
-    0 a $$\left| \mathcal{V} \right|-1$$.
-
-1.  (★★★) Implementar un algoritmo que reciba un grafo y un número $$n$$ que, utilizando **backtracking**,
-    indique si es posible pintar cada vértice con $$n$$ colores de tal forma que no hayan dos vértices adyacentes
-    con el mismo color.
-
-1.  (★★★★) Problema del viajante (TSP): Dada una lista de ciudades y la distancia entre cada par de ellas, ¿Cuál
-    es la ruta más corta posible que visita cada ciudad exactamente una vez y al finalizar regresa a la ciudad de
-    origen?
