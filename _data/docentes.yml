@@ -82,7 +82,7 @@ ayudantes:
   github: io4
 
 - nombre: Lucas García Campos
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/lucasgc.png
   mail: lucasgarciacampos@gmail.com
   github: Sh4rkzDev
 
@@ -92,9 +92,9 @@ ayudantes:
   github: luciacp
 
 - nombre: Marco Bucciarelli
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/marcob.png
   mail: mbucciarelli@fi.uba.ar
-  github: marcobucciarelli
+  github: MarcoBucciarelli
 
 - nombre: Martina Lozano
   foto: /assets/img/docentes/martinal.png
@@ -107,12 +107,12 @@ ayudantes:
   github: habus0
 
 - nombre: Máximo Gismondi
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/maxig.png
   mail: magismondi@fi.uba.ar
-  github: maximogismondi
+  github: MaximoGismondi
 
 - nombre: Melina Jáuregui
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/melij.png
   mail: mjauregui@fi.uba.ar
   github: melijauregui
 
