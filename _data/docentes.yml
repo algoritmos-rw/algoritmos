@@ -6,10 +6,25 @@ profesor:
 
 ayudantes:
 
+- nombre: Agustín Altamirano
+  foto: /assets/img/docentes/unknown.png
+  mail: aaltamirano@fi.uba.ar
+  github: agustinaltamirano
+
+- nombre: Cristhian Noriega
+  foto: /assets/img/docentes/unknown.png
+  mail: cnoriega@fi.uba.ar
+  github: cristhian-noriega
+
 - nombre: Eliana Harriet
   foto: /assets/img/docentes/elianah.jpg
   mail: eharriet@fi.uba.ar
   github: elianaharriet
+
+- nombre: Emiliano Gómez
+  foto: /assets/img/docentes/unknown.png
+  mail: egomez@fi.uba.ar
+  github: emi2805
 
 - nombre: Ezequiel García
   foto: /assets/img/docentes/ezegar.jpg
@@ -31,11 +46,6 @@ ayudantes:
   mail: fxu@fi.uba.ar
   github: facundoxu
 
-- nombre: Federico Brasburg
-  foto: /assets/img/docentes/fedebra.png
-  mail: federico.brasburg@gmail.com
-  github: fedebrasburg
-
 - nombre: Federico Esteban
   foto: /assets/img/docentes/fedee.jpg
   mail: fede.est@gmail.com
@@ -56,16 +66,6 @@ ayudantes:
   mail: jcastrom@fi.uba.ar
   github: jignacio14
 
-- nombre: Ignacio Demarchi
-  foto: /assets/img/docentes/nachod.jpg
-  mail: idemarchi@fi.uba.ar
-  github: ignaciodemarchi
-
-- nombre: Juan Ignacio Kristal
-  foto: /assets/img/docentes/juanik.jpg
-  mail: kristaljuanignacio@gmail.com
-  github: juankristal
-
 - nombre: Juan Martín de la Cruz
   foto: /assets/img/docentes/jumas.jpg
   mail: jdelacruz@fi.uba.ar
@@ -81,15 +81,20 @@ ayudantes:
   mail: lfiegl@fi.uba.ar
   github: io4
 
-- nombre: Lucas Kriger
+- nombre: Lucas García Campos
   foto: /assets/img/docentes/unknown.png
-  mail: lkriger@fi.uba.ar
-  github: lucaskriger
+  mail: lucasgarciacampos@gmail.com
+  github: Sh4rkzDev
 
 - nombre: Lucía Capón
   foto: /assets/img/docentes/luciac.jpg
   mail: lcaponpaul@fi.uba.ar
   github: luciacp
+
+- nombre: Marco Bucciarelli
+  foto: /assets/img/docentes/unknown.png
+  mail: mbucciarelli@fi.uba.ar
+  github: marcobucciarelli
 
 - nombre: Martina Lozano
   foto: /assets/img/docentes/martinal.png
@@ -100,6 +105,16 @@ ayudantes:
   foto: /assets/img/docentes/mateoc.jpg
   mail: mcabrerar@fi.uba.ar
   github: habus0
+
+- nombre: Máximo Gismondi
+  foto: /assets/img/docentes/unknown.png
+  mail: magismondi@fi.uba.ar
+  github: maximogismondi
+
+- nombre: Melina Jáuregui
+  foto: /assets/img/docentes/unknown.png
+  mail: mjauregui@fi.uba.ar
+  github: melijauregui
 
 - nombre: Santiago Fassio
   foto: /assets/img/docentes/santif.jpg
