@@ -1,10 +1,10 @@
 # Primeros cuatrimestres terminan el primero de agosto
 # Segundos Cuatrimestres terminan el primero de febrero
-fin_cuatrimestre: 2023-07-31
-inicio_cuatrimestre: 2023-03-01
+fin_cuatrimestre: 2024-02-01
+inicio_cuatrimestre: 2023-08-01
 
-calendario_detallado: https://docs.google.com/spreadsheets/d/e/2PACX-1vSemAxp4Yf-vyNXIe2BKqA3Gx3n4natcHomGZxoyJk-7JdyO-P6GnT1cMAasfAtxorekcB1lOro8L75/pubhtml?gid=249256681&single=true
-calendario_embebido: https://docs.google.com/spreadsheets/d/e/2PACX-1vSemAxp4Yf-vyNXIe2BKqA3Gx3n4natcHomGZxoyJk-7JdyO-P6GnT1cMAasfAtxorekcB1lOro8L75/pubhtml?gid=2139872513&single=true&range=B1:D7&widget=false&chrome=false&headers=false
-formulario_alta: https://forms.gle/x7pEVFP811tzPDLe8
-formulario_grupos: https://forms.gle/s47nNbByPN1BtDgK6
+calendario_detallado: https://docs.google.com/spreadsheets/d/e/2PACX-1vSp8g3qrDR66FESKezuMxKdZgyMTqV9LnQV51yLW5gUK3WnZfyiGQiL5NuYLj7R6s_c1Vws_l6OiI7y/pubhtml?gid=249256681&single=true
+calendario_embebido: https://docs.google.com/spreadsheets/d/e/2PACX-1vSp8g3qrDR66FESKezuMxKdZgyMTqV9LnQV51yLW5gUK3WnZfyiGQiL5NuYLj7R6s_c1Vws_l6OiI7y/pubhtml?gid=2139872513&single=true&range=B1:D7&widget=false&chrome=false&headers=false
+formulario_alta: https://forms.gle/F1Ukj7Kw5wwBiYuu6
+formulario_grupos: https://forms.gle/UZKzG9MyQ8AoZrYD8
 cuestionario_arboles_b: https://forms.gle/cgc2PkFyXKJzZLhD9
