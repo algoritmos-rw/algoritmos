@@ -7,14 +7,14 @@ profesor:
 ayudantes:
 
 - nombre: Agustín Altamirano
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/agustinalt.png
   mail: aaltamirano@fi.uba.ar
   github: agustinaltamirano
 
 - nombre: Cristhian Noriega
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/cristhiann.png
   mail: cnoriega@fi.uba.ar
-  github: cristhian-noriega
+  github: Cristhian-Noriega
 
 - nombre: Eliana Harriet
   foto: /assets/img/docentes/elianah.jpg
