@@ -14,10 +14,10 @@ Hay varias opciones, según tu sistema operativo y tus preferencias. Para poder 
 
 Además es altamente recomendado contar con un **editor de texto** o un **entorno de desarrollo (IDE)** que permita programar y compilar cómodamente. Algunas posibilidades son:
 
-*   [Geany](http://www.geany.org/), un entorno de desarrollo amigable, multi plataforma.
-*   [Sublime Text](https://www.sublimetext.com/), otro entorno de desarrollo. 
-* 	[Visual Studio Code](https://code.visualstudio.com/), con la extensión para Go.	
-* 	[Goland](https://www.jetbrains.com/go/download/)
+* [Goland](https://www.jetbrains.com/go/download/) (se obtiene licencia gratuita con el mail FIUBA). 
+* [Visual Studio Code](https://code.visualstudio.com/), con la extensión para Go.
+* [Sublime Text](https://www.sublimetext.com/), otro entorno de desarrollo. 
+* [Geany](http://www.geany.org/), un entorno de desarrollo amigable, multi plataforma.
 
 ## Instalar Linux
 
@@ -64,19 +64,31 @@ El último paso se explica a continuación.
 Abrir una terminal (CTRL+ALT+T) y escribir lo siguiente:
 
 ```
+	sudo apt-get update
 	sudo apt install build-essential valgrind manpages-dev gdb
-	sudo apt-get install golang-go
+```
+Les va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas auxiliares.
+
+Se puede instalar el compilador de Go utilizando el comando `sudo apt-get install golang-go`. Ejecutar dicho comando y validar la versión de go ejecutando el comando `go version`. Si efectivamente se trata de la versión 1.20 (puede ser 1.20.5, o cualquier número al final), entonces ya está. A veces este comando no instala la última versión, sino una anterior. 
+Para instalar el compilador del lenguaje con la versión exacta que estamos utilizando en el curso, pueden seguir los siguientes comandos: 
+```
+	sudo apt remove --autoremove golang
+	sudo rm -rf /usr/local/go
+	sudo apt-get install wget
+	wget  https://go.dev/dl/go1.20.7.linux-amd64.tar.gz
+	sudo tar -xvf go1.20.7.linux-amd64.tar.gz
+	sudo mv go /usr/local
+	rm go1.20.7.linux-amd64.tar.gz
 ```
 
-Les va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas. ¡Ya está!
+Luego, modificar el archivo `~/.profile` o `~/.bash_profile` (según cuál exista) agregando las siguientes líneas al final del mismo:
+```
+	export GOROOT=/usr/local/go
+	export GOPATH=$HOME/Projects
+	export PATH=$GOPATH/bin:$GOROOT/bin:$PATH 
+```
 
-Estas herramientas son:
+Reiniciar la terminal para que tome los últimos cambios. Abrir una nueva y ejecutar el comando `go version` para validar que el compilador se encuentre instalado correctamente y con la versión esperada. 
 
-* [build-essential](https://packages.ubuntu.com/bionic/build-essential): Herramientas esenciales de toda distribución de Linux. 
-* [go](https://go.dev/doc/install)
-* [manpages-dev](http://man7.org/linux/man-pages/man1/intro.1.html): Manual de usuario de Linux. Extremadamente util para tener la documentación oficial de los comandos utilizados. Se invoca con el comando `man`. Por ejemplo, `man printf`
-* [gdb](https://www.gnu.org/software/gdb/): Herramienta para la depuración de programas.
-
-Finalmente, se recomienda instalar un editor de texto más potente que los que vienen por defecto. Algunos ejemplos son [Geany](https://www.geany.org/) (`sudo apt install geany`), [Atom](https://atom.io/) y [Visual Studio Code](https://code.visualstudio.com/).
 
 {% include footnotes.html %}
