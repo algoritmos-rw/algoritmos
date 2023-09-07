@@ -49,7 +49,7 @@ Las implementaciones deben respetar los lineamientos de la documentación y, tal
 
 La entrega se realizará de forma digital, subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 
-Importante: No enviar la entrega hasta tanto asegurarse que el programa compila, todas las pruebas dan OK y valgrind no reporta errores.
+Importante: No enviar la entrega hasta tanto asegurarse que el programa compila y todas las pruebas dan OK.
 
 
 **No olviden revisar las [preguntas frecuentes de los TDA](/algo2/faq/tda)**
