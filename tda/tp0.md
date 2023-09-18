@@ -37,4 +37,6 @@ En este caso, `<nombre del archivo>` vendría a ser `tp0.go`.
 La entrega se hará de forma digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}).
 Deben entregar un archivo `zip` con los entregables. No es necesario que entreguen ningún archivo aparte de `tp0.go`. 
 
+En caso de encontrarse con dificultades para armar el módulo como es descripto aquí, [les dejamos un video explicativo paso a paso para todas las entregas](https://www.youtube.com/watch?v=IZrQt-vR3E4).
+
 **No olviden revisar los [primeros pasos en Linux](/algo2/faq/primeros-pasos) y las [preguntas frecuentes](/algo2/faq/).**
