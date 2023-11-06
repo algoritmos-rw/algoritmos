@@ -242,8 +242,8 @@ mostrar_likes 0
 Una salida podría ser: 
 ```
 El post tiene 4 likes:
-  chorch
   chicho1994
+  chorch
   eldiego
   mondi
 ```
