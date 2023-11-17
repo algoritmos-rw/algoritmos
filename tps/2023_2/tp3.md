@@ -339,6 +339,13 @@ netstats: netstats.py grafo.py biblioteca.py
 
 **Importante**: En caso de recibir un error `FileNotFoundError: [Errno 2] No such file or directory: './netstats': './netstats'`, tener en cuenta que para el caso de enviar código escrito en Python es necesario además indicar la ruta del intérprete. Esto puede hacerse agregando como primera línea del archivo principal (en el ejemplo, sería `netstats.py`) la línea: `#!/usr/bin/python3`.
 
+Si el TP fuera realizado en Go, un posible ejemplo del archivo podría ser:
+
+``` makefile
+netstats:
+    cd mi_implementacion_tp3; go build -o ../netstats
+```
+
 ## Criterios de aprobación
 
 El código entregado debe ser claro y legible y ajustarse a las especificaciones
