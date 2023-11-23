@@ -1,10 +1,10 @@
 # Site settings
-title: Algoritmos y Programación II
+title: Algoritmos y Estructuras de Datos
 description: >
-  Página de la materia Algoritmos y Programación II, curso Buchwald.
+  Página de la materia Algoritmos y Estructuras de Datos, curso Buchwald.
   Facultad de Ingeniería, Universidad de Buenos Aires.
 
-baseurl: "/algo2"
+baseurl: "/aed"
 entregas: "https://algoritmos-rw.dijkstra.ar/entregas/"
 notas: "https://algoritmos-rw.dijkstra.ar/notas/"
 skel: "https://algoritmos-rw.github.io/descargas"

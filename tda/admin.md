@@ -54,4 +54,4 @@ Importante: No enviar la entrega hasta tanto asegurarse que el programa compila 
 Les recordamos que en caso que se encuentren con dificultades para armar el módulo para la entrega, [pueden acudir al video paso a paso que realizamos para mostrar esto](https://youtu.be/IZrQt-vR3E4?t=300).
 
 
-**No olviden revisar las [preguntas frecuentes de los TDA](/algo2/faq/tda)**
+**No olviden revisar las [preguntas frecuentes de los TDA](/aed/faq/tda)**

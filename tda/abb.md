@@ -57,7 +57,7 @@ tdas
    |--> go.mod
 ```
 
-**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/algo2/faq/abb)**.
+**No olviden revisar las [preguntas frecuentes del árbol binario de búsqueda](/aed/faq/abb)**.
 
 ---
 ### Bibliografia recomendada

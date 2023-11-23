@@ -1,8 +1,8 @@
-# Algo2
+# AED
 
-Este es el repositorio del sitio web de Algoritmos y Programación II, publicado en:
+Este es el repositorio del sitio web de Algoritmos y Estructuras de Datos, publicado en:
 
-<https://algoritmos-rw.github.io/algo2/>
+<https://algoritmos-rw.github.io/aed/>
 
 ## Instrucciones para actualizar la página web
 
@@ -15,14 +15,14 @@ Para visualizar los cambios de manera local, se debe instalar [Jekyll](https://j
 
 $ apt-get install ruby ruby-dev bundler
 $ gem install jekyll bundler
-$ git clone git@github.com:algoritmos-rw/algo2
-$ cd algo2
+$ git clone git@github.com:algoritmos-rw/aed
+$ cd aed
 $ bundle install --path=../gems
 $ // de tener problemas con nokogiri: apt-get install libxml2-dev
 
 # Para visualizar al editar
 
-$ cd algo2
+$ cd aed
 $ bundle exec jekyll serve --livereload
 $ // de tener problemas con javascript runtime: apt-get install nodejs
 
