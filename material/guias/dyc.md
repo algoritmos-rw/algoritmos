@@ -308,7 +308,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 	Pueden considerar que habrá una única persona contagiada, pero esto no cambiará el análisis
 	a realizar. 
 	
-1. 	(★★★★) Se sabe, por el teorema de Bolsano, que si una función es continua en un intervalo `[a, b]`, 
+1. 	(★★★★) Se sabe, por el teorema de Bolzano, que si una función es continua en un intervalo `[a, b]`, 
 	y que en el punto `a` es positiva y en el punto `b` es negativa (o viceversa), necesariamente
 	debe haber (al menos) una raíz en dicho intervalo. Implementar una función 
 	`func raiz(f func(int)int, a int, b int) int` que reciba una función (univariable) y
