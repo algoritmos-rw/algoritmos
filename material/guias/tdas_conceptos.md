@@ -190,7 +190,7 @@ $$n$$.
     (que devuelve la suma entre el número 1 y el número recibido), la pila resultante 
     debe ser `[ 2, 3, 4, 7, 3 ]` (el tope es el número 3).
 
-1.  (★★) Implementar una función recursiva que reciba una pila y devuelva la cantidad de elementos de la misma. Al terminar la ejecución de la función la pila debe quedar en el mismo estado al original. 
+1.  (★★) Implementar una función recursiva que reciba una pila y devuelva, sin utilizar estructuras auxiliares, la cantidad de elementos de la misma. Al terminar la ejecución de la función la pila debe quedar en el mismo estado al original. 
 
 1.  (★★★) Implementar una función `func balanceado(texto string) boolean`,
     que retorne si `texto` esta balanceado o no. `texto` sólo puede contener los siguientes caracteres: `[,],{,}(,)`. Indicar y justificar la complejidad de la función implementada.
