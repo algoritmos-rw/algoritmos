@@ -404,3 +404,42 @@ el caso de un grafo no dirigido y no pesado. Indicar el orden del algoritmo prop
 
 1.  (★★★★★) Implementar un algoritmo que, dado un grafo dirigido, un vértice $$s$$ y otro $$t$$ determine la cantidad
     mínima de aristas que deberían cambiar de sentido en el grafo para que exista un camino de $$s$$ a $$t$$.
+
+1.  (★★★) Se tiene un **Grafo no dirigido** `G`, y un **árbol de tendido mínimo** `T`, de `G`.  Se obtiene una de 
+    las aristas de `G`, que **no** se encuentra en `T`, y se le reduce el peso. Dar un algoritmo lineal que permita 
+    determinar el nuevo **árbol de tendido mínimo** `T'`(notar que `T'` podría ser igual a `T`). Justificar la 
+    complejidad del algoritmo.
+
+1.  (★★★) Como todos sabemos, Taller de Programación I implica programar mucho. El equipo de 
+    Federico esta desarrollando un Age of Empires y le asignaron el modulo de movimientos.
+    Dispone de un mapa, podríamos decir una grilla, donde se puede ver para cada celda su 
+    contenido (por ejemplo si está libre, si es agua, un árbol, etc).
+    Fede tiene que implementar un algoritmo que, a partir de una unidad (por ejemplo un 
+    soldado), en una celda en especifico encuentre el camino a una celda objetivo. Considerar 
+    que entre celdas puede haber diferencia de alturas por lo que puede costarle mas (o menos)
+    a una unidad ir de una celda a otra.
+    Por supuesto que no puede ser cualquier camino, si no el que haga que la unidad llegue 
+    más rápido a su objetivo.
+
+    a. Modelar el problema usando Grafos especificando de forma completa todos sus componentes.
+
+    b. Implementar un algoritmo que a partir de una celda de origen y una de destino, 
+    retorne el camino que tiene que hacer la unidad, indicando y justificando la complejidad final.
+
+1.  (★★★★) Grace, docente de un primer grado de un colegio primario, tiene como tarea armar la fila 
+    el acto del 9 de julio.
+    Como no quiere que los chicos se distraigan, quiere que cada uno quede entre dos personas 
+    de las cuales no es amigo.
+    Para eso dispone de un mapa de amistades donde se puede ver quién es amigo de quién.
+
+    a. Modelar el problema usando Grafos especificando de forma completa todos sus componentes.
+
+    b. Implementar un algoritmo que reciba como parametro el grafo del punto anterior y retorne 
+    una posible fila en formato de lista. Retornar lista vacia si no existe solución. Indicar 
+    y justificar la complejidad final.
+
+    **Pista**: No pensar el ejercicio armando, inicialmente, la fila sino viendo como separar 
+    a cada uno de sus amigos.
+    **Resolución de este ejercicio aquí** (coming soon).
+
+

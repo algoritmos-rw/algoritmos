@@ -229,3 +229,26 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     que leerlos de derecha a izquierda.
     Luego en el 2do el `2 y 7` con la misma lógica, y finalmente la raíz `5` al final.
     Indicar y justificar la complejidad de la primitiva implementada.
+
+1.  (★★★) Implementar una **primitiva** del ABB que dado un valor entero `M`, una clave inicial `inicio` y 
+    una clave final `fin`, se devuelva una lista con todos los **datos** cuyas claves estén entre 
+    `inicio` y `fin`, que estén **dentro de los primeros `M` niveles del árbol** (considerando
+    a la raíz en nivel 1). 
+    Indicar y justificar la complejidad temporal.
+
+    Por ejemplo, si tenemos el siguiente ABB con `M = 3`, `inicio = 5` y `fin = 15`:
+    ```
+          10
+        /    \
+       5      15                    Un resultado final serían los datos de las 
+      / \    /  \                   claves 10, 5, 8, 15, 12 (en cualquier orden).
+     3   8  12   20
+        /     \
+       7       14
+    ```
+
+1.  (★★) Realizar un seguimiento de las siguientes operaciones sobre un ABB,
+    cuyo estado inicial parte del preorder 
+    `["Elefante", "Abeja", "Burro", "Águila", "Camello", "Dromedario", "Gato", "Foca", "Orangután"]` 
+    (con función de comparación alfanumérica): `Guardar("Cangrejo")`, `Borrar("Elefante")`,
+    `Borrar("Gato")`, `Guardar("Lagarto")`, `Borrar("Águila")`.
