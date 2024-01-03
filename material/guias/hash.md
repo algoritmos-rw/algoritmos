@@ -225,7 +225,7 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerra
 
     Indicar y justificar el orden de la función implementada.
 
-1.  (★★) Una fábrica de pastas de Lanús le pide a alumnos de Algoritmos y Programación II que 
+1.  (★★) Una fábrica de pastas de Lanús le pide a alumnos de Algoritmos y Estructuras de Datos que 
     le solucionen un problema: sus dos distribuidoras de materias primas le enviaron un 
     hash cada una, dónde sus claves son los nombres de los productos, y sus valores 
     asociados, sus precios. La fábrica de pastas le pide a los alumnos que le implementen 

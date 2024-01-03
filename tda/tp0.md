@@ -39,4 +39,4 @@ Deben entregar un archivo `zip` con los entregables. No es necesario que entregu
 
 En caso de encontrarse con dificultades para armar el módulo como es descripto aquí, [les dejamos un video explicativo paso a paso para todas las entregas](https://www.youtube.com/watch?v=IZrQt-vR3E4).
 
-**No olviden revisar los [primeros pasos en Linux](/algo2/faq/primeros-pasos) y las [preguntas frecuentes](/algo2/faq/).**
+**No olviden revisar los [primeros pasos en Linux](/aed/faq/primeros-pasos) y las [preguntas frecuentes](/aed/faq/).**

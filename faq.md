@@ -29,4 +29,4 @@ Preguntas frecuentes
 
 * [Árbol Binario de Búsqueda](faq/abb.md)
 
-Si tenés alguna pregunta que consideras frecuente podes agregarla como un [issue](https://github.com/algoritmos-rw/algo2/issues) y la agregamos al sitio.
+Si tenés alguna pregunta que consideras frecuente podes agregarla como un [issue](https://github.com/algoritmos-rw/aed/issues) y la agregamos al sitio.

@@ -4,7 +4,7 @@ layout: page
 
 # Inicio
 
-Este es el sitio de la materia **Algoritmos y Programación II**, curso **Buchwald**, de la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA).
+Este es el sitio de la materia **Algoritmos y Estructuras de Datos**, curso **Buchwald**, de la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA).
 
 
 En caso de encontrar algún problema con la página (desde errores de fechas, links rotos, errores en las guías, etc), por favor
