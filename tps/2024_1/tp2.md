@@ -330,7 +330,7 @@ de la consigna. Debe compilar sin advertencias y correr sin errores de memoria.
 
 La entrega incluye, obligatoriamente, los siguientes archivos de código:
 
-- El código de la solución del TP, en su respectivo módulo (el directorio **debe** llamarse `tp3`)
+- El código de la solución del TP, en su respectivo módulo (el directorio **debe** llamarse `tp2`)
 - El código de los TDAs programados en la cursada, en su respectivo módulo. 
 
 
