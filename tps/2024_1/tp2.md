@@ -93,7 +93,6 @@ log.
 - `ver_visitantes <desde> <hasta>`: muestra todas las IPs que solicitaron algún
 recurso en el servidor, dentro del rango de IPs determinado.
 - `ver_mas_visitados <n>`: muestra los _n_ recursos más solicitados.
-- AGREGAR ALGÚN COMANDO MÁS
 
 Si un comando es válido deberá imprimir `OK` por salida estándar después de ser
 ejecutado.
@@ -112,7 +111,7 @@ directorio donde se ejecuta el programa.
 
 Al ejecutarse se deberá procesar el archivo, y detectar posibles casos de ataques
 de denegación de servicio. Si se detecta que una dirección IP realizó cinco o más
-peticiones en menos de dos segundos, el comando debe alertarlo por salida
+peticiones en **menos de dos segundos**, el comando debe alertarlo por salida
 estándar como sospechosa de intento de DoS.
 
 A la hora de detectar denegaciones de servicio, varios archivos se consideran
@@ -234,6 +233,8 @@ Para interpretar la sección de la fecha en Go pueden utilizar el módulo [`time
 de la librería estándar. Allí pueden encontrar como parsear la fecha que se obtiene de los archivos
 ((`time.Parse`)[https://pkg.go.dev/time#Parse]), así como la forma de obtener la diferencia en tiempos ((`time.Sub`)[https://pkg.go.dev/time#Time.Sub]). 
 
+Para la función `time.Parse` de Go, pueden utilizar `"2006-01-02T15:04:05-07:00"` como _layout_ para que coincida con el formato que estamos utilizando. 
+
 ### Tiempos de ejecución
 
 - Agregar archivo:
@@ -295,7 +296,7 @@ Se espera una salida como la siguiente:
 Notar que:
 
 - de haberse detectado posibles DoS, deberían haberse reportado antes de los
-`OK` de `agregar_archivo`.
+`OK` de `agregar_archivo` (pero dichos accessos a los recursos siguen quedando registrados).
 - los sitios más visitados se totalizan sumando los dos archivos agregados hasta
 el momento.
 - los sitios más visitados son reportados en orden según su frecuencia.
