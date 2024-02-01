@@ -69,7 +69,7 @@ Abrir una terminal (CTRL+ALT+T) y escribir lo siguiente:
 ```
 Les va a pedir la contraseña de usuario. Una vez ingresada, se bajarán de internet e instalarán automáticamente todas las herramientas auxiliares.
 
-Se puede instalar el compilador de Go utilizando el comando `sudo apt-get install golang-go`. Ejecutar dicho comando y validar la versión de go ejecutando el comando `go version`. Si efectivamente se trata de la versión 1.20 (puede ser 1.20.5, o cualquier número al final), entonces ya está. A veces este comando no instala la última versión, sino una anterior. 
+Se puede instalar el compilador de Go utilizando el comando `sudo apt-get install golang-go`. Ejecutar dicho comando y validar la versión de go ejecutando el comando `go version`. Si efectivamente se trata de la versión 1.20 (puede ser 1.20.5, o cualquier número al final), entonces ya está. A veces este comando no instala la última versión, sino una anterior. Si tuvieran instalada una versión posterior (por ejemplo, 1.21.6) no debería haber ningún problema. Lo importante es que sea al menos 1.20. 
 Para instalar el compilador del lenguaje con la versión exacta que estamos utilizando en el curso, pueden seguir los siguientes comandos: 
 ```
 	sudo apt remove --autoremove golang
