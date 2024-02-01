@@ -75,10 +75,10 @@ Para instalar el compilador del lenguaje con la versión exacta que estamos util
 	sudo apt remove --autoremove golang
 	sudo rm -rf /usr/local/go
 	sudo apt-get install wget
-	wget  https://go.dev/dl/go1.20.7.linux-amd64.tar.gz
-	sudo tar -xvf go1.20.7.linux-amd64.tar.gz
+	wget https://go.dev/dl/go1.201.3.linux-amd64.tar.gz
+	sudo tar -xvf go1.20.13.linux-amd64.tar.gz
 	sudo mv go /usr/local
-	rm go1.20.7.linux-amd64.tar.gz
+	rm go1.20.13.linux-amd64.tar.gz
 ```
 
 Luego, modificar el archivo `~/.profile` o `~/.bash_profile` (según cuál exista) agregando las siguientes líneas al final del mismo:
