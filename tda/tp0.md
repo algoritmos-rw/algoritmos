@@ -16,8 +16,10 @@ Se puede ver en el archivo `tp0.go` la documentación que indica lo que debe hac
 De todos los archivos que pueden encontrar en el sitio de descargas, sólo deben modificar `tp0.go`. 
 El resto de archivos del zip no los deben modificar. Sí pueden, no obstante, leer el archivo `tp0_test.go` para entender qué verificaciones realizaremos sobre su código. 
 
-Para esta parte del tp0, deben crear un paquete que contenga tanto a `tp0.go` como a `tp0_test.go`. Dicho paquete ha de llamarse `ejercicios`. Luego, fuera de este paquete (en el nivel principal del módulo a implementar) debe haber un archivo que puede llamarse como gusten (por ejemplo `main.go`) que tenga el paquete `main` sí o sí, donde estará el programa a implementar. 
-Además deben de tener el archivo `go.mod` que es el árchivo del módulo del tp. Es decir, para funcionar correctamente deben tener una estructura de directorios como la siguiente: 
+Para esta parte del tp0, deben crear un paquete llamado ejercicios que contenga tanto a tp0.go como a tp0_test.go. Luego, fuera de este paquete (en el nivel principal del módulo a implementar) debe haber un archivo que puede llamarse como gusten (por ejemplo main.go) que tenga el paquete main (obligatorio en todos los programas escritos en Go), donde estará el código del programa a implementar.
+Deben entregar también el archivo go.mod con la información del módulo creado.
+
+En resumen, para funcionar correctamente deben tener una estructura de directorios y archivos como la siguiente:
 
 ```
 tp0 (o como gusten llamarle al directorio del tp)
