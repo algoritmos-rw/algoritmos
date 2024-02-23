@@ -20,7 +20,7 @@ Para esta parte del tp0, deben crear un paquete que contenga tanto a `tp0.go` co
 Además deben de tener el archivo `go.mod` que es el árchivo del módulo del tp. Es decir, para funcionar correctamente deben tener una estructura de directorios como la siguiente: 
 
 ```
-TP0 (o como gusten llamarle al directorio del tp)
+tp0 (o como gusten llamarle al directorio del tp)
 | -> main.go
 | -> go.mod
 | -> ejercicios
