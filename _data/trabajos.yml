@@ -19,12 +19,12 @@ Cola:
 TP1:
   id: TP1
   publicacion: 2024-04-11
-  entrega: 2024-04-17
+  entrega: 2024-04-22
   enunciado_link: /tps/2024_1/tp1
 
 Lista:
   id: Lista
-  publicacion: 2024-04-18
+  publicacion: 2024-04-22
   entrega: 2024-04-29
   enunciado_link: /tps/lista
 
