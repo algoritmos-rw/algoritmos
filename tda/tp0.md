@@ -46,9 +46,23 @@ O simplemente:
 	
 
 Luego que todas las pruebas ejecuten correctamente, deben implementar un programa (en el archivo principal, `main.go` que mencionamos antes) que: 
-* Abra y lea de dos archivos de texto regulares (llamados `archivo1.in` y `archivo2.in`). Cada archivo tendrá únicamente una línea de texto que será la representación de un arreglo de números. Cada elemento del arreglo estará separado por comas. Por ejemplo, el contenido de `archivo1.in` podría ser `1, 7, 12, 8, 2, 1`.
-* Se debe leer cada uno de los archivos, y cargar en memoria los arreglos correspondientes, separando cada componente (para lo que pueden utilizar la función `split` del módulo `strings`) y convertir cada uno de los elementos a `int` (para lo que pueden utilizar la función `Atoi` del módulo `strconv`). Pueden asumir que no van a haber errores en las lecturas, ni letras donde deben haber números, etc...
-* Una vez obtenidos los arreglos, se debe imprimir por consola el arreglo que sea **mayor** entre los dos, **ordenado**. Para esto, utilizar las funciones `Comparar` y `Seleccion` previamente implementadas. Para imprimir, hacerlo en el mismo formato que en el que vienen en los archivos. Es decir, cada componente separados por una coma. Si el arreglo más grande fuera `2, 1, 7, 3`, habría que imprimir `1, 2, 3, 7`.
+* Abra y lea de dos archivos de texto regulares (llamados `archivo1.in` y `archivo2.in`). Cada archivo tendrá varias líneas, donde en cada línea habrá un único número y nada más. En total, este archivo será la representación de un arreglo de números. Por ejemplo, el contenido de `archivo1.in` podría ser:
+	```
+	1
+	7
+	12
+	8
+	2
+	1
+	```
+* Se debe leer cada uno de los archivos, y cargar en memoria los arreglos correspondientes, leyendo cada componente y convertir cada uno de los elementos a `int` (para lo que pueden utilizar la función `Atoi` del módulo `strconv`). Pueden asumir que no van a haber errores en las lecturas, ni letras donde deben haber números, etc...
+* Una vez obtenidos los arreglos, se debe imprimir el arreglo que sea **mayor** entre los dos, de forma **ordenada**. Para esto, utilizar las funciones `Comparar` y `Seleccion` previamente implementadas. Para imprimir, hacerlo en el mismo formato que en el que vienen en los archivos. Es decir, una componente por línea. Si el arreglo más grande fuera `[2, 1, 7, 3]`, habría que imprimir:
+	```
+	1
+	2
+	3
+	7
+	```
 
 Antes de realizar la entrega, es importante que cualquier archivo entregado cumpla con el formato de Go (en este caso particular, `tp0.go`, pero aplicar para cualquier entrega de aquí en más). Para lograr esto, simplemente deben correr el comando: 
 
@@ -59,6 +73,6 @@ En este caso, `<nombre del archivo>` vendría a ser `tp0.go` (o `ejercicios/tp0.
 La entrega se hará de forma digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}).
 Deben entregar un archivo `zip` con los entregables. Deben entregar un zip con todo el contenido del directorio (en particular, el archivo principal y `tp0.go`). 
 
-En caso de encontrarse con dificultades para armar el módulo como es descripto aquí, [les dejamos un video explicativo paso a paso para todas las entregas](https://www.youtube.com/watch?v=IZrQt-vR3E4).
+En caso de encontrarse con dificultades para armar el módulo como es descripto aquí, [les dejamos un video explicativo paso a paso para esta entrega](https://www.youtube.com/watch?v=IZrQt-vR3E4).
 
-**No olviden revisar los [primeros pasos en Linux](/aed/faq/primeros-pasos) y las [preguntas frecuentes](/aed/faq/).**
+**No olviden revisar los [primeros pasos en Linux](/algoritmos/faq/primeros-pasos) y las [preguntas frecuentes](/algoritmos/faq/).**
