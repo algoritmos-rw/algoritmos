@@ -16,8 +16,7 @@ Se puede ver en el archivo `tp0.go` la documentación que indica lo que debe hac
 De todos los archivos que pueden encontrar en el sitio de descargas, sólo deben modificar `tp0.go`. 
 El resto de archivos del zip no los deben modificar. Sí pueden, no obstante, leer el archivo `tp0_test.go` para entender qué verificaciones realizaremos sobre su código. 
 
-Para esta parte del tp0, deben crear un paquete llamado ejercicios que contenga tanto a tp0.go como a tp0_test.go. Luego, fuera de este paquete (en el nivel principal del módulo a implementar) debe haber un archivo que puede llamarse como gusten (por ejemplo main.go) que tenga el paquete main (obligatorio en todos los programas escritos en Go), donde estará el código del programa a implementar.
-Deben entregar también el archivo go.mod con la información del módulo creado.
+Primero deben crear el módulo del tp0 en el directorio que vayan a usar para este (`go init tp0`). Para esta primera parte del tp deben crear un paquete llamado `ejercicios` que contenga tanto a `tp0.go` como a `tp0_test.go`. Luego, fuera de este paquete (en el nivel principal del módulo a implementar) debe haber un archivo que puede llamarse como gusten (por ejemplo `main.go`) que tenga el paquete main (obligatorio en todos los programas escritos en Go), donde estará el código del programa a implementar. 
 
 En resumen, para funcionar correctamente deben tener una estructura de directorios y archivos como la siguiente:
 
@@ -30,9 +29,7 @@ tp0 (o como gusten llamarle al directorio del tp)
      | -> tp0_test.go
 ```
 
-La compilación (estando ubicados en el directorio donde se encuentren los archivos) se realiza con el siguiente comando:
-
-    go build tp0
+Recuerden hacer `go mod tidy`. Para la primera parte del tp simplemente pueden ejecutar
 
 Las pruebas deben dar todas OK, y las pueden ejecutar con:
 
@@ -64,14 +61,22 @@ Luego que todas las pruebas ejecuten correctamente, deben implementar un program
 	7
 	```
 
-Antes de realizar la entrega, es importante que cualquier archivo entregado cumpla con el formato de Go (en este caso particular, `tp0.go`, pero aplicar para cualquier entrega de aquí en más). Para lograr esto, simplemente deben correr el comando: 
+La compilación (estando ubicados en el directorio principal del módulo) se realiza con el siguiente comando:
+
+    go build tp0
+
+Luego, pueden ejecutar el programa haciendo: 
+
+	./tp0
+
+Antes de realizar la entrega, es importante que cualquier archivo entregado cumpla con el formato de Go (en este caso particular, `tp0.go` y `main.go`, pero aplicar para cualquier entrega de aquí en más). Para lograr esto, simplemente deben correr el comando: 
 
 	go fmt <nombre del archivo>
 
 En este caso, `<nombre del archivo>` vendría a ser `tp0.go` (o `ejercicios/tp0.go`, si están parados desde el directorio del tp0, y no desde el de ejercicios).
 
 La entrega se hará de forma digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}).
-Deben entregar un archivo `zip` con los entregables. Deben entregar un zip con todo el contenido del directorio (en particular, el archivo principal y `tp0.go`). 
+Deben entregar un archivo `zip` con los entregables. Deben entregar un zip con todo el contenido del módulo. 
 
 En caso de encontrarse con dificultades para armar el módulo como es descripto aquí, [les dejamos un video explicativo paso a paso para esta entrega](https://www.youtube.com/watch?v=IZrQt-vR3E4).
 
