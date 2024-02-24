@@ -6,11 +6,6 @@ profesor:
 
 ayudantes:
 
-- nombre: Agustín Altamirano
-  foto: /assets/img/docentes/agustinalt.png
-  mail: aaltamirano@fi.uba.ar
-  github: agustinaltamirano
-
 - nombre: Cristhian Noriega
   foto: /assets/img/docentes/cristhiann.png
   mail: cnoriega@fi.uba.ar
@@ -41,11 +36,6 @@ ayudantes:
   mail: facu_nixerito@hotmail.com
   github: bonshot
 
-- nombre: Facundo Xu
-  foto: /assets/img/docentes/facuxu.jpg
-  mail: fxu@fi.uba.ar
-  github: facundoxu
-
 - nombre: Federico Esteban
   foto: /assets/img/docentes/fedee.jpg
   mail: fede.est@gmail.com
@@ -56,20 +46,20 @@ ayudantes:
   mail: forte.federico90@gmail.com
   github: federicoforte22
 
-- nombre: Francisco Juárez
-  foto: /assets/img/docentes/franj.jpg
-  mail: fjuarez@fi.uba.ar
-  github: franjuarez
+- nombre: Francisco López Tancredi
+  foto: /assets/img/docentes/franlt.png
+  mail: flopezt@fi.uba.ar
+  github: franciscolopeztancredi
 
 - nombre: Ignacio Castro
   foto: /assets/img/docentes/josec.jpg
   mail: jcastrom@fi.uba.ar
   github: jignacio14
 
-- nombre: Juan Martín de la Cruz
-  foto: /assets/img/docentes/jumas.jpg
-  mail: jdelacruz@fi.uba.ar
-  github: juandelahd
+- nombre: Juan Pablo Bel
+  foto: /assets/img/docentes/juanb.png
+  mail: jbel@fi.uba.ar
+  github: juannbel
 
 - nombre: Lara Scazzola
   foto: /assets/img/docentes/laras.jpeg
@@ -86,15 +76,20 @@ ayudantes:
   mail: lucasgarciacampos@gmail.com
   github: Sh4rkzDev
 
-- nombre: Lucía Capón
-  foto: /assets/img/docentes/luciac.jpg
-  mail: lcaponpaul@fi.uba.ar
-  github: luciacp
+- nombre: Lucía Almanza
+  foto: /assets/img/docentes/luciaa.jpg
+  mail: luciaalmanzaa@gmail.com
+  github: luciaalmanza
 
 - nombre: Marco Bucciarelli
   foto: /assets/img/docentes/marcob.png
   mail: mbucciarelli@fi.uba.ar
   github: MarcoBucciarelli
+
+- nombre: Martín Mastropietro
+  foto: /assets/img/docentes/mastro.jpg
+  mail: mmastropietro@fi.uba.ar
+  github: martinmastropietro
 
 - nombre: Martina Lozano
   foto: /assets/img/docentes/martinal.png
@@ -125,8 +120,3 @@ ayudantes:
   foto: /assets/img/docentes/taielm.png
   mail: tamolina@fi.uba.ar
   github: taielmolina01
-
-- nombre: Theo Lijs
-  foto: /assets/img/docentes/theol.jpg
-  mail: lijsth@gmail.com
-  github: lijsth
