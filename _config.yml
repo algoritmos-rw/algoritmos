@@ -4,7 +4,7 @@ description: >
   Página de la materia Algoritmos y Estructuras de Datos, curso Buchwald.
   Facultad de Ingeniería, Universidad de Buenos Aires.
 
-baseurl: "/aed"
+baseurl: "/algoritmos"
 entregas: "https://algoritmos-rw.dijkstra.ar/entregas/"
 notas: "https://algoritmos-rw.dijkstra.ar/notas/"
 skel: "https://algoritmos-rw.github.io/descargas"

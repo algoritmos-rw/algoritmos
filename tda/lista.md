@@ -83,7 +83,7 @@ Las pruebas deben incluir los casos básicos de TDA similares a los contemplados
 
 Al igual que en los casos anteriores, deberán entregar en formato digital, subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo.
 
-**No olviden revisar las [preguntas frecuentes de la lista enlazada](/aed/faq/lista-enlazada)**
+**No olviden revisar las [preguntas frecuentes de la lista enlazada](/algoritmos/faq/lista-enlazada)**
 
 ---
 ### Bibliografia recomendada

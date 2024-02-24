@@ -37,7 +37,7 @@ tdas
 
 Deberán entregar el código en formato digital, subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo. Nuevamente, el `zip` deberá contener el directorio `cola`, y dentro de este deberán estar los archivos `cola_enlazada.go` y `cola_test.go`. Opcionalmente puede estar `cola.go` sin problema; dicho archivo será ignorado. También debe estar el archivo `go.mod`, como en la entrega anterior. Como simiplicidad, pueden incluso comprimir todo el contenido del paquete (es decir, incluyendo el paquete pila). 
 
-**No olviden revisar las [preguntas frecuentes de la cola](/aed/faq/cola)**
+**No olviden revisar las [preguntas frecuentes de la cola](/algoritmos/faq/cola)**
 
 ---
 ### Bibliografia recomendada

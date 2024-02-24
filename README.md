@@ -1,8 +1,8 @@
-# AED
+# Algoritmos y Estructuras de Datos
 
 Este es el repositorio del sitio web de Algoritmos y Estructuras de Datos, publicado en:
 
-<https://algoritmos-rw.github.io/aed/>
+<https://algoritmos-rw.github.io/algoritmos/>
 
 ## Instrucciones para actualizar la página web
 
@@ -15,14 +15,14 @@ Para visualizar los cambios de manera local, se debe instalar [Jekyll](https://j
 
 $ apt-get install ruby ruby-dev bundler
 $ gem install jekyll bundler
-$ git clone git@github.com:algoritmos-rw/aed
-$ cd aed
+$ git clone git@github.com:algoritmos-rw/algoritmos
+$ cd algoritmos
 $ bundle install --path=../gems
 $ // de tener problemas con nokogiri: apt-get install libxml2-dev
 
 # Para visualizar al editar
 
-$ cd aed
+$ cd algoritmos
 $ bundle exec jekyll serve --livereload
 $ // de tener problemas con javascript runtime: apt-get install nodejs
 

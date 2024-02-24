@@ -52,7 +52,7 @@ func HeapSort[T any](elementos []T, funcion_cmp func(T, T) int)
 
 Como siempre, deben subir el código completo a la [página de entregas de la materia]({{site.entregas}}).
 
-**No olviden revisar las [preguntas frecuentes del heap](/aed/faq/heap)**
+**No olviden revisar las [preguntas frecuentes del heap](/algoritmos/faq/heap)**
 
 ---
 ### Bibliografia recomendada

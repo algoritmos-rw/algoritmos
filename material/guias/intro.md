@@ -22,13 +22,13 @@ Se recomienda utilizar la versión web de esta guía, puesto que el formato est�
 
 Resumen de temas vistos en la materia:
 
-  * [\textcolor{blue}{Conceptos de TDAs, y TDAs Básicos (Pila, Cola y Lista)}](https://algoritmos-rw.github.io/aed/material/guias/tdas_conceptos)
-  * [\textcolor{blue}{División y Conquista}](https://algoritmos-rw.github.io/aed/material/guias/dyc)
-  * [\textcolor{blue}{Ordenamientos comparativos y no comparativos}](https://algoritmos-rw.github.io/aed/material/guias/ordenamientos)
-  * [\textcolor{blue}{Diccionarios, Hashing y Hashes}](https://algoritmos-rw.github.io/aed/material/guias/hash)
-  * [\textcolor{blue}{Árboles Binarios, ABB, AVL, Árbol B}](https://algoritmos-rw.github.io/aed/material/guias/arboles)
-  * [\textcolor{blue}{Colas de Prioridad y heaps}](https://algoritmos-rw.github.io/aed/material/guias/heap)
-  * [\textcolor{blue}{Grafos, primera parte: Usos, implementaciones y recorridos}](https://algoritmos-rw.github.io/aed/material/guias/grafos)
+  * [\textcolor{blue}{Conceptos de TDAs, y TDAs Básicos (Pila, Cola y Lista)}](https://algoritmos-rw.github.io/algoritmos/material/guias/tdas_conceptos)
+  * [\textcolor{blue}{División y Conquista}](https://algoritmos-rw.github.io/algoritmos/material/guias/dyc)
+  * [\textcolor{blue}{Ordenamientos comparativos y no comparativos}](https://algoritmos-rw.github.io/algoritmos/material/guias/ordenamientos)
+  * [\textcolor{blue}{Diccionarios, Hashing y Hashes}](https://algoritmos-rw.github.io/algoritmos/material/guias/hash)
+  * [\textcolor{blue}{Árboles Binarios, ABB, AVL, Árbol B}](https://algoritmos-rw.github.io/algoritmos/material/guias/arboles)
+  * [\textcolor{blue}{Colas de Prioridad y heaps}](https://algoritmos-rw.github.io/algoritmos/material/guias/heap)
+  * [\textcolor{blue}{Grafos, primera parte: Usos, implementaciones y recorridos}](https://algoritmos-rw.github.io/algoritmos/material/guias/grafos)
 
 
 \newpage

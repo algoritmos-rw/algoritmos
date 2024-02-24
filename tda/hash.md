@@ -69,7 +69,7 @@ Para ejecutar las pruebas, incluyendo las pruebas de volumen (benchmarks, que to
 	go test -bench=. -benchmem
 
 
-**No olviden revisar las [preguntas frecuentes del hash](/aed/faq/hash)**.
+**No olviden revisar las [preguntas frecuentes del hash](/algoritmos/faq/hash)**.
 
 ---
 ### Bibliografia recomendada
