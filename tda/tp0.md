@@ -78,6 +78,6 @@ En este caso, `<nombre del archivo>` vendría a ser `tp0.go` (o `ejercicios/tp0.
 La entrega se hará de forma digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}).
 Deben entregar un archivo `zip` con los entregables. Deben entregar un zip con todo el contenido del módulo. 
 
-En caso de encontrarse con dificultades para armar el módulo como es descripto aquí, [les dejamos un video explicativo paso a paso para esta entrega](https://www.youtube.com/watch?v=IZrQt-vR3E4).
+En caso de encontrarse con dificultades para armar el módulo como es descripto aquí, [les dejamos un video explicativo paso a paso para esta entrega](https://www.youtube.com/watch?v=K-Dii95pFBg).
 
 **No olviden revisar los [primeros pasos en Linux](/algoritmos/faq/primeros-pasos) y las [preguntas frecuentes](/algoritmos/faq/).**
