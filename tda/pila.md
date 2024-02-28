@@ -60,6 +60,8 @@ tdas
    |--> go.mod
 ```
 
+[Revisar el video de cómo realizar los módulos para las diferentes entregas](https://youtu.be/IZrQt-vR3E4).
+
 Para compilar y verificar las pruebas:
 1. Compilar todo el código:
 
