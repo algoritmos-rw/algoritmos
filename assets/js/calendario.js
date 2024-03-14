@@ -43,6 +43,7 @@ function agregarTPsYParcialitosACalendario(desde, hasta) {
 function diadelasemana(fecha){
     var numero = fecha.getDay();
     if (numero == 0) return 'Lunes'
+    if (numero == 3) return 'Jueves'
     if (numero == 4) return 'Viernes'
 }
 
