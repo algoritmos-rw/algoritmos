@@ -29,9 +29,9 @@ tdas
    	|---> pila_dinamica.go
    	|---> pila_test.go
    |--> cola
-   		|---> cola.go
-   		|---> cola_enlazada.go
-   		|---> cola_test.go
+   	|---> cola.go
+   	|---> cola_enlazada.go
+   	|---> cola_test.go
    |--> go.mod
 ```
 
