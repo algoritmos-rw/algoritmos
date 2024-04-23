@@ -32,7 +32,7 @@ Una vez esto quede claro, la solución es bastante directa: si queremos que los 
 hacerlo de atrás hacia delante. Si fuera una pila enlazada, simplemente sería iterar por los nodos.
 
 ```golang
-func (pila PilaDinamica[T]) Miltitop(n int) []T {
+func (pila pilaDinamica[T]) Miltitop(n int) []T {
     cant := min(n, pila.cantidad)
     topes := make([]T, cant)
     for i := 0; i < cant; i++ {
