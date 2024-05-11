@@ -153,7 +153,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     preorder: `15 - 6 - 4 - 7 - 50 - 23`. Hacer el seguimiento de las siguientes inserciones,
     incluyendo rotaciones intermedias: `71 - 27 - 38 - 19 - 11 - 21 - 24 - 25`.
 
-1.  (★★★) Mostrar cómo se modifica la estructura de un árbol B (incluyendo los pasos intermedios) con tamaño
+1.  (★★★) **Aclaración**: Este ejercicio es sobre el tema de _Árboles B_, si no se vio el tema durante el cuatrimestre, salteá el ejercicio (si te interesa saber sobre el tema, podés consultar por slack). Mostrar cómo se modifica la estructura de un árbol B (incluyendo los pasos intermedios) con tamaño
     para 3 claves por nodo que inicialmente se encuentra vacío, al aplicar las siguientes operaciones:
     insertar 14, insertar 2, insertar 10, insertar 6, insertar 7, insertar 1, insertar 4, insertar 8,
     insertar 11, insertar 19, insertar 9, insertar 5, insertar 15, insertar 3.
