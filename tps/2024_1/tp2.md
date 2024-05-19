@@ -172,9 +172,9 @@ empate se pueden mostrar en cualquier orden.
 
 ```
 Sitios más visitados:
-	/algo2/tps/2017_2/tp1 - 57
-	/algo2/faq/ - 35
-	/algo2/guias/grafos - 25
+	/algoritmos/tps/2024_1/tp1 - 57
+	/algoritmos/faq/ - 35
+	/algoritmos/guias/grafos - 25
 OK
 ```
 
