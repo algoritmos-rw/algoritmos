@@ -1,4 +1,4 @@
----
+f---
 math: true
 ---
 
@@ -209,6 +209,8 @@ Además, todas las entradas en un archivo de log están registradas en orden cro
 
 Se provee una colección de logs de ejemplo
 [aquí](https://drive.google.com/drive/folders/0B0x0VPz_v-f_UENLUnVCMlBiWUE?usp=sharing).
+
+Adicionalmente, se les proporciona un set de pruebas que pueden descargarse del sitio de descargas. 
 
 
 ### Fecha y hora
