@@ -121,7 +121,7 @@ ejecuciones diferentes de `agregar_archivo`.
 Para alertar una IP, basta con mostrar por salida estándar `DoS: <IP>`.
 Una misma dirección no deberá ser reportada más de una vez.
 Si varias direcciones son sospechosas, estas deberán ser mostradas en orden
-creciente.
+creciente, **numéricamente**.
 
 *Ejemplo de salida:*
 
@@ -221,7 +221,7 @@ que consiste de año, mes, día, T mayúscula como separador, hora, minutos,
 segundos y zona horaria:
 
 - año = 4 dígitos
-- mes = 3 letras
+- mes = 2 dígitos
 - día = 2 dígitos
 - hora = 2 dígitos
 - minutos = 2 dígitos
@@ -235,7 +235,7 @@ Para interpretar la sección de la fecha en Go pueden utilizar el módulo [`time
 de la librería estándar. Allí pueden encontrar como parsear la fecha que se obtiene de los archivos
 ((`time.Parse`)[https://pkg.go.dev/time#Parse]), así como la forma de obtener la diferencia en tiempos ((`time.Sub`)[https://pkg.go.dev/time#Time.Sub]). 
 
-Para la función `time.Parse` de Go, pueden utilizar `"2006-01-02T15:04:05-07:00"` como _layout_ para que coincida con el formato que estamos utilizando. 
+Para la función `time.Parse` de Go, pueden utilizar `"2022-12-18T17:55:00-00:00"` como _layout_ para que coincida con el formato que estamos utilizando. 
 
 ### Tiempos de ejecución
 
