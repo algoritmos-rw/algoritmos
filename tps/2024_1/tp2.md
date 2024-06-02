@@ -235,7 +235,7 @@ Para interpretar la sección de la fecha en Go pueden utilizar el módulo [`time
 de la librería estándar. Allí pueden encontrar como parsear la fecha que se obtiene de los archivos
 ((`time.Parse`)[https://pkg.go.dev/time#Parse]), así como la forma de obtener la diferencia en tiempos ((`time.Sub`)[https://pkg.go.dev/time#Time.Sub]). 
 
-Para la función `time.Parse` de Go, pueden utilizar `"2022-12-18T17:55:00-00:00"` como _layout_ para que coincida con el formato que estamos utilizando. 
+Para la función `time.Parse` de Go, pueden utilizar `"2006-01-02T15:04:05-07:00"` como _layout_ para que coincida con el formato que estamos utilizando. 
 
 ### Tiempos de ejecución
 
