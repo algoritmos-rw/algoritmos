@@ -219,22 +219,21 @@ Salida:
 ```
 
 
-### Ciclo de largo n
+### Ciclo más corto
 
 * Comando: `divulgar_ciclo`
-* Parámetros: `delincuente` y `n`.
-* Utilidad: Permite encontrar un camino simple que empiece y termine en el delincuente pasado por parámetro,
-de largo `n`. En caso de no encontrarse un ciclo de ese largo y dicho comienzo, imprimir `No se encontro recorrido`.
+* Parámetros: `delincuente`.
+* Utilidad: Permite encontrar el camino simple más corto que empiece y termine en el delincuente pasado por parámetro. En caso de no encontrarse un ciclo, imprimir `No se encontro recorrido`.
 * Ejemplo: \\
 Entrada:
 ```
-divulgar_ciclo 74 5
-divulgar_ciclo 19 11
+divulgar_ciclo 74
+divulgar_ciclo 19
 ```
 Salida:
 ```
-74 -> 21 -> 81 -> 18 -> 42 -> 74
-19 -> 34 -> 12 -> 33 -> 54 -> 28 -> 79 -> 71 -> 57 -> 41 -> 56 -> 19
+74 -> 21 -> 25 -> 74
+19 -> 19
 ```
 
 ### Componentes Fuertemente Conexas
