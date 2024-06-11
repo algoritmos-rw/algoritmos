@@ -139,7 +139,7 @@ Usualmente nos gustaría determinar cuáles son los vértices más importantes e
 de su centralidad exacta. Teniendo en cuenta que se cuenta con demasiados delincuentes, el cálculo
 exacto de la centralidad puede consumir una cantidad excesiva de tiempo.
 Por lo tanto, se pide realizar una aproximación para determinar los delincuentes más importantes.
-La forma sugerida para realizar esto es utilizando el algoritmo [PageRank](/algo2/material/apuntes/pagerank).
+La forma sugerida para realizar esto es utilizando el algoritmo [PageRank](/algoritmos/material/apuntes/pagerank).
 
 Por lo tanto, el comando pedido debe ser:
 * Comando: `mas_imp`.
@@ -180,7 +180,7 @@ Salida:
 
 ### Comunidades
 
-Para implementar esto, utilizaremos el algoritmo de [Label Propagation](/algo2/material/apuntes/label_propagation)
+Para implementar esto, utilizaremos el algoritmo de [Label Propagation](/algoritmos/material/apuntes/label_propagation)
 para detectar comunidades.
 
 * Comando: `comunidades`.
@@ -267,7 +267,7 @@ algopoli: algopoli.py grafo.py biblioteca.py
 Si el TP fuera realizado en Go, un posible ejemplo del archivo podría ser:
 
 ``` makefile
-netstats:
+algopoli:
     cd mi_implementacion_tp3; go build -o ../algopoli
 ```
 
