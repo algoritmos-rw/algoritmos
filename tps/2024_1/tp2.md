@@ -246,7 +246,7 @@ Para la función `time.Parse` de Go, pueden utilizar `"2006-01-02T15:04:05-07:00
       $$\mathcal{O}(n)$$.
     - El mantenimiento para actualizar los visitantes debe ser $$\mathcal{O}(n \log v)$$_
       siendo $$v$$ la cantidad de visitantes en toda la historia del programa.
-- Ver más visitados: debe ser $$\mathcal{O}(s \log k)$$ siendo $$s$$ la cantidad diferentes de
+- Ver más visitados: debe ser $$\mathcal{O}(s + k \log s)$$ siendo $$s$$ la cantidad diferentes de
   sitios en toda la historia y $$k$$ el parámetro
 - Ver visitantes: debe ser $$\mathcal{O}(v)$$ en el peor caso (en el que se tenga que
   mostrar todos los visitantes), $$\mathcal{O}(\log v)$$ en un caso promedio (en el caso en
