@@ -6,10 +6,25 @@ profesor:
 
 ayudantes:
 
+- nombre: Alfonso Campodónico
+  foto: /assets/img/docentes/unknown.png
+  mail: alfonso@fi.uba.ar
+  github: AlfonsoCampodonico
+
+- nombre: Aníbal Fu
+  foto: /assets/img/docentes/unknown.png
+  mail: alfonso@fi.uba.ar
+  github: anibalfu
+
 - nombre: Cristhian Noriega
   foto: /assets/img/docentes/cristhiann.png
   mail: cnoriega@fi.uba.ar
   github: Cristhian-Noriega
+
+- nombre: Daniel Bizari
+  foto: /assets/img/docentes/danib.jpg
+  mail: d.bizari@gmail.com
+  github: dbizari
 
 - nombre: Eliana Harriet
   foto: /assets/img/docentes/elianah.jpg
@@ -20,11 +35,6 @@ ayudantes:
   foto: /assets/img/docentes/emilianog.png
   mail: egomez@fi.uba.ar
   github: emigomez28
-
-- nombre: Ezequiel García
-  foto: /assets/img/docentes/ezegar.jpg
-  mail: ezgarcia@fi.uba.ar
-  github: egarcia91
 
 - nombre: Ezequiel Genender
   foto: /assets/img/docentes/ezeg.jpg
@@ -55,11 +65,6 @@ ayudantes:
   foto: /assets/img/docentes/franlt.png
   mail: flopezt@fi.uba.ar
   github: franciscolopeztancredi
-
-- nombre: Ignacio Castro
-  foto: /assets/img/docentes/josec.jpg
-  mail: jcastrom@fi.uba.ar
-  github: jignacio14
 
 - nombre: Juan Pablo Bel
   foto: /assets/img/docentes/juanb.png
@@ -106,15 +111,20 @@ ayudantes:
   mail: mcabrerar@fi.uba.ar
   github: m-cabrerar
 
+- nombre: Mauro di Pietro
+  foto: /assets/img/docentes/unknown.png
+  mail: mdipietro@fi.uba.ar
+  github: mauromeli
+
 - nombre: Máximo Gismondi
   foto: /assets/img/docentes/maxig.png
   mail: magismondi@fi.uba.ar
   github: MaximoGismondi
 
-- nombre: Melina Jáuregui
-  foto: /assets/img/docentes/melij.png
-  mail: mjauregui@fi.uba.ar
-  github: melijauregui
+- nombre: Mora Mujica
+  foto: /assets/img/docentes/moram.jpg
+  mail: mmujica@fi.uba.ar
+  github: moramujica1
 
 - nombre: Santiago Fassio
   foto: /assets/img/docentes/santif.jpg
