@@ -53,7 +53,7 @@ Luego que todas las pruebas ejecuten correctamente, deben implementar un program
 	1
 	```
 * Se debe leer cada uno de los archivos, y cargar en memoria los arreglos correspondientes, leyendo cada componente y convertir cada uno de los elementos a `int` (para lo que pueden utilizar la función `Atoi` del módulo `strconv`). Pueden asumir que no van a haber errores en las lecturas, ni letras donde deben haber números, etc...
-* Una vez obtenidos los arreglos, se debe imprimir el arreglo que sea **mayor** entre los dos, de forma **ordenada**. Para esto, utilizar las funciones `Comparar` y `Seleccion` previamente implementadas. Para imprimir, hacerlo en el mismo formato que en el que vienen en los archivos. Es decir, una componente por línea. Si el arreglo más grande fuera `[2, 1, 7, 3]`, habría que imprimir:
+* Una vez obtenidos los arreglos, averiguar el arreglo que sea el **mayor** entre los dos, y se debe imprimir de forma **ordenada**. Para esto, utilizar las funciones `Comparar` y `Seleccion` previamente implementadas. Para imprimir, hacerlo en el mismo formato que en el que vienen en los archivos. Es decir, una componente por línea. Si el arreglo más grande fuera `[2, 1, 7, 3]`, habría que imprimir:
 	```
 	1
 	2
