@@ -20,7 +20,7 @@ Además, deben incluir la primitiva para crear la pila:
 
 ```golang
 func CrearPilaDinamica[T any]() Pila[T] {
-	// ...
+	// …
 }
 ```
 
@@ -33,20 +33,20 @@ type pilaDinamica[T any] struct {
 }
 ```
 
-Además de `pila_dinamica.go`, tienen que entregar otro archivo `pila_test.go`, que contenga las pruebas unitarias para verificar que la pila funciona correctamente, y que al ejecutarlo puede verificarse que todo funciona bien. Se permite (y recomienda) usar funciones auxiliares en donde crean necesario.
-Es necesario separar los tests en diferentes funciones que prueben los escenarios. No es válido tener un único test que pruebe todo. 
+Además de `pila_dinamica.go`, tienen que entregar otro archivo `pila_test.go`, que contenga las pruebas unitarias para verificar que la pila funciona correctamente, y que al ejecutarlo puede verificarse que todo funciona bien. Se permite y recomienda usar funciones auxiliares en donde crean necesario.
+Es necesario separar los _tests_ en diferentes funciones que prueben los escenarios. No es válido tener un único _test_ que pruebe todo. 
 
 El archivo `pila_dinamica.go` debe ser parte del paquete `pila` (tal y como se encuentra en el archivo base adjunto), y el archivo de pruebas debe ser parte del paquete `pila_test`.
 
 Las pruebas deberán verificar que:
-1. Se pueda crear una Pila vacía, y esta se comporta como tal.
+1. Se pueda crear una pila vacía, y ésta se comporta como tal.
 1. Se puedan apilar elementos, que al desapilarlos se mantenga el invariante de pila (que esta es LIFO). Probar con elementos diferentes, y ver que salgan en el orden deseado. 
-1. _Prueba de volumen_: Se pueden apilar muchos elementos (1000, 10000 elementos, o el volumen que corresponda): hacer crecer la pila, y desapilar elementos hasta que esté vacía, comprobando que siempre cumpla el invariante. Recordar _no apilar siempre lo mismo_, validar que se cumpla siempre que el tope de la pila sea el correcto paso a paso, y que el nuevo tope después de cada `desapilar` también sea el correcto.
-1. Condición de borde: comprobar que al desapilar hasta que está vacía hace que la pila se comporte como recién creada.
-1. Condición de borde: las acciones de desapilar y ver_tope en una pila recién creada son inválidas.
-1. Condición de borde: la acción de esta_vacía en una pila recién creada es verdadero.
-1. Condición de borde: las acciones de desapilar y ver_tope en una pila a la que se le apiló y desapiló hasta estar vacía son inválidas.
-1. Probar apilar diferentes tipos de datos: probar con una pila de enteros, con una pila de cadenas, etc...
+1. _Prueba de volumen_: Se pueden apilar muchos elementos (1.000, 10.000 elementos, o el volumen que corresponda): hacer crecer la pila, y desapilar elementos hasta que esté vacía, comprobando que siempre cumpla el invariante. Recordar _no apilar siempre lo mismo_, validar que se cumpla siempre que el tope de la pila sea el correcto paso a paso, y que el nuevo tope después de cada `desapilar` también sea el correcto.
+1. Condición borde: comprobar que una pila vacía se comporte como recién creada.
+1. Condición borde: las acciones para desapilar y ver tope de una pila recién creada son inválidas.
+1. Condición borde: la acción para ver si una pila recién creada está vacía es verdadero.
+1. Condición borde: las acciones para desapilar y ver el tope de una pila a la que se le apiló y desapiló hasta estar vacía son inválidas.
+1. Probar apilar diferentes tipos de datos: probar con una pila de enteros, con una pila de cadenas, etc.…
 
 Además de todos los casos no descriptos que ustedes crean necesarios.
 
@@ -71,9 +71,9 @@ Para compilar y verificar las pruebas:
 
         go test pila_test.go
 
-Adicionalmente, pueden utilizar el flag `-v` para que se muestre la salida de cada prueba, incluyendo logs (esto es lo que se hace en el corrector automático).
+Adicionalmente, pueden utilizar el _flag_ `-v` para que se muestre la salida de cada prueba, incluyendo _logs_ (esto es lo que se hace en el corrector automático).
 
-Al igual que en los casos anteriores, deberán entregar el código en formato digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo. Se debe entregar un archivo `zip` con la carpeta `pila` (que dentro debe tener `pila_dinamica.go` y `pila_test.go`, y opcionalmente `pila.go`) así como el archivo `go.mod` (tanto la carpeta como el archivo `go.mod` deben estar en el mismo nivel, sin `.`). No es necesario enviar el archivo `pila.go`. Incluso, este será ignorado para evitar cualquier modificación sobre las primitivas.
+Al igual que en los casos anteriores, deberán entregar el código en formato digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo. Se debe entregar un archivo `zip` con la carpeta `pila` (que dentro debe tener `pila_dinamica.go` y `pila_test.go`, y opcionalmente `pila.go`) así como el archivo `go.mod` (tanto la carpeta como el archivo `go.mod` deben estar en el mismo nivel, sin `.`).
 
 **No olviden revisar las [preguntas frecuentes de la pila](/algoritmos/faq/pila)**.
 
@@ -81,5 +81,3 @@ Al igual que en los casos anteriores, deberán entregar el código en formato di
 ### Bibliografia recomendada
 * Weiss, Mark Allen, "Data Structures and Algorithm Analysis": *3.3. The Stack ADT*.
 * Cormen, Thomas H. "Introduction to Algorithms": *10.1. Stacks and queues*.
-
-
