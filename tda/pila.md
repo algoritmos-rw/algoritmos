@@ -39,7 +39,7 @@ Es necesario separar los tests en diferentes funciones que prueben los escenario
 El archivo `pila_dinamica.go` debe ser parte del paquete `pila` (tal y como se encuentra en el archivo base adjunto), y el archivo de pruebas debe ser parte del paquete `pila_test`.
 
 Las pruebas deberán verificar que:
-1. Se pueda crear una Pila vacía, y esta se comporta como tal.
+1. Se pueda crear una Pila vacía, y ésta se comporta como tal.
 1. Se puedan apilar elementos, que al desapilarlos se mantenga el invariante de pila (que esta es LIFO). Probar con elementos diferentes, y ver que salgan en el orden deseado. 
 1. _Prueba de volumen_: Se pueden apilar muchos elementos (1000, 10000 elementos, o el volumen que corresponda): hacer crecer la pila, y desapilar elementos hasta que esté vacía, comprobando que siempre cumpla el invariante. Recordar _no apilar siempre lo mismo_, validar que se cumpla siempre que el tope de la pila sea el correcto paso a paso, y que el nuevo tope después de cada `desapilar` también sea el correcto.
 1. Condición de borde: comprobar que al desapilar hasta que está vacía hace que la pila se comporte como recién creada.
