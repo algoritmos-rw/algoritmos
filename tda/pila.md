@@ -20,7 +20,7 @@ Además, deben incluir la primitiva para crear la pila:
 
 ```golang
 func CrearPilaDinamica[T any]() Pila[T] {
-	// …
+	// ...
 }
 ```
 
@@ -42,11 +42,11 @@ Las pruebas deberán verificar que:
 1. Se pueda crear una pila vacía, y ésta se comporta como tal.
 1. Se puedan apilar elementos, que al desapilarlos se mantenga el invariante de pila (que esta es LIFO). Probar con elementos diferentes, y ver que salgan en el orden deseado. 
 1. _Prueba de volumen_: Se pueden apilar muchos elementos (1.000, 10.000 elementos, o el volumen que corresponda): hacer crecer la pila, y desapilar elementos hasta que esté vacía, comprobando que siempre cumpla el invariante. Recordar _no apilar siempre lo mismo_, validar que se cumpla siempre que el tope de la pila sea el correcto paso a paso, y que el nuevo tope después de cada `desapilar` también sea el correcto.
-1. Condición borde: comprobar que una pila vacía se comporte como recién creada.
-1. Condición borde: las acciones para desapilar y ver tope de una pila recién creada son inválidas.
-1. Condición borde: la acción para ver si una pila recién creada está vacía es verdadero.
-1. Condición borde: las acciones para desapilar y ver el tope de una pila a la que se le apiló y desapiló hasta estar vacía son inválidas.
-1. Probar apilar diferentes tipos de datos: probar con una pila de enteros, con una pila de cadenas, etc.…
+1. Condición de borde: comprobar que una pila vacía se comporte como recién creada.
+1. Condición de borde: las acciones para desapilar y ver tope de una pila recién creada son inválidas.
+1. Condición de borde: la acción para ver si una pila recién creada está vacía es verdadero.
+1. Condición de borde: las acciones para desapilar y ver el tope de una pila a la que se le apiló y desapiló hasta estar vacía son inválidas.
+1. Probar apilar diferentes tipos de datos: probar con una pila de enteros, con una pila de cadenas, etc...
 
 Además de todos los casos no descriptos que ustedes crean necesarios.
 
@@ -73,7 +73,7 @@ Para compilar y verificar las pruebas:
 
 Adicionalmente, pueden utilizar el _flag_ `-v` para que se muestre la salida de cada prueba, incluyendo _logs_ (esto es lo que se hace en el corrector automático).
 
-Al igual que en los casos anteriores, deberán entregar el código en formato digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo. Se debe entregar un archivo `zip` con la carpeta `pila` (que dentro debe tener `pila_dinamica.go` y `pila_test.go`, y opcionalmente `pila.go`) así como el archivo `go.mod` (tanto la carpeta como el archivo `go.mod` deben estar en el mismo nivel, sin `.`).
+Al igual que en los casos anteriores, deberán entregar el código en formato digital subiendo el código a la [página de entregas de la materia]({{site.entregas}}), con el código completo. Se debe entregar un archivo `zip` con la carpeta `pila` (que dentro debe tener `pila_dinamica.go` y `pila_test.go`) así como el archivo `go.mod` (tanto la carpeta como el archivo `go.mod` deben estar en el mismo nivel, sin `.`). No es necesario enviar el archivo `pila.go`. Incluso, este será ignorado para evitar cualquier modificación sobre las primitivas.
 
 **No olviden revisar las [preguntas frecuentes de la pila](/algoritmos/faq/pila)**.
 
