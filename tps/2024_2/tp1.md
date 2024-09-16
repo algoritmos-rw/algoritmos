@@ -21,6 +21,8 @@ El trabajo práctico número 1 tiene fecha de entrega para el día **{{fecha}}**
 
 Como se ha indicado en clase, esperamos para la elaboración de este trabajo práctico que ya tengan conocimiento pleno del uso de Go, lo cual incluye todo lo visto en clase y lo explicado en [los videos sobre el lenguaje](https://www.youtube.com/watch?v=Fnd86iPRDKg&list=PLLfC2vEod54L8O2mqE2C7cFiqmsj3rsGi). Si no se ha visto alguno de los videos, es necesario que primero lo revisen porque este enunciado asume que esto es sabido. 
 
+También, recomendamos volver a revisar [el video sobre cómo armar los módulos en Go](https://youtu.be/IZrQt-vR3E4?t=585), en particular para el los TPs.
+
 
 ## Calculadora en notación posfija
 {: #dc}
