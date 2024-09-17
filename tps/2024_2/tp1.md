@@ -117,6 +117,7 @@ El mensaje `ERROR` debe imprimirse como resultado en cualquiera de las siguiente
     - división por 0
     - raíz de un número negativo
     - base del logaritmo menor a 2
+    - argumento del logaritmo menor o igual a 0
     - potencia con exponente negativo
 
 
