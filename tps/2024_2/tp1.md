@@ -19,9 +19,9 @@ El trabajo práctico número 1 tiene fecha de entrega para el día **{{fecha}}**
 
 ## Previo al enunciado
 
-Como se ha indicado en clase, esperamos para la elaboración de este trabajo práctico que ya tengan conocimiento pleno del uso de Go, lo cual incluye todo lo visto en clase y lo explicado en [los videos sobre el lenguaje](https://www.youtube.com/watch?v=Fnd86iPRDKg&list=PLLfC2vEod54L8O2mqE2C7cFiqmsj3rsGi). Si no se ha visto alguno de los videos, es necesario que primero lo revisen porque este enunciado asume que esto es sabido. 
+Como se ha indicado en clase, esperamos para la elaboración de este trabajo práctico que ya tengan conocimiento pleno del uso de Go, lo cual incluye todo lo visto en clase y lo explicado en [los videos sobre el lenguaje](https://youtube.com/playlist?list=PLLfC2vEod54L8O2mqE2C7cFiqmsj3rsGi). Si no se ha visto alguno de los videos, es necesario que primero lo revisen porque este enunciado asume que esto es sabido. 
 
-También, recomendamos volver a revisar [el video sobre cómo armar los módulos en Go](https://youtu.be/IZrQt-vR3E4?t=585), en particular para el los TPs.
+También, recomendamos volver a revisar [el video sobre cómo armar los módulos en Go](https://youtu.be/IZrQt-vR3E4?t=585), en particular para los TPs.
 
 
 ## Calculadora en notación posfija
@@ -31,7 +31,7 @@ Se pide implementar un programa `dc` que permita realizar operaciones matemátic
 
 Ejemplo de varias operaciones, y su resultado:
 
-```
+```Console
 $ cat oper.txt
 5 3 +
 5 3 -
@@ -63,10 +63,10 @@ ERROR
 
 ### Funcionamiento
 
-- Todas las operaciones trabajarán con números enteros, y devolverán números enteros. Se recomienda usar el tipo de Go `int64` para permitir operaciones de más de 32 bits (p.ej. $$3^{3^3}$$).
+- Todas las operaciones trabajarán con números enteros, y devolverán números enteros. Se recomienda usar el tipo de dato de Go `int64` para permitir operaciones de más de 32 bits (por ejemplo $$3^{3^3}$$).
 
 
-- El conjunto de operadores posibles es: suma(`+`), resta(`-`), multiplicación(`*`), división entera(`/`), raíz cuadrada (`sqrt`), exponenciación(`^`), logaritmo (`log`) en base arbitraria, y operador ternario(`?`).
+- El conjunto de operadores posibles es: suma (`+`), resta (`-`), multiplicación (`*`), división entera (`/`), raíz cuadrada (`sqrt`), exponenciación (`^`), logaritmo (`log`) en base arbitraria, y operador ternario (`?`).
 
   - <!-- https://github.com/gettalong/kramdown/issues/486 -->
 
@@ -123,13 +123,8 @@ El mensaje `ERROR` debe imprimirse como resultado en cualquiera de las siguiente
 
 ## Criterios de aprobación
 
-El código entregado debe ser claro y legible y ajustarse a las especificaciones
-de la consigna. Debe compilar sin advertencias y correr sin errores.
+El código entregado debe ser claro y legible y ajustarse a las especificaciones de la consigna. Debe compilar sin advertencias y correr sin errores.
 
-La entrega incluye, obligatoriamente, todos los archivos involucrados en la realización
-del tp (es decir, el módulo del trabajo en sí, que debe llamarse `dc`), así como el
-módulo `tdas` en caso de haber utilizado al menos alguno de los tipos de datos implementados 
-anteriormente. 
+La entrega incluye, obligatoriamente, todos los archivos involucrados en la realización del TP (es decir, el módulo del trabajo en sí, que debe llamarse `dc`), así como el módulo `tdas` en caso de haber utilizado al menos alguno de los tipos de datos implementados anteriormente.
 
-La entrega se realiza únicamente en forma digital a través del [sistema de entregas]({{site.entregas}}), 
-con todos los archivos mencionados en un único archivo ZIP.
+La entrega se realiza únicamente en forma digital a través del [sistema de entregas]({{site.entregas}}), con todos los archivos mencionados en un único archivo ZIP.
