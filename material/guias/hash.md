@@ -33,7 +33,7 @@ Para este punto, sólo es necesario iterar campo por campo, considerando únicam
 ```golang
 func (hash hashCerrado[K, V]) Claves() Lista[K] {
     claves := CrearListaEnlazada[K]()
-    for celda := range hash.tabla {
+    for _, celda := range hash.tabla {
         if celda.estado == OCUPADO {
             claves.InsertarUltimo(celda.clave)
         }
@@ -58,7 +58,7 @@ Para este caso, consideramos todas las listas, las cuales podemos ir iterando ut
 ```golang
 func (hash hashAbierto[K, V]) Claves() Lista[K] {
     claves := CrearListaEnlazada[K]()
-    for lista := range hash.tabla {
+    for _, lista := range hash.tabla {
         lista.Iterar(func (par parClaveValor[K, V]) bool {
             claves.InsertarUltimo(par.clave)
             return true
