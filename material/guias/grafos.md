@@ -426,7 +426,7 @@ el caso de un grafo no dirigido y no pesado. Indicar el orden del algoritmo prop
     b. Implementar un algoritmo que a partir de una celda de origen y una de destino, 
     retorne el camino que tiene que hacer la unidad, indicando y justificando la complejidad final.
 
-1.  (★★★★) Grace, docente de un primer grado de un colegio primario, tiene como tarea armar la fila 
+1.  (★★★★★) Grace, docente de un primer grado de un colegio primario, tiene como tarea armar la fila 
     el acto del 9 de julio.
     Como no quiere que los chicos se distraigan, quiere que cada uno quede entre dos personas 
     de las cuales no es amigo.
