@@ -111,7 +111,7 @@ En caso de que el `origen` o `destino` indicados no sean canciones válidas, se 
 
 #### Canciones más importantes
 
-Utilizaremos el algoritmo de [PageRank](/algo2/material/apuntes/pagerank) para implementar este comando,
+Utilizaremos el algoritmo de [PageRank](/algoritmos/material/apuntes/pagerank) para implementar este comando,
 para determinar cuáles son la **canciones** más importantes.
 
 * Comando: `mas_importantes`.
@@ -132,7 +132,7 @@ Salida:
 
 #### Recomendación (usuarios o canciones)
 
-Usando la idea de [PageRank Personalizado](/algo2/material/apuntes/pagerank), y lo indicado en [este paper](http://web.stanford.edu/class/msande233/handouts/lecture8.pdf), implementaremos un algoritmo que permita determinar qué otros usuarios se puede recomendar seguir, o bien qué canciones probablemente pudieran gustar, a partir de un listado de canciones. 
+Usando la idea de [PageRank Personalizado](/algoritmos/material/apuntes/pagerank), y lo indicado en [este paper](http://web.stanford.edu/class/msande233/handouts/lecture8.pdf), implementaremos un algoritmo que permita determinar qué otros usuarios se puede recomendar seguir, o bien qué canciones probablemente pudieran gustar, a partir de un listado de canciones. 
 
 La idea será aplicar un PageRank Personalizado en el grafo completo (bipartito) desde el listado de canciones pasadas. Las canciones que tengan mayor PageRank Personalizado serán canciones a recomendar para escuchar (considerar no recomendar una canción que ya esté en la lista pasada), los usuarios con mayor PageRank Personalizado serán usuarios para recomendar seguir.
 
