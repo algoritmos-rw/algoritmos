@@ -15,8 +15,8 @@ Régimen de cursada
 
 ### Trabajos Prácticos
 
-* Hay **tres trabajos prácticos** que se complementan con un total de **ocho entregas parciales**.
-  Para el primer TP las entregas parciales son 5: TP0, Administración de Memoria, pila, cola. Para el segundo TP son 3: lista, hash, arbol binario y heap. El tercer TP no tiene entregas parciales.
+* Hay **tres trabajos prácticos** que se complementan con un total de **siete entregas parciales**.
+  Para el primer TP las entregas parciales son 3: TP0, pila y cola. Para el segundo TP son 4: lista, hash, arbol binario y heap. El tercer TP no tiene entregas parciales.
 * Todas las entregas **hasta el primer TP** (inclusive) son individuales. Las entregas siguientes pueden opcionalmente ser realizadas en **grupos de dos integrantes**.
 * Desaprobar un trabajo práctico implica desaprobar la cursada y por lo tanto la materia.
 * Para aprobar un trabajo práctico se debe hacer la entrega correspondiente en tiempo y forma.
