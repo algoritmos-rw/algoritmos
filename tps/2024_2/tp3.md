@@ -211,7 +211,7 @@ recomendify: recomendify.py grafo.py biblioteca.py
 Si el TP fuera realizado en Go, un posible ejemplo del archivo podría ser:
 
 ``` makefile
-algopoli:
+recomendify:
     cd mi_implementacion_tp3; go build -o ../recomendify
 ```
 
