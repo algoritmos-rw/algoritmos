@@ -50,9 +50,8 @@ func ordenarPorDigito(fechas []string, digito int) {
 
     indice := 0
     for lista := range digitos {
-        for iter := lista.Iterador(); iter.HaySiguiente(); iter.Siguiente() {
+        for iter := lista.Iterador(); iter.HaySiguiente(); iter.Siguiente(), indice++ {
             fechas[indice] = iter.VerActual()
-	    indice++
         }
     }
 }
@@ -79,9 +78,8 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
     }
     indice := 0
     for lista := range dias {
-        for iter := lista.Iterador(); iter.HaySiguiente(); iter.Siguiente() {
+        for iter := lista.Iterador(); iter.HaySiguiente(); iter.Siguiente(), indice++ {
             fechas[indice] = iter.VerActual()
-	    indice++
         }
     }
 }
