@@ -20,10 +20,9 @@ function agregarTPsATabla() {
     {% for x in site.data.trabajos %}{% assign tp = x[1] %}
         var dtPublicacion = new Date("{{tp.publicacion}}");
         var dtEntrega = new Date("{{tp.entrega}}");
-        var dtPromocion = new Date("{{tp.promocion}}");
         var dtLimite = new Date("{{tp.limite}}");
         
-        var dts = [dtPublicacion, dtEntrega, dtPromocion, dtLimite]
+        var dts = [dtPublicacion, dtEntrega, dtLimite]
         var prettyDts = dts.map(prettyDate)
 
         var tabla = document.getElementById("tabla-trabajos");

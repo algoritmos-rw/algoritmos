@@ -12,7 +12,6 @@ Las entregas están acompañadas de archivos adjuntos, todos ubicados en [el sit
       <td><strong>TP</strong></td>
       <td><strong>Fecha de publicación</strong></td>
       <td><strong>Fecha de entrega</strong></td>
-      <td><strong>Fecha de promoción</strong></td>
       <td><strong>Fecha límite</strong></td>
     </tr>
   </tbody>
