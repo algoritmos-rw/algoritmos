@@ -11,11 +11,6 @@ ayudantes:
   mail: alfonso@fi.uba.ar
   github: anibalfu
 
-- nombre: Cristhian Noriega
-  foto: /assets/img/docentes/cristhiann.png
-  mail: cnoriega@fi.uba.ar
-  github: Cristhian-Noriega
-
 - nombre: Daniel Bizari
   foto: /assets/img/docentes/danib.jpg
   mail: d.bizari@gmail.com
@@ -65,6 +60,11 @@ ayudantes:
   foto: /assets/img/docentes/franlt.png
   mail: flopezt@fi.uba.ar
   github: flopeztancredi
+
+- nombre: Ignacio Castro
+  foto: /assets/img/docentes/nachoc.jpg
+  mail: jcastrom@fi.uba.ar
+  github: jignacio14
 
 - nombre: Juan Pablo Bel
   foto: /assets/img/docentes/juanb.png
