@@ -24,7 +24,7 @@ TP1:
   publicacion: 2025-04-10
   entrega: 2025-04-21
   limite: 2025-05-12
-  enunciado_link: /tps/2025_2/tp1
+  enunciado_link: /tps/2025_1/tp1
 
 Lista:
   id: Lista
@@ -59,11 +59,11 @@ TP2:
   publicacion: 2025-05-22
   entrega: 2025-06-09
   limite: 2025-06-26
-  enunciado_link: /tps/2025_2/tp2
+  enunciado_link: /tps/2025_1/tp2
 
 TP3:
   id: TP3
   publicacion: 2025-06-09
   entrega: 2025-06-26
   limite: 2025-07-07
-  enunciado_link: /tps/2025_2/tp3
+  enunciado_link: /tps/2025_1/tp3
