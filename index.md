@@ -20,6 +20,8 @@ crear un issue en [la página de issues del repositorio]({{site.github.repositor
 * <a href="{{site.data.sitios.drive}}"><i class="fab fa-google-drive"/> Drive general de la materia</a>
 * <a href="{{site.data.sitios.youtube}}"><i class="fab fa-youtube"/> Canal de YouTube</a> del curso
 * [Guías de ejercicios](material/guias.md)
+* <a href="{{site.data.sitios.doc_criterios}}">Documento de Criterios Generales de Examen</a>
+* <a href="{{site.data.sitios.repo_ejemplos}}"><i class="fa-brands fa-github"></i> Repositorio de ejemplos de código</a>
 * [Página de visualizaciones recomendada](http://visualgo.net/)
 
 ## Información sobre próximas clases
