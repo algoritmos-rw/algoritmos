@@ -10,7 +10,7 @@ Cualquier commit en el directorio raíz se auto-publica en la página al hacer p
 
 Para visualizar los cambios de manera local, se debe instalar [Jekyll](https://jekyllrb.com/docs/installation/#ubuntu). El archivo [Gemfile](Gemfile) lo hace bastante fácil:
 
-```
+```bash
 # Setup inicial
 
 $ apt-get install ruby ruby-dev bundler
