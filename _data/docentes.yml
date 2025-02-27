@@ -7,7 +7,7 @@ profesor:
 ayudantes:
 
 - nombre: Aníbal Fu
-  foto: /assets/img/docentes/unknown.png
+  foto: /assets/img/docentes/anibalf.png
   mail: alfonso@fi.uba.ar
   github: anibalfu
 
@@ -90,11 +90,6 @@ ayudantes:
   foto: /assets/img/docentes/luciaa.jpg
   mail: luciaalmanzaa@gmail.com
   github: luciaalmanza
-
-- nombre: Marco Bucciarelli
-  foto: /assets/img/docentes/marcob.png
-  mail: mbucciarelli@fi.uba.ar
-  github: MarcoBucciarelli
 
 - nombre: Martín Mastropietro
   foto: /assets/img/docentes/mastro.jpg
