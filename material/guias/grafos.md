@@ -426,20 +426,29 @@ el caso de un grafo no dirigido y no pesado. Indicar el orden del algoritmo prop
     b. Implementar un algoritmo que a partir de una celda de origen y una de destino, 
     retorne el camino que tiene que hacer la unidad, indicando y justificando la complejidad final.
 
-1.  (★★★★★) Grace, docente de un primer grado de un colegio primario, tiene como tarea armar la fila 
-    el acto del 9 de julio.
-    Como no quiere que los chicos se distraigan, quiere que cada uno quede entre dos personas 
-    de las cuales no es amigo.
-    Para eso dispone de un mapa de amistades donde se puede ver quién es amigo de quién.
+1.  (★★★) Daniel está a punto de casarse y tiene un problema: gastó casi todo su dinero
+    en la luna de miel. Contrató un salón para la fiesta donde sólo hay 2 mesas
+    (muy, muy grandes, pero 2 en fin). Debe repartir a los $n$ invitados
+    entre las dos mesas, y su esposo le indicó una condición: en cada mesa debe
+    sentarse gente que se lleve bien entre todos ellos.
+    Daniel cuenta con la información de quién se lleva bien con quién, y necesita 
+    poder determinar si hay alguna forma de separar en dos grupos de gente
+    donde en cada grupo todos se lleven bien entre sí. 
 
-    a. Modelar el problema usando Grafos especificando de forma completa todos sus componentes.
+    a. Modelar este problema utilizando grafos, indicando claramente qué son
+    los vértices y qué las aristas.
 
-    b. Implementar un algoritmo que reciba como parametro el grafo del punto anterior y retorne 
-    una posible fila en formato de lista. Retornar lista vacia si no existe solución. Indicar 
-    y justificar la complejidad final.
+    b. Implementar un algoritmo que reciba un grafo como el modelado en el punto (a) y devuelva 
+    ambos grupos de personas. Indicar y justificar la complejidad del algoritmo implementado. 
 
-    **Pista**: No pensar el ejercicio armando, inicialmente, la fila sino viendo como separar 
-    a cada uno de sus amigos.
-    **Resolución de este ejercicio aquí** (coming soon).
+    **IMPORTANTE**: tener en cuenta que resolver el problema de forma directa puede
+    ser difícil. Recomendamos plantearse el problema inverso: poder separar
+    en dos grupos tal que en ningúno de los grupos haya un par que no se lleven bien. 
+
+1.  (★★) Implementar un algoritmo que reciba un grafo no dirigido y determine la
+    cantidad mínima de aristas que debería agregársele para que el grafo sea conexo. 
+    Obviamente, si el grafo ya es conexo el algoritmo debe devolver 0. 
+    Indicar y justificar la complejidad del algoritmo implementado.
+    
 
 
