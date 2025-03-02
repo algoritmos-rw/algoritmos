@@ -426,7 +426,7 @@ el caso de un grafo no dirigido y no pesado. Indicar el orden del algoritmo prop
     b. Implementar un algoritmo que a partir de una celda de origen y una de destino, 
     retorne el camino que tiene que hacer la unidad, indicando y justificando la complejidad final.
 
-1.  (★★★) Daniel está a punto de casarse y tiene un problema: gastó casi todo su dinero
+1.  (★★★) $$\spadesuit$$ Daniel está a punto de casarse y tiene un problema: gastó casi todo su dinero
     en la luna de miel. Contrató un salón para la fiesta donde sólo hay 2 mesas
     (muy, muy grandes, pero 2 en fin). Debe repartir a los $n$ invitados
     entre las dos mesas, y su esposo le indicó una condición: en cada mesa debe
