@@ -164,7 +164,7 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerra
     Dar la estructura del TDA y la implementación de las 4 primitivas marcadas, de forma tal que todas sean
     $$\mathcal{O}(1)$$.
 
-1.  (★★★) Se tiene un hash que cuenta con una función de hashing que, recibida una clave,
+1.  (★★★) $$\spadesuit$$ Se tiene un hash que cuenta con una función de hashing que, recibida una clave,
     devuelve la posición de su inicial en el abecedario. La capacidad inicial del hash
     es 26. Para los puntos B, C y D indicar y justificar si las afirmaciones son
     verdaderas o falsas. Se puede considerar que todas las claves serán palabras
@@ -203,7 +203,7 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerra
     lo son las claves. Indicar y justificar el orden del algoritmo.
 
 
-1.  (★★★) La diferencia simétrica entre dos conjuntos A y B es un conjunto que
+1.  (★★★) $$\spadesuit$$ La diferencia simétrica entre dos conjuntos A y B es un conjunto que
     contiene todos los elementos que se encuentran en A y no en B, y
     viceversa.
 
@@ -242,6 +242,6 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerra
     Proponer una implementación donde **todas** las operaciones sean $$\mathcal{O}(1)$$. Justificar el
     orden de las operaciones.
     
-1.  (★★★) Implementar un algoritmo que reciba un arreglo desordenado de enteros, su largo ($$n$$) y un 
+1.  (★★★) $$\spadesuit$$ Implementar un algoritmo que reciba un arreglo desordenado de enteros, su largo ($$n$$) y un 
 	número $$K$$ y determinar en $$\mathcal{O}(n)$$ si existe un par de elementos en el arreglo que 
 	sumen exactamente $$K$$.

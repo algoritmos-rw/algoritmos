@@ -171,7 +171,7 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
 1.  (★★★) Implementar un algoritmo que, dado un grafo dirigido, nos devuelva un ciclo dentro del mismo, si es que lo
     tiene. Indicar el orden del algoritmo.
 
-1.  (★★) Un árbol es un grafo no dirigido que cumple con las siguientes propiedades:
+1.  (★★) $$\spadesuit$$ Un árbol es un grafo no dirigido que cumple con las siguientes propiedades:
 
     a. $$\|E\| = \|V\| - 1$$
 
@@ -212,7 +212,7 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
     recorrido posible de la idea de Matías para visitar las salas del museo.
     Indicar el recorrido utilizado y el orden del algoritmo. Justificar.
 
-1.  (★★) Escribir una función `bool es_bipartito(grafo)` que dado un grafo no
+1.  (★★) Escribir una función `es_bipartito(grafo)` que dado un grafo no
     dirigido devuelva true o false de acuerdo a si es bipartito o no. Indicar y
     justificar el orden del algoritmo. ¿Qué tipo de recorrido utiliza?
 
@@ -289,7 +289,7 @@ $$|E| = |V| - 1$$, por ende nuestro orden a fin de cuentas terminaría siendo $$
 1.  (★★) Implementar un algoritmo que reciba un grafo dirigido y nos devuelva la cantidad de componentes débilmente 
     conexas de este. Indicar y justificar la complejidad del algoritmo implementado. 
 
-1.  (★★★) Contamos con un grafo **dirigido** que modela un ecosistema. En dicho grafo, cada vértice es una
+1.  (★★★) $$\spadesuit$$ Contamos con un grafo **dirigido** que modela un ecosistema. En dicho grafo, cada vértice es una
     especie, y cada arista `(v, w)` indica que `v` es _depredador natural_ de `w`. Considerando la
     horrible tendencia del ser humano por llevar a la extinción especies, algo que nos puede interesar 
     es saber si existe alguna especie que, si llegara a desaparecer, rompería todo el ecosistema: quienes la
@@ -405,7 +405,7 @@ el caso de un grafo no dirigido y no pesado. Indicar el orden del algoritmo prop
 1.  (★★★★★) Implementar un algoritmo que, dado un grafo dirigido, un vértice $$s$$ y otro $$t$$ determine la cantidad
     mínima de aristas que deberían cambiar de sentido en el grafo para que exista un camino de $$s$$ a $$t$$.
 
-1.  (★★★) Se tiene un **Grafo no dirigido** `G`, y un **árbol de tendido mínimo** `T`, de `G`.  Se obtiene una de 
+1.  (★★★) $$\spadesuit$$ Se tiene un **Grafo no dirigido** `G`, y un **árbol de tendido mínimo** `T`, de `G`.  Se obtiene una de 
     las aristas de `G`, que **no** se encuentra en `T`, y se le reduce el peso. Dar un algoritmo lineal que permita 
     determinar el nuevo **árbol de tendido mínimo** `T'`(notar que `T'` podría ser igual a `T`). Justificar la 
     complejidad del algoritmo.

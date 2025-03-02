@@ -15,7 +15,7 @@ math: true
 
 Se tiene un árbol binario de búsqueda con cadenas como claves y
 función de comparación `strcmp`. Implementar una primitiva
-`func (abb *abb[K, V]) Mayores(cadena K) Lista[K]`
+`func (abb *abb) Mayores(cadena string) Lista[string]`
 que, dados un ABB y una clave, devuelva una
 lista ordenada con las claves del árbol estrictamente mayores a la
 recibida por parámetro (que no necesariamente está en el árbol). Implementar sin utilizar el iterador Interno del ABB. 
@@ -40,27 +40,25 @@ En particular, si estamos en un nodo cuya clave es menor (o igual) a la buscada,
 revisar a izquierda: todos esos nodos también serán menores. Sí tendremos siempre que revisar a derecha,
 porque no es posible descartar. Esto es similar a una búsqueda por rango, solo que sin un límite superior.
 
-```cpp
-lista_t* abb_mayores(const abb_t* abb, const char* clave) {
-    lista_t* mayores = lista_crear();
-    if (!mayores) {
-        return NULL;
-    }
-    _abb_mayores(abb, clave, mayores);
+```golang
+func (abb *abb) Mayores(cadena string) Lista[string] {
+    mayores := TDALista.CrearListaEnlazada[string]()
+    abb.mayores(clave, mayores)
     return claves;
 }
 
-void _abb_mayores(const abb_t* abb, const char* clave, lista_t* claves) {
+
+func (abb *abb[string]) Mayores(cadena K, mayores Lista[string]) {
     // caso base SIEMPRE
-    if (abb == NULL) {
+    if abb == nil {
         return;
     }
     // si la actual es mayor, llamamos a la izquierda y guardamos la actual
-    if (strcmp(abb->clave, clave) > 0) {
-        _abb_mayores(abb->izq, clave, claves);
-        lista_insertar_primero(claves, abb->clave);
+    if strings.strcmp(abb.clave, clave) > 0 {
+        abb.izq.mayores(clave, mayores)
+        mayores.InsertarUltimo(abb.clave)
     }
-    _abb_mayores(abb->der, clave, claves);
+    abb.der.mayores(clave, mayores)
 }
 ```
 
@@ -177,7 +175,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     Indicar y justificar el orden de la primitiva, e indicar el tipo de
     recorrido implementado.
 
-1.  (★★) Indicar si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas,
+1.  (★★) $$\spadesuit$$ Indicar si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas,
     justificar, en caso de ser falsas poner un contraejemplo:
 
     {:.lower_alpha}
@@ -195,7 +193,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     de comparación), dicho ABB tendría la misma estructura que el árbol original. ¿Qué tipo de
     recorrido utilizaste? Indicar y justificar el orden de la primitiva.
 
-1.  (★★★★) Implementar una primitiva para el AB que reciba dos arreglos (o listas) de cadenas. El primer arreglo
+1.  (★★★★) $$\spadesuit$$ Implementar una primitiva para el AB que reciba dos arreglos (o listas) de cadenas. El primer arreglo
     corresponde al preorder de un árbol binario. El segundo al inorder del mismo árbol (ambos arreglos
     tienen los mismos elementos, sin repetidos). La función debe devolver un árbol binario que tenga dicho
     preorder e inorder. Indicar y justificar el orden de la primitiva (tener cuidado con este punto).
@@ -221,7 +219,7 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     inorder no puede tener hijo derecho, y que su sucesor (también, en el recorrido inorder) no puede tener 
     hijo izquierdo.
     
-1.  (★★) Implementar en Go una **primitiva** de ABB (DiccionarioOrdenado) que funcione 
+1.  (★★) $$\spadesuit$$ Implementar en Go una **primitiva** de ABB (DiccionarioOrdenado) que funcione 
     como un iterador interno que haga un recorrido por niveles inverso. Es decir, que visite 
     los elementos del nivel más inferior hasta la raiz. Para el ABB cuyo preorder es
     `5, 2, 1, 3, 4, 7, 9` (comparación numérica habitual), el recorrido debe ser: 
