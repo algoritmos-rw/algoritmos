@@ -15,6 +15,7 @@ Los ejercicios de 1 estrellas son ejercicios muy básicos o introductorios que n
 sirven para iniciarse en el tema.
 
 La mayoría de los ejercicios de entre 2 y 4 estrellas han sido sacado de parcialitos de cuatrimestres anteriores.
+Hay ejercicios marcados especialmente con el símbolo $\spadesuit$, los cuales se recomienda fuertemente que los realicen. 
 
 Los ejercicios de 5 estrellas sólo serían tomados en exámenes finales.
 

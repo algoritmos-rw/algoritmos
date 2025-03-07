@@ -154,7 +154,7 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
     - Labyrinth (1986): Fantasía
     - Ferris Bueller's Day Off (1986): Coming of age
 
-1.  (★★★) Se tiene una larga lista de números de tres cifras `abc` que representan números
+1.  (★★★) $$\spadesuit$$ Se tiene una larga lista de números de tres cifras `abc` que representan números
     en notación científica de la forma: $$a,b \cdot 10^c$$. Por ejemplo 123 representaría el número
     $$1,2 \cdot 10^3$$.
 
@@ -196,7 +196,7 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
     Implementar un algoritmo que en $$\mathcal{O}(n \log n)$$ determine todas las parejas de 
     tuercas-tornillos. 
 
-1. (★★★) Implementar en Go un algoritmo de RadixSort para ordenar un arreglo de Alumnos 
+1. (★★★) $$\spadesuit$$ Implementar en Go un algoritmo de RadixSort para ordenar un arreglo de Alumnos 
    (estructuras) en función de sus notas en parcialitos, de menor a mayor. Los alumnos 
    tienen su nombre y las notas (numéricas, 0-10) de los 3 parcialitos (tenemos las 
    notas finales). El arreglo debe quedar ordenado primero por el promedio de notas. 
@@ -220,7 +220,7 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
    Bobo Weghorst, 0, 0, 0
    ```
   
-1. (★★★) Implementar un algoritmo de ordenamiento, que sea lineal, 
+1. (★★★) $$\spadesuit$$ Implementar un algoritmo de ordenamiento, que sea lineal, 
    que permita definir el orden en una fila de personas para comprar una 
    Cajita CampeónFeliz en un establecimiento de comida rápida. Los datos 
 	  (`structs`) a ordenar cuentan con edad (número), nombre (string) y nacionalidad 

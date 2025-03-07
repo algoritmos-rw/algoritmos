@@ -72,7 +72,7 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
       operaciones: `encolar(6)`, `encolar(3)`, `encolar(17)`, `desencolar()`, `encolar(7)`,
       `desencolar()`.
 
-1.  (★★★) Escribir una función en Go que, dado un arreglo de $$n$$ cadenas y un entero
+1.  (★★★) $$\spadesuit$$ Escribir una función en Go que, dado un arreglo de $$n$$ cadenas y un entero
     positivo $$k$$, devuelva una lista con las $$k$$ cadenas más largas. Se espera que el
     orden del algoritmo sea $$\mathcal{O}(n + k \log n)$$. Justificar el orden.
 
@@ -83,7 +83,7 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
     Justificar (recomendación: comparar contra la implementación de colas de prioridad 
     vista en clase).
 
-1.  (★★★★) Se tienen $$k$$ arreglos de enteros previamente ordenados y se quiere obtener
+1.  (★★★★) $$\spadesuit$$ Se tienen $$k$$ arreglos de enteros previamente ordenados y se quiere obtener
     un arreglo ordenado que contenga a todos los elementos de los $$k$$ arreglos. Sabiendo que cada arreglo
     tiene tamaño $$h$$, definimos como $$n$$ a la sumatoria de la cantidad de elementos de todos los arreglos,
     es decir, $$n = k \times h$$.
@@ -107,7 +107,7 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
     ser mejor** que $$\mathcal{O}(n \log n)$$ si `k << n`. Indicar y justificar la complejidad
     de la función implementada.
 
-1.  (★★★★) Dado un arreglo de enteros y un número `K`, se desea que todos los elementos 
+1.  (★★★★) $$\spadesuit$$ Dado un arreglo de enteros y un número `K`, se desea que todos los elementos 
     del arreglo sean mayores a `K`. Aquellos números que sean menores o iguales a `K` 
     deberían combinarse de la siguiente forma: buscar los dos números más chicos del 
     vector, sacarlos y generar uno nuevo de la forma 

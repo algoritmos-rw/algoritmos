@@ -78,7 +78,7 @@ $$n$$.
 1.  (★)  Implementar una función que reciba un arreglo genérico e invierta su orden, utilizando los TDAs vistos.
     Indicar y justificar el orden de ejecución.
 
-1.  (★★) Implementar en Go el TDA `ComposiciónFunciones` que emula la composición de funciones (i.e. `f(g(h(x))`).
+1.  (★★) $$\spadesuit$$ Implementar en Go el TDA `ComposiciónFunciones` que emula la composición de funciones (i.e. `f(g(h(x))`).
     Se debe definir la estructura del TDA, y las siguientes primitivas:
     ```
     CrearComposicion() ComposicionFunciones
@@ -132,7 +132,7 @@ $$n$$.
     (que se recibe por parámetro al crear la estructura). Explicar cómo deberían implementarse las primitivas
     encolar y desencolar de tal manera que siempre sean operaciones de tiempo constante.
 
-1.  (★★★★) Implementar una función que ordene de manera ascendente una pila de enteros sin conocer su estructura interna y
+1.  (★★★★) $$\spadesuit$$ Implementar una función que ordene de manera ascendente una pila de enteros sin conocer su estructura interna y
     utilizando como estructura auxiliar sólo otra pila auxiliar.
     Por ejemplo, la pila `[ 4, 1, 5, 2, 3 ]` debe quedar como `[ 1, 2, 3, 4, 5 ]` (siendo el último elemento el tope de la pila, en ambos casos). Indicar y justificar el orden de la función.
 
@@ -202,7 +202,7 @@ $$n$$.
     - `balanceado("()()(())") => true`
 
 
-1.  (★★) Carlos es nuevo en la empresa en la que trabajan Alan y Bárbara. Alan va a ser el mentor 
+1.  (★★) $$\spadesuit$$ Carlos es nuevo en la empresa en la que trabajan Alan y Bárbara. Alan va a ser el mentor 
     de Carlos, quien debe implementar un nuevo `TDA Gatito`. Alan, revisando el trabajo que 
     hizo Carlos, nota que este agregó una primitiva `Redimensionar`, pública en la interfaz 
     `Gatito`, para que la use Bárbara. Alan lo increpa a Carlos, preguntando para qué es dicha

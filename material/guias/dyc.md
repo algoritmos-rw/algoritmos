@@ -97,7 +97,7 @@ func arregloEsMagico(arr []int, inicio int, fin int) {
 }
 ```
 
-#### Demostración del orden
+#### Demostración de la complejidad
 
 Veamos la ecuación de recurrencia. Hay escritos dos llamados recursivos, cada uno se invoca con la mitad del problema (mitad
 izquierda o derecha), y todo lo que cuesta _partir y juntar_ no son más que algunas operaciones básicas de tiempo constante.
@@ -158,29 +158,8 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
     }
     ```
 
-1.  (★★) Indicar la complejidad del siguiente algoritmo, utilizando el teorema maestro:
-
-    ```golang
-    // Busca un elemento usando D&C. El arreglo se encuentra ordenado.
-    func elementoEsta(arreglo []int, inicio int, fin int, elem int) bool {
-        if inicio > fin {
-            return false
-        }
-        medio := (inicio + fin) / 2
-        if arreglo[medio] == medio {
-            return true
-        }
-        if arreglo[medio] < elem {
-            return elementoEsta(arreglo, medio + 1, fin, elem)
-        }
-        for i := medio - 1; i > inicio; i-- {
-            if arreglo[i] == elem {
-                return true
-            }
-        }
-        return false
-    }
-    ```
+1.  (★★) Ejercicio eliminado de la guía. Se mantiene este texto para mantener la numeración respecto a los ejercicios
+         en RPL. 
 
 1.  (★) Hacerle el seguimiento al siguiente algoritmo:
 
@@ -214,13 +193,13 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 1.  (★★) Implementar, por división y conquista, una función que determine el mínimo de un arreglo.
     Indicar y justificar el orden.
 
-1.  (★★) Implementar, por división y conquista, una función que dado un arreglo y su largo, determine si el mismo
+1.  (★★) $$\spadesuit$$ Implementar, por división y conquista, una función que dado un arreglo y su largo, determine si el mismo
     se encuentra ordenado. Indicar y justificar el orden.
 
 1.  (★★★) Implementar, por división y conquista, una función que dado un arreglo sin elementos repetidos y _casi ordenado_ (todos los elementos se
     encuentran ordenados, salvo uno), obtenga el elemento fuera de lugar. Indicar y justificar el orden.
 
-1.  (★★★) Se tiene un arreglo tal que `[1, 1, 1, ..., 0, 0, ...]` (es decir, _unos seguidos de ceros_). Se pide:
+1.  (★★★) $$\spadesuit$$ Se tiene un arreglo tal que `[1, 1, 1, ..., 0, 0, ...]` (es decir, _unos seguidos de ceros_). Se pide:
     1. una función de orden $$\mathcal{O}(\log n)$$ que encuentre el índice del primer 0. Si no hay ningún 0 (solo hay unos), debe devolver -1.
     1. demostrar con el Teorema Maestro que la función es, en efecto, $$\mathcal{O}(\log n)$$.
     {:.lower_alpha}
@@ -231,7 +210,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
         [0, 0, 0, 0, 0] →  0
         [1, 1, 1, 1, 1] → -1
 
-1.  (★★★★) Implementar un algoritmo que, por división y conquista, permita obtener la parte entera de la raíz cuadrada de
+1.  (★★★★) $$\spadesuit$$ Implementar un algoritmo que, por división y conquista, permita obtener la parte entera de la raíz cuadrada de
     un número $$n$$, en tiempo $$\mathcal{O}(\log n)$$. Por ejemplo, para $$n = 10$$ debe devolver 3, y para $$n = 25$$
     debe devolver 5.
 
@@ -271,7 +250,9 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 
     _Aclaración_: Este ejercicio puede resolverse, casi trivialmente, ordenando el arreglo con un algoritmo eficiente,
     o incluso se puede realizar más rápido utilizando una [tabla de hash](hash.md). Para hacer interesante el ejercicio,
-    resolver **sin ordenar el arreglo**, sino puramente división y conquista.
+    resolver **sin ordenar el arreglo**, sino puramente división y conquista. Por otro lado, también puede resolverse en 
+    $$\mathcal{O}(n)$$ con división y conquista, pero resulta más complicado y lo dejamos para la materia siguiente 
+    (Teoría de Algoritmos).
 
 1.  (★★★★★) Tenemos un arreglo de tamaño `2n` de la forma `{C1, C2, C3, … Cn, D1, D2, D3, … Dn}`, 
 	tal que la cantidad total de elementos del arreglo es potencia de 2 (por ende, `n` 
@@ -319,7 +300,7 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 	simplemente se plantea con `ints` para no generar confusiones con la complejidad.
 	Justificar la complejidad de la función implementada.
 
-1.  (★★★) Es el año 1700, y la pirata Barba-ra Verde atacó un barco de la _Royal British Shipping & Something_, 
+1.  (★★★) $$\spadesuit$$ Es el año 1700, y la pirata Barba-ra Verde atacó un barco de la _Royal British Shipping & Something_, 
     que transportaba una importante piedra preciosa de la corona británica. Al parecer, la escondieron
     en un cofre con muchas piedras preciosas falsas, en caso de un ataque. Barba-ra Verde sabe que
     los refuerzos británicos no tardarán en llegar, y deben uir lo más rápido posible. El problema es
