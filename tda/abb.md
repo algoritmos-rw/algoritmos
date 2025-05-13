@@ -26,7 +26,7 @@ Todas las primitivas anteriores deben funcionar también, con el agregado que ta
 
 Además, la primitiva de creación del ABB deberá ser: 
 ```golang
-func CrearABB[K comparable, V any](funcion_cmp func(K, K) int) DiccinarioOrdenado[K, V]
+func CrearABB[K comparable, V any](funcion_cmp func(K, K) int) DiccionarioOrdenado[K, V]
 ```
 
 La función de comparación, recibe dos claves y devuelve:
