@@ -428,7 +428,7 @@ el caso de un grafo no dirigido y no pesado. Indicar el orden del algoritmo prop
 
 1.  (★★★) $$\spadesuit$$ Daniel está a punto de casarse y tiene un problema: gastó casi todo su dinero
     en la luna de miel. Contrató un salón para la fiesta donde sólo hay 2 mesas
-    (muy, muy grandes, pero 2 en fin). Debe repartir a los $n$ invitados
+    (muy, muy grandes, pero 2 en fin). Debe repartir a los $$n$$ invitados
     entre las dos mesas, y su esposo le indicó una condición: en cada mesa debe
     sentarse gente que se lleve bien entre todos ellos.
     Daniel cuenta con la información de quién se lleva bien con quién, y necesita 
