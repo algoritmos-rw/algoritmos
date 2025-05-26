@@ -12,7 +12,7 @@ Trabajo Práctico 2
 {:.no_toc}
 
 El Trabajo Práctico número 2 es de elaboración grupal, y tiene fecha de entrega
-para el **{{fecha}}**.
+para el <b>{{fecha}}</b>.
 
 Contenido
 ---------
@@ -62,8 +62,8 @@ Nuestro sistema deberá ser capaz de devolver los _K_ vuelos de mayor prioridad.
 
 ### Siguientes vuelos a una fecha
 
-Es posible que los usuarios, o administradores, deseen consultas por vuelos posteriores
-a una determinada fecha para hacer una conexión. Esto puede ser porque un adminsitrador
+Es posible que los usuarios, o administradores, deseen consultar por vuelos posteriores
+a una determinada fecha para hacer una conexión. Esto puede ser porque un adminisitrador
 necesita obtener información para reubicar pasajeros luego de una demora inesperada, 
 o por usuarios que desean consultar en caso que necesiten cambiar fechas o simplemente
 consultar vuelos. 
@@ -375,9 +375,9 @@ cuenta la complejidad temporal**. También es necesario utilizar dicha estructur
 optimizar de manera correcta su funcionamiento.
 
 Se puede (y no sólo alentamos fuertemente, sino que pedimos) implementar otros TDAs o estructuras que faciliten o 
-mejoren la implementación de este Trabajo Práctico. Les recordamos que un TDA no es un simple `struct`donde se guarda 
+mejoren la implementación de este Trabajo Práctico. Les recordamos que un TDA no es un simple `struct` donde se guarda 
 información, sino que debe tener comportamiento. Esto será un punto muy importante en la evaluación del Trabajo 
-Práctico. No implementar diseñando correctamente, implicará una reentrega directa y sin mayor 
+Práctico. No implementar diseñando correctamente implicará una reentrega directa y sin mayor 
 corrección. 
 
 No deben modificar los TDAs ya implementados hasta ahora. 
@@ -391,9 +391,9 @@ Se debe cumplir con la complejidad indicada para los comandos
 
 El código entregado debe:
 
-- ser claro y legible, y estar estructurado en funciones lo más genéricas posible, adecuadamente documentadas.
-- compilar sin advertencias ni errores.
-- ajustarse a la especificación de la consigna y pasar todas las pruebas automáticas.
+- Ser claro y legible, y estar estructurado en funciones lo más genéricas posible, adecuadamente documentadas.
+- Compilar sin advertencias ni errores.
+- Ajustarse a la especificación de la consigna y pasar todas las pruebas automáticas.
 
 Entrega
 ------------------------
