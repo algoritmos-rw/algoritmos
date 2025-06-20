@@ -149,7 +149,7 @@ de vuelos: no es lo mismo un aeropuerto que se conecte contra todos con un vuelo
 se conecte al 80% con muchos vuelos al año. ¡Cuantos más vuelos, mejor!
 
 Dejamos un apunte para la explicación de qué es y cómo se calcula el
-[Betweeness Centrality](/algo2/material/apuntes/centralidad).
+[Betweeness Centrality](/algoritmos/material/apuntes/centralidad).
 
 * Comando: `centralidad`
 * Parámetros: `n`, la cantidad de aeropuertos más importantes a mostrar.
@@ -240,7 +240,7 @@ que el de salida (si deben ser aeropuertos de la ciudad en la cual se está para
 * Comando: `exportar_kml`.
 * Parámetros: `archivo`.
 * Utilidad: exporta el archivo KML con la ruta del último comando ejecutado (que incluya algún camino,
-o rutas áereas). Esto aplica para los comandos de caminos mínimos. Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algo2/material/apuntes/kml).
+o rutas áereas). Esto aplica para los comandos de caminos mínimos. Contamos con un [apunte sobre cómo crear, usar y visualizar archivos KML](/algoritmos/material/apuntes/kml).
 * Complejidad: Este comando debe ejecutar en $$\mathcal{O}(A + F)$$.
 * Ejemplo:
 Entrada:
