@@ -81,30 +81,30 @@ ayudantes:
   mail: lfiegl@fi.uba.ar
   github: io4
 
-- nombre: Lucas García Campos
-  foto: /assets/img/docentes/lucasgc.png
-  mail: lucasgarciacampos@gmail.com
-  github: Sh4rkzDev
-
 - nombre: Lucía Almanza
   foto: /assets/img/docentes/luciaa.jpg
   mail: luciaalmanzaa@gmail.com
   github: luciaalmanza
+
+- nombre: Luís Peña
+  foto: /assets/img/docentes/unknown.png
+  mail: lpenar@fi.uba.ar
+  github: prluisf
 
 - nombre: Martín Mastropietro
   foto: /assets/img/docentes/mastro.jpg
   mail: mmastropietro@fi.uba.ar
   github: martinmastropietro
 
+- nombre: Martino Nervi
+  foto: /assets/img/docentes/unknown.png
+  mail: manervi@fi.uba.ar
+  github: martinonervi
+
 - nombre: Máximo Gismondi
   foto: /assets/img/docentes/maxig.png
   mail: magismondi@fi.uba.ar
   github: MaximoGismondi
-
-- nombre: Mora Mujica
-  foto: /assets/img/docentes/moram.jpg
-  mail: mmujica@fi.uba.ar
-  github: moramujica1
 
 - nombre: Pilar Montilla
   foto: /assets/img/pilarm.jpg
