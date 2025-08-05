@@ -12,7 +12,7 @@ El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto �
 Tanto el DiccionarioOrdenado como el ABB deben estar también dentro del paquete `diccionario`
 Se incluye en [el sitio de descargas]({{site.skel}}) el archivo `diccionario_ordenado.go` que se describe a continuación:
 
-``` cpp
+```golang
 type DiccionarioOrdenado[K any, V any] interface {
 	Diccionario[K, V]
 
