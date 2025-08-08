@@ -52,7 +52,7 @@ ayudantes:
   github: federicoforte22
 
 - nombre: Florencia López Ovenza
-  foto: /assets/img/florlo.jpg
+  foto: /assets/img/docentes/florlo.jpg
   mail: mlopezo@fi.uba.ar
   github: florovenza
 
@@ -62,7 +62,7 @@ ayudantes:
   github: flopeztancredi
 
 - nombre: Ignacio Castro
-  foto: /assets/img/docentes/nachoc.jpg
+  foto: /assets/img/docentes/josec.jpg
   mail: jcastrom@fi.uba.ar
   github: jignacio14
 
@@ -107,12 +107,12 @@ ayudantes:
   github: MaximoGismondi
 
 - nombre: Pilar Montilla
-  foto: /assets/img/pilarm.jpg
+  foto: /assets/img/docentes/pilarm.jpg
   mail: pmontilla@fi.uba.ar
   github: pilarmontilla
 
 - nombre: Raquel Dávila
-  foto: /assets/img/raqueld.jpg
+  foto: /assets/img/docentes/raqueld.jpg
   mail: radavila@fi.uba.ar
   github: raquelwek
 
