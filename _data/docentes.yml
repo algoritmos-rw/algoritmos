@@ -71,10 +71,10 @@ ayudantes:
   mail: jbel@fi.uba.ar
   github: juannbel
 
-- nombre: Lara Scazzola
-  foto: /assets/img/docentes/laras.jpeg
-  mail: lscazzola@fi.uba.ar
-  github: lara-scazzola1
+- nombre: Alfonso Campodónico
+  foto: /assets/img/docentes/unknown.png
+  mail: alfonso@fi.uba.ar
+  github: AlfonsoCampodonico
 
 - nombre: Lucas Fiegl
   foto: /assets/img/docentes/lucasf.jpg
@@ -120,3 +120,4 @@ ayudantes:
   foto: /assets/img/docentes/taielm.png
   mail: tamolina@fi.uba.ar
   github: taielmolina01
+
