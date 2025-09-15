@@ -5,7 +5,7 @@ math: true
 {% assign tp = site.data.trabajos.TP1 %}
 {% capture fecha %}{{tp.entrega | date: "%e/%m"}}{% endcapture %}
 
-# TP1: Conversión de notación infija a posfija
+# TP1: Calculadora Polaca Inversa
 {:.no_toc}
 
 El trabajo práctico número 1 tiene fecha de entrega para el día **{{fecha}}**.
@@ -24,75 +24,107 @@ Como se ha indicado en clase, esperamos para la elaboración de este trabajo pr�
 También, recomendamos volver a revisar [el video sobre cómo armar los módulos en Go](https://youtu.be/IZrQt-vR3E4?t=585), en particular para los TPs.
 
 
-## Introducción
+## Calculadora en notación posfija
 {: #dc}
 
-Nuestra forma _usual_ de escribir operaciones matemáticas (_operador operando operador_, ejemplo 3 + 2) se llama _notación infija_. Otro tipo de notación puede ser la [notación polaca inversa][rpn-es] (también llamada _notación posfija_, en inglés [_reverse Polish notation_][rpn-en]).
-Esta notación se utiliza, por ejemplo, en calculadoras financieras, especialmente de hace algunas décadas. 
+Se pide implementar un programa `dc` que permita realizar operaciones matemáticas. La calculadora leerá exclusivamente de **entrada estándar** (no toma argumentos por línea de comantos), interpretando cada línea como una operación en [notación polaca inversa][rpn-es] (también llamada _notación posfija_, en inglés [_reverse Polish notation_][rpn-en]); para cada línea, se imprimirá por salida estándar el resultado del cálculo.
 
-Mostramos algunos ejemplos de pasaje de notación infija a posfija: 
-```
-3 + 2         → 3 2 +
-20 / -3       → 20 -3 /
-20^10         → 20 10 ^
-20 * 10^5 - 2 → 20 10 5 ^ * 2 -
+Ejemplo de varias operaciones, y su resultado:
+
+```Console
+$ cat oper.txt
+5 3 +
+5 3 -
+5 3 /
+3 5 8 + +
+3 5 8 + -
+3 5 - 8 +
+2 2 + +
+0 1 ?
+1 -1 0 ?
+5 sqrt
+
+$ ./dc < oper.txt
+8
+2
+1
+16
+-10
+6
+ERROR
+ERROR
+-1
+2
 ```
 
 [rpn-en]: https://en.wikipedia.org/wiki/Reverse_Polish_notation
 [rpn-es]: https://es.wikipedia.org/wiki/Notaci%C3%B3n_polaca_inversa
 
-## Conversor desde notación infija
+
+### Funcionamiento
+
+- Todas las operaciones trabajarán con números enteros, y devolverán números enteros. Se recomienda usar el tipo de dato de Go `int64` para permitir operaciones de más de 32 bits (por ejemplo $$3^{3^3}$$).
 
 
-Se desea implementar un conversor de notación infija a notación posfija. El programa debe leer por entrada estándar operaciones en notación infija (una por línea), e imprimirá por salida estándar la representación en postfijo de la misma operación. Ejemplo:
+- El conjunto de operadores posibles es: suma (`+`), resta (`-`), multiplicación (`*`), división entera (`/`), raíz cuadrada (`sqrt`), exponenciación (`^`), logaritmo (`log`) en base arbitraria, y operador ternario (`?`).
 
-```
-$ cat arith.txt
-3 + 5
-5 - 3
-8 / 2 + 1
-9 - 2 * 4
-(9-2) * 4
-5 + 4 ^ 3 ^ 2
+  - <!-- https://github.com/gettalong/kramdown/issues/486 -->
 
-$ ./infix < arith.txt
-3 5 +
-5 3 -
-8 2 / 1 +
-9 2 4 * -
-9 2 - 4 *
-5 4 3 2 ^ ^ +
-```
+    Todos los operadores funcionan con dos operandos, excepto `sqrt` (toma un solo argumento) y el operador ternario (toma tres).
 
-Como referencia bibliográfica, la conversión se puede realizar mediante el algoritmo _shunting yard_ (ver página de Wikipedia [en castellano][syard-es] o [en inglés][syard-en]).
+- Tal y como se describe en la bibliografía enlazada, cualquier operación aritmética _a op b_ se escribe en postfijo como `a b op`{:.nowrap} (por ejemplo, `3 - 2` se escribe en postfijo como `3 2 -`{:.nowrap}).
 
-[syard-es]: https://es.wikipedia.org/wiki/Algoritmo_shunting_yard
-[syard-en]: https://en.wikipedia.org/wiki/Shunting-yard_algorithm
+  - <!-- gettalong/kramdown#486 -->
+
+    Para operaciones con un solo operando, el formato es obviamente `a op`{:.nowrap} (por ejemplo, `5 sqrt`{:.nowrap}). Por su parte, para el operador ternario, el ordenamiento de los argumentos seguiría el mismo principio, transformándose `a ? b : c`{:.nowrap} en `a b c ?`{:.nowrap}. Este operador ternario devuelve, si `a` es distinto a 0, el valor de `b`, y si es 0 el valor de `c`.
+
+- Ejemplos (nótese que toda la aritmética es entera, y el resultado siempre se trunca):
+
+  - `20 11 -` → `20-11 = 9`
+  - `20 -3 /` → `20/-3 = -6`
+  - `20 10 ^` → `20^10 = 10240000000000`
+  - `60 sqrt` → `√60 = 7`
+  - `256 4 ^ 2 log` → `log₂(256⁴) = 32`
+  - `1 -1 0 ?` → `1 ? -1 : 0 = -1` (funciona [como en C][ternref])
+
+[ternref]: https://syntaxdb.com/ref/c/ternary
 
 
 ### Formato de entrada
 
-Cada línea de la entrada consistirá de una secuencia de _tokens_; cada uno de ellos podrá ser:
+- Cada línea de la entrada estándar representa una operación en su totalidad (produce un único resultado); y cada una de estas operaciones operación es independiente de las demás.
 
-  - uno de los cinco operadores aritméticos `+` `-` `*` `/` `^`
-  - un paréntesis de apertura, `(`; o de cierre, `)`
-  - un número entero, no negativo y en base decimal
+- Los símbolos en la expresión pueden ser números, u operadores. Todos ellos estarán siempre separados por uno o más espacios; la presencia de múltiples espacios debe tenerse en cuenta a la hora de realizar la separación en tokens.
 
-Se debe aceptar espacios en blanco en cualquier punto de la expresión, excepto entre los dígitos de un valor numérico.
+  - <!-- gettalong/kramdown#486 -->
+    Nota adicional: puede haber también múltiples espacios al comienzo de la línea, antes del primer token; por otra parte, no necesariamente habrá un espacio entre el último token y el caracter salto de línea que le sigue.
 
-**Se garantiza, por último, que todas las expresiones de entrada estarán bien formadas:** paréntesis balanceados, cantidad de operadores correctos, etc.
+- El resultado final de cada operación debe imprimirse en una sola línea por salida estándar (_stdout_). En caso de error, debe imprimirse —para esa operación— la cadena `ERROR`, _también_ por salida estándar, y sin ningún tipo de resultado parcial. Tras cualquier error en una operación, el programa continuará procesando el resto de líneas con normalidad.
 
-### Asociatividad y precedencia
+- Está permitido, para el cálculo de potencias, raíces y logaritmos, el uso de las funciónes de la biblioteca estándar `math`.
 
-Todos los operadores asocian por la izquierda, excepto la exponenciación, `^`, que asocia por la derecha.
 
-Por otra parte, `^` es el operador de mayor precedencia, seguido de `*` y `/` (ambos al mismo nivel); `+` y `-` son, ambos, los operadores de menor precedencia.
+### Condiciones de error
+
+El mensaje `ERROR` debe imprimirse como resultado en cualquiera de las siguientes situaciones:
+
+1.  Cantidad de operandos insuficiente (`1 +`).
+
+1.  Al finalizar la evaluación, queda más de un valor resultante. Es decir, no se realizaron suficientes operaciones para terminar que quede un único resultado (por ejemplo `1 2 3 +`, o `+ 2 3 -`).
+
+1.  **Errores propios de cada operación matemática**, descritos a continuación:
+
+    - división por 0
+    - raíz de un número negativo
+    - base del logaritmo menor a 2
+    - argumento del logaritmo menor o igual a 0
+    - potencia con exponente negativo
 
 
 ## Criterios de aprobación
 
 El código entregado debe ser claro y legible y ajustarse a las especificaciones de la consigna. Debe compilar sin advertencias y correr sin errores.
 
-La entrega incluye, obligatoriamente, todos los archivos involucrados en la realización del TP (es decir, el módulo del trabajo en sí, que debe llamarse `infix`), así como el módulo `tdas` en caso de haber utilizado al menos alguno de los tipos de datos implementados anteriormente.
+La entrega incluye, obligatoriamente, todos los archivos involucrados en la realización del TP (es decir, el módulo del trabajo en sí, que debe llamarse `dc`), así como el módulo `tdas` en caso de haber utilizado al menos alguno de los tipos de datos implementados anteriormente.
 
 La entrega se realiza únicamente en forma digital a través del [sistema de entregas]({{site.entregas}}), con todos los archivos mencionados en un único archivo ZIP.
