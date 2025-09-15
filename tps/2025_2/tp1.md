@@ -121,6 +121,12 @@ El mensaje `ERROR` debe imprimirse como resultado en cualquiera de las siguiente
     - potencia con exponente negativo
 
 
+### Pruebas 
+
+El curso provee pruebas que pueden descargar del sitio de descargas. 
+Adicionalmente, [aquí tienen un video](https://www.youtube.com/watch?v=LMYjnMB4Lj0) que explica cómo se deben ejecutar. 
+
+
 ## Criterios de aprobación
 
 El código entregado debe ser claro y legible y ajustarse a las especificaciones de la consigna. Debe compilar sin advertencias y correr sin errores.
