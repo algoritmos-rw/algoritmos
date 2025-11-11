@@ -134,7 +134,7 @@ Salida:
 
 #### Artículos más importantes (★★★)
 
-Utlizaremos el algoritmo de [PageRank](/algo2/material/apuntes/pagerank) para implementar este comando,
+Utlizaremos el algoritmo de [PageRank](/algoritmos/material/apuntes/pagerank) para implementar este comando,
 dado que además fue pensado primordialmente para este escenario.
 
 * Comando: `mas_importantes`.
