@@ -251,7 +251,7 @@ Salida:
 
 * Comando: `comunidad`. 
 * Parámetros: `página`. 
-* Utilidad: permite obtener la comunidad dentro de la red a la que pertenezca la página pasada por parámetro. Para esto, utilizaremos el sencillo algoritmo de [Label Propagation](/algo2/material/apuntes/label_propagation).
+* Utilidad: permite obtener la comunidad dentro de la red a la que pertenezca la página pasada por parámetro. Para esto, utilizaremos el sencillo algoritmo de [Label Propagation](/algoritmos/material/apuntes/label_propagation).
 * Ejemplo:
 Entrada:
     ```
