@@ -1,0 +1,261 @@
+/* ========================================
+  VARIABLES - COLORES MODO OSCURO
+======================================== */
+
+:root {
+  /* Fondos */
+  --dark-bg-primary: #09090b;
+  --dark-bg-secondary: #181818;
+  --dark-bg-tertiary: #2d2d2d;
+  --dark-bg-table-odd: #3a3a3a;
+  --dark-bg-table-even: #2d2d2d;
+  --dark-bg-calendar: #1b1b1b;
+  --dark-bg-dropdown-hover: #404040;
+
+  /* Textos */
+  --dark-text-primary: #e0e0e0;
+  --dark-text-white: #ffffff;
+  --dark-text-code: #f8f8f2;
+
+  --dark-accent-blue: #5dade2;
+  --dark-accent-pink: #e83e8c;
+  --dark-accent-purple: #8523d4;
+  --dark-accent-cyan: #66d9ef;
+  --dark-accent-violet: #ae81ff;
+  --dark-accent-yellow: #e6db74;
+  --dark-accent-green: #a6e22e;
+  --dark-accent-brown: #75715e;
+
+  /* Bordes */
+  --dark-border-color: #404040;
+}
+
+/* ========================================
+MODO OSCURO - ESTILOS GENERALES
+======================================== */
+
+body.dark-mode {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+}
+
+/* Enlaces un poquito mas claros para que resalte mejor */
+body.dark-mode a {
+  color: var(--dark-accent-blue);
+}
+
+body.dark-mode .figure-caption {
+  color: var(--dark-text-white);
+}
+
+/* ========================================
+NAVBAR Y NAVEGACION
+======================================== */
+
+/* Fondo oscuro para el navbar */
+body.dark-mode .navbar-light {
+  background-color: var(--dark-bg-secondary) !important;
+}
+
+/* Logos en el navbar */
+body.dark-mode .navbar-light .navbar-brand {
+  color: var(--dark-text-white);
+}
+
+/* Texto claro en links del navbar */
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+  color: var(--dark-text-primary);
+}
+
+/* Efecto hover en links del navbar */
+body.dark-mode .navbar-light .navbar-nav .nav-link:hover,
+body.dark-mode .navbar-light .navbar-nav .nav-link:focus {
+  color: var(--dark-accent-blue);
+}
+
+/* Icono del boton del menu (el que aparece en mobile) adaptado al modo oscuro */
+body.dark-mode .navbar-light .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Sombra del header */
+body.dark-mode header {
+  box-shadow: 0px 2px 18px 0px rgba(124, 124, 124, 0.1);
+}
+
+/* ========================================
+MENUS DESPLEGABLES 
+======================================== */
+
+/* Fondo del menu desplegable */
+body.dark-mode .dropdown-menu {
+  background-color: var(--dark-bg-tertiary);
+  border-color: var(--dark-border-color);
+}
+
+/* Items dentro del dropdown */
+body.dark-mode .dropdown-item {
+  color: var(--dark-text-primary);
+}
+
+/* Hover en items del dropdown */
+body.dark-mode .dropdown-item:hover,
+body.dark-mode .dropdown-item:focus {
+  background-color: var(--dark-bg-dropdown-hover);
+  color: var(--dark-accent-blue);
+}
+
+/* ========================================
+TABLAS Y CALENDARIO
+======================================== */
+
+/* Tabla del calendario - texto blanco y fondo transparente */
+body.dark-mode #tabla-calendario td,
+body.dark-mode #tabla-calendario th {
+  color: var(--dark-text-white);
+  background-color: transparent;
+}
+
+/* Filas impares del calendario */
+body.dark-mode #tabla-calendario > tbody > tr:nth-of-type(odd) {
+  background-color: var(--dark-bg-calendar);
+}
+
+/* Filas pares del calendario */
+body.dark-mode #tabla-calendario > tbody > tr:nth-of-type(even) {
+  background-color: var(--dark-bg-calendar);
+}
+
+/* Texto claro en tablas */
+body.dark-mode .table td,
+body.dark-mode .table th {
+  color: var(--dark-text-white);
+}
+
+/* Efecto rayado (striped) en tablas - Para las filas impares */
+body.dark-mode .table.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: var(--dark-bg-table-odd);
+}
+
+/* Efecto rayado (striped) en tablas - Para las filas pares */
+body.dark-mode .table.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: var(--dark-bg-table-even);
+}
+
+/* ========================================
+BLOQUES DE CODIGO Y SINTAXIS
+======================================== */
+
+/* Bloque de codigo comun (el de interfaces, no funcion) */
+body.dark-mode .highlighter-rouge {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+}
+
+/* Codigo inline */
+body.dark-mode .language-plaintext {
+  color: var(--dark-accent-pink);
+  background: none;
+  border: none;
+}
+
+/* Bloque de coddigo "pre" */
+body.dark-mode pre {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+}
+
+body.dark-mode code {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+}
+
+/* ========================================
+RESALTADO DE SINTAXIS - TOKENS
+======================================== */
+
+/* Comentarios en el codigo */
+body.dark-mode .highlighter-rouge .c {
+  color: var(--dark-accent-brown);
+}
+
+/* Operadores */
+body.dark-mode .o {
+  color: var(--dark-text-primary);
+}
+
+/* Palabras clave (keywords): func, return, for, etc. */
+body.dark-mode .highlighter-rouge .k {
+  color: var(--dark-accent-purple);
+}
+
+/* Declaraciones de palabras clave: var, const, etc. */
+body.dark-mode .highlighter-rouge .kd {
+  color: var(--dark-accent-cyan);
+}
+
+/* Numeros literales y enteros */
+body.dark-mode .highlighter-rouge .mi,
+body.dark-mode .highlighter-rouge .il {
+  color: var(--dark-accent-violet);
+}
+
+/* Cadenas de texto (strings) */
+body.dark-mode .highlighter-rouge .s {
+  color: var(--dark-accent-yellow);
+}
+
+/* Nombres de variables */
+body.dark-mode .highlighter-rouge .n {
+  color: var(--dark-text-code);
+}
+
+/* Nombres de funciones */
+body.dark-mode .highlighter-rouge .nf {
+  color: var(--dark-accent-green);
+}
+
+/* Puntuacion y simbolos: parentesis, llaves, etc. */
+body.dark-mode .highlighter-rouge .p {
+  color: var(--dark-text-code);
+}
+
+/* Estos efectos son especificamente para la explicacion del makefile del TP3 */
+body.dark-mode .highlight .nl {
+  color: #d62d2d;
+}
+
+body.dark-mode .highlight .err {
+  color: #d62d2d;
+  background-color: #412c2c;
+}
+
+/* ========================================
+TOGGLE DE CAMBIO DE TEMA
+======================================== */
+
+/* Estilos del boton de tema */
+#toggle-theme {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#toggle-theme:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode #toggle-theme {
+  color: var(--dark-text-primary);
+}
+
+body.dark-mode #toggle-theme:hover {
+  color: var(--dark-accent-blue);
+}
+
+#toggle-theme .theme-text {
+  font-size: 12px;
+}
+
+#toggle-theme .theme-text {
+  display: inline;
+}
