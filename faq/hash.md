@@ -68,6 +68,20 @@ Entonces, estamos en búsqueda de un d que contenga la menor cantidad posible de
 
 Cabe destacar que si las claves originales vienen distribuidas uniformemente, esto no soluciona el problema, porque nos dara resultados similares para cualquier capacidad utilizada. Pero, como en la mayoría de los casos las claves no vienen con distribución específica, terminamos concluyendo que lo mejor es usar un número primo como capacidad de la tabla de hash.
 
+## ¿Cómo podemos asegurar que al redimensionar mantengamos un tamaño primo? 
+
+En sí hay dos formas simples de hacer esto: 
+
+1. Duplicar tamaño y luego, mientras el valor no sea un número primo, le sumamos 1. 
+2. Tener una tabla de números primos cargada ya de antemano en el hash (que sea un arreglo constante ya precalculado).
+
+El problema de la opción 1 es que nos hace perder toda ganancia. Determinar si un número es primo es al menos $$\mathcal{O}\left(\sqrt{n})$$. Si eso lo aplicamos hasta obtener un siguiente número primo, esto puede demorar demasiado, haciéndonos perder cualquier mínima ventaja que podríamos tener por utilizar un número primo. 
+
+La segunda opción implica tener estado en el hash recordando en cuál índice de dicho arreglo estamos, y obviamente hacer un arreglo que pueda tener todos los posibles tamaños que pueda manejar el hash. 
+
+En general, esta ventaja que obtenemos es mínima y no vale la pena la implementación de la opción 2 para los fines del curso y los usos que les damos al hash, por lo que simplificamos y simplemente duplicamos el tamaño de la tabla y listo. 
+
+
 ## ¿Por qué al redimensionar no puedo crear un hash nuevo?
 
 Lo primero a entender es que no podemos redimensionar sobre la misma tabla que estábamos antes. De una forma u otra, necesitamos poder re-hashear los elementos sobre una tabla. 
