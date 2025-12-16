@@ -71,11 +71,6 @@ ayudantes:
   mail: jbel@fi.uba.ar
   github: juannbel
 
-- nombre: Alfonso Campodónico
-  foto: /assets/img/docentes/unknown.png
-  mail: alfonso@fi.uba.ar
-  github: AlfonsoCampodonico
-
 - nombre: Lucas Fiegl
   foto: /assets/img/docentes/lucasf.jpg
   mail: lfiegl@fi.uba.ar
@@ -120,4 +115,5 @@ ayudantes:
   foto: /assets/img/docentes/taielm.png
   mail: tamolina@fi.uba.ar
   github: taielmolina01
+
 
