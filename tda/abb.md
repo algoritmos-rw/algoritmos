@@ -12,8 +12,8 @@ El trabajo que deben entregar de **forma grupal** es el tipo de dato abstracto �
 Tanto el DiccionarioOrdenado como el ABB deben estar también dentro del paquete `diccionario`
 Se incluye en [el sitio de descargas]({{site.skel}}) el archivo `diccionario_ordenado.go` que se describe a continuación:
 
-```golang
-type DiccionarioOrdenado[K any, V any] interface {
+``` cpp
+type DiccionarioOrdenado[K comparable, V any] interface {
 	Diccionario[K, V]
 
 	IterarRango(desde *K, hasta *K, visitar func(clave K, dato V) bool)
@@ -26,7 +26,7 @@ Todas las primitivas anteriores deben funcionar también, con el agregado que ta
 
 Además, la primitiva de creación del ABB deberá ser: 
 ```golang
-func CrearABB[K any, V any](funcionCmp func(K, K) int) DiccionarioOrdenado[K, V]
+func CrearABB[K comparable, V any](funcion_cmp func(K, K) int) DiccionarioOrdenado[K, V]
 ```
 
 La función de comparación, recibe dos claves y devuelve:

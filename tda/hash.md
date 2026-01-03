@@ -12,7 +12,7 @@ El trabajo que deben entregar de **forma grupal** es el tipo abstracto de datos 
 
 #### Primitivas del Diccionario
 ```GoLang
-type Diccionario[K any, V any] interface {
+type Diccionario[K comparable, V any] interface {
 	Guardar(clave K, dato V)
 	Pertenece(clave K) bool
 	Obtener(clave K) V
@@ -27,10 +27,8 @@ Tanto `Borrar` como `Obtener` deben entrar en pánico con el mensaje `'La clave 
 
 Además, la primitiva de creación del *hash* deberá ser: 
 ```GoLang
-func CrearHash[K any, V any](func(K, K) bool) Diccionario[K, V]
+func CrearHash[K comparable, V any]() Diccionario[K, V]
 ```
-
-La función pasada por parámetro es una que indica si dos claves son en efecto la misma clave (dado que no es posible usar `==` con datos genéricos en Go, salvo que restrinjamos las claves a tipos de datos `comparable`s). 
 
 Nuevamente, el iterador interno (`Iterar`) debe iterar internamente el *hash*, aplicando la función pasada por parámetro a la clave y los datos.
 
@@ -39,7 +37,7 @@ Nuevamente, el iterador interno (`Iterar`) debe iterar internamente el *hash*, a
 Es de considerar que para implementar el *hash* será necesario definir una función de *hashing* internamente. Pueden definir la que más les guste (siempre poniendo referencia o nombre de la misma). Lamentablemente, no podemos trabajar de forma completamente genérica con una función de *hashing* directamente, por lo que deberemos realizar una transformación. 
 Si bien no es obligatorio pasar la clave a un arreglo de *bytes* (`[]byte`), es lo recomendado. Luego, la función de *hashing* puede siempre trabajar con la versión de arreglo de *bytes* correspondiente a la clave. El siguiente código (que pueden utilizar, modificar, o lo que gusten) transforma un tipo de dato genérico a un *array* de *bytes*:
 ```GoLang
-func convertirABytes[K any](clave K) []byte {
+func convertirABytes[K comparable](clave K) []byte {
 	return []byte(fmt.Sprintf("%v", clave))
 }
 ```
@@ -48,7 +46,7 @@ Para utilizar [`fmt.Sprintf`](https://pkg.go.dev/fmt#Sprintf), se debe importar 
 
 #### Primitivas del iterador
 ```GoLang
-type IterDiccionario[K any, V any] interface {
+type IterDiccionario[K comparable, V any] interface {
 	HaySiguiente() bool
 	VerActual() (K, V)
 	Siguiente()

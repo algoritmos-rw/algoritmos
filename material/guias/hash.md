@@ -198,9 +198,9 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerra
 
 
 1.  (★★) En un diccionario todas las claves tienen que ser diferentes, no así sus valores.
-    Escribir en Go una primitiva para el hash cerrado `func (dicc *hashCerrado[K, V]) CantidadValoresDistintos(cmp func (V, V) bool) int` que, 
-    sin usar el iterador interno, dado un hash devuelva la cantidad de **valores** diferentes que almacena. La función pasada por parámetro determina
-    si dos valores son iguales, o no. Indicar y justificar el orden del algoritmo.
+    Escribir en Go una primitiva para el hash cerrado `func (dicc *hashCerrado[K, V]) CantidadValoresDistintos() int` que, 
+    sin usar el iterador interno, dado un hash devuelva la cantidad de **valores** diferentes que almacena. Se puede suponer que el tipo `V` (el genérico de los valores) en este caso también es `comparable`, como
+    lo son las claves. Indicar y justificar el orden del algoritmo.
 
 
 1.  (★★★) $$\spadesuit$$ La diferencia simétrica entre dos conjuntos A y B es un conjunto que
