@@ -139,3 +139,13 @@ Por supuesto, este ejercicio involucra más pensar bien cuáles son las operacio
 	o su representación equivalente en arreglo. Esta última, siendo mucho más sencilla de
 	implementar. ¿Por qué no implementamos también el Árbol Binario de Búsqueda con una
 	representación en arreglo, en vez de implementarlo con, valga la redundancia, árboles?
+
+1.  (★★) Implementar una primitiva para el **Heap** con la siguiente firma:
+    `func (heap *Heap[T]) Map(f func(T) T)`
+
+    La primitiva `Map` debe modificar el `Heap` actual, reemplazando a cada uno de los elementos originales 
+    por el correspondiente resultado de la función `f` (pasada por parámetro).
+    Importante: la primitiva `Map` debe asegurarse de que el `Heap` quede en un estado 
+    **válido** para seguir operando.
+
+    **Indicar y justificar la complejidad temporal** de la primitiva implementada.
