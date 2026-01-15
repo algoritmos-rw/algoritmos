@@ -238,7 +238,7 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
 	  complejidad debe estar completo para el problema en cuestión, no se aceptarán
 	  resultados parciales genéricos.
 
-1. (★★★★) Se tiene un arreglo de $n$ cadenas y una **buena función de hashing**. Se quiere
+1.  (★★★★) Se tiene un arreglo de $n$ cadenas y una **buena función de hashing**. Se quiere
     ordenar dichas cadenas por su resultado en la función de hashing, habiéndole
     hecho previamente `% K` a cada uno de los resultados (donde $K$ es un valor
     enorme, muchísimo más grande que $n$). Implementar un algoritmo que ordene las 
@@ -258,7 +258,7 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
     En caso que estés viendo este ejercicio antes de haber visto Hashes (es decir, inmediatamente después de
     la clase de ordenamientos), esperá a ver ese tema, que es la clase inmediatamente siguiente. 
 
-1. (★★) Realizar el seguimiento de aplicar RadixSort al siguiente conjunto de partidos
+1.  (★★) Realizar el seguimiento de aplicar RadixSort al siguiente conjunto de partidos
     de fútbol. El resultado debe quedar ordenado primero por cantidad de goles del
     partido, y en caso de igualdad, por diferencia de gol entre rivales. No es necesario
     hacer el seguimiento del algoritmo auxiliar, pero si indicar cuál sería y por qué. 
