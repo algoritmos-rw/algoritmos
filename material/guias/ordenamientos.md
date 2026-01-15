@@ -255,6 +255,9 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
     y los resultados de aplicarles la función de hashing (y `% K`) son `19, 703, 9872, 37`, respectivamente, 
     las cadenas deben de quedar: `gato, comadreja, perro, elefante`.
 
+    En caso que estés viendo este ejercicio antes de haber visto Hashes (es decir, inmediatamente después de
+    la clase de ordenamientos), esperá a ver ese tema, que es la clase inmediatamente siguiente. 
+
 1. (★★) Realizar el seguimiento de aplicar RadixSort al siguiente conjunto de partidos
     de fútbol. El resultado debe quedar ordenado primero por cantidad de goles del
     partido, y en caso de igualdad, por diferencia de gol entre rivales. No es necesario
