@@ -11,11 +11,10 @@ ayudantes:
   mail: anibalfu2005@gmail.com
   github: anibalfu
 
-
 - nombre: Ciro Schiappacassi
-  foto: /assets/img/docentes/unknown.png
-  mail: 
-  github: 
+  foto: /assets/img/docentes/ciros.jpg
+  mail: schiappacassic@gmail.com
+  github: c-schiappacassi
 
 - nombre: Daniel Bizari
   foto: /assets/img/docentes/danib.jpg
@@ -47,11 +46,10 @@ ayudantes:
   mail: facu_nixerito@hotmail.com
   github: bonshot
 
-
 - nombre: Facundo Vila
-  foto: /assets/img/docentes/facuv.png
-  mail: 
-  github: 
+  foto: /assets/img/docentes/facuv.jpg
+  mail: facvila@fi.uba.ar
+  github: facundovila03
 
 - nombre: Federico Esteban
   foto: /assets/img/docentes/fedee.jpg
@@ -75,8 +73,8 @@ ayudantes:
 
 - nombre: Julián Rivero
   foto: /assets/img/docentes/unknown.png
-  mail: 
-  github: 
+  mail: jarivero@fi.uba.ar
+  github: juli-rivero
 
 - nombre: Juan Pablo Bel
   foto: /assets/img/docentes/juanb.png
