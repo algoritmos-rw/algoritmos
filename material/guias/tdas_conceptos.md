@@ -215,3 +215,10 @@ $$n$$.
     Carlos es muy testarudo (incluso, a pesar de su propio bien), así que tu argumentación
     deberá ser muy clara y contundente.
 
+1.  (★★) Implementar una **función** que reciba una pila de enteros y devuelva la suma de 
+    todos los elementos. 
+    Al finalizar la ejecución de la función, la pila debe quedar en el mismo estado que tenía antes de ejecutar la misma.
+    La función **no puede utilizar estructuras auxiliares (incluyendo arreglos)**. La firma de la 
+    función debe ser `pilaSumar(pila Pila[int]) int`. Indicar y justificar la complejidad de 
+    la función implementada. 
+

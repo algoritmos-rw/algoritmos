@@ -250,3 +250,19 @@ o igual a la máxima clave del árbol, por lo que recorreríamos la rama derecha
     `["Elefante", "Abeja", "Burro", "Águila", "Camello", "Dromedario", "Gato", "Foca", "Orangután"]` 
     (con función de comparación alfanumérica): `Guardar("Cangrejo")`, `Borrar("Elefante")`,
     `Borrar("Gato")`, `Guardar("Lagarto")`, `Borrar("Águila")`.
+
+1.  (★★) Implementar una _primitiva_ para el árbol binario que nos devuelva una lista con 
+    los datos de los nodos que forman 
+    del *camino más largo* que exista desde la raíz del árbol hasta alguna hoja.
+    La estructura del árbol binario es: 
+
+    ```go
+    type ab[T any] struct {
+        izq *ab
+        der *ab
+        dato T
+    }
+    ```
+
+    Justificar el orden de complejidad de la primitiva implementada. Indicar en qué orden queda descrito dicho camino 
+    en la lista que devuelve la primitiva.

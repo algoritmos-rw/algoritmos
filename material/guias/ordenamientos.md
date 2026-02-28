@@ -237,3 +237,35 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
 	  Justificar la complejidad de la función implementada. El desarrollo de la
 	  complejidad debe estar completo para el problema en cuestión, no se aceptarán
 	  resultados parciales genéricos.
+
+1.  (★★★★) Se tiene un arreglo de $n$ cadenas y una **buena función de hashing**. Se quiere
+    ordenar dichas cadenas por su resultado en la función de hashing, habiéndole
+    hecho previamente `% K` a cada uno de los resultados (donde $K$ es un valor
+    enorme, muchísimo más grande que $n$). Implementar un algoritmo que ordene las 
+    cadenas por dicho criterio en $\mathcal{O}(n)$. La firma de la función debe ser:
+    `func Ordenar(cadenas []string, valoresHash []int64, K int64) []string`. 
+    `valoresHash` ya tiene cada valor posterior a haber hecho `% K`.
+    Recomendamos recordar las propiedades de las funciones de hashing.
+    Si necesitás un algoritmo de ordenamiento auxiliar al que estés implementando,
+    podés considerarlo ya implementado. 
+    Justificar brevemente por qué es correcta la aplicación del algoritmo que implementaste.
+    Justificar la complejidad del algoritmo implementado. 
+
+    Por ejemplo, si queremos ordenar las cadenas: `gato, perro, elefante, comadreja`
+    y los resultados de aplicarles la función de hashing (y `% K`) son `19, 703, 9872, 37`, respectivamente, 
+    las cadenas deben de quedar: `gato, comadreja, perro, elefante`.
+
+    En caso que estés viendo este ejercicio antes de haber visto Hashes (es decir, inmediatamente después de
+    la clase de ordenamientos), esperá a ver ese tema, que es la clase inmediatamente siguiente. 
+
+1.  (★★) Realizar el seguimiento de aplicar RadixSort al siguiente conjunto de partidos
+    de fútbol. El resultado debe quedar ordenado primero por cantidad de goles del
+    partido, y en caso de igualdad, por diferencia de gol entre rivales. No es necesario
+    hacer el seguimiento del algoritmo auxiliar, pero si indicar cuál sería y por qué. 
+
+    ```
+    Argentina 6 - Serbia y Montenegro 0; Brasil 1 - Alemania 7; España 1 - Paises Bajos 0;
+    Francia 4 - Croacia 2; Argentina 3 - Croacia 0; Brasil 2 - Alemania 0;
+    Polonia 0 - México 0; Argentina 2 - Australia 1; Brasil 1 - Chile 1;
+    Argentina 2 - Inglaterra 0; Alemania 3 - Italia 3; Liechtenstein 0 - San Marino 1
+    ```
