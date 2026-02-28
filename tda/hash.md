@@ -47,15 +47,15 @@ Para utilizar [`fmt.Sprintf`](https://pkg.go.dev/fmt#Sprintf), se debe importar 
 #### Primitivas del iterador
 ```GoLang
 type IterDiccionario[K comparable, V any] interface {
-	HaySiguiente() bool
+	HayAlgoMas() bool
 	VerActual() (K, V)
-	Siguiente()
+	Avanzar()
 }
 ```
 
 El iterador debe permitir recorrer todos los elementos almacenados en el *hash* sin importar el orden en el que son devueltos.
 
-Tanto `VerActual` como `Siguiente` deben entrar en pánico con el mensaje `'El iterador termino de iterar'` si ya no quedan elementos a iterar (i.e. `HaySiguiente() == false`).
+Tanto `VerActual` como `Avanzar` deben entrar en pánico con el mensaje `'El iterador termino de iterar'` si ya no quedan elementos a iterar (i.e. `HayAlgoMas() == false`).
 
 
 ### Pruebas
