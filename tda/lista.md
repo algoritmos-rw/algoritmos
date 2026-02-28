@@ -56,14 +56,14 @@ La primitiva `Iterador` de la lista debe devolver un `IteradorLista`, cuyas prim
 ``` golang
 type IteradorLista[T any] interface {
 	VerActual() T
-	HaySiguiente() bool
-	Siguiente()
+	HayAlgoMas() bool
+	Avanzar()
 	Insertar(T)
 	Borrar() T
 }
 ```
 
-En caso que se invoque a `VerActual`, `Siguiente` o `Borrar` sobre un iterador que ya haya iterado todos los elementos, debe entrar en pánico con un mensaje `El iterador termino de iterar`. 
+En caso que se invoque a `VerActual`, `Avanzar` o `Borrar` sobre un iterador que ya haya iterado todos los elementos, debe entrar en pánico con un mensaje `El iterador termino de iterar`. 
 
 #### Pruebas
 
