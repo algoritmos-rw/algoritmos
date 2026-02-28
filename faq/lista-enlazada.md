@@ -13,15 +13,15 @@ Una pregunta usual a la hora de implementar el iterador externo, es cuál debe s
 La idea del iterador externo es que nos permita pasar por todos los elementos de la lista de forma cómoda. Una forma usual de utilizarlo es dentro de un ciclo `for`:
 ```golang
   iter := lista.Iterador()
-  for iter.HaySiguiente() {
+  for iter.HayAlgoMas() {
     dato := iter.VerActual()
     // Realizamos una operacion sobre el dato
-    iter.Siguiente()
+    iter.Avanzar()
   }
 ```
 
 ```cpp
-  for iter := lista.Iterador(); iter.HaySiguiente(); iter.Siguiente() {
+  for iter := lista.Iterador(); iter.HayAlgoMas(); iter.Avanzar() {
     dato := iter.VerActual()
     // Realizamos alguna operación sobre el dato
   }

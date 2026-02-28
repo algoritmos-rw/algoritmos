@@ -77,8 +77,9 @@ Considerando esta convención, la forma canónica de iterar una estructura es la
 ``` golang
 iter := estructura.Iterador()
 
-for iter.HaySiguiente() {
-    dato := iter.Siguiente()
+for iter.HayAlgoMas() {
+    dato := iter.VerActual()
+    iter.Avanzar()
 }
 ```
 
