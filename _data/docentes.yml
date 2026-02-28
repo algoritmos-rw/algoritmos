@@ -11,6 +11,12 @@ ayudantes:
   mail: anibalfu2005@gmail.com
   github: anibalfu
 
+
+- nombre: Ciro Schiappacassi
+  foto: /assets/img/docentes/unknown.png
+  mail: 
+  github: 
+
 - nombre: Daniel Bizari
   foto: /assets/img/docentes/danib.jpg
   mail: d.bizari@gmail.com
@@ -41,6 +47,12 @@ ayudantes:
   mail: facu_nixerito@hotmail.com
   github: bonshot
 
+
+- nombre: Facundo Vila
+  foto: /assets/img/docentes/facuv.png
+  mail: 
+  github: 
+
 - nombre: Federico Esteban
   foto: /assets/img/docentes/fedee.jpg
   mail: fede.est@gmail.com
@@ -56,15 +68,15 @@ ayudantes:
   mail: mlopezo@fi.uba.ar
   github: florovenza
 
-- nombre: Francisco López Tancredi
-  foto: /assets/img/docentes/franlt.png
-  mail: flopezt@fi.uba.ar
-  github: flopeztancredi
-
 - nombre: Ignacio Castro
   foto: /assets/img/docentes/josec.jpg
   mail: jcastrom@fi.uba.ar
   github: jignacio14
+
+- nombre: Julián Rivero
+  foto: /assets/img/docentes/unknown.png
+  mail: 
+  github: 
 
 - nombre: Juan Pablo Bel
   foto: /assets/img/docentes/juanb.png
@@ -85,11 +97,6 @@ ayudantes:
   foto: /assets/img/docentes/luisp.png
   mail: lpenar@fi.uba.ar
   github: prluisf
-
-- nombre: Martín Mastropietro
-  foto: /assets/img/docentes/mastro.jpg
-  mail: mmastropietro@fi.uba.ar
-  github: martinmastropietro
 
 - nombre: Martino Nervi
   foto: /assets/img/docentes/martinon.jpg
