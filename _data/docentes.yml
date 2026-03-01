@@ -71,15 +71,15 @@ ayudantes:
   mail: jcastrom@fi.uba.ar
   github: jignacio14
 
-- nombre: Julián Rivero
-  foto: /assets/img/docentes/unknown.png
-  mail: jarivero@fi.uba.ar
-  github: juli-rivero
-
 - nombre: Juan Pablo Bel
   foto: /assets/img/docentes/juanb.png
   mail: jbel@fi.uba.ar
   github: juannbel
+
+- nombre: Julián Rivero
+  foto: /assets/img/docentes/julir.jpg
+  mail: jarivero@fi.uba.ar
+  github: juli-rivero
 
 - nombre: Lucas Fiegl
   foto: /assets/img/docentes/lucasf.jpg
