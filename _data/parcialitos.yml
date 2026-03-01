@@ -1,27 +1,23 @@
 1er:
-  label: 1er parcialito (en el horario de la teórica)
-  fecha: 2025-09-22
+  label: 1er parcial
+  fecha: 2026-04-27
 
 2do:
-  label: 2do parcialito (en el horario de la teórica)
-  fecha: 2025-10-20
+  label: 2do parcial
+  fecha: 2026-06-11
 
-3ro:
-  label: 3er parcialito (en el horario de la teórica)
-  fecha: 2025-11-17
-  
 recu1:
-  label: 1er recuperatorio (parcialito 1)
-  fecha: 2025-11-20
-
+  label: 1er recuperatorio del 1er parcial
+  fecha: 2026-06-18
+  
 recu2:
-  label: 1er recuperatorio (parcialito 2)
-  fecha: 2025-11-27
+  label: 1er recuperatorio del 2do parcial
+  fecha: 2026-06-25
 
-recu3:
-  label: 1er recuperatorio (parcialito 3)
-  fecha: 2025-12-04
+recu12:
+  label: 2do recuperatorio del 1er parcial
+  fecha: 2026-07-02
 
-recutodos:
-  label: 2do recuperatorio (parcialitos 1, 2 y 3)
-  fecha: 2025-12-11
+recu22:
+  label: 2do recuperatorio del 2do parcial
+  fecha: 2026-07-06
