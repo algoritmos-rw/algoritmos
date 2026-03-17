@@ -6,7 +6,7 @@
 
 Si estás leyendo esto es porque ya entregaste correctamente tu TP0. ¡Felicidades!
 
-Una vez que hayan obtenido un Todo OK por parte del corrector automático, se les dará acceso a un _repositorio en Github_,  que es donde se harán las correcciones. Este proceso **no es automático**. Es realizado por un docente. Esto **no va a suceder inmediatamente después que hayan entregado el TP0**. Se hará el día de entrega del TP0, la clase siguiente (para quienes no hayan entregado en la fecha de entrega), la clase siguiente, y así hasta la fecha final de obtener un Todo OK por parte del corrector automático.
+Una vez que hayan obtenido un Todo OK por parte del corrector automático, se les dará acceso a un _repositorio en Github_,  que es donde se harán las correcciones. Este proceso **NO ES AUTOMÁTICO**. Es realizado por un docente. **ESTO NO VA A SUCEDER INMEDIATAMENTE DESPUÉS QUE HAYAN ENTREGADO EL TP0**. Se hará el día de entrega del TP0, la clase siguiente (para quienes no hayan entregado en la fecha de entrega), la clase siguiente, y así hasta la fecha final de obtener un Todo OK por parte del corrector automático.
 
 ¿Qué es lo que deben de hacer?
 
