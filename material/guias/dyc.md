@@ -196,8 +196,9 @@ Caemos en el caso de $$\log_B (A) = C$$, por lo que el orden del algoritmo será
 1.  (★★) $$\spadesuit$$ Implementar, por división y conquista, una función que dado un arreglo y su largo, determine si el mismo
     se encuentra ordenado. Indicar y justificar el orden.
 
-1.  (★★★) Implementar, por división y conquista, una función que dado un arreglo sin elementos repetidos y _casi ordenado_ (todos los elementos se
-    encuentran ordenados, salvo uno), obtenga el elemento fuera de lugar. Indicar y justificar el orden.
+1.  (★★) Se cuenta con un arreglo de enteros ordenado de manera ascendente que contiene exactamente un número duplicado (es decir, todos los demás
+    elementos son distintos, sin duplicados). Implementar una función que encuentre dicho número utilizando división y conquista. Indicar y justificar la
+    complejidad del algoritmo, utilizando el Teorema Maestro.
 
 1.  (★★★) $$\spadesuit$$ Se tiene un arreglo tal que `[1, 1, 1, ..., 0, 0, ...]` (es decir, _unos seguidos de ceros_). Se pide:
     1. una función de orden $$\mathcal{O}(\log n)$$ que encuentre el índice del primer 0. Si no hay ningún 0 (solo hay unos), debe devolver -1.
