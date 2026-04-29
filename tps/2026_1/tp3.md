@@ -24,13 +24,13 @@ Contenido
 ## Introducción
 
 En medio del revuelo producido por la inminente **Copa Mundial de Rugby** que está por comenzar
-en Estados Unidos, una reconocida agencia de viajes tiene dos preocupaciones:
+en Estados Unidos (y aledaneos), una reconocida agencia de viajes tiene dos preocupaciones:
 
 1. ¿Cómo deberá ser la vestimenta oficial de los participantes?
 1. ¿Cómo aprovechar el mundial para ofrecer distintos paquetes de viajes?
 
 Dado que la primer cuestión escapa un poco de su control, decidieron atacar la segunda. Para esto,
-realizaron encuestas por distintas redes sociales para saber cuáles serían los tipos de viajes que
+realizaron encuestas por distintas redes sociales (que fueron contestados principalmente por agentes de IA) para saber cuáles serían los tipos de viajes que
 más les gustaría a la gente.
 
 Conoceremos a distintos personajes que nos ayudarán a entender qué nos puede llegar a ayudar:
@@ -41,15 +41,13 @@ conocer nada más, salvo lo que sea estrictamente necesario para hacer un camino
 quiere perder ni un segundo de poder estar cerca del equipo.
 * Claudia: cree que Paulo de Rodrick sólo va al mundial por ser amigo de Moshi. 
 Pero cuando empiece a moverse el ovalado, lo único que importa es que todos tiren para 
-el mismo lado. A ella además le interesa
+el mismo lado (o bueno, hacia atrás, tirar hacia delante no es válido). A ella además le interesa
 conocer todas las sedes del mundial. Y no sólo eso, también le interesa recorrer **cada ruta** que conecte cada par de ciudades. 
 No le importa volver varias veces a la misma ciudad pero, como es aficionada a la fotografía, decidió sacarle fotos a cada ruta 
-que haya (además de a las ciudades). No le importa cuánto le tome. Total, ¿cuándo en su vida va a volver a viajar a Estados Unidos (sin ser deportada)?
-* Adam: No confía en que su selección tenga buenos resultados en el mundial desde que tuvo que
-jugarse la clasificación con el seleccionado de Suecia, y menos aún porque en el sorteo le salió que su selección
-debe jugar contra la de Moshi. Sin muchas esperanzas, cree que lo mejor
-es aprovechar el viaje para conocer el lugar. Si bien su principal objetivo es ver partidos de su selección,
-también tiene una particular afición por la historia, y más si se trata de la de Estados Unidos. Por eso, quiere
+que haya (además de a las ciudades). No le importa cuánto le tome. Total, ¿cuándo en su vida va a volver a viajar a Estados Unidos y otras ciudades (sin ser deportada)?
+* Adam: Su selección ni siquiera se clasificó para este mundial, pero ya tenía comprado los pasajes. Sin muchas emociones, cree que lo mejor
+es aprovechar el viaje para conocer el lugar. Si bien su principal objetivo es ver partidos de alguna selección importante,
+también tiene una particular afición por la historia, y más si se trata de la de Norteamérica. Por eso, quiere
 aprovechar y visitar varias ciudades, pero no quiere hacerlo en cualquier orden. Quiere conocer ciertas
 ciudades antes que otras, porque eso le ayudará a entender mejor los tours y visitas a museos, según un
 artículo que vio en Trip Advisor.
@@ -122,12 +120,12 @@ Los comandos a implementar serán:
 
 	Por ejemplo:
 	```
-	ir Doha, Uum Bab, mapa.kml
+	ir Dallas, Boston, mapa.kml
 	```
 	Nos debería imprimir:
 	```
-	Doha -> Rayan -> Zekreet -> Dukhan -> Uum Bab
-	Tiempo total: 10
+	Dallas -> Kansas -> Toronto -> Boston
+	Tiempo total: 8
 	```
 
 * `itinerario recomendaciones.csv`: el archivo `recomendaciones.csv` es un archivo con formato:
@@ -142,29 +140,29 @@ Los comandos a implementar serán:
 	Luego de cargar el archivo, se deberá devolver un orden válido para ir a las ciudades. No es necesario poner los caminos mínimos para luego ir desde cada par de puntos. Para eso se puede utilizar el comando anterior posteriormente. En caso que no se pueda resolver el problema con las restricciones dadas, imprimir `No se encontro recorrido`.
 	Dejamos un ejemplo de un posible archivo de recomendaciones entre los archivos disponibles a descargar. En este caso, una posible salida será:
 	```
-	Al Ruwais -> Fuwayrit -> Al Wakrah -> Doha -> Dukhan -> Mesaleed -> Zekreet -> Rayan -> Uum Bab -> Jor
+	Miami -> Atlanta -> Houston -> Monterrey -> Ciudad de Mexico -> Guadalajara -> Boston -> Nueva York -> Philadelphia -> Toronto -> Kansas -> Dallas -> Vancouver -> Seattle -> Los Angeles -> San Francisco
 	```
 * `viaje origen, archivo`: nos devuelve un listado con el orden de las ciudades a
 visitar para ver todas las rutas una vez y volver al origen. Además guardará un archivo KML con el resultado del camino. En caso de no poderse resolver el problema, debe imprimir `No se encontro recorrido`
 	
 	Por ejemplo:
 	```
-	viaje Doha, resultado.kml
+	viaje Boston, resultado.kml
 	```
 	Nos puede imprimir:
 	```
-	Doha -> Rayan -> Jor -> Zekreet -> Mesaleed -> Rayan -> Zekreet -> Al Ruwais -> Jor -> Mesaleed -> Doha -> Al Wakrah -> Mesaleed -> Uum Bab -> Fuwayrit -> Al Ruwais -> Dukhan -> Fuwayrit -> Zekreet -> Dukhan -> Uum Bab -> Doha -> Fuwayrit -> Jor -> Doha
-	Tiempo total: 172
+	Boston -> Philadelphia -> Atlanta -> Dallas -> Los Angeles -> Vancouver -> Toronto -> Nueva York -> Boston -> Toronto -> Kansas -> Dallas -> Houston -> Monterrey -> Los Angeles -> Guadalajara -> Monterrey -> Ciudad de Mexico -> Houston -> Atlanta -> Kansas -> Nueva York -> Atlanta -> Miami -> Houston -> Guadalajara -> Ciudad de Mexico -> Miami -> Monterrey -> Nueva York -> Philadelphia -> Vancouver -> Seattle -> San Francisco -> Los Angeles -> Seattle -> Boston
+	Tiempo total: 140
 	```
 
 	Los resultados podrían ser otros, pero siempre tienen que aparecer la totalidad de aristas (y, por lo tanto, el tiempo total siempre debería ser el mismo)
 
 * `reducir_caminos destino.pj`: nos crea un archivo pajek (formáto idéntico al archivo de ciudades
 inicial, pero únicamente con los caminos estrictamente necesarios). Al finalizar, debe imprimir por salida
-estándar la suma de los pesos de las aristas del árbol, en formato `"Peso total: ..."`. Para el archivo de ejemplo, el peso del árbol de tendido mínimo debe ser 26.
+estándar la suma de los pesos de las aristas del árbol, en formato `"Peso total: ..."`. Para el archivo de ejemplo, el peso del árbol de tendido mínimo debe ser 31.
 
 Como se indica antes, para los comandos `ir` y `viaje`, será necesario además exportar un archivo KML a la ruta indicada por
-parámetro al invocarse el programa. Se incluye, entre los archivos disponibles a descargar, un ejemplo para el camino mínimo entre Doha y Uum bab.
+parámetro al invocarse el programa. Se incluye, entre los archivos disponibles a descargar, un ejemplo para el camino mínimo entre Dallas y Boston.
 
 ### Archivos KML
 
