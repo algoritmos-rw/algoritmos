@@ -26,7 +26,7 @@ Debe indicar que llegó al final cuando ya no queden listas por recorrer.
 
 No. Las funciones de hashing son un tema muy extenso en la computación, y no se pretende que se codifique una. Cabe destacar que estas pueden llegar a impactar sobre el rendimiento de la tabla de hash, así que de encontrarse con un hash que no rinde como uno esperaría, uno de las primeras cosas a probar es cambiar la función de hash.
 
-## ¿Por qué la capacidad de una tabla de hash debe ser un número primo?
+## ¿Por qué la capacidad de una tabla de hash debería ser (idealmente) un número primo?
 
 Para obtener el mejor rendimiento de nuestra tabla de hash, queremos que las claves esten lo mejor distribuidas posibles en la capacidad. Es decir, que reduzcamos al mínimo posible las colisiones que obtendremos. Recordemos que una colisión es cuando dos claves van a parar al mismo 'balde' de la tabla de hash, sin importar si es abierto o cerrado.
 
@@ -75,7 +75,7 @@ En sí hay dos formas simples de hacer esto:
 1. Duplicar tamaño y luego, mientras el valor no sea un número primo, le sumamos 1. 
 2. Tener una tabla de números primos cargada ya de antemano en el hash (que sea un arreglo constante ya precalculado).
 
-El problema de la opción 1 es que nos hace perder toda ganancia. Determinar si un número es primo es al menos $$\mathcal{O}\left(\sqrt{n})$$. Si eso lo aplicamos hasta obtener un siguiente número primo, esto puede demorar demasiado, haciéndonos perder cualquier mínima ventaja que podríamos tener por utilizar un número primo. 
+El problema de la opción 1 es que nos hace perder toda ganancia. Determinar si un número es primo es al menos $$\mathcal{O}\left(\sqrt{n}\right)$$. Si eso lo aplicamos hasta obtener un siguiente número primo, esto puede demorar demasiado, haciéndonos perder cualquier mínima ventaja que podríamos tener por utilizar un número primo. 
 
 La segunda opción implica tener estado en el hash recordando en cuál índice de dicho arreglo estamos, y obviamente hacer un arreglo que pueda tener todos los posibles tamaños que pueda manejar el hash. 
 
