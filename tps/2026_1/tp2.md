@@ -162,7 +162,7 @@ Salida (dos líneas):
 
 Mensajes de error, cuando corresponda (imprimir cada mensaje por cada error encontrado, no detenerse ante el primer error):
 
-        ERROR: no existe le paciente 'NOMBRE_PACIENTE'
+        ERROR: no existe el/la paciente 'NOMBRE_PACIENTE'
         ERROR: no existe la especialidad 'NOMBRE_ESPECIALIDAD'
         ERROR: grado de urgencia no identificado ('URGENCIA')
 
