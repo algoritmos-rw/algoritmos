@@ -32,13 +32,13 @@ ha decidido remplazar la implementación actual del sistema de gestión en COB
 Existe un listado de pacientes de la clínica en formato CSV; este
 listado incluye el año en el que fueron inscripto como pacientes.
 
-Asimismo, existe otro listado CSV de todes les doctores, y la especialidad de
-cada une.
+Asimismo, existe otro listado CSV de todes los doctores, y la especialidad de
+cada uno.
 
-Les pacientes pueden pedir turno para una determinada especialidad, y el
+Los pacientes pueden pedir turno para una determinada especialidad, y el
 sistema les añade a la lista de espera correspondiente a esa especialidad.
-Les pacientes pueden venir de _urgencia_, o por un una revisión de rutina, guardia, etc.
-(se considera a todos los casos como _no urgentes_). Les pacientes _urgentes_ se atienden
+Los pacientes pueden venir de _urgencia_, o por un una revisión de rutina, guardia, etc.
+(se considera a todos los casos como _no urgentes_). Los pacientes _urgentes_ se atienden
 por orden de llegada.
 
 Cuando un doctor queda libre, atiende al siguiente paciente de urgencia, si es que los hubiera,
@@ -49,7 +49,7 @@ o al paciente con mayor antigüedad en la clínica.
 Se pide implementar el sistema de gestión de turnos y generación de informes de
 la clínica.
 
-Cuando el sistema arranca, carga en memoria la lista de pacientes y la lista de les
+Cuando el sistema arranca, carga en memoria la lista de pacientes y la lista de
 doctores. A partir de ese momento, lee de entrada estándar las operaciones a
 realizar (una por línea), tal y como se detalla a continuación.
 
