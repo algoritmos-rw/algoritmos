@@ -268,4 +268,4 @@ func (hash hashAbierto[K, V]) Claves() Lista[K] { // Vale también para el cerra
     trabajado en al menos uno de sus equipos listados. Indicar y justificar la
     complejidad del algoritmo implementado, expresada con las variables
     `N` y `M` del problema. Por ejemplo, si se consulta por 'Beto', la respuesta incluye a 
-    'Ana' y 'Carla'. Si se pregunta por 'Beto', la respuesta incluye a 'Beto'.
+    'Ana' y 'Carla'. Si se pregunta por 'Carla', la respuesta incluye a 'Beto'.
