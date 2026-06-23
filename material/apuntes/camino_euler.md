@@ -26,7 +26,9 @@ Para detectar un ciclo Euleriano (tenemos todos vértices de grado par), aplicam
 2. Aplicamos un recorrido DFS desde _v_, considerando las aristas que estamos utilizando. Cuando nos volvemos a topar con _v_ (y es imposible que no suceda), nos quedamos con ese camino cerrado. Llamemos a este camino _C_.
 3. Si existe algún vértice _u_ dentro del camino _C_ que tenga aristas que no se utilizaron aún, realizar el mismo recorrido mencionado antes desde _u_ (sin considerar las aristas ya utilizadas), y al terminar "agregar" el circuito hecho desde y hasta _u_ en nuestro camino _C_ obtenido antes, en el lugar donde estaba _u_. Volver a realizar esto hasta que ya no queden aristas sin revisar. 
 
-Este algoritmo se asegura pasar por cada arista una sola vez, por lo que es $$\mathcal{O}(V + E)$$. 
+Por ejemplo, si al aplicar el DFS empezando por `v`, terminamos con un camino `v -> w -> x -> y -> z -> v` y notamos que `x` tiene alguna de sus aristas no usadas, ahora comenzamos el DFS desde `x` y, sin usar las aristas previamente utilizadas tampoco, encontramos un nuevo ciclo que ahora empiece y termine en `x`. Supongamos que dicho ciclo es `x -> z -> y -> t -> x`, entonces ahora reemplazamos a `x` en nuestro camino original con este otro, obteniendo `v -> w -> (x -> z -> y -> t -> x) -> y -> z -> v` (los paréntesis están únicamente para mostrar dónde se modifica y cómo). Seguimos aplicando hasta que se vean todas las aristas. 
+
+Este algoritmo se asegura pasar por cada arista una sola vez, por lo que es $$\mathcal{O}(V + E)$$. Es importante el correcto uso de estructuras de datos para hacer los chequeos antes mencionados en tiempo constante y no terminar en algo cuadrático en vértices. 
 
 ### Algoritmo de Fleury
 
