@@ -26,10 +26,10 @@ Régimen de cursada
 * Cada alumno/grupo tiene asignado un ayudante para la corrección y evaluación de los trabajos prácticos.
 
 
-### Parcialitos
+### Parciales
 
 * Hay **dos parciales** con **dos recuperatorios** cada uno.
-* Los parciales se aprueban con nota 4 o superior, y constan de 5 ejercicios (se requiere 3 ejercicios bien para aprobar).
+* Los parciales se aprueban con nota 4 o superior, y constan de 5 ejercicios. Para aprobar los exámes se deben tener al menos 3 ejercicios aprobables y de los 2 ejercicios marcados debe haber al menos 1 de ellos aprobado. 
 * Todos los recuperatorios se toman una vez finalizadas las clases.
 * Se puede recuperar parciales para levantar la nota sin riesgo de empeorarla (se considera la nota mayor de las obtenidas).
 * Copiarse en un parcial implica desaprobar la cursada y por lo tanto la materia, además de posibles sanciones posteriores.
