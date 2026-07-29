@@ -1,23 +1,23 @@
 1er:
   label: 1er parcial
-  fecha: 2026-04-27
+  fecha: 2026-09-30
 
 2do:
   label: 2do parcial
-  fecha: 2026-06-11
+  fecha: 2026-11-18
 
 recu1:
   label: 1er recuperatorio del 1er parcial
-  fecha: 2026-06-18
+  fecha: 2026-11-25
   
 recu2:
   label: 1er recuperatorio del 2do parcial
-  fecha: 2026-06-25
+  fecha: 2026-12-02
 
 recu12:
   label: 2do recuperatorio del 1er parcial
-  fecha: 2026-07-02
+  fecha: 2026-12-09
 
 recu22:
   label: 2do recuperatorio del 2do parcial
-  fecha: 2026-07-06
+  fecha: 2026-12-16
