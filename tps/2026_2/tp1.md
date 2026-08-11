@@ -46,7 +46,7 @@ $ cat lab.txt
 #.#.#
 #..E#
 #####
-3 7
+4 7
 #######
 #S#..E#
 #...#.#
@@ -62,11 +62,16 @@ $ cat lab.txt
 #####
 
 $ ./maze < lab.txt
-5
-9
+4
+DERECHA DERECHA ABAJO ABAJO
+6
+ABAJO DERECHA DERECHA ARRIBA DERECHA DERECHA
 1
+DERECHA
 ERROR
 ```
+
+Notar que, cuando existe un camino, puede haber más de uno de longitud mínima; en ese caso, cualquiera de ellos es una salida válida. Por ejemplo, para el primer laberinto, `ABAJO ABAJO DERECHA DERECHA` también sería correcto.
 
 
 ### Formato de entrada
