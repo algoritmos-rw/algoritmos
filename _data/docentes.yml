@@ -76,6 +76,11 @@ ayudantes:
   mail: jbel@fi.uba.ar
   github: juannbel
 
+- nombre: Julen Gaumard
+  foto: /assets/img/docentes/juleng.png
+  mail: jgaumard@fi.uba.ar
+  github: julengaumard
+
 - nombre: Julián Rivero
   foto: /assets/img/docentes/julir.jpg
   mail: jarivero@fi.uba.ar
@@ -121,7 +126,7 @@ ayudantes:
   mail: tamolina@fi.uba.ar
   github: taielmolina01
 
-- nombre: Tomás D'Angelo
+- nombre: Tomás Pérez D'Angelo
   foto: /assets/img/docentes/tomaspd.jpg
   mail: tperezd@fi.uba.ar
   github: tomiperez4
