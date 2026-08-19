@@ -40,11 +40,9 @@ function agregarTPsYParcialitosACalendario(desde, hasta) {
     return trabajos_y_parcialitos;
 }
 
-function diadelasemana(fecha){
-    var numero = fecha.getDay();
-    if (numero == 0) return 'Lunes'
-    if (numero == 3) return 'Jueves'
-    if (numero == 4) return 'Viernes'
+function diadelasemana(fecha) {
+    var dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    return dias[fecha.getUTCDay()];
 }
 
 function prettyfecha(fecha){
