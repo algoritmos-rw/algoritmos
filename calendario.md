@@ -3,7 +3,7 @@ Calendario
 
 La materia será dictada en 32 clases a lo largo de 16 semanas.
 
-Las clases teóricas se dictarán los días miércoles de 17 a 20 hs y las clases prácticas los días jueves en el mismo horario.
+Las clases teóricas se dictarán los días miércoles de 17 a 20 hs y las clases prácticas los días jueves de 18 a 21 hs.
 
 Además, contamos con un [calendario detallado]({{site.data.cuatrimestre.calendario_detallado}}) de las clases para descargar.
 
