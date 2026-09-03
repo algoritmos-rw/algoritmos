@@ -269,3 +269,14 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
     Polonia 0 - México 0; Argentina 2 - Australia 1; Brasil 1 - Chile 1;
     Argentina 2 - Inglaterra 0; Alemania 3 - Italia 3; Liechtenstein 0 - San Marino 1
     ```
+
+1.	(★★) Una importadora de vinos franceses almacena todos sus productos con su fecha de añejamiento en
+    formato `MM-DD-AAAA`. Necesitan ordenarlos para saber cuáles están listos para distribuir (los más añejos primero).
+  	Implementar un **ordenamiento lineal** que, dado un arreglo con todos los vinos (tipo de dato), devuelva un nuevo
+  	arreglo ordenado por fecha de añejamiento de la más antigua a la más reciente.
+
+    Además, se desea saber de qué año es el vino más añejo de todo el lote. Tanto el arreglo ordenado como el año deben
+  	ser devueltos por la función.
+
+    El tipo de dato `Vino` tiene implementado el método `Añejamiento()`, que devuelve la fecha del vino como un `string`
+  	con formato `MM-DD-AAAA`. Indicar y justificar la complejidad del algoritmo implementado, desarrollándola de forma completa.
