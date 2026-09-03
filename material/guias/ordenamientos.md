@@ -238,11 +238,11 @@ func ordenarPorTiempo(fechas []string, largo int, indiceIni int, indiceFin int) 
 	  complejidad debe estar completo para el problema en cuestión, no se aceptarán
 	  resultados parciales genéricos.
 
-1.  (★★★★) Se tiene un arreglo de $n$ cadenas y una **buena función de hashing**. Se quiere
+1.  (★★★★) Se tiene un arreglo de $$n$$ cadenas y una **buena función de hashing**. Se quiere
     ordenar dichas cadenas por su resultado en la función de hashing, habiéndole
-    hecho previamente `% K` a cada uno de los resultados (donde $K$ es un valor
-    enorme, muchísimo más grande que $n$). Implementar un algoritmo que ordene las 
-    cadenas por dicho criterio en $\mathcal{O}(n)$. La firma de la función debe ser:
+    hecho previamente `% K` a cada uno de los resultados (donde $$K$$ es un valor
+    enorme, muchísimo más grande que $$n$$). Implementar un algoritmo que ordene las 
+    cadenas por dicho criterio en $$\mathcal{O}(n)$$. La firma de la función debe ser:
     `func Ordenar(cadenas []string, valoresHash []int64, K int64) []string`. 
     `valoresHash` ya tiene cada valor posterior a haber hecho `% K`.
     Recomendamos recordar las propiedades de las funciones de hashing.
