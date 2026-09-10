@@ -103,7 +103,7 @@ Para cada laberinto, se debe imprimir una línea por salida estándar (_stdout_)
 
 ### Sobre la implementación
 
-Se pide implementar el recorrido por olas concéntricas mencionado en la introducción usando la **cola** desarrollada como TDA en clase. No se permite el uso de recursión para realizar este recorrido. El algoritmo debería funcionar en $\mathcal{O}(F * C)$. Notar que $F * C$ es igual a la cantidad de celdas, por lo que se puede ver como lineal en la cantidad de celdas de la matriz. 
+Se pide implementar el recorrido por olas concéntricas mencionado en la introducción usando la **cola** desarrollada como TDA en clase. No se permite el uso de recursión para realizar este recorrido. El algoritmo debería funcionar en $$\mathcal{O}(F * C)$$. Notar que $$F * C$$ es igual a la cantidad de celdas, por lo que se puede ver como lineal en la cantidad de celdas de la matriz. 
 
 
 ### Pruebas
