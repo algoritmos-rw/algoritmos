@@ -303,7 +303,7 @@ Notar que:
 el momento.
 - los sitios más visitados son reportados en orden según su frecuencia.
 
-### Ver vistantes
+### Ver visitantes
 
 Para la siguiente entrada:
 
