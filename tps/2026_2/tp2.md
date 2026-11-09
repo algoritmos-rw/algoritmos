@@ -34,7 +34,7 @@ cargo del curso no tienen demasiada experiencia en programación de sistemas web
 la decenas de visitas diarias al sitio han hecho que los servidores se caigan.
 
 Como cada acceso al sistema queda registrado, los músicos han buscado ayuda a
-estudiantes de Algoritmos y Estructuras ds Datos con mucha experiencia en manejo de
+estudiantes de Algoritmos y Estructuras de Datos con mucha experiencia en manejo de
 archivos y entrada estándar en Go.
 
 ### Servidores y archivos de log
